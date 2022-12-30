@@ -223,7 +223,7 @@ pre {
   }
 }
 :root {
-  --text-color: #3c4858;
+  --text-color: #888888;
   --text-strong-color: #2f3d4e;
   --text-light-color: #60656a;
   --text-white-color: #fff;
@@ -426,10 +426,14 @@ pre[class*='highlight'] {
 }
 p-n {
   color: #b2b2b2;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 p-b {
   color: #00a2ff;
+}
+image lozad {
+  height: auto;
+  width: auto;
 }
 .archive-card {
   width: 100%;
