@@ -709,9 +709,7 @@ p-b {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .image-wrapper .image {
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
+  max-width: 100%;
   -webkit-filter: var(--image-filter-style);
   filter: var(--image-filter-style);
   position: absolute;
@@ -1171,9 +1169,7 @@ mjx-container svg:focus {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .image-wrapper .image {
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
+  max-width: 100%;
   -webkit-filter: var(--image-filter-style);
   filter: var(--image-filter-style);
   position: absolute;

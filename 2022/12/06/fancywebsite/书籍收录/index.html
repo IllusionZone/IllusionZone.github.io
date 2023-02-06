@@ -33,7 +33,7 @@
     
       <meta 
         property="og:img" 
-        content="/image/logo/logo1.png">
+        content="/image/logo/logo3.png">
     
     
       <meta 
@@ -135,28 +135,52 @@
         return;
       }
       localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
       return setting;
     };
+    
     // apply current darkmode setting
   </script>
   
     <script>
       var setDarkmode = function(mode) {
       var setting = mode || localStorage.getItem('user-color-scheme');
+      // setting 的值是Light、null和dark
+      // 自定义
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      // if(setting === "dark"){
+      //   document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      //   //判断是否进入关于页面，进入则同样修改作者图片
+      //   if(document.getElementById('isdark')){
+      //     document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+      //   }
+      // } else {
+      //   if(document.getElementById('isdark')){
+      //     document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+      //   }
+      //   document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      // }
+
       if(setting === getCssMediaQuery()) {
+        //setting为light
         document.documentElement.removeAttribute('data-user-color-scheme');
         localStorage.removeItem('user-color-scheme');
         document.getElementById('theme-color').content = themeColor[setting];
         document.getElementById('theme-color').dataset.mode = setting;
+        
       } else if(reverseDarkList[setting]) {
+        //setting为dark
         document.documentElement.setAttribute('data-user-color-scheme', setting);
         document.getElementById('theme-color').content = themeColor[setting];
         document.getElementById('theme-color').dataset.mode = setting;
+        
       } else {
+        //setting为null
         document.documentElement.removeAttribute('data-user-color-scheme');
         localStorage.removeItem('user-color-scheme');
         document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
         document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
       }
     };
     setDarkmode();
@@ -285,8 +309,9 @@
               <div class="card card-author">
                 
   <img 
-    src="/image/logo/logo1.png" 
+    src="/image/logo/logo2.png" 
     class="author-img"
+    id="authorimg"
     width="88"
     height="88"
     alt="author avatar">
@@ -348,16 +373,16 @@
         </div>
       </a>
     
-      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
         <div class="categories-list-item">
-          妄想记
+          学之思之
           <span class="categories-list-item-badge">1</span>
         </div>
       </a>
     
-      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
         <div class="categories-list-item">
-          学之思之
+          妄想记
           <span class="categories-list-item-badge">1</span>
         </div>
       </a>
@@ -429,18 +454,6 @@
       </a>
     
       <a 
-        href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" 
-        title="人工智能">
-        <div class="tags-list-item">人工智能</div>
-      </a>
-    
-      <a 
-        href="/tags/AI/" 
-        title="AI">
-        <div class="tags-list-item">AI</div>
-      </a>
-    
-      <a 
         href="/tags/%E6%9C%89%E6%84%8F%E6%80%9D/" 
         title="有意思">
         <div class="tags-list-item">有意思</div>
@@ -450,6 +463,12 @@
         href="/tags/%E9%94%B5%E9%94%B5/" 
         title="锵锵">
         <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
       </a>
     
       <a 
@@ -471,15 +490,21 @@
       </a>
     
       <a 
-        href="/tags/%E5%9B%BE%E7%89%87/" 
-        title="图片">
-        <div class="tags-list-item">图片</div>
-      </a>
-    
-      <a 
         href="/tags/%E4%B8%8E%E8%9A%8A%E5%85%B1%E8%88%9E/" 
         title="与蚊共舞">
         <div class="tags-list-item">与蚊共舞</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
       </a>
     
       <a 
@@ -743,13 +768,13 @@
   
     <div class="nav-item-prev">
       <a 
-        href="/2022/12/07/fancywebsite/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDAI%E7%BD%91%E7%AB%99/" 
+        href="/2022/12/07/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%88%91%E8%84%91%E5%AD%90%E9%87%8C%E7%9A%84%E4%B8%8D%E9%80%9F%E4%B9%8B%E5%AE%A2/" 
         class="nav-link">
         <i class="iconfont icon-left nav-prev-icon"></i>
         <div>
           <div class="nav-label">上一篇</div>
           
-            <div class="nav-title">【Fancy Website】人工智能AI网站 </div>
+            <div class="nav-title">【阅之载之】我脑子里的不速之客 </div>
           
         </div>
       </a>
