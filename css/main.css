@@ -743,10 +743,10 @@ p-b {
 }
 @media screen and (max-width: 767px) {
   .image-wrapper {
-    height: 16.48rem;
+    height: 12rem;
   }
   .image-wrapper .image {
-    height: 16.48rem;
+    height: 12rem;
   }
 }
 .columns,
@@ -1203,10 +1203,10 @@ mjx-container svg:focus {
 }
 @media screen and (max-width: 767px) {
   .image-wrapper {
-    height: 16.48rem;
+    height: 12rem;
   }
   .image-wrapper .image {
-    height: 16.48rem;
+    height: 12rem;
   }
 }
 .recent-posts-header {
