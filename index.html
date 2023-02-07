@@ -119,21 +119,7 @@
     <script>
       var setDarkmode = function(mode) {
       var setting = mode || localStorage.getItem('user-color-scheme');
-      // setting 的值是Light、null和dark
-      // 自定义，当切换至其他页面时失效，所以该方法不合适
-      // 根据按键更换dark模式和light/null模式下的图片地址
-      // if(setting === "dark"){
-      //   document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
-      //   //判断是否进入关于页面，进入则同样修改作者图片
-      //   if(document.getElementById('isdark')){
-      //     document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
-      //   }
-      // } else {
-      //   if(document.getElementById('isdark')){
-      //     document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
-      //   }
-      //   document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
-      // }
+      window.isdark = setting;
       if(setting === getCssMediaQuery()) {
         //setting为light
         document.documentElement.removeAttribute('data-user-color-scheme');
@@ -154,6 +140,22 @@
         document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
         document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
         
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以该方法不合适，需改进
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
       }
     };
     setDarkmode();
@@ -341,17 +343,17 @@
         </div>
       </a>
     
-      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
-        <div class="categories-list-item">
-          察之作之
-          <span class="categories-list-item-badge">2</span>
-        </div>
-      </a>
-    
       <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
         <div class="categories-list-item">
           学之思之
           <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">2</span>
         </div>
       </a>
     
@@ -451,6 +453,12 @@
       </a>
     
       <a 
+        href="/tags/%E4%B8%8E%E8%9A%8A%E5%85%B1%E8%88%9E/" 
+        title="与蚊共舞">
+        <div class="tags-list-item">与蚊共舞</div>
+      </a>
+    
+      <a 
         href="/tags/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/" 
         title="学之思之">
         <div class="tags-list-item">学之思之</div>
@@ -466,12 +474,6 @@
         href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" 
         title="个人博客">
         <div class="tags-list-item">个人博客</div>
-      </a>
-    
-      <a 
-        href="/tags/%E4%B8%8E%E8%9A%8A%E5%85%B1%E8%88%9E/" 
-        title="与蚊共舞">
-        <div class="tags-list-item">与蚊共舞</div>
       </a>
     
       <a 
@@ -643,7 +645,7 @@
       </a>
       <div class="card-excerpt">
         
-          工作必然创造价值吗？恐怕不见得吧。很多时候，一个人越是努力地“工作”，就越是浪费资源（包括自己的也包括自然的）以及产生恶果，但往往人并不自知，或者说自知却依旧如故，只因其需要工作来证明他个人的价值以及获取一定的生存资本。而他所从事的，也就是所谓的狗屁的工作罢了。
+          1
         
       </div>
       <div class="card-post-footer">

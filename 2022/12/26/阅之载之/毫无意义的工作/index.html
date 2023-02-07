@@ -38,7 +38,7 @@
     
       <meta 
         property="og:img" 
-        content="工作必然创造价值吗？恐怕不见得吧。很多时候，一个人越是努力地“工作”，就越是浪费资源（包括自己的也包括自然的）以及产生恶果，但往往人并不自知，或者说自知却依旧如故，只因其需要工作来证明他个人的价值以及获取一定的生存资本。而他所从事的，也就是所谓的狗屁的工作罢了。">
+        content="1">
     
     
       <meta 
@@ -49,7 +49,7 @@
         content="2022-12-26">
       <meta 
         property="og:article:modified_time" 
-        content="2023-02-07">
+        content="2023-02-08">
       <meta 
         property="og:article:author" 
         content="妄想者">
@@ -145,21 +145,7 @@
     <script>
       var setDarkmode = function(mode) {
       var setting = mode || localStorage.getItem('user-color-scheme');
-      // setting 的值是Light、null和dark
-      // 自定义，当切换至其他页面时失效，所以该方法不合适
-      // 根据按键更换dark模式和light/null模式下的图片地址
-      // if(setting === "dark"){
-      //   document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
-      //   //判断是否进入关于页面，进入则同样修改作者图片
-      //   if(document.getElementById('isdark')){
-      //     document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
-      //   }
-      // } else {
-      //   if(document.getElementById('isdark')){
-      //     document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
-      //   }
-      //   document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
-      // }
+      window.isdark = setting;
       if(setting === getCssMediaQuery()) {
         //setting为light
         document.documentElement.removeAttribute('data-user-color-scheme');
@@ -180,6 +166,22 @@
         document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
         document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
         
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以该方法不合适，需改进
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
       }
     };
     setDarkmode();
@@ -379,17 +381,17 @@
         </div>
       </a>
     
-      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
-        <div class="categories-list-item">
-          察之作之
-          <span class="categories-list-item-badge">2</span>
-        </div>
-      </a>
-    
       <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
         <div class="categories-list-item">
           学之思之
           <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">2</span>
         </div>
       </a>
     
@@ -489,6 +491,12 @@
       </a>
     
       <a 
+        href="/tags/%E4%B8%8E%E8%9A%8A%E5%85%B1%E8%88%9E/" 
+        title="与蚊共舞">
+        <div class="tags-list-item">与蚊共舞</div>
+      </a>
+    
+      <a 
         href="/tags/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/" 
         title="学之思之">
         <div class="tags-list-item">学之思之</div>
@@ -504,12 +512,6 @@
         href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" 
         title="个人博客">
         <div class="tags-list-item">个人博客</div>
-      </a>
-    
-      <a 
-        href="/tags/%E4%B8%8E%E8%9A%8A%E5%85%B1%E8%88%9E/" 
-        title="与蚊共舞">
-        <div class="tags-list-item">与蚊共舞</div>
       </a>
     
       <a 
@@ -559,7 +561,7 @@
     
     
       <span class="dot"></span>
-      <span>403 字</span>
+      <span>787 字</span>
     
   </div>
   
@@ -609,6 +611,18 @@
 <br /><br /></p>
 <p><strong>原文摘录</strong><br>
 世界上大部分作恶的人是意识不到自己在作恶的。或者说，这些对世界有害的人不可避免地会被一堆领着酬劳却整天卑躬屈膝、唯唯诺诺的“奴仆”包围，然后听这些马屁精不断想出各种理由来证明，自己的所作所为对社会是有益的，他们允许自己相信这些没完没了的废话。（今天，这些卑躬屈膝、唯唯诺诺者有时候被称作“智囊团”。）<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+最终版本临时定义：狗屁工作是一份毫无意义且往往有害的定期领薪水的职业，其无意义或有害程度是如此之高，乃至从事这份职业的人都无法为其找出合适的存在理由。虽然要从事这份工作有一个条件，即从事者不得不假装这份工作的存在是完全合理的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+因为有一个普遍事实，那就是某个强有力群体对世界的危害越大，他们身边溜须拍马的人就会越多，鼓吹者也会聚拢。溜须拍马者和鼓吹者会想出五花八门的理由来证明这个强有力的群体真的对社会有贡献，然后这个群体中还真的有一部分人就听信这些马屁了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+事实上，“狗屎工作”和“狗屁工作”几乎可以说是完全相反的工作。“狗屁工作”往往能带来很不错的收入，工作环境也极佳，只不过毫无意义；而“狗屎工作”恰恰相反，这些岗位对社会来说必要且有益，只是这些从业者收入很低且工作环境很糟糕。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+陀思妥耶夫斯基在西伯利亚劳改营流放期间，提出了一种理论：世界上最残酷的折磨便是强迫人无休止地做一件明显毫无意义的工作。<br>
 <br /><br /></p>
 
   </div>
