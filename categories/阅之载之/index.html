@@ -33,7 +33,7 @@
     
       <meta 
         property="og:img" 
-        content="/image/logo/logo3.png">
+        content="/image/logo/logo2.png">
     
     
       <meta 
@@ -120,7 +120,7 @@
       var setDarkmode = function(mode) {
       var setting = mode || localStorage.getItem('user-color-scheme');
       // setting 的值是Light、null和dark
-      // 自定义
+      // 自定义，当切换至其他页面时失效，所以该方法不合适
       // 根据按键更换dark模式和light/null模式下的图片地址
       // if(setting === "dark"){
       //   document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
@@ -134,7 +134,6 @@
       //   }
       //   document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
       // }
-
       if(setting === getCssMediaQuery()) {
         //setting为light
         document.documentElement.removeAttribute('data-user-color-scheme');
@@ -359,14 +358,14 @@
       <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
         <div class="categories-list-item">
           阅之载之
-          <span class="categories-list-item-badge">17</span>
+          <span class="categories-list-item-badge">16</span>
         </div>
       </a>
     
       <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
         <div class="categories-list-item">
           观之感之
-          <span class="categories-list-item-badge">1</span>
+          <span class="categories-list-item-badge">2</span>
         </div>
       </a>
     
@@ -410,24 +409,6 @@
       </a>
     
       <a 
-        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
-        title="察之作之">
-        <div class="tags-list-item">察之作之</div>
-      </a>
-    
-      <a 
-        href="/tags/%E6%9C%89%E6%84%8F%E6%80%9D/" 
-        title="有意思">
-        <div class="tags-list-item">有意思</div>
-      </a>
-    
-      <a 
-        href="/tags/%E9%94%B5%E9%94%B5/" 
-        title="锵锵">
-        <div class="tags-list-item">锵锵</div>
-      </a>
-    
-      <a 
         href="/tags/%E7%94%B5%E5%BD%B1/" 
         title="电影">
         <div class="tags-list-item">电影</div>
@@ -443,6 +424,24 @@
         href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
         title="观之感之">
         <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%9C%89%E6%84%8F%E6%80%9D/" 
+        title="有意思">
+        <div class="tags-list-item">有意思</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
       </a>
     
       <a 
@@ -647,6 +646,22 @@
     <div class="archive-timeline-item">
       <div class="archive-timeline-post">
         <div class="card card-content">
+          <div class="archive-timeline-post-date">2022-12-26</div>
+          <div class="archive-timeline-post-content">
+            <a 
+              href="/2022/12/26/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89%E7%9A%84%E5%B7%A5%E4%BD%9C/" 
+              class="archive-timeline-post-item">
+              【阅之载之】毫无意义的工作
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+    <div class="archive-timeline-item">
+      <div class="archive-timeline-post">
+        <div class="card card-content">
           <div class="archive-timeline-post-date">2022-12-16</div>
           <div class="archive-timeline-post-content">
             <a 
@@ -743,38 +758,6 @@
     <div class="archive-timeline-item">
       <div class="archive-timeline-post">
         <div class="card card-content">
-          <div class="archive-timeline-post-date">2022-12-10</div>
-          <div class="archive-timeline-post-content">
-            <a 
-              href="/2022/12/10/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89%E7%9A%84%E5%B7%A5%E4%BD%9C/" 
-              class="archive-timeline-post-item">
-              【阅之载之】毫无意义的工作
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    
-    <div class="archive-timeline-item">
-      <div class="archive-timeline-post">
-        <div class="card card-content">
-          <div class="archive-timeline-post-date">2022-12-10</div>
-          <div class="archive-timeline-post-content">
-            <a 
-              href="/2022/12/10/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C%E7%94%B5%E5%BD%B1/%E6%B5%B7%E8%A1%97%E6%97%A5%E8%AE%B0/" 
-              class="archive-timeline-post-item">
-              【阅之载之】海街日记
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    
-    <div class="archive-timeline-item">
-      <div class="archive-timeline-post">
-        <div class="card card-content">
           <div class="archive-timeline-post-date">2022-12-09</div>
           <div class="archive-timeline-post-content">
             <a 
@@ -797,6 +780,22 @@
               href="/2022/12/08/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%97%A0%E7%BC%98%E7%A4%BE%E4%BC%9A/" 
               class="archive-timeline-post-item">
               【阅之载之】无缘社会
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+    <div class="archive-timeline-item">
+      <div class="archive-timeline-post">
+        <div class="card card-content">
+          <div class="archive-timeline-post-date">2022-12-07</div>
+          <div class="archive-timeline-post-content">
+            <a 
+              href="/2022/12/07/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%88%91%E8%84%91%E5%AD%90%E9%87%8C%E7%9A%84%E4%B8%8D%E9%80%9F%E4%B9%8B%E5%AE%A2/" 
+              class="archive-timeline-post-item">
+              【阅之载之】我脑子里的不速之客
             </a>
           </div>
         </div>
@@ -839,8 +838,8 @@
   <div class="recent-posts-list">
     
       <div class="recent-posts-item">
-        <div class="recent-posts-item-title">2022-12-25</div>
-        <a href="/2022/12/25/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%BA%8F/"><div class="recent-posts-item-content">妄想记——序</div></a>
+        <div class="recent-posts-item-title">2022-12-26</div>
+        <a href="/2022/12/26/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89%E7%9A%84%E5%B7%A5%E4%BD%9C/"><div class="recent-posts-item-content">【阅之载之】毫无意义的工作</div></a>
       </div>
     
       <div class="recent-posts-item">
