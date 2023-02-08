@@ -38,7 +38,7 @@
     
       <meta 
         property="og:img" 
-        content="1">
+        content="略">
     
     
       <meta 
@@ -84,6 +84,7 @@
     <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
   
   <script>
+    
     function loadScript(url, cb) {
       var script = document.createElement('script');
       script.src = url;
@@ -169,14 +170,14 @@
       }
 
       // setting 的值是Light、null和dark
-      // 自定义，当切换至其他页面时失效，所以该方法不合适，需改进
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
       // 根据按键更换dark模式和light/null模式下的图片地址
       if(setting === "dark"){
-        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
         //判断是否进入关于页面，进入则同样修改作者图片
         if(document.getElementById('isdark')){
           document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
         }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
       } else {
         if(document.getElementById('isdark')){
           document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
@@ -340,6 +341,17 @@
   </a>
 </div>
 
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
               </div>
                <div class="sticky-tablet">
   
@@ -352,7 +364,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E2%80%9D"><span class="toc-text">第一章 什么是“狗屁工作”</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E2%80%9D"><span class="toc-text">第一章 什么是“狗屁工作”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-text">第二章 狗屁工作的种类</span></a></li></ol>
       </div>
     </article>
   
@@ -367,13 +379,6 @@
   </div>
   <div class="categories-list">
     
-      <a href="/categories/Fancy-Website/">
-        <div class="categories-list-item">
-          Fancy-Website
-          <span class="categories-list-item-badge">5</span>
-        </div>
-      </a>
-    
       <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
         <div class="categories-list-item">
           妄想记
@@ -381,10 +386,10 @@
         </div>
       </a>
     
-      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+      <a href="/categories/Fancy-Website/">
         <div class="categories-list-item">
-          学之思之
-          <span class="categories-list-item-badge">1</span>
+          Fancy-Website
+          <span class="categories-list-item-badge">5</span>
         </div>
       </a>
     
@@ -392,6 +397,13 @@
         <div class="categories-list-item">
           察之作之
           <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">1</span>
         </div>
       </a>
     
@@ -491,12 +503,6 @@
       </a>
     
       <a 
-        href="/tags/%E4%B8%8E%E8%9A%8A%E5%85%B1%E8%88%9E/" 
-        title="与蚊共舞">
-        <div class="tags-list-item">与蚊共舞</div>
-      </a>
-    
-      <a 
         href="/tags/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/" 
         title="学之思之">
         <div class="tags-list-item">学之思之</div>
@@ -515,15 +521,21 @@
       </a>
     
       <a 
-        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
-        title="现世行">
-        <div class="tags-list-item">现世行</div>
+        href="/tags/%E4%B8%8E%E8%9A%8A%E5%85%B1%E8%88%9E/" 
+        title="与蚊共舞">
+        <div class="tags-list-item">与蚊共舞</div>
       </a>
     
       <a 
-        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
-        title="妄想记">
-        <div class="tags-list-item">妄想记</div>
+        href="/tags/%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/" 
+        title="网盘资源网站收录">
+        <div class="tags-list-item">网盘资源网站收录</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%A3%81%E5%8A%9B%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/" 
+        title="磁力网站收录">
+        <div class="tags-list-item">磁力网站收录</div>
       </a>
     
   </div>
@@ -561,7 +573,7 @@
     
     
       <span class="dot"></span>
-      <span>787 字</span>
+      <span>943 字</span>
     
   </div>
   
@@ -624,6 +636,13 @@
 <p><strong>原文摘录</strong><br>
 陀思妥耶夫斯基在西伯利亚劳改营流放期间，提出了一种理论：世界上最残酷的折磨便是强迫人无休止地做一件明显毫无意义的工作。<br>
 <br /><br /></p>
+<h2 id="第二章-狗屁工作的种类">第二章 狗屁工作的种类</h2>
+<p><strong>原文摘录</strong><br>
+世界上不存在完美的分类。分类的方式许许多多，每一种分类结果都会带给我们独特的信息。在研究中，我发现把狗屁工作分成五个类别会很有帮助。这五大类别分别是：随从（flunky）、打手（goon）、拼接修补者（duct taper）、打钩者（box ticker）和分派者（taskmaster）。<br>
+…<br>
+随从随从存在的唯一目的或主要目的，是衬托另一个人的重要性，让这个人看起来很重要或者让这个人感到自己很重要。<br>
+…<br>
+<br /><br /></p>
 
   </div>
   <div>
@@ -658,7 +677,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E2%80%9D"><span class="toc-text">第一章 什么是“狗屁工作”</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E2%80%9D"><span class="toc-text">第一章 什么是“狗屁工作”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-text">第二章 狗屁工作的种类</span></a></li></ol>
 </div>
             </main>
             <aside class="right-column">
@@ -672,7 +691,7 @@
     style="padding-right: 2px;">
   </i>目录
 </div>
-<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E2%80%9D"><span class="toc-text">第一章 什么是“狗屁工作”</span></a></li></ol>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E2%80%9D"><span class="toc-text">第一章 什么是“狗屁工作”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-text">第二章 狗屁工作的种类</span></a></li></ol>
     </article>
   
   
