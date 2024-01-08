@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】论自由</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】论自由">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/12/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E8%AE%BA%E8%87%AA%E7%94%B1/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="【英】约翰•穆勒  著  马文艳  译">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-12">
+      <meta 
+        property="og:article:modified_time" 
+        content="2024-01-08">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>89</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>10</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>77</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%91%E8%80%85%E5%BA%8F"><span class="toc-text">译者序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%B7-%E8%AE%BA%E8%87%AA%E7%94%B1"><span class="toc-text">第一卷 论自由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BC%95%E8%AE%BA"><span class="toc-text">第一章 引论</span></a></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">21</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">12</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">8</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">6</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">33</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/The-Art-of-Basketball/" 
+        title="The Art of Basketball">
+        <div class="tags-list-item">The Art of Basketball</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%AF%AE%E7%90%83/" 
+        title="篮球">
+        <div class="tags-list-item">篮球</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/Win10/" 
+        title="Win10">
+        <div class="tags-list-item">Win10</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%A8%E6%88%B7%E5%90%8D%E4%BF%AE%E6%94%B9/" 
+        title="用户名修改">
+        <div class="tags-list-item">用户名修改</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/" 
+        title="谷歌浏览器">
+        <div class="tags-list-item">谷歌浏览器</div>
+      </a>
+    
+      <a 
+        href="/tags/XP/" 
+        title="XP">
+        <div class="tags-list-item">XP</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%99%BE%E5%BA%A6%E4%BA%91%E7%9B%98/" 
+        title="百度云盘">
+        <div class="tags-list-item">百度云盘</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%80%9F%E5%BA%A6%E7%A0%B4%E8%A7%A3/" 
+        title="速度破解">
+        <div class="tags-list-item">速度破解</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/API/" 
+        title="API">
+        <div class="tags-list-item">API</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%A6%E7%B1%8D%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/" 
+        title="书籍网站收录">
+        <div class="tags-list-item">书籍网站收录</div>
+      </a>
+    
+      <a 
+        href="/tags/AI/" 
+        title="AI">
+        <div class="tags-list-item">AI</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" 
+        title="人工智能">
+        <div class="tags-list-item">人工智能</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/" 
+        title="在线工具">
+        <div class="tags-list-item">在线工具</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/" 
+        title="图片处理">
+        <div class="tags-list-item">图片处理</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】论自由
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-12-11T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-12</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>6.2k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p></div>
+<br />
+<img src="/image/book/readandnote/论自由/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/论自由/1.png" class="lozad post-image">
+<br />
+<h2 id="译者序">译者序</h2>
+<p><strong>原文摘录</strong><br>
+穆勒在《论自由》中开宗明义、阐明《论自由》的主题不是讨论所谓“意志自由”，而是“公民自由或社会自由”，“即社会可以合法地施加于个人的权力的性质和界限”。</p>
+<p>严复在译穆勒《论自由》时，把书名译为《群己权界论》，实在是精辟地理解了穆勒著作的主旨。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+民主化的出现给人类追求自由的事业带来新的课题。在民主化之前，人民通过制约政府权力来保障自己的自由。一方面，人民可能以宪法限制政府的权力，维护个人某些不可剥夺的权利；另一方面，人民可能期望通过民主的方式控制政府，使其追求人民的利益。</p>
+<p>然而，随着民主化的出现，人们愈来愈清楚地看到，“运用权力的‘人民’与作为权力施加对象的人民并不总是一回事；而所谓‘自治政府’也不是每人管治自己的政府，而是每人都被其余所有人管治的政府。”这样就会出现一种情况，人民会压迫人民中的一部分人。</p>
+<p>在描述民主社会人民的权力可能具有压迫性时，穆勒使用了“多数人的暴政”这个述语。</p>
+<p>穆勒还特别注意到现代商业社会所带来的平等化、平庸化与趋同化倾向。</p>
+<p>穆勒认同商业社会是一个倾向于平等、平均、平庸的社会，在这种社会，所有人“在很大程度上生活在相同的世界”“他们现在读相同的东西，听相同的东西，看相同的东西，去相同的地方，所持希望和恐惧也指向相同的对象，拥有相同的权利与自由，及主张这些权利的相同人的手段”。大众教育的普及，传媒的力量，交通的改善，商业制造业的发达，“所有原因结合在一起，形成了如此巨大的敌视个性的势力，以致不容易看出个性如何还能保住其领地。”</p>
+<p>《论自由》这部著作的要义可以概括为：只要不涉及他人的利益，个人（成人）就有完全的行动自由，只有当自己的言行危害他人的利益时，个人才应接受社会的强制性惩罚。这就是穆勒所划定的个人与社会的权利界限。因此，当1903年严复第一次把《论自由》介绍到中国来时，书名就叫《群己权界论》。如果整个人类，除一人之外，意见都一致，而只有那一个人持相反意见，人类也没有理由不让那个人说话。正如那个人一旦大权在握，也没有理由不让人类说话一样。</p>
+<p>《论自由》还对自由理论在实际生活中的应用进行了探讨，简单将之归结为两句格言：</p>
+<p>第一，个人的行动只要不涉及自身以外什么人的利益，个人就不必向社会负责交代；</p>
+<p>第二，关于对他人利益有害的行动，个人则应当负责交代，并且还应当承受或是社会的或是法律的惩罚。</p>
+<p>可以说本书是穆勒自由主义思想的系统论述，也是研究自由主义思想的重要著作。《论自由》在自由主义发展史上的重要性在于，第一次赋予自由主义完整而全面的理论形式，从心理学、认识论、历史观、伦理观等角度为当时已经达到黄金时期的自由主义提供了哲学基础，并以充沛的激情与清晰的逻辑对个人自由的理想做出强有力的辩护。</p>
+<p>用一些研究者的话来表述：如果不读《论自由》，就不了解自由主义的真谛。<br>
+<br /><br /></p>
+<h2 id="引言">引言</h2>
+<p><strong>原文摘录</strong><br>
+个人在追求某一合法目标时，无论在任何制度中，都不可避免地会产生对他人利益的影响，造成他人利益的损失。判断这种行为正当与否的标准是：是否对社会普遍利益造成危害。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+纵观全书，《论自由》中所阐述的自由观背后存在这样一个价值预设：不存在绝对的真理，人类的理性具有局限性。<br>
+<br /><br /></p>
+<h2 id="第一卷-论自由">第一卷 论自由</h2>
+<p><strong>原文摘录</strong><br>
+人类有理有权可以个别地或集体地对其他任何个人的行动自由进行干涉，但其只能以自我防卫为唯一的目的。换言之，防止个人行为对他人的危害，对文明群体中的任何成员来说，才是正当而有权地施加那种与其意志相反的权力的唯一正当目的。<br>
+<br /><br /></p>
+<h3 id="第一章-引论">第一章 引论</h3>
+<p><strong>原文摘录</strong><br>
+在为人们所最早熟知的部分历史中，自由与权威之间的斗争从来没有停息过，甚至在希腊、罗马和英国等部分国家的历史中这一斗争成为最显著的特色。在过去的年代中，如果政治统治者对其统治的臣民有残暴或酷虐的行径，其统治下的臣民或者某些阶级的臣民对这些统治者暴虐的防御就是那时所谓的自由。那时的统治者或者是实行管治的“一夫”，或者是实行管治的一族或一个世袭阶级，他们的权威不是得自家族世袭的继承就是得自武力的征服，并不依赖于臣民是否臣服与拥护；所以，一方面，无论被管治者高兴还是不满，都不会动摇他们所把持的权威，于是他们无视被管治者；另一方面，处于社会历史思维局限中的人们认为统治者的权力是必要的，他们的地位是尊贵和至高无上的，不敢也不想有所争议，更不会对这种权力的压迫性采取什么对策来预防；但这种权力也是极度危险的，它是一种武器，是一把双刃剑，统治者可以用它来对付外部的敌人，也可以用它来对付其臣民。因而，在人们的意想中（除了希腊时代的一些平民政府外），统治者必然处于与其所统治的人民相敌对的地位。举个例子，就像在一个飞禽群体中，较弱的成员需要一个比它们都要强壮的贼禽去保护，使其免遭无数其他鸷鹰群的残害，但强壮的贼禽须要先压服它们，于是这个鹰王在保护其群体、戕害较次的动物的同时也喜欢戕害其群中的成员，因而这个群体还须要时刻警惕和防御鹰王的爪牙。所以，对于统治者所施用于群体的权力，爱国人士就想要划定一些权力所应当受到的限制，这个限制保障了人们应得利益不受侵害，即是他们所谓的自由。取得这种限制有两种方式。第一种方式是要统治者承认臣民的某些所谓政治自由或者政治权利，即形成某些特权。这些自由或权利，统治者不能侵犯，否则就被认为违背义务，如果他真有所侵犯时，那么个别的抗拒或者一般的革命就可以被视为正当的。这种方式已在历史上有所实践，许多欧洲国度里曾以此方法迫使统治权力或多或少有所屈服。第二种方式是试图在宪法上建立一些制约，即管治权力中某些比较重要的措施必须得到代表其利益的某个群体或某个团体的同意，这是必要条件。它是一个出现得比较晚的策略，在历史上还没有真正完全实现过，于是，各地爱好自由的人们就把达到这种限制，或在已经达到某种程度之后使之更加完善，作为主要目标。历史的经验告诉我们，如果人类还满足于以一个压制自己的敌人去攻斗另一个侵害自己的敌人，还满足于在有效制约统治者独裁暴虐的条件之下，就任由一个君主居于统治地位，那人类的渴望就还没有超越这种观点之外。</p>
+<p>但是，历史的车轮滚滚向前，人类迎来了这样一个崭新的时代：人们不再把管治者高高在上地位和他们在利害上与人们相反的独立权力认为是一种理所当然的了，他们认为一种更好的方式是把国家的各种政府官员看作是他们的租户或代表，他们可以凭借自己的意愿和高兴与否来撒消。只有在这样的体制下，政府的权力才永远不会膨胀到侵害他们利益的程度，才能完全地保证他们的自由。于是，平民政党——只要哪里有过这种政党——所致力的明确目标就逐渐演变为由选举产生出统治者并且限制其任期的新要求，这已经成为一个新的目标，在相当大的程度上取代了从前的仅要求限制统治者权力的目标。如果这样的话，以前对权力本身的限制就没那么重要了，原来限制权力只是为了抵制在利害关系上总是与人民作对的统治者，但伴随着这种要使统治权力出自被统治者的定期选择的斗争愈演愈烈，人们已经逐渐意识到现在最重要的是：统治者应当是与人民合一的，统治者的利害和意志就应当是国族的利害和意志。对自己的意志国族已经无须防御，也不必担忧它会施虐于自身。只要可以有效地使统治者对国族负责，且国族可以及时对统治者进行撤换，那么国族就不必担心把自己可以支配其用途的权力交给他们，这时统治者的权力也就是国族自己的权力，只是变为一种便于运用的更加集中的形式而已。在前代欧洲的自由主义当中，这种思想形态、意识形态曾经一度是占主流的思想潮流，并在大陆的一支当中直到现在还占有着明显的优势。在如今的欧洲大陆，如果还有谁认为可以限制政府的所作所为——对于在他们看来根本就不存在的政府另当别论——那么，他要算是政治思想家中的特例了。以我们自己的国家为例，如果那种在一个时期曾对这种基调起到推波助澜作用的情势一直没发生变化的话，那这样的基调也许到今天还会得势。</p>
+<p>然而，正如在人们生活中，被失败所掩饰的错误和弱点往往会由成功暴露出来，在政治和哲学的理论当中也是如此。当平民政府还未实现，人们怀揣着这个美好的梦想为之努力时，当它还仅仅是存在于远古的典籍载记中时，人民不须要限制自己施用于自己的权力的这个观念似乎还是一条默认自明的公理。即使最轰动如法国大革命那样的一些暂时性的或突发性的不寻常状况，也只不过是为了反对君主和贵族专制而爆发的一场突然的、骚动性的运动，其最坏也不过是少数篡夺和窃取的结果，并不算是平民政治登上历史舞台的恒久常规性运用，因而，也并不会动摇上述那个自明的观念。但是，历史的车轮向前迈进，民主共和国登上了历史的舞台，覆盖着地球上偌大的地域，成为国族群体中举足轻重的重要组成之一；此时，观察者和批评者有了用武之地，民主共和国的选举制和责任制政府这个巨大的既成事实成为他们观察与窥视的对象。这时，所谓的“自治政府”和所谓的“人民施用于自身的权力”等诸如此类的观念，并不能正确地反映出制度实践中的真实状况，其中所存在的问题就逐渐暴露出来。所谓的“自治政府”并非人民自己施用于自己的权力政府，并非人民自己管治自己的政府，而是由一部分人管治其余一部分人的政府，每个人都在他人的管治之下；而所谓的“人民意志”，在实际施行上只可能是一部分人民的意志，这部分人或者是最多的、或者是最活跃的、或者是那些能使自己被承认为多数人们的意志；在此情形下，运用权力的“人民”与权力所施加的“人民”永远是不一致的；于是，人民中分为施用权力者和被代表、被施于权力者，人民会受到自己人中一部分人的压迫，这就成为必然的结果，而人民对于这种滥用权力的防御丝毫不逊色于其他防御。因而，对政府施用于个人权力的限制这个问题，无论在掌权者对于群体，还是群体中最有力的党派对其他人民要负其惯常的责任时，都是非常重要的。鉴于此，在今天的政治思想中，一般已把“多数的暴虐”列为一个社会所需要警惕预防的重要问题；树立“多数的暴虐”的防御思想，既符合思想家们的考虑，又符合欧洲社会中那些无论在真实的还是设想的利害关系上与民主相反的重要阶级的意向。</p>
+<p>一般来看，人们起初只是认为，这个“多数暴虐”的可怕之处和其他种类的暴虐一样，主要只是通过公共的权威措施来对公众施加影响。但经过越来越多人的深思熟虑、明察秋毫后，人们已经发现，社会是比政府更广阔而无形的集体，社会本身的暴虐手段也比政府所施加的手段更为广泛和繁复，它的肆虐不仅只限于通过政治机构实行的措施，社会还能够自己下诏令并将其执行。如果社会所颁布的诏令是错的，或者它的内容是它所不该干预之事，而它又作为集体凌驾于构成它的个人，那此时，一种社会的暴虐就产生了；而这种社会的暴虐更加渗透入人们生活的细节，更深入地渗透进人们的意识，奴役着人们的灵魂本身，人们无处逃避、无所藏匿，因此，即使社会的暴虐没有极端的刑罚作为威慑的盾牌，但却远比其他的政治压迫更加可怕。因此，除了要防御官府的暴虐之外，更要加强防御那些得势的舆论和随之得势的思想的暴虐；如果有与社会惯有观念意见不同的人，要防御社会在行政处罚之外把它自己的观念和行事当作唯一的准则来强加于个人，这种强加的压迫性束缚了任何与它的方式不相协调的个性的发展，甚至可能的话，它还阻止了个性的形成，并试图用它自己的模型和条条框框来剪裁与约束所有的人。因此，要寻找与研究出集体意见对于个人独立的合法干涉的限度，并维持它不遭侵蚀，这与防御政治专制同样是使人类事务获得良好运行所必不可少的两项任务。</p>
+<p>这个问题虽然在一般来说不会引起太大的争论，但重点是在实践的时候究竟应如何划定限度？即究竟应该如何恰当地划分和调整个人独立与社会控制？这就是一个摆在人们面前的崭新问题了。社会的正常运行需要约束，对他人的行为有所约束是有价值的存在。因此，要制定出某些人们行为的准则，首先由法律来强制某些事情，而在法律之外，则由舆论和道德来对人们的行为和做法加以限制。关于这些行为准则的制定和规划是人类事务中的首要问题，但即使除去那些少数不言而喻的事务之外，目前在解决这个问题方面仍然进展缓慢。这个问题是因时而异、因地而异的，每个时代、每个国度在对这个问题的处理上的决定都是有差异的；某个时代或某个国度的决定放在另一个时代或另一个国度里也许就不相适宜。但是，奇怪的是，以往任一特定时代或国度的人们对此问题却并没追根究底，也没将它列为疑难问题，就如同全世界一直在面对的一个相同的问题似的。其原因在于，社会习俗这个魔术性的惯常势力在发挥作用。在习俗的普遍错觉里，他们认为自己在所生活的社会中所依据的准则是不言自明和理所当然的。它魔法般地阻止着人类对相互强加的行为准则的任何一点怀疑，无论是一人对于另外一人，还是每个人对于他自己，人们都普遍认为遵守这些准则无需任何理由。常言道，习俗是人类第二天性，但这里习俗甚至上升为第一天性的位置而被错误地对待。人们或者习惯于相信，或者受到某些极端倾向于哲学家性格的人们的鼓励而去相信：在对这种问题的思考上，引导他们相信关于约制人类行为的一条实际的原则乃是各人心中的这样一种感想，即认为凡人都应当被要求按照他和与他有同感的人们所愿意他们做的那样去做。他们更依赖于感性，反而认为理性的思考不重要。人们内心中一直有这样的一种想法，即认为凡是社会中的人都应当被要求按照他和与他有同感的人们所期望的那样去做。因此，他们内心就认定社会对于人类行为的制约准则是理所应当的。的确，在这里，人们的判断标准并不是出于他们自己的喜好；并且，如果一个人在对于行为问题上的意见没有任何的理由作为根据，那它只能算是一个人的选择；又如果他的选择理由只是跟他人一样的话，那也仍然不过是多人的选择和爱好，而并非一人的喜好。但是，这种与他人相同的选择理由，对于一个普通人来说，却成为他不仅在道德上、志趣上、礼仪上、习俗上所持观念的一个圆满理由，而且还是他所持有的唯一理由；虽然在宗教信条中并没有明确写明那些观念，但即使在宗教信条里写明，对于他的看法占主导地位的决定因素仍然是他自己的解释。由此可见，影响人们对他人行为意愿的复杂纷繁的缘由在左右着人们对人和事的是非判断、褒贬评价。有很多因素影响着人们对他人的行为意愿，就如同影响人们在其他任何问题上意愿的因素。其一，人们有时候受理性因素影响，有时候又受固有成见或迷信的牵制，有时候意愿源自人们社交性的爱好，而有时又源于人们反社交性的爱好，有时候来自于人们的妒忌，有时又来自于人们的妄自尊大或鄙薄他人。然而，最普遍的因素则是他们自己的切身利益，或是合法的，或是不合法的，这就产生了他们的欲望和恐惧。其二，除此之外，尤为重要的一点是在一个国家里占优势阶级的阶级利益和优越感在很大程度上决定并影响着一个国家的道德倾向和选择，并且由此而产生的道德情操又会对占优势阶级的成员们自己之间的相互关系的道德情绪起反作用。历史上的一些例子都证明了社会中道德的形成很大程度上都是由当时的那些占优势的阶级利益和阶级优越感所创造的，如在斯巴达人（Spartan）与其赫劳特农奴（Helot）之间产生的道德、殖民者与殖民地黑人之间产生的道德，再扩大如一国君主与臣民之间的道德、贵族与平民之间的道德、以及社会男女之间的道德皆是如此；同时，社会道德也会随着得势阶级之间的更替而受到影响并作出转变，如果从前占优势的阶级沦落而失去其势力，或者其优势已变弱而不能服众，此时逐渐上升，并开始得势的阶级的道德情操往往就会逐渐转变为带有一种痛恶优越的意味。其三，还有非常重要并具有决定性意义的一个因素就是，人类对其所信仰的现世主人或所信奉的神祗所崇尚的那种意想中的好恶取向有着近乎于奴性的服从，而不管此行为在法律或舆论的行为准则中是赞同还是反对的，这种伪善在形式上是伪善的，但本质上却是极端自私的；它在有着奴性信仰的人们的内心中孕育出一种完全纯粹顺从神的好恶的爱憎情感，这种爱憎情感甚至可以使人们对烧死眩人和异端者的行为而无所动摇。其四，除了上述因素外，其他因素的影响较少，但其中仍有一项在引导道德情操方面起着比较大的作用，那就是一般意义上的和明显存在的社会利害这个因素，更重要的是从社会利害中所产生出的内心的爱憎的感情，它并不是完全出于理性，也并不能完全归因于社会利害自身。这种爱憎之感对于社会各项道德方面的树立是种重要的影响力量，但反过来看，它却对社会利害基本上没有产生任何的影响。<br>
+<br /><br /></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/12/12/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%8B%82%E7%83%AD%E5%88%86%E5%AD%90/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】狂热分子 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/12/12/%E9%94%B5%E9%94%B5/%E6%9C%89%E6%84%8F%E6%80%9D%E7%B3%BB%E5%88%97/%E9%94%B5%E9%94%B5%E6%9C%89%E6%84%8F%E6%80%9D%E7%B3%BB%E5%88%97/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">锵锵有意思系列视频 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%91%E8%80%85%E5%BA%8F"><span class="toc-text">译者序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%B7-%E8%AE%BA%E8%87%AA%E7%94%B1"><span class="toc-text">第一卷 论自由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BC%95%E8%AE%BA"><span class="toc-text">第一章 引论</span></a></li></ol></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%91%E8%80%85%E5%BA%8F"><span class="toc-text">译者序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%B7-%E8%AE%BA%E8%87%AA%E7%94%B1"><span class="toc-text">第一卷 论自由</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BC%95%E8%AE%BA"><span class="toc-text">第一章 引论</span></a></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2024-01-03</div>
+        <a href="/2024/01/03/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%8E%A8%E7%90%86%E7%9A%84%E8%BF%B7%E5%AE%AB/"><div class="recent-posts-item-content">【阅之载之】推理的迷宫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-12-27</div>
+        <a href="/2023/12/27/fancywebsite/%E6%90%9C%E7%B4%A2%E7%BD%91%E7%AB%99/"><div class="recent-posts-item-content">【Fancy Website】搜索网站</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-12-21</div>
+        <a href="/2023/12/21/%E6%8F%92%E4%BB%B6/Photoshop%E6%8F%92%E4%BB%B6/"><div class="recent-posts-item-content">【实用插件收录】Photoshop插件收录</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2023-12-10</div>
+        <a href="/2023/12/10/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%8A%9B%E9%87%8F/"><div class="recent-posts-item-content">【阅之载之】微积分的力量</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2024
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>
