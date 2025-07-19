@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【察之作之】碧波深潭</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【察之作之】碧波深潭">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2025/07/18/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E7%A2%A7%E6%B3%A2%E6%B7%B1%E6%BD%AD/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2025-07-18">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-07-19">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="察之作之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="小说">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>139</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>110</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%BF%E6%B3%A2%E6%B7%B1%E6%BD%AD"><span class="toc-text">绿波深潭</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">17</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">58</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91/" 
+        title="善恶之屑">
+        <div class="tags-list-item">善恶之屑</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/" 
+        title="外道之歌">
+        <div class="tags-list-item">外道之歌</div>
+      </a>
+    
+      <a 
+        href="/tags/The-Art-of-Basketball/" 
+        title="The Art of Basketball">
+        <div class="tags-list-item">The Art of Basketball</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%AF%AE%E7%90%83/" 
+        title="篮球">
+        <div class="tags-list-item">篮球</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/Win10/" 
+        title="Win10">
+        <div class="tags-list-item">Win10</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%A8%E6%88%B7%E5%90%8D%E4%BF%AE%E6%94%B9/" 
+        title="用户名修改">
+        <div class="tags-list-item">用户名修改</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%89%8B%E6%9C%BA/" 
+        title="手机">
+        <div class="tags-list-item">手机</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%A1%AC%E4%BB%B6%E6%8D%9F%E5%9D%8F/" 
+        title="硬件损坏">
+        <div class="tags-list-item">硬件损坏</div>
+      </a>
+    
+      <a 
+        href="/tags/Mobile-Phone/" 
+        title="Mobile Phone">
+        <div class="tags-list-item">Mobile Phone</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/" 
+        title="谷歌浏览器">
+        <div class="tags-list-item">谷歌浏览器</div>
+      </a>
+    
+      <a 
+        href="/tags/XP/" 
+        title="XP">
+        <div class="tags-list-item">XP</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%A3%9E%E5%88%A9%E6%B5%A6/" 
+        title="飞利浦">
+        <div class="tags-list-item">飞利浦</div>
+      </a>
+    
+      <a 
+        href="/tags/APK/" 
+        title="APK">
+        <div class="tags-list-item">APK</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E8%A7%86/" 
+        title="电视">
+        <div class="tags-list-item">电视</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%99%BE%E5%BA%A6%E4%BA%91%E7%9B%98/" 
+        title="百度云盘">
+        <div class="tags-list-item">百度云盘</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【察之作之】碧波深潭
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2025-07-17T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2025-07-18</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+          class="post-meta-link">
+          察之作之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>2.1k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+            class="post-meta-link">
+            察之作之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E5%B0%8F%E8%AF%B4/" 
+            class="post-meta-link">
+            小说
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"></div>
+<h2 id="绿波深潭">绿波深潭</h2>
+<p>绿潭村因为村里的一口绿潭而得名，这口绿潭实在老得不能再老，连村里年纪最大的老人也说不清楚何时开始有的这口潭子，只知道在他的爷爷的爷爷的时候就已经存在。</p>
+<p>村子原本只是个种菜务农的村子，不过随着城市更新，附近通了地铁，开了商场，立刻就变得不再普通。就仿佛是一场春雨过后，庄稼地里长势喜人的油菜田一样，一栋栋自建高楼拔地而起，密密麻麻占据了所有的空地，几乎一点空隙都没留下，最后是村长好说歹说，说村子叫绿潭村，不能没有那一口绿潭，才将村子中央的池子保下来。又找了些石块将周围砌起来，周围种上一批红色花瓣、金黄色心蕊的海棠花，只是一直无人打理，久而久之池水发烂发臭，便更加令人避之不及，终究沦落为无人问津的荒地。</p>
+<p>不过池子没人打理是在情理之中的事，村民们自分地建房，摇身一变成为房东后，主业便成了收租，由于一户人家至少也拥有三四栋楼，一栋楼少说也有二三十户租客，所以都忙得很。</p>
+<p>村里的一个张姓女人正叉腰站在屋内，她大约五十多岁，穿着一件衣领镶有两道金边的红褐色大衣，衣服下面是一层蜡黄色的粗糙皮肤，底下一团油乎乎的肥肉，将白森森的刻薄骨骼裹得严严实实。她两瓣像被马蜂蛰过一般的嘴唇上下甩动，唾沫翻飞，尖声厉气声污言秽语不断，她的丈夫也刚从厨房里骂骂咧咧走出，一手提着一盏探照灯，另一手还捏着个小本子。</p>
+<p>二人像两尊怒目金刚，将一名女租客堵在角落里，张姓女人喝骂道：“呀呀呀，你个烂衰女啊，当时房子我租给你的时候可是好好的，现在这么多磨损的地方，你说怎么办吧！”</p>
+<p>她的丈夫提着探照灯仔仔细细</p>
+<p>数不清的豆大疙瘩浮现在手臂上，好似蛤蟆一般</p>
+<p>村民自从摇身一变有了自己的房屋后，</p>
+<p>“好了，我再跟你说一下，每个月的房租我便宜点算</p>
+<p>水和电嘛，由于</p>
+<p>绿潭村因为村里的一口池塘而得名，池水常年泛绿，池边立有一石碑，上写“绿潭”二字，但既无落款，也无文献记录，竟是无人能说清这石碑的来历，好似就是天生与池子一体而生。对于池子，人们也说不出个所以然，连村里年纪最大的老人也说不清是怎么有的这口池子，只说在他爷爷的爷爷的时候就已经存在。</p>
+<p>村子原本只是个种菜务农的贫穷村子，随着城市更新的进展，在附近通了地铁，开了商场，好些地被征收建成高档住宅和办公写字楼，村子立刻便不再普通，低矮的平房摇身一变成为五六层的自建房，像庄稼地里长势喜人的油菜田一样，密密麻麻占据了地面所有空隙，以至于处于村子内围的路狭小逼仄、阴暗潮湿，相邻的两栋楼几乎要背靠背挨到一起，即便如此，还有不少房子偷偷进行加盖，你多加一层，他便加两层，直叠到九、十层高，仿若军备竞赛似的。</p>
+<p>池子倒是同石碑一起被保留了下来，还因为被申请为市里的历史保护项目，获得一笔不菲的经费。自此池子周边用大块平整石条铺好，围上栏杆，附近开辟出一大块花圃，种上红色的郁金香，装扮成了个小公园。只不过由于没人打理，时间一久，白净的青石地板灰一块，黑一抹，还被黑色马克笔写上通厕、搬家、迷魂药等一类的广告字样，连池水也开始发烂发臭，大片垃圾漂浮着聚集在池塘一角，墨绿水波下好似埋伏着一颗巨大的腐烂了的卷心菜。</p>
+<p>不过这从来不是绿檀村原住民们会关心的问题，自从他们从农民摇身一变成为地主后，便开始过起了收租的生活。他们将房间尽可能多地创造出来，像蜜蜂的巢穴般，五、六平米一间，出租给外来务工人员，如此一个月可以顶上过去一年多的收入，生活质量产生了质的飞跃。而房子既然作为了主要的收入来源，他们也便不再住在那里，而是在周边的花园小区安置新屋，逐渐搬出了村子。只不过他们还是经常会回到村里巡视，搜寻猎物。他们戴着草帽，穿着普通，通常是花斑纹薄衬衫，踩着拖鞋，骑着电单车，腰间挂着大串钥匙，远远望去，像挂满香蕉的香蕉树。有些人嫌麻烦或管理不来，便只留一两栋楼自己打理，其余的外包给二手房东去经营。</p>
+<p>每天清晨开始，黑压压的人</p>
+<p>这边的人以前都穷怕了，真穷怕了，因此他们对金钱有着近乎本能的饥渴</p>
+<p>他们的生活质量一下有了质的飞跃，</p>
+<p>池子是老得不能再老</p>
+<p>说起池子来，也是颇有历史，连村里年纪最大的老人也说不清是合适出现这口池子，只说再他</p>
+<p>这口绿潭实在老得不能再老，连村里年纪最大的老人也说不清楚何时开始有的这口潭子，只知道在他的爷爷的爷爷的时候就已经存在。</p>
+<p>房东笑脸相迎，她大约50岁左右年纪，微胖，模样显得和蔼可亲，她开口说：“是你要租房吗，小伙子。”他点点头作为回应，说：“方便先带我看一下房间吗？&quot;</p>
+<p>“当然可以，跟我来。”女人笑着说，“你一个人住？”</p>
+<p>“是啊，因为准备在这附近找工作。”</p>
+<p>“哦，你是哪里人？刚毕业吗？”</p>
+<p>“我是X市的，今年刚毕业。”</p>
+<p>“一个人过来大城市打拼，也是不容易呢。我看你老实本分，就知道是个不错的孩子，</p>
+<p>“一个人到大城市来</p>
+<p>“咱们也算很有缘分，我已经计划好后天要出去旅游，</p>
+<p>“我有三栋楼，两栋出售给二手房东打理，我</p>
+<p>他们一个月给我五万块，我在住的这一栋就由自己管理，</p>
+<p>反正我交给你的那阵是完好无损的，</p>
+<p>她的丈夫走上前，用力将两扇玻璃窗卸了下来，指着贴合轨道的缝隙说：“这里还这么多灰！你就敢说打扫干净了？”</p>
+<p>我也看跟你挺有缘分，就租我这里吧</p>
+<p>“昨天602房收到的钱呢？”房东太太问她老公。</p>
+<p>男人愣了一愣，大声反问道：“</p>
+<p>和蔼的妇人亮出她的獠牙来，满脸的皱纹一翘一翘地抖动着，像最狡猾的狐狸和最歹毒的恶狼的胡须，</p>
+<p>早上取得一场大胜的妇人心情不错，她美美地睡了个午觉，醒来已经接近四点半，她照例到村口转悠。她溜达了一会，在巷口挑了个遮阴的地坐下，加入同村熟人的谈话。她正有一搭没一搭聊着天，忽然眼尖瞅见远处一人背着包，走走停停，还不时抬头向上望。别见她年纪大了，眼睛依旧如猎鹰般锐利，嗅觉如豺狼般灵敏，她立刻意识到又是一块难得的香饽饽，于是连忙结束谈话起身，双手拍了拍衣服的下摆，掸去上面沾着的尘粉，随后若无其事朝那人的方向走。</p>
+<p>那人此时正站在一栋房子前，看着门口张贴的正准备打电话，妇人经过他身边时，假装不经意地回头问：“</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2025/07/18/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E7%A2%A7%E6%B3%A2%E6%B7%B1%E6%BD%AD/">
+            https://illusionzone.github.io/2025/07/18/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E7%A2%A7%E6%B3%A2%E6%B7%B1%E6%BD%AD/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2025/07/18/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E6%96%B0%E8%AF%97%E9%9B%86/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【察之作之】新诗集 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2025/06/18/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%99%BD%E5%A4%9C/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】白夜 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%BF%E6%B3%A2%E6%B7%B1%E6%BD%AD"><span class="toc-text">绿波深潭</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%BF%E6%B3%A2%E6%B7%B1%E6%BD%AD"><span class="toc-text">绿波深潭</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-07-18</div>
+        <a href="/2025/07/18/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E6%96%B0%E8%AF%97%E9%9B%86/"><div class="recent-posts-item-content">【察之作之】新诗集</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-07-18</div>
+        <a href="/2025/07/18/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E7%A2%A7%E6%B3%A2%E6%B7%B1%E6%BD%AD/"><div class="recent-posts-item-content">【察之作之】碧波深潭</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-06-18</div>
+        <a href="/2025/06/18/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%99%BD%E5%A4%9C/"><div class="recent-posts-item-content">【阅之载之】白夜</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-05-29</div>
+        <a href="/2025/05/29/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E5%9C%A3%E5%8F%B9%E9%80%89%E6%89%B9%E5%94%90%E8%AF%97%E5%85%AD%E7%99%BE%E9%A6%96/"><div class="recent-posts-item-content">【阅之载之】金圣叹选批唐诗六百首</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>
