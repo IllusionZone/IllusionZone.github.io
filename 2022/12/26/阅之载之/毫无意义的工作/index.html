@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】毫无意义的工作</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】毫无意义的工作">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/26/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89%E7%9A%84%E5%B7%A5%E4%BD%9C/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/book/readandnote/毫无意义的工作/毫无意义的工作.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="略">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-26">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-03-25">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E2%80%9D"><span class="toc-text">第一章 什么是“狗屁工作”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-text">第二章 狗屁工作的种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E7%B2%BE%E7%A5%9E%E6%9A%B4%E5%8A%9B%EF%BC%88%E4%B8%8A%EF%BC%89%E2%80%94%E2%80%94%E4%B8%BA%E4%BB%80%E4%B9%88%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E4%BD%BF%E4%BB%8E%E4%BA%8B%E7%9D%80%E8%AF%B4%E4%BB%96%E4%BB%AC%E4%B8%8D%E5%BF%AB%E4%B9%90"><span class="toc-text">第三章 论精神暴力（上）——为什么狗屁工作使从事着说他们不快乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%BA%E7%B2%BE%E7%A5%9E%E6%9A%B4%E5%8A%9B%EF%BC%88%E4%B8%8B%EF%BC%89%E2%80%94%E2%80%94%E8%BA%AB%E5%A4%84%E7%8B%97%E5%B1%81%E5%B2%97%E4%BD%8D%E6%9C%89%E4%BD%95%E6%84%9F%E5%8F%97"><span class="toc-text">第四章 论精神暴力（下）——身处狗屁岗位有何感受</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%BF%80%E5%A2%9E"><span class="toc-text">第五章 狗屁工作为什么会激增</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%BA%94%E5%AF%B9"><span class="toc-text">第七章 狗屁工作的应对</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E6%95%B4%E7%90%86"><span class="toc-text">词汇整理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E6%95%B4%E7%90%86"><span class="toc-text">名词整理</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/book/readandnote/毫无意义的工作/毫无意义的工作.png" 
+      data-src="/image/book/readandnote/毫无意义的工作/毫无意义的工作.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【阅之载之】毫无意义的工作 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】毫无意义的工作
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-12-25T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-26</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>4.3k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p></div>
+<br />
+<img src="/image/book/readandnote/毫无意义的工作/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/毫无意义的工作/1.png" class="lozad post-image">
+<br />
+<h2 id="1">1</h2>
+<p><strong>原文摘录</strong><br>
+倘若世界上大部分可支配的财富掌握在1%的人手中，那么我们所说的‘市场’反映的不过是这1%的人的喜好，而不是其他人的需求。除此以外，这还表明大部分从事无意义工作的人最终都认识到了自己的工作毫无意义。<br>
+<br /><br /></p>
+<h2 id="第一章-什么是“狗屁工作”">第一章 什么是“狗屁工作”</h2>
+<p><strong>原文摘录</strong><br>
+我们打造了这样一个社会：在这个社会里，大批人身处无意义的岗位，与此同时，这些人却对那些真正从事有意义工作的人和那些无所事事的人心生同等的憎恨和鄙视。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+世界上大部分作恶的人是意识不到自己在作恶的。或者说，这些对世界有害的人不可避免地会被一堆领着酬劳却整天卑躬屈膝、唯唯诺诺的“奴仆”包围，然后听这些马屁精不断想出各种理由来证明，自己的所作所为对社会是有益的，他们允许自己相信这些没完没了的废话。（今天，这些卑躬屈膝、唯唯诺诺者有时候被称作“智囊团”。）<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+最终版本临时定义：狗屁工作是一份毫无意义且往往有害的定期领薪水的职业，其无意义或有害程度是如此之高，乃至从事这份职业的人都无法为其找出合适的存在理由。虽然要从事这份工作有一个条件，即从事者不得不假装这份工作的存在是完全合理的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+因为有一个普遍事实，那就是某个强有力群体对世界的危害越大，他们身边溜须拍马的人就会越多，鼓吹者也会聚拢。溜须拍马者和鼓吹者会想出五花八门的理由来证明这个强有力的群体真的对社会有贡献，然后这个群体中还真的有一部分人就听信这些马屁了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+事实上，“狗屎工作”和“狗屁工作”几乎可以说是完全相反的工作。“狗屁工作”往往能带来很不错的收入，工作环境也极佳，只不过毫无意义；而“狗屎工作”恰恰相反，这些岗位对社会来说必要且有益，只是这些从业者收入很低且工作环境很糟糕。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+陀思妥耶夫斯基在西伯利亚劳改营流放期间，提出了一种理论：世界上最残酷的折磨便是强迫人无休止地做一件明显毫无意义的工作。<br>
+<br /><br /></p>
+<h2 id="第二章-狗屁工作的种类">第二章 狗屁工作的种类</h2>
+<p><strong>原文摘录</strong><br>
+世界上不存在完美的分类。分类的方式许许多多，每一种分类结果都会带给我们独特的信息。在研究中，我发现把狗屁工作分成五个类别会很有帮助。这五大类别分别是：随从（flunky）、打手（goon）、拼接修补者（duct taper）、打钩者（box ticker）和分派者（taskmaster）。<br>
+…<br>
+随从随从存在的唯一目的或主要目的，是衬托另一个人的重要性，让这个人看起来很重要或者让这个人感到自己很重要。<br>
+…<br>
+打手符合此类别最为突出的工作便是国家武装部队了。一个国家之所以需要武装部队，不过是因为其他国家也有武装部队。如果大家都没有武装部队，那世界完全可以继续运转。除了部队，大部分游说者、公关专员、电话推销员和企业律师也符合这类情况。和真正的打手一样，这些工作很大程度上会给社会造成负面影响。打手工作的核心点正是“攻击性”和“欺骗性”。<br>
+…<br>
+拼接修补者拼接修补者的岗位完全是为了应对组织的某个故障或缺陷而存在的。出于解决某个本不该存在的问题的需求，我们有了拼接修补工作。大部分拼接修补工作的存在都是因为系统有故障，而没人愿意花精力把这个故障修理了。比如，有些工作其实很容易就能实现自动化，却没有实现，原因要么就是没人抽出时间来把这个自动化实现了，要么就是管理者压根儿不想削减手底下干活的人数，要么是公司人事架构混乱，也有可能三个原因都有。<br>
+…<br>
+打钩者我使用“打钩者”这个术语，指的是那些被雇用来掩盖某个组织不作为的员工。这类工作者存在的全部意义或者绝大部分意义就在于，雇用他们的组织可以对外声称，他们正在做某件他们其实没有做的事情。<br>
+…<br>
+分派者分派者可以分成两类。第一类分派者工作的全部内容就是给他人派活儿。这类分派者正好和前面说的随从相反：后者是没必要存在的下级，前者是没必要存在的上级。第二类分派者的主要工作便是制造狗屁工作给他人，监督这些狗屁工作的完成，甚至还要招更多的人来完成这些狗屁工作。此类分派者可以被称作“狗屁工作生成器”。<br>
+…<br>
+复合型</p>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+汤姆：在我看来，有价值的工作是这样的——它或者能满足早已存在的某种需求，或者能创造出某种人们未曾想到的产品或服务，这种产品或服务能以某种方式改善人们的生活。我认为，人类早已过了大部分工作符合上述类别的阶段了。对大部分行业来说，供给已远超需求。人类当下生产的是需求而不是别的什么。我的工作由两部分组成：第一部分是制造需求，第二部分是夸大号称能解决这些需求的产品的效果。事实上，我们甚至可以提出这样的观点：所有广告业从业者及相关人员的工作内容都是由这两部分构成的。如果我们身处的时代，是为了卖出产品去诱骗人们产生虚假需求，那么你若是想要声辩这些工作不是狗屁工作，估计要费很大一番功夫。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+他将“非欺骗性幻觉”和“欺骗性幻觉”区分开来。当你用特效做出恐龙袭击飞船的画面时，没有人会觉得这是真的。这就跟舞台上的魔术表演类似，所有人都知道这里有把戏，把戏本身就是趣味的一部分，大家只不过不知道它是怎么做到的罢了。与此相对，当你不动声色地修饰名人外表时，其实是在试图潜移默化地改变观众心中对真实生活（此处特指男人和女人的外貌与身材）该有的样子的认知。这么做的目的是让人心中产生不适感，让他们觉得自己的生活不够好，无法跟真正的生活相比。非欺骗性幻觉给世界带来了快乐，而欺骗性幻觉则旨在说服人们相信自己的生活既庸俗又糟糕。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+政府组织热衷打钩工作，对此我们一点都不陌生。政府内若有人做坏事被发现（比如收受贿赂，或者在交通截停的时候开枪伤人），那么政府组织的第一反应永远都是成立“事实调查委员会”来彻查事件。这么做有两个功能。首先，通过这样的方式，政府在向公众传递一个信息，那就是虽然内部存在少量渣滓，但组织内部其他人对此类恶性事件一无所知（当然这很少是真的）。其次，成立了事实调查委员会，就好像告诉大家，一旦事实调查完毕，此事定会得到处理（这往往也是假的）。事实调查委员会的作用在于向公众宣告，政府正在做一件他们其实并没有在做的事情。不仅是政府，如果有需要，大型公司也会这么操作。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当然，某种程度上这是所有行政部门的统一作风：形式上的措施一经实施，“现实世界”（对组织而言）便成了纸上所记录的“现实”，而真正的现实世界则被忽略了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+正如封建领主随从大军中，有人专门负责骑马比武前的马匹盔甲擦拭工作或庆典前领主的胡子打理工作，今时今日，公司高管的下属团队中，也有专人负责他们的演讲PPT和报告中的地图、漫画、照片与插图。这些报告的命运大都类似于歌舞伎舞台上那些道具和服饰，没人会真的仔细看。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+分派工作和打钩工作组合在一起，就构成了中层管理的本质。<br>
+<br /><br /></p>
+<h2 id="第三章-论精神暴力（上）——为什么狗屁工作使从事着说他们不快乐">第三章 论精神暴力（上）——为什么狗屁工作使从事着说他们不快乐</h2>
+<p><strong>原文摘录</strong><br>
+曾经，人们觉得让青年男女拥有几年纯粹的时光是件好事，在这几年中，他们可以不把金钱放在首位，可以肆意追寻各种价值：他们可以研究哲学、品读诗歌，他们可以热衷体育、探索性爱，可以调整状态、不断感悟，还可以关心政治、了解西方艺术史……可如今，人们觉得年轻人应当去工作。不过，这份工作是否有意义大家并不重视。<br>
+<br /><br /></p>
+<h2 id="第四章-论精神暴力（下）——身处狗屁岗位有何感受">第四章 论精神暴力（下）——身处狗屁岗位有何感受</h2>
+<p><strong>原文摘录</strong><br>
+我们对自身存在的觉察，对自身作为独立个体区别于周围环境的领悟，很大程度上来自一个愉快的发现，即自己能够对周围环境产生可以预料的影响。婴儿时期如此，一生亦如此。把这份愉快彻底夺走，就好似用脚将人踩扁，跟踩扁小昆虫似的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+青春期正是我们人生第一次面临如下挑战的时候：如何坚持自己，如何避免沦为我们厌恶的怪物。<br>
+<br /><br /></p>
+<h2 id="第五章-狗屁工作为什么会激增">第五章 狗屁工作为什么会激增</h2>
+<p><strong>原文摘录</strong><br>
+世界各地的经济体正在加速沦为一台台生产无用垃圾的巨型引擎。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+人类是易变的，人类一直是易变的，没有任何办法能够改变这个事实。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+大型银行就是由大批封建随从和少数封建领主构成的，每位高管享受领主般的待遇，手底下的员工便是听命于他的随从。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+管理层越来越臃肿，收入越来越高，因为真正创造价值的基层员工被高层管理榨取得越来越狠。随着这种榨取的加剧。顶层掠夺者需要不断壮大自己的“护卫队”，来看管“赃物”。——凯文•卡森<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+马克思所区分的“生产性劳动”和“非生产性劳动”（马克思认为，对资本家来说，劳动要么是生产性的，要么是非生产性的）。生产性劳动能够带来某种剩余价值以供资本家榨取；非生产性劳动最好的情况便是“再生产劳动”，也就是家务或教育等劳动（每次提到再生产劳动，总是这两个例子）。“再生产”提供了必要的次阶劳动，这样，生产性劳动者可以精神饱满地去劳动，而一代又一代新的生产性劳动者又可以源源不断地被培育出来，以便资本家持续剥削。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“无产阶级”这个词的英文来自拉丁文，该拉丁文短语直译为“那些生产后代的人”，可以说很贴切了。在古罗马，那些穷没办法向他们征税的最贫穷的市民，对政府来说唯一的用处就是生孩子了，源源不断地生儿子，为军队做好准备。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+卡莱尔赞颂工作，认为工作能够将人的灵魂从忧虑中解救出来：尼采则因为同一个理由而批判工作：“从人们对‘工作’的颂扬和对‘劳动的恩惠’没完没了的谈论中，我看到了…对一切个体性事务的恐惧。因为一看到工作，也就是从早到晚的严酷劳作，我们就会觉得这就是最好的警察。换句话说，工作将每个人都约束了起来，有效阻止了理性的发展、贪欲的膨胀和对自主的渴求。因为工作耗尽了一个人绝大部分的神经力量，而这些神经力量原本是可以用来沉思、冥想、做梦、担忧、去爱、去恨的。”<br>
+<br /><br /></p>
+<h2 id="第七章-狗屁工作的应对">第七章 狗屁工作的应对</h2>
+<p><strong>原文摘录</strong><br>
+在我看来，这种没完没了延续毫无意义的工作的冲动，实际上不过是来源于对暴民的恐惧：暴民这种动物如此低等，以至一旦让他们获得闲暇，就会立刻变得危险，还是让他们忙忙碌碌没有时间思考来得安全。 ——乔治·奥威尔，《巴黎伦敦落魄记》<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+假如有人想要设计出一项制度，能够完美地维护资本的力量，那他（或她）是很难想出超越前文做法的方案的。真正有产出的工人被无情地压榨和剥削，剩下的人分成两组：一组是惶恐的不工作的人，这些人受到普遍的抨击和斥责；更多人是在另一组，他们领着工资但其实什么都不做，他们的岗位是为了认同统治阶级的观点和感受（比如经理、行政管理人员等，其中统治阶级的财务代理人尤为突出），同时还能促使人们对那些从事着具有无可辩驳的社会价值之工作的人产生隐隐不满。 ——节选自《谈谈“狗屁工作”现象》<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+人类工作越来越辛苦是因为人类创造了某种奇怪的施虐受虐逻辑论证法，通过这种逻辑论证，我们觉得只有在工作时不断感受痛苦，才能赋予我们那些隐秘的消费主义愉悦感以合理性。在这种理念的驱使下，工作占据了我们越来越多的时间，于是人们不再享有“生活”这件奢侈品——这是卡蒂·威克斯的简洁概括，这又导致隐秘的消费主义愉悦行为成为我们仅有的选项。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+唯有那些证明了自己足够自私的人才能够获得无私奉献的权利。<br>
+<br /><br /></p>
+<h2 id="词汇整理">词汇整理</h2>
+<h2 id="名词整理">名词整理</h2>
+<p>雪花一代（Generation Snowflake）：用来嘲笑千禧一代的玻璃心，认为他们别人一说就炸毛，心理上脆弱不堪</p>
+<p>公共事业振兴署（Works ProgressAdministration，WPA）：大萧条时期美国总统罗斯福实施新政时建立的一个政府机构，以助解决当时大规模的失业问题，是新政时期（以及美国历史上）兴办救济和公共工程的政府机构中规模最大的一个。</p>
+<p>蓝十字蓝盾（Blue Cross Blue Shield）：指蓝十字与蓝盾协会，它由蓝十字盾医保联合会和39家独立经营的蓝十字蓝盾地区医保公司组合，是美国历史最悠久、规模最大、知名度最高的专业医疗保险服务机构。</p>
+<p>世俗人文主义（secular humanism）：一种提倡人的价值而非神的价值的世界观或哲学。</p>
+<p>和平工作队（the Peace Corps）：美国联邦政府组织，建立于1961年，其职能是将训练后的美国志愿者派往国外，以帮助发展中国家人民提高技术、农业和教育水平。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/12/26/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89%E7%9A%84%E5%B7%A5%E4%BD%9C/">
+            https://illusionzone.github.io/2022/12/26/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89%E7%9A%84%E5%B7%A5%E4%BD%9C/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/01/12/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/javascript%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【学之思之】javascript知识整理 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/12/21/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/hexo+kaze+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【学之思之】Hexo+Kaze+Github搭建个人博客 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E2%80%9D"><span class="toc-text">第一章 什么是“狗屁工作”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-text">第二章 狗屁工作的种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E7%B2%BE%E7%A5%9E%E6%9A%B4%E5%8A%9B%EF%BC%88%E4%B8%8A%EF%BC%89%E2%80%94%E2%80%94%E4%B8%BA%E4%BB%80%E4%B9%88%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E4%BD%BF%E4%BB%8E%E4%BA%8B%E7%9D%80%E8%AF%B4%E4%BB%96%E4%BB%AC%E4%B8%8D%E5%BF%AB%E4%B9%90"><span class="toc-text">第三章 论精神暴力（上）——为什么狗屁工作使从事着说他们不快乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%BA%E7%B2%BE%E7%A5%9E%E6%9A%B4%E5%8A%9B%EF%BC%88%E4%B8%8B%EF%BC%89%E2%80%94%E2%80%94%E8%BA%AB%E5%A4%84%E7%8B%97%E5%B1%81%E5%B2%97%E4%BD%8D%E6%9C%89%E4%BD%95%E6%84%9F%E5%8F%97"><span class="toc-text">第四章 论精神暴力（下）——身处狗屁岗位有何感受</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%BF%80%E5%A2%9E"><span class="toc-text">第五章 狗屁工作为什么会激增</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%BA%94%E5%AF%B9"><span class="toc-text">第七章 狗屁工作的应对</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E6%95%B4%E7%90%86"><span class="toc-text">词汇整理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E6%95%B4%E7%90%86"><span class="toc-text">名词整理</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%80%E4%B9%88%E6%98%AF%E2%80%9C%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E2%80%9D"><span class="toc-text">第一章 什么是“狗屁工作”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="toc-text">第二章 狗屁工作的种类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E7%B2%BE%E7%A5%9E%E6%9A%B4%E5%8A%9B%EF%BC%88%E4%B8%8A%EF%BC%89%E2%80%94%E2%80%94%E4%B8%BA%E4%BB%80%E4%B9%88%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E4%BD%BF%E4%BB%8E%E4%BA%8B%E7%9D%80%E8%AF%B4%E4%BB%96%E4%BB%AC%E4%B8%8D%E5%BF%AB%E4%B9%90"><span class="toc-text">第三章 论精神暴力（上）——为什么狗屁工作使从事着说他们不快乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%BA%E7%B2%BE%E7%A5%9E%E6%9A%B4%E5%8A%9B%EF%BC%88%E4%B8%8B%EF%BC%89%E2%80%94%E2%80%94%E8%BA%AB%E5%A4%84%E7%8B%97%E5%B1%81%E5%B2%97%E4%BD%8D%E6%9C%89%E4%BD%95%E6%84%9F%E5%8F%97"><span class="toc-text">第四章 论精神暴力（下）——身处狗屁岗位有何感受</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%BF%80%E5%A2%9E"><span class="toc-text">第五章 狗屁工作为什么会激增</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E7%8B%97%E5%B1%81%E5%B7%A5%E4%BD%9C%E7%9A%84%E5%BA%94%E5%AF%B9"><span class="toc-text">第七章 狗屁工作的应对</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E6%95%B4%E7%90%86"><span class="toc-text">词汇整理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E6%95%B4%E7%90%86"><span class="toc-text">名词整理</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

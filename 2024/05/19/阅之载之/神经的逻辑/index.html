@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】神经的逻辑：谜样的人类行为和解谜的人脑机制</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】神经的逻辑：谜样的人类行为和解谜的人脑机制">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/05/19/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%A5%9E%E7%BB%8F%E7%9A%84%E9%80%BB%E8%BE%91/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="【美】埃利泽•斯滕伯格  著  高天羽  译">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-05-19">
+      <meta 
+        property="og:article:modified_time" 
+        content="2024-08-30">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-%E6%97%A0%E6%84%8F%E8%AF%86%E7%9A%84%E9%80%BB%E8%BE%91"><span class="toc-text">引言 无意识的逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9B%B2%E4%BA%BA%E5%81%9A%E6%A2%A6%E6%97%B6%E4%BC%9A%E7%9C%8B%E8%A7%81%E4%BB%80%E4%B9%88"><span class="toc-text">1 盲人做梦时会看见什么</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BA%E7%9F%A5%E8%A7%89%E3%80%81%E6%A2%A6%E5%92%8C%E5%A4%96%E9%83%A8%E4%B8%96%E7%95%8C%E7%9A%84%E5%88%9B%E7%94%9F"><span class="toc-text">论知觉、梦和外部世界的创生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A1%AB%E8%A1%A5%E7%A9%BA%E7%BC%BA"><span class="toc-text">填补空缺</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%A6%E7%9A%84%E7%B4%A0%E6%9D%90"><span class="toc-text">梦的素材</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%89%E8%BF%9B%E5%85%94%E5%AD%90%E6%B4%9E"><span class="toc-text">掉进兔子洞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B2%E4%BA%BA%E7%9C%8B%E8%A7%81%E7%9A%84%E6%99%AF%E8%B1%A1"><span class="toc-text">盲人看见的景象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9E%E5%8F%B6%E9%87%8C%E7%9A%84%E5%A4%A9%E8%A1%8C%E8%80%85%E5%8D%A2%E5%85%8B"><span class="toc-text">颞叶里的天行者卢克</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E6%9D%A1%E5%A3%B0%E9%9F%B3%E7%9A%84%E8%B5%B0%E5%BB%8A"><span class="toc-text">一条声音的走廊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%A0%E6%A2%A6%E6%9C%BA%E5%99%A8"><span class="toc-text">造梦机器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%83%B5%E5%B0%B8%E8%83%BD%E5%BC%80%E8%BD%A6%E5%8E%BB%E4%B8%8A%E7%8F%AD%E5%90%97%EF%BC%9F"><span class="toc-text">2 僵尸能开车去上班吗？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BA%E4%B9%A0%E6%83%AF%E3%80%81%E8%87%AA%E6%8E%A7%E5%92%8C%E4%BA%BA%E7%B1%BB%E8%87%AA%E5%8A%A8%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%AF%E8%83%BD"><span class="toc-text">论习惯、自控和人类自动行为的可能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%83%B5%E5%B0%B8%E5%9C%A8%E6%88%91%E4%BB%AC%E4%B9%8B%E4%B8%AD"><span class="toc-text">僵尸在我们之中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E8%80%8C%E4%B8%8D%E8%A7%81%E7%9A%84%E8%A7%86%E8%A7%89"><span class="toc-text">视而不见的视觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%AD%97%E8%BF%B7%E5%AE%AB%E4%B8%AD%E7%9A%84%E5%B0%8F%E9%BC%A0"><span class="toc-text">十字迷宫中的小鼠</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】神经的逻辑：谜样的人类行为和解谜的人脑机制
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-05-18T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-05-19</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>20.3k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。神经的逻辑：谜样的人类行为和解谜的人脑机制【美】埃利泽•斯滕伯格  著<br>高天羽  译</p></div>
+<br />
+<img src="/image/book/readandnote/神经的逻辑/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/神经的逻辑/1.png" class="lozad post-image">
+<br />
+<h2 id="引言-无意识的逻辑">引言 无意识的逻辑</h2>
+<p><strong>原文摘录</strong><br>
+CT扫描显示，沃尔特的脑内曾经大面积中风，造成了两侧枕叶的损伤，而枕叶正是处理视觉的脑区。这解释了他的失明。不过CT还揭示了一些别的情况：他的左侧顶叶也有损伤。顶叶的诸多功能之中，有一项就是分析感觉信号，尤其是视觉信号。它对枕叶发来的基础视觉信息编辑整合，在构建连贯顺畅的世界景象方面起重要作用。顶叶还参与了对视觉系统工作情况的监控。那么这个监控功能一旦出现了故障，结果又会如何呢？</p>
+<p>沃尔特被诊断为安东综合征（Anton’s syndrome），这是一种罕见的疾病，患病者双目失明，却意识不到自己失明了。他们常常会为知觉错误找借口，比如说“我没戴眼镜”或者“阳光太刺眼了”。有一种理论认为，这种疾病的原因是视觉系统和监控它的脑区之间切断了联系，使得脑无法收到视觉出现问题的信号。所以沃尔特才会意识不到自己失明了。</p>
+<p>不过事情还没完。沃尔特不仅不承认自己失明，还对自己的症状提出了别样的解释（“这里太暗了”）。他的脑面临着一个费解的局面：一方面，它确实看不见外面的世界了。但另一方面，因为中风的缘故，它又不知道视觉系统已经损坏。既然视觉系统仍旧完好，那又如何解释视力的丧失呢？那一定是因为房间太暗了吧。面对相互矛盾的信息，脑用这样一个说法将它们调和了起来。这说法不赖。甚至可以说，在当时的情况之下，这是一个完全合乎逻辑的说法。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在我们的潜意识深处，有一个系统在静悄悄地处理着我们看到、听到、触摸到和记得的一切。在我们与环境的互动中，我们的脑不断受到无数感觉的轰击。一位电影剪辑师会将所有镜头和声音汇集编排、剪接出富有意义的影片，而人脑深处的逻辑系统也会将我们所有的思想和知觉组装成一个合理的故事。这个故事不断丰富，最终成为我们的人生经历和自我感（sense of self）。这本书里写的就是这套隐藏的逻辑，写它如何创造我们的意识体验。无论是病人患有的最奇怪的神经疾病，还是我们普通人最简单的日常感受和决策，背后都有这套逻辑在发挥作用。<br>
+<br /><br /></p>
+<h2 id="1-盲人做梦时会看见什么">1 盲人做梦时会看见什么</h2>
+<h3 id="论知觉、梦和外部世界的创生">论知觉、梦和外部世界的创生</h3>
+<h3 id="填补空缺">填补空缺</h3>
+<p><strong>原文摘录</strong><br>
+从光线中的光子变成眼球中的电化学信号那一刻起，这些感觉的原始素材就进入了一条由多个处理引擎构成的组装线，而正是这些引擎系统地建构了我们对于世界的视觉。</p>
+<p>这一切都发生在称为“视觉通路”（visual pathway）的神经回路之中，对于这条通路我们已经有了相当透彻的了解。我们知道它始于眼球后部的视网膜，光线在这里转化成电信号，然后沿着视神经快速穿过脑部，到达脑的感觉交换机——丘脑。在这之后，视觉信息再直接输送到脑后方的枕叶，传送给那里的视皮层。</p>
+<p>为了产生图像，视皮层将处理信号的工作分成了几个部分，让它们分别计算距离、形状、色彩、尺寸和速度。任何一个部分只要稍微出些差错，就会造成明显的视觉扭曲。比如里多克综合征（Riddoch syndrome）的患者会失掉感知静物的能力，而只能看到运动的物体。神经病学家最初观察到这种疾病是在1916年，当时正值第一次世界大战，一位中校在冲锋时头部被枪击中。子弹穿过他的右侧枕叶，损坏了大部分视皮层，只有一个称为“MT”的区域保存了下来，而那正好是负责运动知觉的区域。这名军人再也无法看见物体的大多数特征，但是他依然能感知到物体的运动。用他自己的话来说：“那些‘运动着的东西’没有清楚的形状，而如果非要说它们的色彩，也只能勉强说是一片朦胧的灰色。”你见过一只球飞过身边时的那片模糊吧？试想那就是你能见到的全部景象。</p>
+<img src="/image/book/readandnote/神经的逻辑/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/神经的逻辑/1.png" class="lozad post-image">
+<p>相反的情况是只有MT区域损坏，这会造成运动知觉的丧失，对其他知觉没有影响。想象你站在街角，目送一辆汽车开过。你看到的不再是车辆驶过的连续景象，而是一幅幅车辆处在不同位置的定格画面。车子先是位于你的左侧，接着就到了你的右侧，而你始终没有看见它移动的过程。这会让过马路成为一项骇人的考验。难怪运动属于第一批需要处理的视觉模块。每当有物体经过你身边，你看到的最显著现象就是它的运动，而关于它的大多数外观细节都会为脑所忽略。此间的取舍或许是在演化中形成的：如果有野兽向你扑来，那么最先要搞清的未必是它毛发的颜色或尾巴的长短，而是它正在向你扑来这个事实。 我们的视觉系统不单会显示光线的排列，它还会根据数十亿个神经元的运算结果，建构出一个对于外部世界的解释。人脑会根据我们曾经见过的东西来预测事物的外形，它甚至会运用环境线索来填补场景中的空缺。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+人脑在阅读时往往会走捷径，跳过某些对句子的意思无关紧要的连接词或填充词，从而提高阅读效率。然而有的时候，这样的预测式阅读也会弄巧成拙。比如下面这个问题：每一种登上方舟的动物，摩西都带了几只？这个问题是在一次研究中提出的，如果你和这次研究中的大多数被试一样，你大概就会回答“两只”。但是仔细再读一遍，你就会发现正确答案应该是“零”，因为建造方舟并邀请动物上船的是诺亚，不是摩西。我们之所以答错，或许是因为这个问题和诺亚的事迹太接近了。我们一听到“登上方舟的动物”，就自动推测出了问题的其余部分，并草草说出了答案。</p>
+<p>神经病学家已经能够使用功能性磁共振成像（fMRI）技术在人脑中看见这个过程了。fMRI能够随时监测血液向脑组织释放氧气的速度，并从中读取所谓的“血氧水平依赖”（BOLD）信号。这种监测的理论依据在于，神经元越是活跃，就越是需要氧气，因此BOLD信号就成为对神经元活动的度量。2013年的一项fMRI研究让被试阅读了160个句子，其中只有一半是正确的。在剩下的那一半中，又有一半是明显错误的，而另外一半看似正确，其实却有着微小的歪曲，比如摩西和方舟的那一句。研究者要求被试阅读这些句子，评判它们的正误，同时用fMRI机监测他们的脑部活动。</p>
+<p>结果显示，被试在读到正确的和明显错误的句子时，他们的脑部活动并没有出现明显的不同。那么，在读到那些设了套的句子，比如摩西和方舟的那一句时，他们的脑部又会怎样反应呢？这就取决于他们能否发现句中的歪曲成分了。有些被试没有察觉到其中的歪曲，并且错误地认为句子是正确的，fMRI就显示他们的激活模式和那些读到正确或明显错误句子的被试没有多少不同。然而还有一些被试发现了句中的歪曲，他们意识到摩西正忙着出走埃及，无暇去造方舟。fMRI显示，这部分被试的脑中运作着完全不同的神经系统，有更多的脑区被召集起来分析句子，比如负责检查错误的前扣带皮层（anterior cingulate cortex）。不过其中作用最大的还是前额叶皮层，那是许多高级认知活动的中枢；有趣的是，这些活动就包含了如何克服对于习惯的依赖。</p>
+<p>人脑会识别并且预测熟悉的模式，以此将思维的效率提到最高。无论是摩西的方舟还是其他暗藏歪曲的句子，都需要投入最大的专注方能解读，因为它们的真实意思和脑预测的意思之间形成了冲突。正如神经影像的结果所显示，要想辨明这些句子中的歪曲成分，唯一的办法就是运用前额叶赋予的高级认知功能来抑制阅读中的惰性，并由此注意到句子的真正意思。意识的反省功能可以盖过无意识的自动过程，阻止它们习惯性地填补空缺。</p>
+<p>当我们观察世界，脑中的两套系统也在塑造我们的知觉。其中的一套是无意识系统，它负责识别模式、根据这些模式预测将来，并决定如何将知觉的碎片拼接到一起。另一套是有意识系统，它接受无意识系统的运算结果，在必要时加以审查，并根据由此获得的大量背景知识来制定决策。这两套系统各有自己的用途。无意识系统有许多方法来预测模式，并使用不完全的信息来填补空缺，人脑用自动过程帮助我们读懂次序颠倒的字词，只是其中的一种应用。但是正像摩西和方舟的句子所显示的那样，有意识系统同样是不可或缺的，它帮助我们决定在什么时候信任无意识系统的预测，尤其是当一些环境因素试图欺骗或愚弄我们的时候。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+人脑中的无意识系统负责拼合我们的知觉碎片，并在必要时预测模式、填补空缺，从而创造一个统一而富有意义的解释。总之，它在说一个故事。意识系统听取这个故事，但并非照单全收，而是会对它进行反省乃至质疑。然而前额叶的损伤却会产生一种情况，伤者的大部分脑区仍在工作，唯有前额叶的反省功能出现了故障。缺少了这层监督，无意识的填充过程就失去了控制，它将我们的体验随意拼接、强行归纳，或许就是这造成了那些牵强的解释和奇怪的故事。不过脑部损伤并不是造成这种局面的唯一原因。完全健康的人也会犯这样的错误，而且可能常犯。<br>
+<br /><br /></p>
+<h3 id="梦的素材">梦的素材</h3>
+<p><strong>原文摘录</strong><br>
+我们知道，只有视觉通路健康才能产生视觉，而视觉通路的任何一个环节被阻断，都会造成失明。除此之外，人脑中还有一条梦的通路。和视觉一样，梦中也包含图像的知觉，虽然这个时候人的双眼紧闭，对外面的世界形同失明。我们在梦中依然能见到图像，说明梦的回路和视觉一定不同。如果盲人真的能在梦中看见，那么这条梦的回路就一定是关键所在。于是我们自然要问：这条回路都有哪些环节？人脑是如何创造梦境的？</p>
+<p>当你双眼紧闭，进入快速眼动睡眠（REM），梦境系统就开始接管你的丘脑和视皮层。它控制了你脑中的感觉交换机以及你的图像加工中枢——不过它还是要从某个地方获得图像素材才行。</p>
+<p>神经病学家发现，当我们做梦时，丘脑也开始有不同的表现：它不再对来自眼睛的信号做出反应（这时候的眼睛也没有信号），而是接受了脑干的控制。脑干是脑和脊椎连接的部分，它的一个主要功能是维持快速眼动睡眠，而快速眼动睡眠正是大多数梦境出现的阶段。许多神经病学家认为，正是因为丘脑和脑干在快速眼动睡眠阶段形成了这个联系，我们才在梦中见到了图像。</p>
+<p>神经病学家观察人在睡眠时的脑电波，并从中找出了独特的几种，称它们为“PGO波”（PGO表示“脑桥-膝状体-枕叶”），具有显著的波形和波幅。当我们做梦时，这些脑波会在脑中的三个地方出现：脑桥（位于脑干内）、外侧膝状体（丘脑中的视觉部分）和枕叶（视皮层所在的区域）。由此可以推测，这三个区域正在协同工作。也许在眼睛休息的时候，脑干、丘脑和视皮层形成了一条新的视觉通路。这条梦的通路和视觉的通路有诸多重叠，唯一的区别在于脑干取代眼球，成为素材的源头。在这里，图像是从内部产生的。</p>
+<p>哈佛大学医学院的精神病学家约翰·艾伦·霍布森（John Allan Hobson）是著名的梦境研究者，他认为梦是由脑干的随机神经发放（ﬁring）造成的。这些随机的神经信号从脑干到达丘脑，然后被丘脑当作一般的视觉信号那样处理。丘脑只是一部交换机，它无法分辨信号是来自眼球还是脑干，只是一股脑地将它们转送给下一个站点：视皮层。</p>
+<p>那么视皮层又会怎么做呢？试想现在是半夜2点，丘脑刚刚送来了一批信号，它们不仅数量众多，而且一团乱麻——毕竟那都是脑干随机产生的。然而视皮层并不知道这一点，它还以为从丘脑收到的信号全都来自眼球。接下来它会如何应对？和我们觉醒的时候一样，它会尝试从这些信号中理出头绪。利用我们储备的知识和记忆，它将离散的信号碎片串联起来，形成了一个完整的故事、一段统一的视觉影像。而在我们的体验中，那就是梦了。</p>
+<p>脑会竭尽所能地编造故事。脑中的无意识系统擅长发现模式，预测将来，还会利用环境线索填补图像中的空缺。每当视皮层收到破碎的信号，这个无意识系统就会用一切手段拼接出一幅夜间的视觉图像。这幅图像交织了人的想法、记忆、恐惧和愿望，它会演变成一个引人入胜、偶尔还带点象征意味的故事。不过一般来说，我们的梦境没有多少象征，还是奇怪的居多。</p>
+<p>梦境虽然奇怪，但是当我们置身其中，却又往往不以为怪，只有醒来后，才会意识到刚才的那番景象是多么荒诞。这是为什么呢？经过研究，神经科学家不单发现了脑中的哪些区域在参与造梦，还找到了哪些区域会在夜间进入休眠。其中尤值得一提的是，执行高级决策功能的前额叶皮层会在入睡之后完全静默。你应该还记得，前额叶就是在摩西/诺亚句子中发现歪曲成分，并且在足球比赛中识破虚假动作的皮层。它参与了人的反省式思维。</p>
+<p>我们在做梦时不会积极地测算谋划，对自己的想法也没有多少反省，因为这些功能都需要前额叶的支持，而前额叶在快速眼动睡眠阶段关闭了。这就是为什么做梦者无法意识到自己正在做梦，也是为什么梦境如此奇怪，我们却不会想到“等等，这根本说不通”的原因。如果你意识到了梦的奇怪，那你就可能已经在苏醒的过程当中，你的前额叶已经开始启动了。</p>
+<p>前额叶的休眠还可以解释一个现象：为什么我们在梦中感到身不由己、无法在梦中决定些什么？梦就像电影，我们只能被动接受它的情节，而无法选择自己冒险——至少一般人是做不到的。不过梦中也有一大类是例外，那就是“清醒梦”（lucid dreams）。做这种梦的人知道自己在做梦，也能任意探索这个幻想出来的内在世界。</p>
+<p>为什么会有清醒梦这种东西呢？我们刚才说了前额叶皮层会在我们睡眠的时候关闭，既然如此，又怎么会有人能够控制自己的梦呢？2012年，德国的睡眠研究者提出了同样的问题。他们召集了一批会做清醒梦的被试，要他们在fMRI机器的陪伴下入睡。当被试进入快速眼动睡眠，fMRI发现了一组有趣的活动：除了通常在睡梦中活跃的区域之外，他们的前额叶也出现了明显的BOLD信号——也就是说，他们的前额叶是活跃的。不知什么原因，有些人的前额叶皮层在睡眠时不会像普通人那样关闭。即使身在梦中，他们也还是能够调用前额叶的反省、自控和决策功能，使每一个梦都仿佛虚拟现实中的一场惊险训练。不仅如此，清醒梦还是一项可以学会的技术，已经有人成功地用它来对付噩梦了。只要经过练习，你下次再在梦中遇到鬼魂和举着斧子的杀手时，就可以礼貌地叫他们滚蛋了。</p>
+<p>大多数梦都不是日常生活的简单回放——那样平淡的梦境只占到总数的1%到2%。其余时候，摆脱了束缚的思维和意象都会形成新颖而常常富有创意的组合。借由梦境，脑中的无意识系统得以排除觉醒时的一切干扰，向我们展示将不同的概念连接在一起的全新方法。在梦中，意念在我们的内心自由舞动。</p>
+<p>也许这就是为什么我们能在梦中想到精彩创意的原因。你有多少次从梦中醒来，随即匆匆摸索纸笔，只为了写下片刻的灵感？研究显示，如果给两组人布置同一道数学问题，其中的一组立即求解，而另一组在一夜睡眠之后求解，那么先睡了一夜的人，更有可能想出简洁而高明的答案。</p>
+<p>人脑在做梦时究竟有什么特别之处，让我们的想法和经验能以独特的方式重新组合？一种说法是睡眠能保护我们免受外部刺激的干扰，使想象得以充分发挥。另一种说法是前额叶的大部分区域受到了抑制，使得那些比较抽象甚至奇怪的想法能够任意嬉闹，无须受到日常理性的分析评判。除此之外，或许还有第三个更加根本的原因：有的神经科学家提出，在睡眠期间，脑会松开那些在觉醒时工作的突触（神经元之间用来沟通的空隙），从而放松我们的记忆和习得的概念之间的联结。他们认为这使神经元变得灵活，并在脑中形成新的通路，从而迸发出了全新的创造性想法。的确有研究显示，在白天合作最为紧密的神经元，在入睡之后反倒是最安静的。这个理论认为，松开突触，就能打开梦境之门，这促使我们在不同的想法之间建立新的联系，也容许我们的脑编织出一个个故事。</p>
+<p>无论梦产生的原因是什么，它都和我们觉醒时的知觉截然不同，而这都是因为我们的脑中有两套具有根本差异的系统。一方面，我们有一套主动的有意识系统，专门在觉醒的时候使用；另一方面，我们还有一个被动的梦的世界，每当有意识的系统关闭，我们的内心就为它所占据。清醒梦代表的是某种中间状态，它同时使用着这两套系统的脑区。梦在我们入睡之后开始，觉醒之前结束——我们一般不会在做梦的同时做出有意识的决策。当我们醒来，内心的幻象悄悄退去，意识重占上风。意识系统和无意识系统轮流掌权，又轮流交出权力。然而就像达利的作品和清醒梦所显示的那样，梦境与现实的界限，有时只是薄薄的一层。<br>
+<br /><br /></p>
+<h3 id="掉进兔子洞">掉进兔子洞</h3>
+<p><strong>原文摘录</strong><br>
+无论马西得的是什么病，它所引发的幻觉与爱丽丝的神秘饮料带来的十分相似。医生诊断她患上了“爱丽丝漫游奇境症”（Alice in Wonderland syndrome），真是名副其实。这种神经疾病的患者在观察周围时，会发现物体的大小、位置、运动或颜色发生了扭曲。</p>
+<p>这种疾病在1952年首次得到描述，它有许多可能的原因，包括感染或癫痫，但它通常与偏头痛一起出现。虽然不是什么常见疾病，但它有可能影响了许多著名艺术家的创作，每当发病的时候，他们就觉得自己仿佛在一面哈哈镜中观察世界。</p>
+<p>…</p>
+<p>无论马西得的是什么病，它所引发的幻觉与爱丽丝的神秘饮料带来的十分相似。医生诊断她患上了“爱丽丝漫游奇境症”（Alice in Wonderland syndrome），真是名副其实。这种神经疾病的患者在观察周围时，会发现物体的大小、位置、运动或颜色发生了扭曲。 这种疾病在1952年首次得到描述，它有许多可能的原因，包括感染或癫痫，但它通常与偏头痛一起出现。虽然不是什么常见疾病，但它有可能影响了许多著名艺术家的创作，每当发病的时候，他们就觉得自己仿佛在一面哈哈镜中观察世界。</p>
+<p>…</p>
+<p>视皮层的某些部分遭到破坏的病人，会忽然觉得周围的物体发生了收缩。</p>
+<p>在有的病例中，爱丽丝漫游奇境症只是一类更大的幻觉障碍中的一部分。类似的比如“脑脚性幻觉”（peduncular hallucinosis），这是一种罕见的疾病，患者因为脑干的损伤而产生了鲜明的幻觉。他们可能看到形形色色的景象，比如明亮的颜色、失真的大小（在这个意义上，爱丽丝漫游奇境症可以看作脑脚性幻觉的一个子类），或者电影一般的逼真幻觉。这种疾病是神经病学家让·莱尔密特（Jean L’hermitte）在1922年发现的，他有一位女病人脑干中风，并因此产生了各种幻觉。每当在黑暗的环境中，她都能看见一群穿着鲜艳服装的儿童在列队前进。脑脚性幻觉的病例十分稀少，所以没有人做过大规模的对照研究。我们对它的了解全都来自一份份单独的报告，从莱尔密特的第一个病例一直延续到今天。</p>
+<p>2008年，意大利的几位神经病学家报告了一个令人担忧的病例：一名11岁的男孩在一次发热之后产生了惊人的幻觉。一天傍晚，在看了一下午电视之后，小贝尔纳多忽然情绪失控地哭喊起来。父母跑进房间，发现儿子正恐惧地浑身战栗。他刚刚看见了伏地魔，《哈利波特》里的那个反派巫师。此时天色已暗，但贝尔纳多坚称他看见的是真实的景象，不是做梦。</p>
+<p>第二天夜里，伏地魔再度出现。这一次，贝尔纳多知道他必须保卫自己。他四下环顾，看见了一只头盔和一把等待作战的宝剑。透过金属头盔上的眼孔，他向对手投以怒视的目光，然后举起宝剑，展开了一场幻觉中的壮烈决斗。</p>
+<p>一场彻底的神经检查在贝尔纳多的脑干部位发现了炎症的迹象，这正是他之前发热的原因。后来炎症消退，伏地魔也随之消失了。这就是脑脚性幻觉的一个病例，只是它的时间很短。脑干发炎，幻觉出现；炎症平息，幻觉也跟着消失。根据这份及其他报告推断，脑干损伤似乎就是病因。脑脚性幻觉的多数病例都是从脑干受伤开始的，有时丘脑受伤也会致病；只要伤口没有愈合，幻觉就会一直延续。</p>
+<p>神经病学家还注意到了这些病人的另外两个共同点。第一，脑脚性幻觉患者都抱怨自己格外生动的梦境。第二，患者往往在四周黑暗时出现幻觉。一旦开灯，幻觉就会消失。</p>
+<p>这些幻觉为什么只在黑暗中出现呢？根据我们的神经科学知识，梦的源头是脑干，那里包含着梦的开关。当我们盖着被子，在只有月光照射的卧室中进入快速眼动睡眠，脑干就开启了梦的通路，打开了开关。当早晨来临，我们从睡眠中醒转，张开双眼沐浴在阳光之中，这时，脑干也关闭了梦的通路。</p>
+<p>正常情况下，这个开关是只在快速眼动睡眠阶段才会打开的，但是脑干的损伤会降低梦境启动的门槛。受伤的脑干无须等到入睡，只要感觉黑暗降临，就会提前打开梦的开关。在脑脚性幻觉中，患者其实是在觉醒的状态下做梦。只要关掉灯光，梦的机器就会用它制造的意象来填充黑暗。<br>
+<br /><br /></p>
+<h3 id="盲人看见的景象">盲人看见的景象</h3>
+<p><strong>原文摘录</strong><br>
+我们听到“幻觉”这个说法，第一个想到的就是一种精神或者神经的病态（要不就是吃了禁药），然而韦勒先生的脑部却没有任何病变。邦纳综合征的患者具有丰富的幻视，但原因不是神经出了问题，而是视觉出了问题。它只发生在视力完全丧失或者部分丧失的人身上。他们的幻觉，短的只有几秒，长的持续大半天，可以在几年的时间内反反复复地出现和消失。幻觉的内容各有不同，但往往都包含了人物、动物、建筑和各种形状。</p>
+<p>…</p>
+<p>在具有视力障碍的人群中，大约10%患有邦纳综合征，不论其视觉障碍发生的原因为何。为什么会出现邦纳综合征？这是不是脑在用幻觉填补视力的空缺？卡尼萨三角告诉我们，脑确实会填补我们视觉的空缺，我们看到的东西也未必真的是摆在我们眼前的东西。不过，因为错觉而看见一只白色的三角，和看见牛群在你的起居室里吃草，两者还是有一些不同的。当我们出现视错觉，我们并没有产生幻觉。错觉（illusions）只是我们的脑在加工外界的视觉线索，以此扩充一幅场景；而幻觉（hallucinations）完全是在我们的脑内产生的，与外界无关。</p>
+<p>邦纳综合征的患者往往是盲人，这一点不是巧合。视力障碍是邦纳综合征的关键因素。伦敦的一组研究者已经能够展示邦纳综合征患者在出现幻觉时的脑部活动了。他们召集了六名患者，要他们报告幻觉在何时开始、何时结束，并同时记录他们脑部的活动。这些志愿者都有视力障碍，所以大多数时候，fMRI都只在他们的视皮层发现了最低水平的活动。然而每当他们报告幻觉，他们的枕叶就瞬间活跃了起来；而当幻觉结束，屏幕上的视皮层又黯淡了下去。</p>
+<p>除了幻觉开始和结束的时间，fMRI还透露出了许多关于它们的其他信息。BOLD信号揭示了脑是用哪些视觉加工器来制造这些幻觉的。</p>
+<p>邦纳综合征发作时，视皮层在没有任何眼球信号输入的情况下就被激活了。有两种理论对这个现象做出了解释。第一种认为，由于受损的眼球无法传来信号，使得视皮层的神经元只能采取一些错误的行动，百无聊赖的它们有时会自作主张，随意发出一些电信号。视皮层不再受到视觉输入的牵制，于是开始自己制造信号。因为这一点，有人也将邦纳综合征的这个症状称为“释放性幻觉”（release hallucinations）。</p>
+<p>即便是短暂的视力障碍，也可能使人产生释放性幻觉。</p>
+<p>…</p>
+<p>虽然失明只是暂时的，但视觉输入的缺失也使得脑产生了自己的影像。有理论认为，没有得到充分利用的视皮层会无缘无故地开始发放。而当脑探测到这些自行发放的信号，就会错误地认为它们是视觉信号，因为它们毕竟是从视皮层发出的。这一点和做梦十分相像，唯一的区别在于做梦时随机信号是从上游的脑干产生的，而在释放性幻觉中，是视觉回路本身用梦一般的图像填充了病人因失明造成的空白。片刻之后，由视皮层制造的图像进入意识，患者的眼前也随之出现了逼真的幻觉。</p>
+<p>还有第二种理论也对盲人的邦纳综合征提出了解释，它牵涉到神经的可塑性，也就是我们的神经网络中那些广泛而能动的联系。我们常常认为自己的五种感官是相互独立的，但其实我们的脑并没有阻止它们来往。人脑无法区分视觉、听觉和触觉的信号，只知道它们来自不同的感觉通路。只要这些通路的回路不出差错，信号就能传送到正确的地方。在脑中，一切都是电化学信号，神经元并不知道自己传递和接受的信号代表视觉还是听觉。我们之所以体验到五种独立的感觉——眼睛见到是视觉，鼻子闻到是嗅觉——是因为神经被分别安排进五条独立的通路。</p>
+<p>虽然每种感觉传导都有自己的路线，但它们相互之间还是有些交搭。你可以把这些神经通路想象成交会的高速干道。它们大多数时候都相互隔离，但是在某些出口匝道，它们却连接在了一起。必须有这样的匝道，对吧？毕竟我们是同时体验到这五种感觉的，它们彼此也总是融合无间。试想你正在喝一杯咖啡，你不仅同时闻到了这杯法式烘培的气息、尝到了它的味道，你还感受到了杯子触碰你的嘴唇、看见它朝你倾斜，并听到了自己啜饮的声响。在这里，每一种感觉都和其他感觉完全协调，它们共同组成了一支感官交响乐，把你从清晨的睡意中唤醒。如果是五个完全独立的系统，就不可能产生这样丝丝入扣的连贯感觉体验。在通路的某个地方，我们的感觉必然是彼此交融的。</p>
+<p>因此，在视皮层的高速地图中，也必然有几条上匝道和下匝道与脑中的其他系统相连。现在再想象有一个人不幸失明了。根据神经可塑性的原理，神经会在不活跃的区域萎缩，在活跃的区域增生。当一个人失去了视力，枕叶便不再从眼球接收视觉信号，视觉通路也随之退化。而当视觉的道路清空，来自非视觉系统的车辆就顺着上匝道源源驶来。这根连接其他感觉系统的通道曾经只是视皮层的一小部分，现在却随着视觉系统的萎缩而壮大了起来。这里的神经元不断增长，强化了不再活跃的视觉通路和脑中的非视觉系统之间的联络。</p>
+<p>交错的回路一旦接通，就可能会有一些视觉之外的信号进入枕叶皮层，并且被错误地当作来自眼球的视觉输入。要记住，脑是无法分辨不同信号的，它只能区分通路的不同。于是，当之前孤立的回路相互连通，由另一个感觉系统发出的信号就可能顺着匝道进入视皮层，并被加工成视觉图像。它可能原本是花园里的一缕花香，或是地铁车厢的一阵轰鸣，然而它只要进入了视觉回路，就可能引起幻视。</p>
+<p>幸好，邦纳综合征的患者都知道自己失明了，因此他们大多明白自己看见的不是真实的景象。和做梦不同的是，患者的前额叶仍在工作，使他们能够反省自己的奇怪知觉。那么，要是有人不知道自己已经失明了呢？那就会导致“安东综合征”，这种病我们已经在引言中讨论过了。我们在那里知道了沃尔特先生的故事，他否认自己已经失明。当那位又高又瘦的神经科医生叫他形容自己的相貌时，他却自信地宣称对方是个“矮矮的小胖子”。在安东综合征的患者身上，视觉系统和监控它的高级感觉区域之间切断了联系。由于无法检测到视皮层的故障，患者会错误地认为自己的视力没有问题。一旦他们像邦纳综合征的患者那样出现了释放性幻觉，他们的脑就可能无法认识到那是虚假的。许多安东综合征患者都会把自己内心的想象误认为是真正的视觉。这大概就是沃尔特为什么会虚构那位医生的相貌了：他的脑在无意识中填补了视知觉的空缺，自己则并未察觉这一过程。</p>
+<p>如果真像这些病例所显示的那样，丧失了视觉会导致幻视，那么其他的感官是不是也该出现同样的现象？比如，要是破坏了控制听觉的回路，也会使我们产生幻听吗？</p>
+<p>再来看一个病例。帕舍先生五十二岁，长期耳鸣；他来到一家精神卫生诊所，说自己出现了一种奇怪的新症状：在最近几周里，原来单纯的耳鸣变成了一种重复的尖锐滴滴声，就好像闹钟在响。和真实的闹钟一样，耳鸣也会在半夜把他吵醒。后来闹钟声渐渐消退，音乐声又响了起来。他有时会听见带着人声的流行歌曲串烧，有时又会听见古典的交响乐，就仿佛是他的脑调到了一个想象中的电台。他还注意到，如果附近有非常响亮的噪声，比如一辆地铁驶过，他的幻听就会减弱。而较轻的噪声反而会加重幻听，比如当他在街头听见有人在打手鼓，他脑海中的音乐便会与手鼓的节拍同步。</p>
+<p>帕舍先生去做了神经病和精神病检查，都没有发现问题，他于是又去看了一个耳鼻喉科医生。对方给他测试了听力，结果发现他的听力非常糟糕，已经够得上耳聋的标准了。研究发现，在幻觉中听到音乐，往往发生在有听力障碍的人群中间。这个现象甚至获得了“听觉邦纳综合征”（auditory Charles Bonnet syndrome）的名称。</p>
+<p>当听觉通道中的活动降到最低，帕舍先生的脑就用自创的声音填补了这个空白。如果外界的声音足够响亮，比如有地铁呼啸而过，帕舍先生还是能够听见的，这时听觉的空缺填满，幻觉也随之消失。然而较轻的声音却无法克服他的听力障碍；当他的听觉通路空闲下来，脑中的无意识系统就会打开幻觉的收音机，填满这片寂静。</p>
+<p>虽然帕舍先生体验的是幻听而非幻视，但是有研究者认为，他的病因和邦纳综合征并无不同，也可以做出两种解释：第一种，丧失了正常功能的脑组织开始自发行动、发出随机信号。根据这些信号发出区域的不同，患者会相应表现出幻视或者幻听。第二种，没有得到充分利用的脑区渐渐长出了其他系统的神经，并出现了新的互动模式。当一条感觉的干道疏于使用，某条连接着其他感官的细小上匝道就变成了车辆的主要来源。接着人脑给这条交会匝道扩出新的车道，直到它成为一个重要的交通枢纽。不知不觉之间，听觉皮层已经是由来自其他感觉通道的信号来激活了。</p>
+<p>如果相比交通，你更喜欢用电脑作为比喻，那就想象你拆开了一位朋友的笔记本电脑，并重新连接了其中的电路。你接着把电脑还给朋友，但他很快发现在键盘上输入元音字母，音响系统就会爆出说唱音乐。人脑和电脑一样，也会随着神经通路的演变和融合而获得新的功能。对于失去视力或听力的人，这些神经的变化能够补偿他们在知觉上的损失。要将我们的不同感官混杂，脑只须将本来已经就位的交会处强化就行了。实际上，我们的不同感觉之间的联系远比我们想象的密切。<br>
+<br /><br /></p>
+<h3 id="颞叶里的天行者卢克">颞叶里的天行者卢克</h3>
+<p><strong>原文摘录</strong><br>
+我们已经知道，五种感官的神经通路是相互交叠的，也许就是这个交叠，才使我们在丧失一种感官的时候产生了幻觉。这样的交会在每个人的脑中都存在，那么它们又是如何影响我们的脑对于环境的感知和解释的呢？有一组神经病学家提出了这样两个问题：感觉系统的类别会影响人脑处理信息的方式吗？信息来自眼睛、耳朵、鼻子或是别的地方，对脑来说有区别吗？</p>
+<p>这些研究者利用脑电图描记仪记录了志愿者脑中的神经元活动。志愿者在电脑屏幕上观看相继闪现的一组照片，上面显示社会名流、著名建筑、自然风光或各种动物。在一旁观看脑电图的神经科学家发现，在一个称为“内侧颞叶”（medial temporal lobe）的脑区出现了一种模式。内侧颞叶位于海马旁，而海马是人脑中形成记忆的中枢。内侧颞叶中的神经元会对不同类别的图像产生不同的反应，比如名人总是激活它的某一个区域，而著名的地标又会激活另外一个。</p>
+<p>但是这个模式要比这更加深入。研究者又用非常精确的电极记录了内侧颞叶中单个神经元的发放。他们发现每个神经元都不仅是对一个类别的事物做出反应，而且会对某一个特定的人或地方做出反应。比如有一个神经元只对詹妮弗·安妮斯顿的照片发放，因此称作“詹妮弗·安妮斯顿神经元”。被试观看了大量安妮斯顿的照片，每次都能使这个神经元发放；而当被试观看茱莉亚·罗伯茨和科比·布莱恩特等其他名人的照片时，这个神经元却沉默了。另一个神经元只对哈莉·贝瑞的照片发放，即使她穿着2004年的影片《猫女》中的戏服、戴着面罩。当被试读到她的名字时，这个神经元同样会有反应。这个效应对于其他类别的照片同样成立，比如研究者发现有一个神经元会对悉尼歌剧院的照片或书面文字做出反应，对埃菲尔铁塔或比萨斜塔就没有这样的反应了。</p>
+<p>最后，研究者又将刺激的类型从书面文字和图片扩展到了口头字眼。他们发现有一个神经元对“天行者卢克”的许多呈现形式都有强烈反应：马克·哈米尔的三张不同照片，“天行者卢克”的字样，甚至由一个男性或女性的声音报出的这个角色名字。</p>
+<p>和之前一样，其他名人（比如莱昂纳多·迪卡普里奥）的照片，就无法激活这个神经元。其他名人的书面或口头名字同样没有这样的效果。有趣的是，当被试看到《星球大战》中的另一个角色尤达的照片时，这个神经元却发放了。</p>
+<p>显然，这个神经元不只对天行者卢克发放，也会对和他密切相关的事物做出反应，比如他的这位绿色的小个子师父。有许多次，这个天行者卢克神经元也对达斯·维达的照片产生了反应。类似地，那个詹妮弗·安妮斯顿神经元也常常在被试看见和安妮斯顿一同出演《老友记》的丽莎·库卓时发放。</p>
+<p>我们的每一种感觉都是一股信息流。无论它是经过哪条通路进入脑，视觉也好、听觉也罢，脑中的无意识系统都会将它置于情境之中分析，并且参考我们的知识、情绪和记忆，综合出一个对于世界的有意义的表征。我们的无意识加工器会分析五种同时到达的感觉流，找出相似的特征，从而创造出一个个抽象概念，让我们能够有意识地体验，比如《星球大战》中的人物关系就是一个例子。</p>
+<p>内侧颞叶是各条感觉通路的一个主要交叉点，对灵长类脑部的解剖研究证明了这一点。研究显示，各条感觉通路都将神经延伸至内侧颞叶中，并在那里交错会合。脑允许我们的感觉通路相互交流，并由此将五组知觉数据转化成富有意义的想法和体验。</p>
+<p>在有些人的脑中，不同感觉的交流太过频繁，只要使用一种感官，就会立刻激活另外一种。这一点在“联觉”（synesthesia）现象中有最充分的体现。当感觉通路之间的联系过于密切，就会产生联觉。比如有些人有视——听联觉，只要听见某些音符就会看见一些色彩，而且这样的联系相当稳定：一种颜色总是与一种声音相关。还有人报告了嗅——视联觉，他们只要闻到新鲜的柠檬味就会看见多边形，而闻到树莓和香草则会看见圆形。联觉有许多形式，因为感觉之间有许多种组合；但是这些形式都透露出了相同的信息，那就是我们的感觉通路是连通的。</p>
+<p>我们在日常生活中也可以找到不同感觉相互连通的证据，比如我们都知道，失去嗅觉会让味觉也跟着迟钝起来。视觉和听觉也深深纠缠在一起。当有人在远处对你说话，如果你能同时看见她的嘴形，那么理解她说的内容就会容易得多。反过来，这两种感觉也会相互干扰，有一种麦格克效应（McGurk effect）是对这一点的最好说明。</p>
+<p>如果你听一段录音，其中发出“ba-ba-ba”的声音，同时再看某人用口形做出“ga-ga-ga”状，你就会听到一种全新的声音“da-da-da”。这就是麦格克效应，它是20世纪70年代，哈利·麦格克（Harry McGurk）在和同事设计实验研究婴儿的语言知觉时偶然发现的。此外还有反向的麦格克现象，也就是听见某种声音对观看产生影响。研究者给被试观看不同大小或方向的椭圆形，要求他们判断其形状，并同时向他们播放不同的声音。同样的椭圆，听到“weeeee”的被试会觉得它们较高，听到“woooooo”的被试则会觉得它们较宽。</p>
+<p>我们的感觉系统是为生存而演化出来的。感觉信号先是在几条平行的通路中加工，然后再整合、解读，并整理成一个概念框架。到这时，不同的感觉已经融合成了对于世界的一个统一而流畅的感知了。这样的协作不仅增强了我们的意识体验，它也创造了一个后备系统，能在某个感官出现故障的时候由别的感官顶替补偿。当一个人双目失明时，其他感觉系统就会加大马力，去填补知觉的空当。为了重建我们的世界图景，人脑竭尽所能，它甚至会用拼合其他感官的方式，重新创建一个官能。<br>
+<br /><br /></p>
+<h3 id="一条声音的走廊">一条声音的走廊</h3>
+<p><strong>原文摘录</strong><br>
+丹尼尔·基什（Daniel Kish）在婴儿时期就丧失了视力，他后来创立了盲人无障碍世界组织（World Access for the Blind），专门帮助失明者开发其他感官克服视障。基什有一个著名的本领，那就是他的回声定位能力。他能够用舌头快速敲击上颚，然后倾听弹舌声从周围的墙壁、车辆、人群或其他东西上反射的回响。</p>
+<p>“这和蝙蝠使用的手段是一样的。”基什说，“假如有人发出嗒嗒声，让一群蝙蝠收听周围表面传出的回响，那它们立即就能感觉到这些表面的位置。”通过仔细聆听回声，基什甚至能够分辨出各种材料的细微不同：“比如一道木头篱笆可能比一道金属篱笆粗壮厚实，当周围十分安静的时候，木头就会反射出一种较暖较钝的声音。”</p>
+<p>加拿大的研究者利用fMRI观察了人类回声定位者的脑。参加研究的有两位练习过这项技术的盲人，还有两位作为对照的视力健全者。四位志愿者先是全部坐进一个房间，房间经过特殊设计，不会产生回声。研究者要求他们在这个没有回声的房间里尝试回声定位，同时监测他们的脑部活动。这个步骤的目的是确定他们脑部的基准活动。此时的他们只能听见自己发出的弹舌声，研究者先绘出这时的BOLD信号，然后在最终的结果里将其扣除。在实验的下一个阶段，对照组的两名被试被蒙上眼睛，然后和两名盲人被试一起通过回声定位附近的树木、汽车或灯柱。自始至终，他们耳朵里都塞着微小的麦克风，记录着他们听到的一切声响。到了最后阶段，被试一个个走进fMRI机，并聆听他们在尝试回声定位时的录音。</p>
+<p>研究者从每位被试的BOLD信号中扣除了他们听见自己的弹舌声造成的作用，只留下他们对于回声的神经反应。视力健全的被试，他们的脑中几乎没有额外的活动——不出所料，他们只听见了自己的弹舌声。而两位失明的被试却显示出了惊人的结果：当他们在录音中听到自己的弹舌音时，fMRI发现他们的视皮层出现了活动——他们不仅是在倾听回声，他们的脑还同时将这些回声转化成了一张表现周围环境的视觉空间地图。</p>
+<img src="/image/book/readandnote/神经的逻辑/2.jpg" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/神经的逻辑/2.jpg" class="lozad post-image">
+<p>盲人虽然无法看见，却并没有放弃使用他们的枕叶。视觉的目的是在环境中给我们导航，使我们生存下去。即便视觉输入已经切断，枕叶仍在努力担当我们的罗盘，并通过其他途径加工空间信息。脑会拼凑手头的所有信息，为我们建构出一幅世界的图景，为了这个目的，它甚至会突破不同感觉的界限——不仅是视觉和听觉的界限。</p>
+<p>2013年，丹麦的几位神经科学家发表了一篇论文，探讨人脑在视觉关闭的情况下是如何导航的。他们的实验要求被试在一条虚拟走廊中找到出路，但被试只能运用触觉——舌头的触觉。他们使用了一种名叫“舌头显示器”（tongue display unit）的设备，每当使用者在一座虚拟迷宫中撞上一堵虚拟的墙壁，它便会刺激使用者的舌头，由此绘制出一幅触觉地图。实验中，被试用电脑键盘上的方向键在这座迷宫中行走，并不断用试错法找到出口。他们有的会先笔直前进，直到走进死路，这时他们的舌头便会传来一阵轻微的颤动。接着他们再转一个弯，继续摸索，同时在脑中绘出一幅迷宫的地图。</p>
+<p>这些神经科学家用舌头显示器训练了两组被试，一组天生失明，另一组视力健全，但是蒙着眼睛作为对照。当失明组和蒙眼的对照组在虚拟迷宫中摸索行进时，科学家们照例用fMRI观察了他们的脑部活动。</p>
+<p>fMRI的结果看上去很像那个人类回声定位实验：那些平生从未见过一个光子的被试，在舌头受到刺激的时候都马力全开地发放了视皮层——他们的脑将触觉信号转换成了一幅视觉的空间地图。蒙眼的健康被试则没有显示出类似的活动，视觉皮层始终保持了静默；而当他们扯下眼罩、用双眼探索迷宫时，他们的脑部显示出了与失明被试用舌头探索迷宫时相同的活动。</p>
+<p>无论是来自眼睛、耳朵还是舌头，人脑都会利用它接收到的一切感觉信息建立周围世界的模型。盲人虽然失去了用眼睛观看的能力，但他们仍然能通过其他途径创造出一幅世界的图像。想想看：盲人脑中的那些交会点要比普通人发达多少，才能利用不同感官的交流来补偿视觉的不足。他们的无意识系统重新塑造了视觉的公路体系，并融合其他感觉绘出了周围世界的一幅像素图，以此改造了自己的视皮层。他们能够增强一种感官的使用，并以此填补另一种感官的空缺。虽然双目失明，但他们保住了想象和做梦的能力。<br>
+<br /><br /></p>
+<h3 id="造梦机器">造梦机器</h3>
+<p><strong>原文摘录</strong><br>
+这是否证明了盲人也能在梦中看见图像？先别着急。能够画出梦境，未必就说明这个梦是视觉的。假设我递给你一块拼图，让你闭着眼睛，用手指感觉它的边角、弧线和突起，然后再叫你把它画出来，你也完全能够做到吧？虽然你始终没有看见它的样子。</p>
+<p>因此，这些画作虽然逼真，却可能证明不了什么。不过也不要忘了，这些睡眠研究者开展的不只是一个行为学测试而已，他们还记录了被试的脑电波呢。他们在其中寻找的是一种叫作“阿尔法波阻断”（alpha blocking）的现象。当一个人身心放松、两眼闭合、没有主动想象某个画面时，他的脑部就会呈现出阿尔法波。当你“清空脑”的时候，你的脑波就以阿尔法波为主，比如在冥想者的脑中就可以检出这种脑波。而反过来，阿尔法波阻断就是阿尔法波的消失。一般认为，当一个人在心中看见图像时，就会发生阿尔法波阻断；这不仅包含主动观看四周时的视觉图像，还有我们在头脑中想象某个事物时调动的内心意象。研究显示，如果你要某人回答一个无须动用视觉意象的问题，比如“马萨诸塞州的首府在哪里”，他的脑中就不会出现阿尔法波阻断。而当你问他“你的屋子里是什么样子”，他的视皮层就会出现阿尔法波阻断，这大概就是因为回答者正在心中调动视觉意象的缘故。这个相关似乎在梦中也一样成立：在快速眼动睡眠阶段，阿尔法波阻断的现象最为明显，而这个阶段也是梦境最为生动、最接近电影的阶段。</p>
+<p>那么，根据失明被试的脑电波，又能够看出他们的梦境中有着怎样的视觉内容呢？就像我们在视力健全者的身上观察到的一样，在失明被试的脑中，阿尔法波阻断和梦境的视觉内容之间也有着清晰的关联。他们的画作越是生动，视皮层中的阿尔法波就越少（也就是更频繁的阿尔法波阻断），这说明他们的脑在处理更多的视觉意象。这些被试没有在生活中见过任何东西，然而贝尔托洛的实验却指出他们在梦中视觉化着各种画面。</p>
+<p>这怎么可能呢？失明了一辈子的人，为什么竟能在梦中看见呢？要回答这个问题是很难的。而且不出所料，贝尔托洛的结论果然引起了很大的争议。加州大学圣克鲁兹分校的心理学家和睡梦研究者乔治·威廉·多姆霍夫（George William Domhoff）对贝尔托洛的研究提出了直率的批评。首先他指出，有充分证据显示先天失明者在绘画之类的视觉意象任务上和视力健全者做得一样好。我们在前面也提过，盲人的脑能够很好地补偿视觉的缺失，因而他们能够画出人的身体或是海滩的样子，也许并不是什么了不得的事。就像那个拼图的例子一样，这个发现未必说明了盲人能够在梦中看见。</p>
+<p>可他们不还是有脑电波吗？多姆霍夫接着指出，解释脑电波向来是很难的，因为你无法确定它们到底是什么意思。你只能用过去观察到的现象来解释眼前的现象：阿尔法波表示身心放松、活动减少的状态，那么一旦观察到阿尔法波在某人的视皮层中消失，就表示这个人正在体验视觉意象——至少，在我们过去观察的视力健全者身上存在这样的关联。然而我们也知道，盲人的视皮层也并非整天无所事事。假以时日，它会与所有其他感官整合起来，并保持它空间知觉与导航指挥中心的角色。因此，当我们在天生失明者的脑中观察到阿尔法波阻断时，这也许（甚至很有可能）并不代表他和健康者一样真的看见了图像。充其量，这只代表了这位失明者自己的视觉化版本：那是一个整合了其他感官的生动场景，是一种类似于阿梅莉亚的“声音的走廊”的内心体验。</p>
+<p>无意识的心灵是一位故事大师。在睡梦中，它将脑干在快速眼动睡眠时的随机发放连接起来，编织成一个精彩的故事。在盲人的脑中，它又能用其他感官重建空间知觉，甚至创造出类似回声定位的功能。不过，大多数天生失明的人都不觉得自己能在梦中看见什么。有调查显示，那些在五岁之前失明的人，都说自己没有体验过什么视觉意象，无论是在白天还是在夜间做梦的时候。但如果他们是较大的时候失明的，尤其是在七岁之后，他们就能记得看见是怎么一回事，也往往能够想象并梦见视觉图像了。七岁之后失明的人，的确能在梦中看见。</p>
+<p>而那些天生失明的人则有着不一样的内心体验。在所有与我交谈过的天生失明者中间，只有阿梅莉亚宣称她做过视觉的梦。不过我怀疑她的梦中体验更像是那条声音的走廊。她的梦境充满感官色彩（在海滩上性爱），将她的情绪和隐秘的身体感觉编织起来，形成了一个统一的幻想。</p>
+<p>我们已经知道，梦区别于现实，一个关键的因素是前额叶皮层停止活动。一旦摆脱了前额叶的随时检查，脑中的做梦回路就放开了手脚。它能够制造出极生动、极详尽、极逼真的幻象，使得刹那之间，做梦者自认为体验到了某种超出日常感官的东西。只有当她苏醒之后，才可能对自己的体验产生怀疑。阿梅莉亚的梦就是这种情况。</p>
+<p>相比有意识的系统，无意识系统遵守的是另一套不同的规则。这两个系统的内部各有不同的加工过程，它们在白天容许我们开展自主的有意识反思，到了夜里又放纵我们踏上无拘无束的感觉冒险。但是我们很少能看见这两个系统是如何运作、如何交流的。邦纳综合征、爱丽丝漫游奇境症和脑脚性幻觉都是它们相互交叠的表现，在这些疾病中，由无意识回路产生的梦境侵入了我们觉醒的意识。不过这些都是脑中的线路发生故障的例子。脑内的两套系统并不是被睡眠和觉醒截然分隔，它们之间的相互作用也绝不仅限于发生幻觉之时。</p>
+<p>将脑看作有意识和无意识这两套控制系统的结合，这是大有裨益的一个观点，它不仅能解释我们的日常思想和决策中的微妙之处，还能解释人类的体验是如何遭到种种干扰和扭曲的。我们的脑中有一套潜在的逻辑，它决定了这两套系统相互作用的方式，以及当它们在加工信息的过程中出现空白和故障时，是如何做出较好或较坏的补偿的。在失明状态中，脑会产生幻视或利用其他感官来重构视觉，以此填补知觉的空缺。在做梦时，脑的无意识系统会从脑干收集随机迸发的活动，并用尽量符合逻辑的方式将它们串成一个统一的故事，一场在我们入睡时贯串我们内心的包罗万象的幻梦。<br>
+<br /><br /></p>
+<h2 id="2-僵尸能开车去上班吗？">2 僵尸能开车去上班吗？</h2>
+<h3 id="论习惯、自控和人类自动行为的可能">论习惯、自控和人类自动行为的可能</h3>
+<p><strong>原文摘录</strong><br>
+你有多少次是开了三十来分钟的车到工作单位，却完全不记得是怎么开过来的？你沉浸在自己的思绪之中，尤其是当你还在想着特殊的事，比如要在九点钟去做一场演讲的时候。上班途中的那段驾驶经历没有进入你的意识。试想有一天，你需要开车去城市的另一头参加会议，而不是像往常那样前往办公室，结果你很有可能还是会习惯性地把车开到办公室，压根儿忘了会议这回事。也许你一直到了办公室门口才发现自己来错了地方。你仿佛是在无意中把车开到了这里，而你心里一路都在思考别的事情。</p>
+<p>这是一个着实令人吃惊的现象，因为开车是一项十分复杂的活动。你的脚掌在油门和刹车之间来回游移，两者都能感应你所施加的压力的细微不同。与此同时，你的双手也在操纵方向盘，和脚上的动作一起引导着这部2000磅重的座驾。驾驶的时候，你要遵守交通规则，要考虑路权、人行横道和限速。一路上有停车标志，让行标志，还有交通灯。无数辆别的汽车在道路上行驶，有时还会游移不定。每次变道、加速或减速，你都要考虑其他车辆的位置和速度，还要依据它们点亮刹车灯和转弯灯的模式来判断它们的行驶意图。但是，虽然面临这种种难题，一位经验丰富的司机在熟悉的路线上却依然不用花费多少心思，这甚至让他们觉得自己是在自动驾驶。</p>
+<p>然而在亨茨维尔，这种自动驾驶行为却导致了严重后果。驾车者没有留意到交通灯中的新信号，他们依然不假思索地左转，猛冲进了逆向驶来的车流之中。</p>
+<p>如果一个心不在焉的司机根本没有意识到交通信号或者与驾驶有关的其他活动，也对自己在驾驶中的见闻毫无记忆，那么到底是谁（或者什么）在驾驶车辆呢？如果我们不使用有意识的官能就可以开车上班，那么我们的脑子里就肯定另有一套系统能够开车，而且这套系统的运行并不依赖于我们的意识。如果这套无意识的机制能够完成开车这样复杂的任务，那么或许它也能做到别的事情。它到底在我们不知情的状况下，对我们的经验世界贡献了多少呢？<br>
+<br /><br /></p>
+<h3 id="僵尸在我们之中">僵尸在我们之中</h3>
+<h3 id="视而不见的视觉">视而不见的视觉</h3>
+<p><strong>原文摘录</strong><br>
+有学者研究了人们在驾车时使用手机的行为，结果也证实了这个走神司机的感觉。在一项研究中，被试一边在驾驶模拟器上驾车，一边通过手机自带的耳机与人通话。模拟器中包含了一个郊区小城的三维地图，其中有住宅区、商务区和占地八个街区的市中心，醒目的广告牌散布于城市各处，都是被试一眼就能看见的。在模拟器上训练了一段时间之后，被试遵照通常的驾驶规则驶过预定路线。他们一边开车，一边用耳机和人通话。驾驶结束之后，被试接受了一个选择题测试，要求他们选出一路上见过的广告牌。然后，研究者将他们的答案和另外一组对比，那一组驶过了同一条路线，却没有在驾车时打手机。结果你可能已经猜到了：和专心驾驶的那一组相比，这些被手机分心的被试在测试中表现很差。虽然那些广告牌就矗立在路边，手机组的成员却根本没有注意它们。</p>
+<p>这些被试怎么会对广告牌视而不见呢？他们是恰好没有看它们吗？为了解答这个问题，研究者又给被试装上了眼球追踪器，让他们在模拟器上再驾驶一回。结果发现，当被试专注于手机通话时，他们的目光对于道路目标的扫视并没有减少。他们的眼球依然在恰当地注视所有重要的物体，包括街上的标识和路上的其他车辆——是的，连广告牌他们也看了。这就怪了：凡是专心开车的被试看见的东西，打手机的被试都看了，但他们就是记不得自己究竟看见了什么。这是怎么回事呢？研究者提出了一个解释：虽然被试的眼睛始终在观看这些目标，但是当他们专心通话的时候，他们有意识的视觉却部分停止了活动。</p>
+<p>如果驾车者因为手机通话，连广告牌这样硕大显眼的物体都无视了，那么为什么交通事故没有变得更加频发呢？我们时常在开车的时候说话，有时对着手机说，有时对着车里的其他人说。如果说交谈会妨碍我们的视觉，那我们是如何做到在交谈的同时安全驾驶的呢？我们理所当然地认为：要在道路上保持车距、保持车道、安全转弯、不撞烂汽车地开回家里，持续不断的有意识视觉就很关键。然而对分心驾驶的研究却显示，虽然你的目光在路上的目标之间来回穿梭，但是你瞩目的这些东西却往往没有得到意识的加工。</p>
+<p>如果有意识的视觉体验是关闭的，那又是谁在控制眼球的活动呢？是脑在无意识地控制着。脑中的无意识系统能使眼球产生必要的活动，观望其他车辆和路上的标识，从而保护司机和乘客的安全。这就是为什么车祸没有更加频繁，而心不在焉的司机也能安全驾驶。即便有意识的视觉受到了限制，无意识的过程也会接管视觉系统，并引导我们驶向目的地。</p>
+<p>这个例子说明了意识与视觉是可以分开的。在这个例子中，视觉系统仍在工作，因为汽车并没有失控乱撞，然而车内的司机却并没有“看见”的意识体验。</p>
+<p>某些神经障碍也揭示了视觉探察与“看见”的体验是两个相互独立的过程。比如偏侧空间失调症（neglect syndrome）的患者具有完全正常的视力，但是他们只对视野的一半具有意识，对另一半视若无睹。为了测试这种疾病，神经病学家要求病人临摹绘画。下面就是测试结果：</p>
+<img src="/image/book/readandnote/神经的逻辑/3.jpg" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/神经的逻辑/3.jpg" class="lozad post-image">
+<p>右侧的绘画就是患者的作品，他们的视力没有问题，但不知道为什么，他们就是无法画出临摹对象的左半边。偏侧空间失调症的病因是右侧顶叶（位于脑顶部）受损，而顶叶的功能是聚焦我们的注意。虽然视觉材料得到了适当的处理，但患者的脑却无法将注意集中在任何场景的左半边，这半边场景从没有进入到意识之中。但这不意味着患者的脑也没有在无意识中看见它们。</p>
+<p>另一项对于空间失调症的测试称为“目标取消任务”（target cancellation task）。神经病学家给患者发一块白板，上面画满短线，患者的任务是在每一条线上再划一道，使它们变成一个个X。下图中的照片（B、C两部分）显示，空间失调症患者会将页面右半边的短线划掉，对左半边不做处理。研究者后来对这个测试略做修改，不要求患者在短线上划线，而是要求他们将短线擦掉（见下图D、E两部分）。这下子，患者就能把所有的短线都擦掉了。神经病学家的解释是，当患者将白板右半边的短线擦掉，这半边就没有什么好看的了，他们的注意也随之移动到了左半边。这时他们就发现了一列新的短线，这个过程不断重复，直到他们将白板全部擦干净。</p>
+<img src="/image/book/readandnote/神经的逻辑/4.jpg" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/神经的逻辑/4.jpg" class="lozad post-image">
+<p>目标取消任务：</p>
+<p>A：对脑的CT扫描显示右顶叶有出血；</p>
+<p>B、C：在目标取消任务中，患者将页面右边的短线划掉，而忽视掉左边的短线；</p>
+<p>D、E：在修改后的实验中，患者擦除短线的表现相比之下要好得多，因为患者的注意从右不断往左移动。</p>
+<p>虽然这些患者无法看见白板左半边的内容，但这半边的视觉信息肯定也进入了他们的脑。他们的视觉系统工作如常，没有什么阻止脑探察到眼前的内容；他们缺少的只是对这些内容的有意识的觉察而已。</p>
+<p>在偏侧空间失调症中，有意识的系统无法看见世界的左半边，无意识的系统却能够。与这相似的是，那位心不在焉的司机并未有意识地觉察路况，但是他既然没有撞车，想必他脑中的无意识过程还是在看路的。那么，无意识系统难道真能在我们不知情的情况下看见世界吗？</p>
+<p>真是如此：我们的脑的确看见了我们不知道自己正在观看的事物。这方面最惊人的医学病例是一种称为“盲视”（blindsight）的神秘现象。</p>
+<p>达伦是一名三十四岁的男子，二十年来一直为剧烈头痛困扰。神经影像显示，他的右侧枕叶中的几根血管出现了畸形，他明白自己的症状不做手术是不会缓解的。一位神经外科医生将他的畸形血管切除，但同时也切掉了他右侧枕叶的一大块。</p>
+<p>手术后的几个星期，达伦愉快地表示他的头痛已经缓解，但他仍然需要适应手术的一个副作用带来的不便：身体左侧的一切事物，他都看不见了。右侧枕叶控制着视野左半边的视觉，因此他的半边失明也在意料之中。不过有一个新的症状却是意料之外的。</p>
+<p>研究者将达伦请进一间光线昏暗的屋子坐下，然后让他把下巴放在一个托架上，双眼直视前方。这时，研究者在他失明的那半边视野闪烁了一个光点。达伦虽然看不见那片视野中的东西，却依然能探察到刚才有光闪了一下，他的眼球转过来对准了光源。研究者问他是否看见了灯光，他矢口否认。接着，研究者又一次在他失明的那半边视野闪烁灯光，并要求他指出光源的位置——尽量猜测就行。达伦耸耸肩，用手指了指。他指的正是刚才亮灯的方位，他“猜对了”，不过这也许只是巧合。研究者对他一次次地重复这个测试。每一次他们都在达伦失明视野的不同位置闪烁光点，每一次他都能指出正确的方位。</p>
+<p>研究者困惑不解，他们设计了一个新的实验，将研究推进了一步：他们在达伦失明的那侧视野短暂地播放水平或垂直的线条，然后要他猜测这些线条的方向。在一次次尝试之后，达伦终于能说出正确答案了。在又一个新的实验中，他甚至能说出失明视野中的光线颜色。达伦的这种能力，称为“盲视”。</p>
+<p>对盲视的研究表明，初级视皮层受到孤立损伤的病人能够正确地猜出一个目标物的位置、颜色，甚至它是运动还是静止。有报告称这种猜测的准确率可达百分之百。不仅如此，分析这些病人的眼球运动可知，他们也将眼球转到了目标物的确切位置。他们虽然失明，却依然能用眼睛追踪物体，并将它准确地描述出来。</p>
+<p>2008年，一位名叫塔德的先生成为了研究对象；连续两次中风摧毁了他的视皮层，使他从此失明。他平时走路总要拄一根拐杖，但在实验那天，研究者却让他不要带拐杖。一名实验员领着他来到一条长长的走廊入口，走廊里摆满障碍，其中有两只垃圾箱、一只三脚架、一叠纸张、一只托盘和一只盒子。但实验员却对塔德说走廊里没有东西，要他只管走过去。塔德迈开步子走了起来，来到第一只垃圾箱跟前时，他横跨几步绕了过去，到第二只垃圾箱时又横跨了几步。接着，他又转身避开了三脚架，在纸张和托盘之间侧步绕行，最后灵巧而小心地避开了那只盒子。实验员问他为什么能熟练地避开这些障碍物，塔德自己也说不上来。他的确双目失明了，但他似乎也有办法在复杂的地形中行走。</p>
+<p>显然，塔德和达伦都具有一定的视觉探察力，虽然这种能力不是有意识的。他们的脑都能处理光线，他们的视觉回路也都完好，能够处理眼睛收到的信息。盲视者的损伤发生在视觉通路末端，而不是前面的眼睛，他们的脑依然能够探察光线的不同模式，只是意识被排除在外，于是剩下的就只有一种无意识的视觉，也就是盲视了。视觉信息从眼球中的光感受器出发，经过弧形的神经纤维，到达枕叶接受分析。接着再由枕叶传送到相关的运动区域，由它们来协调眼球的运动，产生固定的行为反应。而这一切都始终没有为意识所察觉。</p>
+<p>相似的过程也发生在那些心不在焉的司机身上。他们的眼睛和耳朵将关于路况的知觉信息发送给脑，脑加工这些信息，并指导身体操作方向盘、油门和刹车。司机的意识并没有参与驾驶决策，因为它被其他想法占满了。这时的脑就是在利用盲视导航。正因为如此，亨茨维尔的司机们才没有注意到交通灯的改变。盲视也许能引导你把车开到工作单位，但它还没有精确到能够发现从绿色箭头到绿灯的细微变化。</p>
+<p>在那些司机的例子中，盲视效应都发生在驾车通过熟悉的路线时。假如你开到了一个陌生的街区，前往一个从未到过的地址，那你就会对路况十分注意了。你会努力寻找方向，对每一个交通信号都仔细识别。但是等你开了二三十次之后，在这条路线上驾驶就成了第二天性，你的心思也会开始散漫起来。这中间发生了什么变化？变化就是驾驶成为了一种习惯，而保持习惯并不需要像首次尝试一项任务时那样全神贯注。“熟”不仅能够“生巧”，还能使我们的行为变得自动。这是一种十分普遍的现象，我们都有过体会，可能还觉得理所当然。但这可不是人类独有的行为。<br>
+<br /><br /></p>
+<h3 id="十字迷宫中的小鼠">十字迷宫中的小鼠</h3>
+<p><strong>原文摘录</strong></p>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong></p>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong></p>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong></p>
+<p><br /><br /></p>
+<h2 id="词汇积累">词汇积累</h2>
+<p>表征：是认知心理学的重要术语，指信息在头脑中的呈现方式</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/05/19/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%A5%9E%E7%BB%8F%E7%9A%84%E9%80%BB%E8%BE%91/">
+            https://illusionzone.github.io/2024/05/19/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%A5%9E%E7%BB%8F%E7%9A%84%E9%80%BB%E8%BE%91/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/06/14/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E6%AE%8A%E9%80%94%E5%90%8C%E5%BD%92/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【察之作之】殊途同归 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/04/28/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】圆圈正义 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-%E6%97%A0%E6%84%8F%E8%AF%86%E7%9A%84%E9%80%BB%E8%BE%91"><span class="toc-text">引言 无意识的逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9B%B2%E4%BA%BA%E5%81%9A%E6%A2%A6%E6%97%B6%E4%BC%9A%E7%9C%8B%E8%A7%81%E4%BB%80%E4%B9%88"><span class="toc-text">1 盲人做梦时会看见什么</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BA%E7%9F%A5%E8%A7%89%E3%80%81%E6%A2%A6%E5%92%8C%E5%A4%96%E9%83%A8%E4%B8%96%E7%95%8C%E7%9A%84%E5%88%9B%E7%94%9F"><span class="toc-text">论知觉、梦和外部世界的创生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A1%AB%E8%A1%A5%E7%A9%BA%E7%BC%BA"><span class="toc-text">填补空缺</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%A6%E7%9A%84%E7%B4%A0%E6%9D%90"><span class="toc-text">梦的素材</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%89%E8%BF%9B%E5%85%94%E5%AD%90%E6%B4%9E"><span class="toc-text">掉进兔子洞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B2%E4%BA%BA%E7%9C%8B%E8%A7%81%E7%9A%84%E6%99%AF%E8%B1%A1"><span class="toc-text">盲人看见的景象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9E%E5%8F%B6%E9%87%8C%E7%9A%84%E5%A4%A9%E8%A1%8C%E8%80%85%E5%8D%A2%E5%85%8B"><span class="toc-text">颞叶里的天行者卢克</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E6%9D%A1%E5%A3%B0%E9%9F%B3%E7%9A%84%E8%B5%B0%E5%BB%8A"><span class="toc-text">一条声音的走廊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%A0%E6%A2%A6%E6%9C%BA%E5%99%A8"><span class="toc-text">造梦机器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%83%B5%E5%B0%B8%E8%83%BD%E5%BC%80%E8%BD%A6%E5%8E%BB%E4%B8%8A%E7%8F%AD%E5%90%97%EF%BC%9F"><span class="toc-text">2 僵尸能开车去上班吗？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BA%E4%B9%A0%E6%83%AF%E3%80%81%E8%87%AA%E6%8E%A7%E5%92%8C%E4%BA%BA%E7%B1%BB%E8%87%AA%E5%8A%A8%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%AF%E8%83%BD"><span class="toc-text">论习惯、自控和人类自动行为的可能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%83%B5%E5%B0%B8%E5%9C%A8%E6%88%91%E4%BB%AC%E4%B9%8B%E4%B8%AD"><span class="toc-text">僵尸在我们之中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E8%80%8C%E4%B8%8D%E8%A7%81%E7%9A%84%E8%A7%86%E8%A7%89"><span class="toc-text">视而不见的视觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%AD%97%E8%BF%B7%E5%AE%AB%E4%B8%AD%E7%9A%84%E5%B0%8F%E9%BC%A0"><span class="toc-text">十字迷宫中的小鼠</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-%E6%97%A0%E6%84%8F%E8%AF%86%E7%9A%84%E9%80%BB%E8%BE%91"><span class="toc-text">引言 无意识的逻辑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%9B%B2%E4%BA%BA%E5%81%9A%E6%A2%A6%E6%97%B6%E4%BC%9A%E7%9C%8B%E8%A7%81%E4%BB%80%E4%B9%88"><span class="toc-text">1 盲人做梦时会看见什么</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BA%E7%9F%A5%E8%A7%89%E3%80%81%E6%A2%A6%E5%92%8C%E5%A4%96%E9%83%A8%E4%B8%96%E7%95%8C%E7%9A%84%E5%88%9B%E7%94%9F"><span class="toc-text">论知觉、梦和外部世界的创生</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A1%AB%E8%A1%A5%E7%A9%BA%E7%BC%BA"><span class="toc-text">填补空缺</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%A6%E7%9A%84%E7%B4%A0%E6%9D%90"><span class="toc-text">梦的素材</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%89%E8%BF%9B%E5%85%94%E5%AD%90%E6%B4%9E"><span class="toc-text">掉进兔子洞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B2%E4%BA%BA%E7%9C%8B%E8%A7%81%E7%9A%84%E6%99%AF%E8%B1%A1"><span class="toc-text">盲人看见的景象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%9E%E5%8F%B6%E9%87%8C%E7%9A%84%E5%A4%A9%E8%A1%8C%E8%80%85%E5%8D%A2%E5%85%8B"><span class="toc-text">颞叶里的天行者卢克</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E6%9D%A1%E5%A3%B0%E9%9F%B3%E7%9A%84%E8%B5%B0%E5%BB%8A"><span class="toc-text">一条声音的走廊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%A0%E6%A2%A6%E6%9C%BA%E5%99%A8"><span class="toc-text">造梦机器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%83%B5%E5%B0%B8%E8%83%BD%E5%BC%80%E8%BD%A6%E5%8E%BB%E4%B8%8A%E7%8F%AD%E5%90%97%EF%BC%9F"><span class="toc-text">2 僵尸能开车去上班吗？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BA%E4%B9%A0%E6%83%AF%E3%80%81%E8%87%AA%E6%8E%A7%E5%92%8C%E4%BA%BA%E7%B1%BB%E8%87%AA%E5%8A%A8%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%AF%E8%83%BD"><span class="toc-text">论习惯、自控和人类自动行为的可能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%83%B5%E5%B0%B8%E5%9C%A8%E6%88%91%E4%BB%AC%E4%B9%8B%E4%B8%AD"><span class="toc-text">僵尸在我们之中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E8%80%8C%E4%B8%8D%E8%A7%81%E7%9A%84%E8%A7%86%E8%A7%89"><span class="toc-text">视而不见的视觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%81%E5%AD%97%E8%BF%B7%E5%AE%AB%E4%B8%AD%E7%9A%84%E5%B0%8F%E9%BC%A0"><span class="toc-text">十字迷宫中的小鼠</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

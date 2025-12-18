@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】可能性的艺术：通过比较理解政治</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】可能性的艺术：通过比较理解政治">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%8F%AF%E8%83%BD%E6%80%A7%E8%89%BA%E6%9C%AF%EF%BC%9A%E6%AF%94%E8%BE%83%E6%94%BF%E6%B2%BB%E5%AD%A630%E8%AE%B2/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/book/readandnote/可能性艺术/indeximg/indeximg1.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-02">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-01-09">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80-%E5%8F%AF%E8%83%BD%E6%80%A7%E7%9A%84%E8%89%BA%E6%9C%AF%EF%BC%9A%E9%80%9A%E8%BF%87%E6%AF%94%E8%BE%83%E7%90%86%E8%A7%A3%E6%94%BF%E6%B2%BB"><span class="toc-text">序言 可能性的艺术：通过比较理解政治</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%85%A8%E7%90%83%E8%A7%86%E9%87%8E"><span class="toc-text">第一章 全球视野</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%94%BF%E6%B2%BB%E8%BD%AC%E5%9E%8B"><span class="toc-text">第二章 政治转型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%9B%BD%E5%AE%B6%E5%BB%BA%E6%9E%84"><span class="toc-text">第三章 国家建构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%94%BF%E6%B2%BB%E6%96%87%E5%8C%96"><span class="toc-text">第四章 政治文化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%94%BF%E6%B2%BB%E7%BB%8F%E6%B5%8E"><span class="toc-text">第五章 政治经济</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/book/readandnote/可能性艺术/indeximg/indeximg1.png" 
+      data-src="/image/book/readandnote/可能性艺术/indeximg/indeximg1.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【阅之载之】可能性的艺术：通过比较理解政治 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】可能性的艺术：通过比较理解政治
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-12-01T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-02</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>8.7k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p></div>
+<br />
+<img src="/image/book/readandnote/可能性艺术/1.png" width="500rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/可能性艺术/1.png" class="lozad post-image">
+<br />
+<h2 id="序言-可能性的艺术：通过比较理解政治">序言 可能性的艺术：通过比较理解政治</h2>
+<p><strong>原文摘录</strong><br>
+众所周知，谈论政治是一件异常艰难的事情，在一个政治极化的时代尤其如此。很少有什么事物能够像政治那样，激起狂热的爱恨，让陌生人成为同道，让朋友成为敌人。阅读法国大革命的历史，我惊异地发现，罗伯斯庇尔曾经是死刑的反对者，但是不出数年，他所领导的雅各宾政权就成为断头台的象征。阅读纳粹的历史，我看到有纳粹声称，毒气室的发明其实让死亡变得更加“人道”了——这样的残酷，竟然以“人道”之名出现。我还读过韩非子的名句，“君上之于民也，有难则用其死，安平则尽其力”，而他把这叫作“明主”。似乎，政治是一切关系、一切道义、一切概念的扭曲场；似乎，政治总是带来错位，理解政治的努力永远造成误解。</p>
+<p>然而，我们又不得不试图理解政治，这不仅仅是因为——如亚里士多德所言，“人是天生的城邦动物”，而且因为政治中有我们命运的源头。水手在大海上航行，努力练习航海技术，掌握气象地理知识，储备粮食物资，殊不知，最能影响这场航行成败安危的，不是水手的智识，而是大海本身的“脾气”。它波涛汹涌，水手无处可逃；它风平浪静，水手才可能岁月静好。人类从呱呱坠地那一刻起就被政治“绑架”，它是我们所有人脚下看不见的大海，是我们必须穿越的看不见的暴风骤雨。</p>
+<p><strong>原文摘录</strong><br>
+这本书并不试图对一时一地的政治做出是非判断，而恰恰是试图从“此时此地”抽离，通过历史的与全球的视野来激发新的问题与思考…“比较”是为了抽离，而抽离是为了在另一个高度反观。固然，由于政治的易燃、易爆性，这本书注定是一场智识的冒险，但我仍然奢望，对于读者，它同时也是一场发现之旅，能够呈现一些不同的风景，埋下一点挥之不去的好奇。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+其实，不仅仅是学者，即使是普通人日常生活中的思考，也往往需要通过比较发现问题、打开思路，因为比较产生冲击，冲击带来思考。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+所以我经常和学生讲，什么是社会科学的洞察力？它首先是把熟悉的事物陌生化的能力，把句号变成问号的能力，把“此时此刻”和无数“他时他刻”联系起来的能力。这种能力和每个人的敏感性有关，但是，也和每个人的“见识”有关——也就是说，你阅读过的、听过的、走过的、观察过的、思考过的越多，你就越容易把现实当作“一万种可能性之一”来对待。如果你是一个井底之蛙，那么你就永远无法获得那个反观自身的视角，甚至还可能因为这种狭隘而狂妄自大。<br>
+<br /><br /></p>
+<h2 id="第一章-全球视野">第一章 全球视野</h2>
+<p><strong>原文摘录</strong><br>
+所以，衡量政治发展，应该是两个尺度，一个是衡量民主问责，一个是衡量国家能力，二者缺一不可。如果用一个比喻，或许可以说，国家能力是一个政治体系的发动机，而民主问责则是一个政治体系的方向盘。没有良好的发动机，一辆车根本跑不起来，方向再正确也没有用，它只能在原地打转，但是光有很厉害的发动机，一路狂奔，越跑越快，根本不听民众指路，最后也很有可能开到悬崖底下去。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+有了这样一个坐标系，定位每个国家在政治地图中的位置，就相对容易了。比如丹麦，它很民主，同时国家能力也很强，处于第一象限。有些国家，它的国家能力可能很强，但是问责维度不够发达，比如俄罗斯；有些可能已经很民主，但是国家能力比较弱，比如印度；还有些最不幸的，既不民主也缺乏国家能力，像布隆迪。正是因为不同国家的政治发展处于不同象限，所以我们用“模式”来描述政治差异，而不是像形容经济发展一样，用“发达”“欠发达”来描述，因为“发达”“欠发达”这样的语言实际上是预设了一个线性的发展逻辑，但是政治发展不是线性的，它朝着不同方向开放。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+可以说，比较的视野本质上是一种俯瞰的视野，从“此时此地”抽离，来到多样性的“上空”，从宏观开始领略，然后慢慢聚焦到微观…在你脑海的深处，始终有一种比例感，有一片隐隐约约的森林，它提醒着你，你所见到的只是现象，而现象未必是真相…智慧的本质就是对事物比例的公正判断。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+历史上的每一种国际秩序都对应着其中最强大国家的观念与利益，而当权力转移到观念与利益不同的国家时，国际秩序也随之发生变化。</p>
+<p>大家可以听出来，这段话非常有意思。我们常常认为，为什么会有民主？因为人们渴望民主。为什么会有市场？因为人们渴望交易。为什么会有和平？因为人们渴望和平。但是，卡根却说，不，光有渴望是不够的，历史上的人们和我们一样渴望权利、渴望交易、渴望和平，但是没有实力为这种渴望保驾护航，它就很难生根发芽。事实上，人们可能根本没有那么渴望自由、民主、和平，很多时候，人们更渴望的，可能是安全，是秩序，是大国崛起的民族自豪感。得有一个非常强势的力量在引导甚至强加，人们的价值排序才可能发生变化。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+卡根在他的新书《丛林回归》（The Jungle Grows Back）中表达了忧虑，他说：“我们倾向于把我们生活的世界视为理所当然。我们已经在自由秩序的泡沫中生活了太久，已经很难再想象世界另外的样子。我们觉得这是自然的、正常的甚至必然的。我们看到了自由秩序所有的缺陷，希望它变得更好，但是却没有意识到，其替代方有可能远远更糟。”或许卡根的观点过度悲观——“替代方案”未必是国际社会的丛林化，而只是以现实主义替代福音主义。但是，指出个体的命运背后是国家、国家的命运背后是国际体系，而国际体系可能稍纵即逝，却是必要的提醒。毕竟，我们不希望，一千年、两千年后，当人们回望我们这个时代时，会像伟大的历史学家吉本（Edward Gibbon）回望罗马帝国时代那样哀叹：文明曾经如此辉煌，为何重新坠入黑暗？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不管怎么说，全球化的确把饼做大了，但是抢到这块饼的却不是所有人。于是，观念也随之分化。资本家阶层当然有理由热爱全球化，因为之前他们是在一个国家挣钱，现在是在100多个国家挣钱，本来微软可以卖给3亿人，现在可以卖给70亿人，本来麦当劳是开在一个国家，现在开在100多个国家，所以资本家肯定欢迎全球化。但是，工人阶层可能正好相反，他们本来可能是和100万人、1000万人竞争工作，现在却变成了和1亿人、10亿人竞争工作。</p>
+<p>大家知道，瑞士的达沃斯有一个著名的全球经济论坛，每年都会开会，这已经是经济全球化的一个象征性事件。在这个论坛上，世界各国名流会聚一堂，马云和比尔·盖茨谈笑风生，贝索斯和索罗斯相见甚欢，这也是为什么很多人把全球主义者称为“达沃斯人”。但是，与此同时，世界各国的工人阶层却彼此怨恨，觉得对方抢了自己的饭碗。所以有人说，现在世界的主要矛盾，不再是发达国家和发展中国家之间的矛盾，而是各国的全球主义者站在一起，与四面八方的民族主义者之间的矛盾。当年，马克思号召全世界无产阶级联合起来，但是事实却是，经过这一轮的“超级全球化”，无产者没有联合起来，全世界有产者倒是先联合起来了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+事实上，在很多全球化的输家看来，这种不公平是系统的，劳工状况仅仅是其中一个方面而已。在他们眼中，存在着无数真实的或想象的“不公平”：你调控汇率，而他们汇率自由，不公平；你土地国有，可以轻松搞这个那个工业园，他们的土地私有产权受到严格保护，很难征用，不公平；你要求人家以“技术换市场”，他们觉得这是知识产权的强制转移，不公平；还有行业垄断、金融国有、产业补贴、出口退税、贷款优惠、环保政策……所有这些元素加起来，构成他们眼中的所谓“国家资本主义”。在他们看来，自由资本主义和国家资本主义相互竞争，不公平。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+罗德里克说，全球化带来一个“三难困境”，因为全球化、主权国家和民主政治很难兼得。</p>
+<p>何以如此？根据罗德里克的说法，如果想要全球化和主权国家，就很难兼顾民众问责——问责政治捆住政府手脚，使政府很难大刀阔斧地行动，营造竞争性的投资环境；如果想要主权国家和民众问责，那老百姓可能就会选择关起门来，减少竞争压力，不搞全球化；如果想要全球化和问责制，那就得全球各国一起决定税率、工资水平、知识产权政策、汇率政策等，免得资本家到处寻找税收洼地、劳工权利洼地，但是，那样的话，就得放弃国家主权。因为哪一个都很难放弃，所以就构成了一个“三难困境”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+毕竟，人不仅仅是理性的动物，也是认同的动物，他者越有可能吞没“我们”，就越需要强化甚至想象集体的“我们”来抵御他者。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+要知道，极端主义的出现并非孤立的现象，它们背后往往会有一个社交和心理支持的网络，所以300个极端分子的背后，可能对应着3000个温和同情者，只不过这些人没有极端到拿起武器上战场的地步。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+文化差异大的群体，和文化差异小的群体，彼此融合的难度系数是不同的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在经济学家保罗·科利尔（Paul Collier）的书《苦海求生：改造崩溃的难民制度》（Exodus: How Migration Is Changing Our World）里，有个观点给我很大启发，他说，移民的速度和融合的速度可能成反比——移民的速度越快，融合得就越慢。为什么？因为一个族群越是大规模地、快速地进入他国，往往就越没有必要融入周边的环境。<br>
+<br /><br /></p>
+<h2 id="第二章-政治转型">第二章 政治转型</h2>
+<p><strong>原文摘录</strong><br>
+民主化本质上是从权力垄断走向权力竞争<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+民主的伪劣化。这是什么意思呢？就是一些新兴民主虽然不至于民主崩溃，但是它的民主质量节节倒退，退到了一个“既够不到民主也不能算是专制”的灰色状态。其主要表现，就是虽然这些国家还有周期性选举的形式，但是它的言论自由、新闻自由、结社自由都往往严重倒退，以致它的选举成了一种极其不公平的政治竞争，相当于一个自由奔跑的人和一群戴着镣铐的人进行跑步比赛。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+某种意义上，越是极端的乐观主义者，越有可能转化为极端的悲观主义者，因为最强烈的乐观容易陷入最深的失望，而最深的失望通向最强烈的悲观。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+法国革命是近代史上的第一场真正的“民主革命”。英国革命虽然比法国革命早100多年，但它在很大程度上是贵族和国王之间分权的一场斗争，直到1832年选举改革后，英国还存在选举权的各种财产门槛，著名的宪章运动正是英国工人争取普选权的抗争。美国革命虽然和法国革命几乎是同时爆发，并将大规模代议选举写进了宪法，但民主并不是美国宪法的最核心原则——最核心原则是自由。美国宪法中从来没有出现过“民主”二字，在阐释美国宪法的《联邦党人文集》中，多处出现警惕“多数暴政”的观点。法国革命的“人民主权”精神则非常清晰。1789年的《人权宣言》明确规定，“主权归属于人民，任何机构或者团体不得行使人民所未授予的权力”，“法律是公共意志的表现。每一个公民都有权参与法律的制定”，此类表述是英美《权利法案》中完全没有的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+什么叫“不自由的民主”？这个概念其实是当代记者法里德·扎卡利亚（Fareed Zakaria）提出的，从20世纪90年代中期开始，他就在新兴民主中发现了一个奇特的现象：一些明明是通过民主选举上台的政治家，却挣脱权力的制约机制，打压反对派的言论和行动自由，以此实现权力的巩固。<br>
+…<br>
+我们常常假定，民主必然带来言论自由、宗教自由、市场自由，但是扎卡利亚发现，在新兴民主中，民主的出现未必伴随着这些自由的出现。所以，“不自由的民主”是一条腿走路的民主。一方面，它具有民主的外壳：它承认普选权，追求政治平等，热衷于大规模的社会动员，这是它与传统威权体制不同的地方。但另一方面，通过民主途径产生的执政者又限制政治自由，以民主的名义打压反对派，压缩政治选项，从而取消民主政体的实验性特质。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+将民主和自由融合起来，对于西方来说，其实也是近一个世纪的事情，在此之前，即使是在西方世界，也是或者重自由而轻民主，或者重民主而轻自由。在一个启蒙理念已经相当普及的时代，“重民主而轻自由”的危险则格外清晰。为什么？因为以捍卫王权的名义打压自由已经失去道德魅惑力，但是民主理念中所包含的平等激情、集体激情、动员激情却可能为碾压自由提供道德合法性。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+或许这是因为，人们放弃自由的时候从来不是因为热爱专制这种“恶”，而是因为人们在热爱自由的同时相信有更高的善值得追求，比如平等，比如正义，比如认同，比如面包，比如救亡，以至自由作为次要的善可以“暂时”被舍弃，从而换取那个更高的善。甚至这种“交换”可以被表述为：牺牲暂时的自由来获得长远的自由，牺牲形式的自由来获得实质的自由。这或许可以被称为政治当中的“善恶捆绑销售”原则…在任何国家，面对民众，恶都是很难被推销的。打压异己、剥夺自由是一种恶，直接推销它很难奏效，但是，当恶与善捆绑出现，人们却有可能为它慷慨解囊。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+和美国的开国思想家们一样，卢梭在构建其社会契约论的时候就敏锐地意识到，人民主权观念最大的挑战之一，就是政治的派系化——如何防止民主堕落为不同政治势力追逐私利的竞技场，是两国革命者共同的难题。美国的开国思想家们的解决方案——正如《联邦党人文集》所揭示，是“以野心对抗野心”，以派系制衡派系，所以美国宪法的要旨在于各种政治制衡。但是，卢梭的方案则是诉诸“公共意志”，即每个派系依靠美德，超越各自的私利，抵达一个最合乎公共利益的“公共意志”。这种“公意”与私利和私利之间相加减形成的“众意”显然不同——“众意关注的是私利，不过是各种特殊利益的加总而已”。受到卢梭的影响，法国革命的《人权宣言》明文表示：“法律是公共意志之自由而庄严的表现”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在法国革命中，“不自由民主”的崛起，与其说完全是某个或者某些政治强人操控权力的结果，不如说它内置于革命者们如何理解政治、如何理解社会，乃至如何理解人性。这种民主模式的构建既是一个自上而下的过程，也是一个自下而上的过程。就“上”而言，统治者往往需要打压异己者来维护自己的统治，而就“下”而言，民众则往往渴望一种万众一心的“短平快”救世方案。这也是为什么不自由的民主本质上是一种威权—民粹主义，它的一头是威权，另一头则是民粹。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+民主和自由有交叉之处，但它们并非同一事物。民主是关于如何产生执政者的规则的，而自由则是关于如何限制执政者的规则的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+人类政治文明的变迁没有捷径，它必须穿过千千万万人的心灵。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当“发动群众”发生在一个社会裂痕清晰而深刻的社会，政治动员就可能意味着社会裂痕的扩大甚至撕裂。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们经常使用一个概念，叫作“人民”。使用这个概念的时候，我们似乎假定了所有的民众构成一个整体，似乎只要推翻了独裁者，民众就会手牵着手建设民主。遗憾的是，民众从来不是一个整体，他们是多元的，甚至是两极化的。在政治动员的过程中，这种多元性可能反而会变得清晰，甚至可能强化，而当社会撕裂到达一个水火不容的程度，民主就走向崩溃。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+多元社会结构下的“诸善之争”，才是自由社会最大的困境。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+自由从不降临于人类，人类必须上升至其高度。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+民主是一种决策程序，而不是决策本身。虽然这个程序有其内在价值，也就是尊重民众的价值，但作为一个程序，它会产出什么，取决于你向这个程序输入什么。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不管是什么制度，种瓜得瓜、种豆得豆，是永恒的道理。民主没有那么神奇，甚至，它也不应该那么神奇，因为如果有一个制度按钮按下去可以一劳永逸，那真是对人性之复杂以及复杂之美的蔑视。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+政治在社会中。政治就像是一条鱼，是养在经济、社会、文化的水池当中的，所以，要理解政治的健康程度，必须从理解这个水池的水质开始。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当制度的发展超前于文化，文化必然会以暗度陈仓的方式去把规则悄悄地扭曲为潜规则。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+总之，在发明鄙视链方面，不同社会可以说是争奇斗艳、百舸争流。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+很多时候，社会和政府同样不可信任，“表亲的专制”和政府的专制同样残酷，但是，区别在于，作为社会的一员，我们有机会去改变社会，而当权力被垄断，我们却很难改变政府。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+真正的救世方案，不是某个政治强人的铁血政策，而是不同的社会群体，不论民族、教派、阶层、党派，真正理解“和而不同”之道，艰难地学习如何与不同的人，哪怕是所仇恨的人，共同生活在一起。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+这段话，以及前面对于伊拉克的分析。使我感到作者有一种学者般的天真。
+<p>诚然，伊拉克前数十年的纷争动乱以及萨达姆独裁专制留下的一片废墟，似乎是可以作为</p>
+<p>能促使现在的伊拉克人吸取教训从而采取一种更合理的政体等等<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="第三章-国家建构">第三章 国家建构</h2>
+<p><strong>原文摘录</strong><br>
+动物世界的这种“永恒的分散暴力”状态，也提示了我们“国家建构”为什么如此艰难。直观而言，暴力要从分散走向垄断，面临着两大难题：第一是权力的集中化难题，也就是“谁当猴王”的问题；第二是领土范围的清晰化难题，也就是“猴群的势力范围”问题。前者是一个暴力垄断如何获得内部承认的问题，后者则是一个暴力垄断如何获得外部承认的问题。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+每一次政治趋势的巨大变化，都会带来政治学研究框架的巨大变化。当然，也正是因为政治趋势总在变化，我们不能轻易判处任何研究视角的“死刑”，因为如果昨天过时的今天可能回归，那么今天过时的明天也可能回归。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们倾向于把自己最熟悉的事物当作最理所当然的事物，然而，在常常不堪一击的人性面前，任何秩序都可能只是海市蜃楼。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+学者蒂利（Charles Tilly）的名言就是：“战争缔造国家，国家制造战争。”（Wars made state, states made wars.）<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+事实上，历史上绝大多数悲惨不能留下任何记录。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这个世界上，比悲惨更可怕的，是不为人知的悲惨。一旦有了信息的开放和流通，社会就有了推动变化的杠杆。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+现在流传着一种观点，就是把国家能力和民众权利对立起来，似乎一个国家要有强大的国家能力就必须牺牲民权，或者声张了民权就会削弱国家能力，所以应该等建设好了国家能力再来发展民权。这种“顺序论”乍一看似乎有道理，其实非常可疑，因为当国家能力的发展远远超前于社会能力，它往往就不会有动力再来给民众赋权<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+检视阿富汗沦为“失败国家”的过程，我们发现，最大的教训其实是以极权追求乌托邦的危险——因为乌托邦过于乌托邦，所以要实现它，只能诉诸极端手段，而极端助长极端，最终，它们在相互厮杀中完成了对彼此的哺育。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+对于一个国家而言，命运指向何方，常常取决于“沉默的大多数”是否继续沉默下去。<br>
+<br /><br /></p>
+<h2 id="第四章-政治文化">第四章 政治文化</h2>
+<p><strong>原文摘录</strong><br>
+在近现代社会，常常是观念的变迁引发制度的变迁——事实上，观念的力量如此强大，它甚至可能突破经济利益的考虑、暴力机器的压制、国际格局的约束，撬动制度的变化。可以说，观念对于制度，具有一种引力作用。当社会观念领先制度太多，它会拉动制度前进；当制度超前于观念太多，社会观念又会将制度拽回它的水平。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+思想者很多，能够引起数百年共鸣的却没有几个。启蒙思想的致命吸引力，不是因为它来自西方，而恰恰是因为它来自我们自己的内心。所谓启蒙，未必是把一个外来的什么思想塞到我们的脑子里，而是用一盏灯把本来就是我们心灵深处里的东西给照亮而已。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+泰国那么多次政变，并不是每次推翻的都是民主政权，因为有时候是一个军政府推翻另一个军政府。但是，至少就过去四五十年而言，除了一次以外，所有政变推翻的，都是民选政府。2014年，政变推翻的是民选的英拉政府；2006年，推翻的是民选的他信政府；1991年，推翻的是民选的差猜政府；1976年，推翻的则是刚刚建立三年的民主政府。可见，在当代泰国，真正困难的，不是推动民主转型，而是实现民主稳固。转型本身对泰国人来说并不难，人家南非人奋斗五十年才推动一次民主转型，泰国人信手拈来就转了四五次。简直可以说，他们是一言不合就民主转型，但问题是，再一言不合，又民主崩溃。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当人们越来越习惯于通过自主的个体选择去塑造自身命运和社会命运，民主就越可能出现和稳固。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+只可惜，无数道理，每一个国家、每一代人，往往都需要亲自撞得头破血流才能真正领悟。有时候，甚至撞得头破血流也难以领悟。或许是因为，很多时候，耐心比勇气更难达至，节制比热情更需要技艺。在这个意义上，民主是对公民美德的嘉奖，除此之外，没有其他挽留它的途径。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这就是邪恶的“1+N”模式。普通人就普通在，如果有人让我们去杀一个人，我们既没有足够的胆量也没有足够的恶意去做这件事，但是，如果只是让我们去传达信息、去维持治安、去登记财产、去清理骨灰、去注射某种药剂……我们中的多数往往会“不假思索”地去执行。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“平庸的恶”的背后，是“激进的恶”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当“暴民”现象成为洪流，其驱动力往往是权力，而不是抽象的人性。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+权力如何制造“暴民”？不妨将其机制拆解为三个层面：首先是暴力和高压，其次是利益诱惑，再次是意识形态。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+什么叫“理性的无知”？意思就是，无知其实并非一种偶然的状态，而是一种理性的选择。特定情境下，人们可能会选择对自己无法承受、无法改变、无法超越的东西保持无知，因为“知道”会唤醒良知，而恐惧让你只能无所作为，与其让你的无所作为拷问你的良知，不如什么都不知道。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+人为什么会作恶？因为作恶会带来无穷的好处：升官、发财、虚荣心的满足。一切极权体制招募打手的机制，都是对权力和资源进行最大程度的垄断，从而使得有抱负的人放眼望去，只有这扇门可以敲开。所以，问题不在于有抱负或甚至有虚荣心的年轻人想向上流动，想从nobody变成somebody，而是在一个资源垄断的体制中，这些年轻人获得成功的最便捷途径，甚至唯一途径，就是加入一场恶的游戏。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+恐惧让人沉默，利益让人积极，意识形态则令人狂热。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+意识形态本质上是一种翻译软件，把一个混乱的、无序的世界“翻译”成一个有意义的世界。很少有普通人愿意去作恶，但是，如果有一种意识形态把恶“翻译”成善，或把“主动的大恶”翻译成“不得已的小恶”，那愿意作恶的人就不但乌泱乌泱的，而且慷慨激昂了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+复杂的现实穿越意识形态抵达每个人的头脑，就像阳光穿越大气层抵达人们的眼睛时，只剩下美好的蓝色。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+为了避免认知失调，人们往往会说服自己，自己被动相信的东西其实是自己主动相信的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+遗憾的是，人类往往要经历无数撕裂才学会宽容，要被激情的烈焰烫伤后才意识到激情的危险。在一个价值迅速变迁的时代，世界最终可能会变得更好，但是在此之前，它常常会变得更糟。<br>
+<br /><br /></p>
+<h2 id="第五章-政治经济">第五章 政治经济</h2>
+<p><strong>原文摘录</strong><br>
+只不过，由于人类惊人的健忘，陈旧的过去看上去常常像是崭新的未来而已。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+可以说，委内瑞拉走到今天，不是源自“坏人”的贪婪腐败，而恰恰是源自“好人”的道德激情。当正义感变得不容置疑，当平等成为唯一的宗教，恶的大门也可以被善的手指敲开。历史上，无数通往悲剧的道路由斩钉截铁的道德激情所铺陈，恶只是意外的结果，而不是最初的动因。遗憾的是，恶一旦被启动，会形成越来越深的旋涡，因为恶往往需要更大的恶去掩盖。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+历史如果真的带来什么教训，这个教训并非仅仅是“要有与邪恶作斗争的勇气”，而且是“要有与狂热作斗争的自我警醒”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在这个课程中，我强调最多的还是“文化的约束”。这种约束在不同国家以不同的形式体现：在印度，“表亲的专制”削弱政治竞争的有效性；在阿富汗，宗教极端主义的阴影使得民主转型难以落地；在委内瑞拉，经济民粹主义观念的盛行，让民主制度最终走向自杀；在泰国，对程序正义的蔑视，让它难以摆脱不断政变的循环……换句话说，当观念的水位太低，所谓宪法就成了一张随时可以撕掉的废纸而已。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在课程中，我谈到了“政治创造可能性”的各种路径。比如，政治选择的路径——在南非，虽然社会结构极度撕裂、历史记忆充满创伤，但是新旧两个政治领导集团通过妥协与分权，使南非实现了转型的软着陆。还有经济政策选择的路径。智利身处经济民粹主义盛行的拉美，在右翼威权政府倒台后，仍然坚持了温和的经济自由主义路线，使得智利经济成为拉美地区的佼佼者。我还谈到集体行动的路径。美国国家能力的建构，和许多其他国家不同，不是缘起于密集的战争或发达的文官制政府，而主要是通过一代又一代人的社会运动。在韩国，新的政治可能性则来自观念的变迁——当观念水位不断上升，人们甚至超越其经济理性，为了一个更高的价值重新缔造制度。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+恶的泛滥未必需要多少“坏人”，往往只需要一个“魅力四射的疯子”加上无数“不假思索”的人。在这个“1+N模式”中，一个普通人要从“不假思索”中出走，他必须跳出“此时此刻”，获得一个更高更远的视角，足以看到历史深处的亡灵，以及道路尽头的悬崖。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+虽然人类已经能够上天入地、呼风唤雨，但仍然会为能不能退出一个宗教打得头破血流，为一句刺耳的言论付出沉重代价，为一句口号沦为无法退出的实验品，为一场选举而反目为仇。同一个物种，居然会同时如此智慧和愚蠢、伟大和狭隘、勇敢和懦弱。<br>
+<br /><br /></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/12/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%8F%AF%E8%83%BD%E6%80%A7%E8%89%BA%E6%9C%AF%EF%BC%9A%E6%AF%94%E8%BE%83%E6%94%BF%E6%B2%BB%E5%AD%A630%E8%AE%B2/">
+            https://illusionzone.github.io/2022/12/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%8F%AF%E8%83%BD%E6%80%A7%E8%89%BA%E6%9C%AF%EF%BC%9A%E6%AF%94%E8%BE%83%E6%94%BF%E6%B2%BB%E5%AD%A630%E8%AE%B2/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/12/03/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%93%B2%E5%AD%A6%E5%B0%8F%E5%8F%B2%EF%BC%9A%E8%A5%BF%E6%96%B9%E5%93%B2%E5%AD%A640%E8%AE%B2/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】哲学小史：西方哲学40讲 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/12/01/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】人类简史 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80-%E5%8F%AF%E8%83%BD%E6%80%A7%E7%9A%84%E8%89%BA%E6%9C%AF%EF%BC%9A%E9%80%9A%E8%BF%87%E6%AF%94%E8%BE%83%E7%90%86%E8%A7%A3%E6%94%BF%E6%B2%BB"><span class="toc-text">序言 可能性的艺术：通过比较理解政治</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%85%A8%E7%90%83%E8%A7%86%E9%87%8E"><span class="toc-text">第一章 全球视野</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%94%BF%E6%B2%BB%E8%BD%AC%E5%9E%8B"><span class="toc-text">第二章 政治转型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%9B%BD%E5%AE%B6%E5%BB%BA%E6%9E%84"><span class="toc-text">第三章 国家建构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%94%BF%E6%B2%BB%E6%96%87%E5%8C%96"><span class="toc-text">第四章 政治文化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%94%BF%E6%B2%BB%E7%BB%8F%E6%B5%8E"><span class="toc-text">第五章 政治经济</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80-%E5%8F%AF%E8%83%BD%E6%80%A7%E7%9A%84%E8%89%BA%E6%9C%AF%EF%BC%9A%E9%80%9A%E8%BF%87%E6%AF%94%E8%BE%83%E7%90%86%E8%A7%A3%E6%94%BF%E6%B2%BB"><span class="toc-text">序言 可能性的艺术：通过比较理解政治</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%85%A8%E7%90%83%E8%A7%86%E9%87%8E"><span class="toc-text">第一章 全球视野</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%94%BF%E6%B2%BB%E8%BD%AC%E5%9E%8B"><span class="toc-text">第二章 政治转型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%9B%BD%E5%AE%B6%E5%BB%BA%E6%9E%84"><span class="toc-text">第三章 国家建构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%94%BF%E6%B2%BB%E6%96%87%E5%8C%96"><span class="toc-text">第四章 政治文化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%94%BF%E6%B2%BB%E7%BB%8F%E6%B5%8E"><span class="toc-text">第五章 政治经济</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

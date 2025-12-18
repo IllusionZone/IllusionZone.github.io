@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】倾城之恋</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】倾城之恋">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%80%BE%E5%9F%8E%E4%B9%8B%E6%81%8B/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="【美】张爱玲">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-10-21">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-03-07">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%82%89%E9%A6%99"><span class="toc-text">第一炉香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%82%89%E9%A6%99"><span class="toc-text">第二炉香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%89%E8%8E%89%E9%A6%99%E7%89%87"><span class="toc-text">茉莉香片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%83%E7%BB%8F"><span class="toc-text">心经</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E9%94%81"><span class="toc-text">封锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%BE%E5%9F%8E%E4%B9%8B%E6%81%8B"><span class="toc-text">倾城之恋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%89%E7%92%83%E7%93%A6"><span class="toc-text">琉璃瓦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%91%E9%94%81%E8%AE%B0"><span class="toc-text">金锁记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E7%8E%AF%E5%A5%97"><span class="toc-text">连环套</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E5%BD%95"><span class="toc-text">信息收录</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】倾城之恋
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-10-20T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-10-21</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>16.7k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p><p>《倾城之恋》<br>【美】张爱玲</p></div>
+<br />
+<img src="/image/book/readandnote/倾城之恋/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/倾城之恋/1.png" class="lozad post-image">
+<br />
+<h2 id="第一炉香">第一炉香</h2>
+<p><strong>原文摘录</strong><br>
+姑妈家的花园不过是一个长方形的草坪，四周绕着矮矮的白色卍字阑干，阑干外就是一片荒山。这园子仿佛是乱山中凭空擎出的一只金漆托盘。园子里也有一排修剪得齐齐整整的长青树，疏疏落落两个花床，种着纤丽的英国玫瑰，都是布置谨严，一丝不乱，就像漆盘上淡淡的工笔彩绘。草坪的一角，栽了一棵小小的杜鹃花，正在开着，花朵儿粉红里略带些黄，是鲜亮的虾子红。墙里的春天，不过是虚应个景儿，谁知星星之火，可以燎原，墙里的春延烧到墙外去，满山轰轰烈烈开着野杜鹃，那灼灼的红色，一路摧枯拉朽烧下山坡子去了。杜鹃花外面，就是那浓蓝的海，海里泊着白色的大船。这里不单是色彩的强烈对照给予观者一种眩晕的不真实的感觉——处处都是对照，各种不调和的地方背景，时代气氛，全是硬生生地给掺揉在一起，造成一种奇幻的境界。</p>
+<p>山腰里这座白房子是流线形的，几何图案式的构造，类似最摩登的电影院。然而屋顶上却盖了一层仿古的碧色琉璃瓦。玻璃窗也是绿的，配上鸡油黄嵌一道窄红的边框。窗上安着雕花铁栅栏，喷上鸡油黄的漆。屋子四周绕着宽绰的走廊，地下铺着红砖，支着巍峨的两三丈高一排白石圆柱，那却是美国南部早期建筑的遗风。从走廊上的玻璃门里进去是客室，里面是立体化的西式布置，但是也有几件雅俗共赏的中国摆设。炉台上陈列着翡翠鼻烟壶与象牙观音像，沙发前围着斑竹小屏风，可是这一点东方色彩的存在，显然是看在外国朋友们的面上。英国人老远的来看看中国，不能不给点中国他们瞧瞧。但是这里的中国，是西方人心目中的中国，荒诞、精巧、滑稽。</p>
+<p>葛薇龙在玻璃门里瞥见她自己的影子——她自身也是殖民地所特有的东方色彩的一部分，她穿着南英中学的别致的制服，翠蓝竹布衫，厂齐膝盖，下面是窄窄袴脚管，还是满清末年的款式；把女学生打扮得像赛金花模样，那也是香港当局取悦于欧美游客的种种设施之一。然而薇龙和其他的女孩子一样的爱时髦，在竹布衫外面加上一件绒线背心，短背心底下，露出一大截衫子，越发觉得非驴非马。</p>
+<p>薇龙对着玻璃门扯扯衣襟，理理头发。她的脸是平淡而美丽的小凸脸，现在，这一类“粉扑子脸”是过了时了。她的眼睛长而媚，双眼皮的深痕，直扫入鬓角里去。纤瘦的鼻子，肥圆的小嘴。也许她的面部表情稍嫌缺乏，但是，惟其因这呆滞，更加显出纳温柔敦厚的古中国情调。她对于她那白净的皮肤，原是引为憾事的，一心想晒黑它，使它合于新时代的健康美的标准。但是她来到香港之后，眼中的粤东佳丽大都是橄榄色的皮肤。她在南英中学读书，物以稀为贵，倾倒于她的白的，大不乏人；曾经有人下过这样的考语：如果湘粤一带深目削颊的美人是糖醋排骨，上海女人就是粉蒸肉。薇龙端相着自己，这句“非礼之言”蓦地兜上心来。她把眉毛一皱，掉过身子去，将背倚在玻璃门上。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+扶了铁门望下去，汽车门开了，一个娇小个子的西装少妇跨出车来，一身黑，黑草帽沿上垂下绿色的面网，面网上扣着一个指甲大小的绿宝石蜘蛛，在日光中闪闪烁烁，正爬在她腮帮子上，一亮一暗，亮的时候像一颗欲坠未坠的泪珠，暗的时候便像一粒青痣。那面网足有两三码长，像围巾似的兜在肩上，飘飘拂拂。开车的看不清楚，似乎是个青年男子，伸出头来和她道别，她把脖子一僵，就走上台阶来了。睨儿早满面春风迎了上去问道：“乔家十三少爷怎么不上来喝杯啤酒？”那妇人道：“谁有空跟他歪缠？”睨儿听她声气不对，连忙收起笑容，结过她手里的小藤箱，低声道：“可该累着了！回来得倒早！”那妇人回头看汽车已经驶开了，便向地上重重的啐了一口，骂道：“去便去了，你可别再回来！我们是完了！”睨儿看她是真动了火气，便不敢再插嘴，那妇人瞅了睨儿一眼，先是不屑对她诉苦的神气，自己发了一会愣，然后鼻子里酸酸的笑了一声道：“睨儿你听听，巴巴的一大早请我到海边去，原来是借我做幌子呢。他要约玛琳赵，她们广东人家规矩严，怕她父亲不答应，有了长辈在场监督，赵家的千金就有了护身符。他打的这种主意，亏他对我说得出口！”睨儿忙不迭跺脚叹息，骂姓乔的该死。那妇人并不理会她，透过一口气来接下去说道：“我替人拉拢是常事，姓乔的你不把话说明白了，作弄老娘。老娘眼睛里瞧过的人就多了，人人眼睛里有了我就不能有第二个人。唱戏唱到私订终身后花园，反正轮不到我去扮奶妈！吃酒，我不惯做陪客！姓乔的你这小杂种，你爸爸巴结英国人弄了个爵士衔，你妈可是来历不明的葡萄牙婊子，澳门摇摊场子上数筹码的。你这猴儿崽子，胆大包天，到老娘面前捣起鬼来了！”一面数落着，把面纱一掀，掀到帽子后头去，移步上阶。</p>
+<p>薇龙这才看见她的脸，毕竟上了几岁年纪，白腻中略透青苍，嘴唇上一抹紫黑色的胭脂，是这一季巴黎新拟的“桑子红”。薇龙却认识那一双似睡非睡的眼睛，父亲的照相簿里珍藏着一张泛了黄的“全家福”照片，里面便有这双眼睛。美人老去了，眼睛却没老。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+薇龙一个人在太阳里立着，发了一会呆，腮颊晒得火烫；滚下来的两行珠泪，更觉得冰凉的，直凉进心窝里去，抬起手背来揩了一揩，一步懒似一步的走进回廊，在客室里坐下。心中暗想：姑妈在外面的名声原不很干净，我只道是造谣言的人有心糟蹋寡妇人家，再加上梁季腾是香港数一数二的阔人，姑妈又是他生前的得意人儿，遗嘱上特别派了一大注现款给她，房产在外，眼红的人多，自然更说不出好话来。如今看情形，竟是真的了！我平白来搅在混水里，女孩子家，就是跳到黄河里也洗不清！我还得把计画全盘推翻，再行考虑一下，可是这么一来，今天受了这些气，竟有些不值得！把方才那一幕细细一想，不觉又心酸起来。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+梁太太一双纤手，搓得那芭蕉柄的溜溜地转，有些太阳从芭蕉筋纹里漏进来，在她脸上跟着转。她道：“小姐，你处处都想到了，就是没替我设身处地想一想。我就是愿意帮忙，也不能帮你的忙；让你爸爸知道了，准得咬我诱拐良家女子。我是你家什么人？——自甘下贱，败坏门风，兄弟们给我找的人家我不要，偏偏嫁给姓梁的做小，丢尽了我娘家那破落户的脸。嚇！越是破落户，越是茅厕里的砖头，又臭又硬。你生晚了，没赶上热闹，没听得你爸爸当初骂我的话哩！”薇龙道：“爸爸就是这书呆子脾气，再劝也改不了。说话又不知轻重，难怪姑妈生气。可是事隔多年，姑妈是宽宏大量的，难道还在我们小孩子身上计较不成？”梁太太道：“我就是小性儿！我就是爱嚼这陈谷子烂芝麻！我就是忘不了他说的那些话！”她那扇子偏了一偏，扇子里筛入几丝金黄色的阳光，拂过她的嘴边，就像一只老虎猫的须，振振欲飞。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+薇龙沿着路往山下走，太阳已经偏了西，山背后大红大紫，金丝交错，热闹非凡，倒像雪茄烟盒盖上的商标画。满山的棕榈、芭蕉，都被毒日头烘焙得干黄松鬈，像雪茄烟丝。南方的日落是快的，黄昏只是一刹那，这边太阳还没有下去，那边，在山路的尽头，烟树迷离，青溶溶地，早有一撇月影儿。薇龙向东走，越走，那月亮越白，越晶亮，仿佛是一头肥胸脯的白凤凰，栖在路的转弯处，在树桠杈里做了窠。越走越觉得月亮就在前头树深处，走到了，月亮便没有了。薇龙站住了歇了一会儿脚，倒有点惘然。再回头看姑妈的家，依稀还见那黄地红边的窗棂，绿玻璃窗里映着海色。那巍巍的白房子，盖着绿色的琉璃瓦，很有点像古代的皇陵。</p>
+<p>薇龙自己觉得是《聊斋志异》里的书生，上山去探亲出来之后，转眼间那贵家宅第已经化成一座大坟山；如果梁家那白房子变了坟，她也许并不惊奇。她看她姑母是个有本领的女人，一手挽住了时代的巨轮，在她自己的小天地里，留住了满清末年的淫逸空气，关起门来做小型慈禧太后。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+那是个潮湿的春天的晚上，香港山上的雾是最有名的。梁家那白房子黏黏地融化在白雾里，只看见绿玻璃窗里晃动着灯光，绿幽幽地，一方一方，像薄荷酒里的冰块。渐渐的冰块也化了水——雾浓了，窗格子里的灯光也消失了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+薇龙那间房，屋小如舟，被那音波推动着，那盏半旧红纱壁灯似乎摇摇晃晃，人在屋里，飘飘荡荡，心旷神怡。薇龙拉开了珍珠罗帘幕，倚着窗户望出去，外面是窄窄的阳台，铁阑干外浩浩荡荡的雾，一片濛濛乳白，很有从甲板上望海的情致。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+薇龙一夜也不曾阖眼，才阖眼便恍惚在那里试衣服，试了一件又一件；毛织品，毛茸茸的像富于挑拨性的爵士舞；厚沉沉的丝绒，像忧郁的古典化的歌剧主题曲；柔滑的软缎，像《蓝色的多瑙河》，凉阴阴地匝着人，流遍了全身。才迷迷糊糊盹了一会，音乐调子一变，又惊醒了。楼下正奏着气急吁吁的伦巴舞曲，薇龙不由想起壁橱里那条紫色电光绸的长裙子，跳起伦巴舞来，一踢一踢，淅沥沙啦响。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+那时牌局放散，客厅里烟气花气人气，混沌地。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+薇龙眼睁睁看着卢兆麟来了，梁太太花枝招展的迎了上去，拉了他的手，在太阳里眯缝着眼，不知说些什么。卢兆麟一面和她拉着手，眼光却从她头上射过来，四下的找薇龙；一双眼睛，从卢兆麟脸上滑到薇龙脸上，又从薇龙脸上滑到卢兆麟脸上，薇龙向卢兆麟勉强一笑。那卢兆麟是个高个子，阔肩膀，黄黑皮色的青年；他也就向薇龙一笑，白牙齿在太阳里亮了一亮。那时候，风恰巧向这面吹，薇龙依稀听得梁太太这样说：“可怜的孩子，她难得有机会露一露她的法文；我们别去打搅她，让她出一会儿风头。”说着，把他一引引到人丛里，便不见了。</p>
+<p>薇龙第二次看见他们俩的时候，两人坐在一柄蓝色条纹的太阳伞下，梁太太手肘支在藤桌子上，嘴里衔着杯中的麦管子，眼睛衔着对面的卢兆麟。卢兆麟却泰然地四下里看人。他看谁，薇龙也跟着看谁。其中惟有一个人，他眼光灼灼看了半晌，薇龙心里便像汽水加了柠檬汁，咕嘟咕嘟冒酸泡儿。他看的是一个混血女孩子，年纪不过十五六岁；她那皮肤的白，与中国人的白又自不同，是一种沉重的，不透明的白。雪白的脸上，淡绿的鬼阴阴的大眼睛，希郎朗的漆黑的睫毛，墨黑的眉峰，油润的猩红的厚嘴唇，美得带点肃杀之气；那是香港小一辈的交际花中数一数二的周吉婕。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+两个人四颗眼珠子，似乎是用线穿成一串似的，难解难分。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+那时天色已经暗了，月亮才上来，黄黄的，像玉色缎子上，刺绣时弹落了一点香灰，烧糊了一小片。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+香港有一句流行的英文俗谚：“香港的天气，香港的女孩子。”两般两列，因为那海岛上的女孩子，与那阴霾炎毒的气候一样的反覆无常，不可捉摸。然而那天气似乎也和女孩子一般的听乔琪的话。当天晚上，果然有月亮。乔琪趁着月光来，也趁着月光走。月亮还在中天，他就从薇龙的阳台上，攀着树桠枝，爬到对过的山崖上。丛林中潮气未收，又湿又热，虫类唧唧地叫着，再加上蛙声阁阁，整个的山洼子像一只大锅，那月亮便是一团蓝阴阴的火，缓缓的煮着它，锅里水沸了，嗗嘟嗗嘟的响。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在楼头的另一角，薇龙侧身躺在床上，黑漆漆的，并没有点灯。她睡在那里，一动也不动，可是身子仿佛坐在高速度的汽车上，夏天的风鼓蓬蓬的在脸颊上拍动。可是那不是风，那是乔琪的吻。薇龙这样躺着也不知道过了多少时辰，忽然坐起身来，趿上了拖鞋，披上了晨衣，走到小阳台上来。虽然月亮已经落下去了，她的人已经在月光里浸了个透，淹得遍体通明。她静静的靠在百叶门上，那阳台如果是个乌漆小茶托，她就是茶托上镶嵌的罗钿的花。她诧异她的心地这般的明晰，她从来没有这样的清醒过。她现在试着分析她自己的心理，她知道她为什么这样固执地爱着乔琪。这样自卑地爱着他，最初，那当然是因为他的吸引力，但是后来，完全为了他不爱她的缘故。也许乔琪根据过去的经验，早已发现了这一个秘诀可以征服不可理喻的妇人心。他对她说了许多温柔的话，但是他始终没吐过一个字说他爱她。现在她明白了，乔琪是爱她的。当然，他的爱和她的爱有不同的方式——当然，他爱她不过是方才一刹那。——可是她自处这么卑下，她很容易地就满足了。今天晚上乔琪是爱她的。这一点愉快的回忆是她的，谁也不能够抢掉它。梁太太、司徒协、其他一群虎视眈眈的人，随他们爱怎样就怎样吧，她有一种新的安全，新的力量，新的自由。她深幸乔琪没跟她结婚。她听说过，有一个人逛了庐山回来，带了七八只坛子，里面装满了庐山驰名天下的白云，预备随时放一点出来点缀他的花园。为了爱而结婚的人，不是和把云装在坛子里的人一样的傻么！乔琪是对的，乔琪永远是对的。她伏在阑干上，学着乔琪，把头枕在胳膊弯里，那感觉又来了，无数小小的冷冷的快乐，像金铃一般在她的身体的每一部份摇颤，她紧紧地抱住了她的手臂。她还想抱住别的东西，便轻轻的吹了一声口哨，房里跑出一只白狮子狗来，摇着尾巴。薇龙抱着它，喃喃地和它说着话。</p>
+<p>那时已是上午四点钟左右，天上还有许多星，只是天色渐渐地淡了，像一幅青色的泥金笺。对面山上，虫也不叫了，越发鸦雀无声。忽然阳台底下一阵脚步响，走来了一个人。薇龙想道：“这花匠好勤快，天没亮就起来了。”她那时候心府轻快，完全和孩子似的顽皮，便伸出一只手来指着那个人，把嘴凑在狗耳朵边低声笑问道：“你看那是谁？你看那是谁？”狗便汪汪叫了起来。薇龙仔细再向那人一看，吓得心里扑通扑通跳——花匠哪儿有这么臃肿？热带地方的天，说亮就亮，天一白，楼下那模模糊糊的肥人的影子便清晰起来，原来是两个人紧紧的偎在一起走路，粗看好像一个人。那两个人听见楼上狗叫，一抬头望见了薇龙，不及躲避，早给她认清了乔琪和睨儿的脸。薇龙的一只手，本来托着小狗的下颏儿，猛然指头上一使劲，那狗喉咙管里透不过气来，便拚命一挣，挣脱了薇龙的臂膀，跳下地去，一路尖叫着，跑进屋去了。薇龙也就跟着它跌跌撞撞跑进去；进了房，站在当地，两条手臂直僵僵的垂在两边，站了一会，她向前倒在床上，两只手依旧直挺挺地贴在身上，脸跌在床上，重重的撞了一下，也不觉得痛。她就这样脸朝下躺，躺了一夜，姿势从没有改过。脸底下的床单子渐渐的湿了，冰凉的水晕子一直浸到肩膀底下。第二天她爬起身来的时候，冻得浑身酸痛，脑门子直发胀。屋里的钟已经停了，外面太阳晒得黄黄的，也不知道是上午是下午。她在床沿上坐了一会，站起身来就去找睨儿。</p>
+<p>睨儿正在楼下的浴室里洗东西，小手绢子贴满了一墙，苹果绿，琥珀色，烟蓝，桃红，竹青，一方块一方块的，有齐齐整整的，也有歪歪斜斜，倒很有点画意。睨儿在镜子里望见了薇龙，脸上不觉一呆，正要堆上笑来，薇龙在脸盆里捞出一条湿淋淋的大毛巾，迎面打了过来，刷的一声，睨儿的脸上早着了一下，溅了一身的水。睨儿嗳哟了一声，偏过头去，抬起手来挡着，手上又着了一下，那厚毛巾吸收了多量的水，分外沉重，震得满臂酸麻。薇龙两只手捏紧了毛巾，只管没头没脑的乱打，睨儿只顾躲闪，也不还手，也不辩白，也不告饶。可是浴室里免不得有些声响，小丫头跑来看见了，吓得怔住了，摸不着头脑。有两个看得不服气起来，便交头接耳的说道：“正经主子，且不这么作践我们；这是哪一门子的小姐，这样大的脾气！睨儿姐姐，你平时也是不肯让人的人，今儿你是怎么了？”睨儿叹了一口气道：“由她去罢！她也够可怜的！”这句话正戳到薇龙的心里去。她狠命的再抽了睨儿一下，把毛巾一丢，人一软，就瘫到浴盆边上去，捧着脸，呜呜的哭了起来。</p>
+<p>这一场闹，早惊动了梁太太，梁太太到场的时候，睨儿正蹲在地上，收拾那磁砖上一汪一汪的水。一面擦地，她自己衣襟上的水兀自往下滴。梁太太喝道：“这是怎么回事？”睨儿不答。再问薇龙，哪里问得出一句话来。旁观的小丫头们也回说不知姑娘为什么生气。梁太太当时也不再追问下去，只叫人把薇龙扶上楼去休息，然后把睨儿唤到密室里，仔细盘问。睨儿无法隐瞒，只得吞吞吐吐说出姑娘怎样约了乔琪来，自己怎样起了疑，听见姑娘房里说话的声音，又不敢声张，怕闹出是非来，只得在园子里守着，想趁那人走的时候，看一个究竟。不料被姑娘发现了，怕我监督她的行动，所以今天跟我发脾气。梁太太听了，点头不语，早把实情揣摩出了八九分，当下把睨儿喝退了，自己坐着，越想越恼，把脸都气紫了。本来在剔着牙齿的，一咬牙，牙签也断了，她嗤的一声吐掉了牙签头儿，心里这么想着：这乔琪乔真是她命宫里的魔星，几次三番的拿她开玩笑。她利用睇睇来引他上钩，香饵是给他吞了，他还是优游自在，不受羁束。最后她下了决心，认个吃亏，不去理他了。为了他的捣乱，她势不能留下睇睇。睇睇走了，她如失左右手，一方面另起炉灶，用全力去训练薇龙，她费了一番心血，把薇龙捧得略微有些资格了，正在风头上，身价十倍的时候，乔琪乔又来坐享其成。这还不甘心，同时又顺手牵羊吊上了睨儿。梁太太陪了夫人又折兵。身边出色人材，全被他一网打尽了，如何不气？</p>
+<p>但是梁太太到底是个识大体的人，沉吟了半晌，竟按下了一肚子火，款款的走到薇龙房里来。薇龙脸朝墙睡着，梁太太便在床沿上坐下，沉默了一会，然后颤声说道：“薇龙，你怎么对得起我？”说着，便抽出手绢子来揉眼睛。薇龙不言语。梁太太又道：“你叫我在你爸爸面上怎么交代得过去？照说，你住在我这儿，你的行动，我得负责任，就怪我太相信你了，疏忽了一点，就出了乱子。……咳！你这可坑坏了我！”薇龙自己知道被她捉住了把柄，自然由得她理直气壮，振振有词。自己该懊悔的事，也懊悔不了这许多，把心一横，索性直截了当的说道：“我做错了事，不能连累了姑妈。我这就回上海去，往后若有什么闲言闲语，在爹妈的跟前，天大的罪名，我自己担下，决不至于发生误会，牵连到姑妈身上。”梁太太手摸着下巴颏儿道：“你打算回去，这个时候却不是回去的时候。我并不是阻拦你回家。依我意思，恨不得双手把你交还了你爸爸，好卸了我的责任，也少担一份心。可是你知道世人的嘴多么坏，指不定你还没到家，风里言，风里语，倒已经吹到你爸爸耳朵里去了。他那暴躁脾气你是晓得的。你这一回去，正证实了外边的谣言。你这一向身体就不大好，哪里禁得住你爸爸零零碎碎逐日给你受气！”薇龙不作声。梁太太叹道：“怪来怪去，都怪你今天当着丫头们使性子，也不给你自己留一点余地！这么大的人了，还是一味小孩子脾气，不顾脸面，将来怎么做人呢？”薇龙红了脸，酸酸的一笑道：“姑妈要原谅我，我年纪小，脱不了毛躁的脾气。等我到了姑妈的岁数，也许我会斯斯文文的谈恋爱，也未可知！”梁太太冷笑道：“等你到了我的岁数，你有谈恋爱的机会，才怪呢！你看普通中等以下人家的女人，一过三四十岁，都变了老太太。我若不是环境好，保养得当心，我早老了。你呀——你这么不爱惜你的名誉，你把你的前途毁了，将来你不但嫁不到上等阶级的人，简直不知要弄到什么田地！”这一席话，刺耳惊心，薇龙不由自主的把双手扪着脸，仿佛那粉白黛绿的姿容已经被那似水流年洗褪了色。</p>
+<p>梁太太一歪身，把胳膊撑在薇龙的枕头上，低声道：“一个女人顶要紧的是名誉。我所谓的名誉和道学家所谓的名誉，又有些分别。现在脑筋新一些的人，倒是不那么讲究贞节了。小姐家在外面应酬应酬，总免不了有人说两句闲话。这一类的闲话，说的人越多，越热闹，你的名望只有更高，对于你的未来，并没有什么妨碍。惟有一桩事是最该忌讳的，那就是：你爱人家而人家不爱你，或是爱了你而把你扔了。一个女人的骨架子，哪儿禁得起这一扔？像你今天这一回子事，知道内情的人，说你是孩子脾气，想到哪里做到哪里。给外面嘴头子刻毒的人说起来，说你为了乔琪乔同一个底下的人呕气。这该多么难听？”薇龙叹了一口气道：“那我管不了这许多。反正我是要回去的。我今生今世再也不要看见香港了！”梁太太皱眉道：“又来了！你动不动就说回上海，仿佛回家去就解决了一切似的。问题不是那么简单。我随你呵——你有你的自由！可是我替你发愁，回家去，你爸爸不会给你好日子过。这不是赌气的事。你真要挣回这口气来，你得收服乔琪乔。等他死心塌地了，那时候，你丢了他也好，留着他解闷儿也好——那才是本领呢！你现在这么一跑，太便宜了他了！”薇龙微微一笑道：“姑妈，我同乔琪，早完了。”梁太太道：“你觉得这件事太没有希望？那是因为你对他的态度，根本从头起就不对。你太直爽了。他拿稳了你心里只有他一个人，所以他敢那么随随便便的，不把你当桩事看待。你应当匀出点时候来，跟别人亲近亲近，使他心里老是疑疑惑惑的。他不希罕你，希罕你的人多着呢！”薇龙见她远兜远转，原来仍旧是在那里替司徒协做说客。忍不住，差一点噗哧一笑，她觉得她糊涂的地方就多了，可是糊涂到这个地步，似乎还不至于。她上了乔琪的当，再去上了司徒协的当，乔琪因此就会看得起她么？她坐起身来，光着脚，踏在地板上，低着头，把两只手拢着蓬松的鬓发，缓缓的朝后推过去，说道：“谢谢姑妈，你给我打算得这么周到。但是我还是想回去。”梁太太也随着她坐起身来，问道：“你主意打定了？”薇龙低低的应了一声。梁太太站了起来，把两只手按在她肩膀上，眼睛直看到她的眼睛里去，道：“你来的时候是一个人。你现在又是一个人。你变了，你的家也得跟着变。要想回到原来的环境里，只怕回不去了。”薇龙道：“我知道我变了。从前的我，我就不大喜欢，现在的我，我更不喜欢。我回去，愿意做一个新的人。”梁太太听了，沉默了一会，弯下腰来，郑重的在薇龙额角上吻了一下，便走出去了。她这充满了天主教的戏剧化气氛的举动，似乎没有给予薇龙任何影响。薇龙依旧把两只手插在鬓发里，出着神，脸上带着一点笑，可是眼睛却是死的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在老家生了病，房里不会像这么堆满了朋友送的花，可是在她的回忆中，比花还美丽的，有一种玻璃球，是父亲书桌上用来镇纸的，家里人给她捏着，冰那火烫的手。扁扁的玻璃球里面嵌着细碎的红的蓝的紫的花，排出俗气的齐整的图案。那球抓在手里很沉。想起它，便使她想起人生中一切厚实的，靠得住的东西——她家里，她和妹妹合睡的那黑铁床，床上的褥子，白地红柳条；黄杨木的旧式梳妆台；在太阳光里红得可爱的桃子式的磁缸，盛着爽身粉；墙上钉着的美女月份牌，在美女的臂上，母亲用铅笔浓浓的加上了裁缝、荐头行、豆腐浆、舅母、三阿姨的电话号码…她把手揪着床单，只想回去，回去、回去…越急，病越好越慢。等到这病有了起色，香港那霪雨连绵的夏季早经结束，是萧爽的秋天了。</p>
+<p>薇龙突然起了疑窦——她生这场病，也许一半是自愿的；也许她下意识地不肯回去，有心挨延着…说着容易，回去做一个新的人…新的生命…她现在可不像从前那么思想简单了。念了书，到社会上去做事，不见得是她这样的美而没有特殊技能的孩子的适当的出路。她自然还是结婚的好。那么，一个新的生命，就是一个新的男子…一个新的男子？可是她为了乔琪，已经完全丧失了自信心，她不能够应付任何人。乔琪一天不爱她，她一天在他的势力下。她明明知道乔琪不过是一个极普通的浪子，没有甚么可怕，可怕是他引起的她那不可理喻的蛮暴的热情。她躺在床上，看着窗子外面的天。中午的太阳煌煌地照着，天却是金属品的冷冷的白色，像刀子一般割痛了眼睛。秋深了，一只鸟向山巅飞去，黑鸟在白天上，飞到顶高，像在刀口上刮了一刮似的，惨叫了一声，翻过山那边去了。</p>
+<p>薇龙闭上了眼睛。啊，乔琪！有一天他会需要她的，那时候，她生活在另一个家庭的狭小的范围里太久了；为了适应环境，她新生的肌肉深深的嵌入了生活的栅栏里，拔也拔不出来，那时候，他再要她回来，太晚了。她突然决定不走了——无论如何不走。从这一刹那起。她五分钟换一个主意——走！不走！走！不走！在这两个极端之间，她躺在床上滚来滚去，心里像油煎似的。因为要早早结束这个痛苦，到得她可以出门了，就忙着去订船票。订了船票回家，天快晚了，风沙啦沙啦吹着矮竹子，很有寒意。竹子外面的海，还外面的天，都已经灰的灰、黄的黄，只有那丈来高的象牙红树，在暮色苍茫中，一路上高高下下开着碗口大的红花。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+她在人堆里挤着，有一种奇异的感觉。头上是紫黝黝的蓝天，天尽头是紫黝黝的冬天的海，但是海湾里有这么一个地方，有的是密密层层的人，密密层层的灯，密密层层的耀眼的货品——蓝磁双耳小花瓶、一卷一卷葱绿堆金丝绒、玻璃纸袋装着“巴岛虾片”、琥珀色的热带产的榴莲糕、拖着大红穗子的佛珠、鹅黄的香袋、乌银小十字架、宝塔顶的凉帽；然而在这灯与人与货之外，还有那凄清的天与海——无边的荒凉，无边的恐怖。她的未来，也是如此——不能想，想起来只有无边的恐怖。她没有天长地久的计画。只有在这眼前的琐碎的小东西里，她的畏缩不安的心，能够得到暂时的休息。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+两个人笑了一会，继续向前走去。乔琪隔了一会，忽然说道：“真的，薇龙，我是个顶爱说谎的人，但是，从来没对你说过一句谎，自己也觉得纳罕。”薇龙笑道：“还在想着这个！”乔琪迫着她问道：“我从来没对你说过谎，是不是？”薇龙叹了一口气道：“从来没有。你明明知道一句小小的谎可以使我多么快乐，但是——不！你懒得操心。”乔琪笑道：“你也用不着我来编谎给你听。你自己会哄自己。总有一天，你不得不承认我是多么可鄙的一个人。那时候，你也要懊悔你为我牺牲了这许多！一气，就把我杀了，也说不定！我简直害怕！”薇龙笑道：“我爱你，关你什么事，千怪万怪，也怪不到你身上去。”乔琪道：“无论如何，我们现在权利与义务的分配，太不公平了。”薇龙把眉毛一扬，微微一笑道：“公平？人与人之间的关系里，根本谈不到公平两个字。我倒要问了，今天你怎么忽然这样的良心发现起来？”乔琪笑道：“因为我看你这么一团高兴的过年，跟孩子一样。”薇龙笑道：“你看着我高兴，就非得说两句使人难受的话，不叫我高兴下去？”</p>
+<p>两人一路走一路看着摊子上的陈列品，这儿什么都有，可是最主要的还是卖的是人。在那惨烈的汽油灯下，站着成群的女孩子，因为那过分夸张的光与影，一个个都有着浅蓝的鼻子，绿色的面颊，腮上大片的胭脂，变成了紫色。内中一个年纪顶轻的，不过十三四岁模样，瘦小身材，西装打扮，穿了一件青莲色薄呢短外套，系着大红细摺绸裙，冻得发抖。因为抖，她的笑容不住的荡漾着，像水中的倒影，牙齿忒楞楞的打在下唇上，把嘴唇皮都咬破了。一个醉醺醺的英国水手从后面走过来拍了她的肩膀一下，她扭过头去向他飞了一个媚眼——倒是一双水盈盈的吊眼梢，眼角直插到鬓发里去，可惜她的耳朵上生着鲜红的冻疮。她把两只手合抱着那水兵的膀臂，头倚在他身上；两人并排走不了几步，又来了一个水兵，两个人都是又高又大，夹持着她。她的头只齐他们的肘弯。</p>
+<p>后面又拥来一大帮水兵，都喝醉了，四面八方的乱掷花炮。瞥见了薇龙，不约而同的把她做了目的物，那花炮像流星赶月似的飞过来。薇龙吓得撒腿便跑，乔琪认准了他们的汽车，把她一拉拉到车前，推了进去，两人开了车，就离开了湾仔。乔琪笑道：“那些醉泥鳅，把你当做什么人了？”薇龙道：“本来嘛，我跟她们有什么分别？”乔琪一只手管住轮盘，一只手掩住她的嘴道：“你再胡说——”薇龙笑着告饶道：“好了好了！我承认我说错了话。怎么没有分别呢？她们是不得已的，我是自愿的！”车过了湾仔，花炮拍啦拍啦炸裂的爆响渐渐低下去了，街头的红绿灯，一个赶一个，在车前的玻璃里一溜就黯然灭去。汽车驶入一带黑沉沉的街衢。乔琪没有朝她看，就看也看不见，可是他知道她一定是哭了。他把自由的那只手摸出香烟夹子和打火机来，烟卷儿衔在嘴里，点上火。火光一亮，在那凛冽的寒夜里，他的嘴上仿佛开了一朵橙红色的花。花立时谢了。又是寒冷与黑暗……<br>
+<br /><br /></p>
+<h2 id="第二炉香">第二炉香</h2>
+<p><strong>原文摘录</strong><br>
+克荔门婷有顽劣的稻黄色头发，烫得不大好，像一担柴似的堆在肩上。满脸的粉刺，尖锐的长鼻子底下有一张凹进去的小薄片嘴，但是她的小蓝眼睛是活泼的，也许她再过两年会好看些。她穿着海绿的花绸子衣服，袖子边缘钉着浆硬的小白花边。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一个脏的故事，可是人总是脏的；沾着人就沾着脏。在这图书馆的昏黄的一角，堆着几百年的书——都是人的故事，可是没有人的气味，悠长的年月，给它们薰上了书卷的寒香；这里是感情的冷藏室。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+木槿树下面，枝枝叶叶，不多的空隙里，生着各种的草花，都是毒辣的黄色、紫色、深粉红——火山的涎沫。还有一种背对背开的并蒂莲花，白的，上面有老虎黄的斑纹。在这些花木之间，又有无数的昆虫，蠕蠕地爬动，唧唧地叫唤着。再加上银色的小四脚蛇，阁阁作声的青蛙，造成一片怔忡不宁的庞大而不彻底的寂静。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+他坐在海滩上，在太阳，沙，与海水的蒸热之中，过了一个上午，又是一个下午。整个的世界像一个蛀空了的牙齿，麻木木的，倒也不觉得什么，只是风来的时候，隐隐有一点酸痛感。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+阳台底下的街道，地势倾斜，拖泥带草猛跌下十来丈去，因此一眼望出去，空无所有；只看见黄昏的海，九龙对岸，一串串碧绿的汽油灯，一闪一闪地霎着眼睛。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+靡丽笙不答，她直直地垂着两只手臂，手指揸开了又团紧了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+长着这样轻柔的头发的人，脑子里总该充满着轻柔的梦罢？梦里总该有他罢？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+至于其他的人，香港中等以上的英国社会，对于那些人，他有什么话可说呢？那些人，男的像一只一只白铁小闹钟，按着时候吃饭、喝茶、坐马桶、坐公事房，脑筋里除了钟摆的滴答之外什么都没有…也许因为东方炎热的气候的影响，终不大准了，可是一架钟还是一架钟。女的，成天的结绒线，白茸茸的毛脸也像了拉毛的绒线衫…他能够对这些人解释愫细的家庭教育的缺陷么？罗杰自己喜欢做一个普通的人。现在，环境逼迫他，把他推到大众的圈子外面去了，他才感觉到圈子里面的愚蠢——愚蠢的残忍……圈子外面又何尝不可怕，小蓝牙齿，庞大的黑影子在头顶上晃动，指指戳戳……许许多多冷酷的思想像新织的蛛丝网一般的飘黏在他的脸上，他摇摇头，竭力把那网子摆脱了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+水沸了，他把水壶移过一边，煤气的火光，像一朵硕大的黑心的蓝菊花，细长的花瓣向里拳曲着。他把火渐渐关小了，花瓣子渐渐的短了，短了，快没有了，只剩下一圈齐整的小蓝牙齿，牙齿也渐渐地隐去了，但是在完全消灭之前，突然向外一扑，伸为一两寸长的尖利的獠牙，只一刹那，就“拍”的一炸，化为乌有。他把煤气关了，又关了门，上了闩，然后重新开了煤气，但是这一次他没有擦火柴点上火。煤气所特有的幽幽的甜味，逐渐加浓，同时罗杰安白登的这一炉香却渐渐的淡了下去。沉香屑烧完了。火熄了，灰冷了。<br>
+<br /><br /></p>
+<h2 id="茉莉香片">茉莉香片</h2>
+<p><strong>原文摘录</strong><br>
+她不是笼子里的鸟。笼子里的鸟，开了笼，还会飞出来。她是绣在屏风上的鸟——悒郁的紫色缎子屏风上，织金云朵里的一只白鸟。年深月久了，羽毛暗了，霉了，给虫蛀了，死也还死在屏风上。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+任何人遇到难以解决的问题，也只能够“行其心之所安”罢了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+相爱着的人又是往往的爱闹意见，反而是漠不相干的人能够互相容忍。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+山路转了一个弯，豁然开朗，露出整个的天与海。路旁有一片悬空的平坦的山，围了一圈半圆形的铁阑干。传庆在前面走着，一回头，不见丹朱在后面，再一看，她却倚在阑干上。崖脚下的松涛，奔腾澎湃，更有一种耐冷的树，叶子一面儿绿一面儿白。大风吞着。满山的叶子掀腾翻覆，只看见点点银光四溅。云开处，冬天的微黄的月亮出来了，白苍苍的天与海在丹朱身后张开了云母石屏风。她披着翡翠绿天鹅绒的斗篷，上面连着风兜，风兜的里子是白色天鹅绒。在严冬她也喜欢穿白的，因为白色和她黝暗的皮肤的鲜明的对照。传庆从来没有看见她这么盛装过，风兜半褪在她脑后，露出高高堆在顶上的鬈发，背着光，她的脸看不分明，只觉得她的一双眼睛，灼灼地注视着他。<br>
+<br /><br /></p>
+<h2 id="心经">心经</h2>
+<p><strong>原文摘录</strong><br>
+波兰生着一张偌大的粉团脸，朱口黛眉，可惜都挤在一起，侷促的地方太侷促了，空的地方又太空了。芬兰米兰和她们的姐姐眉目相仿，只是脸盘子小些，便秀丽了许多。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+两人走到一张落地大镜前面照了一照，绫卿看上去凝重些，小寒仿佛是她立在水边，倒映着的影子，处处比她短一些，流动闪烁。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这时夜深人静，公寓里只有许家一家，厨房里还有哗啦啦放水洗碗的声音，是小寒做寿的余波。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+男人对于女人的怜悯，也许是近于爱。一个女人绝不会爱上一个她认为楚楚可怜的男人，女人对于男人的爱，总得带点崇拜性。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+强烈的初秋的太阳晒在青浩浩的长街上。已经是下午五点钟了。一座座白色的，糙黄的住宅，在蒸笼里蒸了一天，像馒头似的胀大了一些。什么都胀大了——车辆、行人、邮筒、自来水筒…街上显得异常的拥挤。<br>
+<br /><br /></p>
+<h2 id="封锁">封锁</h2>
+<p><strong>原文摘录</strong><br>
+开电车的人开电车。在大太阳底下，电车轨道像两条光莹莹的，水里钻出来的曲蟮，抽长了，又缩短了；抽长了，又缩短了，就这么样往前移——柔滑的，老长老长的曲蟮，没有完，没有完……开电车的人眼睛钉住了这两条蠕蠕的车轨，然而他不发疯。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+他在这里看报，全车的人都学了样，有报的看报，没有报的看发票，看章程，看名片。任何印刷物都没有的，就看街上的市招。他们不能不填满这可怕的空虚——不然，他们的脑子也许会活动起来。思想是痛苦的一件事。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+世界上的好人比真人多<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+她的手臂，白倒是白的，像挤出来的牙膏。她的整个的人像挤出来的牙膏，没有款式。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+近视眼的人当众摘下眼镜子，翠远觉得有点秽亵，仿佛当众脱光衣服似的，不成体统。<br>
+<br /><br /></p>
+<h2 id="倾城之恋">倾城之恋</h2>
+<p><strong>原文摘录</strong><br>
+门掩上了，堂屋里暗着，门的上端的玻璃格子里透进两方黄色的灯光，落在青砖地上。朦胧中可以看见堂屋里顺着墙高高下下堆着一排书籍，紫檀匣子，刻着绿泥款识。正中天然几上，玻璃罩子里，搁着珐蓝自鸣钟，机括早坏了，停了多年。两旁垂着朱红对联，闪着金色寿字团花，一朵花托住一个墨汁淋漓的大字。在微光里，一个个的字都像浮在半空中，离着纸老远。流苏觉得自己就是对联上的一个字，虚飘飘的，不落实地。白公馆有这么一点像神仙的洞府：这里悠悠忽忽过了一天，世上已经过了一千年。可是这里过了一千年，也同一天差不多，因为每天都是一样的单调与无聊。流苏交叉着胳膊，抱住她自己的颈项。七八年一霎眼就过去了。你年轻么？不要紧，过两年就老了，这里，青春是不希罕的。他们有的是青春——孩子一个个的被生出来，新的明亮的眼睛，新的红嫩的嘴，新的智慧。一年又一年的磨下来，眼睛钝了，人钝了，下一代又生出来了。这一代便被吸收到朱红洒金的辉煌的背景里去，一点一点的淡金便是从前的人的怯怯的眼睛。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+世上的好人虽多，可没有多少傻子愿意在银钱上做好人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+好容易船靠了岸，她方才有机会到甲板上看看海景，那是个火辣辣的下午，望过去最触目的便是码头上围列着的巨型广告牌，红的、橘红的、粉红的，倒映在绿油油的海水里，一条条，一抹抹刺激性的犯冲的色素，蹿上落下，在水底下厮杀得异常热闹。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+流苏一进门便不由得向窗口笔直走过去，那整个的房间像暗黄的画框，镶着窗子里一幅大画。那澎湃的海涛，直溅到窗帘上，把帘子的边缘都染蓝了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+从浅水湾饭店过去一截子路，空中飞跨着一座桥梁，桥那边是山，桥这边是一堵灰砖砌成的墙壁，拦住了这边的山。柳原靠在墙上，流苏也就靠在墙上，一眼看上去，那堵墙极高极高，望不见边。墙是冷而粗糙，死的颜色。她的脸，托在墙上，反衬着，也变了样——红嘴唇、水眼睛、有血、有肉、有思想的一张脸。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+流苏自己忖量着，原来范柳原是讲究精神恋爱的。她倒也赞成，因为精神恋爱的结果永远是结婚，而肉体之爱往往就停顿在某一阶段，很少结婚的希望，精神恋爱只有一个毛病：在恋爱过程中，女人往往听不懂男人的话。然而那倒也没有多大关系。后来总还是结婚、找房子、置家具、雇佣人——那些事上，女人可比男人在行得多。她这么一想，今天这点小误会，也就不放在心上。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+本来，一个女人上了男人的当，就该死；女人给当给男人上，那更是淫妇；如果一个女人想给当给男人上而失败了，反而上了人家的当，那是双料的淫恶，杀了她也还污了刀。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+十一月尾的纤月，仅仅是一钩白色，像玻璃窗上的霜花。然而海上毕竟有点月意，映到窗子里来，那薄薄的光就照亮了镜子。流苏慢腾腾摘下了发网，把头发一搅，搅乱了，夹叉叮铃噹啷掉下地来。她又戴上网子，把那发网的梢头狠狠的衔在嘴里，拧着眉毛，蹲下身去把夹叉一只一只捡了起来。柳原已经光着脚走到她后面，一只手搁在她头上，把她的脸倒扳了过来，吻她的嘴。发网滑下地去了。这是他第一次吻她，然而他们两人都疑惑不是第一次，因为在幻想中已经发生过无数次了。从前他们有过许多机会——适当的环境，适当的情调；他也想到过，她也顾虑到那可能性。然而两方面都是精刮的人，算盘打得太仔细了，始终不肯冒失。现在这忽然成了真的，两人都糊涂了。流苏觉得她的溜溜走了个圈子，倒在镜子上，背心紧紧抵着冰冷的镜子。他的嘴始终没有离开过她的嘴。他还把她往镜子上推，他们似乎是跌到镜子里面，另一个昏昏的世界里去了，凉的凉，烫的烫，野火花直烧上身来。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+近三十的女人，往往有着反常的娇嫩，一转眼就憔悴了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+巴丙顿道的附近有一座科学试验馆，屋顶上架着高射炮，流弹不停的飞过来，尖溜溜一声长叫：“吱呦呃呃呃呃……”然后“砰”，落下地去。那一声声的“吱呦呃呃呃呃……”撕裂了空气，撕毁了神经。淡蓝的天幕被扯成一条一条，在寒风中簌簌飘动。风里同时飘着无数剪断了的神经尖端。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+邻近的高射炮成为飞机注意的焦点。飞机蝇蝇地在顶上盘旋，“孜孜孜……”绕了一圈又绕回来，“孜孜……”痛楚地，像牙医的螺旋电器，直挫进灵魂的深处。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+流苏到了这个地步，反而懊悔她有柳原在身边，一个人仿佛有了两个身体，也就蒙了双重危险。一弹子打不中她，还许打中他，他若是死了，若是残废了，她的处境更是不堪设想。她若是受了伤，为了怕拖累他，也只有横了心求死。就是死了，也没有孤身一个人死得干净爽利。她料着柳原也是这般想。别的她不知道，在这一刹那，她只有他，他也只有她。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+香港的陷落成全了她。但是在这不可理喻的世界里，谁知道什么是因，什么是果？谁知道呢？也许就因为要成全她，一个大都市倾覆了。成千上万的人死去，成千上万的人痛苦着，跟着是惊天动地的大改革…流苏并不觉得她在历史上的地位有什么微妙之点。她只是笑吟吟的站起身来，将蚊烟香盘踢到桌子底下去。<br>
+<br /><br /></p>
+<h2 id="琉璃瓦">琉璃瓦</h2>
+<p><strong>原文摘录</strong><br>
+女儿是家累，是赔钱货，但是美丽的女儿向来不在此例。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+那时候正在年下，法租界僻静的地段，因为冷，分外的显得洁净。霜浓月薄的银蓝的夜里，惟有一两家店铺点着强烈的电灯，晶亮的玻璃窗里品字式堆着一堆一堆黄肥皂，像童话里金砖砌成的堡垒。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+曲曲掉过脸来向他道：“不，不，不，是我的错，玩玩不打紧，我不该挑错了玩伴。若是我陪着上司玩，那又是一说了！”</p>
+<p>姚先生道：“你就是陪着皇帝老子，我也要骂你！”</p>
+<p>曲曲耸肩笑道：“骂归骂，欢喜归欢喜，发财归发财。我若是发达了，你们做皇亲国戚；我若是把事情弄糟了，那是我自趋下流，败坏你的清白家风，你骂我，比谁都骂在头里！你道我摸不清楚你弯弯扭扭的心肠！”</p>
+<p>姚先生气得身子软了半截，倒在藤椅子上，一把揪住他太太，颤巍巍说道：“太太你看看你生出这样的东西，你——你也不管管她！”</p>
+<p>姚太太便揪住曲曲道：“你看你把你爸爸气成这样！”</p>
+<p>曲曲笑道：“以后我不许小王上门就是了！免得气坏爸爸。”</p>
+<p>姚太太道：“这还像个话！”</p>
+<p>曲曲接下去说道：“横竖我们在外面，也是一样的玩，丢丑便丢在外面，也不干我事。”姚先生喝道：“你敢出去！”</p>
+<p>曲曲从他身背后走过，用鲜红的指甲尖在他耳朵根子上轻轻刮了一刮，笑道：“爸爸，你就少管我的事罢！别又让人家议论你用女儿巴结人，又落一个话柄子！”</p>
+<p>这两个“又”字，直钻到姚先生心里去，他紫胀了脸，一时挣不出话来，眼看着曲曲对着镜子掠了掠鬓发，开橱取出一件外套，翩然下楼去了。<br>
+<br /><br /></p>
+<h2 id="金锁记">金锁记</h2>
+<p><strong>原文摘录</strong><br>
+小双道：“你别瞧这窗户关着，窗户眼儿里支溜溜的钻风。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+天就快亮了。那扁扁的下弦月，低一点，低一点，大一点，像赤金的脸盆，沉了下去。天是森冷的蟹壳青，天底下黑漆漆的只有些矮楼房，因此一望望得很远。地平线上的晓色，一层绿、一层黄、又一层红，如同切开的西瓜——是太阳要上来了。渐渐马路上有了小车与塌车辘辘推动，马车蹄声得得。卖豆腐花的挑着担子悠悠吆喝着，只听见那漫长的尾声：“花…呕！花…呕！”再去远些，就只听见“哦…呕！哦…呕！”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+云泽早远远的走开了，背着手站在阳台上，撮尖了嘴逗芙蓉鸟。姜家住的虽然是早期的最新式洋房，堆花红砖大柱支着巍峨的拱门，楼上阳台却是木板铺的地。黄杨木阑干里面，放着一溜篾篓子，晾着笋干。敝旧的太阳弥漫在空气里像金的灰尘，微微呛人的金灰，揉进眼睛里去，昏昏的。街上小贩遥遥摇着博浪鼓，那懵懂的“不楞登……不楞登”里面有着无数老去的孩子们的回忆。包车叮叮的跑过，偶尔也有一辆汽车叭叭叫两声。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+她顺着椅子溜下去，蹲在地上，脸枕着袖子，听不见她哭，只看见发髻上插的风凉针，针头上的一粒钻石的光，闪闪掣动着。发髻的心子里扎着一小截粉红丝线，反映在金刚钻微红的光焰里。她的背影一挫一挫，俯伏了下去。她不像在哭，简直像在翻肠倒胃地呕吐。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+她睁着眼直勾勾朝前望着，耳朵上的实心小金坠子像两只铜钉把她钉在门上——玻璃匣子里蝴蝶的标本，鲜艳而凄怆。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+季泽看着她，心里也动了一动。可是那不行，玩尽管玩，他早抱定了宗旨不惹自己家里人，一时的兴致过去了，躲也躲不掉，踢也踢不开，成天在面前，是个累赘。何况七巧的嘴这样敞，脾气这样躁，如何瞒得了人？何况她的人缘这样坏，上上下下谁肯代她包涵一点，她也许是豁出去了，闹穿了也满不在乎。他可是年纪轻轻，凭什么要冒那个险。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+风从窗子里进来，对面挂着的回文雕漆长镜被吹得摇摇晃晃，磕托磕托敲着墙。七巧双手按住了镜子。镜子里反映着的翠竹帘子和一副金绿山水屏条依旧在风中来回荡漾着，望久了，便有一种晕船的感觉。再定睛看时，翠竹帘子已经褪了色，金绿山水换为一张她丈夫的遗像，镜子里的人也老了十年。</p>
+<p>去年她戴了丈夫的孝，今年婆婆又过世了。现在正式挽了叔公九老太爷出来为他们分家，今天是她嫁到姜家来之后一切幻想的集中点。这些年了，她戴着黄金的枷锁，可是连金子的边都啃不到，这以后就不同了。七巧穿着白香云纱衫，黑裙子，然而她脸上像抹了胭脂似的，从那揉红了的眼圈儿到烧热的颧骨。她抬起手来揾了一揾脸，脸上烫，身子却冷得打颤。她叫祥云倒了杯茶来。（小双早已嫁了，祥云也配了个小厮。）茶给喝了下去，沉重地往腔子里流，一颗心便在热茶里扑通扑通跳。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+堂屋里本就肃静无声，现在这肃静却是沙沙有声，直锯进耳朵里去，像电影配音机器损坏之后的锈轧。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+七巧虽是笑吟吟的，嘴里发干，上嘴唇黏在牙仁上，放不下来。她端起盖碗来吸了一口茶，舐了舐嘴唇，突然把脸一沉，跳起身来，将手里的扇子向季泽头上滴溜溜掷过去，季泽向左偏了一偏，那团扇敲在他肩膀上，打翻了玻璃杯，酸梅汤淋淋漓漓溅了他一身。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+她是为了被看而来的。她觉得她浑身的装束，无懈可击，任凭人家多看两眼也不妨事，可是她的身体完全是多余的，缩也没处缩，她始终缄默着，吃完了一顿饭。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+订婚之后，长按遮遮掩掩竟和世舫独出去了几次。晒着秋天的太阳，两人并排在公园里走，很少说话，眼角里带着一点对方的衣服与移动着的脚，女子的粉香，男子的淡巴菰气，这单纯而可爱的印象便是他们身边的阑干，阑干把他们与众人隔开了。<br>
+<br /><br /></p>
+<h2 id="连环套">连环套</h2>
+<p><strong>原文摘录</strong><br>
+从生物学家的观点看来，赛姆生太太曾经结婚多次，可是从律师的观点看来，她始终未曾出嫁。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+照片这东西不过是生命的碎壳；纷纷的岁月已过去，瓜子仁一粒粒咽了下去，滋味各人自己知道，留给大家看的惟有那满地狼藉的黑白的瓜子壳。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+米耳先生那只戒指，霓喜不敢戴在手上，用丝绦拴了，吊在颈里，衬衫底下。轿子一摇晃，那有棱的宝石便在她心窝上一松一贴，像个红指甲，抓得人心痒痒的，不由得要笑出来。她现在知道了，做人做了个女人，就得做个规矩的女人。规矩的女人偶尔放肆一点，便有寻常的坏女人梦想不到的好处可得。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+轿子看看走入闹市，倾斜的青石坂上被鱼贩子桶里的水冲得又腥又黏又滑。街两边夹峙着影沉沉的石柱，头上是阳台，底下是人行道，来往的都是些短打的黑衣人。穷人是黑色的；穷人的孩子，穷人的糖果，穷人的纸扎风车与鬓边的花却是最鲜亮的红绿——再红的红与他们那粉红一比也失了色，那粉红里仿佛下了毒。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+钟停了，也不知是什么时候了，霓喜在时间的荒野里，迷了路。天还没有亮，远远听见鸡啼，歇半天，咯咯叫一声，然而城中还是黑夜，海上还是黑夜。床上这将死的人，还没死已经成了神，什么都明白，什么都原恕。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+莫信直中直，需防仁不仁。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+他本来就胖，钱一多，更胖了，满脸黑油，锐利的眼睛与鼻子埋在臃肿的油肉里，单露出一点尖，露出一点忧郁的芽。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+霓喜忽然觉得她自己的大腿肥唧唧地抵着写字台，觉得她自己一身肥肉，觉得她自己衣服穿得过于花俏，再打扮些也是个下等女人；汤姆生的世界是浅灰石的浮雕，在清平的图案上她是突兀地凸出的一大块，浮雕变了石像，高高突出双乳与下身。她嫌她自己整个地太大，太触目。汤姆生即刻意会到她这种感觉，她在他面前蓦地萎缩下去，失去了从前吸引过他的那种悍然的美。<br>
+<br /><br /></p>
+<h2 id="信息收录">信息收录</h2>
+<p>噜苏：言语絮叨</p>
+<p>罣（gua 4）：牵挂；因事或因人罪案而受牵连</p>
+<p>菉（lu 4）： 草名，即荩草；一年生细柔草本</p>
+<p>煨（wei 1）：盆中之火；用微火慢慢地煮</p>
+<p>腌臜（a 1 za 1）：不干净，肮脏</p>
+<p>饧（xing 2）：用麦芽或谷芽熬成的糖；糖块，面剂子等变软；形容眼皮半开半合，眼神凝滞</p>
+<p>爿（pan 2）：劈成片的竹木；量词，块，间，片</p>
+<p>分花拂柳：形容女子走路姿态美好</p>
+<p>瘿瘤（ying 1 liu 2）：甲状腺肿瘤</p>
+<p>刀眉秀眼</p>
+<p>颡（sang 3）：额头</p>
+<p>淡巴菰（gu 1）：烟草</p>
+<p>乔张做致：装模作样</p>
+<p>扃扃（jiong 3）：明察貌，不安貌</p>
+<p>踅（xue 2）：来回地走；回转，转折；形容动作很轻，踅手踅脚</p>
+<p>篾（mie 4）：薄竹片，劈成条状的竹皮</p>
+<p>纤丽：纤细秀美；精细华丽；指艺术风格上的细巧华美</p>
+<p>延烧：火焰蔓延燃烧</p>
+<p>袴（ku 4）：表示便于跨马骑背的腿衣</p>
+<p>颊（jia 2）：脸的两侧从眼到下颌的部分</p>
+<p>蓦地（mo 4 di 4）：出乎意料地；突然</p>
+<p>鬅（peng 3）头发散乱</p>
+<p>鬅头：头发散乱的样子；一种发髻高而松的发式</p>
+<p>唷（yo 1）：表示赞叹或惊讶</p>
+<p>嗳（ai 3 ai 4 ai 1）：叹词，表示不同意或否定；表示悔恨，懊恼；表示惊讶或不满意，表示提醒，应答的声音</p>
+<p>睨（ni 4）：斜着眼；斜视</p>
+<p>歪缠：无理取闹，胡搅蛮缠</p>
+<p>脱略：轻慢；不拘束；脱漏省略</p>
+<p>睇（di 4）：斜视</p>
+<p>揿（qin 4）：用手按</p>
+<p>山麓（lu 4）：山脚</p>
+<p>过甚其辞：指话说得过分，不符合实际情况</p>
+<p>霪雨（yin 2）：久雨</p>
+<p>萧爽：清净闲适；凉爽，凄清；潇洒自然</p>
+<p>拶指（zan 3）：旧时夹手指的刑具</p>
+<p>秽亵（xie 4）：谓下体；言行下流肮脏，今多指淫秽</p>
+<p>街衢（qu 2）：通衢大道</p>
+<p>怔忡（zheng 1 chong 1）：中医病名，患者心脏跳动剧烈的一种症状；惊恐不安</p>
+<p>孜孜矻矻（zi 1 ku 1）：勤勉不懈怠貌</p>
+<p>轰雷掣电（che 4）：雷声隆隆，电光闪闪</p>
+<p>霎：象声词，指一切窸窣琐碎之声；瞬间；同“眨”</p>
+<p>原宥（you 4）：原谅</p>
+<p>揸（zha 1）：以指取物，抓；把手指伸张开；指手指伸开时拇指尖端与中指末段的距离</p>
+<p>清辉：清澈明亮的光辉</p>
+<p>畏葸（xi 3）：畏惧，胆怯</p>
+<p>艳艳：形容水光闪耀的样子；形容水浮动的样子</p>
+<p>狾（zhi 4）：狂犬，也指狗疯狂</p>
+<p>不赞一词：指文章写得很好，别人不能再添一句话；也指一言不发</p>
+<p>鬈（quan 2）：形容头发美；头发弯曲；把头发分开，垂在两侧</p>
+<p>工愁善病：指很容易发愁得病</p>
+<p>兔起鹘落（hu 2）：意思是指动作非常敏捷，比喻下笔快捷</p>
+<p>莹澈：莹洁透明</p>
+<p>邝（kuang 4）：姓</p>
+<p>粉光脂艳</p>
+<p>玳瑁（dai 4 mao 4）：爬行动物，形似龟；指玳瑁的甲壳，也指用其甲壳制成的装饰品</p>
+<p>犯冲：指两种事物互相抵触</p>
+<p>萧疏：稀疏；萧条凄凉；洒脱，自然不拘束</p>
+<p>氅（chang 3）：泛指鸟雀羽毛；泛指鸟羽制成的外衣</p>
+<p>怙惙（hu 4 chuo 4）：担心，犯嘀咕</p>
+<p>睃（suo 1）：瞧，斜视</p>
+<p>亲狎（xia 2）：亲近狎昵</p>
+<p>百喙莫辩（hui 4）：指有众多的嘴也不能辩解</p>
+<p>罗愁绮恨</p>
+<p>麸皮（fu 1）：小麦麸，小麦磨取面粉后筛下的种皮</p>
+<p>撙节（zun 1）：节省，节约</p>
+<p>秀气所钟</p>
+<p>舌敝唇焦：说话过多，致使舌疲唇干，形容费劲口舌</p>
+<p>趿（ta 1）：把鞋后帮踩在脚底下</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%80%BE%E5%9F%8E%E4%B9%8B%E6%81%8B/">
+            https://illusionzone.github.io/2024/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%80%BE%E5%9F%8E%E4%B9%8B%E6%81%8B/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/12/26/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E6%8C%87%E5%8D%97/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】银河系搭车客指南 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/10/14/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%BA%A2%E7%8E%AB%E7%91%B0%E4%B8%8E%E7%99%BD%E7%8E%AB%E7%91%B0/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】红玫瑰与白玫瑰 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%82%89%E9%A6%99"><span class="toc-text">第一炉香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%82%89%E9%A6%99"><span class="toc-text">第二炉香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%89%E8%8E%89%E9%A6%99%E7%89%87"><span class="toc-text">茉莉香片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%83%E7%BB%8F"><span class="toc-text">心经</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E9%94%81"><span class="toc-text">封锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%BE%E5%9F%8E%E4%B9%8B%E6%81%8B"><span class="toc-text">倾城之恋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%89%E7%92%83%E7%93%A6"><span class="toc-text">琉璃瓦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%91%E9%94%81%E8%AE%B0"><span class="toc-text">金锁记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E7%8E%AF%E5%A5%97"><span class="toc-text">连环套</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E5%BD%95"><span class="toc-text">信息收录</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%82%89%E9%A6%99"><span class="toc-text">第一炉香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%82%89%E9%A6%99"><span class="toc-text">第二炉香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%89%E8%8E%89%E9%A6%99%E7%89%87"><span class="toc-text">茉莉香片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%83%E7%BB%8F"><span class="toc-text">心经</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E9%94%81"><span class="toc-text">封锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%BE%E5%9F%8E%E4%B9%8B%E6%81%8B"><span class="toc-text">倾城之恋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%89%E7%92%83%E7%93%A6"><span class="toc-text">琉璃瓦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%91%E9%94%81%E8%AE%B0"><span class="toc-text">金锁记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E7%8E%AF%E5%A5%97"><span class="toc-text">连环套</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E5%BD%95"><span class="toc-text">信息收录</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

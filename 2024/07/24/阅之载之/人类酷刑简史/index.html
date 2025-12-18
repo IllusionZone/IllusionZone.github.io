@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】人类酷刑简史：揭秘文明面具下的恐怖人性</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】人类酷刑简史：揭秘文明面具下的恐怖人性">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/07/24/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BA%BA%E7%B1%BB%E9%85%B7%E5%88%91%E7%AE%80%E5%8F%B2/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="马克•P.康纳利 | 丹尼尔•迪尔  著    张恒杰  译">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-07-24">
+      <meta 
+        property="og:article:modified_time" 
+        content="2024-08-27">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF"><span class="toc-text">版权信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80"><span class="toc-text">序言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E8%80%85%E5%BA%8F"><span class="toc-text">作者序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%EF%BC%9A%E5%8A%A8%E6%9C%BA%E3%80%81%E6%96%B9%E5%BC%8F%E5%92%8C%E7%96%AF%E7%8B%82"><span class="toc-text">第一部分 酷刑：动机、方式和疯狂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%E7%9A%84%E5%8E%86%E5%8F%B2"><span class="toc-text">第二部分 酷刑的历史</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E5%8F%A4%E4%BB%A3%E4%B8%8E%E5%8F%A4%E5%85%B8%E6%97%B6%E4%BB%A3%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第1章 古代与古典时代的酷刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E4%B8%AD%E4%B8%96%E7%BA%AA%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第2章 中世纪的酷刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E7%90%86%E6%80%A7%E6%97%B6%E4%BB%A3%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第3章 理性时代的酷刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-18%E5%92%8C19%E4%B8%96%E7%BA%AA%E7%9A%84%E6%94%B9%E9%9D%A9"><span class="toc-text">第4章 18和19世纪的改革</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0-%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第5章 世界各地的酷刑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%E5%A4%A7%E8%A7%82"><span class="toc-text">第二部分 酷刑大观</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E7%83%99%E5%88%91%E4%B8%8E%E7%81%AB%E5%88%91"><span class="toc-text">第1章 烙刑与火刑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%E5%A4%A7%E8%A7%82"><span class="toc-text">第三部分 酷刑大观</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E7%83%99%E5%88%91%E4%B8%8E%E7%81%AB%E5%88%91-2"><span class="toc-text">第1章 烙刑与火刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E7%A2%8E%E8%BA%AB%E5%88%91%E4%B8%8E%E6%8C%A4%E5%8E%8B%E5%88%91"><span class="toc-text">第2章 碎身刑与挤压刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E7%A0%8D%E5%88%BA%E5%88%91"><span class="toc-text">第3章 砍刺刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-%E6%A1%8E%E6%A2%8F%E5%88%91"><span class="toc-text">第4章 桎梏刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0-%E7%A4%BA%E4%BC%97%E4%B8%8E%E8%80%BB%E8%BE%B1%E5%88%91"><span class="toc-text">第5章 示众与耻辱刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC6%E7%AB%A0-%E6%8B%89%E8%82%A2%E5%88%91%E4%B8%8E%E5%90%8A%E5%88%91"><span class="toc-text">第6章 拉肢刑与吊刑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8A%E7%AC%BC%EF%BC%88Gibbet%EF%BC%89"><span class="toc-text">吊笼（Gibbet）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%93%B0%E5%88%91%EF%BC%88Hanging%EF%BC%89"><span class="toc-text">铰刑（Hanging）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%89%E8%82%A2%E5%88%91%EF%BC%88Rack%EF%BC%89"><span class="toc-text">拉肢刑（Rack）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E9%A9%AC%E5%88%86%E5%B0%B8%EF%BC%88Torn-Apart-by-Horses%EF%BC%89"><span class="toc-text">四马分尸（Torn Apart by Horses）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC7%E7%AB%A0-%E6%B0%B4%E5%88%91"><span class="toc-text">第7章 水刑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%83%B9%E7%85%AE%EF%BC%88Boiling%EF%BC%89"><span class="toc-text">烹煮（Boiling）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%B3%E5%88%91%EF%BC%88Swimming%EF%BC%89"><span class="toc-text">泳刑（Swimming）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%B0%B4%E5%88%91%EF%BC%88Tormento-De-Toca%EF%BC%89"><span class="toc-text">注水刑（Tormento De Toca）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B2%B8%E6%B0%B4%E7%A5%9E%E5%88%A4%EF%BC%88Trial-by-Water%EF%BC%89"><span class="toc-text">沸水神判（Trial by Water）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC8%E7%AB%A0-%E9%9E%AD%E5%88%91"><span class="toc-text">第8章 鞭刑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86-%E7%BB%93%E8%AE%BA%EF%BC%9A%E6%89%80%E6%9C%89%E8%BF%99%E4%B8%80%E5%88%87%E6%84%8F%E5%91%B3%E7%9D%80%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">第四部分 结论：所有这一切意味着什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】人类酷刑简史：揭秘文明面具下的恐怖人性
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-07-23T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-07-24</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>20.1k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p><p>《人类酷刑简史：揭秘文明面具下的恐怖人性》<br>马克•P.康纳利 | 丹尼尔•迪尔  著<br>张恒杰  译</p></div>
+<br />
+<img src="/image/book/readandnote/人类酷刑简史/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/人类酷刑简史/1.png" class="lozad post-image">
+<br />
+<h2 id="版权信息">版权信息</h2>
+<p><strong>原文摘录</strong><br>
+必须记住的时，绞刑是一种公共奇观，围观民众不会满足于快速的处决。<br>
+<br /><br /></p>
+<h2 id="序言">序言</h2>
+<p><strong>原文摘录</strong><br>
+是否真的如埃德蒙•伯克（Edmund Burke）所说的：‘恶人得胜的唯一条件就是好人袖手旁观？’<br>
+<br /><br /></p>
+<h2 id="作者序">作者序</h2>
+<p><strong>原文摘录</strong><br>
+写作此书时所面临的一大挑战，就是找到一种关于究竟什么才构成酷刑的共识。在《联合国禁止酷刑公约》（United Nations Convention Against Torture）中，对实际中的肉体酷刑与所谓的“残忍的和有辱人格的待遇”没有作出区分，公约认为，酷刑是任何一种导致持续精神伤害（即我们有时所称的“创伤后压力综合征”）的审讯方式。大赦国际（Amnesty International）似乎认为，几乎任何剥夺行动自由的行为，如把受害者捆绑在墙上或者简单的监禁，都是对基本人权的践踏，因而构成了酷刑。另一方面，美国政府则认为，只有旨在制造长时期肉体的或精神的伤害而强加于人身的行为，才能称为酷刑。通过以上比较，酷刑的定义就变得明晰了。与为出版社和公共研究机构编著官方报告的那些受过专业训练的人士不同，我们不是心理学家、精神病学家、人权活动家，也不是试图为审讯方式辩护的行政或军事组织的成员。我们是历史学家。因此，像任何优秀的历史学家一样，在确定把哪些惩罚和肉体虐待的方式收录这本书中时，我们决定采用一种完全客观和实用主义的方法，实事求是。</p>
+<p>本书并未收录20世纪发明的林林总总的酷刑。对于可怕的纳粹德国毒气室和曾经风行的电棍，几乎每个有社会常识的人都很熟悉，因而没有收录书中的必要。对过去几个世纪众多社会所采用的五花八门的酷刑方式，本书进行了一番更为详尽的考察。从这些丰富的参考资料中，我们逐渐认识到，政府对犯罪嫌疑人和国家的敌人施加酷刑有两大根本原因。第一，通过逼迫犯人招供，或者通过常见的方式，即逼迫囚犯揭发真实的或者臆造的阴谋中同谋者的名字来榨取信息。第二，酷刑作为一种惩罚形式而使用。虽然酷刑作为惩罚已不如它在两个世纪之前那么常见，但是，它在世界各地的很多国家和文化中仍有留存，这令人不安。用大赦国际的创始人彼得·班奈森（Peter Benenson）的话说：“尽管酷刑遭到禁止，但世界上2/3的国家仍在秘密使用。很多政府依然允许其官员不受追究地非法滥用酷刑。”</p>
+<p>无论如何定义，酷刑仍然在几乎每个地方或大或小的范围内存在，并且只要警察不得不从犯人口中获取信息，它就可能继续存在。如果没有了暴力手段和监禁的震慑，实际上没有犯人会招认他们的罪行，社会将会彻底崩溃。</p>
+<p>尽管我们对书中所论及的问题没有提出解决之道，但我们诚挚地希望，我们的努力能够使您（亲爱的读者）更好地理解为什么人类自古以来就一直迷恋酷刑的使用。人类如此而为是一个事实。实际上，2000多年以来，我们人类就明白严刑拷打下的供词几乎毫无价值，酷刑作为惩罚对震慑犯罪也无济于事，这使得这一问题更加可怕与可悲。<br>
+<br /><br /></p>
+<h2 id="第一部分-酷刑：动机、方式和疯狂">第一部分 酷刑：动机、方式和疯狂</h2>
+<p><strong>原文摘录</strong><br>
+酷刑一词使用的如此频繁与不恰当，从而在详细考察酷刑的使用之前，有必要准确地定义其含义：或者更具体地说，要廓清该词的众多定义所引发的混乱，从而恰如其分地确定我们所言之“酷刑”的含义。与通常的理解不同，所有形式的惩罚，甚至当它涉及身体虐待时，也不能被看做酷刑。第13版的《不列颠百科全书》（Encyclopedia Briannica）这样解释酷刑：“酷刑（Torture），源于拉丁语‘torquere’（扭曲之意），是对变态的才智所设计的造成疼痛的众多方式的一种统称，尤其指被古代和现代的欧洲文明国家的法律所采用的。”按照这种观点，酷刑常常适用于以下两个目的：</p>
+<p>1.定罪前抑或定罪后，从证人或者被告那里获取证据的一种方法；</p>
+<p>2.惩罚的一部分。</p>
+<p>第二种使用较早，而作为一种搜集证据的方法，其功能则由法律专家在实践中逐步完善。《韦伯斯特新大学词典》（Webster’s New Collegiate Dictionary）对它的解释更简明扼要：</p>
+<p>1.为惩罚、威逼或获得施虐快感（通过火烧、碾压或伤害）而施加剧烈的疼痛；</p>
+<p>2.肉体或精神的极度痛苦；</p>
+<p>3.通过制造令人难以忍受的苦痛来惩罚或威逼；</p>
+<p>4.制造痛苦，折磨拷问。</p>
+<p>用这些基本的前提作为开篇，我们立刻便知，肉体残害，必须为达到一些特定的目标而施加时，才被当做酷刑。如果一个街头犯罪团伙攻击、殴打和有计划地虐待某人，严格地说，他们没有对受害者施以酷刑。诚然，他们殴打受害者，可能造成严重的身体伤害，但是因为他们的行动不是任何行政的、军事的或者司法机构所授意，故而，这种殴打不是技术层面的酷刑。另一方面，做出同样暴行的一伙革命游击队员实际上则是在施以酷刑。一个简单的野蛮行为与完全的酷刑之间的主要区别，就是有无更高权力机构的授权。这个定义的一个内在的却很少言明的含义是，当酷刑是国家机关授权进行的时候，它具有一定的合法性。通过把酷刑引入法律制裁中，那些实施政府所授意的酷刑的人有了开脱个人罪责的借口：“我只是执行命令而已。”</p>
+<p>正如我们将会不断看到的，那些认可使用酷刑的政府往往是虚弱的和心怀恐惧的（譬如最早期的原始社会与现代第三世界中的独裁统治）。在后一种情况下，或出于忠诚，或只是为了让民众安分守己，通常存在这样一种观点，即社会上存在一心要毁灭这种“制度”的大阴谋，必须在它们颠覆社会之前将其制服。这些宣称即将毁灭的耸人听闻的种种言论时常是一种使人民处于长期恐惧状态且更易受到控制的好办法。它也是一种使领袖受民众欢迎的有效手段：首先他会通过描述这种含糊的、莫可名状的威胁来营造恐怖气氛，然后着手逮捕、拷打和处决尽可能多的阴谋分子以摧毁威胁。当然这种威胁不可能真正地被消除：因为它自始至终就不存在，或者因为一旦“敌人”不复存在，那么领导人可能会失去对权力的掌控。</p>
+<p>最早期的酷刑通常是一种惩治手段。在原始社会中，所有人都寿命短暂、野蛮、残忍，所谓的法律其实就是施以惩罚。当一个罪犯或者违反公认的道德准则的人公开受到鞭笞、折磨，或者被残忍地处死、摧残，其结果是法律得到维护，社会安定有了保证，善良守法的人们能够安然入睡。这些有法必依的生动范例通常可以取悦民众，使他们对事情的“正当性”有良好认知。它既是一种廉价的娱乐，同时也是清除政敌的有效手段。</p>
+<p>几千年以来，数以千计的文明潮起潮落、兴衰更迭，但是酷刑的使用及其背后的深层原因几乎没有什么变化。对酷刑和惩罚最早的使用往往是心理层面的。受到怀疑的党派或者被征服的群体被指控有罪，遭到逮捕和惩罚。但是随着时间推移，随着酷刑的动机从简单的惩罚变为榨取信息的手段，酷刑的实施过程也随之完善。受刑者首先被送到酷刑室，施刑者向他们展示即将施加其身的刑具。为了吸引受害者的注意，他会夸大其词地描述整个刑讯过程。随后将犯人带回牢房，留出时间让他们好好思量一番。除非蠢笨如牛，多数人都能想象酷刑的严苛，因此唯一的打算就是立即供出自己知道的一切事情以及不知道的很多事。但是，偶尔也有人意志非常坚定，也有一些人自知命运已定，即不论他们招供什么，都会受到严刑拷打。</p>
+<p>1307年，法国国王菲利普四世（Phillip IV）在教皇的倾力支持下以异端罪名大肆搜捕圣殿骑士团（Knights Templar）成员。他真的相信他们是异端吗？或许并非如此。他欠他们一大笔债务且有心赖账吗？正是如此。但是如果直接坦白自己的动机，国王的颜面何在？于是，菲利普把几千名圣殿骑士逮捕，投入监狱，对他们严刑拷打、劝诱、禁食，他们被折磨得奄奄一息，最后招认了臆造的、无比荒诞的指控。他们一旦招认，菲利普就可以随意地对他们定罪、审判、处以火刑，然后没收他们的土地和财产。几乎所有圣殿骑士随后都拒认这些屈打成招的口供，但是木已成舟，大势难以挽回。这个屈打成招的范例只是本书所考察的几百个实例之一，这一事例可使酷刑利弊简明易懂。酷刑经常用来套取口供或者其他信息——几乎每个人都会供出能够使苦痛停止的任何事情。</p>
+<p>需要指出的是，酷刑只有一个可能的结果——榨取信息或者施加制度所需要的惩罚。在第一种情况下，施刑人（Torture Master）将会持续使用酷刑，直到对方供出被要求坦白的内容，否则将被折磨致死。很容易看出，这一过程其实存在缺陷。事实上，如果审讯者真想知道实情，酷刑会适得其反。自古以来的立法者、哲学家和僧侣都意识到并承认了这一令人悲哀的事实，但是总体来说，他们赞成而且使用酷刑来获取口供和惩罚。这是何故呢？因为酷刑的真实目的不是使真相大白，而是确保定罪。酷刑之下的每个人迟早会招认，但这并不代表他们真的违法犯罪，即使没有做这些事，他们还是会承担这些罪名，而真正的罪犯却逍遥法外。偶尔也有受刑者能够克服恐惧和长时间的疼痛，使迫害者的目的不能得逞。</p>
+<p>在16世纪西班牙宗教裁判所（The Inquistion）恣意妄为的时候，一个名为玛利亚·德·柯茜卡（Maria de Coceicao）的葡萄牙妇女被指控为异端，遭到逮捕，她被送至酷刑室拷打。为了避免四肢被拉断，柯茜卡夫人很快招供，但是一从刑具上脱身就立刻反口。第2次受刑的时候也同样如此。这种情况反复发生：为了使疼痛停止而招供一些东西，刑讯一停止就反悔。在这个案例中，柯茜卡非常聪明，也极其勇敢，她告诉施刑人：“一旦酷刑停止，我将否认拷打下所招认的所有事情。”与西班牙宗教裁判所其他数以万计的受害者相比，玛利亚·德·柯茜卡要幸运得多。她被公开鞭笞，判处流放10年，她坚定的勇气使其免遭在火刑柱上烧死。那么她是否对审讯者坦白了什么事情吗？也许不是。我们很容易推测到这位审讯官其实知道酷刑不能查明事实。可是像他们这样的人在几千年的历史中为什么还干这种勾当呢？因为它是现行制度的一部分，能够帮助当权者巩固地位，使民众安分守己。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+尽管对查明真相没有用处，酷刑还是总能撬开人们的嘴巴。在施刑过程的背后，如何从心理层面上运作，古代和中世纪的施刑人可能知之甚少。正如我们在书中所提到的，要说服一个潜在的受刑者开口，第一个步骤中的一个方法是向他们展示刑具。这种方式贯穿整个刑讯过程，审讯官通常并不真正使用酷刑。这些被看做是“斯德哥尔摩综合征”（Stockholm Syndrome）的组成部分。它因1973年瑞典斯德哥尔摩的一起劫持人质事件而得名，当时两名银行劫匪劫持4名人质长达6天，斯德哥尔摩综合征说明了这一过程，即受害者的意志陷入崩溃之后，他会配合劫持者。这个过程包含两个不同的步骤，首先是重塑被囚者的正常思想意识：</p>
+<p>被囚者逐渐相信逃跑是不可能的，他们形成了这种看法——不论正确与否——他们的生死取决于囚禁他们的人。</p>
+<p>囚禁他们的人通过无足轻重的小恩小惠获取被囚者的信任。</p>
+<p>被囚者与世隔绝，与外界难以取得任何联系。</p>
+<p>一旦受害者完全失去判断力，意识到他们的生命依赖于施刑者的宽仁，他们会被送入审讯过程的下一个步骤：要使他们招认，或者提供一些逮捕他们的人想要的信息。</p>
+<p>受害人受到肉体的（有时是性的）虐待，从而使他们感觉更加的虚弱。 被囚者通常被关在黑暗的地牢或囚室，丧失了对时间和方位的正常感觉。</p>
+<p>被囚者没有任何隐私。守卫在任何时间能以任何理由干涉被囚者的活动。</p>
+<p>只有囚禁他们的人认为是必要的时候，才会给他们食物。</p>
+<p>当囚犯置身于这种境况，会在不可预知的时候受到拷打，从而失去了掌控自己生命的任何感觉。那个通常坐在他旁边、准备听到“供词”的人控制着囚犯和施刑人。这个人不仅是所有痛苦的来源，也是能让疼痛停止的唯一途径。一旦受刑者想要回答审讯者的问题，施刑人就会被制止。</p>
+<p>随着这个程序渐次完善，从逮捕到监禁，以及向受刑者展示一个人被慢慢地挤压、火烧、煮沸或撕裂，通常在实际中并不需要真的对受刑者进行拷打。他们自己的恐惧心理会做出施刑人理论上所不能达到的事情。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不论是否有效，酷刑都能使一个人认罪或揭发自己的同党（真实的或凭空想象的）。当酷刑被用做一种惩罚手段时，一定会奏效。它或许不能阻止其他人犯罪、减缓不断增长的犯罪率，亦不能改造受惩罚的人，但是在依法进行惩罚这个意义上，它完全起到了应有的作用，而且几乎每个案例中，惩罚都是在大庭广众之下进行的，政府需要给予民众一种持续的信念：他们的政府是在“严惩犯罪”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在酷刑惩罚过程中，常常伴随着羞辱和侮辱的理念。羞辱的整体理念实际上在现代社会就已消失，这很大程度上归因于城市人口过剩引发的匿名性，以及社会生活和家庭生活的瓦解。以前则并非如此。那时候人们居住于一些小型的社区，人人相互熟识，对彼此的行当一清二楚，这可是一个进行百般羞辱、摧残人心的好舞台。小型的封闭社区从文明初到18世纪晚期一直存在，在这样的社区里，当一个人逾越了社会可接受行为的界限时，朋友、邻居和家人都拒绝与之交谈或生意往来，这绝对是一件可怕的事情。另外，罪犯宁愿到阴暗的地牢里待上几个月，一个人遭罪，也不愿在整个社区居民的围观下被鞭打，遭受公开羞辱。</p>
+<p>与轻微犯罪一样，对更严重犯罪的惩罚主要是由这个社会的文明或野蛮的程度决定的。自人类社会肇始以来，很难发现惩罚形式有任何文明化的迹象。正如我们将在本书下一部分中讲到的，古代埃及的文明程度相当高，但是4000年或5000年之后，即黑暗时代和中世纪早期所采用的惩罚却恐怖到令人难以置信。炙烙、肢解、剥皮、拔舌、把人扔下悬崖、从活人身上剥皮和挖出内脏，都是早期欧洲社会常见的惩罚。文明似乎倒退了。实际上，它完全没有退步。正如我们上文所讲到的，与一个不稳定的社会相比，稳定的社会往往更不容易产生酷烈的刑罚。古代埃及社会稳定、组织良好，由法老和祭司统治，二者并不时刻担忧自己的权力会受到挑战。另一方面，黑暗时代和中世纪早期的西欧社会激烈动荡，往往由当时最强大的武士领导。对这些常怀忧惧的领导人来说，每个违法者都提供了一个杀一儆百的好机会。直到文艺复兴时期，整个欧洲的刑罚制度仍然像1500年之前的罗马帝国那么冷酷。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+那些施加可怕酷刑的野蛮冷酷的国王、贵族、法官和教士早已湮没在历史长河中，在我们愤然谴责他们之前，最好记住：除非一个国家被外部势力侵占，政府当局才会关注、迎合臣民们的需要，尊重他们的信仰和爱好，通过仁政来保持他们的权力。酷刑和公开处决不仅受到普通民众的认可，也是他们自己所要求的。任何一个国王，如果剥夺了臣民从偶尔的鞭刑和绞刑中寻求刺激及快乐的权力，将会面临被精通于如何取悦民众的下属贵族赶下台的危险。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+1259年，意大利爆发了一场瘟疫。当时，兵祸肆虐，政治腐败，社会几近崩溃，巡游的教士和修道士们开始鼓吹世界末日即将来临，反基督者将要出现。由于惊恐过度，一个被称为“严守耶稣基督垂训之人”（Disciplinarians of Jesus Christ）的自笞者兄弟会，开始在乡间游行，他们鞭打自己来赎偿世界的罪恶，他们在经过的城镇和村庄吸引了很多追随者。男人、女人甚至小孩子都加入他们的行列，数月间，一万多名满身鲜血的信徒组成的游行队伍在意大利的道路上踉跄而行；他们高唱着赞美诗和颂歌，遮住他们的脸以抵抗世上的屈辱，裸着他们的背以承受自我的鞭笞。场面是如此壮观可怖，以至于正在交战的军队全都放下了兵器，士兵们站在路边，让这个哀伤的队伍不受干扰、继续前行。</p>
+<p>这或许可被看做是民众歇斯底里的集体行为的一次爆发，1347年，黑死病（Black Death）在欧洲爆发。黑死病在两年半的时间里摧毁了欧洲1/3的人口。随着黑死病的传播——以及伴随而来的一种观念即疾病是上帝对人类罪恶的惩罚——鞭笞的武器又被信徒拿起。一个世纪前的事情此时重现，但这时的自笞者们态度非常激进。当教士们公然反对民众自我虐待的时候，自笞者们便闯入教堂，当他们游行至犹太人隔离居住区时，竟迫害犹太人。鞭笞在数月间风行意大利，并传至瑞士、匈牙利、波希米亚、波兰、德意志诸邦国、丹麦、荷兰和佛兰德斯，且在自笞者变得更具攻击性的时候扩展至更远。1349年，教皇克莱门特六世（Pope Clement VI）宣布自我鞭笞派为非法，坚持认为这种极端行为等同于异端邪说。</p>
+<p>后来黑死病逐渐消失，自我鞭笞者随之销声匿迹。当时无人认识到，疼痛像毒品或者酒精一样能够让人上瘾，尤其是处于情绪极端激动或巨大压力下。一个时代的问题越多，情绪宣泄的要求就越强烈。在恐怖的战争和瘟疫中，自我鞭笞者在祈求弥补人类的罪恶的同时，犯下了一种新的“施虐受虐罪”（sin-sadomasochism，尽管这个词几个世纪前才出现）。类似情况出现在性压抑氛围中实施肉体鞭笞的男女修道院；鞭笞——无论施加还是承受——变成性满足的一种替代品。</p>
+<p>施加或者接受疼痛是因为它能提供情感或性的满足。上文描述的很多宗教性鞭笞形式的肉体惩罚的案例表明，快感与痛楚通常会交织在一起。在更一般的意义上，对无助的受害者施加痛苦，或许不是寻求一种性的或情绪刺激的满足，而是因为施刑人是一个能够吸引人格堕落者的行当。同样的，法官、神职人员或者其他官员等监督酷刑实施的这些人，也能够看到受刑者血肉横飞，双臂双腿从关节处脱臼的惨状，他们处在能感受间接刺激的绝佳位置。沉浸于这种工作乐趣的人在本书下一部分将不难找到。正如最上瘾的人一样，沉湎于——或者自笞者所自愿接受的——痛苦的那些人，甚至对习惯性鞭笞有了免疫力，从而渴求更强剂量的鞭笞。<br>
+<br /><br /></p>
+<h2 id="第二部分-酷刑的历史">第二部分 酷刑的历史</h2>
+<h3 id="第1章-古代与古典时代的酷刑">第1章 古代与古典时代的酷刑</h3>
+<p><strong>原文摘录</strong><br>
+大部分有文字记载的早期社会——主要在地中海的东部、底格里斯河和幼发拉底河流域——在一些重大罪行上拥有共同的量刑标准。弑父、通奸和沦为战俘都被视为不可宽恕，应受重罚。除了以上几个共同情况，这些社会如何惩罚其他罪行则基于各自的文化特征。</p>
+<p>总的来说，法老时代的埃及文明相当发达。埃及人从来不对已定罪的犯人强加不合理的惩罚。死罪，如谋杀，通常被处以绞刑。这一法规的少数例外之一是杀害了自己的孩子。在这类案件中，会判处将孩子的尸体绑在父母的脖子上，直至尸体腐烂：毫无疑问，场面异常令人恶心。另一个例外的情况是弑父。犯人会被处以一种独特的缓慢而痛苦的死亡方式，他会被一束芦苇鞭打身体，扔进荆棘丛里来回打滚，直到皮开肉绽，然后在活着的时候被扔进熊熊烈火中。罪行较轻者接受的惩罚也相对较轻。</p>
+<p>对大部分非死刑犯来说，标准惩罚均为公开的鞭刑。令人惊奇的是，鞭刑的方式与罪犯的性别还有关联。受鞭刑的女人以跪立的姿势接受惩罚，而男性要四肢伸展脸朝下趴在地上。行刑前会剥光犯人上身的衣服，露出脊背。从逻辑上讲，罪行越重，则受到的鞭打越严厉。当一名男性犯下与奴隶通奸的罪过时，他将遭受1000多下的鞭笞。不过这并不等于是实际的鞭打数，刑具也可能不是一束锋利的芦苇鞭或一根重鞭，倘若使用这类刑具，有可能真把受刑者打成碎片。奇怪的是，当一个女人犯下通奸罪时不会被处死，而会把她的鼻子割掉。这种惩罚虽对生育无关大碍，不过一个女人若变得如此丑陋，肯定很难拢住自己男人的心了。肢体残害并不只针对女性通奸者，很多其他的罪犯也会受到各种不同的肉体残害。有意思的是，当一个人被指控的罪名是错误的时候，他还是会被判为这种罪名，受害者也只能接受这个判决。</p>
+<p>埃及是一个骄傲的民族，最让他们感到耻辱的是沦为战俘。这种耻辱比死亡更可怕。因此，当埃及军队俘获了敌方士兵后，会毫不客气地对待他们。在被押往囚禁地点的路上，俘虏们一个挨着一个，排成一长队，脖子上套着绳子，他们会被绳子勒得非常难受，但不会被勒死。为了让犯人更加痛苦，他们的双手被死死地反绑在背后。有时候，倘若法老的军队陷入鏖战、处境艰难，他们对战俘的折磨也会加倍，会用绳子把战俘的双手反绑在背后，然后将绳子缠在已经套上绳索的脖子上。战俘为减轻肘部和手腕的痛苦就会挣扎，越是挣扎，就越有可能勒死自己。那些在漫长押送途中幸存下来的囚犯的下场也很悲惨，在失去了眼睛或者舌头之后会被当做奴隶卖掉。这是在警告其他人：永远不要与法老进行战争。</p>
+<p>以修纳城邦（Eshunna）属于稍后的中东文明，留存下来的司法记录非常少，它于公元前2000年～公元前1720年之间走向繁荣，位于今天伊拉克巴格达北部仅30英里（50千米）处。以修纳似乎有一套涵盖日常生活各个方面的法典，包括常见的犯罪如偷窃、抢劫、绑架、谋杀、身体伤害、性犯罪和故意伤害动物等。对于稍轻的罪行，以修纳的法官可能是先强征罚金而非施以肉体惩罚——与观看罪犯的脊背受到鞭笞而得到些许满足感相比，罚金至少对实际的赔偿更有意义。发生在夜晚的犯罪活动比白天的惩罚更严厉。倘若白天偷盗他人的庄稼，将处以10个银舍客勒的罚金，若是晚上，将被处死。</p>
+<p>还有一个问题是以修纳人怎样判决女性罪犯，因为代称男性与女性的书写语言似乎没有性别区分——他和她可以互换。因此，法律规定：“当抓住一个女人在一个男人膝上时，（他∕她）必须死。”显然，通奸罪是一种相当严重的罪行，但不确定的是哪个罪犯会被处死。综合各方面的因素，我们有理由认为，被处死的会是处于不利地位的女性。</p>
+<p>评价这些早期社会中酷刑制度的困难之处在于，酷刑实施具有随意性，依当地司法部门的一时兴致而随意施加。目前所知的最早编纂法典、为特定罪行规定特殊刑罚的尝试之一，出现在巴比伦国王汉谟拉比（King Hammurabi of Babylon，公元前1792年～公元前1759年在位）统治末期。为了使282条法令和与之相关的刑罚能广为人知，汉谟拉比命令把法令刻在一个6英尺（约合2米）高的石柱上，类似于石柱的副本竖立在整个帝国的主要城市里。虽然以现在的标准看，很多规定极其野蛮，但是私人复仇与虐待奴隶和妇女都被视为非法。在许多案件中，根据传统的“以眼还眼”的同态复仇（talio）进行惩罚：如果一个人打断了另一个人的骨头，那么他自己的那根骨头也要被打断；若一人故意挖出他人的眼睛，他自己的眼睛也会被挖出。其中特别有意思的一条法令规定，倘若医生在手术过程中使病人不治而亡，或使病人留下残疾，那么医生就要被砍掉双手——显然是为了防止以后治疗失当。《汉谟拉比法典》值得称道之处是赋予女性特定的权利，比如无过错离婚和免遭强奸的保护；对性犯罪者的惩罚是宫刑。倘若一个男人控告其妻子与人通奸，在休掉她之前，他必须提供妻子罪行的有力证据，若她被判有罪，将被扔进幼发拉底河。如果神灵认为她是清白的，她会安全到达对岸；如果确实有罪，必然会淹死。这种水刑审判，重现在千年之后对被控施巫术的女人进行大肆迫害的猎巫运动中。</p>
+<p>奴隶也获得保护，免遭主人的无端虐待，但毫不奇怪的是，奴隶比自由民享有更少的权利，特别是罪行是否达到被判死刑方面。死刑适用于一系列的犯罪，包括偷盗、故意接收赃物、纵火、绑架、包庇逃跑的奴隶、谋杀、通奸（令人吃惊的是适用于男人和女人）以及拥有一家声名狼藉的酒馆。其中特别有意思的是，“以眼还眼”被作为纵火或在火灾后抢劫的惩罚。在这些案件中，罪大恶极的人会被扔入火中。</p>
+<p>正是由于文明的原始性，汉谟拉比时期巴比伦的司法出人意料地不偏不倚。无人会在缺乏充足证据的情况下被定罪，作伪证者舌头要被割掉，倘若受害者确实有罪的话，做伪证的控告者将受到与受害者同样的处罚。另一进步之处是上诉权利：不论何种罪名，所有罪犯都拥有这一权利，罪犯不仅可从当地法庭上诉至高级法庭，甚至还可上诉至御前。很多遗存下来的记载显示，汉谟拉比经常会审理来自各阶层各色人等上诉至御前的案件。</p>
+<p>与其邻居埃及人和巴比伦人一样，古希伯来人制定了自己的法律，且尽量确保惩罚合理。《摩西法典》（Mosaic Code）是摩西及其继承者们的法律，于公元前1200年前后编成，它构成了一个完善的刑罚体系，几乎涵盖了当时各种类型的酷刑。同与希伯来人关系长期处于紧张状态的埃及人一样，最常见的民事刑罚是鞭刑，不过鞭打从来不会超过40下。死刑罪包括吃还带着血的肉、亵渎神明、把孩子献祭给异教的神、未婚先孕以及儿子拒不服从父亲的命令，这是希伯来律法独有的。</p>
+<p>根据希伯来律法，处决方式包括焚烧、投下悬崖和十字架刑，但法律判决中最常见的处决方式是石刑。在早期文明中，所有的死刑均为公共事务；精心准备的仪式以及随之施加的痛苦，给围观民众留下深刻的印象，从而能够震慑其他人不要犯下类似罪行。石刑有特别的仪式。死刑犯会被带至城外一个专门的行刑场地。那里平时就堆着一些石头，想必是为了提醒过路人这个地方的重要性。最开始对罪犯提起控诉的那个人，要身穿白色的流苏长袍，投出第1块石头。一旦第1块石头投出，其他围观民众便如法炮制，直到罪犯被砸死，身体完全被石头埋没。</p>
+<p>尽管十字架刑几乎快变成罗马独特的刑罚，但它也是早期犹太人常用的一种处决方式，而且有很多不同版本——常被称为“吊在一棵树上”（《旧约》有所记载）。从《圣经》的语言中很难判断这些死刑究竟是传统绞刑，还是简单地把犯人绑在树上，使其死于风吹日晒。</p>
+<p>在希伯来人的死刑中，较奇特与少见的是活埋；这种刑罚的一个极其残忍的变化形式是把犯人扔进装满灰烬的一座塔状物里。该塔须足够高，以便能把犯人填进去，使他在慢慢地陷入灰烬的过程中窒息而死。可能会有一些通向塔中的阶梯和平台，从那里审判案件的官员可以目睹罪犯的死亡过程。在其漫长而动荡的历史中，希伯来人似乎使用了五花八门的独特酷刑。妓女一般会被活活烧死，祭司的女儿犯下通奸罪也是同样的下场。当大卫国王（King David，公元前1005年～公元前965年在位）在长时间围攻后最终占领拉巴城时，他下令把市民锯成两半，或埋在土里只露出脖子，然后犁过去。大卫屠杀拉巴城和把死囚扔进灰塔里的这种事情，并不是古代犹太人所广泛接受的惩罚方式。这些极端行为更像是激情犯罪或者简单的施虐行为，而非执行《摩西法典》。</p>
+<p>除少数例外，希伯来人认为他们的司法与刑罚体制与他们对万能上帝的信仰一样文明。的确，当他们与邻国关系破裂时，征服者施与战败的犹太人的惩罚，与希伯来人施与本族囚犯的惩罚几乎同样野蛮。但结果往往与征服者的意愿相违。</p>
+<p>当巴比伦国王尼布甲尼撒二世（Nebuchadnezzar II）于公元前589年入侵并摧毁犹太王国时，他视犹太人为被征服的民族。不过他也提拔了一些犹太人在他的政府中任职。其中3人是沙得拉、米煞和亚伯尼歌。尼布甲尼撒建造了一座金像（可能代表火神或太阳神），并命令臣民崇拜它。这3人拒绝执行，随后被押至国王面前。对他们亵渎神明的惩罚就是把他们扔进一个火炉，火炉温度非常高，以至于烧火的卫兵都被烤死了。按照《但以理书》（Daniel）的描述，上帝派来的天使拯救了这3个希伯来人，使他们免于被烧死，并令尼布甲尼撒二世认识到上帝的神圣力量。仅仅一代人之后，波斯国王大流士一世（Darius I of Persia）就打败了巴比伦，控制了沦为囚虏的犹太人，并任命先知但以理在宫廷中担任重要职务。但以理在宫廷中的敌人们散布不利于他的谣言，大流士相信了这些流言蜚语，下令把但以理扔进狮子坑。第2天，大流士前来查看，发现但以理竟然和这些狮子相安无事，很显然受到了上帝的庇佑。大流士意识到自己犯下了严重错误，就释放了但以理，并把那个控告者投入狮子坑，他的结局肯定是尸骨无存。</p>
+<p>如果古代的大卫王、所罗门王、基甸和约书亚这些犹太英雄是有名的勇士，那么希伯来人历史上最著名的勇士家族毫无疑问应属马加比家族（Maccabees）。从公元前165年到公元前63年，马加比家族揭竿而起，反抗旧约时代最残暴的民族之一——亚述人（Assyrians），并试图重建犹太王国。亚述人好战野蛮，以下事实可以为证：几个世纪之前，在亚述国王亚述巴尼拔（Ashurbanipal，公元前669年～公元前627年在位）的统治下，他的军队把俘虏的敌方士兵活生生地剥皮，使用刑具在俘虏的头上打上烙印。亚述巴尼拔所征服城市中的孩童会被烧死，极少数幸存下来的成年人被挖眼、活剥、钉在尖桩上，他们的手脚、耳朵或者鼻子会被砍掉。5个世纪之后，到马加比王朝兴起的时候，亚述人稍微文明化了，但并未有少许的宽仁。</p>
+<p>犹太人之所以憎恨亚述人，是因为他们是一个长期的威胁；亚述人憎恶犹太人，是因为他们尽管已经失败了，却还是顽固地拒绝臣服。最后，亚述国王安提阿古·伊皮法尼（Antiochus Epiphanies）失去了耐性。他把耶路撒冷洗劫一空，在所罗门圣殿的内室立了一座朱庇特神像，并把圣殿的其他房间改为一家妓院，还命令把每个守安息日的人都活活烧死。犹太人不甘心接受失败而起义反抗；犹大·马加比身边聚集了一支起义军队。这些人就是马加比家族。</p>
+<p>安提阿古对这一切深恶痛绝；他想要把犹太人变成温顺的奴隶，就像被他征服的其他民族一样。但很明显的是，对安提阿古来说犹太人需要一些形象的例证，来显示他们的新国王是多么的强大，而他们自己的信仰是多么的荒谬。让安提阿古尤为恼火的是犹太人禁食猪肉的饮食习俗。有一次，一个拒吃猪肉的男孩被绑在一个轮子上，他的关节脱臼，骨头碎裂，皮肉被炽热的铁钳撕裂。为了增加男孩的痛苦，轮子下面有一张炭火床，炭火最后竟被他自己流下来的血给浇灭了。还有一次，7个兄弟和他们年迈的母亲因同样的罪被拖到安提阿古面前。国王向他们保证，如果他们在胁迫下吃了猪肉，他们的上帝会理解并原谅他们的罪过，他还威胁说，如果他们拒绝，就在其母面前把他们都残忍地处死。7兄弟和母亲还是没有妥协。7人中年龄最大者被绑在轮子上折磨拷打、四肢砍掉之后，国王说，倘若余下的6兄弟与他一起共进一顿美味的猪肉晚餐，他将赦免他们6人。他们再次拒绝了。第2个兄弟的四肢被砍掉，在还未咽气时被放进一个大煎锅里炙烤。第3个被活剥并开膛破肚，第4个人遭拔舌，然后被固定在铁叉上活活烤死，第5个烧死在火刑柱上。第6个被扔进盛满沸水的大锅里，年龄最小的那个自己跳进沸水锅，与哥哥死在一起。安提阿古有一种挫败感，恼羞成怒之下就指控他们的母亲不许他们背弃信仰，使他们被杀，判处活活烧死她。到公元前63年，马加比起义失败，犹太人依然是亡国的民族，但亚述人的力量也在慢慢衰落。一个新的、更进步的文明站到了世界舞台的中央，他们带来了新的、更高级的酷刑方式。</p>
+<p>古希腊人是一个文明的民族。至少他们自认为文明。早在公元前1179年，希腊法律就禁止谋杀，而是采用一种典型的文明方式，即死刑只能由国家的法庭来判决。这似乎是一个好的开端，但不幸的事情很快降临。公元前700年前后的数十年间，僭主德拉古（Tyrant Draco，此后，僭主与独裁官一样成为正式称号）认为，倘若死刑是好的，那么岂不是多多益善。因此他宣布，如果对所有的犯罪只处以一种刑罚——死刑，那么实施法律会变得极其简单。从偷一片面包到谋杀的任何犯罪行为都被处以死刑。在被问及为何要颁布这种法律的时候，德拉古嘲讽道：“穷人应该去死，而且我想不到更重的惩罚来施加到富人身上。”德拉古——有意思的是它被翻译为“魔鬼”（serpent）——或许掌权不是太久，但是“德拉古式的”（draconian）这个词却从此与严酷的法律联系在一起。</p>
+<p>德拉古时代的350年之后，雅典的立法者卡伦达斯（Charondas）提议把被称为《梭伦法典》（Thurian Code）的法律刻在石板上。我们这里要考察的不是法典本身——它采用了很多早期社会中流行的“以眼还眼”的法律原则——而是它如何实施。为了防止有野心的改革者武断地修改他所制定的新法律，卡伦达斯颁布法令，规定任何提议修改法典的人，在其建议被立法者会议充分讨论的时候，要在他脖子上套一根绳索，一旦这个提议被否决，此人会立即被勒死。因此，在卡伦达斯当权的时候，提议要对法典进行修改的事情只出现过3次，也就不足为奇了。值得一提的是，顽固的卡伦达斯完全致力于遵守他的法律。当他无意中佩带着剑出现在公共集会时（这被《梭伦法典》视为非法行为），他拔出剑，刺进了自己的心脏。</p>
+<p>在更文明的一些时期，希腊人较早地采用了一些对罪犯不造成身体伤害的惩罚。其中就有颈手枷（Pillory），它在18世纪晚期依然被普遍使用，可以把犯人的头和手锁进一个安装在木杆上的木框里。这个刑具令人非常难受，倘若迫使犯人戴着它在公共场合示众，遭受过往行人的嘲笑和谴责，无疑会加倍痛苦，但这对他们身体不会造成长期的伤害（至少颈手枷本身不会）。通常会施用颈手枷的罪行是公共场所酗酒。有点奇怪的是，当有人犯并非所有的希腊酷刑目的都是惩罚，使用酷刑榨取信息很可能就起源于古希腊。为此，他们采用了拉肢刑（Rack）和轮刑（Wheel）。在希腊的轮刑中，受害者被绑在一个车轮上，然后一直旋转，直到他们供出所需要的信息。更严酷的轮子“旋转”能够导致死亡，死亡原因可能是被自己的呕吐物窒息、脑溢血或心脏病发作。令人讶异的是，甚至如亚里士多德和德摩斯梯尼（Demosthenes）这样非常“开明”的希腊哲学家，亦完全赞成把酷刑作为一种挖掘信息的手段。亚里士多德写道，他之所以赞成这些方法，是因为它能够提供“一种似乎绝对可信的证据”。很明显他没有认识到一个事实，即在罹受难以忍受之痛苦时，几乎每个人都会招认任何事情。难道亚里士多德就没想到“铜牛” （Brazen Bull）这一构思巧妙的希腊刑具吗？</p>
+<p>铜牛据说由一个叫佩里劳斯（Perillus）的人发明，是为了讨好阿格里真托（Agigentum）的僭主法拉里斯（Phalaris）。这个刑具其实就是一个空心的、真牛大小的青铜公牛，牛身一侧有个活动板门，鼻孔和嘴里有一些孔洞。在行刑时，把死刑犯从牛身的小门塞进牛肚子里，然后在下面生起一堆火。当铜牛被烧成通红的时候，受害者的尖叫声从牛的鼻孔和嘴里传出，声音非常像一只疯牛在嘶吼。虽然法拉里斯似乎对刑具本身还算满意，但对这个逢迎拍马的小人却非常厌恶，不幸的发明者成为第一个受刑者。然而，城邦居民对法拉里斯的厌恶超过了他对佩里劳斯的厌恶。在备受其暴政摧残之后，公元前563年，愤怒的民众把僭主法拉里斯填进了铜牛。</p>
+<p>古希腊没有统一的政治制度。相反，它是一个地理位置分散的多元文化的众多城邦之集合体；其中的一些城邦，如雅典（Athens），比其他城邦（譬如法拉里斯治下的阿格里真托）的文明发达。较偏远和文明程度较低的城邦，似乎更善于发明一些令人难以置信的独特酷刑。据古希腊历史学家琉善（Lucian）记载，有一次，一个年轻女人被缝进刚宰杀且掏出内脏的驴尸体里，只有她的头还留在外边。在地中海地区的烈日暴晒下，驴的尸体开始紧缩和腐烂。伴随这种酷刑的是缺食少水和风吹日晒，驴尸腐烂招引来蠕虫和昆虫，它们啃噬着动物尸体和受害者的肉。记载中没有提到受害者到底苟延残活了多长时间。另一种类似的恐怖酷刑是古希腊喜剧作家阿里斯托芬（Aristophanes）的作品所描述的。犯人被锁在颈手枷里，浑身涂满了能吸引昆虫的牛奶和蜂蜜。如果他能经受住一连20天的饥渴、暴晒和昆虫啃噬而最终活下来，将会被从枷具里放出来。更确切地说，释放他只是为了将其拖到悬崖边，然后抛进深渊。</p>
+<p>古希腊人中较为坚强和利己的是斯巴达人（Spartans）。斯巴达人勇敢、好战，厌恶雅典人的那种安适生活。若一个斯巴达人过于肥胖，会受到公开鞭笞；若他长时间不结婚（从而被疑为喜欢男人而非女人），将会在公开场合用烧红的烙铁打上烙印。僭主纳比斯（Nabis，公元前205年～公元前194年统治斯巴达）发明了一种非常奇特、能给自己带来乐趣的刑具来折磨惹他不高兴的人。纳比斯命人依照他妻子爱琵加（Apega）的形象塑造了一个铁质雕像。它的手臂可以用铰链打开，手臂内侧和胸部安装有很多锋利的长钉。当纳比斯亲自审讯罪犯并对疑犯的供述不满意时，据说他会讥讽道：“倘若我的能力不足以说服你的话，或许我的妻子爱琵加能够说服你。”铁制“爱琵加”一次致命的拥抱就可能终结这次讯问，但是纳比斯却乐在其中。</p>
+<p>与之前的巴比伦人和亚述人一样，古希腊也最终走向了衰落，被一种新文明取代；罗马人成为这一地区的霸主。罗马文明和酷刑理念可以分为两个不同的阶段：罗马共和国时期和罗马帝国时期（即在尤利乌斯·凯撒之前与之后的两个时期）。</p>
+<p>与古希腊人一样，早期的罗马人设法建立一种相对统一的社会。早在公元前6世纪，罗马的第6位国王塞尔维乌斯·图利乌斯（Servius Tullius）就将民事犯罪与其他罪行区分开。在这种新的、更文明的司法路径中，死刑以及相伴而来的可怕痛苦留给了诸如谋杀、叛国、纵火、做伪证和神庙中的童贞女不贞等罪行。在一些案件中，如纵火，刑罚原则依然是“以眼还眼”——纵火者会被烧死。做伪证者被扔下悬崖，不贞的童贞女被活埋。严重的民事犯罪，比如身体伤害或抢劫，一般也只是被处以高额罚金，不过盗窃农民的庄稼有时会被处以绞刑。祭司、14岁以下的孩子和孕妇免受任何形式的酷刑拷打。在罗马共和国时期，法律是相对公正的，与今天的我们相比，罗马的自由民不必担忧受到司法暴力的随意侵害。不过在公元前50年前后，一切都改变了。</p>
+<p>尤利乌斯·凯撒（Julius Caesar）仅掌权了大约6个月，根本没有机会作出改变。然而，他所做的事情却为之后的皇帝们铺平了道路。在凯撒被暗杀后不久，罗马大权落入3个人手中：马克·安东尼（Mark Anthony）、屋大维·凯撒（Octavius Caesar）和马尔库斯·雷比达（Marcus Lepidus）。部分由于当时处于内战时期，部分是天性使然，他们彼此猜疑，钩心斗角。公开抨击政府在罗马历史上第1次被视为非法。当哲学家西塞罗（Cicero）批评马克·安东尼的时候，很快受到逮捕、审讯和处决。对新的罗马帝国而言，这不是一个好的开端，而且事情很快每况愈下。正如所有的独裁政权一样，罗马帝国的皇帝们担忧自己掌控权力的能力，惧怕每一个可能篡夺权力的人。对他们而言，维系自己权力的唯一方法就是营造恐怖的氛围：所有的密谋（无论真实的还是臆想的）都会被揭露出来，而所有的阴谋分子必须受到严厉惩处。如前所述，正是在这种恐惧和猜疑的妄想氛围下，酷刑才大量增加。</p>
+<p>帝国严苛暴政的首要对象就是罗马军队。这不足为怪，因为正是凯撒的军队颠覆了旧共和国，所以绝不能让士兵自以为能够随意更迭政府。在罗马帝国时期，士兵惧怕上级军官更甚于惧敌。</p>
+<p>与普通民众生活中一样，罗马军队最常见的刑罚也是鞭刑。鞭刑并不新颖；像其他许多东西一样，它是罗马人从希腊人那里承继来的，只不过在这一过程中把普通的鞭子升级为种类繁多的酷刑刑具。轻微罪行的刑具是简单而扁平的皮带，这令受刑者痛苦难当，却无性命之虞。第2种由羊皮纸编成的鞭子能把受刑者脊背的皮肉抽得稀烂。还有一种多尾鞭，即“重皮鞭”（plumbatae），鞭尾缀有很小的铅球。还有一种类似九尾鞭，称作“爪”，它的尾部缀有锋利的金属片或铁刺；只需几下，即出现深可见骨的伤口。最后是专为取人性命而设计的一种类似牛皮鞭的鞭子。该刑具非常简单，最多只需要几张牛皮和一点创意而已。</p>
+<p>罗马人是一个富有创造性的民族。他们的工程师是古代世界中的佼佼者。工兵经常使用的很多筑路和攻城的器械同样可以用于酷刑。其中就有普通的滑轮。借助于滑轮，可以把人吊到高处，然后使其猛然坠地。若罪行严重，他会被反复地坠落到一堆锐利的石头上，直到血肉模糊、骨头尽折。另外，滑轮还可用来制成临时的拉肢架，能够把人的四肢拉扯至脱臼。4个小滑轮、4个小绞盘和几段绳子就可以把人的四肢紧紧拉住，嫌犯在几分钟内就会肢身分离。很多刑具并非作为一种死刑执行方式被罗马人使用，而是作为一种从“疑犯”或证人口中榨取信息的手段。在这些多疑的独裁者的统治下，酷刑（和随之而来的恐惧状态）成为在帝国内维持权力的惯用手段。随着被用作处决的刑具变成逼供的工具，新的、更独特的死刑被发明出来。就像他们经常做的一样，罗马人又一次采用并改进了已有的技术。</p>
+<p>古罗马最险恶的刑具之一就是上文提及的轮子。与希腊的刑轮不同，古罗马的刑轮更像一个圆桶而非车轮。最简单的轮刑是直接把受害者捆绑在轮子上面或轮缘，然后连人带轮滚下山，直到他们被碾死。另一种形式是把轮子安在一根轴上，置于一个火坑上方，然后使轮上的罪犯来回地转动，慢慢地被烧死——与串烧没什么区别，只是更为缓慢。更直接有效的是另外一种轮子，其轮缘上安有长钉，可以碾过被捆绑的受害者。轮下的地面也安上一层钉子，当轮子碾过的时候，可怜的受害者血肉模糊、寸骨尽断。</p>
+<p>罗马人所独有的刑罚可能是对弑父者的惩罚。弑父者被装进一个大帆布袋里。人们会往袋子里放入几条毒蛇，之后缝紧，然后把整个袋子扔进附近的河流、湖泊或者地中海。</p>
+<p>罗马人最热衷于使用的死刑是十字架刑（Crucifixion）。早在共和国晚期，十字架刑就成为一种处决犯下死罪的奴隶的方法，不过直到帝国时期，这种极其残忍的刑罚才施用于奴隶之外的人。因为十字架刑是一种缓慢而痛苦的死亡，也是一种大型的公开展示（尤其是一大群受害者被一起钉十字架的时候），所以它成为处决“国家敌人”的惯用手段。十字架刑最后广泛地施加在以下两种人身上：巴勒斯坦地区的犹太人反抗者和在耶稣受难之后的两三个世纪中罗马帝国境内大量的基督徒。</p>
+<p>耶稣被钉十字架的时候，即约公元27或28年，罗马各省大规模的恐怖统治还处于起步阶段；皇帝提比略（Tiberius）正忙着回罗马进行清洗报复。半个世纪以后，当犹太人反抗罗马统治的时候，皇帝韦帕芗（Vespasian）有充足的时间来屠杀他们。当罗马将军提图斯在公元70年围攻耶路撒冷时，他以每天500人的速度用十字架刑处死犹太人。以至于到了最后，十室九空，十字架林立，却抓不到足够的犹太人来受刑。</p>
+<p>提比略于公元14年～37年在位，是一个性格多疑、行为乖张的遁世者，他讨厌其臣民，而民众也极其憎恶他。他从来不是一个勤政爱民的君王，晚年的大部分时间隐居在卡普里岛，留下亲信大臣来折磨罗马市民。为了消磨无聊的时光，提比略经常命人往岛上押送犯人，然后挖空心思，想出五花八门的奇特方法来残害他们。这些受害者大部分是他的政敌（至少是他所认为的敌人），未经任何审讯就被抓到卡普里岛。他们就这样人间蒸发了。这种折磨反对者的令人惊叹的巧妙方式，被后世反复使用——特别是非洲、南美洲的独裁者和德国一位特别邪恶的暴君（希特勒）对此很是青睐。就像任何时代处于独裁统治下的民众一样，少数罗马人抨击酷刑。其中就有哲学家塞涅卡（Seneca，公元前4年～公元65年），他认识到酷刑不仅是不公正的，而且与查明真相背道而驰。幸运的是，塞涅卡从来没有指名道姓地指责皇帝，从而也未被邀至卡普里岛走上一遭：他的言论和观点即使传到了提比略那里，也会被当成耳旁风。作为对罗马人最后的羞辱，提比略挑选他患精神病的侄子来继承皇位——即盖乌斯·凯撒（Caius Caesar），他另一个更为我们所熟知的名字是卡里古拉（Caligula）。</p>
+<p>与其叔父一样，卡里古拉更喜欢私下里（比如在他开晚宴的同一个房间）折磨别人，而不是残忍地蹂躏全体民众。实际上，卡里古拉知道怎么取悦罗马民众，正是他将罗马竞技从真正的竞技比赛变成了血腥的死亡狂欢。幸运的是，卡里古拉在29岁时被谋杀，仅在位4年。他的继任者克劳狄乌斯致力于使罗马恢复正常，但他的努力注定要失败。在他统治了13年后，公元54年被自己的妻子所毒杀。她安排自己在前一个婚姻中所生的儿子——尼禄（Nero）继承了王位。</p>
+<p>尼禄肥胖、愚蠢、骄纵、虚荣，虽然可能不像提比略或卡里古拉那样地凶残，不过也好不到哪里去。公元64年7月中旬，当尼禄在乡村度假时，一场大火席卷了罗马，几乎摧毁了整座城市。与传说的相反，没有任何证据表明尼禄与这场灾难有关联，但是人们喜欢传播流言，特别是关于政府的。当说他可能涉嫌纵火的谣言传到尼禄耳中时，他知道自己必须找一个替罪羊。当时似乎没有可供利用的犹太人，因此他选择了基督徒，开始了历史上有记载的最残忍的大清洗之一。成百上千的基督徒被屈打成招，更多的人以涉嫌共谋的罪名遭到囚禁。</p>
+<p>几个月里，不断有基督徒受害者在竞技场中被杀害。几十种新的﹑残忍的方法出现，用来杀死罗马的“敌人”和取悦嗜血的民众。他们被逼迫穿上动物的皮，受到一大群饿狗的攻击；他们手无寸铁，与训练有素的角斗士进行决斗；他们被绑住拇指吊起来，用火慢烤，被殴打致死或者活活剥皮。一些人被扔进酒醡里轧碎；或套上一身通红炽热的盔甲；被尖桩给刺穿，或者剖开他们的肚子，在他们还活着的时候，让野兽撕吃他们的内脏。据编年史家玛根图斯·拉班努斯·茅努斯（Magentus Rabanus Maurus）记载：</p>
+<p>一些人被用剑砍死；一些被大火烧死；一些受到鞭笞；有人被（三叉戟）刺死；有些人被钉在十字架上；有些被投入海中溺死；还有人被活剥皮；有人被割掉舌头；有人被乱石砸死；还有人被砍掉双手或者肢解。</p>
+<p>有些人甚至被放进大煎锅里煎炸——就像几个世纪前大流士对待希伯来人一样。编年史家伽洛尼若（Gallonia）对这一特别的酷刑作了一番描述，他写道：</p>
+<p>煎锅里面有油、沥青或树脂，然后生上火；当溶液开始沸腾冒泡时，不论男女，那些基督徒被一股脑地扔进锅里……像鱼一样被烧烤和煎炸。</p>
+<p>当这些残忍的游戏在夜晚举行时，基督徒会被捆在木桩上，浇上油并点着火，作为照亮整个游戏场地的人体火炬。甚至对基督徒并不是那么友好的古罗马历史学家塔西佗（Tacitus）都写道：“他们被处决，不是为了公共利益，而是为了满足个人强烈的欲望。”这可能是人类历史上第1次把实施酷刑作为全民运动。</p>
+<p>恐怖统治一直持续到罗马于公元5世纪黯然崩溃，但事实上，这些古代人都不懂得如何有效地使用酷刑，在执行残酷的折磨和血腥的处决时并没有考虑到心理方面的痛苦。古代人未能认识到，对酷刑的等待与实际的折磨同样有效，而且比直接和无控制地使用暴力能够挖掘出更多的情报。把一个人折磨拷打一段时间之后，留他在肮脏的牢房里待几天，让他自己好好思量一下，在他下次被带到地牢时，更有可能会招供，这比在第一轮审讯的时候就把他撕成碎片有效得多。与这些古人相比，他们的后辈是否已懂得更有效地使用酷刑呢？在下一章中我们将考察中世纪所使用的酷刑技术，以及在之后1000多年的时间里，酷刑是如何由简单变得复杂烦琐。<br>
+<br /><br /></p>
+
+<div class="markmap-container" style="height:800rpx">
+  <svg data="{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:1,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;古代与古典时代的酷刑&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;埃及&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;死刑&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;谋杀&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;一般情形&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;绞刑&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;杀子&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;将孩子绑在父母脖子直至腐烂&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[8,9]},&quot;v&quot;:&quot;弑父&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;芦苇鞭打 + 扔进荆棘丛打滚 + 扔进烈火&quot;}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[10,11]},&quot;v&quot;:&quot;非死刑&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;标准惩罚&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[12,13]},&quot;v&quot;:&quot;公开的鞭刑（扒光上身的衣服，露出脊背）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[13,14]},&quot;v&quot;:&quot;女&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[14,15]},&quot;v&quot;:&quot;以跪立姿势接受惩罚&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[15,16]},&quot;v&quot;:&quot;男&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[16,17]},&quot;v&quot;:&quot;四肢伸展脸朝下趴在地上&quot;}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[17,18]},&quot;v&quot;:&quot;通奸&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[18,19]},&quot;v&quot;:&quot;男&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[19,20]},&quot;v&quot;:&quot;1000多下的鞭刑&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[20,21]},&quot;v&quot;:&quot;女&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[21,22]},&quot;v&quot;:&quot;割鼻&quot;}]}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[22,23]},&quot;v&quot;:&quot;战俘&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[23,24]},&quot;v&quot;:&quot;失去眼睛或舌头后被当奴隶卖掉&quot;}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[24,25]},&quot;v&quot;:&quot;以修那城邦（中东文明，于公元前2000年 ~ 公元前1720年之间走向繁荣，位于今伊拉克巴格达北部仅30英里（50千米）处）&quot;},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[25,26]},&quot;v&quot;:&quot;巴比伦国王汉谟拉比统治末期（公元前1792年 ~ 公元前1759年）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[26,27]},&quot;v&quot;:&quot;汉谟拉比法典&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[27,28]},&quot;v&quot;:&quot;特点&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[28,29]},&quot;v&quot;:&quot;“以眼还眼”的同态复仇&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[29,30]},&quot;v&quot;:&quot;医生手术过程使病人不治而亡或留下残疾，医生要被砍掉双手&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[30,31]},&quot;v&quot;:&quot;赋予女性特定的权利&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[31,32]},&quot;v&quot;:&quot;无过错离婚&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[32,33]},&quot;v&quot;:&quot;免遭强奸的保护&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[33,34]},&quot;v&quot;:&quot;性犯罪者&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[34,35]},&quot;v&quot;:&quot;宫刑&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[35,36]},&quot;v&quot;:&quot;通奸&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[36,37]},&quot;v&quot;:&quot;必须提供有力证据&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[37,38]},&quot;v&quot;:&quot;泳刑审判&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[38,39]},&quot;v&quot;:&quot;扔进幼发拉底河&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:13,&quot;p&quot;:{&quot;lines&quot;:[39,40]},&quot;v&quot;:&quot;淹死&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:15,&quot;p&quot;:{&quot;lines&quot;:[40,41]},&quot;v&quot;:&quot;有罪&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:13,&quot;p&quot;:{&quot;lines&quot;:[41,42]},&quot;v&quot;:&quot;安全到达对岸&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:15,&quot;p&quot;:{&quot;lines&quot;:[42,43]},&quot;v&quot;:&quot;无罪&quot;}]}]}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[43,44]},&quot;v&quot;:&quot;奴隶保护&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[44,45]},&quot;v&quot;:&quot;免遭主人的无端虐待&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[45,46]},&quot;v&quot;:&quot;缺乏充足证据不会被定罪&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[46,47]},&quot;v&quot;:&quot;作伪证者舌头会被割掉&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[47,48]},&quot;v&quot;:&quot;受害者确实有罪，作伪证的控告者将受到与受害者同样的处罚&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[48,49]},&quot;v&quot;:&quot;具有上述权利&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[49,50]},&quot;v&quot;:&quot;可由当地法庭上诉至高级法庭，乃至御前&quot;}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[50,51]},&quot;v&quot;:&quot;死刑&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[51,52]},&quot;v&quot;:&quot;偷盗&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[52,53]},&quot;v&quot;:&quot;故意接收赃物&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[53,54]},&quot;v&quot;:&quot;纵火&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[54,55]},&quot;v&quot;:&quot;纵火或火灾后抢劫会被扔进火中&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[55,56]},&quot;v&quot;:&quot;绑架&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[56,57]},&quot;v&quot;:&quot;包庇逃跑的奴隶&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[57,58]},&quot;v&quot;:&quot;谋杀&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[58,59]},&quot;v&quot;:&quot;通奸（男女通用）&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[59,60]},&quot;v&quot;:&quot;拥有一家声名狼藉的酒馆&quot;}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[60,61]},&quot;v&quot;:&quot;古希伯来人&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[61,62]},&quot;v&quot;:&quot;摩西法典（公元前1200年前后编成）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[62,63]},&quot;v&quot;:&quot;鞭刑（不超过40下）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[63,64]},&quot;v&quot;:&quot;常见民事惩罚&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[64,65]},&quot;v&quot;:&quot;死刑罪&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[65,66]},&quot;v&quot;:&quot;独有的适用情形&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[66,67]},&quot;v&quot;:&quot;吃带血的肉&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[67,68]},&quot;v&quot;:&quot;亵渎神明&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[68,69]},&quot;v&quot;:&quot;把孩子献祭给异教的神&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[69,70]},&quot;v&quot;:&quot;未婚先孕&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[70,71]},&quot;v&quot;:&quot;儿子拒不服从父亲的命令&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[71,72]},&quot;v&quot;:&quot;处决方式&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[72,73]},&quot;v&quot;:&quot;焚烧&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[73,74]},&quot;v&quot;:&quot;妓女&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[74,75]},&quot;v&quot;:&quot;祭司女儿通奸&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[75,76]},&quot;v&quot;:&quot;投下悬崖&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[76,77]},&quot;v&quot;:&quot;十字架刑&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[77,78]},&quot;v&quot;:&quot;石刑&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[78,79]},&quot;v&quot;:&quot;活埋&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[79,80]},&quot;v&quot;:&quot;扔进装满灰烬的塔状物里使其在慢慢陷入灰烬的过程中窒息而亡&quot;}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[80,81]},&quot;v&quot;:&quot;对待被征服者&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[81,82]},&quot;v&quot;:&quot;攻占拉巴城（大卫国王（King David，公元前1005年～公元前965年在位））&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[82,83]},&quot;v&quot;:&quot;将人锯成两半&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[83,84]},&quot;v&quot;:&quot;埋在土里只露出脖子，然后犁过去&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[84,85]},&quot;v&quot;:&quot;入侵摧毁犹太王国（尼布甲尼撒二世（Nebuchadnezzar II）于公元前589年）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[85,86]},&quot;v&quot;:&quot;扔进火炉&quot;}]}]}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[86,87]},&quot;v&quot;:&quot;亚述人&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[87,88]},&quot;v&quot;:&quot;对待战俘&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[88,89]},&quot;v&quot;:&quot;亚述巴尼拔（Ashurbanipal，公元前669年～公元前627年在位）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[89,90]},&quot;v&quot;:&quot;活活剥皮&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[90,91]},&quot;v&quot;:&quot;头上打上烙印&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[91,92]},&quot;v&quot;:&quot;烧死孩童&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[92,93]},&quot;v&quot;:&quot;幸存成年人挖眼、活剥、钉在尖桩上，砍掉手脚、耳朵、鼻子&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[93,94]},&quot;v&quot;:&quot;安提阿古·伊皮法尼（Antiochus Epiphanies）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[94,95]},&quot;v&quot;:&quot;把每个守安息日的人活活烧死&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[95,96]},&quot;v&quot;:&quot;禁食猪肉的男孩被绑在轮子上，关节脱臼，骨头碎裂，皮肉被炽热的铁钳撕裂，轮子下有一张炭火床&quot;}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[96,97]},&quot;v&quot;:&quot;古希腊&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;bullet_list&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[97,102]},&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[97,98]},&quot;v&quot;:&quot;公元前1179年&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[98,99]},&quot;v&quot;:&quot;法律禁止谋杀&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[99,100]},&quot;v&quot;:&quot;死刑只能由国家的法庭判决&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[100,101]},&quot;v&quot;:&quot;公元前700年前后数十年间（僭主德拉古（Tyrant Draco））&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[101,102]},&quot;v&quot;:&quot;任何犯罪都只处以死刑&quot;}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[102,103]},&quot;v&quot;:&quot;雅典&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[103,104]},&quot;v&quot;:&quot;公元前350年（立法者卡伦达斯（Charondas）提议把被称为《梭伦法典》（Thurian Code）的法律刻在石板上）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[104,105]},&quot;v&quot;:&quot;任何提议修改法典的人脖子上套一根绳索，一旦提议被否决立即被勒死&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[105,107]},&quot;v&quot;:&quot;颈手枷（Pillory）&lt;br&gt;\n-通常施用的罪行是公共场所酗酒&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[107,108]},&quot;v&quot;:&quot;拉肢体刑（Rack）&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[108,109]},&quot;v&quot;:&quot;轮行（Wheel）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[109,110]},&quot;v&quot;:&quot;受害者被绑在一个车轮上一直旋转，导致被自己的呕吐物窒息、脑溢血或心脏病发作&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[110,111]},&quot;v&quot;:&quot;铜牛（Brazen Bull，由佩里劳斯（Perillus）发明，为了讨好阿格里真托（Agigentum）的僭主法拉里斯（Phalaris））&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[111,112]},&quot;v&quot;:&quot;空心的、真牛大小的青铜公牛，牛神一侧有活动板门，鼻孔和嘴里有一些孔洞，死刑犯被塞进牛肚子里，下面生起火，当铜牛通红时，受害者的叫声从牛的鼻孔和嘴里传出，声音像一只疯牛在嘶吼&quot;}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[112,113]},&quot;v&quot;:&quot;其他较偏远城邦&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[113,114]},&quot;v&quot;:&quot;年轻女人被缝进刚宰杀且掏出内脏的驴尸体里，只有头留在外边，在地中海地区烈日暴晒下驴尸体收缩和腐烂，引来蠕虫和昆虫啃噬动物尸体和受害者的肉&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[114,115]},&quot;v&quot;:&quot;犯人被锁在颈手枷里，浑身涂满牛奶和蜂蜜，经历20天的饥渴、暴晒和昆虫啃噬，最后被抛进深渊&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[115,116]},&quot;v&quot;:&quot;斯巴达&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[116,117]},&quot;v&quot;:&quot;过于肥胖&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[117,118]},&quot;v&quot;:&quot;收到公开鞭笞&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[118,119]},&quot;v&quot;:&quot;长时间不结婚&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[119,120]},&quot;v&quot;:&quot;公开场合用烧红的烙铁打上烙印&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[120,121]},&quot;v&quot;:&quot;爱琵加铁制雕像（僭主纳比斯（Nabis，公元前205年～公元前194年统治斯巴达）依照他妻子爱琵加（Apega）制造）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[121,122]},&quot;v&quot;:&quot;其手臂可以用铰链打开，手臂内侧和胸部安装有很多锋利的长钉，犯人被置于其中&quot;}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[122,123]},&quot;v&quot;:&quot;罗马&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[123,124]},&quot;v&quot;:&quot;罗马共和国时期（尤里乌斯•凯撒之前）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[124,125]},&quot;v&quot;:&quot;公元前6世纪（罗马第6位国王塞尔维乌斯•图利乌斯（Servius Tullius））&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[125,126]},&quot;v&quot;:&quot;将民事犯罪和其他罪行区分开&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[126,127]},&quot;v&quot;:&quot;死刑&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[127,128]},&quot;v&quot;:&quot;谋杀&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[128,129]},&quot;v&quot;:&quot;叛国&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[129,130]},&quot;v&quot;:&quot;纵火&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:13,&quot;p&quot;:{&quot;lines&quot;:[130,131]},&quot;v&quot;:&quot;烧死&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[131,132]},&quot;v&quot;:&quot;作伪证&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:13,&quot;p&quot;:{&quot;lines&quot;:[132,133]},&quot;v&quot;:&quot;扔下悬崖&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[133,134]},&quot;v&quot;:&quot;神庙中的童贞女不贞&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:13,&quot;p&quot;:{&quot;lines&quot;:[134,135]},&quot;v&quot;:&quot;活埋&quot;}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[135,136]},&quot;v&quot;:&quot;高额罚金&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[136,137]},&quot;v&quot;:&quot;身体伤害&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[137,138]},&quot;v&quot;:&quot;抢劫&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[138,139]},&quot;v&quot;:&quot;盗窃农民的庄稼（有时也被处以绞刑）&quot;}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[139,140]},&quot;v&quot;:&quot;祭司、14岁以下的孩子和孕妇免受任何形式的酷刑拷打&quot;}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[140,141]},&quot;v&quot;:&quot;罗马帝国时期（尤里乌斯•凯撒之后）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[141,142]},&quot;v&quot;:&quot;公元前50年前后（马克·安东尼（Mark Anthony）、屋大维·凯撒（Octavius Caesar）和马尔库斯·雷比达（Marcus Lepidus））&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[142,143]},&quot;v&quot;:&quot;公开抨击政府在罗马历史上第1次被视为非法&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[143,144]},&quot;v&quot;:&quot;鞭刑&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[144,145]},&quot;v&quot;:&quot;简单而扁平的皮带&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[145,146]},&quot;v&quot;:&quot;羊皮纸编成的鞭子&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[146,147]},&quot;v&quot;:&quot;鞭尾缀有小铅球的多尾鞭（即“重皮鞭”（plumbatae））&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[147,148]},&quot;v&quot;:&quot;尾部缀有锋利金属片或铁刺的“爪”&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[148,149]},&quot;v&quot;:&quot;借助滑轮&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[149,150]},&quot;v&quot;:&quot;将人吊高后摔到石头上直至血肉模糊骨头尽折&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[150,151]},&quot;v&quot;:&quot;拉肢架——脱臼或肢体分离&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[151,152]},&quot;v&quot;:&quot;轮刑（像圆桶而非车轮）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[152,153]},&quot;v&quot;:&quot;绑在轮子上滚下山&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[153,154]},&quot;v&quot;:&quot;置于火坑上烧死&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[154,155]},&quot;v&quot;:&quot;桶上和地上安置钉子&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[155,156]},&quot;v&quot;:&quot;对弑父者的独有刑罚&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[156,157]},&quot;v&quot;:&quot;和毒蛇一同装进帆布袋后扔入河流湖泊中&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[157,158]},&quot;v&quot;:&quot;十字架刑&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[158,159]},&quot;v&quot;:&quot;竞技场厮杀&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[159,160]},&quot;v&quot;:&quot;大煎锅煎炸&quot;}]}]}]}]}"></svg>
+</div>
+
+<h3 id="第2章-中世纪的酷刑">第2章 中世纪的酷刑</h3>
+<h3 id="第3章-理性时代的酷刑">第3章 理性时代的酷刑</h3>
+<h3 id="第4章-18和19世纪的改革">第4章 18和19世纪的改革</h3>
+
+<div class="markmap-container" style="height:800rpx">
+  <svg data="{&quot;t&quot;:&quot;root&quot;,&quot;d&quot;:0,&quot;v&quot;:&quot;&quot;,&quot;p&quot;:{}}"></svg>
+</div>
+
+<h3 id="第5章-世界各地的酷刑">第5章 世界各地的酷刑</h3>
+<h2 id="第二部分-酷刑大观">第二部分 酷刑大观</h2>
+<h3 id="第1章-烙刑与火刑">第1章 烙刑与火刑</h3>
+<p><strong>原文摘录</strong><br>
+烙刑（Branding）</p>
+<p>从古罗马时代到18世纪，如果犯人身体有烙印，就永远无法融入文明社会。他面部带着耻辱的烙印（通常在脸上或手上），昭示曾经犯下的罪行。故而，当人们出庭时需要举起手臂，展示他是否受过烙刑——这样，就有了宣誓做证时举起右手的惯例。不同国家、不同罪行的烙印是不同的。例如，罗马人会给逃亡奴隶打上不同的烙印。&quot;F&quot;印记，表示“逃亡者”。在18世纪的英国，公开抨击政府的人会被烙上字母“SL”，意思是“煽动叛乱者”。恶棍的手部被烙上“R”，小偷的烙印是“T”，说谎者是“F”，流浪者（即现在所谓的无家可归之人）是“V”。做伪证者的额头上将被烙上“P”，渎神者是“B”。逃兵的腋窝上会被烙上“D”，违法乱纪的士兵则在相同部位烙上“BC”。当然，还有许多其他的烙印。因为语言不同，人们会用不同的字母来标记相同的犯罪。在法国，受苦役人员的皮肤上被烙上“TF”（意指苦役），而被判终生苦役的人的烙印是“TPF”（终身苦役），小偷是“V”（盗贼）。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+铜牛（Brazen Bull）</p>
+<p>在僭主法拉里斯统治时期的古代西西里的城邦国家阿克拉格斯（现称为阿格里真托），出现了铜牛这种刑具。它用青铜铸造，和真牛体积相当，中空，牛身一侧有一扇活动板门，可以由此把一个活人塞进去。然后关上活动板门，在铜牛底下生起大火，把牛身烧到通红。受刑者的尖叫和号哭从铜牛的嘴巴和鼻子里传出来，好似一只愤怒的公牛在吼叫。<br>
+</br></br></p>
+<h2 id="第三部分-酷刑大观">第三部分 酷刑大观</h2>
+<h3 id="第1章-烙刑与火刑-2">第1章 烙刑与火刑</h3>
+<h3 id="第2章-碎身刑与挤压刑">第2章 碎身刑与挤压刑</h3>
+<h3 id="第3章-砍刺刑">第3章 砍刺刑</h3>
+<h3 id="第4章-桎梏刑">第4章 桎梏刑</h3>
+<h3 id="第5章-示众与耻辱刑">第5章 示众与耻辱刑</h3>
+<h3 id="第6章-拉肢刑与吊刑">第6章 拉肢刑与吊刑</h3>
+<h4 id="吊笼（Gibbet）">吊笼（Gibbet）</h4>
+<p><strong>原文摘录</strong><br>
+对那些不幸活着进吊笼的人来说，他们是奇形怪状的点缀<br>
+</br></br></p>
+<h4 id="铰刑（Hanging）">铰刑（Hanging）</h4>
+<h4 id="拉肢刑（Rack）">拉肢刑（Rack）</h4>
+<p><strong>原文摘录</strong><br>
+拉肢架使用非常普遍，无须过多介绍。它像一张平放的木床，可以把罪犯置于其上。受刑人的脚绑在架子的一端，手绑在另一端的圆盘上，圆盘由绳子绕在一个大绞盘上。随着绞盘转动，绳索勒紧，受害人的四肢被拉地越来越紧，直到肩关节脱位和（或）脊柱脱节。假如施刑精心，时间控制在每次10或15分钟，一天不超过两次，这个惩罚几乎能够一直持续下去。<br>
+</br></br></p>
+<h4 id="四马分尸（Torn-Apart-by-Horses）">四马分尸（Torn Apart by Horses）</h4>
+<h3 id="第7章-水刑">第7章 水刑</h3>
+<h4 id="烹煮（Boiling）">烹煮（Boiling）</h4>
+<h4 id="泳刑（Swimming）">泳刑（Swimming）</h4>
+<h4 id="注水刑（Tormento-De-Toca）">注水刑（Tormento De Toca）</h4>
+<h4 id="沸水神判（Trial-by-Water）">沸水神判（Trial by Water）</h4>
+<h3 id="第8章-鞭刑">第8章 鞭刑</h3>
+<h2 id="第四部分-结论：所有这一切意味着什么？">第四部分 结论：所有这一切意味着什么？</h2>
+<p><strong>原文摘录</strong><br>
+对任何一个国家或群体来说，与独裁者残忍的奇思怪想相比，实施酷刑需要一系列更为复杂的条件：警察和军队即便不通力配合，至少也要默许；整个司法制度必须把酷刑列入可用和可接受的范围，至于酷刑的严厉程度则取决于这一政权在极权主义的道路上走了多远。当局有时采取公开支持的方式，有时则是表面上否认所发生的事情而暗地里支持。后一种情况存在于中世纪和文艺复兴时期的英国和苏联时期，以及现在美国和其他很多国家。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+为何酷刑继续存在，并仍然被所谓的文明国家使用，答案在本书第一部分就有阐述：虚弱的、无安全感的和偏执的领导人只有确认、隔离和摧毁一个或更多“敌人的阴谋”，才会感到更安全。一旦这个敌人得以确定（对西班牙宗教裁判所来说，它就是异端；对马萨诸塞殖民地塞勒姆镇的清教徒来说，它是女巫；对约瑟夫·麦卡锡而言，它是共产主义者；对罗纳德·里根来说，它是“邪恶帝国”；对乔治·布什而言，它就是“邪恶轴心”），它的成员会受到囚禁，被逼着招认其罪行和同谋者的名字。逼供的公开性越大，所施压力越大，宣传价值就越大。这就是为什么中东的恐怖分子强迫受害者在摄像机前认罪的原因。</p>
+<p>不能否认，这个世界正面临着恐怖分子、政治狂热分子、原教旨主义者和任何其他危险分子的威胁。但是事实并不是如政府所宣扬的那样简单——倘若真的存在阴谋，也许并不是如我们被告知的那样普遍存在和有组织性。但是政府和军队的领袖需要找出一些简单利落的方法来应对这些并不难确定的问题。他们想让公众相信存在一些妄图摧毁文明社会的阴谋，必须侦破阴谋，揪出它的成员，然后消灭他们。正是由于有了这些巧妙缜密的假定，才有了古罗马迫害基督徒，宗教裁判所火烧异端，希特勒把犹太人赶入毒气室等事件。美国、英国和他们的盟友采用相同的理由作为“反恐战争”的依据。当然，为了追捕这些坏人（耗资甚重），政府和军队必须要使他们的人民（支持他们执政的选民）相信，一种非常真实的、可确定的危险是存在的，而且只有“老大哥”（Big Brother）才懂得如何化险为夷。这种说服需要做很多的宣传工作。</p>
+<p>让国民信服的第一步，就是让深陷于阴谋中的人被“某人”辨认出。异端者必须被确定，并受到公开羞辱，或者对其施以酷刑直至他们招认自己的罪行。有时候，当局在这一过程中会得到很多帮助。在把注意力转向伊斯兰教极端分子之后，特别是1990年侯赛因·萨达姆（Saddam Hussein）侵略科威特之后，美国政府所需要的最大宣传点出现在2001年9月11日，当时，一伙疯狂的恐怖分子劫持了几架客机，并撞毁了纽约世贸中心和五角大楼。来自恐怖分子的威胁或许是真实的，但这改变不了一个事实，即政府一定会找出隐藏于暗处的敌人，至于敌人是谁，他真正能带来什么样的危险，就无关紧要了。伊拉克参与“9·11”事件似乎相当不可能，但是这对美国宣传机器来说根本没有影响。在伊斯兰教极端分子之前，美国的敌人是苏联，在苏联之前是纳粹，再之前就是美国内战时期的南方邦联。在这种情况下，大阴谋的成员受到逮捕，在民众面前被公开示众，就像以前西班牙宗教审判大会上的忏悔者一样。随着从一个无形的阴谋到一个受嘲笑的有形目标的变化，恐惧的对象也随之从抽象变为一种令人憎恶的真实目标，使酷刑作为政府的官方政策被接受。</p>
+<p>不可避免的是，为了把恐惧和猜疑变成一项制度化的酷刑政策，对敌人的挑选非常精心，辨别的方法是他们的行为举止是否明显不同于其他人。在中世纪的法国、西班牙和德意志，它是犹太人和异端；在希特勒时代的德国，它是犹太人、共产主义者、波兰人和俄国人；在斯大林时期的苏联，它是西方帝国主义者和反革命分子。每种情况下，在拷打、火刑柱、毒气室和枪决施行之前，首先要确定一个特殊的群体并把它妖魔化。一旦少数异端（或共产主义者、犹太人、恐怖分子）被指责为上帝和人类的共同敌人——就是说，他们不再是正常的人类了——之后再拷打折磨他们，似乎就不那么耸人听闻了；事实上，支持对这些“邪恶生物”进行应有的惩罚成了每个人的责任。<br>
+</br>&lt;/br</p>
+<p><strong>原文摘录</strong><br>
+像所有独裁者一样，麦卡锡强调，他所做的一切都是为了维护国家安全。希特勒所讲的也是同一套说辞，托尔克马达和从古至今很多独裁者莫不如此。这种鼓动宣传的目的就是领导人试图使民众相信，对参与“隐藏的阴谋”的成员进行搜捕和拷打是唯一可行的、爱国主义的行动。正如在中世纪，倘若有人继续否认女巫存在，那么自己就面临着被指控为女巫的危险。</p>
+<p>通常在政治或经济困难时期，大多数民众更容易相信存在一个“迫在眉睫的危机”。当社会环境恶化时，民众就开始寻找可以为这些问题承担责任的人，政府就会把一些人当做现成的替罪羊，只要理由简单易明，并且受害者似乎不太像自身群体的一员时，民众就非常乐意接受。在此过程中，宣传鼓动起了很大的作用。在冷战时期，所有俄国人都被西方媒体描述成又矮又胖，穿着松松垮垮、皱巴巴的灰色西装的人。奇怪的是，随着冷战的结束，2亿俄国人立即变得和我们没什么区别了。</p>
+<p>一旦确定了“敌人”，民众就会相信他们不仅是文明延续的直接威胁，而且在某种程度上还缺乏人性。不可避免，难以抑制的仇恨进一步发展为制度化的酷刑。当20世纪80年代后期和90年代初期前南斯拉夫陷入自相残杀的内战时，敌对各方都根据他们的宗教信仰确定“敌人”。基督教和伊斯兰教的准军事组织花费近10年的时间摧毁了这个前共产主义阵营中最稳定、最繁荣的国家。各方都认为对方才是困扰自己的诸多问题的罪魁祸首，疯狂地进行殴打、强奸、谋杀、电击折磨、残害身体的奴役，以及只有上帝才知道的一些疯狂举动。自20世纪60年代起，酷刑制度化的情况出现在越南、卢旺达、津巴布韦、巴基斯坦、智利、乌干达、马来西亚、伊朗、伊拉克、阿根廷、苏丹和布隆迪。特别是在津巴布韦、智利、乌干达，政府对自己的民众施加疯狂的迫害；有时候，则是入侵的外部势力，就像越南，伊拉克在一定程度上也是如此。</p>
+<p>就像每个坏习惯一样，酷刑的使用随着人们对它熟悉程度的加深也不断增多。就像酒精、毒品、烟草和其他很多有害于我们身体的东西一样，一个民族对酷刑越是司空见惯，就变得越能容忍它。没有人突然有一天从车里走出来，就决定要把自己的邻居殴打致死。为什么呢？因为这不是被文明社会的文明人所接受的行为。那么人们是如何变得对酷刑的恐怖麻木不仁，不仅默认它，还积极地从事于对其他人的身体残害和处决？变成这样一个恶魔需要多长时间呢？1930年的德国人和我们其他人肯定没有什么区别，但是到了1939年，那些没有直接参与使数百万人遇难的大屠杀的人，完全地并（常常）无条件地支持那些参与其中的人。他们真的不知道发生了什么事吗？即便他们对成群结队消失的犹太人视而不见，也不可能无视在波兰、捷克斯洛伐克、匈牙利、比利时、丹麦、挪威和荷兰的屠杀事件。那么这种事是如何发生的？这些文明人怎么就相信了他们的邻居是对良善正义的威胁，他们自身是怎样堕落到残暴动物的状态了呢？<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+我们可以总结出两点。第一，不管人们多么善良或者是否接受良好的教育，当他们被要求这样做的时候，都有可能做出可怕的事情。第二，如果他们认为自己能够逃脱惩罚，即他们相信自己没有受到监视的时候，他们会反复地大肆施加异常残忍的行为。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+在耶鲁大学和斯坦福大学这两个实验中，随着实验的结束或取消，虐待也停止了。参与的学生们只是稍微地暴露了他们人性中的阴暗面。在战争的情况下——无论是已宣战、正在进行中的战争，还是如冷战、反恐战争等更微妙的、不宣而战的战争，或者是非洲和中东地区持续不断的准军事部队之间的内战——个人经历着年复一年不断升级的暴行，一个（可能正常）人第1次把手无寸铁的人殴打至奄奄一息，这肯定是一次令人厌恶的经历；第2次就容易多了；10次、20次或者100次之后就波澜不惊、司空见惯了。这样一来，残忍就有些像酒精或者毒品；缓慢而持续地陷入这种经历中会让我们逐渐习惯，并且随着我们忍耐力的增强，政府当局慢慢地加强了对目标群体的妖魔化，进而对待他们的残忍行为也随之升级。<br>
+</br></br></p>
+<h2 id="信息积累">信息积累</h2>
+<p>嬗变（shan 4）：演变</p>
+<p>巫觋（xi 1）：古代女巫为巫，男巫为觋，合称巫觋。后泛指以装神弄鬼替人祈祷为职业的巫师</p>
+<p>瘐（yu 3）：囚犯在狱中因饥饿致病</p>
+<p>抵牾（di 3 wu 3）：矛盾</p>
+<p>拶（za 1 zan 3）：逼，挤压，又如拶榨；压紧，专指旧时的一种酷刑，如拶指</p>
+<p>鞭笞（chi 1）：鞭打、杖击；比喻谴责、批判</p>
+<p>罹（li 2）：遭遇；遭受</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/07/24/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BA%BA%E7%B1%BB%E9%85%B7%E5%88%91%E7%AE%80%E5%8F%B2/">
+            https://illusionzone.github.io/2024/07/24/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BA%BA%E7%B1%BB%E9%85%B7%E5%88%91%E7%AE%80%E5%8F%B2/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/08/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E9%98%B4%E9%9B%A8%E4%B8%8B%E7%9A%84%E7%A5%9E%E6%80%9D/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【妄想记】阴雨下的神思 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/07/11/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%B0%96%E5%8F%AB%E7%9A%84%E6%95%B0%E5%AD%A6/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】尖叫的数学：令人惊叹的数学之美 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF"><span class="toc-text">版权信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80"><span class="toc-text">序言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E8%80%85%E5%BA%8F"><span class="toc-text">作者序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%EF%BC%9A%E5%8A%A8%E6%9C%BA%E3%80%81%E6%96%B9%E5%BC%8F%E5%92%8C%E7%96%AF%E7%8B%82"><span class="toc-text">第一部分 酷刑：动机、方式和疯狂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%E7%9A%84%E5%8E%86%E5%8F%B2"><span class="toc-text">第二部分 酷刑的历史</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E5%8F%A4%E4%BB%A3%E4%B8%8E%E5%8F%A4%E5%85%B8%E6%97%B6%E4%BB%A3%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第1章 古代与古典时代的酷刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E4%B8%AD%E4%B8%96%E7%BA%AA%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第2章 中世纪的酷刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E7%90%86%E6%80%A7%E6%97%B6%E4%BB%A3%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第3章 理性时代的酷刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-18%E5%92%8C19%E4%B8%96%E7%BA%AA%E7%9A%84%E6%94%B9%E9%9D%A9"><span class="toc-text">第4章 18和19世纪的改革</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0-%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第5章 世界各地的酷刑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%E5%A4%A7%E8%A7%82"><span class="toc-text">第二部分 酷刑大观</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E7%83%99%E5%88%91%E4%B8%8E%E7%81%AB%E5%88%91"><span class="toc-text">第1章 烙刑与火刑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%E5%A4%A7%E8%A7%82"><span class="toc-text">第三部分 酷刑大观</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E7%83%99%E5%88%91%E4%B8%8E%E7%81%AB%E5%88%91-2"><span class="toc-text">第1章 烙刑与火刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E7%A2%8E%E8%BA%AB%E5%88%91%E4%B8%8E%E6%8C%A4%E5%8E%8B%E5%88%91"><span class="toc-text">第2章 碎身刑与挤压刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E7%A0%8D%E5%88%BA%E5%88%91"><span class="toc-text">第3章 砍刺刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-%E6%A1%8E%E6%A2%8F%E5%88%91"><span class="toc-text">第4章 桎梏刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0-%E7%A4%BA%E4%BC%97%E4%B8%8E%E8%80%BB%E8%BE%B1%E5%88%91"><span class="toc-text">第5章 示众与耻辱刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC6%E7%AB%A0-%E6%8B%89%E8%82%A2%E5%88%91%E4%B8%8E%E5%90%8A%E5%88%91"><span class="toc-text">第6章 拉肢刑与吊刑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8A%E7%AC%BC%EF%BC%88Gibbet%EF%BC%89"><span class="toc-text">吊笼（Gibbet）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%93%B0%E5%88%91%EF%BC%88Hanging%EF%BC%89"><span class="toc-text">铰刑（Hanging）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%89%E8%82%A2%E5%88%91%EF%BC%88Rack%EF%BC%89"><span class="toc-text">拉肢刑（Rack）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E9%A9%AC%E5%88%86%E5%B0%B8%EF%BC%88Torn-Apart-by-Horses%EF%BC%89"><span class="toc-text">四马分尸（Torn Apart by Horses）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC7%E7%AB%A0-%E6%B0%B4%E5%88%91"><span class="toc-text">第7章 水刑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%83%B9%E7%85%AE%EF%BC%88Boiling%EF%BC%89"><span class="toc-text">烹煮（Boiling）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%B3%E5%88%91%EF%BC%88Swimming%EF%BC%89"><span class="toc-text">泳刑（Swimming）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%B0%B4%E5%88%91%EF%BC%88Tormento-De-Toca%EF%BC%89"><span class="toc-text">注水刑（Tormento De Toca）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B2%B8%E6%B0%B4%E7%A5%9E%E5%88%A4%EF%BC%88Trial-by-Water%EF%BC%89"><span class="toc-text">沸水神判（Trial by Water）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC8%E7%AB%A0-%E9%9E%AD%E5%88%91"><span class="toc-text">第8章 鞭刑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86-%E7%BB%93%E8%AE%BA%EF%BC%9A%E6%89%80%E6%9C%89%E8%BF%99%E4%B8%80%E5%88%87%E6%84%8F%E5%91%B3%E7%9D%80%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">第四部分 结论：所有这一切意味着什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF"><span class="toc-text">版权信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80"><span class="toc-text">序言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E8%80%85%E5%BA%8F"><span class="toc-text">作者序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%EF%BC%9A%E5%8A%A8%E6%9C%BA%E3%80%81%E6%96%B9%E5%BC%8F%E5%92%8C%E7%96%AF%E7%8B%82"><span class="toc-text">第一部分 酷刑：动机、方式和疯狂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%E7%9A%84%E5%8E%86%E5%8F%B2"><span class="toc-text">第二部分 酷刑的历史</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E5%8F%A4%E4%BB%A3%E4%B8%8E%E5%8F%A4%E5%85%B8%E6%97%B6%E4%BB%A3%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第1章 古代与古典时代的酷刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E4%B8%AD%E4%B8%96%E7%BA%AA%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第2章 中世纪的酷刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E7%90%86%E6%80%A7%E6%97%B6%E4%BB%A3%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第3章 理性时代的酷刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-18%E5%92%8C19%E4%B8%96%E7%BA%AA%E7%9A%84%E6%94%B9%E9%9D%A9"><span class="toc-text">第4章 18和19世纪的改革</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0-%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E7%9A%84%E9%85%B7%E5%88%91"><span class="toc-text">第5章 世界各地的酷刑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%E5%A4%A7%E8%A7%82"><span class="toc-text">第二部分 酷刑大观</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E7%83%99%E5%88%91%E4%B8%8E%E7%81%AB%E5%88%91"><span class="toc-text">第1章 烙刑与火刑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86-%E9%85%B7%E5%88%91%E5%A4%A7%E8%A7%82"><span class="toc-text">第三部分 酷刑大观</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0-%E7%83%99%E5%88%91%E4%B8%8E%E7%81%AB%E5%88%91-2"><span class="toc-text">第1章 烙刑与火刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0-%E7%A2%8E%E8%BA%AB%E5%88%91%E4%B8%8E%E6%8C%A4%E5%8E%8B%E5%88%91"><span class="toc-text">第2章 碎身刑与挤压刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0-%E7%A0%8D%E5%88%BA%E5%88%91"><span class="toc-text">第3章 砍刺刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0-%E6%A1%8E%E6%A2%8F%E5%88%91"><span class="toc-text">第4章 桎梏刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0-%E7%A4%BA%E4%BC%97%E4%B8%8E%E8%80%BB%E8%BE%B1%E5%88%91"><span class="toc-text">第5章 示众与耻辱刑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC6%E7%AB%A0-%E6%8B%89%E8%82%A2%E5%88%91%E4%B8%8E%E5%90%8A%E5%88%91"><span class="toc-text">第6章 拉肢刑与吊刑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%90%8A%E7%AC%BC%EF%BC%88Gibbet%EF%BC%89"><span class="toc-text">吊笼（Gibbet）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%93%B0%E5%88%91%EF%BC%88Hanging%EF%BC%89"><span class="toc-text">铰刑（Hanging）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%89%E8%82%A2%E5%88%91%EF%BC%88Rack%EF%BC%89"><span class="toc-text">拉肢刑（Rack）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E9%A9%AC%E5%88%86%E5%B0%B8%EF%BC%88Torn-Apart-by-Horses%EF%BC%89"><span class="toc-text">四马分尸（Torn Apart by Horses）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC7%E7%AB%A0-%E6%B0%B4%E5%88%91"><span class="toc-text">第7章 水刑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%83%B9%E7%85%AE%EF%BC%88Boiling%EF%BC%89"><span class="toc-text">烹煮（Boiling）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%B3%E5%88%91%EF%BC%88Swimming%EF%BC%89"><span class="toc-text">泳刑（Swimming）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%B0%B4%E5%88%91%EF%BC%88Tormento-De-Toca%EF%BC%89"><span class="toc-text">注水刑（Tormento De Toca）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B2%B8%E6%B0%B4%E7%A5%9E%E5%88%A4%EF%BC%88Trial-by-Water%EF%BC%89"><span class="toc-text">沸水神判（Trial by Water）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC8%E7%AB%A0-%E9%9E%AD%E5%88%91"><span class="toc-text">第8章 鞭刑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86-%E7%BB%93%E8%AE%BA%EF%BC%9A%E6%89%80%E6%9C%89%E8%BF%99%E4%B8%80%E5%88%87%E6%84%8F%E5%91%B3%E7%9D%80%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">第四部分 结论：所有这一切意味着什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  <script src="/js/markmap.js"></script></body>
+</html>

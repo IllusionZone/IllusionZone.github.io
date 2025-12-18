@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】道德情操论（选译）</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】道德情操论（选译）">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/02/27/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%81%93%E5%BE%B7%E6%83%85%E6%93%8D%E8%AE%BA%EF%BC%88%E9%80%89%E8%AF%91%EF%BC%89/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="【美】亚当•斯密  著    罗卫东  张正萍  译">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-02-27">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-05-29">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%8A%E9%81%93%E5%BE%B7%E6%83%85%E6%93%8D%E8%AE%BA%E3%80%8B%E5%AF%BC%E8%AF%BB"><span class="toc-text">《道德情操论》导读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%80%8A%E9%81%93%E5%BE%B7%E6%83%85%E6%93%8D%E8%AE%BA%E3%80%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E5%92%8C%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-text">《道德情操论》的基本结构和主要内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%B7-%E8%AE%BA%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%90%88%E5%AE%9C%E6%80%A7"><span class="toc-text">第一卷 论行为的合宜性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87-%E8%AE%BA%E5%90%88%E5%AE%9C%E6%84%9F"><span class="toc-text">第一篇 论合宜感</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E5%90%8C%E6%83%85%E5%85%B1%E6%84%9F"><span class="toc-text">第一章 论同情共感</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E7%9B%B8%E4%BA%92%E5%85%B1%E6%83%85%E7%9A%84%E6%84%89%E6%82%A6"><span class="toc-text">第二章 论相互共情的愉悦</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E9%80%9A%E8%BF%87%E5%88%AB%E4%BA%BA%E7%9A%84%E6%84%9F%E6%83%85%E5%90%8C%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%9F%E6%83%85%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4%EF%BC%8C%E6%9D%A5%E5%88%A4%E6%96%AD%E5%89%8D%E8%80%85%E6%98%AF%E5%90%A6%E5%90%88%E5%AE%9C%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">第三章 论通过别人的感情同我们自己的感情是否一致，来判断前者是否合宜的方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%BB%AD%E5%89%8D%E7%AB%A0"><span class="toc-text">第四章 续前章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%AE%BA%E5%8F%AF%E4%BA%B2%E5%92%8C%E5%8F%AF%E6%95%AC%E7%9A%84%E5%BE%B7%E6%80%A7"><span class="toc-text">第五章 论可亲和可敬的德性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AF%87-%E8%AE%BA%E4%B8%8E%E5%90%88%E5%AE%9C%E6%80%A7%E7%9B%B8%E5%AE%B9%E7%9A%84%E5%90%84%E7%A7%8D%E7%A8%8B%E5%BA%A6%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第二篇 论与合宜性相容的各种程度的激情</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-2"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E6%BA%90%E4%BA%8E%E8%82%89%E4%BD%93%E7%9A%84%E5%90%84%E7%A7%8D%E6%BF%80%E6%83%85"><span class="toc-text">第一章 论源于肉体的各种激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%BA%90%E4%BA%8E%E6%83%B3%E8%B1%A1%E7%9A%84%E6%9F%90%E7%A7%8D%E7%89%B9%E6%AE%8A%E5%81%8F%E5%90%91%E6%88%96%E4%B9%A0%E6%83%AF%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第二章 论源于想象的某种特殊偏向或习惯的激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E4%B8%8D%E5%90%88%E7%BE%A4%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第三章 论不合群的激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%BA%E5%90%88%E7%BE%A4%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第四章 论合群的激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%AE%BA%E8%87%AA%E7%A7%81%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第五章 论自私的激情</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AF%87-%E8%AE%BA%E5%A4%84%E5%A2%83%E7%9A%84%E9%A1%BA%E9%80%86%E5%AF%B9%E4%BA%BA%E4%BB%AC%E5%88%A4%E6%96%AD%E8%A1%8C%E4%B8%BA%E5%90%88%E5%AE%9C%E6%80%A7%E6%89%80%E4%BA%A7%E7%94%9F%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%9B%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E4%B8%80%E7%A7%8D%E6%83%85%E5%86%B5%E4%B8%8B%E6%AF%94%E5%9C%A8%E5%8F%A6%E4%B8%80%E7%A7%8D%E6%83%85%E5%86%B5%E4%B8%8B%E6%9B%B4%E5%AE%B9%E6%98%93%E5%BE%97%E5%88%B0%E4%BA%BA%E4%BB%AC%E7%9A%84%E8%B5%9E%E5%90%8C"><span class="toc-text">第三篇 论处境的顺逆对人们判断行为合宜性所产生的影响；以及为什么在一种情况下比在另一种情况下更容易得到人们的赞同</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%99%BD%E7%84%B6%E6%88%91%E4%BB%AC%E5%AF%B9%E6%82%B2%E4%BC%A4%E7%9A%84%E5%90%8C%E6%83%85%E4%B8%80%E8%88%AC%E6%98%AF%E6%AF%94%E6%88%91%E4%BB%AC%E5%AF%B9%E5%BF%AB%E4%B9%90%E7%9A%84%E5%90%8C%E6%83%85%E6%9B%B4%E4%B8%BA%E9%B2%9C%E6%B4%BB%E7%9A%84%E6%84%9F%E5%8F%97%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%83%E5%BE%80%E5%BE%80%E4%B8%8D%E5%A6%82%E5%BD%93%E4%BA%8B%E4%BA%BA%E8%87%AA%E7%84%B6%E6%84%9F%E5%8F%97%E5%88%B0%E7%9A%84%E9%82%A3%E4%B9%88%E5%BC%BA%E7%83%88"><span class="toc-text">第一章 虽然我们对悲伤的同情一般是比我们对快乐的同情更为鲜活的感受，但是它往往不如当事人自然感受到的那么强烈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%B7-%E8%AE%BA%E5%8A%9F%E4%B8%8E%E8%BF%87%EF%BC%8C%E6%88%96%E8%AE%BA%E5%96%84%E7%BD%9A%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="toc-text">第二卷 论功与过，或论善罚的对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87-%E8%AE%BA%E5%8A%9F%E8%BF%87%E6%84%9F"><span class="toc-text">第一篇 论功过感</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%84%9F%E6%BF%80%E5%92%8C%E6%84%A4%E6%81%A8%E7%9A%84%E6%81%B0%E5%BD%93%E5%AF%B9%E8%B1%A1"><span class="toc-text">第二章 论感激和愤恨的恰当对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%8D%E8%B5%9E%E5%90%8C%E6%96%BD%E6%81%A9%E8%80%85%E7%9A%84%E8%A1%8C%E4%B8%BA%EF%BC%8C%E5%B0%B1%E5%87%A0%E4%B9%8E%E4%B8%8D%E4%BC%9A%E5%AF%B9%E5%8F%97%E7%9B%8A%E8%80%85%E7%9A%84%E6%84%9F%E6%BF%80%E4%BA%A7%E7%94%9F%E5%90%8C%E6%83%85%E5%85%B1%E6%84%9F%EF%BC%9B%E7%9B%B8%E5%8F%8D%EF%BC%8C%E8%B5%9E%E5%90%8C%E6%96%BD%E5%AE%B3%E8%80%85%E7%9A%84%E5%8A%A8%E6%9C%BA%EF%BC%8C%E5%B0%B1%E5%87%A0%E4%B9%8E%E4%B8%8D%E4%BC%9A%E5%AF%B9%E5%8F%97%E9%9A%BE%E8%80%85%E7%9A%84%E6%84%A4%E6%81%A8%E4%BA%A7%E7%94%9F%E4%BB%BB%E4%BD%95%E7%9A%84%E5%90%8C%E6%83%85%E5%85%B1%E6%84%9F"><span class="toc-text">第三章 不赞同施恩者的行为，就几乎不会对受益者的感激产生同情共感；相反，赞同施害者的动机，就几乎不会对受难者的愤恨产生任何的同情共感</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%AF%B9%E5%89%8D%E9%9D%A2%E5%87%A0%E7%AB%A0%E7%9A%84%E8%A6%81%E7%82%B9%E9%87%8D%E8%BF%B0"><span class="toc-text">第四章 对前面几章的要点重述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AF%B9%E5%8A%9F%E8%BF%87%E6%84%9F%E7%9A%84%E5%88%86%E6%9E%90"><span class="toc-text">第五章 对功过感的分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AF%87-%E8%AE%BA%E6%AD%A3%E4%B9%89%E5%92%8C%E4%BB%81%E6%85%88"><span class="toc-text">第二篇 论正义和仁慈</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%B8%A4%E7%A7%8D%E5%BE%B7%E6%80%A7%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-text">第一章 两种德性的比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%AD%A3%E4%B9%89%E6%84%9F%E3%80%81%E6%82%94%E6%81%A8%E4%BB%A5%E5%8F%8A%E5%AF%B9%E5%8A%9F%E5%8A%B3%E7%9A%84%E6%84%8F%E8%AF%86"><span class="toc-text">第二章 论正义感、悔恨以及对功劳的意识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E8%87%AA%E7%84%B6%E8%BF%99%E7%A7%8D%E6%9E%84%E9%80%A0%E7%9A%84%E6%95%88%E7%94%A8"><span class="toc-text">第三章 论自然这种构造的效用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AF%87-%E8%AE%BA%E6%9C%BA%E8%BF%90%E5%9C%A8%E8%A1%8C%E4%B8%BA%E5%8A%9F%E8%BF%87%E6%96%B9%E9%9D%A2%E5%AF%B9%E4%BA%BA%E7%B1%BB%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第三篇 论机运在行为功过方面对人类情感的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E6%9C%BA%E8%BF%90%E4%BA%A7%E7%94%9F%E8%BF%99%E7%A7%8D%E5%BD%B1%E5%93%8D%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-text">第一章 论机运产生这种影响的原因</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%9C%BA%E8%BF%90%E7%9A%84%E8%BF%99%E7%A7%8D%E5%BD%B1%E5%93%8D%E7%9A%84%E7%A8%8B%E5%BA%A6"><span class="toc-text">第二章 论机运的这种影响的程度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E6%83%85%E6%84%9F%E8%BF%99%E7%A7%8D%E4%B8%8D%E8%A7%84%E5%88%99%E6%80%A7%E7%9A%84%E7%BB%88%E6%9E%81%E5%8E%9F%E5%9B%A0"><span class="toc-text">第三章 论情感这种不规则性的终极原因</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%B7-%E8%AE%BA%E8%AF%84%E5%88%A4%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E6%83%85%E6%84%9F%E5%92%8C%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%9F%BA%E7%A1%80%EF%BC%8C%E5%85%BC%E8%AE%BA%E4%B9%89%E5%8A%A1%E6%84%9F"><span class="toc-text">第三卷 论评判我们自己情感和行为的基础，兼论义务感</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E8%87%AA%E6%88%91%E8%B5%9E%E5%90%8C%E5%92%8C%E8%87%AA%E6%88%91%E8%B0%B4%E8%B4%A3%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">第一章 论自我赞同和自我谴责的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E5%AF%B9%E8%B5%9E%E6%89%AC%E5%92%8C%E5%80%BC%E5%BE%97%E8%B5%9E%E6%89%AC%E7%9A%84%E5%96%9C%E7%88%B1%EF%BC%9B%E4%BB%A5%E5%8F%8A%E5%AF%B9%E8%B0%B4%E8%B4%A3%E5%92%8C%E8%AF%A5%E5%8F%97%E8%B0%B4%E8%B4%A3%E7%9A%84%E7%95%8F%E6%83%A7"><span class="toc-text">第二章 论对赞扬和值得赞扬的喜爱；以及对谴责和该受谴责的畏惧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E8%89%AF%E5%BF%83%E7%9A%84%E5%BD%B1%E5%93%8D%E5%92%8C%E6%9D%83%E5%A8%81"><span class="toc-text">第三章 论良心的影响和权威</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%BA%E8%87%AA%E6%88%91%E8%92%99%E9%AA%97%E7%9A%84%E5%A4%A9%E6%80%A7%EF%BC%8C%E5%85%BC%E8%AE%BA%E4%B8%80%E8%88%AC%E5%87%86%E5%88%99%E7%9A%84%E8%B5%B7%E6%BA%90%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="toc-text">第四章 论自我蒙骗的天性，兼论一般准则的起源和作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%AE%BA%E9%81%93%E5%BE%B7%E4%B8%80%E8%88%AC%E5%87%86%E5%88%99%E7%9A%84%E5%BD%B1%E5%93%8D%E5%92%8C%E6%9D%83%E5%A8%81%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%AE%83%E4%BB%AC%E5%BA%94%E5%BD%93%E8%A2%AB%E8%A7%86%E4%B8%BA%E7%A5%9E%E7%9A%84%E6%B3%95%E5%88%99"><span class="toc-text">第五章 论道德一般准则的影响和权威，以及它们应当被视为神的法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E4%B9%89%E5%8A%A1%E6%84%9F%E5%BA%94%E8%AF%A5%E6%88%90%E4%B8%BA%E6%88%91%E4%BB%AC%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%94%AF%E4%B8%80%E5%8E%9F%E5%88%99%EF%BC%9B%E4%BB%A5%E5%8F%8A%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E5%96%9C%E7%88%B1%EF%BC%8C%E5%AE%83%E5%BA%94%E8%AF%A5%E5%90%8C%E5%85%B6%E4%BB%96%E5%8A%A8%E6%9C%BA%E4%B8%80%E8%B5%B7%E5%8F%91%E7%94%9F%E4%BD%9C%E7%94%A8"><span class="toc-text">第六章 在什么情况下，义务感应该成为我们行为的唯一原则；以及在什么情况喜爱，它应该同其他动机一起发生作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%B7-%E8%AE%BA%E6%95%88%E7%94%A8%E5%AF%B9%E8%B5%9E%E5%90%8C%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第四卷 论效用对赞同情感的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E6%95%88%E7%94%A8%E7%9A%84%E8%A1%A8%E7%8E%B0%E8%B5%8B%E4%BA%88%E4%B8%80%E5%88%87%E5%B7%A5%E8%89%BA%E5%93%81%E7%9A%84%E7%BE%8E%EF%BC%8C%E5%85%BC%E8%AE%BA%E8%BF%99%E7%A7%8D%E7%BE%8E%E6%89%80%E5%85%B7%E6%9C%89%E7%9A%84%E5%B9%BF%E6%B3%9B%E5%BD%B1%E5%93%8D"><span class="toc-text">第一章 论效用的表现赋予一切工艺品的美，兼论这种美所具有的广泛影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%95%88%E7%94%A8%E7%9A%84%E8%A1%A8%E7%8E%B0%E8%B5%8B%E4%BA%88%E4%BA%BA%E7%9A%84%E5%93%81%E8%B4%A8%E5%92%8C%E8%A1%8C%E4%B8%BA%E7%9A%84%E7%BE%8E%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%85%B3%E4%BA%8E%E8%BF%99%E7%A7%8D%E7%BE%8E%E7%9A%84%E7%9F%A5%E8%A7%89%E5%8F%AF%E8%83%BD%E5%9C%A8%E4%BD%95%E7%A7%8D%E7%A8%8B%E5%BA%A6%E4%B8%8A%E8%A2%AB%E7%9C%8B%E6%88%90%E8%B5%9E%E5%90%8C%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8E%9F%E5%88%99%E4%B9%8B%E4%B8%80"><span class="toc-text">第二章 论效用的表现赋予人的品质和行为的美，以及关于这种美的知觉可能在何种程度上被看成赞同的初始原则之一</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%B7-%E8%AE%BA%E4%B9%A0%E6%83%AF%E5%92%8C%E6%97%B6%E5%B0%9A%E5%AF%B9%E6%9C%89%E5%85%B3%E9%81%93%E5%BE%B7%E8%B5%9E%E5%90%8C%E5%92%8C%E4%B8%8D%E8%B5%9E%E5%90%8C%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第五卷 论习惯和时尚对有关道德赞同和不赞同情感的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E4%B9%A0%E6%83%AF%E5%92%8C%E6%97%B6%E5%B0%9A%E5%AF%B9%E6%88%91%E4%BB%AC%E7%BE%8E%E4%B8%91%E8%A7%82%E5%BF%B5%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第一章 论习惯和时尚对我们美丑观念的影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E4%B9%A0%E6%83%AF%E5%92%8C%E6%97%B6%E5%B0%9A%E5%AF%B9%E9%81%93%E5%BE%B7%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第二章 论习惯和时尚对道德情感的影响</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%B7-%E8%AE%BA%E5%BE%B7%E6%80%A7%E7%9A%84%E5%93%81%E8%B4%A8"><span class="toc-text">第六卷 论德性的品质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-3"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87-%E8%AE%BA%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%93%81%E8%B4%A8%EF%BC%8C%E5%B0%B1%E8%BF%99%E7%A7%8D%E5%93%81%E8%B4%A8%E5%AF%B9%E8%87%AA%E5%B7%B1%E5%B9%B8%E7%A6%8F%E7%9A%84%E5%BD%B1%E5%93%8D%E8%80%8C%E8%A8%80%E6%88%96%E8%AE%BA%E5%AE%A1%E6%85%8E"><span class="toc-text">第一篇 论个人的品质，就这种品质对自己幸福的影响而言或论审慎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AF%87-%E8%AE%BA%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%93%81%E8%B4%A8%EF%BC%8C%E5%B0%B1%E8%BF%99%E7%A7%8D%E5%93%81%E8%B4%A8%E5%AF%B9%E4%BB%96%E4%BA%BA%E5%B9%B8%E7%A6%8F%E7%9A%84%E5%BD%B1%E5%93%8D%E8%80%8C%E8%A8%80"><span class="toc-text">第二篇 论个人的品质，就这种品质对他人幸福的影响而言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-4"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E4%B8%AA%E4%BD%93%E8%A2%AB%E8%87%AA%E7%84%B6%E6%8E%A8%E8%8D%90%E7%BB%99%E6%88%91%E4%BB%AC%E7%85%A7%E6%96%99%E5%92%8C%E5%85%B3%E5%BF%83%E7%9A%84%E9%A1%BA%E5%BA%8F"><span class="toc-text">第一章 论个体被自然推荐给我们照料和关心的顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E7%BE%A4%E4%BD%93%E8%A2%AB%E8%87%AA%E7%84%B6%E6%8E%A8%E8%8D%90%E7%BB%99%E6%88%91%E4%BB%AC%E4%BB%81%E7%88%B1%E7%9A%84%E9%A1%BA%E5%BA%8F"><span class="toc-text">第二章 论群体被自然推荐给我们仁爱的顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E6%99%AE%E9%81%8D%E5%B9%BF%E6%B3%9B%E7%9A%84%E4%BB%81%E7%88%B1"><span class="toc-text">第三章 论普遍广泛的仁爱</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AF%87-%E8%AE%BA%E8%87%AA%E6%88%91%E6%8E%A7%E5%88%B6"><span class="toc-text">第三篇 论自我控制</span></a></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】道德情操论（选译）
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-02-26T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-02-27</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>17.1k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。<br>[美]亚当•斯密通罗卫东  张正萍  译</p></div>
+<br />
+<img src="/image/book/readandnote/道德情操论选译/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/道德情操论选译/1.png" class="lozad post-image">
+<br />
+<h2 id="《道德情操论》导读">《道德情操论》导读</h2>
+<h3 id="引言">引言</h3>
+<h4 id="《道德情操论》的基本结构和主要内容">《道德情操论》的基本结构和主要内容</h4>
+<p><strong>原文摘录</strong><br>
+《道德情操论》，顾名思义，是阐述人类道德情感的性质、起源、内容、功能及其社会后果的书。斯密想要在本书中回答以下几个问题：</p>
+<p>1.人类为什么会有道德判断？在人与人的交往之中，道德作为一种社会现象，是否有人性的基础，如果有，它是什么？</p>
+<p>2.人类社会成员彼此的道德判断，最初受什么因素的影响？为什么我们对于别人的言行会做出某种特定的反应，活着赞赏，活着反对？我们倾向于对他人的言行进行奖励或惩罚的依据是什么？“正义感”如何产生？</p>
+<p>3.人为什么会有“良心”，良心应该如何解释？自我肯定、内疚、忏悔等的感觉与良心是什么关系？良心如何产生以及怎样主宰人的言行？</p>
+<p>4.一桩事情或一件物品的“美感”“效用”在多大程度上会影响人的道德判断和行为决策，这在多大程度上是应该的？为什么有些人会买椟还珠、本末颠倒？为什么会产生不择手段去达成一个正当目的的行为动机？人类该如何对这样的事情作出评判？</p>
+<p>5.流行的习俗和惯例是如何影响道德判断和决策的，其正当性如何？如何评价人类历史上的习俗与道德？</p>
+<p>6.人类要形成彼此合作的社会秩序，除了“同情”“正义”“良心”“审美”“习俗”这类因素，是否还有其他的因素？一个人要过得幸福，需要什么样的个人品质？一个”好社会“需要社会成员中的个体具备怎样的道德品质？有利于增进自身幸福和他人幸福的道德品质如何才能得到？<br>
+<br /><br /></p>
+<h2 id="第一卷-论行为的合宜性">第一卷 论行为的合宜性</h2>
+<h3 id="第一篇-论合宜感">第一篇 论合宜感</h3>
+<h4 id="第一章-论同情共感">第一章 论同情共感</h4>
+<p><strong>原文摘录</strong><br>
+由于我们对别人的感受没有直接经验，所以除了设想自己处在同样的环境中将会有怎样的感受外，我们对他人的感受不会形成任何观念。当我们的同胞正在经受拷打，只要我们自己不在那种状态之下，我们的各种感官便绝不会告知我们他所遭受的痛苦。它们从来没有，也绝不可能带给我们自身以外的感受，只有借助想象，我们才能意识到我们同胞的感受。这种想象能力也无法以其他任何方式帮助我们做到这一点，它只能向我们展现如果身临其境我们会有怎样的感受。通过想象，我们把自己置身于他的处境之中，想象自己遭受了完全一样的痛苦，仿佛进入了他的身体之内，进而对他的各种感知形成某种观念，即便是程度较轻，但也非完全与其不同的感受。当我们深切感受他的痛苦，认同并使其成为我们自己的痛苦时，这种种痛苦便最终开始影响我们。于是，一想到他的感受，我们就会战栗发抖。</p>
+<p>这就是我们对他人的不幸产生共感的源泉，正是通过与受难者交换位置的想象，我们才得以设想他的感受，或被其感受触动。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+即使我们在知道别人悲伤或喜悦的原因之前能够同情它们，这种同情也总是很不充分的。恸哭一般只不过表达了受害者所遭受的极度痛苦，它更多会引起我们探究其处境的好奇心，附带着某些同情他的倾向，而不是真正的、明显的同情。我们首先会问：你怎么啦？在这个问题找到答案之前，虽然我们会因他遭受不幸的模糊观念而感到不安，自己还会为猜测是什么不幸而备感煎熬，但我们的共感依然不很明显。</p>
+<p>因此，同情共感与其说是源于看到某种激情，不如说是源于了解到激发这种激情的境况。我们有时会感受到别人自己似乎都完全没法感受到的激情；这是因为，当我们置身于他的处境时，通过想象，我们心中会产生那种激情，尽管现实中，他心中并没有产生这种激情。我们替及别人的厚颜无耻和粗鲁无礼而感到羞愧，尽管他本人似乎对自己的行为没什么不合宜感；这是因为，我们会情不自禁地感到如果自己也以哪种荒谬的方式行事的话，我们将是如何地窘迫难当。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+人们看到这样一个人所感到的极度痛苦，不可能是受难者情感的反映。观察者的怜悯之情定然完全源于这种考虑，即如果自己沦落到同样不幸的境地，同时却又能够以他目前的理性和判断去思考这种状况——这或许是不可能的——时自己将会如何感受。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们甚至同情死者，但对他们处境中真正重要的东西却视而不见，即等着他们的哪个可怕的未来；我们主要受那些刺激我们感官的他们境遇的影响，但这对死者的幸福毫无影响。我们想象，对于遭遇如此悲惨不幸之人，无论给予多大的感受都不为过。在他们正处于被所有人遗忘的危险之中的当下，我们对死者似乎有了双倍的共感；并且，我们凭借纪念他们时给予的虚浮的荣耀，努力人为地，鲜活地激起我们对他们不幸命运的忧郁的回忆，我们自己陷入痛苦。我们的同情无法对死者施以慰藉，这一点似乎反而增加了他们的不幸；我们的所作所为对死者于事无补，死者朋友纾解其他一切悲伤的哀悼、关爱和哀伤也都不能带给他们任何安慰，只会加深我们对他们不幸的感伤。然而，死者们的幸福无疑不会受到这些情形的丝毫影响，而这些事情也不会搅乱他们静谧的长眠。想象自己认为死者陷入阴郁和无尽悲哀之中的这种观念，完全源于我们将死者身上发生的变化与我们对这一变化的意识结合在一起；源于我们将自己置于死者的处境，源于将自己活的灵魂附在死者无生命的躯体上——如果允许我这么说的话，进而设想我们在这种情况下将会有怎样的情感。正是出于这个虚幻的想象，我们对自己消亡的预见才会如此可怕。这些有关死后情况的设想，在我们死亡时绝不会给我们带来痛苦，只在我们活着的时候才会使我们痛苦。由此便形成了人性中最重要的诸种原理之一：对死亡的恐惧——这是人类幸福最大的毒药，但也是对人类不义最重要的约束；害怕死亡在折磨和约束个人的同时，也守护和保卫着社会。<br>
+<br /><br /></p>
+<h4 id="第二章-论相互共情的愉悦">第二章 论相互共情的愉悦</h4>
+<p><strong>原文摘录</strong><br>
+比起愉快的情绪我们更渴望向朋友传达自己不愉快的情绪，朋友对后者的同情比对前者的共感更令我们感到满足；而对后者缺乏同情也要比对其他方面缺乏同情使我们受到的打击更大。爱是令人愉悦的激情，恨是令人不悦的激情；因此，我们希望我们的朋友接纳我们与他人的友谊，其渴望远不及希望他们体谅我们对他人的愤恨之情。虽然朋友对我们得到的好处无动于衷，我们也能原谅他们，但如果他们对我们可能遭受的伤害也漠不关心的话，我们就会丧失所有耐性。同样，我们对朋友不理解我们的感激而产生的恼怒之情，也远不及我们对他们不同情我们的愤恨而产生的恼怒之情。他们可以不是我们的朋友的朋友，但不能不是我们敌人的敌人。<br>
+<br /><br /></p>
+<h4 id="第三章-论通过别人的感情同我们自己的感情是否一致，来判断前者是否合宜的方式">第三章 论通过别人的感情同我们自己的感情是否一致，来判断前者是否合宜的方式</h4>
+<p><strong>原文摘录</strong><br>
+内心的情感或者意向是各种行为产生的根源，也是评判整个行为的善恶最终依赖的基础。对于这些情感或者意向，我们可以从两个不同的方面或者放在两种不同的关系中来考量。首先，可以从情感与引发它的原因，或同引起它的动机之间的关系来加以考量；其次，可以从它与它意图达到的后果，或者是与它倾向于产生的效果的关系来考量。</p>
+<p>这种感情相对于激起它的原因或对象来说是否恰当，是否相称，决定了相应的行为是否合宜，是庄重有礼还是粗野鄙俗。</p>
+<p>这种感情意欲产生的或倾向于产生的结果是有益的还是有害的，决定了相应行为的德与恶，也即决定了它是该受报答还是该受惩罚。</p>
+<p>在日常生活中，当我们对一个人的行为以及导向其行为的情感作出判断时，我们总是从上述两个方面考虑；当我们谴责别人过分的爱、悲伤和愤恨时，我们不仅考虑这些情感倾向于产生的毁灭性后果，而且考虑到引发它们的那些微小原因。</p>
+<p>当我们以这一方式对任何感情做出判断，看感情与它的原因是否相称的时候，我们几乎不可能使用任何规则或者准则，除了我们心中相应的情感。一个人的各种官能是用来判断他人身上相同官能的尺度。我用我的视觉来判断你的视觉，用我的听觉来判断你的听觉，用我的理智来判断你的理智，用我的愤恨来判断你的愤恨，用我的爱来判断你的爱。我没有，也不可能有任何其他的方法来判断它们。<br>
+<br /><br /></p>
+<h4 id="第四章-续前章">第四章 续前章</h4>
+<p><strong>原文摘录</strong><br>
+在以下两种不同的场合中，我们可以通过他人的情感与我们自己的情感是否一致来判断它们是否合宜：一是当激起这些情感的对象与我们自己以及我们判断其情感的那个人都没有任何特殊关系时；二是当它们对我们自己或者对我们判断其情感的那个人有着某种特殊的影响时。</p>
+<p>对于那些被认为与我们自己以及我们判断其情感的人没有任何特殊关系的对象，当他的情感无论什么情形下都与我们自己的情感完全一致时，我们就会认为他有品味，有见识。田野的美丽，山峰的雄伟，建筑的装饰，画面的意境，论文的构思，他人的言行，各种量和数的比例协调，以及宇宙这架大机器以它神秘的齿轮和弹簧产生并不断展现出来的种种现象；当我们的同伴在这类显而易见的对象上与我们自己的一致，并且我们或许从未发现某人对这类对象的情感与我们不同时，毫无疑问，虽然我们必然会认同这些情感，但是他似乎还不值得因此而受到赞扬或者钦佩。但是当我们同伴的那些情感不仅与我们自己的一致，而且还引导着我们的情感，当他在形成这些情感中似乎注意到我们所忽略的许多事情，并且针对这些对象的所有不同情形调整他自己的情感时，我们不仅会认同他的情感，而且会对他们那非同寻常并且出乎意料的敏锐性和全面性感到惊奇和讶异。由此，他似乎值得得到高度的钦佩和喝彩。这种由惊奇和讶异所升华的赞许就构成了可以恰当地称为钦佩的情感。</p>
+<p>可能有人会认为，最先赢得我们认可的是那些才能的效用。毫无疑问，当我们注意到这一点时，这种考虑确实会给予那些才能以一种新的价值。然而，我们起初认同他人的判断，并不是因为它有用，而是因为其恰当、正确，符合真理和事实；很显然，我们把那些品质归之于其判断，不是因为其他原因，而是因为我们发现它与我们自己的判断相一致。同样，我们开始时对品味表示认同，并不是因为其有用，而是因为其恰当精确，丝毫不差地与其对象相匹配。有关所有这类才能的效用的观念，显然是一种事后的想法，而不是最初获得我们认可的原因。</p>
+<p>至于那些以某种特殊方式影响我们的对象或者其情感为我们所评判的那个人，要保持这种双方情感上的和谐一致较为困难，但同时也更为重要。对于落在我身上的不幸或伤害，我的同伴自然不会用同我用来看待它们一样的视角来看待它们。它们对我的影响要切身得多。如果你对我遭遇的不幸没有一点共感，或者共感的程度与我所感受的心烦意乱的悲伤不相称；如果你对我所蒙受的伤害毫不义愤，或者义愤的程度与使我发狂的愤恨不相称，我们就不再能够就这些主题进行交谈，我们彼此将不再能相互容忍。我受不了你的相伴，你也受不了我的陪同。你对我的狂热和激情感到讨厌，而我则会对你的冷漠无情大感愤怒。</p>
+<p>在所有这一类情形中，旁观者和当事人如果要在情感上有一定程度的对应，首先，旁观者必须尽可能努力地把自己置于对方的处境之中，设身处地地考虑可能使受害者感到痛苦的每一个细小的情节。看到旁观者内心的情感在各个方面都同自己内心的情感合拍，是他在这种强烈而又令人不快的激情中可以得到的唯一安慰。但是，只有把自己的激情降低到旁观者能够赞同的程度，他才有希望获得这种安慰。如果允许我这么说（将情感比作音调的话），那就是他必须调低那自然的尖锐之音，以求降到与周围人们的种种情感和谐一致。确实，旁观者的感受与受害者的感受在某些方面总会有所不同，因同情而产生的悲伤也从来不会与原初的悲伤完全一致。因为旁观者会隐隐意识到，因同情而产生的情感，其赖以产生的情境变换只是一种想象；这不仅会降低其程度，而且在一定程度上会改变其类型，使它变得非常不同。然而，很明显的是，这两种情感相互之间存在这么一种一致，而这就足以达成社会交往的和谐融洽。虽然它们绝不会同音齐唱，但是它们可以谐音合唱；这对于社会交往的需要或要求而言已经足够了。</p>
+<p>为了产生这种和谐，如同自然教导旁观者去设想当事人所处的境况一般，自然也教导当事人在某种程度上去设想旁观者的各种境况。如同旁观者不断地把自己置于当事人的处境之中，并由此想象当事人所感受到的情感，当事人也不断地把自己置于旁观者的处境之中，并通过察觉到旁观者将会如何看待而形成对于自己际遇的某种程度的冷静思考。如同旁观者不断考虑如果他们真的就是受害者会有什么感觉那样，受害者也会不断地想象如果他只是他所处的环境中的旁观者之一的话，他将会受到怎样的触动。如同旁观者的同情共感使得他们在某种程度上用当事人的眼光去看待其处境，当事人的同情共感也会在一定程度上使得他以旁观者的眼光去看待他自己的处境，特别是在旁观者面前，并在他们的观察下行动时更是如此。并且，由于他因此而设想的反思的激情要比原初的激情大为减弱，这种反思的激情必然会缓和——在他设想自己是旁观者，开始反思他们会如何被影响，开始用公正而无偏见的眼光看待自己之前——他所感受到的激烈程度。</p>
+<p>我们并不期望从一个泛泛之交那里比一个朋友那里得到更多的同情；我们也不能向前者敞开能告知后者的所有那些细节；我们在他面前会装得更为平静，并尽力把我们的注意力放在那些他愿意考虑的，有关我们处境的一般轮廓上。我们更不期望从一伙陌生人那里得到更多的同情，因此我们在他们面前会装得更为镇静，并总是尽力把自己的激情降低到与我们交往的那个特定群体能够期待产生赞同的程度。这种镇静并不仅仅是装出来的。因为如果我们能够完全控制自己，则一个点头之交在场要比一个朋友在场更能使我们平静下来，一伙陌生人在场也要比一个熟人在场更能使我们平静下来。<br>
+<br /><br /></p>
+<h4 id="第五章-论可亲和可敬的德性">第五章 论可亲和可敬的德性</h4>
+<p><strong>原文摘录</strong><br>
+这两种不同的努力，即旁观者努力体会当事人的情感，以及当事人努力把自己的情感降低至旁观者所能赞同的程度，是两类不同的品性得以建立的基础。温和的、和善的、可亲的德性，坦诚的、谦逊的、宽容的、仁爱的德性，建立在前一种努力之上。崇高的、可畏可敬的德性，克己的、自制的德性，驾驭激情以使我们天性的一切行为趋势都符合我们自身尊严、荣誉以及我们行为合宜性要求的德性，则源于后一种努力。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+德性，道德品性。指人的自然至诚之性。在希腊语中原指事物的特性、品格、特长、功能，亦即一事物成为该事物的本性。<br>
+<br /><br /></p>
+<h3 id="第二篇-论与合宜性相容的各种程度的激情">第二篇 论与合宜性相容的各种程度的激情</h3>
+<h4 id="引言-2">引言</h4>
+<p><strong>原文摘录</strong><br>
+显然，同我们自身有特殊关系的各种对象所激发的每一种激情的合宜性，即旁观者能够赞同的强度，必定处于某种中庸之度。如果这种激情太强烈或者太微弱，旁观者就无法体会它。例如，个人的不幸和受到的伤害所引起的悲伤和愤恨可能容易太强烈，并且对于大多数人来说都是如此。同样，它们也可能太微弱，尽管这极少发生。我们把这种过度称为脆弱和狂暴；而我们把这种不足称为迟钝、感受力缺失和没精神。</p>
+<p>然而，这包含着合宜性的中庸，随激情有异而各不相同。它在某些激情里高些，而在另一些激情里低些。有些激情如果表现得太强烈则是极不得体的，即使在那些我们公认不可避免地会在最大程度上感受到它们的场合也是如此。另外有些激情，在许多场合下其最强烈的表现则是极为优雅的，即使这些激情本身并不必然强到这种程度。前一种激情，因为某些原因，几乎或根本不会被同情。后一种激情，因为另一些原因，会得到十足的同情。如果我们仔细考虑人性中所有不同的激情，我们就会发现这些激情被认为是得体或者不得体，恰与人们对它们同情的程度多少成比例。<br>
+<br /><br /></p>
+<h4 id="第一章-论源于肉体的各种激情">第一章 论源于肉体的各种激情</h4>
+<p><strong>原文摘录</strong><br>
+对于因肉体的某种状况或倾向而产生的各种激情，作任何强烈的表达都是不得体的。因为周围的人并不处于同样的倾向，所以不能被指望同情这些激情。例如，强烈地渴求食物，尽管在许多场合不仅是自然的，而且是不可避免的，但总是不得体的；狼吞虎咽普遍被视为一种无礼举止。然而，人们对于渴求食物毕竟还是有几分同情的。看到我们的同伴们吃得津津有味是令人愉快的，而所有难以下咽的表现都是令人不快的。</p>
+<p>自然赋予的令两性结合的激情也是同一回事。尽管这一激情生来就是所有激情中最炽热的，但是其所有形式的强烈表现都是不得体的，无论何时，即便人订的与神邸的一切法律都承认两性激情的尽情放纵完全无罪。然而，人们甚至对这种激情似乎也有几分同情。用对男人一样的说话方式对女人说话是不合适的：人们期望，女人的相伴应该会激起我们更多的快乐、幽默和殷勤；而对女性完全缺失感受力，则使一个男人变得有几分可鄙，即使在男性眼中也是如此。我们对源于我们肉体的所有欲望的反感都是如此：它们所有的强烈表达都是令人反感和不快的。但还有许多我们和野兽共有的其他激情，诸如愤恨、血亲之爱，甚至还有感激之情，这些激情并没有因此而显得如此粗野。被人们恰如其分地称为节制的美德，在于对那些源自肉体欲望的控制。把这些欲望约束在健康和财富所规定的范围之内，是审慎的分内之事。但是，把它们限制在优雅、合宜、慎重、谦虚所规定的范围之内，则是节制的职责。</p>
+<p>那些源于想象的激情则是另一回事。我的身体结构几乎不可能被我同伴的身体结构上的变化所影响；但是我的想象比较容易受到影响，如果我可以这样说的话，也比较容易接受我所熟悉的那些人的想象形态和构造。因此，在爱情或追求成功中遭到的挫折比关于肉体最大的不幸更能引起同情。这些激情都产生于想象。</p>
+<p>疼痛从不会引起任何身临其境的同情共感，除非它有危险相伴。即便我们未同情受难者的痛苦，我们仍同情那份恐惧。然而，恐惧是一种完全源于想象的激情，这种想象伴随着一种使我们更加焦虑的变化无常的起伏不定，呈现了我们并未实际感受到但此后可能遭受的那种痛苦。我们对肉体的痛苦几乎感受不到同情，是忍受疼痛时坚韧不拔的合宜性的基础。在最严酷的折磨下不流露一丁点人性的弱点，不发出一声呻吟，不屈服于我们不能完全体会的任何激情的人，会博得我们十足的钦佩。我们认可他的行为，而且根据我们对人性普遍弱点的经验，对他究竟如何能够行动以至于值得赞许而感到讶异和惊奇。混合着惊奇和讶异并受两者激发的认同，构成了被恰如其分地称为钦佩的情感。<br>
+<br /><br /></p>
+<h4 id="第二章-论源于想象的某种特殊偏向或习惯的激情">第二章 论源于想象的某种特殊偏向或习惯的激情</h4>
+<p><strong>原文摘录</strong><br>
+纵然是源于想象的激情，那些源于想象所获得的某种特殊定势或习惯的激情，尽管可能被公认为是十分自然的，却也几乎不会被同情共感。人们的想象若没有获得这种特殊的偏向，便无法体会这些激情；这类激情，尽管可以被认为在一部分生活中几乎是不可避免的，但多少总是有些幼稚可笑的。两个长期钟情于彼此的异性之间自然而然产生的那种强烈的依恋，就属于这种情形。我们的想象没有与那位恋人以相同的路径展开，因而无法体会其情感的热切…</p>
+<p>尽管我们对这种爱恋感受不到严格意义上的同情共感，尽管即使在想象中我们也从未向那个特定的人怀有某种激情而迈出一步，然而由于我们要么怀有过，或者可能愿意怀有这种激情，我们很容易体会那些从其满足中产生的对幸福的高度盼望，也很容易体会那些从其无法满足的担忧中产生的极度痛苦。它不是作为一种激情，而是作为引发吸引我们的其他激情的一种情景来打动我们，引发每一种盼望、担忧以及痛苦。尽管我们并没有在真正意义上体会那一恋人的爱恋，但我们很容易体会他从中获得的对罗曼蒂克幸福的那些期待。<br>
+<br /><br /></p>
+<h4 id="第三章-论不合群的激情">第三章 论不合群的激情</h4>
+<p><strong>原文摘录</strong><br>
+另有一类激情，虽然也源于想象，但在我们能够体会它们之前，或者在我们认为它们是得体或适宜之前，必须总是被降低到比未被规训的天性产生的激情低得多的程度。这些就是恨和愤恨及其不同的变体。就所有这类激情而言，我们的同情分给了感受这些激情的人和成为这些激情对象的人，这两者的利益是直接对立的。我们对那个感受到这些激情的人的同情会使我们希望些什么，我们与那个成为这些激情对象的人的共情则会将我们引向担忧些什么。由于他们二者都是凡人，所以我们会对二者都表示关心，并且，我们对一方可能遭受痛苦的担心会抑制我们对另一方遭受的伤害所感到的愤恨之情。因此，我们对那个被触怒的人的同情，必然弱于自然而然鼓动他的那种激情，其缘由不仅在于使所有这些由同感而生的激情弱于原始激情的那些一般原因，而且还在于对这种激情本身而言非常特殊的具体原因，即我们对另一方反向的同情。因此，相较于其他任何激情，愤恨必须得到更大的压制并降低它自然生发的那个程度，才能变得得体和适宜。</p>
+<p>然而，这些激情却被视为人类品性中必不可缺的组成部分。一个人温驯地坐着不动，顺从各种侮辱，既不想抵抗也不图报复，他会被人瞧不起。我们不能体会他的漠不关心和无知无觉。我们称他的行为是志气低沉，我们真的被他这种行为激怒了，就像被他对手的侮辱激怒一样。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+仇恨和愤怒是善良心灵快乐的最大毒药。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+为了使怨恨的宣泄完全令人愉快，使旁观者彻底同情我们的报复，需要多少条件呢？首先，触怒之事必须是这样一种，即如果我们在某种程度上不对其产生怨恨，我们就变得可鄙，就会受到无休止的侮辱。小于这种程度的冒犯最好总是予以忽视；最可鄙的莫过于对每一次小小的争吵和发火的刚愎自用和吹毛求疵的脾气。其次，我们的愤恨，更多应从愤恨的合宜感而来，从人们期望并要求我们愤恨的感觉而来，而不是因为我们自己感受到那种令人不快的激情的狂怒而愤恨。宽宏大量，或者对维持我们在社会中的地位和尊严的关注，是使这种令人不快的激情的表达变得高贵的唯一动机。这些风度和举止必定朴实、坦率和直率；坚决而不刚愎自用，高昂而不傲慢；不仅不急躁、不粗劣鄙俗，而且宽宏大量、坦诚率直、考虑周全，甚至对触犯我们的人也是如此。简言之，必须从我们整体的风格中，毫无矫揉造作地表现它时，表明那种激情并没有泯灭我们的人性；并且如果我们顺从报复的指令，那也是出于无奈，出于必要，是受到巨大并且重复、挑衅的结果。当愤恨以这种方式受到约束和限制时，它或许就可以被认为是慷慨与高贵的了。<br>
+<br /><br /></p>
+<h4 id="第四章-论合群的激情">第四章 论合群的激情</h4>
+<p><strong>原文摘录</strong><br>
+正如对立的同情共感使得刚刚讨论过的一类激情在大多数场合是如此的粗鄙和令人不快那样；因此存在着另一类与此相反的激情，加倍的同情共感几乎总是使其变得特别的令人愉快和适宜。慷慨、仁爱、和善，恻隐之心，彼此友好、相互尊敬，所有这些有利于社会联系的和仁爱的意向，体现在表情或行为时，即便是对那些与我们没有特殊关系的人，几乎在每种场合下都会令事不关己的旁观者感到愉悦。旁观者对感到那些激情的人的同情，同他对这些激情对象的人的关心完全一致。<br>
+<br /><br /></p>
+<h4 id="第五章-论自私的激情">第五章 论自私的激情</h4>
+<p><strong>原文摘录</strong><br>
+在那两组相反的激情——利于交往和不利于交往的激情——之外，还有另一组处于这两者之间的某一中间位置的激情。这组激情绝不像前者那般有时会那么优雅，也从来不像后者那般有时会那么令人厌恶。我们由于自身的福祸而怀有的喜悦和悲伤，构成了这第三组激情。即使当期过度时，它们绝不会像过度的愤恨那样那么令人不快，因为从来不会有相反的同情促使我们反对它们；在它们同其对象极其相适的时候，也绝不会像无偏的博爱和公众的仁慈那样那么令人愉快，因为从来不会有加倍的同情使我们支持它们。<br>
+<br /><br /></p>
+<h3 id="第三篇-论处境的顺逆对人们判断行为合宜性所产生的影响；以及为什么在一种情况下比在另一种情况下更容易得到人们的赞同">第三篇 论处境的顺逆对人们判断行为合宜性所产生的影响；以及为什么在一种情况下比在另一种情况下更容易得到人们的赞同</h3>
+<h4 id="第一章-虽然我们对悲伤的同情一般是比我们对快乐的同情更为鲜活的感受，但是它往往不如当事人自然感受到的那么强烈">第一章 虽然我们对悲伤的同情一般是比我们对快乐的同情更为鲜活的感受，但是它往往不如当事人自然感受到的那么强烈</h4>
+<p><strong>原文摘录</strong><br>
+对我们来说，如下行为看来必定值得奖赏：它表现为某种情感恰当并公认的对象，这种情感最立即、直接地促使我们奖励或者报答他人。同样，如下行为看来必定要收到惩罚：它表现某种情感恰当而公认的对象，但这种情感会最立即、直接地促使我们去惩罚他人，或者施与伤害。</p>
+<p>最立即、直接地促使我们去奖赏他人的情感，是感激；最立即、直接地促使我们去惩罚他人的情感，是愤恨。</p>
+<p>对我们来说，一方面，那些看起来是恰当而公认的感激对象的行为必定值得奖赏；另一方面，那些看起来是恰当而公认的愤恨对象的行为必定受到惩罚。</p>
+<p>奖赏，是回报，是报答，就是对获得的好处回以好处；惩罚，也是回报，也是报答，不过是以一种不同的方式，是以恶报恶。</p>
+<p>除了感激和愤恨，促使我们关心他人的幸福或者痛苦的还有一些其他的激情；但是，没有任何激情会如此直接地引起我们为他人的幸福和痛苦而操劳。由于相识和平常关系融洽所产生的爱和尊敬，必然使我们对某人的幸运表示高兴，他是一个如此令人愉快的感情对象，因而必然使我们愿为促成这种幸运而助一臂之力。然而，即使他没有我们的帮助而得到了这种幸福，我们的爱也会得到充分的满足。这种激情所渴望的一切就是看到他的幸福，而不考虑是谁成就了他的幸福。但是，感激并不会以这种方式得到满足。如果那个我们欠下许多恩情的人得到了幸福，而我们却没有为此尽一份力的话，那么即使他的幸福能使我们的爱感到满意，却不能使我们的感激之情得到满足。在我们报答他之前，在我们为他的幸福尽一臂之力之前，自己对他过去给予的种种帮助依然欠着未还。</p>
+<p>同样地，在习惯性不满的基础上产生的憎恨和厌恶，经常导致我们怀着恶意的快感，看着行为与品质让我们感觉如此痛苦的人。但是，憎恶和讨厌虽然会使我们心肠冷酷而拒绝所有同情，并且有时甚至会使我们倾向于以他人痛苦为乐，然而如果在这种情形下没有愤恨牵涉其中，如果我们以及我们的朋友都没有受到任何严重的切身挑衅，那么这些激情自然不会促使我们希望亲力造成他的不幸。虽然我们并不害怕因为插手其中而受到惩罚，但是我们更愿看到他的不幸是以其他方式发生。如果牵涉到愤恨，就完全是另外一回事了：如果某人曾极大地伤害了我们，比方说杀害了我们的父亲或者兄弟，而他不久之后死于某种热病，或者甚至因为其他一些罪行而被送上绞架，那么这虽然可以抚慰我们的仇恨，但却无法完全消除我们的愤恨。愤恨使我们不仅渴望他受到惩罚，而且渴望由我们自己亲手实施惩罚，以抵偿他对我们的伤害。除非不仅这个罪犯自己反过来也感到悲痛，而且因为他给我们造成痛苦的那个错误而感到悲痛，不然我们的愤恨是不可能完全消除的。他必须为他的这一行为而感到后悔、难过；如此，其他人才会由于害怕遭到同样的惩罚而不敢犯同样的罪行。这种激情要得到满足自然而然所要求的，自会产生惩罚所要达到的一切政治结果：惩治罪犯、警戒公众。</p>
+<p>因此，感激与愤恨是最立即、最直接促使奖励与惩罚的情感。所以对我们来说，谁表现为感激的适宜的、公认的对象，谁就必然看来值得奖赏；谁表现为愤恨的适宜的、公认的对象，谁就必然看来该受惩罚。<br>
+<br /><br /></p>
+<h2 id="第二卷-论功与过，或论善罚的对象">第二卷 论功与过，或论善罚的对象</h2>
+<h3 id="第一篇-论功过感">第一篇 论功过感</h3>
+<h4 id="第二章-论感激和愤恨的恰当对象">第二章 论感激和愤恨的恰当对象</h4>
+<p><strong>原文摘录</strong><br>
+正如我们同情顺境中同伴的快乐一样，我们与他们一起沉浸在他们对于那个凡是被他认为是他们好运的原因所自然会有的满足和开心之中。我们会体会到他们对那个原因怀有的热爱和喜爱，并且也开始对它产生爱意。当看到一个人得到别人的帮助、保护和解救时，我们对受益者快乐的同情，只会激发我们对受益者对施惠者的感激之情产生共感。</p>
+<p>同样，正如我们不论何时看到同伴的不幸都会同情他的悲伤那样，无论引起这种悲伤的原因是什么，我们也都同样能够体会他对此的憎恶和讨厌。随着我们的心与他同悲共苦，他试图驱逐或者毁掉引起这种悲伤原因的那种情绪，也同样在我们的心灵中涌动。若引起这些痛苦的原因是某个人时，情况更是如此。当我们看到一个人被另一个人压迫或伤害时，我们对于受害者的痛苦所产生的同情共感，似乎只会激起我们对于受害者对施害者的愤恨之情的共感。我们乐于见到他反击，而且无论什么时候在他自卫，甚至在一定程度内进行报复时，我们都会热切而又乐意地助他一臂之力。如果受难者在争斗中死去，我们不仅同情他的亲友们的真实愤恨，而且同情想象中那种我们自己在死者的位置时设想他应该会有的愤恨，尽管死者再也不能感受到这种愤恨，或任何其他的人类情感。<br>
+<br /><br /></p>
+<h4 id="第三章-不赞同施恩者的行为，就几乎不会对受益者的感激产生同情共感；相反，赞同施害者的动机，就几乎不会对受难者的愤恨产生任何的同情共感">第三章 不赞同施恩者的行为，就几乎不会对受益者的感激产生同情共感；相反，赞同施害者的动机，就几乎不会对受难者的愤恨产生任何的同情共感</h4>
+<p><strong>原文摘录</strong><br>
+可以看到，无论行为者的行为或者意图对被行为者而言是如何有益，如果行为者的动机看起来并不合宜，如果我们无法同情影响其行为的意向，则我们对受益者的感激也不会有任何同情；同样，无论行为者的行为或者意图对被行为者而言如何有害，如果行为者的动机看起来并非不合宜，或者相反，影响他行为的意向必定会获得我们的同情，则我们对受害者的愤恨也就不会有任何的同情。在前一种情况下，似乎不应该得到一点感激；在后一种情况下，似乎所有愤恨都是不应该的。前一种行为似乎不应该受到什么报答，后一种行为似乎不应该受到什么惩罚。<br>
+<br /><br /></p>
+<h4 id="第四章-对前面几章的要点重述">第四章 对前面几章的要点重述</h4>
+<p><strong>原文摘录</strong><br>
+因此，我们不会仅仅因为一个人是另一个人走运的原因，就完全且由衷地同情后者对前者的感激之情，除非前者是出于我们完全赞同的动机而促成了后者的好运。我们的内心必须先要接受行为者的行事原则，并赞同影响其行为的所有意向，然后才会完全同情受益人的感激之情，并与之合拍一致。如果施惠者的行为看起来并不合宜，则无论其效果如何有益，似乎都不需要，或必然要求任何相称的回报。</p>
+<p>但是，当行为的有益倾向和产生行为的意向的合宜性结合在一起时，当我们完全同情和赞同行为者的动机时，我们由此对他怀有的喜爱，就会增强和助长我们对那些受益者——那些把自己的幸运归功于他善良行为的人——的感激之情所怀有的共感。于是，他的行为看来需要甚至极力要求相称的回报。我们也就会完全理解那种促使人们报答的感激之情。于是，当我们像这样完全同情并赞同那种促使人们回报施惠者的情感时，他看起来也就成为合适的报答对象。当我们认可并且赞同产生某种行为的意向时，我们就必然会赞同这种行为，并且认为那种行为所指的对象是该行为恰当而又合适的对象。</p>
+<p>同样，我们不能仅仅因为一个人是另一个人厄运的原因，就完全同情后者对前者的愤恨之情，除非前者是出于我们无法同情的动机而造成了后者的不幸。在我们能够接纳受害者的愤恨之前，我们必定不会赞同行为人的动机，并感到我们的内心拒绝对影响他行为的那些意向产生同情。如果这些动机和意向并非不合宜，则无论源于这些动机和意向的行为倾向对那些行为所指向的人如何有害，这种行为似乎都不应该得到任何惩罚，或成为任何愤恨的恰当对象。</p>
+<p>但是，当该行为的有害性与产生该行为的意向的不合宜性结合在一起时，当我们内心带着憎恶拒绝对行为者的动机表示任何共感时，我们就会由衷且完全地同情受害者的愤恨。于是，这些行为看来应该得到，甚至极力要求相应的惩罚；我们也就完全体会从而赞许那种促使人们实施惩罚的愤恨之情。于是，当我们像这样完全同情并赞同那种促使人们惩罚的情感时，冒犯者看起来必然也就成了恰当的惩罚对象。在这种情况下，当我们认可并且赞同某种行为得以产生的意向时，我们就必然会赞同这种行为，并且认为那种行为所指的对象是该行为恰当而又合适的对象。<br>
+<br /><br /></p>
+<h4 id="第五章-对功过感的分析">第五章 对功过感的分析</h4>
+<p><strong>原文摘录</strong><br>
+正如我们对行为的合宜感源于某种我将称为的对行为人的意向与动机的直接同情一般，我们对行为的功劳感，则源于我将称为的某种对被行为人的感激的间接同情。</p>
+<p>除非我们事先赞同施惠者的动机，否则我们就实在无法充分体会受益人的感激，出于这一原因，功劳感似乎是一种复合的情感，由两种截然不同的情感组成，即对行为人情感的直接同情和对受益人感激的间接同情。</p>
+<p>在许多不同的场合，我们可以清楚地区分这两种不同情感，它们掺杂混合在我们对某一特定品质或行为应得好报之感中。当我们读到有关恰当与仁慈的伟大心灵所做出的行为的历史时，我们在想象中把自己变成那个历史人物本身；幻想我们自己置身于那些久远的、被人遗忘的冒险经历之中，并想象自己在扮演西庇阿或卡米卢斯、提莫莱昂或阿里斯提得斯式的角色。至此，我们的情感都是建立在直接同情行为者的基础之上。但是，我们对这类行为受益者的间接同情，不见得就比直接同情弱。我们对这类行为的所有功劳感和值得奖赏感，认为回报这种行为，并使行为人感到愉快的所有合宜感和适宜感，都是源自对感激和爱的那种同情的情感——当我们带着这种情感设身处地地设想当事人的处境时，我们自然而然会感到，自己会因那个能做出如此适当且崇高的善行的人而激动不已。</p>
+<p>同样，正如我们对行为不合宜感是源于我们对行为人的意向与动机缺乏同情或直接反感，我们对行为的过错感，也是源于我们将称为的对被害人的愤恨的间接同情。</p>
+<p>除非我们事先就不赞同行为者的动机，并拒绝对这些动机表示任何共感，否则我们就实在无法充分体会受害人的愤恨，出于这一原因，同功劳感一样，过错感似乎也是一种复合的情感，它由两种截然不同的情感组成，即对行为人的情感的直接反感和对受害人的愤恨的间接同情。</p>
+<p>在许多不同的场合，我们也可以清楚地区分这两种不同的情感，它们掺杂混合在我们对某一特定品质或行为该受惩罚之感之中。当我们读到博尔吉亚或尼禄式的背信弃义和残酷暴虐的历史时，我们的内心就会升起一种对那些影响他们行为的可憎情感的反感，并带着恐怖和厌恶的心情拒绝与此种恶劣的动机形成共感。至此，我们的情感都是建立在对行为者的意向的直接憎恶的基础上；而我们对受害者的愤恨的间接同情则更加强烈。我们对无辜受害者遭受到的不可避免的痛苦所怀有的共感，同我们对他们正当的和自然的愤恨所怀有的同情共感一样真诚和强烈。前一种感情只会增强后一种感情，想到他们的痛苦，只会激起和增强我们对那些造成这些痛苦的人的憎恨。我们对这种暴行的恶报，对恰当和合适地落在这个犯有上述暴行的人身上的灾难，以及轮到他来感到痛苦的全部感觉和感情，都来自旁观者心中自然激起的同情的愤慨——只要旁观者对受难者的情况都了如指掌。<br>
+<br /><br /></p>
+<h3 id="第二篇-论正义和仁慈">第二篇 论正义和仁慈</h3>
+<h4 id="第一章-两种德性的比较">第一章 两种德性的比较</h4>
+<p><strong>原文摘录</strong><br>
+源于合宜的动机，具有有益趋向，此类行为似乎仅此就应当受到奖赏；因为只有这类行为才是公认的感激对象，或者说，只有这类行为才会激起旁观者出于同情的感激之情。</p>
+<p>源于不恰当的动机，具有有害趋向，此类行为似乎仅此就应当受到惩罚；因为只有这类行为才是公认的愤恨对象，或者说，只有这类行为才会激起旁观者出于同情的愤恨之情。</p>
+<p>仁慈总是不受约束的，它不能以力相逼。仅仅是缺乏仁慈并不会受到惩罚；因为缺乏仁慈并不会带来什么真实实在的罪恶。当一个人有能力报答他的恩人时，而且他的恩人需要他的帮助时，他却没有做出报答之举，毫无疑问他是犯了最黑心的忘恩负义之过。每一个无偏的旁观者都从内心拒绝与其自私的动机产生任何共感，他是人们最不能赞同的恰当对象。但是他仍然对任何人都没有实质性的伤害。他只是没有做那个出于合宜性他应该做的善行。他是憎恶的对象——憎恶是不合宜的情感和行为所自然激起的一种激情；他并不是愤恨的对象——愤恨是一种只对某些特定的人会倾向于产生真实实在的伤害的行为才会激起的激情。因此，他缺少感激之情不会被惩罚。</p>
+<p>愤恨之情似乎是自然给予我们用来自卫，并且只是用来自卫的。它维护正义，保护无辜。它促使我们击退企图针对自己的伤害，回击已经受到的伤害，使犯罪者可能因自己的不义行为感到悔恨，使其他人可能因害怕同样的惩罚而对犯下同样的罪行感到惊恐。因此，愤恨之情只运用于这些目的，当它用于别的目的时，旁观者绝不会对此表示赞同。</p>
+<p>然而，还有另一种德性，对它的尊奉由不得我们的意志自行主张，而是可以以力强求，谁违反它则将招致愤恨，并因而受到惩罚。这种德性就是正义：违背正义就意味着伤害；这种行为确确实实地伤害到某些人，其动机必然是不被赞同的。因此，它是愤恨的恰当对象，也是惩罚的恰当对象，这种惩罚正是愤恨的自然结果。正如人们认同和赞许使用暴力来对不义的伤害加以报复，他们更加认同和赞许使用暴力来阻止和击退伤害行为，并约束冒犯者不得伤害其邻人。</p>
+<p>但是，我们肯定始终会仔细区分：什么只是该责备的，或者是恰当的谴责对象，以及什么是可以利用外力以惩罚或者阻止的。那种似乎应受责备的，缺乏的是一般程度的合宜的仁慈行为，经验教导我们这是可以期望每个人都做到的；反之，任何超出这个程度的仁慈行为都值得赞扬。一般程度的仁慈行为本身似乎既不应该受责备也不值得赞扬。</p>
+<p>尽管仅仅是缺乏仁慈似乎不应受到相等地位的人的惩罚，但是，更努力地践行这种德性，似乎应该得到最高的奖赏。这些行为带来了极大的好处，因此是最强烈感激的自然而为人所赞同的对象。相反，虽然违反正义会遭到惩罚，但是遵行正义准则似乎不应得到任何奖赏。毫无疑问，正义的实践中存在着一种合宜性，因此，它应该获得合宜性应该得到的所有赞许。但是因为它并不带来任何实实在在的好处，所以，它几乎配不上半点感激。在绝大多数情况下，光是有正义只是一种消极的美德，它只是阻止我们去伤害我们的邻人。我们常常只要坐着不动，无所作为，便可以遵守正义的一切准则。</p>
+<p>以其人之道还治其人之身和以牙还牙似乎是大自然命令我们恪守的伟大准则。我们认为仁慈和慷慨是仁慈和慷慨的人应得的；我们认为，那些心门从不向仁爱感情打开的人，也同样会被关在其同胞的友爱大门外，并只配生活在像无边荒漠一样的社会中，无人在乎，也无人问起。应该使违反正义法则的人自己感受到他对别人犯下的那种罪孽；并且，由于对他的同胞的痛苦的任何关心都不能使他有所克制，那就应当利用他自己畏惧的事物来使他感到害怕。一个仅仅是清白无害的人，仅仅是对他人遵守正义法则，且克制自己不去伤害邻人的人，反过来也只能得到邻人们对他的清白无害应有的尊敬，以及虔诚地对他遵守同样的法则。<br>
+<br /><br /></p>
+<h4 id="第二章-论正义感、悔恨以及对功劳的意识">第二章 论正义感、悔恨以及对功劳的意识</h4>
+<p><strong>原文摘录</strong><br>
+正如犯下的罪恶越大，越是不可挽回，受难者的愤恨自然就越强烈一样，旁观者因同情而产生的义愤以及行为者的负罪感也就会越强烈。置人于死地是一个人所能施加于另一个人身上的最大罪恶，它会在同死者有直接关系的人中间激起最为强烈的愤恨。因此，在人们和罪犯的心目中，谋杀就是所有侵犯个体的罪行中最残忍的那种。剥夺我们已经占有的东西，比起使我们得到东西的期望落空，是一种更大的罪行。因此，侵占他人财产，偷窃和抢劫，这些从我们手中夺走我们拥有的东西的行为，要比违背契约这种仅仅使我们得到东西的期望落空的行为，罪恶更大。因此，首先是最神圣的正义法律，那些被违反时要求报复和惩罚的呼声最高的法律，就是那些保护我们邻居的生命和人身安全的法律；其次是保护其财产和所有权的法律；最后是那些保护所谓个人权利或因他人允诺而归之于他的权利的法律。<br>
+<br /><br /></p>
+<h4 id="第三章-论自然这种构造的效用">第三章 论自然这种构造的效用</h4>
+<p><strong>原文摘录</strong><br>
+我们总是通过反思惩罚不义行为对社会是多么必要这一点来肯定我们对惩罚的合宜性和恰当性的自然感觉。当罪犯即将遭受那种正当的报复时（那种自然的义愤告诉人们这是他罪有应得），当他施行不义时的傲慢无礼因他对愈益临近的惩罚感到恐惧而被击碎和变得谦卑恭顺时，当他不再成为人们恐惧的对象时，他就开始成为宽宏大量者和慈悲者怜悯的对象了。想到他即将遭受的痛苦，人们会消除因他给别人造成的痛苦而对他的愤恨。他们有意原谅和宽恕他，使他免受那种惩罚，而在他们冷静的时候，这一惩罚则总被认为是罪有应得。因此，此时，他们有必要诉诸对社会总利益的思考。他们在更宽宏大量、全面广泛的人性的指示下，抵消了这种软弱偏颇的人性的冲动。他们想到对罪犯的宽恕就是对无辜者的残忍，并以某种为人类着想的更为广泛的体恤之情，来对抗自己对某一具体人物的怜悯之心。<br>
+<br /><br /></p>
+<h3 id="第三篇-论机运在行为功过方面对人类情感的影响">第三篇 论机运在行为功过方面对人类情感的影响</h3>
+<h4 id="第一章-论机运产生这种影响的原因">第一章 论机运产生这种影响的原因</h4>
+<p><strong>原文摘录</strong><br>
+任何东西必须具备如下三个不同方面的条件，才能够成为完美的、合宜的感激对象或愤恨对象。首先，它必须是苦乐的原因；其次，它必须能够感受那些苦乐感觉；最后，它不仅必须已经引发了那些感觉，而且必须是基于某种被人赞许或者非议的意图才引发的这些激情。正是借助第一个条件，任何事物才有能力激起这些激情；正是借助第二个条件，它在任何方面都能满足这些激情；至于第三个条件，不仅对完全满足那些激情来说是必需的，而且由于它会让人感受到一种既细腻又独特的快乐或痛苦，所以它同样成为激发那些激情的原因之一。</p>
+<p>由于某一事物无论以哪种方式带来苦乐，它都是激起感激和愤恨的唯一原因；所以无论某人的意愿是怎样的合宜和仁慈，或者怎样不合宜和恶毒；如果未能产生他所意图的善行和罪恶的话，那么，这两种情况下都缺乏了一项引起感激或愤恨的原因，因此，在前一种情况下他似乎应得到较少的感激，而在后一种情况下则似乎应得到较少的愤恨。相反，即使某人的意愿中没有任何值得赞美的仁慈，也没有任何值得谴责的恶意，但是如果他的行为产生重大的善果或重大的恶果的话，那么，由于在这两种场合都有了一项引起感激或者愤恨的原因，所以在前一种情况下就容易对他产生一些感激之情，而在后一种情况下就容易对他产生一些愤恨之情。在前一种情况下，他身上的功劳隐约可见；在后一种情况下，过错自然产生。并且，由于行为的后果完全由机运所决定，因而机运就对人类的功过感产生了影响。<br>
+<br /><br /></p>
+<h4 id="第二章-论机运的这种影响的程度">第二章 论机运的这种影响的程度</h4>
+<h4 id="第三章-论情感这种不规则性的终极原因">第三章 论情感这种不规则性的终极原因</h4>
+<h2 id="第三卷-论评判我们自己情感和行为的基础，兼论义务感">第三卷 论评判我们自己情感和行为的基础，兼论义务感</h2>
+<h3 id="第一章-论自我赞同和自我谴责的原理">第一章 论自我赞同和自我谴责的原理</h3>
+<h3 id="第二章-论对赞扬和值得赞扬的喜爱；以及对谴责和该受谴责的畏惧">第二章 论对赞扬和值得赞扬的喜爱；以及对谴责和该受谴责的畏惧</h3>
+<h3 id="第三章-论良心的影响和权威">第三章 论良心的影响和权威</h3>
+<h3 id="第四章-论自我蒙骗的天性，兼论一般准则的起源和作用">第四章 论自我蒙骗的天性，兼论一般准则的起源和作用</h3>
+<h3 id="第五章-论道德一般准则的影响和权威，以及它们应当被视为神的法则">第五章 论道德一般准则的影响和权威，以及它们应当被视为神的法则</h3>
+<h3 id="第六章-在什么情况下，义务感应该成为我们行为的唯一原则；以及在什么情况喜爱，它应该同其他动机一起发生作用">第六章 在什么情况下，义务感应该成为我们行为的唯一原则；以及在什么情况喜爱，它应该同其他动机一起发生作用</h3>
+<h2 id="第四卷-论效用对赞同情感的影响">第四卷 论效用对赞同情感的影响</h2>
+<h3 id="第一章-论效用的表现赋予一切工艺品的美，兼论这种美所具有的广泛影响">第一章 论效用的表现赋予一切工艺品的美，兼论这种美所具有的广泛影响</h3>
+<h3 id="第二章-论效用的表现赋予人的品质和行为的美，以及关于这种美的知觉可能在何种程度上被看成赞同的初始原则之一">第二章 论效用的表现赋予人的品质和行为的美，以及关于这种美的知觉可能在何种程度上被看成赞同的初始原则之一</h3>
+<p><strong>原文摘录</strong><br>
+对我们自己最为有用的品质，首先是较高的推理和理解力，我们靠它们才能觉察到自己所有行为的长远后果，并且预见到从中可能产生的利益或害处；其次是自我控制，我们靠它才能放弃眼前的快乐或者忍受眼前的痛苦，以便在将来某个时刻去获得更大的快乐或避免更大的痛苦。这两种品质的结合构成了审慎的德性，对个人来说，这是所有德性中最有用的一种。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+慷慨大方不同于仁爱。这两种品质乍看起来似乎是如此密切相关，但并不总是为同一个人所具有。仁爱仅仅存在于旁观者对主要当事人的情感所怀有的细腻的同感之情中，致使旁观者为当事人所受的痛苦而感到伤心，为他们所受到的伤害而感到愤怒，为他们的幸运而感到高兴。最仁慈的行为不需要克己，不需要自控，不怎么需要调动合宜感。它们仅仅在于去做细腻的同情共感自然而然地促使我们去做的那些事情。但慷慨的情形则全然不同。除非在某个方面我们宁愿先人后己，牺牲自己巨大而重要的利益成全某个朋友或高位者同等的利益，否则我们绝说不上是慷慨。对每个局外人来说，另一个人的成功或保全应当比他们自己的成功或保全更有吸引力；但是对他们来说并不如此。因此，当人们在为了这种他人的利益而牺牲自己的利益时，他们调整自己以适应旁观者的情感，是在根据他们认为任何第三方必定自然而然会想到的对那些事物的看法，而努力做出某种高尚的行为。<br>
+<br /><br /></p>
+<h2 id="第五卷-论习惯和时尚对有关道德赞同和不赞同情感的影响">第五卷 论习惯和时尚对有关道德赞同和不赞同情感的影响</h2>
+<h3 id="第一章-论习惯和时尚对我们美丑观念的影响">第一章 论习惯和时尚对我们美丑观念的影响</h3>
+<p><strong>原文摘录</strong><br>
+当两个物体经常同时出现时，想象就会形成一种习惯，很容易从一个物体想到另一个物体。加入前者出现了，我们就期待后者跟着出现。它们主动地使我们想起它们彼此，我们的注意力也容易在它们之间转动。虽然若不受习惯的影响，它们的结合并不存在真正的美，然而，如果把两者联在一起，在其分开时，我们就会感到不合宜。如果前者出现时后者没有像通常那样随之出现，我们就会认为它有点别扭。我们没有看到我们期望看到的东西，自己观念中习惯性的组合也会被这种失望所搅乱。<br>
+<br /><br /></p>
+<h3 id="第二章-论习惯和时尚对道德情感的影响">第二章 论习惯和时尚对道德情感的影响</h3>
+<h2 id="第六卷-论德性的品质">第六卷 论德性的品质</h2>
+<h3 id="引言-3">引言</h3>
+<p><strong>原文摘录</strong><br>
+当我们考虑任何个人的品质时，我们自然会从两个不同的角度来观察它：第一，它对他自己的幸福可能产生的影响；第二，它对其他人的幸福可能产生的影响。<br>
+<br /><br /></p>
+<h3 id="第一篇-论个人的品质，就这种品质对自己幸福的影响而言或论审慎">第一篇 论个人的品质，就这种品质对自己幸福的影响而言或论审慎</h3>
+<h3 id="第二篇-论个人的品质，就这种品质对他人幸福的影响而言">第二篇 论个人的品质，就这种品质对他人幸福的影响而言</h3>
+<h4 id="引言-4">引言</h4>
+<h4 id="第一章-论个体被自然推荐给我们照料和关心的顺序">第一章 论个体被自然推荐给我们照料和关心的顺序</h4>
+<p><strong>原文摘录</strong><br>
+每个人首先和主要地被推荐给他自己照料；而且，无论在哪一方面，每个人当然比他人更适宜也更有能力照料他自己。每个人对自己快乐和痛苦的感受比对他人快乐和痛苦的感受更为敏锐。前者是原初的感觉，后者是对那些感觉的发射或出于同情的想象，前者可以说是实体，后者可以说是影子。</p>
+<p>他自己家庭的成员，那些通常和他住在同一所房子里的人，他的父母、他的孩子、他的兄弟姐妹，自然是在他自己之后他那最热烈的感情的对象。他们自然是，而且也常常是这样一些人：他们的幸福或痛苦必然最深刻地受到他的行为的影响。他更习惯于同情他们。他对他们的同情共感更接近于他对他自己的感受。</p>
+<p>这种同情共感，以及建立在这种同情共感之上的亲情，被自然更为强烈地导向他的孩子，而甚于导向他的父母；而且，他对前者的温柔慈爱，相比于他对后者的尊敬感恩，似乎通常是一种更主动的倾向。<br>
+<br /><br /></p>
+<h4 id="第二章-论群体被自然推荐给我们仁爱的顺序">第二章 论群体被自然推荐给我们仁爱的顺序</h4>
+<h4 id="第三章-论普遍广泛的仁爱">第三章 论普遍广泛的仁爱</h4>
+<h3 id="第三篇-论自我控制">第三篇 论自我控制</h3>
+<p><strong>原文摘录</strong><br>
+在这世上，如果没有一定程度的这种过度的自我赞赏，就很少能取得伟大成就，取得支配人类感情和意见的巨大权威。那些最杰出的人物，也就是那些完成了最卓越行动的人，那些为人类的处境和想法方面带来极其剧烈的变革的人；那些最成功的勇士，最伟大的政治家和立法者，人数最多和取得最大成功的宗派和政党的那些能言善辩的创始人和领袖，他们中许多人成就显赫，与其说是因为他们功勋卓绝，还不如说是因为某种与那种伟大的功勋完成不成比例的吹嘘和自我赞赏。或许，这种吹嘘，不仅是促使他们去从事头脑比较冷静的人决不想从事的一项事业所必需的，而且是促使他们去博得追随者们的服从和忠顺，使其在这项事业中支持他们所必需的。因此，当他们成功时，这种吹嘘常常诱使他们迷恋虚荣，使得他们变得几乎疯狂和愚蠢。成功同公众强烈的爱戴结合在一起，常常使得一些最伟大的人物晕头转向，以致他们把很多远超过他们真正拥有的权势和能力归功于自己；进而，由于这种自以为是，促使自己从事许多轻率的有时具有毁灭性后果的冒险活动。<br>
+<br /><br /></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/02/27/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%81%93%E5%BE%B7%E6%83%85%E6%93%8D%E8%AE%BA%EF%BC%88%E9%80%89%E8%AF%91%EF%BC%89/">
+            https://illusionzone.github.io/2024/02/27/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%81%93%E5%BE%B7%E6%83%85%E6%93%8D%E8%AE%BA%EF%BC%88%E9%80%89%E8%AF%91%EF%BC%89/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/02/28/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%81%B6%E7%9A%84%E7%A7%91%E5%AD%A6%EF%BC%9A%E8%AE%BA%E5%85%B1%E6%83%85%E4%BA%8E%E6%AE%8B%E9%85%B7%E8%A1%8C%E4%B8%BA%E7%9A%84%E8%B5%B7%E6%BA%90/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】恶的科学：论共情于残酷行为的起源 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/01/30/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C%E7%94%B5%E5%BD%B1/%E5%B0%8F%E5%81%B7%E5%AE%B6%E6%97%8F/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【观之感之】是枝裕和电影——小偷家族 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%8A%E9%81%93%E5%BE%B7%E6%83%85%E6%93%8D%E8%AE%BA%E3%80%8B%E5%AF%BC%E8%AF%BB"><span class="toc-text">《道德情操论》导读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%80%8A%E9%81%93%E5%BE%B7%E6%83%85%E6%93%8D%E8%AE%BA%E3%80%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E5%92%8C%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-text">《道德情操论》的基本结构和主要内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%B7-%E8%AE%BA%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%90%88%E5%AE%9C%E6%80%A7"><span class="toc-text">第一卷 论行为的合宜性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87-%E8%AE%BA%E5%90%88%E5%AE%9C%E6%84%9F"><span class="toc-text">第一篇 论合宜感</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E5%90%8C%E6%83%85%E5%85%B1%E6%84%9F"><span class="toc-text">第一章 论同情共感</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E7%9B%B8%E4%BA%92%E5%85%B1%E6%83%85%E7%9A%84%E6%84%89%E6%82%A6"><span class="toc-text">第二章 论相互共情的愉悦</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E9%80%9A%E8%BF%87%E5%88%AB%E4%BA%BA%E7%9A%84%E6%84%9F%E6%83%85%E5%90%8C%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%9F%E6%83%85%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4%EF%BC%8C%E6%9D%A5%E5%88%A4%E6%96%AD%E5%89%8D%E8%80%85%E6%98%AF%E5%90%A6%E5%90%88%E5%AE%9C%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">第三章 论通过别人的感情同我们自己的感情是否一致，来判断前者是否合宜的方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%BB%AD%E5%89%8D%E7%AB%A0"><span class="toc-text">第四章 续前章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%AE%BA%E5%8F%AF%E4%BA%B2%E5%92%8C%E5%8F%AF%E6%95%AC%E7%9A%84%E5%BE%B7%E6%80%A7"><span class="toc-text">第五章 论可亲和可敬的德性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AF%87-%E8%AE%BA%E4%B8%8E%E5%90%88%E5%AE%9C%E6%80%A7%E7%9B%B8%E5%AE%B9%E7%9A%84%E5%90%84%E7%A7%8D%E7%A8%8B%E5%BA%A6%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第二篇 论与合宜性相容的各种程度的激情</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-2"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E6%BA%90%E4%BA%8E%E8%82%89%E4%BD%93%E7%9A%84%E5%90%84%E7%A7%8D%E6%BF%80%E6%83%85"><span class="toc-text">第一章 论源于肉体的各种激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%BA%90%E4%BA%8E%E6%83%B3%E8%B1%A1%E7%9A%84%E6%9F%90%E7%A7%8D%E7%89%B9%E6%AE%8A%E5%81%8F%E5%90%91%E6%88%96%E4%B9%A0%E6%83%AF%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第二章 论源于想象的某种特殊偏向或习惯的激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E4%B8%8D%E5%90%88%E7%BE%A4%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第三章 论不合群的激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%BA%E5%90%88%E7%BE%A4%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第四章 论合群的激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%AE%BA%E8%87%AA%E7%A7%81%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第五章 论自私的激情</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AF%87-%E8%AE%BA%E5%A4%84%E5%A2%83%E7%9A%84%E9%A1%BA%E9%80%86%E5%AF%B9%E4%BA%BA%E4%BB%AC%E5%88%A4%E6%96%AD%E8%A1%8C%E4%B8%BA%E5%90%88%E5%AE%9C%E6%80%A7%E6%89%80%E4%BA%A7%E7%94%9F%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%9B%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E4%B8%80%E7%A7%8D%E6%83%85%E5%86%B5%E4%B8%8B%E6%AF%94%E5%9C%A8%E5%8F%A6%E4%B8%80%E7%A7%8D%E6%83%85%E5%86%B5%E4%B8%8B%E6%9B%B4%E5%AE%B9%E6%98%93%E5%BE%97%E5%88%B0%E4%BA%BA%E4%BB%AC%E7%9A%84%E8%B5%9E%E5%90%8C"><span class="toc-text">第三篇 论处境的顺逆对人们判断行为合宜性所产生的影响；以及为什么在一种情况下比在另一种情况下更容易得到人们的赞同</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%99%BD%E7%84%B6%E6%88%91%E4%BB%AC%E5%AF%B9%E6%82%B2%E4%BC%A4%E7%9A%84%E5%90%8C%E6%83%85%E4%B8%80%E8%88%AC%E6%98%AF%E6%AF%94%E6%88%91%E4%BB%AC%E5%AF%B9%E5%BF%AB%E4%B9%90%E7%9A%84%E5%90%8C%E6%83%85%E6%9B%B4%E4%B8%BA%E9%B2%9C%E6%B4%BB%E7%9A%84%E6%84%9F%E5%8F%97%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%83%E5%BE%80%E5%BE%80%E4%B8%8D%E5%A6%82%E5%BD%93%E4%BA%8B%E4%BA%BA%E8%87%AA%E7%84%B6%E6%84%9F%E5%8F%97%E5%88%B0%E7%9A%84%E9%82%A3%E4%B9%88%E5%BC%BA%E7%83%88"><span class="toc-text">第一章 虽然我们对悲伤的同情一般是比我们对快乐的同情更为鲜活的感受，但是它往往不如当事人自然感受到的那么强烈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%B7-%E8%AE%BA%E5%8A%9F%E4%B8%8E%E8%BF%87%EF%BC%8C%E6%88%96%E8%AE%BA%E5%96%84%E7%BD%9A%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="toc-text">第二卷 论功与过，或论善罚的对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87-%E8%AE%BA%E5%8A%9F%E8%BF%87%E6%84%9F"><span class="toc-text">第一篇 论功过感</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%84%9F%E6%BF%80%E5%92%8C%E6%84%A4%E6%81%A8%E7%9A%84%E6%81%B0%E5%BD%93%E5%AF%B9%E8%B1%A1"><span class="toc-text">第二章 论感激和愤恨的恰当对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%8D%E8%B5%9E%E5%90%8C%E6%96%BD%E6%81%A9%E8%80%85%E7%9A%84%E8%A1%8C%E4%B8%BA%EF%BC%8C%E5%B0%B1%E5%87%A0%E4%B9%8E%E4%B8%8D%E4%BC%9A%E5%AF%B9%E5%8F%97%E7%9B%8A%E8%80%85%E7%9A%84%E6%84%9F%E6%BF%80%E4%BA%A7%E7%94%9F%E5%90%8C%E6%83%85%E5%85%B1%E6%84%9F%EF%BC%9B%E7%9B%B8%E5%8F%8D%EF%BC%8C%E8%B5%9E%E5%90%8C%E6%96%BD%E5%AE%B3%E8%80%85%E7%9A%84%E5%8A%A8%E6%9C%BA%EF%BC%8C%E5%B0%B1%E5%87%A0%E4%B9%8E%E4%B8%8D%E4%BC%9A%E5%AF%B9%E5%8F%97%E9%9A%BE%E8%80%85%E7%9A%84%E6%84%A4%E6%81%A8%E4%BA%A7%E7%94%9F%E4%BB%BB%E4%BD%95%E7%9A%84%E5%90%8C%E6%83%85%E5%85%B1%E6%84%9F"><span class="toc-text">第三章 不赞同施恩者的行为，就几乎不会对受益者的感激产生同情共感；相反，赞同施害者的动机，就几乎不会对受难者的愤恨产生任何的同情共感</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%AF%B9%E5%89%8D%E9%9D%A2%E5%87%A0%E7%AB%A0%E7%9A%84%E8%A6%81%E7%82%B9%E9%87%8D%E8%BF%B0"><span class="toc-text">第四章 对前面几章的要点重述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AF%B9%E5%8A%9F%E8%BF%87%E6%84%9F%E7%9A%84%E5%88%86%E6%9E%90"><span class="toc-text">第五章 对功过感的分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AF%87-%E8%AE%BA%E6%AD%A3%E4%B9%89%E5%92%8C%E4%BB%81%E6%85%88"><span class="toc-text">第二篇 论正义和仁慈</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%B8%A4%E7%A7%8D%E5%BE%B7%E6%80%A7%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-text">第一章 两种德性的比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%AD%A3%E4%B9%89%E6%84%9F%E3%80%81%E6%82%94%E6%81%A8%E4%BB%A5%E5%8F%8A%E5%AF%B9%E5%8A%9F%E5%8A%B3%E7%9A%84%E6%84%8F%E8%AF%86"><span class="toc-text">第二章 论正义感、悔恨以及对功劳的意识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E8%87%AA%E7%84%B6%E8%BF%99%E7%A7%8D%E6%9E%84%E9%80%A0%E7%9A%84%E6%95%88%E7%94%A8"><span class="toc-text">第三章 论自然这种构造的效用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AF%87-%E8%AE%BA%E6%9C%BA%E8%BF%90%E5%9C%A8%E8%A1%8C%E4%B8%BA%E5%8A%9F%E8%BF%87%E6%96%B9%E9%9D%A2%E5%AF%B9%E4%BA%BA%E7%B1%BB%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第三篇 论机运在行为功过方面对人类情感的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E6%9C%BA%E8%BF%90%E4%BA%A7%E7%94%9F%E8%BF%99%E7%A7%8D%E5%BD%B1%E5%93%8D%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-text">第一章 论机运产生这种影响的原因</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%9C%BA%E8%BF%90%E7%9A%84%E8%BF%99%E7%A7%8D%E5%BD%B1%E5%93%8D%E7%9A%84%E7%A8%8B%E5%BA%A6"><span class="toc-text">第二章 论机运的这种影响的程度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E6%83%85%E6%84%9F%E8%BF%99%E7%A7%8D%E4%B8%8D%E8%A7%84%E5%88%99%E6%80%A7%E7%9A%84%E7%BB%88%E6%9E%81%E5%8E%9F%E5%9B%A0"><span class="toc-text">第三章 论情感这种不规则性的终极原因</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%B7-%E8%AE%BA%E8%AF%84%E5%88%A4%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E6%83%85%E6%84%9F%E5%92%8C%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%9F%BA%E7%A1%80%EF%BC%8C%E5%85%BC%E8%AE%BA%E4%B9%89%E5%8A%A1%E6%84%9F"><span class="toc-text">第三卷 论评判我们自己情感和行为的基础，兼论义务感</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E8%87%AA%E6%88%91%E8%B5%9E%E5%90%8C%E5%92%8C%E8%87%AA%E6%88%91%E8%B0%B4%E8%B4%A3%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">第一章 论自我赞同和自我谴责的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E5%AF%B9%E8%B5%9E%E6%89%AC%E5%92%8C%E5%80%BC%E5%BE%97%E8%B5%9E%E6%89%AC%E7%9A%84%E5%96%9C%E7%88%B1%EF%BC%9B%E4%BB%A5%E5%8F%8A%E5%AF%B9%E8%B0%B4%E8%B4%A3%E5%92%8C%E8%AF%A5%E5%8F%97%E8%B0%B4%E8%B4%A3%E7%9A%84%E7%95%8F%E6%83%A7"><span class="toc-text">第二章 论对赞扬和值得赞扬的喜爱；以及对谴责和该受谴责的畏惧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E8%89%AF%E5%BF%83%E7%9A%84%E5%BD%B1%E5%93%8D%E5%92%8C%E6%9D%83%E5%A8%81"><span class="toc-text">第三章 论良心的影响和权威</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%BA%E8%87%AA%E6%88%91%E8%92%99%E9%AA%97%E7%9A%84%E5%A4%A9%E6%80%A7%EF%BC%8C%E5%85%BC%E8%AE%BA%E4%B8%80%E8%88%AC%E5%87%86%E5%88%99%E7%9A%84%E8%B5%B7%E6%BA%90%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="toc-text">第四章 论自我蒙骗的天性，兼论一般准则的起源和作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%AE%BA%E9%81%93%E5%BE%B7%E4%B8%80%E8%88%AC%E5%87%86%E5%88%99%E7%9A%84%E5%BD%B1%E5%93%8D%E5%92%8C%E6%9D%83%E5%A8%81%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%AE%83%E4%BB%AC%E5%BA%94%E5%BD%93%E8%A2%AB%E8%A7%86%E4%B8%BA%E7%A5%9E%E7%9A%84%E6%B3%95%E5%88%99"><span class="toc-text">第五章 论道德一般准则的影响和权威，以及它们应当被视为神的法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E4%B9%89%E5%8A%A1%E6%84%9F%E5%BA%94%E8%AF%A5%E6%88%90%E4%B8%BA%E6%88%91%E4%BB%AC%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%94%AF%E4%B8%80%E5%8E%9F%E5%88%99%EF%BC%9B%E4%BB%A5%E5%8F%8A%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E5%96%9C%E7%88%B1%EF%BC%8C%E5%AE%83%E5%BA%94%E8%AF%A5%E5%90%8C%E5%85%B6%E4%BB%96%E5%8A%A8%E6%9C%BA%E4%B8%80%E8%B5%B7%E5%8F%91%E7%94%9F%E4%BD%9C%E7%94%A8"><span class="toc-text">第六章 在什么情况下，义务感应该成为我们行为的唯一原则；以及在什么情况喜爱，它应该同其他动机一起发生作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%B7-%E8%AE%BA%E6%95%88%E7%94%A8%E5%AF%B9%E8%B5%9E%E5%90%8C%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第四卷 论效用对赞同情感的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E6%95%88%E7%94%A8%E7%9A%84%E8%A1%A8%E7%8E%B0%E8%B5%8B%E4%BA%88%E4%B8%80%E5%88%87%E5%B7%A5%E8%89%BA%E5%93%81%E7%9A%84%E7%BE%8E%EF%BC%8C%E5%85%BC%E8%AE%BA%E8%BF%99%E7%A7%8D%E7%BE%8E%E6%89%80%E5%85%B7%E6%9C%89%E7%9A%84%E5%B9%BF%E6%B3%9B%E5%BD%B1%E5%93%8D"><span class="toc-text">第一章 论效用的表现赋予一切工艺品的美，兼论这种美所具有的广泛影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%95%88%E7%94%A8%E7%9A%84%E8%A1%A8%E7%8E%B0%E8%B5%8B%E4%BA%88%E4%BA%BA%E7%9A%84%E5%93%81%E8%B4%A8%E5%92%8C%E8%A1%8C%E4%B8%BA%E7%9A%84%E7%BE%8E%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%85%B3%E4%BA%8E%E8%BF%99%E7%A7%8D%E7%BE%8E%E7%9A%84%E7%9F%A5%E8%A7%89%E5%8F%AF%E8%83%BD%E5%9C%A8%E4%BD%95%E7%A7%8D%E7%A8%8B%E5%BA%A6%E4%B8%8A%E8%A2%AB%E7%9C%8B%E6%88%90%E8%B5%9E%E5%90%8C%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8E%9F%E5%88%99%E4%B9%8B%E4%B8%80"><span class="toc-text">第二章 论效用的表现赋予人的品质和行为的美，以及关于这种美的知觉可能在何种程度上被看成赞同的初始原则之一</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%B7-%E8%AE%BA%E4%B9%A0%E6%83%AF%E5%92%8C%E6%97%B6%E5%B0%9A%E5%AF%B9%E6%9C%89%E5%85%B3%E9%81%93%E5%BE%B7%E8%B5%9E%E5%90%8C%E5%92%8C%E4%B8%8D%E8%B5%9E%E5%90%8C%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第五卷 论习惯和时尚对有关道德赞同和不赞同情感的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E4%B9%A0%E6%83%AF%E5%92%8C%E6%97%B6%E5%B0%9A%E5%AF%B9%E6%88%91%E4%BB%AC%E7%BE%8E%E4%B8%91%E8%A7%82%E5%BF%B5%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第一章 论习惯和时尚对我们美丑观念的影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E4%B9%A0%E6%83%AF%E5%92%8C%E6%97%B6%E5%B0%9A%E5%AF%B9%E9%81%93%E5%BE%B7%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第二章 论习惯和时尚对道德情感的影响</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%B7-%E8%AE%BA%E5%BE%B7%E6%80%A7%E7%9A%84%E5%93%81%E8%B4%A8"><span class="toc-text">第六卷 论德性的品质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-3"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87-%E8%AE%BA%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%93%81%E8%B4%A8%EF%BC%8C%E5%B0%B1%E8%BF%99%E7%A7%8D%E5%93%81%E8%B4%A8%E5%AF%B9%E8%87%AA%E5%B7%B1%E5%B9%B8%E7%A6%8F%E7%9A%84%E5%BD%B1%E5%93%8D%E8%80%8C%E8%A8%80%E6%88%96%E8%AE%BA%E5%AE%A1%E6%85%8E"><span class="toc-text">第一篇 论个人的品质，就这种品质对自己幸福的影响而言或论审慎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AF%87-%E8%AE%BA%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%93%81%E8%B4%A8%EF%BC%8C%E5%B0%B1%E8%BF%99%E7%A7%8D%E5%93%81%E8%B4%A8%E5%AF%B9%E4%BB%96%E4%BA%BA%E5%B9%B8%E7%A6%8F%E7%9A%84%E5%BD%B1%E5%93%8D%E8%80%8C%E8%A8%80"><span class="toc-text">第二篇 论个人的品质，就这种品质对他人幸福的影响而言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-4"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E4%B8%AA%E4%BD%93%E8%A2%AB%E8%87%AA%E7%84%B6%E6%8E%A8%E8%8D%90%E7%BB%99%E6%88%91%E4%BB%AC%E7%85%A7%E6%96%99%E5%92%8C%E5%85%B3%E5%BF%83%E7%9A%84%E9%A1%BA%E5%BA%8F"><span class="toc-text">第一章 论个体被自然推荐给我们照料和关心的顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E7%BE%A4%E4%BD%93%E8%A2%AB%E8%87%AA%E7%84%B6%E6%8E%A8%E8%8D%90%E7%BB%99%E6%88%91%E4%BB%AC%E4%BB%81%E7%88%B1%E7%9A%84%E9%A1%BA%E5%BA%8F"><span class="toc-text">第二章 论群体被自然推荐给我们仁爱的顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E6%99%AE%E9%81%8D%E5%B9%BF%E6%B3%9B%E7%9A%84%E4%BB%81%E7%88%B1"><span class="toc-text">第三章 论普遍广泛的仁爱</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AF%87-%E8%AE%BA%E8%87%AA%E6%88%91%E6%8E%A7%E5%88%B6"><span class="toc-text">第三篇 论自我控制</span></a></li></ol></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%8A%E9%81%93%E5%BE%B7%E6%83%85%E6%93%8D%E8%AE%BA%E3%80%8B%E5%AF%BC%E8%AF%BB"><span class="toc-text">《道德情操论》导读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%80%8A%E9%81%93%E5%BE%B7%E6%83%85%E6%93%8D%E8%AE%BA%E3%80%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%E5%92%8C%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9"><span class="toc-text">《道德情操论》的基本结构和主要内容</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%B7-%E8%AE%BA%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%90%88%E5%AE%9C%E6%80%A7"><span class="toc-text">第一卷 论行为的合宜性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87-%E8%AE%BA%E5%90%88%E5%AE%9C%E6%84%9F"><span class="toc-text">第一篇 论合宜感</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E5%90%8C%E6%83%85%E5%85%B1%E6%84%9F"><span class="toc-text">第一章 论同情共感</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E7%9B%B8%E4%BA%92%E5%85%B1%E6%83%85%E7%9A%84%E6%84%89%E6%82%A6"><span class="toc-text">第二章 论相互共情的愉悦</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E9%80%9A%E8%BF%87%E5%88%AB%E4%BA%BA%E7%9A%84%E6%84%9F%E6%83%85%E5%90%8C%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%9F%E6%83%85%E6%98%AF%E5%90%A6%E4%B8%80%E8%87%B4%EF%BC%8C%E6%9D%A5%E5%88%A4%E6%96%AD%E5%89%8D%E8%80%85%E6%98%AF%E5%90%A6%E5%90%88%E5%AE%9C%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">第三章 论通过别人的感情同我们自己的感情是否一致，来判断前者是否合宜的方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%BB%AD%E5%89%8D%E7%AB%A0"><span class="toc-text">第四章 续前章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%AE%BA%E5%8F%AF%E4%BA%B2%E5%92%8C%E5%8F%AF%E6%95%AC%E7%9A%84%E5%BE%B7%E6%80%A7"><span class="toc-text">第五章 论可亲和可敬的德性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AF%87-%E8%AE%BA%E4%B8%8E%E5%90%88%E5%AE%9C%E6%80%A7%E7%9B%B8%E5%AE%B9%E7%9A%84%E5%90%84%E7%A7%8D%E7%A8%8B%E5%BA%A6%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第二篇 论与合宜性相容的各种程度的激情</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-2"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E6%BA%90%E4%BA%8E%E8%82%89%E4%BD%93%E7%9A%84%E5%90%84%E7%A7%8D%E6%BF%80%E6%83%85"><span class="toc-text">第一章 论源于肉体的各种激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%BA%90%E4%BA%8E%E6%83%B3%E8%B1%A1%E7%9A%84%E6%9F%90%E7%A7%8D%E7%89%B9%E6%AE%8A%E5%81%8F%E5%90%91%E6%88%96%E4%B9%A0%E6%83%AF%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第二章 论源于想象的某种特殊偏向或习惯的激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E4%B8%8D%E5%90%88%E7%BE%A4%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第三章 论不合群的激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%BA%E5%90%88%E7%BE%A4%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第四章 论合群的激情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%AE%BA%E8%87%AA%E7%A7%81%E7%9A%84%E6%BF%80%E6%83%85"><span class="toc-text">第五章 论自私的激情</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AF%87-%E8%AE%BA%E5%A4%84%E5%A2%83%E7%9A%84%E9%A1%BA%E9%80%86%E5%AF%B9%E4%BA%BA%E4%BB%AC%E5%88%A4%E6%96%AD%E8%A1%8C%E4%B8%BA%E5%90%88%E5%AE%9C%E6%80%A7%E6%89%80%E4%BA%A7%E7%94%9F%E7%9A%84%E5%BD%B1%E5%93%8D%EF%BC%9B%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E4%B8%80%E7%A7%8D%E6%83%85%E5%86%B5%E4%B8%8B%E6%AF%94%E5%9C%A8%E5%8F%A6%E4%B8%80%E7%A7%8D%E6%83%85%E5%86%B5%E4%B8%8B%E6%9B%B4%E5%AE%B9%E6%98%93%E5%BE%97%E5%88%B0%E4%BA%BA%E4%BB%AC%E7%9A%84%E8%B5%9E%E5%90%8C"><span class="toc-text">第三篇 论处境的顺逆对人们判断行为合宜性所产生的影响；以及为什么在一种情况下比在另一种情况下更容易得到人们的赞同</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%99%BD%E7%84%B6%E6%88%91%E4%BB%AC%E5%AF%B9%E6%82%B2%E4%BC%A4%E7%9A%84%E5%90%8C%E6%83%85%E4%B8%80%E8%88%AC%E6%98%AF%E6%AF%94%E6%88%91%E4%BB%AC%E5%AF%B9%E5%BF%AB%E4%B9%90%E7%9A%84%E5%90%8C%E6%83%85%E6%9B%B4%E4%B8%BA%E9%B2%9C%E6%B4%BB%E7%9A%84%E6%84%9F%E5%8F%97%EF%BC%8C%E4%BD%86%E6%98%AF%E5%AE%83%E5%BE%80%E5%BE%80%E4%B8%8D%E5%A6%82%E5%BD%93%E4%BA%8B%E4%BA%BA%E8%87%AA%E7%84%B6%E6%84%9F%E5%8F%97%E5%88%B0%E7%9A%84%E9%82%A3%E4%B9%88%E5%BC%BA%E7%83%88"><span class="toc-text">第一章 虽然我们对悲伤的同情一般是比我们对快乐的同情更为鲜活的感受，但是它往往不如当事人自然感受到的那么强烈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%B7-%E8%AE%BA%E5%8A%9F%E4%B8%8E%E8%BF%87%EF%BC%8C%E6%88%96%E8%AE%BA%E5%96%84%E7%BD%9A%E7%9A%84%E5%AF%B9%E8%B1%A1"><span class="toc-text">第二卷 论功与过，或论善罚的对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87-%E8%AE%BA%E5%8A%9F%E8%BF%87%E6%84%9F"><span class="toc-text">第一篇 论功过感</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%84%9F%E6%BF%80%E5%92%8C%E6%84%A4%E6%81%A8%E7%9A%84%E6%81%B0%E5%BD%93%E5%AF%B9%E8%B1%A1"><span class="toc-text">第二章 论感激和愤恨的恰当对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%8D%E8%B5%9E%E5%90%8C%E6%96%BD%E6%81%A9%E8%80%85%E7%9A%84%E8%A1%8C%E4%B8%BA%EF%BC%8C%E5%B0%B1%E5%87%A0%E4%B9%8E%E4%B8%8D%E4%BC%9A%E5%AF%B9%E5%8F%97%E7%9B%8A%E8%80%85%E7%9A%84%E6%84%9F%E6%BF%80%E4%BA%A7%E7%94%9F%E5%90%8C%E6%83%85%E5%85%B1%E6%84%9F%EF%BC%9B%E7%9B%B8%E5%8F%8D%EF%BC%8C%E8%B5%9E%E5%90%8C%E6%96%BD%E5%AE%B3%E8%80%85%E7%9A%84%E5%8A%A8%E6%9C%BA%EF%BC%8C%E5%B0%B1%E5%87%A0%E4%B9%8E%E4%B8%8D%E4%BC%9A%E5%AF%B9%E5%8F%97%E9%9A%BE%E8%80%85%E7%9A%84%E6%84%A4%E6%81%A8%E4%BA%A7%E7%94%9F%E4%BB%BB%E4%BD%95%E7%9A%84%E5%90%8C%E6%83%85%E5%85%B1%E6%84%9F"><span class="toc-text">第三章 不赞同施恩者的行为，就几乎不会对受益者的感激产生同情共感；相反，赞同施害者的动机，就几乎不会对受难者的愤恨产生任何的同情共感</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%AF%B9%E5%89%8D%E9%9D%A2%E5%87%A0%E7%AB%A0%E7%9A%84%E8%A6%81%E7%82%B9%E9%87%8D%E8%BF%B0"><span class="toc-text">第四章 对前面几章的要点重述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%AF%B9%E5%8A%9F%E8%BF%87%E6%84%9F%E7%9A%84%E5%88%86%E6%9E%90"><span class="toc-text">第五章 对功过感的分析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AF%87-%E8%AE%BA%E6%AD%A3%E4%B9%89%E5%92%8C%E4%BB%81%E6%85%88"><span class="toc-text">第二篇 论正义和仁慈</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%B8%A4%E7%A7%8D%E5%BE%B7%E6%80%A7%E7%9A%84%E6%AF%94%E8%BE%83"><span class="toc-text">第一章 两种德性的比较</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%AD%A3%E4%B9%89%E6%84%9F%E3%80%81%E6%82%94%E6%81%A8%E4%BB%A5%E5%8F%8A%E5%AF%B9%E5%8A%9F%E5%8A%B3%E7%9A%84%E6%84%8F%E8%AF%86"><span class="toc-text">第二章 论正义感、悔恨以及对功劳的意识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E8%87%AA%E7%84%B6%E8%BF%99%E7%A7%8D%E6%9E%84%E9%80%A0%E7%9A%84%E6%95%88%E7%94%A8"><span class="toc-text">第三章 论自然这种构造的效用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AF%87-%E8%AE%BA%E6%9C%BA%E8%BF%90%E5%9C%A8%E8%A1%8C%E4%B8%BA%E5%8A%9F%E8%BF%87%E6%96%B9%E9%9D%A2%E5%AF%B9%E4%BA%BA%E7%B1%BB%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第三篇 论机运在行为功过方面对人类情感的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E6%9C%BA%E8%BF%90%E4%BA%A7%E7%94%9F%E8%BF%99%E7%A7%8D%E5%BD%B1%E5%93%8D%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-text">第一章 论机运产生这种影响的原因</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%9C%BA%E8%BF%90%E7%9A%84%E8%BF%99%E7%A7%8D%E5%BD%B1%E5%93%8D%E7%9A%84%E7%A8%8B%E5%BA%A6"><span class="toc-text">第二章 论机运的这种影响的程度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E6%83%85%E6%84%9F%E8%BF%99%E7%A7%8D%E4%B8%8D%E8%A7%84%E5%88%99%E6%80%A7%E7%9A%84%E7%BB%88%E6%9E%81%E5%8E%9F%E5%9B%A0"><span class="toc-text">第三章 论情感这种不规则性的终极原因</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%B7-%E8%AE%BA%E8%AF%84%E5%88%A4%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E6%83%85%E6%84%9F%E5%92%8C%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%9F%BA%E7%A1%80%EF%BC%8C%E5%85%BC%E8%AE%BA%E4%B9%89%E5%8A%A1%E6%84%9F"><span class="toc-text">第三卷 论评判我们自己情感和行为的基础，兼论义务感</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E8%87%AA%E6%88%91%E8%B5%9E%E5%90%8C%E5%92%8C%E8%87%AA%E6%88%91%E8%B0%B4%E8%B4%A3%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">第一章 论自我赞同和自我谴责的原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E5%AF%B9%E8%B5%9E%E6%89%AC%E5%92%8C%E5%80%BC%E5%BE%97%E8%B5%9E%E6%89%AC%E7%9A%84%E5%96%9C%E7%88%B1%EF%BC%9B%E4%BB%A5%E5%8F%8A%E5%AF%B9%E8%B0%B4%E8%B4%A3%E5%92%8C%E8%AF%A5%E5%8F%97%E8%B0%B4%E8%B4%A3%E7%9A%84%E7%95%8F%E6%83%A7"><span class="toc-text">第二章 论对赞扬和值得赞扬的喜爱；以及对谴责和该受谴责的畏惧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E8%89%AF%E5%BF%83%E7%9A%84%E5%BD%B1%E5%93%8D%E5%92%8C%E6%9D%83%E5%A8%81"><span class="toc-text">第三章 论良心的影响和权威</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%BA%E8%87%AA%E6%88%91%E8%92%99%E9%AA%97%E7%9A%84%E5%A4%A9%E6%80%A7%EF%BC%8C%E5%85%BC%E8%AE%BA%E4%B8%80%E8%88%AC%E5%87%86%E5%88%99%E7%9A%84%E8%B5%B7%E6%BA%90%E5%92%8C%E4%BD%9C%E7%94%A8"><span class="toc-text">第四章 论自我蒙骗的天性，兼论一般准则的起源和作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E8%AE%BA%E9%81%93%E5%BE%B7%E4%B8%80%E8%88%AC%E5%87%86%E5%88%99%E7%9A%84%E5%BD%B1%E5%93%8D%E5%92%8C%E6%9D%83%E5%A8%81%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%AE%83%E4%BB%AC%E5%BA%94%E5%BD%93%E8%A2%AB%E8%A7%86%E4%B8%BA%E7%A5%9E%E7%9A%84%E6%B3%95%E5%88%99"><span class="toc-text">第五章 论道德一般准则的影响和权威，以及它们应当被视为神的法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%EF%BC%8C%E4%B9%89%E5%8A%A1%E6%84%9F%E5%BA%94%E8%AF%A5%E6%88%90%E4%B8%BA%E6%88%91%E4%BB%AC%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%94%AF%E4%B8%80%E5%8E%9F%E5%88%99%EF%BC%9B%E4%BB%A5%E5%8F%8A%E5%9C%A8%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E5%96%9C%E7%88%B1%EF%BC%8C%E5%AE%83%E5%BA%94%E8%AF%A5%E5%90%8C%E5%85%B6%E4%BB%96%E5%8A%A8%E6%9C%BA%E4%B8%80%E8%B5%B7%E5%8F%91%E7%94%9F%E4%BD%9C%E7%94%A8"><span class="toc-text">第六章 在什么情况下，义务感应该成为我们行为的唯一原则；以及在什么情况喜爱，它应该同其他动机一起发生作用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%B7-%E8%AE%BA%E6%95%88%E7%94%A8%E5%AF%B9%E8%B5%9E%E5%90%8C%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第四卷 论效用对赞同情感的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E6%95%88%E7%94%A8%E7%9A%84%E8%A1%A8%E7%8E%B0%E8%B5%8B%E4%BA%88%E4%B8%80%E5%88%87%E5%B7%A5%E8%89%BA%E5%93%81%E7%9A%84%E7%BE%8E%EF%BC%8C%E5%85%BC%E8%AE%BA%E8%BF%99%E7%A7%8D%E7%BE%8E%E6%89%80%E5%85%B7%E6%9C%89%E7%9A%84%E5%B9%BF%E6%B3%9B%E5%BD%B1%E5%93%8D"><span class="toc-text">第一章 论效用的表现赋予一切工艺品的美，兼论这种美所具有的广泛影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E6%95%88%E7%94%A8%E7%9A%84%E8%A1%A8%E7%8E%B0%E8%B5%8B%E4%BA%88%E4%BA%BA%E7%9A%84%E5%93%81%E8%B4%A8%E5%92%8C%E8%A1%8C%E4%B8%BA%E7%9A%84%E7%BE%8E%EF%BC%8C%E4%BB%A5%E5%8F%8A%E5%85%B3%E4%BA%8E%E8%BF%99%E7%A7%8D%E7%BE%8E%E7%9A%84%E7%9F%A5%E8%A7%89%E5%8F%AF%E8%83%BD%E5%9C%A8%E4%BD%95%E7%A7%8D%E7%A8%8B%E5%BA%A6%E4%B8%8A%E8%A2%AB%E7%9C%8B%E6%88%90%E8%B5%9E%E5%90%8C%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8E%9F%E5%88%99%E4%B9%8B%E4%B8%80"><span class="toc-text">第二章 论效用的表现赋予人的品质和行为的美，以及关于这种美的知觉可能在何种程度上被看成赞同的初始原则之一</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%B7-%E8%AE%BA%E4%B9%A0%E6%83%AF%E5%92%8C%E6%97%B6%E5%B0%9A%E5%AF%B9%E6%9C%89%E5%85%B3%E9%81%93%E5%BE%B7%E8%B5%9E%E5%90%8C%E5%92%8C%E4%B8%8D%E8%B5%9E%E5%90%8C%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第五卷 论习惯和时尚对有关道德赞同和不赞同情感的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E4%B9%A0%E6%83%AF%E5%92%8C%E6%97%B6%E5%B0%9A%E5%AF%B9%E6%88%91%E4%BB%AC%E7%BE%8E%E4%B8%91%E8%A7%82%E5%BF%B5%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第一章 论习惯和时尚对我们美丑观念的影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E4%B9%A0%E6%83%AF%E5%92%8C%E6%97%B6%E5%B0%9A%E5%AF%B9%E9%81%93%E5%BE%B7%E6%83%85%E6%84%9F%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">第二章 论习惯和时尚对道德情感的影响</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%B7-%E8%AE%BA%E5%BE%B7%E6%80%A7%E7%9A%84%E5%93%81%E8%B4%A8"><span class="toc-text">第六卷 论德性的品质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-3"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AF%87-%E8%AE%BA%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%93%81%E8%B4%A8%EF%BC%8C%E5%B0%B1%E8%BF%99%E7%A7%8D%E5%93%81%E8%B4%A8%E5%AF%B9%E8%87%AA%E5%B7%B1%E5%B9%B8%E7%A6%8F%E7%9A%84%E5%BD%B1%E5%93%8D%E8%80%8C%E8%A8%80%E6%88%96%E8%AE%BA%E5%AE%A1%E6%85%8E"><span class="toc-text">第一篇 论个人的品质，就这种品质对自己幸福的影响而言或论审慎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AF%87-%E8%AE%BA%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%93%81%E8%B4%A8%EF%BC%8C%E5%B0%B1%E8%BF%99%E7%A7%8D%E5%93%81%E8%B4%A8%E5%AF%B9%E4%BB%96%E4%BA%BA%E5%B9%B8%E7%A6%8F%E7%9A%84%E5%BD%B1%E5%93%8D%E8%80%8C%E8%A8%80"><span class="toc-text">第二篇 论个人的品质，就这种品质对他人幸福的影响而言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-4"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BA%E4%B8%AA%E4%BD%93%E8%A2%AB%E8%87%AA%E7%84%B6%E6%8E%A8%E8%8D%90%E7%BB%99%E6%88%91%E4%BB%AC%E7%85%A7%E6%96%99%E5%92%8C%E5%85%B3%E5%BF%83%E7%9A%84%E9%A1%BA%E5%BA%8F"><span class="toc-text">第一章 论个体被自然推荐给我们照料和关心的顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%AE%BA%E7%BE%A4%E4%BD%93%E8%A2%AB%E8%87%AA%E7%84%B6%E6%8E%A8%E8%8D%90%E7%BB%99%E6%88%91%E4%BB%AC%E4%BB%81%E7%88%B1%E7%9A%84%E9%A1%BA%E5%BA%8F"><span class="toc-text">第二章 论群体被自然推荐给我们仁爱的顺序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%AE%BA%E6%99%AE%E9%81%8D%E5%B9%BF%E6%B3%9B%E7%9A%84%E4%BB%81%E7%88%B1"><span class="toc-text">第三章 论普遍广泛的仁爱</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AF%87-%E8%AE%BA%E8%87%AA%E6%88%91%E6%8E%A7%E5%88%B6"><span class="toc-text">第三篇 论自我控制</span></a></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【学之思之】FL studio知识整理</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【学之思之】FL studio知识整理">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2023/03/12/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/FL%20Studio%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="略">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-03-12">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-08-27">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="FL studio">
+        
+          <meta 
+            property="og:article:tag" 
+            content="水果">
+        
+          <meta 
+            property="og:article:tag" 
+            content="音乐制作软件">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">FL studio</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%8F%82%E8%80%83%E8%A7%86%E9%A2%91"><span class="toc-text">学习参考视频</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%B0%B4%E6%9E%9C%E5%AE%98%E6%96%B9%E3%80%91FLStudio20%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%A4%A7%E5%85%A8"><span class="toc-text">【水果官方】FLStudio20入门教程大全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E5%AE%98%E6%96%B9%E6%AD%A3%E7%89%88%E3%80%91FL-studio-20-%E6%B0%B4%E6%9E%9C%E4%B8%AD%E6%96%87%E5%BF%AB%E9%80%9F%E6%93%8D%E4%BD%9C%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B"><span class="toc-text">【官方正版】FL studio 20 水果中文快速操作入门教程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-text">学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#01-%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE"><span class="toc-text">01 基础设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-%E7%95%8C%E9%9D%A2%E5%8F%8A%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-text">02 界面及基础操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-%E5%8D%95%E8%BD%A8%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">03 单轨编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04-%E9%92%A2%E7%90%B4%E5%8D%B7%E5%B8%98%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">04 钢琴卷帘编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#05-%E6%80%BB%E8%BD%A8%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">05 总轨编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#06-%E4%B9%90%E5%99%A8%E8%B0%83%E5%88%B6%E7%AA%97%E5%8F%A3"><span class="toc-text">06 乐器调制窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#07-%E8%B0%83%E9%9F%B3%E5%8F%B0%E7%95%8C%E9%9D%A2"><span class="toc-text">07 调音台界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#06-%E6%A0%B7%E5%BC%8F%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">06 样式编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#07-%E6%B7%B7%E9%9F%B3%E5%99%A8"><span class="toc-text">07 混音器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E5%A1%91%E6%80%A7%E6%95%88%E6%9E%9C%E5%99%A8"><span class="toc-text">11 塑性效果器</span></a></li></ol></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【学之思之】FL studio知识整理
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-03-11T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-03-12</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/" 
+          class="post-meta-link">
+          学之思之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>1.6k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/FL-studio/" 
+            class="post-meta-link">
+            FL studio
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E6%B0%B4%E6%9E%9C/" 
+            class="post-meta-link">
+            水果
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E9%9F%B3%E4%B9%90%E5%88%B6%E4%BD%9C%E8%BD%AF%E4%BB%B6/" 
+            class="post-meta-link">
+            音乐制作软件
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"></div>
+<h1>FL studio</h1>
+<p>官网：<a target="_blank" rel="noopener" href="https://www.flstudiochina.com/">https://www.flstudiochina.com/</a></p>
+<h1>基础知识</h1>
+<h2 id="学习参考视频">学习参考视频</h2>
+<h3 id="【水果官方】FLStudio20入门教程大全">【水果官方】FLStudio20入门教程大全</h3>
+<p>该套视频一般，剪辑导致了有些部分内容缺失，仅大致了解作曲思路与软件基本操作即可</p>
+<p>视频地址：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1d7411T75W?p=2&amp;vd_source=441b469b61f6f531ebd1092496a39de5">https://www.bilibili.com/video/BV1d7411T75W?p=2&amp;vd_source=441b469b61f6f531ebd1092496a39de5</a></p>
+<h3 id="【官方正版】FL-studio-20-水果中文快速操作入门教程">【官方正版】FL studio 20 水果中文快速操作入门教程</h3>
+<p>该教程有些详细过了头，但适合入门</p>
+<p>视频地址：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1d441187Kq/?spm_id_from=333.788.recommend_more_video.1&amp;vd_source=441b469b61f6f531ebd1092496a39de5">https://www.bilibili.com/video/BV1d441187Kq/?spm_id_from=333.788.recommend_more_video.1&amp;vd_source=441b469b61f6f531ebd1092496a39de5</a></p>
+<h2 id="学习笔记">学习笔记</h2>
+<h3 id="01-基础设置">01 基础设置</h3>
+<p><img src="/image/学之思之/FL/FL-1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-1.png" class="lozad post-image"><br></p>
+<p>1.1、Audio settings</p>
+<p>目的是让软件准确识别电脑声卡，避免出现声音卡顿、无法录音、延迟等因声卡设置有误造成的问题。如无外接声卡，可选择集成声卡，即主声音驱动程序</p>
+<p><img src="/image/学之思之/FL/FL-1.1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-1.1.png" class="lozad post-image"><br></p>
+<p>1.2、MIDI settings<br>
+目的是将外部的硬件控制器连接到电脑被软件识别，如midi键盘</p>
+<p><img src="/image/学之思之/FL/FL-2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-2.png" class="lozad post-image"><br></p>
+<p>1.3、General settings<br>
+主要用于出厂设置</p>
+<p><img src="/image/学之思之/FL/FL-1.2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-1.2.png" class="lozad post-image"><br></p>
+<p>1.4、File settings<br>
+如导入网上下载的音乐素材，设置自动备份等</p>
+<p>1.5、Manage plugins（插件管理）</p>
+<p>NEXUS 2<br>
+链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1-acB4c62PV_1iylHDNrYmQ">https://pan.baidu.com/s/1-acB4c62PV_1iylHDNrYmQ</a></p>
+<p>设置步骤</p>
+<p>1）、option -&gt; manage plugins</p>
+<p>2）、添加插件路径</p>
+<p>3）、start scan</p>
+<p><img src="/image/学之思之/FL/FL-3.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-3.png" class="lozad post-image"><br></p>
+<p>1.6、加载软音源</p>
+<p>插件管理中勾选的软音源均会出现在该列表中，可随时使用</p>
+<p>方法一：通过菜单栏ADD</p>
+<p><img src="/image/学之思之/FL/FL-加载软音源.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-加载软音源.png" class="lozad post-image"><br></p>
+<p>方法二：通过轨道编辑器</p>
+<p><img src="/image/学之思之/FL/FL-轨道编辑器.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-轨道编辑器.png" class="lozad post-image"><br></p>
+<p>1.7、设置工程拍子</p>
+<p><img src="/image/学之思之/FL/FL-project general setting.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-project general setting.png" class="lozad post-image"><br></p>
+<p><img src="/image/学之思之/FL/FL-project general setting-2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-project general setting-2.png" class="lozad post-image"><br></p>
+<h3 id="02-界面及基础操作">02 界面及基础操作</h3>
+<p>2.1、界面</p>
+<p>2.1.1、History历史步骤</p>
+<p><img src="/image/学之思之/FL/FL-History.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-History.png" class="lozad post-image"><br></p>
+<p>可通过History查看并回到之前任一步骤执行的情况</p>
+<p>2.1.2、整个音程文件的音量及音高调节</p>
+<p><img src="/image/学之思之/FL/FL-总音量音高.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-总音量音高.png" class="lozad post-image"><br></p>
+<p>2.1.3、整个工程文件/单音轨播放</p>
+<p><img src="/image/学之思之/FL/FL-工程文件播放.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-工程文件播放.png" class="lozad post-image"><br></p>
+<p><img src="/image/学之思之/FL/FL-单音轨播放.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-单音轨播放.png" class="lozad post-image"><br></p>
+<p>2.1.4、工程文件速度</p>
+<p><img src="/image/学之思之/FL/FL-速度.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-速度.png" class="lozad post-image"><br></p>
+<p>2.1.5、录制</p>
+<p>&lt;1&gt;激活录制按钮，选择单轨模式</p>
+<p><img src="/image/学之思之/FL/FL-录制-1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-录制-1.png" class="lozad post-image"><br></p>
+<p>&lt;2&gt;选择录制的软音源</p>
+<p><img src="/image/学之思之/FL/FL-录制-2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-录制-2.png" class="lozad post-image"><br></p>
+<p>&lt;3&gt;点击播放按键</p>
+<p><img src="/image/学之思之/FL/FL-录制-3.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-录制-3.png" class="lozad post-image"><br></p>
+<p>&lt;4&gt;点击停止按键暂停录制</p>
+<p><img src="/image/学之思之/FL/FL-录制-4.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-录制-4.png" class="lozad post-image"><br></p>
+<p>&lt;5&gt;再次点击录制按钮完成录制，此时方可点击播放按键进行试听，否则在未点灭录制按键的情况下点击播放，则为重新录制</p>
+<p><img src="/image/学之思之/FL/FL-录制-5.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-录制-5.png" class="lozad post-image"><br></p>
+<p>2.1.6、辅助工具</p>
+<p><img src="/image/学之思之/FL/FL-辅助工具.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-辅助工具.png" class="lozad post-image"><br></p>
+<p>&lt;1&gt;Metronome——节拍器</p>
+<p>设置节拍器的声音类型<br>
+<img src="/image/学之思之/FL/FL-节拍器.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-节拍器.png" class="lozad post-image"><br></p>
+<p>&lt;2&gt;wait for input to start playing——点击Midi键盘任意按键开始录制</p>
+<p>&lt;3&gt;Countdown before recording——录制前倒数</p>
+<p>设置倒数拍子<br>
+<img src="/image/学之思之/FL/FL-录制倒计时.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-录制倒计时.png" class="lozad post-image"><br></p>
+<p>&lt;4&gt;Blend recording(overdub)——在之前录制的基础上进行叠加录制</p>
+<p>&lt;5&gt;Loop recording——循环录制</p>
+<p>2.1.7、刻度</p>
+<p><img src="/image/学之思之/FL/FL-刻度1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-刻度1.png" class="lozad post-image"><br></p>
+<p>设置刻度为时间<br>
+<img src="/image/学之思之/FL/FL-刻度2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-刻度2.png" class="lozad post-image"><br></p>
+<p>2.1.8、单轨选择</p>
+<p>选择要编辑的单轨，不同单轨之间的编辑互相独立<br>
+<img src="/image/学之思之/FL/FL-单轨选择.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-单轨选择.png" class="lozad post-image"><br></p>
+<p>2.1.9、面板控制——显示/隐藏</p>
+<p><img src="/image/学之思之/FL/FL-面板.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-面板.png" class="lozad post-image"><br></p>
+<p>&lt;1&gt;View playlist——总轨编辑面板<br>
+<img src="/image/学之思之/FL/FL-总轨编辑面板.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-总轨编辑面板.png" class="lozad post-image"><br></p>
+<p>&lt;2&gt;View piano roll——钢琴卷帘面板<br>
+<img src="/image/学之思之/FL/FL-钢琴卷帘面板.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘面板.png" class="lozad post-image"><br></p>
+<p>&lt;3&gt;View channel rack——单轨编辑面板<br>
+<img src="/image/学之思之/FL/FL-单轨编辑面板.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-单轨编辑面板.png" class="lozad post-image"><br></p>
+<p>&lt;4&gt;View mixer——调音台编辑面板<br>
+<img src="/image/学之思之/FL/FL-调音台面板.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-调音台面板.png" class="lozad post-image"><br></p>
+<p>&lt;5&gt;View browser/plugin picker——左侧栏<br>
+<img src="/image/学之思之/FL/FL-左侧栏.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-左侧栏.png" class="lozad post-image"><br></p>
+<p>水果软件默认自带音源素材<br>
+<img src="/image/学之思之/FL/FL-左侧栏-默认音源.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-左侧栏-默认音源.png" class="lozad post-image"><br></p>
+<p>2.2、基础操作</p>
+<p>2.2.1、框选音轨</p>
+<p>ctrl + 鼠标左键框选</p>
+<p><img src="/image/学之思之/FL/FL-框选.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-框选.png" class="lozad post-image"><br></p>
+<p>2.2.2、复制并紧贴音轨后面粘贴</p>
+<p>框选音轨 + ctrl + B</p>
+<p><img src="/image/学之思之/FL/FL-紧贴复制.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-紧贴复制.png" class="lozad post-image"><br></p>
+<p>2.2.3、独显音轨</p>
+<p><img src="/image/学之思之/FL/FL-4.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-4.png" class="lozad post-image"><br></p>
+<p>2.2.4、常用快捷键</p>
+<p>ctrl + 鼠标滚轮：播放列表横向放大</p>
+<p>alt + 鼠标滚轮：播放列表纵向放大</p>
+<p>2.2.5、设置速度</p>
+<p>2.2.5.1、探测乐曲速度</p>
+<img src="/image/学之思之/FL/FL-11.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-11.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-12.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-12.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-13.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-13.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-14.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-14.png" class="lozad post-image"><br>
+<p>2.2.5.2、更改乐曲速度</p>
+<img src="/image/学之思之/FL/FL-15.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-15.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-16.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-16.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-17.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-17.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-18.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-18.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-19.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-19.png" class="lozad post-image"><br>
+<h3 id="03-单轨编辑器">03 单轨编辑器</h3>
+<p>3.1、属性调节</p>
+<p>3.1.1、音量/音相调节</p>
+<p><img src="/image/学之思之/FL/FL-音量音相.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-音量音相.png" class="lozad post-image"><br></p>
+<p>3.1.2、激活/取消</p>
+<p><img src="/image/学之思之/FL/FL-激活与取消.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-激活与取消.png" class="lozad post-image"><br></p>
+<p>3.1.3、映射调音台轨道</p>
+<p><img src="/image/学之思之/FL/FL-映射调音台.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-映射调音台.png" class="lozad post-image"><br></p>
+<p>3.2、显示</p>
+<p>3.2.1、显示音源类型</p>
+<p><img src="/image/学之思之/FL/FL-音频素材或软音源.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-音频素材或软音源.png" class="lozad post-image"><br></p>
+<h3 id="04-钢琴卷帘编辑器">04 钢琴卷帘编辑器</h3>
+<p>4.1、属性控制</p>
+<p><img src="/image/学之思之/FL/FL-钢琴卷帘属性控制.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘属性控制.png" class="lozad post-image"><br></p>
+<p>4.1.1、音符声相使音符在左/右声道出现<br>
+<img src="/image/学之思之/FL/FL-钢琴卷帘-声相.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-声相.png" class="lozad post-image"><br></p>
+<p>4.1.2、音符音量<br>
+<img src="/image/学之思之/FL/FL-钢琴卷帘-音符音量.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-音符音量.png" class="lozad post-image"><br></p>
+<p>4.1.3、音符延音（不常用此去对音符进行延音操作）</p>
+<p>4.1.4、通道声相（控制每一时刻的声相变化）</p>
+<p>4.1.5、通道音量（控制每一时刻的音量变化）<br>
+<img src="/image/学之思之/FL/FL-钢琴卷帘-通道音量.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-通道音量.png" class="lozad post-image"><br>
+<img src="/image/学之思之/FL/FL-钢琴卷帘-通道音量2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-通道音量2.png" class="lozad post-image"><br>
+<img src="/image/学之思之/FL/FL-钢琴卷帘-通道音量3.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-通道音量3.png" class="lozad post-image"><br></p>
+<p>删除所绘制曲线的方法：<br>
+<img src="/image/学之思之/FL/FL-钢琴卷帘-通道音量4.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-通道音量4.png" class="lozad post-image"><br></p>
+<p>4.1.6、通道音高（控制每一时刻的音高变化）</p>
+<p>4.2、工具栏</p>
+<img src="/image/学之思之/FL/FL-钢琴卷帘-工具.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-工具.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-钢琴卷帘-吸附精度刷子.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-吸附精度刷子.png" class="lozad post-image"><br>
+<p>4.2.1、框选快捷键：ctrl + 鼠标左键</p>
+<p><img src="/image/学之思之/FL/FL-钢琴卷帘-框选.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-框选.png" class="lozad post-image"><br></p>
+<p>4.2.2、紧接上段内容复制框选内容 + 快捷键：ctrl + b</p>
+<p>4.2.3、拖拽复制框选内容 + shift + 鼠标左键拖拽</p>
+<p>4.2.4、多选<br>
+shift + 鼠标左键</p>
+<p><img src="/image/学之思之/FL/FL-钢琴卷帘-多选.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-多选.png" class="lozad post-image"><br></p>
+<p>4.2.5、属性设置双击任意一个音符，可打开属性设置窗口</p>
+<p><img src="/image/学之思之/FL/FL-钢琴卷帘-属性设置.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-钢琴卷帘-属性设置.png" class="lozad post-image"><br></p>
+<h3 id="05-总轨编辑器">05 总轨编辑器</h3>
+<p>5.1、工具</p>
+<p><img src="/image/学之思之/FL/FL-总轨编辑面板-工具栏.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-总轨编辑面板-工具栏.png" class="lozad post-image"><br></p>
+<p>5.2、单独编辑某一模块的方法</p>
+<p><img src="/image/学之思之/FL/FL-总轨编辑面板-make unique.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-总轨编辑面板-make unique.png" class="lozad post-image"><br></p>
+<h3 id="06-乐器调制窗口">06 乐器调制窗口</h3>
+<p>6.1、音频素材和软音源</p>
+<img src="/image/学之思之/FL/FL-乐器调制窗口-软音源.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-软音源.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-乐器调制窗口-音频素材.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-音频素材.png" class="lozad post-image"><br>
+<p>6.2、调节旋钮</p>
+<p>PITCH旋钮为调节音调的高低，RANGE为音调调节的级数，1个数值代表1个半音</p>
+<img src="/image/学之思之/FL/FL-乐器调制窗口-1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-1.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-乐器调制窗口-2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-2.png" class="lozad post-image"><br>
+<p>6.3、Time stretching</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-3.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-3.png" class="lozad post-image"><br></p>
+<p>PITCH旋钮：变调不变速，改变音频的音调而不使其速度发生改变</p>
+<p>MUL旋钮：变速不变调</p>
+<p>TIME旋钮：变速变调</p>
+<p>MODE模式：在总轨编辑器中，拖动模块可以改变模块的长度</p>
+<img src="/image/学之思之/FL/FL-乐器调制窗口-4.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-4.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-乐器调制窗口-5.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-5.png" class="lozad post-image"><br>
+<p>MODE为Resample：点击STRETCH，拉伸模块的同时会拉伸音频，音调会随之变化</p>
+<img src="/image/学之思之/FL/FL-乐器调制窗口-7.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-7.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-乐器调制窗口-6.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-6.png" class="lozad post-image"><br>
+<p>MODE为Auto或Stretch<br>
+点击STRETCH，拉伸模块的同时会拉伸音频，音调保持不变</p>
+<p>6.4、Precomputer effects</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-8.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-8.png" class="lozad post-image"><br></p>
+<p>Nomalize——音量最大化，整体波形的均匀最大化</p>
+<img src="/image/学之思之/FL/FL-乐器调制窗口-9.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-9.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-乐器调制窗口-10.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-10.png" class="lozad post-image"><br>
+<p>Reverse——反向</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-11.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-11.png" class="lozad post-image"><br></p>
+<p>LENGTH旋钮——调长音频的长度</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-14.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-14.png" class="lozad post-image"><br></p>
+<p>in旋钮——调低开头的音量</p>
+<p>out旋钮——调低结尾的音量</p>
+<img src="/image/学之思之/FL/FL-乐器调制窗口-12.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-12.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-乐器调制窗口-13.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-13.png" class="lozad post-image"><br>
+<p>6.5、Volume——Envelope</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-15.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-15.png" class="lozad post-image"><br></p>
+<p>6.6、振荡器</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-16.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-16.png" class="lozad post-image"><br></p>
+<p>6.7、移调面板如使音频从C大调变为D大调</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-17.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-17.png" class="lozad post-image"><br></p>
+<p>6.8、Polyphony面板</p>
+<p>Porta使首尾交替的两个音产生滑音效果</p>
+<img src="/image/学之思之/FL/FL-乐器调制窗口-18.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-18.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-乐器调制窗口-19.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-19.png" class="lozad post-image"><br>
+<p>6.9、Arpeggiator——琶音器</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-20.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-20.png" class="lozad post-image"><br></p>
+<p>从下往上弹奏</p>
+<img src="/image/学之思之/FL/FL-乐器调制窗口-21.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-21.png" class="lozad post-image">
+<img src="/image/学之思之/FL/FL-乐器调制窗口-22.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-22.png" class="lozad post-image"><br>
+<p>从上往下弹奏</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-23.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-23.png" class="lozad post-image"><br></p>
+<p>从上往下再从下往上弹奏</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-24.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-24.png" class="lozad post-image"><br></p>
+<p>从上往下再从下往上弹奏的另一版本</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-25.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-25.png" class="lozad post-image"><br></p>
+<p>随机</p>
+<p><img src="/image/学之思之/FL/FL-乐器调制窗口-26.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-乐器调制窗口-26.png" class="lozad post-image"><br></p>
+<h3 id="07-调音台界面">07 调音台界面</h3>
+<h3 id="06-样式编辑器">06 样式编辑器</h3>
+<p>pattern面板中文俗称“样式编辑器”，该部分主要作用是为播放列表提供声部，如钢琴、小提琴等，将声部在样式编辑器制作完成后拖放到播放列表进行合成，也就组成了一首乐曲</p>
+<p><img src="/image/学之思之/FL/FL-5.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-5.png" class="lozad post-image">&lt;br</p>
+<p>音乐制作基本流程</p>
+<p><img src="/image/学之思之/FL/FL-6.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-6.png" class="lozad post-image"><br></p>
+<p><img src="/image/学之思之/FL/FL-7.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-7.png" class="lozad post-image"><br></p>
+<p><img src="/image/学之思之/FL/FL-8.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-8.png" class="lozad post-image"><br></p>
+<p><img src="/image/学之思之/FL/FL-9.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-9.png" class="lozad post-image"><br></p>
+<h3 id="07-混音器">07 混音器</h3>
+<p><img src="/image/学之思之/FL/FL-10.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/FL/FL-10.png" class="lozad post-image"><br></p>
+<h3 id="11-塑性效果器">11 塑性效果器</h3>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2023/03/12/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/FL%20Studio%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/">
+            https://illusionzone.github.io/2023/03/12/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/FL%20Studio%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/03/12/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/3blue1brown%E6%95%B0%E5%AD%A6/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【学之思之】3blue1brown数学 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/03/12/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/PS%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【学之思之】乐理知识整理 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">FL studio</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%8F%82%E8%80%83%E8%A7%86%E9%A2%91"><span class="toc-text">学习参考视频</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%B0%B4%E6%9E%9C%E5%AE%98%E6%96%B9%E3%80%91FLStudio20%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%A4%A7%E5%85%A8"><span class="toc-text">【水果官方】FLStudio20入门教程大全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E5%AE%98%E6%96%B9%E6%AD%A3%E7%89%88%E3%80%91FL-studio-20-%E6%B0%B4%E6%9E%9C%E4%B8%AD%E6%96%87%E5%BF%AB%E9%80%9F%E6%93%8D%E4%BD%9C%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B"><span class="toc-text">【官方正版】FL studio 20 水果中文快速操作入门教程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-text">学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#01-%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE"><span class="toc-text">01 基础设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-%E7%95%8C%E9%9D%A2%E5%8F%8A%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-text">02 界面及基础操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-%E5%8D%95%E8%BD%A8%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">03 单轨编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04-%E9%92%A2%E7%90%B4%E5%8D%B7%E5%B8%98%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">04 钢琴卷帘编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#05-%E6%80%BB%E8%BD%A8%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">05 总轨编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#06-%E4%B9%90%E5%99%A8%E8%B0%83%E5%88%B6%E7%AA%97%E5%8F%A3"><span class="toc-text">06 乐器调制窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#07-%E8%B0%83%E9%9F%B3%E5%8F%B0%E7%95%8C%E9%9D%A2"><span class="toc-text">07 调音台界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#06-%E6%A0%B7%E5%BC%8F%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">06 样式编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#07-%E6%B7%B7%E9%9F%B3%E5%99%A8"><span class="toc-text">07 混音器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E5%A1%91%E6%80%A7%E6%95%88%E6%9E%9C%E5%99%A8"><span class="toc-text">11 塑性效果器</span></a></li></ol></li></ol></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">FL studio</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E5%8F%82%E8%80%83%E8%A7%86%E9%A2%91"><span class="toc-text">学习参考视频</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E6%B0%B4%E6%9E%9C%E5%AE%98%E6%96%B9%E3%80%91FLStudio20%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%E5%A4%A7%E5%85%A8"><span class="toc-text">【水果官方】FLStudio20入门教程大全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%90%E5%AE%98%E6%96%B9%E6%AD%A3%E7%89%88%E3%80%91FL-studio-20-%E6%B0%B4%E6%9E%9C%E4%B8%AD%E6%96%87%E5%BF%AB%E9%80%9F%E6%93%8D%E4%BD%9C%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B"><span class="toc-text">【官方正版】FL studio 20 水果中文快速操作入门教程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-text">学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#01-%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE"><span class="toc-text">01 基础设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#02-%E7%95%8C%E9%9D%A2%E5%8F%8A%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-text">02 界面及基础操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#03-%E5%8D%95%E8%BD%A8%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">03 单轨编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#04-%E9%92%A2%E7%90%B4%E5%8D%B7%E5%B8%98%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">04 钢琴卷帘编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#05-%E6%80%BB%E8%BD%A8%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">05 总轨编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#06-%E4%B9%90%E5%99%A8%E8%B0%83%E5%88%B6%E7%AA%97%E5%8F%A3"><span class="toc-text">06 乐器调制窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#07-%E8%B0%83%E9%9F%B3%E5%8F%B0%E7%95%8C%E9%9D%A2"><span class="toc-text">07 调音台界面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#06-%E6%A0%B7%E5%BC%8F%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-text">06 样式编辑器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#07-%E6%B7%B7%E9%9F%B3%E5%99%A8"><span class="toc-text">07 混音器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E5%A1%91%E6%80%A7%E6%95%88%E6%9E%9C%E5%99%A8"><span class="toc-text">11 塑性效果器</span></a></li></ol></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

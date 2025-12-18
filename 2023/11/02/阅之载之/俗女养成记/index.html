@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】俗女养成记</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】俗女养成记">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2023/11/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BF%97%E5%A5%B3%E5%85%BB%E6%88%90%E8%AE%B0/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/book/readandnote/俗女养成记/banner.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="江鹅  著">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-11-02">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-11-23">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E5%AB%81%E7%BB%99%E6%8E%82%E7%9A%84"><span class="toc-text">不要嫁给掂的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BB%A1%E4%BB%94%E5%AE%B6%E7%9A%84%E8%8F%9C%E5%8C%85"><span class="toc-text">满仔家的菜包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%88%E5%A6%88%E7%9A%84%E6%97%A9%E6%96%8B"><span class="toc-text">妈妈的早斋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E8%8D%AF%E6%88%BF%E9%87%8C%E7%9A%84%E8%B7%9F%E5%B1%81%E8%99%AB"><span class="toc-text">中药房里的跟屁虫</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E8%8D%AF%E6%88%BF%E7%9A%84%E4%B8%8B%E5%8D%88%E8%8C%B6"><span class="toc-text">中药房的下午茶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A5%E5%8E%BB%E5%91%B7%E4%B8%80%E7%A2%97%E9%9D%A2"><span class="toc-text">来去呷一碗面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%99%E8%95%89%E7%B4%A7%E6%9D%A5%E5%91%B7%E5%91%B7%E5%92%A7"><span class="toc-text">香蕉紧来呷呷咧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E5%AC%B7%E5%9C%A8%E6%B5%B4%E5%AE%A4%E9%87%8C%E5%BC%80%E7%9A%84%E8%AF%BE"><span class="toc-text">阿嬷在浴室里开的课</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%9F%90%E4%BA%BA%E5%98%9B%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%BF%E6%9C%9B"><span class="toc-text">查某人嘛有自己的愿望</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E6%A0%A1%E9%87%8C%E7%9A%84%E5%85%AC%E5%85%B1%E7%94%B5%E8%AF%9D"><span class="toc-text">学校里的公共电话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%BB%E9%9A%94%E5%A3%81%E5%86%8C%E5%B1%80%E4%B9%B0%E4%B8%80%E5%9D%97%E5%9E%AB%E6%9D%BF"><span class="toc-text">去隔壁册局买一块垫板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%B0%E4%B8%80%E7%BC%95%E5%B9%BC%E9%9D%A2"><span class="toc-text">买一缕幼面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%88%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%BA%E5%AE%9E%E9%AA%8C"><span class="toc-text">午后的一人实验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E4%BC%9A%E6%9E%AA%E6%9D%80%E4%BD%A0%E7%9F%A5%E5%94%94%E7%9F%A5"><span class="toc-text">这会枪杀你知唔知</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E2%80%9C%E5%9B%BD%E8%AF%AD%E2%80%9D%E6%AF%94%E8%BE%83%E9%AB%98%E7%BA%A7"><span class="toc-text">说“国语”比较高级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E9%92%A2%E7%90%B4"><span class="toc-text">学钢琴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%AE%E8%B5%B7%E6%9D%A5%E7%9A%84%E6%88%BF%E9%97%B4"><span class="toc-text">亮起来的房间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AA%E6%9C%89%E4%BF%9D%E5%AD%98%EF%BC%8C%E6%B2%A1%E6%9C%89%E6%9C%9F%E9%99%90"><span class="toc-text">只有保存，没有期限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8F%9C%E7%93%9C%E5%A4%AA%E5%86%B7"><span class="toc-text">菜瓜太冷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%B1%E6%98%AF%E7%9C%81%E5%87%BA%E6%9D%A5%E7%9A%84"><span class="toc-text">钱是省出来的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%B1%E6%8B%9A%E6%89%8D%E4%BC%9A%E8%B5%A2"><span class="toc-text">爱拚才会赢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AA%97%E5%8F%B0%E4%B8%8A%E7%9A%84%E8%8A%B1%E5%B8%83%E5%B8%98"><span class="toc-text">窗台上的花布帘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8D%AF%E6%B2%B9%E4%BF%9D%E5%BF%83%E5%AE%89"><span class="toc-text">药油保心安</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E9%82%A3%E4%B9%88%E5%B9%B3%E9%9D%99%EF%BC%9F"><span class="toc-text">你为什么那么平静？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AB%E9%98%BF%E5%A7%A8"><span class="toc-text">叫阿姨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%81%E8%80%81%E6%AF%8D"><span class="toc-text">恁老母</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8F%9C%E5%8C%85%E9%87%8C%E7%9A%84%E7%BA%A2%E8%B1%86"><span class="toc-text">菜包里的红豆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E5%B9%B4%E7%BA%A7%E5%A5%B3%E4%BA%BA%EF%BC%8C%E4%BD%A0%E5%A5%BD%E5%90%97%EF%BC%9F"><span class="toc-text">六年级女人，你好吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/book/readandnote/俗女养成记/banner.png" 
+      data-src="/image/book/readandnote/俗女养成记/banner.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【阅之载之】俗女养成记 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】俗女养成记
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-11-01T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-11-02</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>4.7k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p><p>《俗女养成记》<br>江鹅  著</p></div>
+<br />
+<img src="/image/book/readandnote/俗女养成记/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/俗女养成记/1.png" class="lozad post-image">
+<br />
+<h2 id="不要嫁给掂的">不要嫁给掂的</h2>
+<p><strong>原文摘录</strong><br>
+乡间向来深具“主动互惠”的友好精神，反映在资讯交流上就是：“我告诉你我知道的，你告诉我我不知道的，要是你我都不知道，我们就一起推测并创造结论。”阿嬷有那么点个人魅力，或说交际手腕，贬贬捧捧之间，能让对方乐于提供情报，交换亲近的证明，或迫于淫威多少透露一点，以示输诚。<br>
+<br /><br /></p>
+<h2 id="满仔家的菜包">满仔家的菜包</h2>
+<p><strong>原文摘录</strong><br>
+小孩子在忙碌的大家庭活几年，就会知道“乖”分成两种，“自然乖”和“用力乖”。大人喂我吃东西的时候，我正好肚子饿，所以打开嘴巴吞下食物，那是自然乖；明明不想吃，却还是顺应大人的要求迅速吞下食物，会需要一点服从意志或忍耐的力气，叫作用力乖。我身为家里的投机鬼马屁精，很清楚“自然乖”在长辈眼里只能算及格，做人要想拿高分，全靠“用力乖”。<br>
+<br /><br /></p>
+<h2 id="妈妈的早斋">妈妈的早斋</h2>
+<p><strong>原文摘录</strong><br>
+即使我们都生在这样一个大幅度重新审视人权的时代，仍然有许多女人，因为压力，或爱，或制约，自主选择或身不由己地投身传统角色，背负起一身的责任重担。无论甘不甘愿，都是难。如果有旁人还要说些挑剔的闲话，说人家没有端好哪杯茶，捧好哪块碗，任何人听见都应该立刻把茶杯塞进他嘴里，或把碗砸在他头上。这招倒是没人教过我，我想也不太可能是天启，大概是打在母亲身上，数十年之后才从女儿这边回弹出来的反作用力吧！<br>
+<br /><br /></p>
+<h2 id="中药房里的跟屁虫">中药房里的跟屁虫</h2>
+<p><strong>原文摘录</strong><br>
+中药房的生意，一直都是这个家庭的优先顺位，仿佛它才是主体，家庭成员都只是寄生。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+人工最贵，也最廉价。<br>
+<br /><br /></p>
+<h2 id="中药房的下午茶">中药房的下午茶</h2>
+<p><strong>原文摘录</strong><br>
+虽然家里就是卖补药的，却很少吃什么厉害的补汤，乡下人往往“卖瓷的吃矻”，意思是卖瓷器的人家反而用缺角的碗盘当餐具，因为完整的要用来卖钱。<br>
+<br /><br /></p>
+<h2 id="来去呷一碗面">来去呷一碗面</h2>
+<h2 id="香蕉紧来呷呷咧">香蕉紧来呷呷咧</h2>
+<p><strong>原文摘录</strong><br>
+爸爸喜欢吃香蕉，路过天井看到熟了的香蕉，会充满欣喜地停下脚步，剥一根来吃，一边嚼一边赞叹香蕉的好功效：“呷香蕉尚好放屎。”终于吃到一条两条盼熟了的香蕉令人满足，但接下来就是云霄飞车往深渊狂奔的阶段。一串香蕉既然一起熟，当然也会一起烂，一个两个三个黑点，转瞬之间整串香蕉就会变成黑色，剥开来烂熟的果肉表层出现透明的区块。我很怕听到大人说：“这香蕉在烂啊，卡紧（快点）分分呷呷咧！”因为不能拒绝。食物不能浪费，还能吃的东西只要吃掉，就不会坏掉。如果有任何人不帮忙吃，大家就没办法及时吃完还能吃的食物，那是蓄意浪费食物，是失德。</p>
+<p>尽管全家人时常在水果过熟的压力之下挣扎，但我没有见过大人回绝过这些馈赠。明明收下一篮眼看已经熟透的水果，会让自己往后几天的每一餐，多上不少麻烦，为了留下一颗水果当中可以吃的部分，必须握着菜刀东片西片，和各处软烂的果皮果肉果虫搏斗。不处理放任它烂的话，又犯了浪费食物的罪，明明干脆回绝就可以省下这些麻烦和压力，但是不只我们家，农村里的乡亲之间，很少有人会回绝。</p>
+<p>因为疼惜。送水果来的人自己有更大的心理煎熬，本来能卖钱的东西不能卖了，自己再怎么吃也不够快，送给别人多少吃一点，好歹成全到一点点美好，那些在日晒下挥汗种出来的果实，总算没有完全白费。也是珍惜天地的恩泽，“有得吃”在他们的生命里，曾经是最大的困难，每一日的存活都是为了张罗食物，虽然早已安全上垒，抵达三餐饱足的时代，却不敢忘记食物是福泽。老天爷给恩泽让土地生出食物，人自己也要有福才有办法吃进嘴里。<br>
+<br /><br /></p>
+<h2 id="阿嬷在浴室里开的课">阿嬷在浴室里开的课</h2>
+<p><strong>原文摘录</strong><br>
+人活着总是会遇到这种发生后才知道会发生的事，不是每个人都能在该哭的时候掉下眼泪，也或许，哭过很多次以后，人终于会没有眼泪。<br>
+<br /><br /></p>
+<h2 id="查某人嘛有自己的愿望">查某人嘛有自己的愿望</h2>
+<p><strong>原文摘录</strong><br>
+彩色的洗石子地板，木头窗框，旧式单座沙发椅，天花板吊扇<br>
+<br /><br /></p>
+<h2 id="学校里的公共电话">学校里的公共电话</h2>
+<p><strong>原文摘录</strong><br>
+如今回想起来，大人原来期待着我上学以后，能够断另一种奶，万一真有事情，电话会是学校打去的，其他就让我在老师眼皮底下自生自灭，才好学会靠自己。<br>
+<br /><br /></p>
+<h2 id="去隔壁册局买一块垫板">去隔壁册局买一块垫板</h2>
+<p><strong>原文摘录</strong><br>
+正在认知世界的孩子经常听赞，或是经常觉得自己差人一点，大概也会铺出完全不同的自我信心和人生道路吧。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+要以成人的姿态在这个现实社会活得如意，并不容易。学历未必能够保障出路，但是没有学历更难找路。尽管联考制度糟糕，儿童需要快乐成长，但是我如今想起不懂英文数学的阿公和妈妈，当时板着脸硬逼我事先预习种种课程，倒是已经忘了当时的不耐，只记得当时大人就已经开始要紧我人生出路的温馨。家庭生活不可或缺的一部分，就是大人带着孩子一起应付时代的荒谬吧！<br>
+<br /><br /></p>
+<h2 id="买一缕幼面">买一缕幼面</h2>
+<h2 id="午后的一人实验">午后的一人实验</h2>
+<p><strong>原文摘录</strong><br>
+惬意不需要有人教，遇上了就知道好。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+直到现在我依然庆幸自己身为一个人类，在成长的过程里，曾经有机会摆脱大人的注意力，以第一手的视野去探索世界。纯然由心底自生出来的求知欲，像是从体内蔓延出探索的触手，带着不知道危险为何物的全然安全感，试图在游走间触摸到答案。对我来说，那是这辈子所谓“学习的乐趣”的最高级，后来的学习，因为已经懂得各种自我设限，再也不曾那样兴奋有趣过了。<br>
+<br /><br /></p>
+<h2 id="这会枪杀你知唔知">这会枪杀你知唔知</h2>
+<h2 id="说“国语”比较高级">说“国语”比较高级</h2>
+<h2 id="学钢琴">学钢琴</h2>
+<p><strong>原文摘录</strong><br>
+从小在台20线省道上颠簸翻滚，周身细胞没有一颗没受过兴南客运的整顿，现在偶尔休假回老家，发现身体如今比脑袋还记得那些过弯的角度，是意外的惊喜。<br>
+<br /><br /></p>
+<h2 id="亮起来的房间">亮起来的房间</h2>
+<p><strong>原文摘录</strong><br>
+家人之间的爱没办法非黑即白，相互依存就是同时损耗又修补着。<br>
+<br /><br /></p>
+<h2 id="只有保存，没有期限">只有保存，没有期限</h2>
+<h2 id="菜瓜太冷">菜瓜太冷</h2>
+<p><strong>原文摘录</strong><br>
+空心菜和豆仔薯都是属性寒凉的蔬菜，夏天吃特别消暑。餐桌上有人盛汤的时候，要不本人，要不就是鸡婆的旁观者，会加注一句口白：“这尚退火！”我从小就喜欢吃各种香酥的食物，在家里属于肝火旺湿毒盛的一派，一天到晚“嘴破”“便秘”“生粒仔”，大人在我吃饭的时候，会交代我不准再吃芒果，要多喝一碗菜汤。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+菜瓜最简单的煮法是清炒或煮汤，但是再怎么鲜美的菜瓜，吃多了也会变成修善业的道场，单纯是为了不想浪费菜瓜被雷公打而吃。<br>
+<br /><br /></p>
+<h2 id="钱是省出来的">钱是省出来的</h2>
+<h2 id="爱拚才会赢">爱拚才会赢</h2>
+<p><strong>原文摘录</strong><br>
+事实的确是，只要手脚还算利索，爬上树顶去包果子的人才叫肯打拚，才是有资格成功的人。社会气氛像是那句“爱拚才会赢”，每个人都在玩“九十九分的努力”集点活动，因为不知道“一分的幸运”究竟会不会发生，只好超额储蓄点数备用，才能在万一幸运没发生，多余的努力点数也补不出成功的时候，名正言顺发一场针对老天爷的脾气。像这样勉励自己勤奋苦干的理由有很多，允许停下来休息的正当性却很少，少到好像只有一个，那就是生病。</p>
+<p>生病，就可以达到大家挂在嘴上那个“没办法做”的门槛，可以暂停努力。像是一种“我不是偷懒喔，而是受到实际的生理限制没办法再做”这样的不得已，好让罪恶感的长鞭不会挥到背上来。可以在床上躺个大半天，吃自己合胃口的食物，把珍贵的体力先用在有兴趣的事情上面。尽管有病痛，但是忽然可以合情合理地放松和任性，好像人生苦行课的下课十分钟，是一种“痛并快乐着”的诡异交错。</p>
+<p>是人都必须努力。<br>
+<br /><br /></p>
+<h2 id="窗台上的花布帘">窗台上的花布帘</h2>
+<p><strong>原文摘录</strong><br>
+我小时候，窗帘不是每户人家都有的东西，那种有固定横杆，有挂钩，布面有规律重复的抓褶，在底部车一段反折作为垂坠重量那种典型的窗帘，在外公家、同学小稚家，和妈妈那个生了乳癌的好朋友家里都没有。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一旦感受过穷的气氛，就连不穷的人也会怕穷。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不觉得穷，才能有生活的余裕。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+从容安心的父母，比较容易生养出从容安心的孩子。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+觉得穷的人，因为知道自己有缺，对于身边的一切，往往不太计较差那么一点，只想要什么都能便宜一些，最终让自己也便宜起来。多放几本书就塌陷的三合板书柜，廉价却成分可疑的食物，铁皮搭建的住家，除了稳定薄薪以外乏善可陈的工作，咬着牙才能继续下去的婚姻，衰到别人还好没有衰到自己的政府疏失，缺漏太普遍，于是变成寻常，理智薄弱的话，甚至会觉得过着安生日子用稳当东西的人，看来奢侈得叫人憎怨。为了怕更穷，所以紧抱着骨子里的穷，且战且走地应付日子，像窗户上面用铁丝挂着的花布，把一切明亮映射成各种色阶的红，一张眼就觉得困顿，却看不见是为什么。</p>
+<p>忽然领悟自己和身边许多人，原来都活得像那片花布窗帘的时候，曾经难免心酸愤慨，怪当局怪家怪自己，但是想想小奇，又觉得菩提本无树，费一点时间，扯下花布，装一套认真的窗帘不就好了。<br>
+<br /><br /></p>
+<h2 id="药油保心安">药油保心安</h2>
+<p><strong>原文摘录</strong><br>
+她百般不愿就范的“老”，忽然铺天盖地就来了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这个看不见摸不着的“酸痛”，我要在听闻了它的名号许多年后，才真正感受到它的存在，同理到阿嬷那种恨不得把手伸进皮肉里面，狠狠掐住那道酸的心情。<br>
+<br /><br /></p>
+<h2 id="你为什么那么平静？">你为什么那么平静？</h2>
+<p><strong>原文摘录</strong><br>
+想起这个男人曾经疼我爱我，浮现的是思念和感动，是绵长飘忽的感伤，却不是哀恸。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+从前是我和弟弟被期望能够自己乖乖长大，别太打扰大人的生活；后来是阿公阿嬷被期望能够稳稳活着，别太影响子孙的生活。生命的设计本身毫无恩慈，幼儿和老人需要的生活品质，绝大部分仰赖青壮阶层的照顾，这三种人各自的福祉，很多时候只能此消彼长，每个人的生活都重要，但是没有一个人的生活可以都如意，尤其在这个庸碌的时代。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我出生在阿公和阿嬷人生最丰盛的时刻，我在学习拥抱生命华美的一路上，同时见证他们被迫逐一放下手上的人生资财，像是一边上小学，却又旁听着大学课程，那些我当下无法理解的知识，渗透到体内，变成一颗长效药锭，一时一时地让我领悟阿公阿嬷曾经有过的彷徨和感伤。我迈向每一个成长阶段的同时，他们也在滑向每一个老死阶段，同一件物事，以欢娱的面孔迎向我，用决绝的背影离开他们。</p>
+<p>后来我明白，其中一种我小时候无法理解的东西，是寂寞。每个人面对生命的尽头，有他自己最终极最私密的寂寞。死亡对任何活人来说，从来不是一翻两瞪眼的已知，而是隐身在黝黯之中的未知，要独自走上这样一条陌生道路，没有人能不寂寞。即使有信仰，有心理预备，有旁人陪伴，那份寂寞一样挟带在血液当中，循环在七窍六腑。不得不拥抱这份寂寞，大概是我所见过，阿公和阿嬷的人生中最困难的一课。<br>
+<br /><br /></p>
+<h2 id="叫阿姨">叫阿姨</h2>
+<p><strong>原文摘录</strong><br>
+到最后，不管遇到什么牛鬼蛇神都能彬彬有礼地先叫一声，功夫就算是练成了。不能说没有实质的好处，会叫人的小孩的确比较得人缘，无论是长辈平辈，看到来人落落大方的态度，通常也会端出自己最得体的样子来交陪，往后无论要亲密或疏离，总归能够留在友好的框架当中。大人面对人前扭捏的小孩，或许也能压着耐性赔笑一阵，但损耗的终究是孩子的长辈缘和家长的人情。“摆脸做自己”跟“好好叫人”之间，各有便宜可占，也有亏可吃，只是人在江湖，总会遇上不得不过的场，不能不赔的笑，小时候有练过，或许要比长大不得不练容易一些。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不能适应文明演进，就是老去；比这个更悲伤的，大概就是一边抱怨下一代一边老去。<br>
+<br /><br /></p>
+<h2 id="恁老母">恁老母</h2>
+<h2 id="菜包里的红豆">菜包里的红豆</h2>
+<p><strong>原文摘录</strong><br>
+人听话就是图个安逸，随大人安排穿什么吃什么，读什么学什么，我只要乖乖照着做，自然可以走在人生坦途上，不是吗？好吧，显然不是。<br>
+<br /><br /></p>
+<h2 id="六年级女人，你好吗？">六年级女人，你好吗？</h2>
+<p><strong>原文摘录</strong><br>
+S是善于陪伴的人，无论是紧张的、无聊的事情，她都愿意安然陪在旁边，一起度过。不是任何人都善于陪伴，开心的事情她不抢风头，愚蠢的事情她一起厚颜无耻，悲愤的事情她同情同理，当朋友需要身边有个人的时候，她愿意而且能够做那个柔软的人。这是一份慷慨的心意，愿意贡献自己的时间，无害无求地成全别人一段心里踏实。任何体验到活着不容易的人都知道，这样的朋友不会多，这样的人很珍贵。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+结婚被视为正常，不结婚的人于是必须解释自己的不正常，接受亲友的关怀怜悯和鼓励，被迫接受尽快归化正常的祝福。婚礼经常有个通俗桥段，把在场的单身女性拱上台抽捧花，看着有些被硬推上台的单身女人，碍在大喜之日不得不卖新人面子，隐忍尴尬之余还要欢笑作态配合演出，我觉得挺折损新人福分的。好像火锅店里吃牛肉的人，硬是把那些吃猪肉的人叫出来抽签，抽中的人就恭喜他，下一餐能够吃到牛肉，人要吃猪吃牛吃恐龙都有自己的缘由，与其质疑别人吃什么，还不如多看看自己吃下去的东西消化得如何。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我忍不住感慨，这个社会真的不好应付，落在它期待值之外的人得费劲自我肯定也就算了，就连那些已经达成，甚至超越社会期待值的优等生，也要觉得人生艰难。<br>
+<br /><br /></p>
+<h2 id="词汇积累">词汇积累</h2>
+<p>颟顸（man 1 han 1）：糊涂而马虎</p>
+<p>崁（kan 4）：地名，赤坎，在台湾</p>
+<p>同侪（chai 2）：辈分相同的人</p>
+<p>笐（hang 2）：毛竹之类较粗的可用作引水管道的竹子</p>
+<p>芪（qi 2）：一种草本植物</p>
+<p>齁（hou 1）：熟睡时的鼻息声，也指熟睡打鼾；使用太咸或太甜之物使喉咙感到不舒服；方言，过甚，非常</p>
+<p>汆（cuan 1）：烹调的一种方法，把食物放进沸水中稍煮一下</p>
+<p>矻（ku 1）：努力，勤奋的样子</p>
+<p>芫荽（yan 2 sui 1）：又名胡荽，俗称香菜</p>
+<p>囝（jian 3 nan 1）：方言，儿子；吴方言，小孩，幼小的动物</p>
+<p>伫（zhu 4）：久立</p>
+<p>鬈（quan 2）：形容头发美；头发弯曲；把头发分开，垂在两侧</p>
+<p>鳌（ao 2）：传说中海里的大鳖或大龟</p>
+<p>迌（tu 4）：狡诈貌</p>
+<p>赭红（zhe 3）：红褐色</p>
+<p>恁（nen 4）：代词，这么，那样，这，那；何，什么；怎样</p>
+<p>曱甴（yue 1 you 2）：多指蟑螂，也形容阴险恶毒之人</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2023/11/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BF%97%E5%A5%B3%E5%85%BB%E6%88%90%E8%AE%B0/">
+            https://illusionzone.github.io/2023/11/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BF%97%E5%A5%B3%E5%85%BB%E6%88%90%E8%AE%B0/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/11/11/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%97%85%E6%82%A3%E6%82%96%E8%AE%BA/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】病患悖论 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/11/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E8%8A%99%E8%93%89%E9%95%87/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】芙蓉镇 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E5%AB%81%E7%BB%99%E6%8E%82%E7%9A%84"><span class="toc-text">不要嫁给掂的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BB%A1%E4%BB%94%E5%AE%B6%E7%9A%84%E8%8F%9C%E5%8C%85"><span class="toc-text">满仔家的菜包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%88%E5%A6%88%E7%9A%84%E6%97%A9%E6%96%8B"><span class="toc-text">妈妈的早斋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E8%8D%AF%E6%88%BF%E9%87%8C%E7%9A%84%E8%B7%9F%E5%B1%81%E8%99%AB"><span class="toc-text">中药房里的跟屁虫</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E8%8D%AF%E6%88%BF%E7%9A%84%E4%B8%8B%E5%8D%88%E8%8C%B6"><span class="toc-text">中药房的下午茶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A5%E5%8E%BB%E5%91%B7%E4%B8%80%E7%A2%97%E9%9D%A2"><span class="toc-text">来去呷一碗面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%99%E8%95%89%E7%B4%A7%E6%9D%A5%E5%91%B7%E5%91%B7%E5%92%A7"><span class="toc-text">香蕉紧来呷呷咧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E5%AC%B7%E5%9C%A8%E6%B5%B4%E5%AE%A4%E9%87%8C%E5%BC%80%E7%9A%84%E8%AF%BE"><span class="toc-text">阿嬷在浴室里开的课</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%9F%90%E4%BA%BA%E5%98%9B%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%BF%E6%9C%9B"><span class="toc-text">查某人嘛有自己的愿望</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E6%A0%A1%E9%87%8C%E7%9A%84%E5%85%AC%E5%85%B1%E7%94%B5%E8%AF%9D"><span class="toc-text">学校里的公共电话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%BB%E9%9A%94%E5%A3%81%E5%86%8C%E5%B1%80%E4%B9%B0%E4%B8%80%E5%9D%97%E5%9E%AB%E6%9D%BF"><span class="toc-text">去隔壁册局买一块垫板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%B0%E4%B8%80%E7%BC%95%E5%B9%BC%E9%9D%A2"><span class="toc-text">买一缕幼面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%88%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%BA%E5%AE%9E%E9%AA%8C"><span class="toc-text">午后的一人实验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E4%BC%9A%E6%9E%AA%E6%9D%80%E4%BD%A0%E7%9F%A5%E5%94%94%E7%9F%A5"><span class="toc-text">这会枪杀你知唔知</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E2%80%9C%E5%9B%BD%E8%AF%AD%E2%80%9D%E6%AF%94%E8%BE%83%E9%AB%98%E7%BA%A7"><span class="toc-text">说“国语”比较高级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E9%92%A2%E7%90%B4"><span class="toc-text">学钢琴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%AE%E8%B5%B7%E6%9D%A5%E7%9A%84%E6%88%BF%E9%97%B4"><span class="toc-text">亮起来的房间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AA%E6%9C%89%E4%BF%9D%E5%AD%98%EF%BC%8C%E6%B2%A1%E6%9C%89%E6%9C%9F%E9%99%90"><span class="toc-text">只有保存，没有期限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8F%9C%E7%93%9C%E5%A4%AA%E5%86%B7"><span class="toc-text">菜瓜太冷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%B1%E6%98%AF%E7%9C%81%E5%87%BA%E6%9D%A5%E7%9A%84"><span class="toc-text">钱是省出来的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%B1%E6%8B%9A%E6%89%8D%E4%BC%9A%E8%B5%A2"><span class="toc-text">爱拚才会赢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AA%97%E5%8F%B0%E4%B8%8A%E7%9A%84%E8%8A%B1%E5%B8%83%E5%B8%98"><span class="toc-text">窗台上的花布帘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8D%AF%E6%B2%B9%E4%BF%9D%E5%BF%83%E5%AE%89"><span class="toc-text">药油保心安</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E9%82%A3%E4%B9%88%E5%B9%B3%E9%9D%99%EF%BC%9F"><span class="toc-text">你为什么那么平静？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AB%E9%98%BF%E5%A7%A8"><span class="toc-text">叫阿姨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%81%E8%80%81%E6%AF%8D"><span class="toc-text">恁老母</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8F%9C%E5%8C%85%E9%87%8C%E7%9A%84%E7%BA%A2%E8%B1%86"><span class="toc-text">菜包里的红豆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E5%B9%B4%E7%BA%A7%E5%A5%B3%E4%BA%BA%EF%BC%8C%E4%BD%A0%E5%A5%BD%E5%90%97%EF%BC%9F"><span class="toc-text">六年级女人，你好吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E5%AB%81%E7%BB%99%E6%8E%82%E7%9A%84"><span class="toc-text">不要嫁给掂的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BB%A1%E4%BB%94%E5%AE%B6%E7%9A%84%E8%8F%9C%E5%8C%85"><span class="toc-text">满仔家的菜包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%88%E5%A6%88%E7%9A%84%E6%97%A9%E6%96%8B"><span class="toc-text">妈妈的早斋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E8%8D%AF%E6%88%BF%E9%87%8C%E7%9A%84%E8%B7%9F%E5%B1%81%E8%99%AB"><span class="toc-text">中药房里的跟屁虫</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E8%8D%AF%E6%88%BF%E7%9A%84%E4%B8%8B%E5%8D%88%E8%8C%B6"><span class="toc-text">中药房的下午茶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A5%E5%8E%BB%E5%91%B7%E4%B8%80%E7%A2%97%E9%9D%A2"><span class="toc-text">来去呷一碗面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A6%99%E8%95%89%E7%B4%A7%E6%9D%A5%E5%91%B7%E5%91%B7%E5%92%A7"><span class="toc-text">香蕉紧来呷呷咧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E5%AC%B7%E5%9C%A8%E6%B5%B4%E5%AE%A4%E9%87%8C%E5%BC%80%E7%9A%84%E8%AF%BE"><span class="toc-text">阿嬷在浴室里开的课</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%9F%90%E4%BA%BA%E5%98%9B%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E6%84%BF%E6%9C%9B"><span class="toc-text">查某人嘛有自己的愿望</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E6%A0%A1%E9%87%8C%E7%9A%84%E5%85%AC%E5%85%B1%E7%94%B5%E8%AF%9D"><span class="toc-text">学校里的公共电话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%BB%E9%9A%94%E5%A3%81%E5%86%8C%E5%B1%80%E4%B9%B0%E4%B8%80%E5%9D%97%E5%9E%AB%E6%9D%BF"><span class="toc-text">去隔壁册局买一块垫板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%B0%E4%B8%80%E7%BC%95%E5%B9%BC%E9%9D%A2"><span class="toc-text">买一缕幼面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%88%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%BA%E5%AE%9E%E9%AA%8C"><span class="toc-text">午后的一人实验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E4%BC%9A%E6%9E%AA%E6%9D%80%E4%BD%A0%E7%9F%A5%E5%94%94%E7%9F%A5"><span class="toc-text">这会枪杀你知唔知</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E2%80%9C%E5%9B%BD%E8%AF%AD%E2%80%9D%E6%AF%94%E8%BE%83%E9%AB%98%E7%BA%A7"><span class="toc-text">说“国语”比较高级</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E9%92%A2%E7%90%B4"><span class="toc-text">学钢琴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%AE%E8%B5%B7%E6%9D%A5%E7%9A%84%E6%88%BF%E9%97%B4"><span class="toc-text">亮起来的房间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AA%E6%9C%89%E4%BF%9D%E5%AD%98%EF%BC%8C%E6%B2%A1%E6%9C%89%E6%9C%9F%E9%99%90"><span class="toc-text">只有保存，没有期限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8F%9C%E7%93%9C%E5%A4%AA%E5%86%B7"><span class="toc-text">菜瓜太冷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%92%B1%E6%98%AF%E7%9C%81%E5%87%BA%E6%9D%A5%E7%9A%84"><span class="toc-text">钱是省出来的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%B1%E6%8B%9A%E6%89%8D%E4%BC%9A%E8%B5%A2"><span class="toc-text">爱拚才会赢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AA%97%E5%8F%B0%E4%B8%8A%E7%9A%84%E8%8A%B1%E5%B8%83%E5%B8%98"><span class="toc-text">窗台上的花布帘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8D%AF%E6%B2%B9%E4%BF%9D%E5%BF%83%E5%AE%89"><span class="toc-text">药油保心安</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E4%B8%BA%E4%BB%80%E4%B9%88%E9%82%A3%E4%B9%88%E5%B9%B3%E9%9D%99%EF%BC%9F"><span class="toc-text">你为什么那么平静？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AB%E9%98%BF%E5%A7%A8"><span class="toc-text">叫阿姨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%81%81%E8%80%81%E6%AF%8D"><span class="toc-text">恁老母</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8F%9C%E5%8C%85%E9%87%8C%E7%9A%84%E7%BA%A2%E8%B1%86"><span class="toc-text">菜包里的红豆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E5%B9%B4%E7%BA%A7%E5%A5%B3%E4%BA%BA%EF%BC%8C%E4%BD%A0%E5%A5%BD%E5%90%97%EF%BC%9F"><span class="toc-text">六年级女人，你好吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

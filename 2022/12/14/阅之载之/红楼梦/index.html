@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】红楼梦</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】红楼梦">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/14/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%BA%A2%E6%A5%BC%E6%A2%A6/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/book/readandnote/红楼梦/indeximg/indeximg.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="略">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-14">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-08-01">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9B%9E-%E7%94%84%E5%A3%AB%E9%9A%90%E6%A2%A6%E5%B9%BB%E8%AF%86%E9%80%9A%E7%81%B5-%E8%B4%BE%E9%9B%A8%E6%9D%91%E9%A3%8E%E5%B0%98%E6%80%80%E9%97%BA%E7%A7%80"><span class="toc-text">第一回 甄士隐梦幻识通灵  贾雨村风尘怀闺秀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9B%9E-%E8%B4%BE%E5%A4%AB%E4%BA%BA%E4%BB%99%E9%80%9D%E6%89%AC%E5%B7%9E%E5%9F%8E-%E5%86%B7%E5%AD%90%E5%85%B4%E6%BC%94%E8%AF%B4%E8%8D%A3%E5%9B%BD%E5%BA%9C"><span class="toc-text">第二回 贾夫人仙逝扬州城  冷子兴演说荣国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%9B%9E-%E9%87%91%E9%99%B5%E5%9F%8E%E8%B5%B7%E5%A4%8D%E8%B4%BE%E9%9B%A8%E6%9D%91-%E8%8D%A3%E5%9B%BD%E5%BA%9C%E6%94%B6%E5%85%BB%E6%9E%97%E9%BB%9B%E7%8E%89"><span class="toc-text">第三回 金陵城起复贾雨村  荣国府收养林黛玉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E8%96%84%E5%91%BD%E5%A5%B3%E5%81%8F%E9%80%A2%E8%96%84%E5%91%BD%E9%83%8E-%E8%91%AB%E8%8A%A6%E5%83%A7%E4%B9%B1%E5%88%A4%E8%91%AB%E8%8A%A6%E6%A1%88"><span class="toc-text">第四回 薄命女偏逢薄命郎  葫芦僧乱判葫芦案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%9B%9E-%E6%B8%B8%E5%B9%BB%E5%A2%83%E6%8C%87%E8%BF%B7%E5%8D%81%E4%BA%8C%E9%92%97-%E9%A5%AE%E4%BB%99%E9%86%AA%E6%9B%B2%E6%BC%94%E7%BA%A2%E6%A5%BC%E6%A2%A6"><span class="toc-text">第五回 游幻境指迷十二钗  饮仙醪曲演红楼梦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%9B%9E-%E8%B4%BE%E5%AE%9D%E7%8E%89%E5%88%9D%E8%AF%95%E4%BA%91%E9%9B%A8%E6%83%85-%E5%88%98%E5%A7%A5%E5%A7%A5%E4%B8%80%E8%BF%9B%E8%8D%A3%E5%9B%BD%E5%BA%9C"><span class="toc-text">第六回 贾宝玉初试云雨情  刘姥姥一进荣国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%9E%97%E9%BB%9B%E7%8E%89%E8%AF%AF%E5%89%AA%E9%A6%99%E8%A2%8B%E5%9B%8A-%E8%B4%BE%E5%85%83%E6%98%A5%E5%BD%92%E7%9C%81%E5%BA%86%E5%85%83%E5%AE%B5"><span class="toc-text">第十八回 林黛玉误剪香袋囊  贾元春归省庆元宵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%89%E5%9B%9E-%E8%A5%BF%E5%8E%A2%E8%AE%B0%E5%A6%99%E8%AF%8D%E9%80%9A%E6%88%8F%E8%AF%AD-%E7%89%A1%E4%B8%B9%E4%BA%AD%E8%89%B3%E8%AF%8D%E8%AD%A6%E8%8A%B3%E5%BF%83"><span class="toc-text">第二十三回 西厢记妙词通戏语  牡丹亭艳词警芳心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%9B%9E-%E9%86%89%E9%87%91%E5%88%9A%E8%BD%BB%E8%B4%A2%E5%B0%9A%E4%B9%89%E4%BE%A0-%E7%97%B4%E5%A5%B3%E5%84%BF%E9%81%97%E5%B8%95%E6%83%B9%E7%9B%B8%E6%80%9D"><span class="toc-text">第二十四回 醉金刚轻财尚义侠  痴女儿遗帕惹相思</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E5%9B%9E-%E9%AD%87%E9%AD%94%E6%B3%95%E5%8F%94%E5%AB%82%E9%80%A2%E4%BA%94%E9%AC%BC-%E9%80%9A%E7%81%B5%E7%8E%89%E8%92%99%E8%94%BD%E9%81%87%E5%8F%8C%E7%9C%9F"><span class="toc-text">第二十五回 魇魔法叔嫂逢五鬼  通灵玉蒙蔽遇双真</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AD%E5%9B%9E-%E8%9C%82%E8%85%B0%E6%A1%A5%E8%AE%BE%E8%A8%80%E4%BC%A0%E5%AF%86%E6%84%8F-%E6%B9%98%E9%A6%86%E6%98%A5%E5%9B%B0%E5%8F%91%E5%B9%BD%E6%83%85"><span class="toc-text">第二十六回 蜂腰桥设言传密意  湘馆春困发幽情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%BB%B4%E7%BF%A0%E4%BA%AD%E6%9D%A8%E5%A6%83%E6%88%8F%E5%BD%A9%E8%9D%B6-%E5%9F%8B%E9%A6%99%E5%86%A2%E9%A3%9E%E7%87%95%E6%B3%A3%E6%AE%8B%E7%BA%A2"><span class="toc-text">第二十七回 滴翠亭杨妃戏彩蝶  埋香冢飞燕泣残红</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%92%8B%E7%8E%89%E5%87%BD%E6%83%85%E8%B5%A0%E8%8C%9C%E9%A6%99%E7%BD%97-%E8%96%9B%E5%AE%9D%E9%92%97%E7%BE%9E%E7%AC%BC%E7%BA%A2%E9%BA%9D%E4%B8%B2"><span class="toc-text">第二十八回 蒋玉函情赠茜香罗  薛宝钗羞笼红麝串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B9%9D%E5%9B%9E-%E4%BA%AB%E7%A6%8F%E4%BA%BA%E7%A6%8F%E6%B7%B1%E8%BF%98%E7%A5%B7%E7%A6%8F-%E7%97%B4%E6%83%85%E5%A5%B3%E6%83%85%E9%87%8D%E6%84%88%E6%96%9F%E6%83%85"><span class="toc-text">第二十九回 享福人福深还祷福  痴情女情重愈斟情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%9B%9E-%E5%AE%9D%E9%92%97%E5%80%9F%E6%89%87%E6%9C%BA%E5%B8%A6%E5%8F%8C%E6%95%B2-%E9%BE%84%E5%AE%98%E5%88%92%E8%94%B7%E7%97%B4%E5%8F%8A%E5%B1%80%E5%A4%96"><span class="toc-text">第三十回 宝钗借扇机带双敲  龄官划蔷痴及局外</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%80%E5%9B%9E-%E6%92%95%E6%89%87%E5%AD%90%E4%BD%9C%E5%8D%83%E9%87%91%E4%B8%80%E7%AC%91-%E5%9B%A0%E9%BA%92%E9%BA%9F%E4%BC%8F%E7%99%BD%E9%A6%96%E5%8F%8C%E6%98%9F"><span class="toc-text">第三十一回 撕扇子作千金一笑  因麒麟伏白首双星</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E5%9B%9E-%E8%AF%89%E8%82%BA%E8%85%91%E5%BF%83%E8%BF%B7%E6%B4%BB%E5%AE%9D%E7%8E%89-%E5%90%AB%E8%80%BB%E8%BE%B1%E6%83%85%E7%83%88%E6%AD%BB%E9%87%91%E9%92%8F"><span class="toc-text">第三十二回 诉肺腑心迷活宝玉  含耻辱情烈死金钏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%89%E5%9B%9E-%E6%89%8B%E8%B6%B3%E8%80%BD%E8%80%BD%E5%B0%8F%E5%8A%A8%E5%94%87%E8%88%8C-%E4%B8%8D%E8%82%96%E7%A7%8D%E7%A7%8D%E5%A4%A7%E6%89%BF%E7%AC%9E%E6%8C%9E"><span class="toc-text">第三十三回 手足耽耽小动唇舌　不肖种种大承笞挞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%9B%9B%E5%9B%9E-%E6%83%85%E4%B8%AD%E6%83%85%E5%9B%A0%E6%83%85%E6%84%9F%E5%A6%B9%E5%A6%B9-%E9%94%99%E9%87%8C%E9%94%99%E4%BB%A5%E9%94%99%E5%8A%9D%E5%93%A5%E5%93%A5"><span class="toc-text">第三十四回 情中情因情感妹妹　错里错以错劝哥哥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%94%E5%9B%9E-%E7%99%BD%E7%8E%89%E9%92%8F%E4%BA%B2%E5%B0%9D%E8%8E%B2%E5%8F%B6%E7%BE%B9-%E9%BB%84%E9%87%91%E8%8E%BA%E5%B7%A7%E7%BB%93%E6%A2%85%E8%8A%B1%E7%BB%9C"><span class="toc-text">第三十五回 白玉钏亲尝莲叶羹　黄金莺巧结梅花络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%9E%97%E6%BD%87%E6%B9%98%E9%AD%81%E5%A4%BA%E8%8F%8A%E8%8A%B1%E8%AF%97-%E8%96%9B%E8%98%85%E8%8A%9C%E8%AE%BD%E5%92%8C%E8%9E%83%E8%9F%B9%E5%92%8F"><span class="toc-text">第三十八回 林潇湘魁夺菊花诗　薛蘅芜讽和螃蟹咏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%9B%9E-%E5%8F%B2%E5%A4%AA%E5%90%9B%E4%B8%A4%E5%AE%B4%E5%A4%A7%E8%A7%82%E5%9B%AD-%E9%87%91%E9%B8%B3%E9%B8%AF%E4%B8%89%E5%AE%A3%E7%89%99%E7%89%8C%E4%BB%A4"><span class="toc-text">第四十回 史太君两宴大观园　金鸳鸯三宣牙牌令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%8C%E5%9B%9E-%E8%98%85%E8%8A%9C%E5%90%9B%E5%85%B0%E8%A8%80%E8%A7%A3%E7%96%91%E7%99%96-%E6%BD%87%E6%B9%98%E5%AD%90%E9%9B%85%E8%B0%91%E8%A1%A5%E4%BD%99%E9%A6%99"><span class="toc-text">第四十二回 蘅芜君兰言解疑癖　潇湘子雅谑补余香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%89%E5%9B%9E-%E9%97%B2%E5%8F%96%E4%B9%90%E5%81%B6%E6%94%92%E9%87%91%E5%BA%86%E5%AF%BF-%E4%B8%8D%E4%BA%86%E6%83%85%E6%9A%82%E6%92%AE%E5%9C%9F%E4%B8%BA%E9%A6%99"><span class="toc-text">第四十三回 闲取乐偶攒金庆寿　不了情暂撮土为香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%8F%98%E7%94%9F%E4%B8%8D%E6%B5%8B%E5%87%A4%E5%A7%90%E6%B3%BC%E9%86%8B-%E5%96%9C%E5%87%BA%E6%9C%9B%E5%A4%96%E5%B9%B3%E5%84%BF%E7%90%86%E5%A6%86"><span class="toc-text">第四十四回 变生不测凤姐泼醋　喜出望外平儿理妆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%94%E5%9B%9E-%E9%87%91%E5%85%B0%E5%A5%91%E4%BA%92%E5%89%96%E9%87%91%E5%85%B0%E8%AF%AD-%E9%A3%8E%E9%9B%A8%E5%A4%95%E9%97%B7%E5%88%B6%E9%A3%8E%E9%9B%A8%E8%AF%8D"><span class="toc-text">第四十五回 金兰契互剖金兰语　风雨夕闷制风雨词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%85%AD%E5%9B%9E-%E5%B0%B4%E5%B0%AC%E4%BA%BA%E9%9A%BE%E5%85%8D%E5%B0%B4%E5%B0%AC%E4%BA%8B-%E9%B8%B3%E9%B8%AF%E5%A5%B3%E8%AA%93%E7%BB%9D%E9%B8%B3%E9%B8%AF%E5%81%B6"><span class="toc-text">第四十六回 尴尬人难免尴尬事　鸳鸯女誓绝鸳鸯偶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%83%E5%9B%9E-%E5%91%86%E9%9C%B8%E7%8E%8B%E8%B0%83%E6%83%85%E9%81%AD%E8%8B%A6%E6%89%93-%E5%86%B7%E9%83%8E%E5%90%9B%E6%83%A7%E7%A5%B8%E8%B5%B0%E4%BB%96%E4%B9%A1"><span class="toc-text">第四十七回 呆霸王调情遭苦打　冷郎君惧祸走他乡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%BB%A5%E6%83%85%E4%BA%BA%E6%83%85%E8%AF%AF%E6%80%9D%E6%B8%B8%E8%89%BA-%E6%85%95%E9%9B%85%E5%A5%B3%E9%9B%85%E9%9B%86%E8%8B%A6%E5%90%9F%E8%AF%97"><span class="toc-text">第四十八回 滥情人情误思游艺　慕雅女雅集苦吟诗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%9B%9E-%E8%8A%A6%E9%9B%AA%E5%BA%B5%E4%BA%89%E8%81%94%E5%8D%B3%E6%99%AF%E8%AF%97-%E6%9A%96%E9%A6%99%E5%9D%9E%E9%9B%85%E5%88%B6%E6%98%A5%E7%81%AF%E8%B0%9C"><span class="toc-text">第五十回 芦雪庵争联即景诗　暖香坞雅制春灯谜</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%BA%8C%E5%9B%9E-%E4%BF%8F%E5%B9%B3%E5%84%BF%E6%83%85%E6%8E%A9%E8%99%BE%E9%A1%BB%E9%95%AF-%E5%8B%87%E6%99%B4%E9%9B%AF%E7%97%85%E8%A1%A5%E9%9B%80%E9%87%91%E8%A3%98"><span class="toc-text">第五十二回 俏平儿情掩虾须镯　勇晴雯病补雀金裘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B8%89%E5%9B%9E-%E5%AE%81%E5%9B%BD%E5%BA%9C%E9%99%A4%E5%A4%95%E7%A5%AD%E5%AE%97%E7%A5%A0-%E5%9B%BD%E5%BA%9C%E5%85%83%E5%AE%B5%E5%BC%80%E5%A4%9C%E5%AE%B4"><span class="toc-text">第五十三回 宁国府除夕祭宗祠　国府元宵开夜宴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%8F%B2%E5%A4%AA%E5%90%9B%E7%A0%B4%E9%99%88%E8%85%90%E6%97%A7%E5%A5%97-%E7%8E%8B%E7%86%99%E5%87%A4%E6%95%88%E6%88%8F%E5%BD%A9%E6%96%91%E8%A1%A3"><span class="toc-text">第五十四回 史太君破陈腐旧套　王熙凤效戏彩斑衣</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%BA%94%E5%9B%9E-%E8%BE%B1%E4%BA%B2%E5%A5%B3%E6%84%9A%E5%A6%BE%E4%BA%89%E9%97%B2%E6%B0%94-%E6%AC%BA%E5%B9%BC%E4%B8%BB%E5%88%81%E5%A5%B4%E8%93%84%E9%99%A9%E5%BF%83"><span class="toc-text">第五十五回 辱亲女愚妾争闲气　欺幼主刁奴蓄险心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%85%AD%E5%9B%9E-%E6%95%8F%E6%8E%A2%E6%98%A5%E5%85%B4%E5%88%A9%E9%99%A4%E5%AE%BF%E5%BC%8A-%E6%97%B6%E5%AE%9D%E9%92%97%E5%B0%8F%E6%83%A0%E5%85%A8%E5%A4%A7%E4%BD%93"><span class="toc-text">第五十六回 敏探春兴利除宿弊　时宝钗小惠全大体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%85%A7%E7%B4%AB%E9%B9%83%E6%83%85%E8%BE%9E%E8%AF%95%E5%BF%99%E7%8E%89-%E6%85%88%E5%A7%A8%E5%A6%88%E7%88%B1%E8%AF%AD%E6%85%B0%E7%97%B4%E9%A2%A6"><span class="toc-text">第五十七回 慧紫鹃情辞试忙玉　慈姨妈爱语慰痴颦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%9D%8F%E5%AD%90%E9%98%B4%E5%81%87%E5%87%A4%E6%B3%A3%E8%99%9A%E5%87%B0-%E8%8C%9C%E7%BA%B1%E7%AA%97%E7%9C%9F%E6%83%85%E6%8F%86%E7%97%B4%E7%90%86"><span class="toc-text">第五十八回 杏子阴假凤泣虚凰　茜纱窗真情揆痴理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B9%9D%E5%9B%9E-%E6%9F%B3%E5%8F%B6%E6%B8%9A%E8%BE%B9%E5%97%94%E8%8E%BA%E5%92%A4%E7%87%95-%E7%BB%9B%E4%BA%91%E8%BD%A9%E9%87%8C%E5%8F%AC%E5%B0%86%E9%A3%9E%E7%AC%A6"><span class="toc-text">第五十九回 柳叶渚边嗔莺咤燕　绛云轩里召将飞符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%9B%9E-%E8%8C%89%E8%8E%89%E7%B2%89%E6%9B%BF%E5%8E%BB%E8%94%B7%E8%96%87%E7%A1%9D-%E7%8E%AB%E7%91%B0%E9%9C%B2%E5%BC%95%E6%9D%A5%E8%8C%AF%E8%8B%93%E9%9C%9C"><span class="toc-text">第六十回 茉莉粉替去蔷薇硝　玫瑰露引来茯苓霜</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%80%E5%9B%9E-%E6%8A%95%E9%BC%A0%E5%BF%8C%E5%99%A8%E5%AE%9D%E7%8E%89%E7%9E%92%E8%B5%83-%E5%88%A4%E5%86%A4%E5%86%B3%E7%8B%B1%E5%B9%B3%E5%84%BF%E8%A1%8C%E6%9D%83"><span class="toc-text">第六十一回 投鼠忌器宝玉瞒赃　判冤决狱平儿行权</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%89%E5%9B%9E-%E5%AF%BF%E6%80%A1%E7%BA%A2%E7%BE%A4%E8%8A%B3%E5%BC%80%E5%A4%9C%E5%AE%B4-%E6%AD%BB%E9%87%91%E4%B8%B9%E7%8B%AC%E8%89%B3%E7%90%86%E4%BA%B2%E4%B8%A7"><span class="toc-text">第六十三回 寿怡红群芳开夜宴　死金丹独艳理亲丧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%B9%BD%E6%B7%91%E5%A5%B3%E6%82%B2%E9%A2%98%E4%BA%94%E7%BE%8E%E5%90%9F-%E6%B5%AA%E8%8D%A1%E5%AD%90%E6%83%85%E9%81%97%E4%B9%9D%E9%BE%99%E4%BD%A9"><span class="toc-text">第六十四回 幽淑女悲题五美吟　浪荡子情遗九龙佩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%BA%94%E5%9B%9E-%E8%B4%BE%E4%BA%8C%E8%88%8D%E5%81%B7%E5%A8%B6%E5%B0%A4%E4%BA%8C%E5%A7%A8-%E5%B0%A4%E4%B8%89%E5%A7%90%E6%80%9D%E5%AB%81%E6%9F%B3%E4%BA%8C%E9%83%8E"><span class="toc-text">第六十五回 贾二舍偷娶尤二姨　尤三姐思嫁柳二郎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%85%AD%E5%9B%9E-%E6%83%85%E5%B0%8F%E5%A6%B9%E8%80%BB%E6%83%85%E5%BD%92%E5%9C%B0%E5%BA%9C-%E5%86%B7%E4%BA%8C%E9%83%8E%E4%B8%80%E5%86%B7%E5%85%A5%E7%A9%BA%E9%97%A8"><span class="toc-text">第六十六回 情小妹耻情归地府　冷二郎一冷入空门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%83%E5%9B%9E-%E9%A6%88%E5%9C%9F%E7%89%A9%E9%A2%A6%E5%8D%BF%E5%BF%B5%E6%95%85%E9%87%8C-%E8%AE%AF%E5%AE%B6%E7%AB%A5%E5%87%A4%E5%A7%90%E8%93%84%E9%98%B4%E8%B0%8B"><span class="toc-text">第六十七回 馈土物颦卿念故里　讯家童凤姐蓄阴谋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%8B%A6%E5%B0%A4%E5%A8%98%E8%B5%9A%E5%85%A5%E5%A4%A7%E8%A7%82%E5%9B%AD-%E9%85%B8%E5%87%A4%E5%A7%90%E5%A4%A7%E9%97%B9%E5%AE%81%E5%9B%BD%E5%BA%9C"><span class="toc-text">第六十八回 苦尤娘赚入大观园　酸凤姐大闹宁国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B9%9D%E5%9B%9E-%E5%BC%84%E5%B0%8F%E5%B7%A7%E7%94%A8%E5%80%9F%E5%89%91%E6%9D%80%E4%BA%BA-%E8%A7%89%E5%A4%A7%E9%99%90%E5%90%9E%E7%94%9F%E9%87%91%E8%87%AA%E9%80%9D"><span class="toc-text">第六十九回 弄小巧用借剑杀人　觉大限吞生金自逝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%9B%9E-%E6%9E%97%E9%BB%9B%E7%8E%89%E9%87%8D%E5%BB%BA%E6%A1%83%E8%8A%B1%E7%A4%BE-%E5%8F%B2%E6%B9%98%E4%BA%91%E5%81%B6%E5%A1%AB%E6%9F%B3%E7%B5%AE%E8%AF%8D"><span class="toc-text">第七十回 林黛玉重建桃花社　史湘云偶填柳絮词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B8%80%E5%9B%9E-%E5%AB%8C%E9%9A%99%E4%BA%BA%E6%9C%89%E5%BF%83%E7%94%9F%E5%AB%8C%E9%9A%99-%E9%B8%B3%E9%B8%AF%E5%A5%B3%E6%97%A0%E6%84%8F%E9%81%87%E9%B8%B3%E9%B8%AF"><span class="toc-text">第七十一回 嫌隙人有心生嫌隙　鸳鸯女无意遇鸳鸯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%BA%8C%E5%9B%9E-%E7%8E%8B%E7%86%99%E5%87%A4%E6%81%83%E5%BC%BA%E7%BE%9E%E8%AF%B4%E7%97%85-%E6%9D%A5%E6%97%BA%E5%A6%87%E5%80%9A%E5%8A%BF%E9%9C%B8%E6%88%90%E4%BA%B2"><span class="toc-text">第七十二回 王熙凤恃强羞说病　来旺妇倚势霸成亲</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B8%89%E5%9B%9E-%E7%97%B4%E4%B8%AB%E5%A4%B4%E8%AF%AF%E6%8B%BE%E7%BB%A3%E6%98%A5%E5%9B%8A-%E6%87%A6%E5%B0%8F%E5%A7%90%E4%B8%8D%E9%97%AE%E7%B4%AF%E9%87%91%E5%87%A4"><span class="toc-text">第七十三回 痴丫头误拾绣春囊　懦小姐不问累金凤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%9B%9B%E5%9B%9E-%E6%83%91%E5%A5%B8%E8%B0%97%E6%8A%84%E6%A3%80%E5%A4%A7%E8%A7%82%E5%9B%AD-%E7%9F%A2%E5%AD%A4%E4%BB%8B%E6%9D%9C%E7%BB%9D%E5%AE%81%E5%9B%BD%E5%BA%9C"><span class="toc-text">第七十四回 惑奸谗抄检大观园　矢孤介杜绝宁国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%BA%94%E5%9B%9E-%E5%BC%80%E5%A4%9C%E5%AE%B4%E5%BC%82%E5%85%86%E5%8F%91%E6%82%B2%E9%9F%B3-%E8%B5%8F%E4%B8%AD%E7%A7%8B%E6%96%B0%E8%AF%8D%E5%BE%97%E4%BD%B3%E8%B0%B6"><span class="toc-text">第七十五回 开夜宴异兆发悲音　赏中秋新词得佳谶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%85%AD%E5%9B%9E-%E5%87%B8%E7%A2%A7%E5%A0%82%E5%93%81%E7%AC%9B%E6%84%9F%E5%87%84%E6%B8%85-%E5%87%B9%E6%99%B6%E9%A6%86%E8%81%94%E8%AF%97%E6%82%B2%E5%AF%82%E5%AF%9E"><span class="toc-text">第七十六回 凸碧堂品笛感凄清　凹晶馆联诗悲寂寞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B8%83%E5%9B%9E-%E4%BF%8F%E4%B8%AB%E9%AC%9F%E6%8A%B1%E5%B1%88%E5%A4%AD%E9%A3%8E%E6%B5%81-%E7%BE%8E%E4%BC%98%E4%BC%B6%E6%96%A9%E6%83%85%E5%BD%92%E6%B0%B4%E6%9C%88"><span class="toc-text">第七十七回 俏丫鬟抱屈夭风流　美优伶斩情归水月</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%80%81%E5%AD%A6%E5%A3%AB%E9%97%B2%E5%BE%81%E5%A7%BD%E5%A9%B3%E8%AF%8D-%E7%97%B4%E5%85%AC%E5%AD%90%E6%9D%9C%E6%92%B0%E8%8A%99%E8%93%89%E8%AF%94"><span class="toc-text">第七十八回 老学士闲征姽婳词　痴公子杜撰芙蓉诔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B9%9D%E5%9B%9E-%E8%96%9B%E6%96%87%E9%BE%99%E6%82%94%E5%A8%B6%E6%B2%B3%E4%B8%9C%E7%8B%AE-%E8%B4%BE%E8%BF%8E%E6%98%A5%E8%AF%AF%E5%AB%81%E4%B8%AD%E5%B1%B1%E7%8B%BC"><span class="toc-text">第七十九回 薛文龙悔娶河东狮　贾迎春误嫁中山狼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%9B%9E-%E6%87%A6%E5%BC%B1%E8%BF%8E%E6%98%A5%E8%82%A0%E5%9B%9E%E4%B9%9D%E6%9B%B2-%E5%A7%A3%E6%80%AF%E9%A6%99%E8%8F%B1%E7%97%85%E5%85%A5%E8%86%8F%E8%82%93"><span class="toc-text">第八十回 懦弱迎春肠回九曲　姣怯香菱病入膏肓</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%80%E5%9B%9E-%E5%8D%A0%E6%97%BA%E7%9B%B8%E5%9B%9B%E7%BE%8E%E9%92%93%E6%B8%B8%E9%B1%BC-%E5%A5%89%E4%B8%A5%E8%AF%8D%E4%B8%A4%E7%95%AA%E5%85%A5%E5%AE%B6%E5%A1%BE"><span class="toc-text">第八十一回 占旺相四美钓游鱼　奉严词两番入家塾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%89%E5%9B%9E-%E7%9C%81%E5%AE%AB%E9%97%B1%E8%B4%BE%E5%85%83%E5%A6%83%E6%9F%93%E6%81%99-%E9%97%B9%E9%97%BA%E9%98%83%E8%96%9B%E5%AE%9D%E9%92%97%E5%90%9E%E5%A3%B0"><span class="toc-text">第八十三回 省宫闱贾元妃染恙　闹闺阃薛宝钗吞声</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%BA%94%E5%9B%9E-%E8%B4%BE%E5%AD%98%E5%91%A8%E6%8A%A5%E5%8D%87%E9%83%8E%E4%B8%AD%E4%BB%BB-%E8%96%9B%E6%96%87%E8%B5%B7%E5%A4%8D%E6%83%B9%E6%94%BE%E6%B5%81%E5%88%91"><span class="toc-text">第八十五回 贾存周报升郎中任　薛文起复惹放流刑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%85%AD%E5%9B%9E-%E5%8F%97%E7%A7%81%E8%B4%BF%E8%80%81%E5%AE%98%E7%BF%BB%E6%A1%88%E7%89%8D-%E5%AF%84%E9%97%B2%E6%83%85%E6%B7%91%E5%A5%B3%E8%A7%A3%E7%90%B4%E4%B9%A6"><span class="toc-text">第八十六回 受私贿老官翻案牍　寄闲情淑女解琴书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%84%9F%E6%B7%B1%E7%A7%8B%E6%8A%9A%E7%90%B4%E6%82%B2%E5%BE%80%E4%BA%8B-%E5%9D%90%E7%A6%85%E5%AF%82%E8%B5%B0%E7%81%AB%E5%85%A5%E9%82%AA%E9%AD%94"><span class="toc-text">第八十七回 感深秋抚琴悲往事　坐禅寂走火入邪魔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%85%AB%E5%9B%9E-%E5%8D%9A%E5%BA%AD%E6%AC%A2%E5%AE%9D%E7%8E%89%E8%B5%9E%E5%AD%A4%E5%84%BF-%E6%AD%A3%E5%AE%B6%E6%B3%95%E8%B4%BE%E7%8F%8D%E9%9E%AD%E6%82%8D%E4%BB%86"><span class="toc-text">第八十八回 博庭欢宝玉赞孤儿　正家法贾珍鞭悍仆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B9%9D%E5%9B%9E-%E4%BA%BA%E4%BA%A1%E7%89%A9%E5%9C%A8%E5%85%AC%E5%AD%90%E5%A1%AB%E8%AF%8D-%E8%9B%87%E5%BD%B1%E6%9D%AF%E5%BC%93%E9%A2%A6%E5%8D%BF%E7%BB%9D%E7%B2%92"><span class="toc-text">第八十九回 人亡物在公子填词　蛇影杯弓颦卿绝粒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E5%9B%9E-%E5%A4%B1%E7%BB%B5%E8%A1%A3%E8%B4%AB%E5%A5%B3%E8%80%90%E5%97%B7%E5%98%88-%E9%80%81%E6%9E%9C%E5%93%81%E5%B0%8F%E9%83%8E%E6%83%8A%E5%8F%B5%E6%B5%8B"><span class="toc-text">第九十回 失绵衣贫女耐嗷嘈　送果品小郎惊叵测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%B8%80%E5%9B%9E-%E7%BA%B5%E6%B7%AB%E5%BF%83%E5%AE%9D%E8%9F%BE%E5%B7%A5%E8%AE%BE%E8%AE%A1-%E5%B8%83%E7%96%91%E9%98%B5%E5%AE%9D%E7%8E%89%E5%A6%84%E8%B0%88%E7%A6%85"><span class="toc-text">第九十一回 纵淫心宝蟾工设计　布疑阵宝玉妄谈禅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%B8%89%E5%9B%9E-%E7%94%84%E5%AE%B6%E4%BB%86%E6%8A%95%E9%9D%A0%E8%B4%BE%E5%AE%B6%E9%97%A8-%E6%B0%B4%E6%9C%88%E5%BA%B5%E6%8E%80%E7%BF%BB%E9%A3%8E%E6%9C%88%E6%A1%88"><span class="toc-text">第九十三回 甄家仆投靠贾家门　水月庵掀翻风月案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%AE%B4%E6%B5%B7%E6%A3%A0%E8%B4%BE%E6%AF%8D%E8%B5%8F%E8%8A%B1%E5%A6%96-%E5%A4%B1%E5%AE%9D%E7%8E%89%E9%80%9A%E7%81%B5%E7%9F%A5%E5%A5%87%E7%A5%B8"><span class="toc-text">第九十四回 宴海棠贾母赏花妖　失宝玉通灵知奇祸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%BA%94%E5%9B%9E-%E5%9B%A0%E8%AE%B9%E6%88%90%E5%AE%9E%E5%85%83%E5%A6%83%E8%96%A8%E9%80%9D-%E4%BB%A5%E5%81%87%E6%B7%B7%E7%9C%9F%E5%AE%9D%E7%8E%89%E7%96%AF%E9%A2%A0"><span class="toc-text">第九十五回 因讹成实元妃薨逝　以假混真宝玉疯颠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/book/readandnote/红楼梦/indeximg/indeximg.png" 
+      data-src="/image/book/readandnote/红楼梦/indeximg/indeximg.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【阅之载之】红楼梦 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】红楼梦
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-12-13T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-14</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>12.3k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p><p>[著]曹雪芹</p></div>
+<br />
+<img src="/image/book/readandnote/红楼梦/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/红楼梦/1.png" class="lozad post-image">
+<br />
+<h2 id="第一回-甄士隐梦幻识通灵-贾雨村风尘怀闺秀">第一回 甄士隐梦幻识通灵  贾雨村风尘怀闺秀</h2>
+<p><strong>原文摘录</strong><br>
+石头笑答道：“我师何太痴耶！若云无朝代可考，今我师竟借汉、唐等年纪添缀，又有何难？但我想，历来野史，皆蹈一辙，莫如我这不借此套者，反倒新奇别致。不过只取其事体情理罢了，又何必拘拘于朝代年纪哉！再者，市井俗人喜看理治之书者甚少，爱适趣闲文者特多。历来野史，或讪谤君相，或贬人妻女，奸淫凶恶，不可胜数。更有一种风月笔墨，其淫秽污臭，屠毒笔墨，坏人子弟，又不可胜数。至若佳人才子等书，则又千部共出一套，且其中终不能不涉于淫溅，以致满纸潘安、子健、西子、文君。不过作者要写出自己的那两首情诗艳赋来，故假拟出男女二人名姓，又必旁出一小人其间拨乱，亦如剧中之小丑然。且鬟婢开口即者也之乎，非文即理。故逐一看去，悉皆自相矛盾、大不近情理之话，竟不如我半世亲睹亲闻的这几个女子，虽不敢说强似前代书中所有之人，但事迹原委，亦可以消愁破闷；也有几首歪诗熟话，可以喷饭供酒。至若离合悲欢，兴衰际遇，则又追踪蹑迹，不敢稍加穿凿，徒为供人之目而反失其真传者。今之人，贫者日为衣食所累，富者又怀不足之心；纵然一时稍闲，又有贪淫恋色、好货寻愁之事，哪里有工夫去看那理治之书！所以，我这一段故事，也不愿世人称奇道妙，也不定要世人喜悦检读，只愿他们当那醉淫饱卧之时，或避世去愁之际，把此一玩，岂不省了些寿命筋力？就比那谋虚逐妄，却也省了口舌是非之害、腿脚奔忙之苦。再者，亦令世人换新眼目，不比那些胡牵乱扯，忽离忽遇，满纸才人淑女、子建、文君、红娘、小玉等通共熟套之旧稿。我师意为何如？”</p>
+<p>空空道人听如此说，思忖半晌，将一这《石头记》再检阅一遍，因见上面虽有些指奸责佞、贬恶诛邪之语，亦非伤时骂世之旨；及至君仁臣良、父慈子孝，凡伦常所关之处，皆是称功颂德，眷眷无穷，实非别书之可比。虽其中大旨谈情，亦不过实录其事，又非假拟妄称，一味淫邀艳约，私订偷盟之可比。因毫不干涉时世，方从头至尾抄录回来，问世传奇。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+满纸荒唐言，一把辛酸泪！</p>
+<p>都云作者痴，谁解其中味？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+假作真时真亦假，无为有处有还无。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+世人都晓神仙好，惟有功名忘不了。古今将相在何方？荒冢一堆草没了！世人都晓神仙好，只有金银忘不了。终朝只恨聚无多，及到多时眼闭了！世人都晓神仙好，只有姣妻忘不了。君生日日说恩情，君死又随人去了！世人都晓神仙好，只有儿孙忘不了。痴心父母古来多，孝顺儿孙谁见了？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+陋室空堂，当年笏满床，衰草枯杨，曾为歌舞场。蛛丝儿结满雕梁，绿纱今又糊在蓬窗上。说什么脂正浓、粉正香，如何两鬓又成霜？昨日黄土陇头送白骨，今宵红灯帐底卧鸳鸯。金满箱，银满箱，展眼乞丐人皆谤。正叹他人命不长，那知自己归来丧！训有方，保不定日后作强梁。择膏梁，谁承望流落在烟花巷！因嫌纱帽小，致使锁枷扛。昨怜破袄寒，今嫌紫蟒长。乱烘烘你方唱罢我登场，反认他乡是故乡。甚荒唐，到头来都是为他人作嫁衣裳！<br>
+<br /><br /></p>
+<h2 id="第二回-贾夫人仙逝扬州城-冷子兴演说荣国府">第二回 贾夫人仙逝扬州城  冷子兴演说荣国府</h2>
+<p><strong>原文摘录</strong><br>
+一局输赢料不真，</p>
+<p>香消茶尽尚逡巡。</p>
+<p>欲知目下兴衰兆，</p>
+<p>须问旁观冷眼人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+身后有余忘缩手，眼前无路想回头。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+偶因一着错，便为人上人。<br>
+<br /><br /></p>
+<h2 id="第三回-金陵城起复贾雨村-荣国府收养林黛玉">第三回 金陵城起复贾雨村  荣国府收养林黛玉</h2>
+<p><strong>原文摘录</strong><br>
+不一时，只见三个奶嬷嬷并五六个丫鬟，簇拥着三个姊妹来了。第一个肌肤微丰，合中身材，腮凝新荔，鼻腻鹅脂，温柔沉默，观之可亲。第二个削肩细腰，长挑身材，鸭蛋脸面，俊眼修眉，顾盼神飞，文彩精华，见之忘俗。第三个身量未足，形容尚小。其钗环裙袄，三人皆是一样的妆饰。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+只见一群媳妇、丫鬟围拥着一个人，从后房门进来。这个人打扮与众姊妹不同，彩绣辉煌，恍若神妃仙子：头上戴着金丝八宝攒珠髻，绾着朝阳五凤挂珠钗；项上戴着赤金盘螭璎珞圈；裙边系着豆绿宫条、双衡比目玫瑰佩；身上穿著缕金百蝶穿花大红洋缎窄褙袄，外罩五彩刻丝石青银鼠褂；下着翡翠撒花洋绉裙。一双丹凤三角眼，两弯柳叶吊梢眉；身量苗条，体格风骚；粉面含春威不露，丹唇未启笑先闻。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+头上周围一转的短发，都结成小辫，红丝结束，共攒至顶中胎发，总编一根大辫，黑亮如漆，从顶至梢，一串四颗大珠，用金八宝坠角；身上穿著银红撒花半旧大袄，仍旧带着项圈、宝玉、寄名锁、护身符等物；下面半露松花撒花绿绫裤腿，锦边弹墨袜，厚底大红鞋。越显得面如敷粉，唇若施脂；转盼多情，语言常笑。天然一段风骚，全在眉梢；平生万种情思，悉堆眼角。看其外貌，最是极好，却难知其底细。后人有《西江月》二词，批这宝玉极恰，其词曰：</p>
+<p>无故寻愁觅恨，有时似傻如狂。纵然生得好皮囊，腹内原来草莽。潦倒不通世务，愚顽怕读文章。行为偏僻性乖张，那管世人诽谤！富贵不知乐业，贫穷难耐凄凉。可怜辜负好韶光，于国于家无望。天下无能第一，古今不肖无双。寄言纨绔与膏粱：莫效此儿形状！<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+两弯似蹙非蹙罥烟眉，一双似喜非喜含露目。态生两靥之愁，娇袭一身之病。泪光点点，娇喘微微。闲静时，如姣花照水；行动处，似弱柳扶风。心较比干多一窍，病如西子胜三分。<br>
+<br /><br /></p>
+<h2 id="第四回-薄命女偏逢薄命郎-葫芦僧乱判葫芦案">第四回 薄命女偏逢薄命郎  葫芦僧乱判葫芦案</h2>
+<p><strong>原文摘录</strong><br>
+如今凡作地方官者，皆有一个私单，上面写的是本省最有权有势、极富极贵的大乡绅名姓，各省皆然；倘若不知，一时触犯了这样的人家，不但官爵，只怕连姓名还保不成呢！所以绰号叫做“护官符”。</p>
+<p>…</p>
+<p>贾不假，白玉为堂金作马。（宁国、荣国二公之后，共二十房分，除宁、荣亲派八房在都外，现原籍住者十二房。）</p>
+<p>阿房宫，三百里，住不下金陵一个史。（保龄候尚书令史公之后，房分共十八，都中现住者十房，原籍现居八房。）</p>
+<p>东海缺少白玉床，龙王来请金陵王。（都太尉统治县伯王公之后，共十二房，都中二房，余在籍。）</p>
+<p>丰年好大雪，珍珠如土金如铁。（紫薇舍人薛公之后，现领内府帑银商，共八房分。）</p>
+<p>…</p>
+<p>这四家皆联络有亲，一损皆损，一荣俱荣，扶持遮饰，具有照应的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+雨村道：“你说的何尝不是。但事关人命，蒙皇上隆恩，起复委用，实是重生再造，正当殚心竭力图报之时，岂可因私而废法！是我实不能忍为者。”门子听了，冷笑道：“老爷说的何尝不是大道理，但只是如今世上是行不去的。岂不闻古人有云：‘大丈夫相时而动’，又曰‘趋吉避凶者为君子’。依老爷这一说，不但不能报效朝廷，亦且自身不保，还要三思为妥。”</p>
+<p>…</p>
+<p>至次日，坐堂，勾取一应有名人犯，雨村详加审问。果见冯家人口稀疏，不过赖此欲多得些烧埋之费。薛家仗势倚情，偏不相让，故致颠倒未决。雨村便徇情枉法，胡乱判断了此案。冯家得了许多烧埋银子，也就无甚话说了。雨村断了此案，急忙作书信二封，与贾政并京营节度使王子腾，不过说“令甥之事已完，不必过虑”等语。此事皆由葫芦庙内之沙弥新门子所出，雨村又恐他对人说出当日贫贱时的事来，因此心中大不乐业，后来到底寻了个不是，远远的充发了他才罢。<br>
+<br /><br /></p>
+<h2 id="第五回-游幻境指迷十二钗-饮仙醪曲演红楼梦">第五回 游幻境指迷十二钗  饮仙醪曲演红楼梦</h2>
+<p><strong>原文摘录</strong><br>
+世事洞明皆学问，人情练达即文章<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+嫩寒锁梦因春冷，芳气笼人是酒香。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+方离柳坞，乍出花房。但行处，鸟惊庭树；将到时，影度回廊。仙袂乍飘兮，闻麝兰之馥郁；荷衣欲动兮，听环佩之铿锵。靥笑春桃兮，云堆翠髻；唇绽樱颗兮，榴齿含香。纤腰之楚楚兮，回风舞雪；珠翠之辉辉兮，满额鹅黄。出没花间兮，宜嗔宜喜；徘徊池上兮，若飞若扬。蛾眉颦笑兮，将言而未语；莲步乍移兮，待止而欲行。羡彼之良质兮，冰清玉润；羡彼之华服兮，闪灼文章。爱彼之貌容兮，香培玉琢；美彼之态度兮，凤翥龙翔。其素若何？春梅绽雪。其洁若何？秋菊被霜。其静若何？松生空谷。其艳若何？霞映澄塘。其文若何？龙游曲沼。其神若何？月射寒江。应惭西子，实愧王嫱。奇矣哉！生于孰地，来自何方？信矣乎！瑶池不二，紫府无双。果何人哉？如斯之美也！<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+但见珠帘绣幕，画栋雕檐，说不尽那光摇朱户金铺地，雪照琼窗玉作宫。更见仙花馥郁，异草芬芳，真好个所在。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+〔红楼梦，引子〕开辟鸿蒙，谁为情种？都只为风月情浓。趁着这奈何天、伤怀日、寂寥时，试遣愚衷。因此上、演出这怀金悼玉的《红楼梦》。</p>
+<p>〔终身误〕都道是金玉良姻，俺只念木石前盟。空对着、山中高士晶莹雪；终不忘、世外仙姝寂寞林。叹人间、美中不足今方信。纵然是齐眉举案，到底意难平！</p>
+<p>〔枉凝眉〕一个是阆苑仙葩，一个是美玉无瑕。若说没奇缘，今生偏又遇着他；若说有奇缘，如何心事终虚化？一个枉自嗟呀，一个空劳牵挂。一个是水中月，一个是镜中花。想眼中能有多少泪珠儿，怎禁得秋流到冬尽、春流到夏！</p>
+<p>〔恨无常〕喜荣华正好，恨无常又到。眼睁睁、把万事全拋。荡悠悠、把芳魂消耗。望家乡，路远山高。故向爹娘梦里相寻告：儿命已入黄泉，天伦呵，须要退步抽身早！</p>
+<p>〔分骨肉〕一帆风雨路三千，把骨肉家园齐来拋闪。恐哭损残年，告爹娘，休把儿悬念。自古穷通皆有定，离合岂无缘？从今分两地，各自保平安。奴去也，莫牵连！</p>
+<p>〔乐中悲〕襁褓中父母叹双亡。纵居那绮罗丛，谁知娇养？幸生来英豪阔大宽宏量，从未将儿女私情略萦心上。好一似、霁月光风耀玉堂。厮配得才貌仙郎，博得个地久天长，准折得幼年时坎坷形状。终久是云散高唐，水涸湘江。这是尘寰中消长数应当，何必枉悲伤！</p>
+<p>〔世难容〕气质美如兰，才华阜比仙。天生成孤癖人皆罕。你道是、啖肉食腥膻，视绮罗俗厌。却不知、太高人愈妒，过洁世同嫌。可叹这、青灯古殿人将老；辜负了、红粉朱楼春色阑。到头来、依旧是风尘骯脏违心愿。好一似、无瑕白玉遭泥陷；又何须，王孙公子叹无缘！</p>
+<p>〔喜冤家〕中山狼，无情兽，全不念当日根由。一味的骄奢淫荡贪欢媾。觑着那，侯门艳质同蒲柳；作践得，公府千金似下流。叹芳魂艳魄，一载荡悠悠！</p>
+<p>〔虚花悟〕将那三春看破，桃红柳绿待如何？把这韶华打灭，觅那清淡天和。说什么，天上夭桃盛，云中杏蕊多。到头来，谁把秋捱过？则看那，白杨村里人呜咽，青枫林下鬼吟哦。更兼着，连天衰草遮坟墓。这的是，昨贫今富人劳碌，春荣秋谢花折磨。似这般，生关死劫谁能躲？闻说道，西方宝树唤婆娑，上结着长生果。</p>
+<p>〔聪明累〕机关算尽太聪明，反算了卿卿性命。生前心已碎，死后性空灵。家富人宁，终有个家亡人散各奔腾。枉费了、意悬悬半世心，好一似、荡悠悠三更梦。忽喇喇似大厦倾，昏惨惨似灯将尽。呀！一场欢喜忽悲辛。叹人世，终难定！</p>
+<p>〔留余庆〕留余庆，留余庆，忽遇恩人；幸娘亲，幸娘亲，积得阴功。劝人生，济困扶穷，休似俺那爱银钱、忘骨肉的狠舅奸兄！正是乘除加减，上有苍穹！</p>
+<p>〔晚韶华〕镜里恩情，更那堪梦里功名！那美韶华去之何迅！再休提绣帐鸳衾。只这带珠冠，披凤袄，也抵不了无常性命。虽说是、人生莫受老来贫，也须要阴骘积儿孙。气昂昂头戴簪缨，光灿灿胸悬金印；威赫赫爵禄高登，昏惨惨黄泉路近。问古来将相可还存？也只是，虚名儿与后人钦敬。</p>
+<p>〔好事终〕画梁春尽落香尘。擅风情，秉月貌，便是败家的根本。箕裘颓堕皆从敬，家事消亡首罪宁。宿孽总因情。</p>
+<p>〔收尾飞鸟各投林〕为官的，家业凋零；富贵的，金银散尽；有恩的，死里逃生；无情的，分明报应；欠命的，命已还；欠泪的，泪已尽。冤冤相报实非轻，分离聚合皆前定。欲知命短问前生，老来富贵也真侥幸。看破的，遁入空门；痴迷的，枉送了性命。好一似食尽鸟投林，落了片白茫茫大地真干净！<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一场幽梦同谁近，千古情人独我痴。<br>
+<br /><br /></p>
+<h2 id="第六回-贾宝玉初试云雨情-刘姥姥一进荣国府">第六回 贾宝玉初试云雨情  刘姥姥一进荣国府</h2>
+<p><strong>原文摘录</strong><br>
+按荣府中一宅人合算起来，人口虽不多，从上至下也有三四百丁；事虽不多，一天也有一二十件，竟如乱麻一般，并无个头绪可作纲领。正寻思从那一件事自那一个人写起方妙，恰好忽从千里之外，芥荳之微，小小一个人家，因与荣府略有些瓜葛，这日正往荣府中来，因此便就此一家说来，倒还是头绪。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+你何不去走动走动，或者她念旧，有些好处，也未可知。要是他发一点好心，拔一根寒毛，比咱们的腰还粗呢！<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一场幽梦同谁近，千古情人独我痴。<br>
+<br /><br /></p>
+<h2 id="第十八回-林黛玉误剪香袋囊-贾元春归省庆元宵">第十八回 林黛玉误剪香袋囊  贾元春归省庆元宵</h2>
+<h2 id="第二十三回-西厢记妙词通戏语-牡丹亭艳词警芳心">第二十三回 西厢记妙词通戏语  牡丹亭艳词警芳心</h2>
+<p><strong>原文摘录</strong><br>
+村居书喜陆游红桥梅市晓山横，白塔樊江春水生。花气袭人知骤暖，鹊声穿树喜新晴。坊场酒贱贫犹醉，原野泥深老亦耕。最喜先期官赋足，经年无吏叩柴荆。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+黛玉把花具且都放下，接书来瞧，从头看去，越看越爱看，不过一顿饭工夫，将十六出俱已看完，自觉词藻警人，余香满口。虽看完了书，却只管出神，心内还默默的记诵。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+笛韵悠扬，歌声婉转<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+原来姹紫嫣红开遍，似这般都付与断井颓垣<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+仔细忖度，不觉心痛神痴，眼中击泪<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+妆晨绣夜心无矣，对月临风恨有之<br>
+<br /><br /></p>
+<h2 id="第二十四回-醉金刚轻财尚义侠-痴女儿遗帕惹相思">第二十四回 醉金刚轻财尚义侠  痴女儿遗帕惹相思</h2>
+<h2 id="第二十五回-魇魔法叔嫂逢五鬼-通灵玉蒙蔽遇双真">第二十五回 魇魔法叔嫂逢五鬼  通灵玉蒙蔽遇双真</h2>
+<h2 id="第二十六回-蜂腰桥设言传密意-湘馆春困发幽情">第二十六回 蜂腰桥设言传密意  湘馆春困发幽情</h2>
+<p><strong>原文摘录</strong><br>
+这件事待要放下，心内又放不下；待要问去，又怕人猜疑，正是犹豫不决、神魂不定之际<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+星眼微饧，香腮带赤<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+越想越伤感，也不顾苍苔露冷，花径风寒，独立墙角边花阴之下，悲悲戚戚呜咽起来。</p>
+<p>原来这林黛玉秉绝代姿容，具希世俊美，不期这一哭，那附近柳枝花朵上的宿鸟栖鸦一闻此声，俱忒楞楞飞起远避，不忍再听。<br>
+<br /><br /></p>
+<h2 id="第二十七回-滴翠亭杨妃戏彩蝶-埋香冢飞燕泣残红">第二十七回 滴翠亭杨妃戏彩蝶  埋香冢飞燕泣残红</h2>
+<p><strong>原文摘录</strong><br>
+花影不离身左右， 鸟声只在耳东西。<br>
+<br /><br /></p>
+<h2 id="第二十八回-蒋玉函情赠茜香罗-薛宝钗羞笼红麝串">第二十八回 蒋玉函情赠茜香罗  薛宝钗羞笼红麝串</h2>
+<h2 id="第二十九回-享福人福深还祷福-痴情女情重愈斟情">第二十九回 享福人福深还祷福  痴情女情重愈斟情</h2>
+<h2 id="第三十回-宝钗借扇机带双敲-龄官划蔷痴及局外">第三十回 宝钗借扇机带双敲  龄官划蔷痴及局外</h2>
+<p><strong>原文摘录</strong><br>
+只见这女孩子眉蹙春山，眼颦秋水，面薄腰纤，袅袅婷婷，大有林黛玉之态。<br>
+<br /><br /></p>
+<h2 id="第三十一回-撕扇子作千金一笑-因麒麟伏白首双星">第三十一回 撕扇子作千金一笑  因麒麟伏白首双星</h2>
+<h2 id="第三十二回-诉肺腑心迷活宝玉-含耻辱情烈死金钏">第三十二回 诉肺腑心迷活宝玉  含耻辱情烈死金钏</h2>
+<p><strong>原文摘录</strong><br>
+湘云笑道：“主雅客来勤，自然你有些警他的好处，他才只要会你。”<br>
+<br /><br /></p>
+<h2 id="第三十三回-手足耽耽小动唇舌-不肖种种大承笞挞">第三十三回 手足耽耽小动唇舌　不肖种种大承笞挞</h2>
+<h2 id="第三十四回-情中情因情感妹妹-错里错以错劝哥哥">第三十四回 情中情因情感妹妹　错里错以错劝哥哥</h2>
+<p><strong>原文摘录</strong><br>
+俗语说的‘没事常思有事’，世上多少没头脑的事，多半因为无心中做出，被有心人看见，当作有心事情，倒反说坏了。只是预先不防着，断然不好。<br>
+<br /><br /></p>
+<h2 id="第三十五回-白玉钏亲尝莲叶羹-黄金莺巧结梅花络">第三十五回 白玉钏亲尝莲叶羹　黄金莺巧结梅花络</h2>
+<h2 id="第三十八回-林潇湘魁夺菊花诗-薛蘅芜讽和螃蟹咏">第三十八回 林潇湘魁夺菊花诗　薛蘅芜讽和螃蟹咏</h2>
+<h2 id="第四十回-史太君两宴大观园-金鸳鸯三宣牙牌令">第四十回 史太君两宴大观园　金鸳鸯三宣牙牌令</h2>
+<h2 id="第四十二回-蘅芜君兰言解疑癖-潇湘子雅谑补余香">第四十二回 蘅芜君兰言解疑癖　潇湘子雅谑补余香</h2>
+<h2 id="第四十三回-闲取乐偶攒金庆寿-不了情暂撮土为香">第四十三回 闲取乐偶攒金庆寿　不了情暂撮土为香</h2>
+<h2 id="第四十四回-变生不测凤姐泼醋-喜出望外平儿理妆">第四十四回 变生不测凤姐泼醋　喜出望外平儿理妆</h2>
+<h2 id="第四十五回-金兰契互剖金兰语-风雨夕闷制风雨词">第四十五回 金兰契互剖金兰语　风雨夕闷制风雨词</h2>
+<p><strong>原文摘录</strong><br>
+这里黛玉喝了两口稀粥，仍歪在床上，不想日未落时天就变了，淅淅沥沥下起雨来。秋霖脉脉，阴晴不定，那天渐渐的黄昏，且阴得沉黑，兼着那雨滴竹梢，更觉凄凉。<br>
+<br /><br /></p>
+<h2 id="第四十六回-尴尬人难免尴尬事-鸳鸯女誓绝鸳鸯偶">第四十六回 尴尬人难免尴尬事　鸳鸯女誓绝鸳鸯偶</h2>
+<h2 id="第四十七回-呆霸王调情遭苦打-冷郎君惧祸走他乡">第四十七回 呆霸王调情遭苦打　冷郎君惧祸走他乡</h2>
+<h2 id="第四十八回-滥情人情误思游艺-慕雅女雅集苦吟诗">第四十八回 滥情人情误思游艺　慕雅女雅集苦吟诗</h2>
+<h2 id="第五十回-芦雪庵争联即景诗-暖香坞雅制春灯谜">第五十回 芦雪庵争联即景诗　暖香坞雅制春灯谜</h2>
+<h2 id="第五十二回-俏平儿情掩虾须镯-勇晴雯病补雀金裘">第五十二回 俏平儿情掩虾须镯　勇晴雯病补雀金裘</h2>
+<p><strong>原文摘录</strong><br>
+俗语说：‘病来如山倒，病去如抽丝。’<br>
+<br /><br /></p>
+<h2 id="第五十三回-宁国府除夕祭宗祠-国府元宵开夜宴">第五十三回 宁国府除夕祭宗祠　国府元宵开夜宴</h2>
+<p><strong>原文摘录</strong><br>
+贾母也曾差人去请众族中男女，奈他们或有年迈，懒于热闹的；或有家内没有人，不便来的；或有疾病淹留，欲来竟不能来的；或有一等妒富愧贫，不肯来的；甚至于有一等憎畏凤姐之为人而赌气不来的；或有羞口羞脚，不惯见人，不敢来的；因此族众虽，女客来者，只不过贾菌之母娄氏，带了贾菌来了，男子只有贾芹、贾芸、贾菖、贾菱四个，现是在凤姐麾下办事的来了。当下人虽不全，在家庭间小宴中，数来也算是热闹的了。<br>
+<br /><br /></p>
+<h2 id="第五十四回-史太君破陈腐旧套-王熙凤效戏彩斑衣">第五十四回 史太君破陈腐旧套　王熙凤效戏彩斑衣</h2>
+<h2 id="第五十五回-辱亲女愚妾争闲气-欺幼主刁奴蓄险心">第五十五回 辱亲女愚妾争闲气　欺幼主刁奴蓄险心</h2>
+<h2 id="第五十六回-敏探春兴利除宿弊-时宝钗小惠全大体">第五十六回 敏探春兴利除宿弊　时宝钗小惠全大体</h2>
+<h2 id="第五十七回-慧紫鹃情辞试忙玉-慈姨妈爱语慰痴颦">第五十七回 慧紫鹃情辞试忙玉　慈姨妈爱语慰痴颦</h2>
+<p><strong>原文摘录</strong><br>
+“哇”的一声，将腹中之药一概呛出，抖肠搜肺、炽胃扇肝的痛声大嗽了几阵，一时面红发乱，目肿筋浮，喘得抬不起头来。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我只愿这会子立刻我死了，把心迸出来你们瞧见了，然后连皮带骨一概都化成一股灰；灰还有形迹，不如再化一股烟；烟还可凝聚，人还看见，须得一阵大乱风吹得四面八方都登时散了，这才好！<br>
+<br /><br /></p>
+<h2 id="第五十八回-杏子阴假凤泣虚凰-茜纱窗真情揆痴理">第五十八回 杏子阴假凤泣虚凰　茜纱窗真情揆痴理</h2>
+<p><strong>原文摘录</strong><br>
+只见柳垂金线，桃吐丹霞，山石之后，一株大杏树，花已全落，叶稠阴翠，上面已结了豆子大小的许多小杏。<br>
+<br /><br /></p>
+<h2 id="第五十九回-柳叶渚边嗔莺咤燕-绛云轩里召将飞符">第五十九回 柳叶渚边嗔莺咤燕　绛云轩里召将飞符</h2>
+<h2 id="第六十回-茉莉粉替去蔷薇硝-玫瑰露引来茯苓霜">第六十回 茉莉粉替去蔷薇硝　玫瑰露引来茯苓霜</h2>
+<h2 id="第六十一回-投鼠忌器宝玉瞒赃-判冤决狱平儿行权">第六十一回 投鼠忌器宝玉瞒赃　判冤决狱平儿行权</h2>
+<h2 id="第六十三回-寿怡红群芳开夜宴-死金丹独艳理亲丧">第六十三回 寿怡红群芳开夜宴　死金丹独艳理亲丧</h2>
+<p><strong>原文摘录</strong><br>
+面如满月犹白，眼如秋水还清<br>
+<br /><br /></p>
+<h2 id="第六十四回-幽淑女悲题五美吟-浪荡子情遗九龙佩">第六十四回 幽淑女悲题五美吟　浪荡子情遗九龙佩</h2>
+<h2 id="第六十五回-贾二舍偷娶尤二姨-尤三姐思嫁柳二郎">第六十五回 贾二舍偷娶尤二姨　尤三姐思嫁柳二郎</h2>
+<p><strong>原文摘录</strong><br>
+谁知这尤三姐天生脾气不堪，仗着自己风流标致，偏要打扮得出色，另式作出许多万人不及的淫情浪态来，哄得男子们垂涎落魄，欲近不能，欲远不舍，迷离颠倒，她以为乐。<br>
+<br /><br /></p>
+<h2 id="第六十六回-情小妹耻情归地府-冷二郎一冷入空门">第六十六回 情小妹耻情归地府　冷二郎一冷入空门</h2>
+<h2 id="第六十七回-馈土物颦卿念故里-讯家童凤姐蓄阴谋">第六十七回 馈土物颦卿念故里　讯家童凤姐蓄阴谋</h2>
+<h2 id="第六十八回-苦尤娘赚入大观园-酸凤姐大闹宁国府">第六十八回 苦尤娘赚入大观园　酸凤姐大闹宁国府</h2>
+<h2 id="第六十九回-弄小巧用借剑杀人-觉大限吞生金自逝">第六十九回 弄小巧用借剑杀人　觉大限吞生金自逝</h2>
+<h2 id="第七十回-林黛玉重建桃花社-史湘云偶填柳絮词">第七十回 林黛玉重建桃花社　史湘云偶填柳絮词</h2>
+<h2 id="第七十一回-嫌隙人有心生嫌隙-鸳鸯女无意遇鸳鸯">第七十一回 嫌隙人有心生嫌隙　鸳鸯女无意遇鸳鸯</h2>
+<h2 id="第七十二回-王熙凤恃强羞说病-来旺妇倚势霸成亲">第七十二回 王熙凤恃强羞说病　来旺妇倚势霸成亲</h2>
+<h2 id="第七十三回-痴丫头误拾绣春囊-懦小姐不问累金凤">第七十三回 痴丫头误拾绣春囊　懦小姐不问累金凤</h2>
+<p><strong>原文摘录</strong><br>
+更有时文八股一道，因平素深恶此道，原非圣贤之制撰，焉能阐发圣贤之微奥，不过作后人饵名钓禄之阶。<br>
+<br /><br /></p>
+<h2 id="第七十四回-惑奸谗抄检大观园-矢孤介杜绝宁国府">第七十四回 惑奸谗抄检大观园　矢孤介杜绝宁国府</h2>
+<h2 id="第七十五回-开夜宴异兆发悲音-赏中秋新词得佳谶">第七十五回 开夜宴异兆发悲音　赏中秋新词得佳谶</h2>
+<h2 id="第七十六回-凸碧堂品笛感凄清-凹晶馆联诗悲寂寞">第七十六回 凸碧堂品笛感凄清　凹晶馆联诗悲寂寞</h2>
+<p><strong>原文摘录</strong><br>
+趁着这明月清风，天空地净，真令人烦心顿解，万虑齐除，都肃然危坐，默默相赏。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+二人遂在两个湘妃竹墩上坐下。只见天上一轮皓月，池中一轮水月，上下争辉，如置身于晶宫鲛室之内。微风一过，粼粼然池面皱碧铺纹，真令人神清气净。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+湘云笑道：“怎得这会子坐上船吃酒倒好。这要是我家里这样，我就立刻坐船了。”黛玉笑道：“正是古人常说得好，‘事若求全何所乐’。据我说，这也罢了，偏要坐船起来。”湘云笑道：“得陇望蜀，人之常情。可知那些老人家说得不错。说贫穷之家自为富贵之家事事趁心，告诉他说竟不能遂心，他们不肯信的；必得亲历其境，他方知觉了。就如咱们两个，虽父母不在，然却也忝在富贵之乡，只你我就有许多不遂心的事。”黛玉笑道：“不但你我不能趁心，就连老太太、太太以至宝玉、探丫头等人，无论事大事小，有理无理，其不能各遂其心者，同一理也，何况你我旅居客寄之人哉！”<br>
+<br /><br /></p>
+<h2 id="第七十七回-俏丫鬟抱屈夭风流-美优伶斩情归水月">第七十七回 俏丫鬟抱屈夭风流　美优伶斩情归水月</h2>
+<h2 id="第七十八回-老学士闲征姽婳词-痴公子杜撰芙蓉诔">第七十八回 老学士闲征姽婳词　痴公子杜撰芙蓉诔</h2>
+<p><strong>原文摘录</strong><br>
+贾政命他们看了题目。他两个虽能诗，较腹中之虚实，虽也去宝玉不远，但第一件，他两个终是别途，若论举业一道，似高过宝玉，若论杂学，则远不能及；第二件他二人才思滞钝，不及宝玉空灵娟逸，每作诗亦如八股之法，未免拘板庸涩。那宝玉虽不算是个读书人，然亏他天性聪敏，且素喜好些杂书，他自谓古人中也有杜撰的，也有误失之处，拘较不得许多；若只管怕前怕后起来，纵堆砌成一篇，也觉得甚无趣味。因心里怀着这个念头，每见一题，不拘难易，他便毫无费力之处，就如世上的流嘴滑舌之人，无风作浪，信着伶口俐舌，长篇大论，胡扳乱扯，敷演出一篇话来。虽无稽考，却都说得四座春风。虽有正言厉语之人，亦不得压倒这一种风流去的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我又不希罕那功名，不为世人观阅称赞，何必不远师楚人之《大言》、《招魂》、《离骚》、《九辩》、《枯树》、《问难》、《秋水》、《大人先生传》等法，或杂参单句，或偶成短联，或用实典，或设譬寓，随意所之，信笔而去，喜则以文为戏，悲则以言志痛，辞达意尽为止，何必若世俗之拘拘于方寸之间哉。”<br>
+<br /><br /></p>
+<h2 id="第七十九回-薛文龙悔娶河东狮-贾迎春误嫁中山狼">第七十九回 薛文龙悔娶河东狮　贾迎春误嫁中山狼</h2>
+<p><strong>原文摘录</strong><br>
+爱自己，尊若菩萨，窥他人，秽如粪土；外具花柳之姿，内秉风雷之性。<br>
+<br /><br /></p>
+<h2 id="第八十回-懦弱迎春肠回九曲-姣怯香菱病入膏肓">第八十回 懦弱迎春肠回九曲　姣怯香菱病入膏肓</h2>
+<p><strong>原文摘录</strong><br>
+共药一百二十味，君臣相际，宾客得宜，温凉兼用，贵贱殊方。内则调元补气，开胃口，养荣卫，宁神安志，去寒去暑，化食化痰；外则和血脉，舒筋络，出死肌，生新肉，去风散毒。其效如神，贴过的便知。<br>
+<br /><br /></p>
+<h2 id="第八十一回-占旺相四美钓游鱼-奉严词两番入家塾">第八十一回 占旺相四美钓游鱼　奉严词两番入家塾</h2>
+<h2 id="第八十三回-省宫闱贾元妃染恙-闹闺阃薛宝钗吞声">第八十三回 省宫闱贾元妃染恙　闹闺阃薛宝钗吞声</h2>
+<h2 id="第八十五回-贾存周报升郎中任-薛文起复惹放流刑">第八十五回 贾存周报升郎中任　薛文起复惹放流刑</h2>
+<h2 id="第八十六回-受私贿老官翻案牍-寄闲情淑女解琴书">第八十六回 受私贿老官翻案牍　寄闲情淑女解琴书</h2>
+<h2 id="第八十七回-感深秋抚琴悲往事-坐禅寂走火入邪魔">第八十七回 感深秋抚琴悲往事　坐禅寂走火入邪魔</h2>
+<p><strong>原文摘录</strong><br>
+黛玉送到门口，大家都说：“你身上才好些，别出来了，看着了风！”于是黛玉一面说着话儿，一面站在门口，又与四人殷勤了几句，便看着他们出院去了。进来坐着，看看已是林鸟归山，夕阳西坠。因史湘云说起南边的话，便想着“父母若在，南边的景致，春花秋月，水秀山明，二十四桥，六朝遗迹。不少下人服侍，诸事可以任意，言语亦可不避。香车画舫，红杏青帘，惟我独尊。今日寄人篱下，纵有许多照应，自己无处不要留心。不知前生作了什么罪孽，今生这样孤凄。真是李后主说的‘此间日中，只以眼泪洗面’矣！”一面思想，不知不觉神往那里去了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这里黛玉添了香，自己坐着。才要拿本书看，只听得园内的风自西边直透到东边，穿过树枝，都在那里唏哩哗喇不住的响。一回儿，檐下的铁马也只管叮叮当当的乱敲起来。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+失意人逢失意事，新啼痕间旧啼痕。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+云影横空，月华如水<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一念不生，万缘俱寂<br>
+<br /><br /></p>
+<h2 id="第八十八回-博庭欢宝玉赞孤儿-正家法贾珍鞭悍仆">第八十八回 博庭欢宝玉赞孤儿　正家法贾珍鞭悍仆</h2>
+<h2 id="第八十九回-人亡物在公子填词-蛇影杯弓颦卿绝粒">第八十九回 人亡物在公子填词　蛇影杯弓颦卿绝粒</h2>
+<h2 id="第九十回-失绵衣贫女耐嗷嘈-送果品小郎惊叵测">第九十回 失绵衣贫女耐嗷嘈　送果品小郎惊叵测</h2>
+<h2 id="第九十一回-纵淫心宝蟾工设计-布疑阵宝玉妄谈禅">第九十一回 纵淫心宝蟾工设计　布疑阵宝玉妄谈禅</h2>
+<p><strong>原文摘录</strong><br>
+人有吉凶事，不在鸟声中<br>
+<br /><br /></p>
+<h2 id="第九十三回-甄家仆投靠贾家门-水月庵掀翻风月案">第九十三回 甄家仆投靠贾家门　水月庵掀翻风月案</h2>
+<h2 id="第九十四回-宴海棠贾母赏花妖-失宝玉通灵知奇祸">第九十四回 宴海棠贾母赏花妖　失宝玉通灵知奇祸</h2>
+<h2 id="第九十五回-因讹成实元妃薨逝-以假混真宝玉疯颠">第九十五回 因讹成实元妃薨逝　以假混真宝玉疯颠</h2>
+<h2 id="词汇积累">词汇积累</h2>
+<p>浥（yi 4）：沾湿；</p>
+<p>隤（tui 2）：崩颓；坠下；败坏；下降；跌倒；丢失</p>
+<p>跏趺（jia 1 fu 1）：结跏趺坐的略称。佛教中修禅者的坐法</p>
+<p>濡墨挥毫</p>
+<p>斯抬斯敬：形容双方客客气气，很有礼貌</p>
+<p>骯（kang 3）：肮的繁体字</p>
+<p>鲔（wei 3）：鲟鱼和鳇鱼的总称</p>
+<p>愍恻（min 3）：怜悯</p>
+<p>旦暮无休</p>
+<p>猇声狺语(xiao 1 yin 2)：形容恶言叫骂</p>
+<p>萱亲（xuan 1）：母亲</p>
+<p>斸（zhu 2）：锄头；掘；砍削</p>
+<p>貂蝉满座：旧指官爵多而溢</p>
+<p>衄（nv 4）：鼻出血，泛指其他器官或部位出血；挫折，失败</p>
+<p>蝎蝎螫螫（shi 4）：扭扭捏捏；胆小怕事</p>
+<p>颟顸（man 1 han 1）：糊涂而马虎</p>
+<p>愚夯（ben 4）：愚笨</p>
+<p>纛（dao 4）：古代军队或仪仗队的大旗</p>
+<p>爰（yuan 2）：变更；哪里；于是</p>
+<p>翥（zhu 4）：向上飞</p>
+<p>窀穸（zhun 1 xi 1）：埋葬；墓穴</p>
+<p>醑（xu 3）：美酒；</p>
+<p>醽醁（ling 2 lu 4）：美酒名</p>
+<p>纕（rang 3）：1、捋袖露出手臂。2、束衣袖的绳索。3、丝纷乱。</p>
+<p>薆（ai 4）：隐蔽；草木茂盛貌</p>
+<p>塍（cheng 2）：田埂</p>
+<p>燹（xian 3）：火，特指战火</p>
+<p>鳷鹊（zhi 1）：传说中的异鸟名；喜鹊；</p>
+<p>謑诟（xi 3 gou 4）：辱骂，侮辱</p>
+<p>顑颔（kan 3 han 4）：因饥饿而面黄肌瘦的样子</p>
+<p>虿（chai 4）：蝎子一类的毒虫；蜻蜓的幼虫</p>
+<p>鸩（zhen 4）：传说中一种毒鸟；毒酒</p>
+<p>罬（zhuo 2）：装设机关掩捕鸟兽的器具</p>
+<p>罦（fu 3）：装设机关掩捕鸟兽的网</p>
+<p>曩（nang 3）：先时，先前</p>
+<p>罽（ji 4）：织皮，网，兽毛织品</p>
+<p>鹔（su 4）：古代传说中的西方神鸟</p>
+<p>衾（qin 1）：被子</p>
+<p>中浣（huan 4）：中旬</p>
+<p>鼋（yuan 2）：寺庙放生池的吉祥物，鳖科动物</p>
+<p>银样镴枪头（la 4）：本意是将焊锡做成枪头，比喻表面看起来还不错，实际不中用</p>
+<p>涎（xian 2）：唾沫。口水</p>
+<p>霰（xian 4）：在高空的水蒸气遇到冷空气凝华成的小冰粒</p>
+<p>绮（qi 3）：本义细绫，有花纹的丝织品。引申义华丽、美丽、精美</p>
+<p>鬒（zhen 3）：又黑又密，鬒发如云</p>
+<p>唪（feng 3）：大声吟诵，唪经</p>
+<p>燎泡（laio 2）：由于火伤或烫伤，在皮肤表面形成的水泡</p>
+<p>邪祟（sui 4）：作祟害人的鬼怪</p>
+<p>趸（dun 3）：作懂次事意为“整批地购入”，作副词时意为“成批地”</p>
+<p>嘁嘁喳喳（qi 1 cha 1）：低声议论，搬弄是非</p>
+<p>铰（jiao 3）：本义剪刀</p>
+<p>棺椁（guo 3）：棺材和套棺（古代套于棺外的大棺）</p>
+<p>拚（pin 1，pan 4，fan1）：抛弃、舍弃</p>
+<p>饧（tang 2，xing 2）：指糖稀，糖块。也形容精神不振，眼睛半睁半闭</p>
+<p>疔（ding 1）：本义疔疮</p>
+<p>肏（cao 4）：本义性交，引申义指忽悠、争吵、也指吃饭时胡吃乱塞</p>
+<p>鹘（hu 2 gu 3）：古书上说的一种鸟，短尾，青黑色</p>
+<p>忒（te 4 tei 1 tui 4）：太，特别，非常，常见于口语，差误</p>
+<p>旄旌（mao 2 jing 1）：古代祭祀时执以导神之物</p>
+<p>桃羞杏让：形容女子比花还要艳丽动人</p>
+<p>燕妒莺惭：意思女子貌美，燕见之生妒，莺对之自惭</p>
+<p>翩跹（pian 1 xian 1）：形容轻快地跳舞</p>
+<p>爖（long 2）：点燃</p>
+<p>淖（nao 4）：烂泥</p>
+<p>侬（nong 2）：本义是人，引申为你、我、他</p>
+<p>羼（chan 4）：杂居、混杂</p>
+<p>屄（bi 1）：雌性外生殖器</p>
+<p>荼縻（tu 2 mi 2）：又名酴醾、佛见笑、重瓣空心泡。是蔷薇科悬钩子属空心泡的变种。</p>
+<p>醮（jiao 4）：古冠、婚礼所行的一种简单仪式</p>
+<p>簟（dian 4）：蕲（qi 2）竹所制竹席、凉席</p>
+<p>绡（xiao 1）：本义生丝、生丝织物</p>
+<p>幺（yao 1）：小，排行最末；数目一</p>
+<p>挦（xian 2）：扯、拔、摘取</p>
+<p>臜（za 1）：脏的；心里别扭不痛快；混蛋无赖</p>
+<p>兢兢业业（jing 1）：形容做事小心谨慎，认真踏实</p>
+<p>玦（jue 2）：环形而有缺口的佩玉</p>
+<p>耳鬓厮磨（bin 2）：耳与鬓发互相摩擦，形容亲密相处的情景，多指恋人相恋的亲密场景</p>
+<p>闺英闱秀（wei 2）：大户人家的才貌姣好的女子</p>
+<p>暑溽（ru 4）：夏季潮湿闷热</p>
+<p>香薷（ru 2）：唇形科香薷属植物</p>
+<p>涎皮赖脸（xian 2）：厚着脸皮纠缠，惹人厌烦</p>
+<p>乜斜（mie 1 xie 0）：指没有精神，昏昏欲睡的样子</p>
+<p>噙（qin 2）；含在里面</p>
+<p>绾（wan 3）：系，盘绕</p>
+<p>牝（pin 4）：本义是雌性的牲畜动物，后引申为阴性的事物</p>
+<p>葳葳蕤蕤（wei 1 rui 2）：形容鲜艳美好的样子；形容萎顿衰颓的样子</p>
+<p>惶悚（huang 2 song 3）：惶恐而心中害怕</p>
+<p>栉沐（zhi 4 mu 4）：梳发和沐浴</p>
+<p>气噎喉堵：形容喘不过气</p>
+<p>魆（xu 1）黑：暗黑</p>
+<p>潸（shan 1）：流泪的样子</p>
+<p>泠泠（ling 2）：清凉、凄清的样子</p>
+<p>怄（ou 4）：故意惹人恼怒或使人发笑</p>
+<p>琼闺秀玉：琼玉般的闺阁，秀丽的美女</p>
+<p>跐（ ci 1 3）：脚下滑动；踏、踩</p>
+<p>槅（ge 2）：车；格子、隔板；盛食物的器具</p>
+<p>管窥蠡测（li 2）：指竹孔中观天，用瓢量海水，比喻对事物观察了解狭窄片面</p>
+<p>缱绻难舍（qian 3 quan 3）：牢结，不离散；情谊深厚</p>
+<p>花笺（jian 1）：古代笺名。精美的信笺，诗笺</p>
+<p>痌（tong 1 3）：痛苦，也有创伤溃烂的意思</p>
+<p>瘃（zhu 2）：病名，冻疮，冻瘃；冻干，瘃脯</p>
+<p>瘰（luo 3）：疾病名，由于结核杆菌侵入颈部或腋窝的淋巴结而引起的。症状是患处发生硬块，溃烂后流脓，不易愈合。有些地区也称“老鼠疮”</p>
+<p>远招近揖：对远近友人热情相邀，礼貌对待</p>
+<p>投辖攀辕：表示殷切挽留</p>
+<p>扫花以待：形容接待客人的诚意</p>
+<p>蕉叶覆鹿：春秋时，郑国樵夫打死一只鹿，怕被别人看见，就把它藏在坑中，盖上蕉叶，，后来他去取鹿时，忘了所藏的地方，于是就以为是一场梦。比喻得失荣辱如梦幻</p>
+<p>绛（jiang 4）：本义指大红色</p>
+<p>缟袂（mao 3 mei 4）：基本意思为白衣，亦借喻白色花卉，如梅花</p>
+<p>掇（duo 1）：捨取，摘取</p>
+<p>唼喋（sha 4 zha 2）：形容鱼或水鸟吃食的声音，也指鱼或水鸟吃食</p>
+<p>酹（lei 4）：将酒倒在地上，表示祭奠或立誓</p>
+<p>欹（qi 1 yi 1）；倾斜；容貌憔悴</p>
+<p>蛩（qiong 2）：蝗虫的别名，俗称蚱蜢</p>
+<p>螯（ao 2）：具有高节肢足的虫子（如螃蟹、螳螂等）</p>
+<p>黍（shu 3）：俗称黄米</p>
+<p>撷（xie 2）：采摘</p>
+<p>缀（zhui 4）：本义缝合，后引申为连接、装饰</p>
+<p>舡（chuan 2）：船</p>
+<p>墁（man 4）：涂抹，装饰；用石、砖等铺饰在地面上</p>
+<p>卍（wan 4）：古印度宗教的吉祥标记，象征火焰上升</p>
+<p>敁（dian 1）：用手掂量、估量或斟酌</p>
+<p>敪（duo  1 que 4）：</p>
+<p>攮（nang 3）：意思是一种短而尖的刀</p>
+<p>溆（xu 4）：水边</p>
+<p>奁（lian 2）：古代女子存放梳妆用品的镜箱</p>
+<p>裀（yin 1）：指褥垫，毯子之类</p>
+<p>簟（dian 4）：做障蔽和垫物的竹席</p>
+<p>瓤（rang 2）：带瓜子的瓜肉</p>
+<p>蠲（juan 1）：除去；清除；使清洁；剖腹；择取；积存；</p>
+<p>瓟（bo 2）：古书上说的一种草，为葫芦科植物赤瓟的果实</p>
+<p>斝（jia 4）：古代盛酒器</p>
+<p>豇豆（jiang 1）：</p>
+<p>鼾齁（han 1 hou 1）：睡熟打呼噜的声音</p>
+<p>题跋（ba 2）：写在书籍，碑帖，字画等前面的文字叫做题，写在后面的，叫做跋</p>
+<p>皴染（cun 1）：中国画技法皴法和渲染</p>
+<p>滃（weng 3）：形容水盛，大水沸腾；形容云起，云气翻涌</p>
+<p>矾（fan 2）：各种金属的硫酸盐</p>
+<p>赭石（zhe 3）：氧化物类矿物刚玉族赤铁矿</p>
+<p>铫（diao 4）：便携小金属锅</p>
+<p>爇（ruo 4）：烧</p>
+<p>檠（qing 2）：矫正弓弩的器具；烛台</p>
+<p>巴高望上：与社会地位高于自己的人结交或联姻</p>
+<p>蜂腰削背（xue 1）：细腰窄背，轻盈俊俏</p>
+<p>舛错（chuan 3）：谬误，差错</p>
+<p>岫（xiu 4）：山洞；峰峦</p>
+<p>鳏鳏（guan 1）：因忧愁而张目不眠的样子</p>
+<p>鼐（nai 4）：大鼎</p>
+<p>氅（chang 3）：鸟类羽毛缝制成的外衣；</p>
+<p>羓（ba 1）：干制食物</p>
+<p>肷（qian 3）：身体两旁肋骨和胯骨之间的部分，肷窝</p>
+<p>褙（bei 4）：披风，凤帔（pei 4）；把纸或布一层一层地粘在一起，裱褙</p>
+<p>麀（you 1）：母鹿；泛指母兽</p>
+<p>齑（ji 1）：捣碎的姜、蒜、韭菜等，也指混杂、调和;用醋、酱拌和，切成碎末的菜或肉；</p>
+<p>凫（fu 2）：野鸭</p>
+<p>琼瑶：美玉</p>
+<p>匝地（za 1）：遍地</p>
+<p>笤（tiao 2）：草；特指凌霄花，又名紫葳；芦苇的花穗；</p>
+<p>阗（tian 2）：本义盛、大</p>
+<p>胶柱鼓瑟：鼓瑟时胶住瑟上的弦柱，就不能调节音的高低，比喻固执拘泥，不知变通</p>
+<p>爨（cuan 4）：烧火做饭</p>
+<p>语笑喧阗（tian 2）：形容许多人挤来挤去大声说笑</p>
+<p>笙歌聒耳：耳朵里充满乐音和歌声</p>
+<p>妒富愧贫：对别人的富有嫉妒，对自己的贫穷羞愧</p>
+<p>膏粱纨绔（wan 2）：富贵人家子弟</p>
+<p>撮（cuo 1）：撮东西用的器具</p>
+<p>簸（bo 4）：柳条或竹篾编成的器具</p>
+<p>病笃乱投医（du 2）：事势危急盲目求援的意思</p>
+<p>壅塞（yong 1）：堵塞；用土或肥料培在植物的根部</p>
+<p>佯羞诈愧：假装娇羞以取悦于人</p>
+<p>洑（fu 2 4）：水流回旋的样子和漩涡；游泳</p>
+<p>物伤其类：见到同类的死亡，联想到自己将来的下场而感到悲伤；比喻见到情况与自己相似的人的遭遇而伤感</p>
+<p>蠲免（juan 1）：免除</p>
+<p>歍（wu 1）：恶心；呕吐</p>
+<p>不平则鸣：指遇到不平的事就要发出不满的呼声，形容对不公平的事表示愤慨</p>
+<p>菂（di 4）：莲子</p>
+<p>荤羹腥菜</p>
+<p>心诚意洁</p>
+<p>驮轿（tuo 2）：驼在骡马等背上的轿子</p>
+<p>土润苔青</p>
+<p>搴（qian 1）：摘取</p>
+<p>黧（li 2）：黑里带黄的颜色</p>
+<p>屄声浪嗓</p>
+<p>吣（qin 4）：猫狗呕吐；说脏话</p>
+<p>蛆心孽障</p>
+<p>絮聒（xu 4 guo 1）：唠叨不停</p>
+<p>埘（shi 2）：凿墙为鸡窝；泛指禽类在墙上的窝</p>
+<p>娇袅（niao 3）：娇媚柔弱的样子</p>
+<p>酽（yan 4）：指酒、茶等饮料味道浓；厉害，剧烈</p>
+<p>酡（tuo 2）：饮酒脸红的样子；也泛指脸红</p>
+<p>侑（you 4）：劝；多用于酒食、宴饮</p>
+<p>揎拳掳袖（xuan 1 lu 4）：把袖子往上一推，露出胳膊，握着拳头，准备动手</p>
+<p>嵩呼（song 1）：指臣下祝颂帝王，高呼万岁</p>
+<p>稽颡（qi 3 sang 3）：古代的一种礼节，屈膝下跪，双手朝前，以额触地，表示极度的虔诚</p>
+<p>脏唐臭汉：形容汉、唐连个时代强盛但男女间荒乱之事甚多</p>
+<p>鼒（zi 1）：上端收敛而口小的鼎</p>
+<p>玉醴（li 3）：甘泉；传说中的仙药；美酒；唾液</p>
+<p>醢（hai 3）：肉酱；古代酷刑，将人剁成肉酱</p>
+<p>畀（bi 4）：基础；支架；本义把田分给人们</p>
+<p>羁縻（ji 1 mi 2）：系联；笼络，怀柔；束缚，控制；拘禁</p>
+<p>牛黄狗宝：泛指珍贵的物品；比喻坏人的脏腑</p>
+<p>饧涩（xing 2）：眼皮半开半合，眉眼黏滞</p>
+<p>淫情浪态：淫荡的神态</p>
+<p>籆（yue 4）：纺织时绕丝、纱、线等工具</p>
+<p>觌（di 2）：见，观察，显示</p>
+<p>调三窝四：搬弄是非，挑拨离间</p>
+<p>麀聚（you 4）：比喻父子共妻，有如禽兽</p>
+<p>安富尊荣：安逸富足、尊贵荣耀</p>
+<p>孳生（zi 1）：繁殖</p>
+<p>屈戍（shu 4）：蝴蝶扇铰</p>
+<p>舛（chuan 3）：相违背；不顺；交互；交错</p>
+<p>戒饬（chi 4）：告诫</p>
+<p>圊厕（qing 1）：厕所</p>
+<p>赫赫扬扬（he 4）：光明盛大貌；形容兴旺显赫</p>
+<p>喉清嗓嫩</p>
+<p>魄醉魂飞</p>
+<p>朔望：朔日和望日，农历初一和十五</p>
+<p>不落窠臼：指文章或艺术等有独创风格，不落俗套</p>
+<p>山高月小</p>
+<p>皓月清波</p>
+<p>神清气净</p>
+<p>棔（hun 1）：意思是指合棔，木名，合欢树</p>
+<p>宝婺（wu 4）：即婺女星，常借指女神</p>
+<p>凄清奇谲</p>
+<p>嫠（li 2）：寡妇</p>
+<p>赑（bi 4）：用力的样子；传说中的一种动物，像龟，旧时大石碑的基座多雕成它的样子</p>
+<p>屃（xi 4）：壮大的样子</p>
+<p>赑屃：形容作气用力；形容凝重或强劲；形容大而重</p>
+<p>罘罳（fu 2 si 1）：古代一种设在门外的屏风；布在屋檐或窗户上捕鸟雀的金属网或丝网</p>
+<p>蓍（shi 1）：草名，蓍草</p>
+<p>蒹葭倚玉：表示地位低的人依附地位高的人</p>
+<p>饱饫烹宰，饥餍糟糠（bao 3 yu 4 peng 1 zai 3 ji 1 yan 4 zao 1 kang 1）饱腹时鱼肉等美食也吃不下，饥饿时糟糠等粗食也很满足</p>
+<p>发讪怕羞</p>
+<p>狎昵（xia 2 ni 4）：亲近，亲昵</p>
+<p>赉（lai 4）：赏赐</p>
+<p>旃檀（zhan 1 tan 2）：檀香</p>
+<p>埭（dai 4）：堵水的土坝；量词，相当于“座”</p>
+<p>姽婳（gui 3 hua 4）：女子娴静美好</p>
+<p>空灵娟秀</p>
+<p>拘板庸涩</p>
+<p>缶（fou 3）：古代一种肚大口小的瓦器，用于盛酒或盛水</p>
+<p>瓯（ou 1）：杯、碗等容器；方言，深陷，凹下</p>
+<p>秾（nong 2）：花木浓盛茂密。秾密；艳丽，华丽</p>
+<p>潢（huang 2）：水池，水坑；泛指装裱，装饰</p>
+<h2 id="信息积累">信息积累</h2>
+<p>促狭鬼：指气量肚量狭小。性情急躁</p>
+<p>梯己（ti 1 ji 0）：个人私有的积蓄</p>
+<p>金莼（chun 2）：多年生水草，浮在水面，叶子椭圆形，开暗红色花，可食</p>
+<p>麝（she 4）：又称为麝獐、香獐</p>
+<p>拈香（nian 1）：上香</p>
+<p>阴鸷（zhi 4）：默默地使安定；阴德；冥冥之中</p>
+<p>鸂鶒（xi 1 chi 4）：亦作“鸂鶆（lai 2）”，水鸟名，形大于鸳鸯，多紫色，俗称紫鸳鸯；山西祁县方言特指讨人喜欢的意思</p>
+<p>鸾绦（luan 2 tao 1）：束腰的丝带</p>
+<p>鲛帕（jiao 3）：精美的巾帕</p>
+<p>木樨(xi 1)：别名桂花</p>
+<p>鮹（shao 1）：鮹鱼</p>
+<p>鲛（jiao 1）：鲨鱼</p>
+<p>囚攮的（qiu 2 nang 3 de 0）：詈词，骂人的话</p>
+<p>门闩（shuang 1）：门关上后，插在门内使门推不开的滑动插销</p>
+<p>妯娌（zhou 2 li 0）：已婚妇女称呼丈夫兄弟的老婆为妯娌</p>
+<p>杌（wu 4）：指光秃、浑然无知</p>
+<p>箸（zhu 4）：筷子</p>
+<p>牙箸：象牙制的筷子</p>
+<p>娥皇女英：姐妹，皆为帝尧之女，帝舜之妻，别名湘娥，湘夫人，湘妃，舜帝南巡苍梧而死，崩葬九嶷（yi 2）山，二妃千里寻夫，知舜已死，抱竹痛哭，竹上升斑，泪尽而死，因称“潇湘竹”或“湘妃竹”</p>
+<p>拈阄（jiu 1）：从预先做好记号的纸卷或纸团中，随意拈取一个，来决定事情</p>
+<p>鸡头：芡实的别称</p>
+<p>红菱：一年生浮水水生草本，别名苏州红</p>
+<p>茶筅（xian 3）；点茶的一种烹茶工具，由一精细切割而成的竹块制作而成，用以调搅粉末茶，是点茶的必备工具</p>
+<p>饕餮（tao 1 tie 4）：别名老饕，狍鸮（pao 2 xiao 1），中国古代神话传说中的一种凶恶贪食的野兽，四大凶兽之一。羊身人面，其目在腋下</p>
+<p>瞽目先生（gu 3）：眼睛失明的说唱艺人</p>
+<p>苍苔：青色苔藓</p>
+<p>戗金（qiang 1）：又称沉金，枪金，指在朱漆或黑漆漆地表面用针或刀镂刻出纤细线槽，并在线槽中贴以金箔，再细加研磨，从而形成金线纹饰</p>
+<p>篾片相公（mie 4）：专门沾取别人利益的人</p>
+<p>麈尾（zhu 3）：古人闲谈时执以驱虫，掸尘的一种工具</p>
+<p>叶韵（xie 2）：谐韵，协韵</p>
+<p>茄鲞（xiang 3）：切成片状腌腊的茄子</p>
+<p>老鸹（gua 1）：乌鸦的俗称</p>
+<p>蟠虬（pan 2 qiu 2）：意思是盘曲的虬龙</p>
+<p>瓠子（gua 1）：葫芦科植葫芦属植物</p>
+<p>司马牛之叹：比喻对孑然一身，孤立无援的感叹</p>
+<p>箬笠（ruo 4）：用竹篾、箬叶编织的斗笠</p>
+<p>戥子（deng 3 zi 3）：衡量轻重的器具</p>
+<p>仇十洲：仇英，明代绘画大师，与沈周、文徵明、唐寅并称为“明四家”</p>
+<p>凫靥裘（fu 2 ye 2 qiu 2）：用野鸭面部两颊附近的毛皮制作的衣服</p>
+<p>騄駬（lu 4 er 3）：古代骏马名</p>
+<p>夔龙（kui 2）：状如牛，苍身而无角，一足</p>
+<p>老健春寒秋后热：意思是老年人的生命，就像春天的寒冷，秋后的余热一样不会久长</p>
+<p>万两黄金容易得，知心一个也难求：形容知心朋友难得遇到</p>
+<p>黧鸡：雀、鹑的一种</p>
+<p>榛穰（zhen 1 rang 2）：榛子肉</p>
+<p>筏子（fa 2）：水上交通工具，用竹、木编排而成；比喻可供利用的工具</p>
+<p>走了大褶儿（zhe 3）：比喻没了规矩或出了大错</p>
+<p>将军不下马，各自奔前程：各走各的路，各做各的事</p>
+<p>来是是非人，去是是非者：谁惹起的是非，就还得由谁来了结</p>
+<p>缂丝（ke 4）：缂丝，又称“刻丝”，是中国传统丝绸艺术品中的精华。是中国丝织业中最传统的一种挑经显纬，极具欣赏装饰性丝织品。缂丝其实并非真的用刀来雕刻，这是一种以生蚕丝为经线，彩色熟丝为纬线，采用通经回纬的方法织成的平纹织物：纬丝按照预先描绘的图案，不贯通全幅，用多把小梭子按图案色彩分别挖织，使织物上花纹与素地、色与色之间呈现一些断痕，类似刀刻的形象，这就是所谓“通经断纬”的织法。古人形容缂丝“承空观之如雕缕之像”。</p>
+<p>佛偈（ji 4）：佛经中的颂词。多用三言、四言、五言、六言、七言以至多言为句，四句合为一偈</p>
+<p>一个富贵心，两只体面眼：一颗心向着富贵家，两只眼睛看着有体面的人，形容势利成性</p>
+<p>浮萍尚有相逢日，人岂全无见面时：意思是分别后总有再见的机会</p>
+<p>宁撞金钟一下，不打破鼓三千：比喻宁愿和能人作短暂的接触，也不屑于和平庸低劣的人多打交道</p>
+<p>不作狠心人，难得自了汉：指不下狠心摒弃俗缘，便不能摆脱人间种种烦恼，成了脱离尘俗的人</p>
+<p>事若求全何所乐：谚语，事情都要求满意周备，就没有欢乐了</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/12/14/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%BA%A2%E6%A5%BC%E6%A2%A6/">
+            https://illusionzone.github.io/2022/12/14/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%BA%A2%E6%A5%BC%E6%A2%A6/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/12/15/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E8%AE%A4%E8%AF%86%E8%BA%AB%E4%BD%93%EF%BC%9A%E6%8E%A2%E7%B4%A2%E4%BA%BA%E4%BD%93%E5%BE%AE%E5%AE%87%E5%AE%99/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】认识身体：探索人体微宇宙 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/12/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%8B%AC%E8%A3%81%E8%80%85%E6%89%8B%E5%86%8C/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】独裁者手册 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9B%9E-%E7%94%84%E5%A3%AB%E9%9A%90%E6%A2%A6%E5%B9%BB%E8%AF%86%E9%80%9A%E7%81%B5-%E8%B4%BE%E9%9B%A8%E6%9D%91%E9%A3%8E%E5%B0%98%E6%80%80%E9%97%BA%E7%A7%80"><span class="toc-text">第一回 甄士隐梦幻识通灵  贾雨村风尘怀闺秀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9B%9E-%E8%B4%BE%E5%A4%AB%E4%BA%BA%E4%BB%99%E9%80%9D%E6%89%AC%E5%B7%9E%E5%9F%8E-%E5%86%B7%E5%AD%90%E5%85%B4%E6%BC%94%E8%AF%B4%E8%8D%A3%E5%9B%BD%E5%BA%9C"><span class="toc-text">第二回 贾夫人仙逝扬州城  冷子兴演说荣国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%9B%9E-%E9%87%91%E9%99%B5%E5%9F%8E%E8%B5%B7%E5%A4%8D%E8%B4%BE%E9%9B%A8%E6%9D%91-%E8%8D%A3%E5%9B%BD%E5%BA%9C%E6%94%B6%E5%85%BB%E6%9E%97%E9%BB%9B%E7%8E%89"><span class="toc-text">第三回 金陵城起复贾雨村  荣国府收养林黛玉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E8%96%84%E5%91%BD%E5%A5%B3%E5%81%8F%E9%80%A2%E8%96%84%E5%91%BD%E9%83%8E-%E8%91%AB%E8%8A%A6%E5%83%A7%E4%B9%B1%E5%88%A4%E8%91%AB%E8%8A%A6%E6%A1%88"><span class="toc-text">第四回 薄命女偏逢薄命郎  葫芦僧乱判葫芦案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%9B%9E-%E6%B8%B8%E5%B9%BB%E5%A2%83%E6%8C%87%E8%BF%B7%E5%8D%81%E4%BA%8C%E9%92%97-%E9%A5%AE%E4%BB%99%E9%86%AA%E6%9B%B2%E6%BC%94%E7%BA%A2%E6%A5%BC%E6%A2%A6"><span class="toc-text">第五回 游幻境指迷十二钗  饮仙醪曲演红楼梦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%9B%9E-%E8%B4%BE%E5%AE%9D%E7%8E%89%E5%88%9D%E8%AF%95%E4%BA%91%E9%9B%A8%E6%83%85-%E5%88%98%E5%A7%A5%E5%A7%A5%E4%B8%80%E8%BF%9B%E8%8D%A3%E5%9B%BD%E5%BA%9C"><span class="toc-text">第六回 贾宝玉初试云雨情  刘姥姥一进荣国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%9E%97%E9%BB%9B%E7%8E%89%E8%AF%AF%E5%89%AA%E9%A6%99%E8%A2%8B%E5%9B%8A-%E8%B4%BE%E5%85%83%E6%98%A5%E5%BD%92%E7%9C%81%E5%BA%86%E5%85%83%E5%AE%B5"><span class="toc-text">第十八回 林黛玉误剪香袋囊  贾元春归省庆元宵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%89%E5%9B%9E-%E8%A5%BF%E5%8E%A2%E8%AE%B0%E5%A6%99%E8%AF%8D%E9%80%9A%E6%88%8F%E8%AF%AD-%E7%89%A1%E4%B8%B9%E4%BA%AD%E8%89%B3%E8%AF%8D%E8%AD%A6%E8%8A%B3%E5%BF%83"><span class="toc-text">第二十三回 西厢记妙词通戏语  牡丹亭艳词警芳心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%9B%9E-%E9%86%89%E9%87%91%E5%88%9A%E8%BD%BB%E8%B4%A2%E5%B0%9A%E4%B9%89%E4%BE%A0-%E7%97%B4%E5%A5%B3%E5%84%BF%E9%81%97%E5%B8%95%E6%83%B9%E7%9B%B8%E6%80%9D"><span class="toc-text">第二十四回 醉金刚轻财尚义侠  痴女儿遗帕惹相思</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E5%9B%9E-%E9%AD%87%E9%AD%94%E6%B3%95%E5%8F%94%E5%AB%82%E9%80%A2%E4%BA%94%E9%AC%BC-%E9%80%9A%E7%81%B5%E7%8E%89%E8%92%99%E8%94%BD%E9%81%87%E5%8F%8C%E7%9C%9F"><span class="toc-text">第二十五回 魇魔法叔嫂逢五鬼  通灵玉蒙蔽遇双真</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AD%E5%9B%9E-%E8%9C%82%E8%85%B0%E6%A1%A5%E8%AE%BE%E8%A8%80%E4%BC%A0%E5%AF%86%E6%84%8F-%E6%B9%98%E9%A6%86%E6%98%A5%E5%9B%B0%E5%8F%91%E5%B9%BD%E6%83%85"><span class="toc-text">第二十六回 蜂腰桥设言传密意  湘馆春困发幽情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%BB%B4%E7%BF%A0%E4%BA%AD%E6%9D%A8%E5%A6%83%E6%88%8F%E5%BD%A9%E8%9D%B6-%E5%9F%8B%E9%A6%99%E5%86%A2%E9%A3%9E%E7%87%95%E6%B3%A3%E6%AE%8B%E7%BA%A2"><span class="toc-text">第二十七回 滴翠亭杨妃戏彩蝶  埋香冢飞燕泣残红</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%92%8B%E7%8E%89%E5%87%BD%E6%83%85%E8%B5%A0%E8%8C%9C%E9%A6%99%E7%BD%97-%E8%96%9B%E5%AE%9D%E9%92%97%E7%BE%9E%E7%AC%BC%E7%BA%A2%E9%BA%9D%E4%B8%B2"><span class="toc-text">第二十八回 蒋玉函情赠茜香罗  薛宝钗羞笼红麝串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B9%9D%E5%9B%9E-%E4%BA%AB%E7%A6%8F%E4%BA%BA%E7%A6%8F%E6%B7%B1%E8%BF%98%E7%A5%B7%E7%A6%8F-%E7%97%B4%E6%83%85%E5%A5%B3%E6%83%85%E9%87%8D%E6%84%88%E6%96%9F%E6%83%85"><span class="toc-text">第二十九回 享福人福深还祷福  痴情女情重愈斟情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%9B%9E-%E5%AE%9D%E9%92%97%E5%80%9F%E6%89%87%E6%9C%BA%E5%B8%A6%E5%8F%8C%E6%95%B2-%E9%BE%84%E5%AE%98%E5%88%92%E8%94%B7%E7%97%B4%E5%8F%8A%E5%B1%80%E5%A4%96"><span class="toc-text">第三十回 宝钗借扇机带双敲  龄官划蔷痴及局外</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%80%E5%9B%9E-%E6%92%95%E6%89%87%E5%AD%90%E4%BD%9C%E5%8D%83%E9%87%91%E4%B8%80%E7%AC%91-%E5%9B%A0%E9%BA%92%E9%BA%9F%E4%BC%8F%E7%99%BD%E9%A6%96%E5%8F%8C%E6%98%9F"><span class="toc-text">第三十一回 撕扇子作千金一笑  因麒麟伏白首双星</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E5%9B%9E-%E8%AF%89%E8%82%BA%E8%85%91%E5%BF%83%E8%BF%B7%E6%B4%BB%E5%AE%9D%E7%8E%89-%E5%90%AB%E8%80%BB%E8%BE%B1%E6%83%85%E7%83%88%E6%AD%BB%E9%87%91%E9%92%8F"><span class="toc-text">第三十二回 诉肺腑心迷活宝玉  含耻辱情烈死金钏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%89%E5%9B%9E-%E6%89%8B%E8%B6%B3%E8%80%BD%E8%80%BD%E5%B0%8F%E5%8A%A8%E5%94%87%E8%88%8C-%E4%B8%8D%E8%82%96%E7%A7%8D%E7%A7%8D%E5%A4%A7%E6%89%BF%E7%AC%9E%E6%8C%9E"><span class="toc-text">第三十三回 手足耽耽小动唇舌　不肖种种大承笞挞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%9B%9B%E5%9B%9E-%E6%83%85%E4%B8%AD%E6%83%85%E5%9B%A0%E6%83%85%E6%84%9F%E5%A6%B9%E5%A6%B9-%E9%94%99%E9%87%8C%E9%94%99%E4%BB%A5%E9%94%99%E5%8A%9D%E5%93%A5%E5%93%A5"><span class="toc-text">第三十四回 情中情因情感妹妹　错里错以错劝哥哥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%94%E5%9B%9E-%E7%99%BD%E7%8E%89%E9%92%8F%E4%BA%B2%E5%B0%9D%E8%8E%B2%E5%8F%B6%E7%BE%B9-%E9%BB%84%E9%87%91%E8%8E%BA%E5%B7%A7%E7%BB%93%E6%A2%85%E8%8A%B1%E7%BB%9C"><span class="toc-text">第三十五回 白玉钏亲尝莲叶羹　黄金莺巧结梅花络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%9E%97%E6%BD%87%E6%B9%98%E9%AD%81%E5%A4%BA%E8%8F%8A%E8%8A%B1%E8%AF%97-%E8%96%9B%E8%98%85%E8%8A%9C%E8%AE%BD%E5%92%8C%E8%9E%83%E8%9F%B9%E5%92%8F"><span class="toc-text">第三十八回 林潇湘魁夺菊花诗　薛蘅芜讽和螃蟹咏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%9B%9E-%E5%8F%B2%E5%A4%AA%E5%90%9B%E4%B8%A4%E5%AE%B4%E5%A4%A7%E8%A7%82%E5%9B%AD-%E9%87%91%E9%B8%B3%E9%B8%AF%E4%B8%89%E5%AE%A3%E7%89%99%E7%89%8C%E4%BB%A4"><span class="toc-text">第四十回 史太君两宴大观园　金鸳鸯三宣牙牌令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%8C%E5%9B%9E-%E8%98%85%E8%8A%9C%E5%90%9B%E5%85%B0%E8%A8%80%E8%A7%A3%E7%96%91%E7%99%96-%E6%BD%87%E6%B9%98%E5%AD%90%E9%9B%85%E8%B0%91%E8%A1%A5%E4%BD%99%E9%A6%99"><span class="toc-text">第四十二回 蘅芜君兰言解疑癖　潇湘子雅谑补余香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%89%E5%9B%9E-%E9%97%B2%E5%8F%96%E4%B9%90%E5%81%B6%E6%94%92%E9%87%91%E5%BA%86%E5%AF%BF-%E4%B8%8D%E4%BA%86%E6%83%85%E6%9A%82%E6%92%AE%E5%9C%9F%E4%B8%BA%E9%A6%99"><span class="toc-text">第四十三回 闲取乐偶攒金庆寿　不了情暂撮土为香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%8F%98%E7%94%9F%E4%B8%8D%E6%B5%8B%E5%87%A4%E5%A7%90%E6%B3%BC%E9%86%8B-%E5%96%9C%E5%87%BA%E6%9C%9B%E5%A4%96%E5%B9%B3%E5%84%BF%E7%90%86%E5%A6%86"><span class="toc-text">第四十四回 变生不测凤姐泼醋　喜出望外平儿理妆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%94%E5%9B%9E-%E9%87%91%E5%85%B0%E5%A5%91%E4%BA%92%E5%89%96%E9%87%91%E5%85%B0%E8%AF%AD-%E9%A3%8E%E9%9B%A8%E5%A4%95%E9%97%B7%E5%88%B6%E9%A3%8E%E9%9B%A8%E8%AF%8D"><span class="toc-text">第四十五回 金兰契互剖金兰语　风雨夕闷制风雨词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%85%AD%E5%9B%9E-%E5%B0%B4%E5%B0%AC%E4%BA%BA%E9%9A%BE%E5%85%8D%E5%B0%B4%E5%B0%AC%E4%BA%8B-%E9%B8%B3%E9%B8%AF%E5%A5%B3%E8%AA%93%E7%BB%9D%E9%B8%B3%E9%B8%AF%E5%81%B6"><span class="toc-text">第四十六回 尴尬人难免尴尬事　鸳鸯女誓绝鸳鸯偶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%83%E5%9B%9E-%E5%91%86%E9%9C%B8%E7%8E%8B%E8%B0%83%E6%83%85%E9%81%AD%E8%8B%A6%E6%89%93-%E5%86%B7%E9%83%8E%E5%90%9B%E6%83%A7%E7%A5%B8%E8%B5%B0%E4%BB%96%E4%B9%A1"><span class="toc-text">第四十七回 呆霸王调情遭苦打　冷郎君惧祸走他乡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%BB%A5%E6%83%85%E4%BA%BA%E6%83%85%E8%AF%AF%E6%80%9D%E6%B8%B8%E8%89%BA-%E6%85%95%E9%9B%85%E5%A5%B3%E9%9B%85%E9%9B%86%E8%8B%A6%E5%90%9F%E8%AF%97"><span class="toc-text">第四十八回 滥情人情误思游艺　慕雅女雅集苦吟诗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%9B%9E-%E8%8A%A6%E9%9B%AA%E5%BA%B5%E4%BA%89%E8%81%94%E5%8D%B3%E6%99%AF%E8%AF%97-%E6%9A%96%E9%A6%99%E5%9D%9E%E9%9B%85%E5%88%B6%E6%98%A5%E7%81%AF%E8%B0%9C"><span class="toc-text">第五十回 芦雪庵争联即景诗　暖香坞雅制春灯谜</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%BA%8C%E5%9B%9E-%E4%BF%8F%E5%B9%B3%E5%84%BF%E6%83%85%E6%8E%A9%E8%99%BE%E9%A1%BB%E9%95%AF-%E5%8B%87%E6%99%B4%E9%9B%AF%E7%97%85%E8%A1%A5%E9%9B%80%E9%87%91%E8%A3%98"><span class="toc-text">第五十二回 俏平儿情掩虾须镯　勇晴雯病补雀金裘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B8%89%E5%9B%9E-%E5%AE%81%E5%9B%BD%E5%BA%9C%E9%99%A4%E5%A4%95%E7%A5%AD%E5%AE%97%E7%A5%A0-%E5%9B%BD%E5%BA%9C%E5%85%83%E5%AE%B5%E5%BC%80%E5%A4%9C%E5%AE%B4"><span class="toc-text">第五十三回 宁国府除夕祭宗祠　国府元宵开夜宴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%8F%B2%E5%A4%AA%E5%90%9B%E7%A0%B4%E9%99%88%E8%85%90%E6%97%A7%E5%A5%97-%E7%8E%8B%E7%86%99%E5%87%A4%E6%95%88%E6%88%8F%E5%BD%A9%E6%96%91%E8%A1%A3"><span class="toc-text">第五十四回 史太君破陈腐旧套　王熙凤效戏彩斑衣</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%BA%94%E5%9B%9E-%E8%BE%B1%E4%BA%B2%E5%A5%B3%E6%84%9A%E5%A6%BE%E4%BA%89%E9%97%B2%E6%B0%94-%E6%AC%BA%E5%B9%BC%E4%B8%BB%E5%88%81%E5%A5%B4%E8%93%84%E9%99%A9%E5%BF%83"><span class="toc-text">第五十五回 辱亲女愚妾争闲气　欺幼主刁奴蓄险心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%85%AD%E5%9B%9E-%E6%95%8F%E6%8E%A2%E6%98%A5%E5%85%B4%E5%88%A9%E9%99%A4%E5%AE%BF%E5%BC%8A-%E6%97%B6%E5%AE%9D%E9%92%97%E5%B0%8F%E6%83%A0%E5%85%A8%E5%A4%A7%E4%BD%93"><span class="toc-text">第五十六回 敏探春兴利除宿弊　时宝钗小惠全大体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%85%A7%E7%B4%AB%E9%B9%83%E6%83%85%E8%BE%9E%E8%AF%95%E5%BF%99%E7%8E%89-%E6%85%88%E5%A7%A8%E5%A6%88%E7%88%B1%E8%AF%AD%E6%85%B0%E7%97%B4%E9%A2%A6"><span class="toc-text">第五十七回 慧紫鹃情辞试忙玉　慈姨妈爱语慰痴颦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%9D%8F%E5%AD%90%E9%98%B4%E5%81%87%E5%87%A4%E6%B3%A3%E8%99%9A%E5%87%B0-%E8%8C%9C%E7%BA%B1%E7%AA%97%E7%9C%9F%E6%83%85%E6%8F%86%E7%97%B4%E7%90%86"><span class="toc-text">第五十八回 杏子阴假凤泣虚凰　茜纱窗真情揆痴理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B9%9D%E5%9B%9E-%E6%9F%B3%E5%8F%B6%E6%B8%9A%E8%BE%B9%E5%97%94%E8%8E%BA%E5%92%A4%E7%87%95-%E7%BB%9B%E4%BA%91%E8%BD%A9%E9%87%8C%E5%8F%AC%E5%B0%86%E9%A3%9E%E7%AC%A6"><span class="toc-text">第五十九回 柳叶渚边嗔莺咤燕　绛云轩里召将飞符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%9B%9E-%E8%8C%89%E8%8E%89%E7%B2%89%E6%9B%BF%E5%8E%BB%E8%94%B7%E8%96%87%E7%A1%9D-%E7%8E%AB%E7%91%B0%E9%9C%B2%E5%BC%95%E6%9D%A5%E8%8C%AF%E8%8B%93%E9%9C%9C"><span class="toc-text">第六十回 茉莉粉替去蔷薇硝　玫瑰露引来茯苓霜</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%80%E5%9B%9E-%E6%8A%95%E9%BC%A0%E5%BF%8C%E5%99%A8%E5%AE%9D%E7%8E%89%E7%9E%92%E8%B5%83-%E5%88%A4%E5%86%A4%E5%86%B3%E7%8B%B1%E5%B9%B3%E5%84%BF%E8%A1%8C%E6%9D%83"><span class="toc-text">第六十一回 投鼠忌器宝玉瞒赃　判冤决狱平儿行权</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%89%E5%9B%9E-%E5%AF%BF%E6%80%A1%E7%BA%A2%E7%BE%A4%E8%8A%B3%E5%BC%80%E5%A4%9C%E5%AE%B4-%E6%AD%BB%E9%87%91%E4%B8%B9%E7%8B%AC%E8%89%B3%E7%90%86%E4%BA%B2%E4%B8%A7"><span class="toc-text">第六十三回 寿怡红群芳开夜宴　死金丹独艳理亲丧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%B9%BD%E6%B7%91%E5%A5%B3%E6%82%B2%E9%A2%98%E4%BA%94%E7%BE%8E%E5%90%9F-%E6%B5%AA%E8%8D%A1%E5%AD%90%E6%83%85%E9%81%97%E4%B9%9D%E9%BE%99%E4%BD%A9"><span class="toc-text">第六十四回 幽淑女悲题五美吟　浪荡子情遗九龙佩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%BA%94%E5%9B%9E-%E8%B4%BE%E4%BA%8C%E8%88%8D%E5%81%B7%E5%A8%B6%E5%B0%A4%E4%BA%8C%E5%A7%A8-%E5%B0%A4%E4%B8%89%E5%A7%90%E6%80%9D%E5%AB%81%E6%9F%B3%E4%BA%8C%E9%83%8E"><span class="toc-text">第六十五回 贾二舍偷娶尤二姨　尤三姐思嫁柳二郎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%85%AD%E5%9B%9E-%E6%83%85%E5%B0%8F%E5%A6%B9%E8%80%BB%E6%83%85%E5%BD%92%E5%9C%B0%E5%BA%9C-%E5%86%B7%E4%BA%8C%E9%83%8E%E4%B8%80%E5%86%B7%E5%85%A5%E7%A9%BA%E9%97%A8"><span class="toc-text">第六十六回 情小妹耻情归地府　冷二郎一冷入空门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%83%E5%9B%9E-%E9%A6%88%E5%9C%9F%E7%89%A9%E9%A2%A6%E5%8D%BF%E5%BF%B5%E6%95%85%E9%87%8C-%E8%AE%AF%E5%AE%B6%E7%AB%A5%E5%87%A4%E5%A7%90%E8%93%84%E9%98%B4%E8%B0%8B"><span class="toc-text">第六十七回 馈土物颦卿念故里　讯家童凤姐蓄阴谋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%8B%A6%E5%B0%A4%E5%A8%98%E8%B5%9A%E5%85%A5%E5%A4%A7%E8%A7%82%E5%9B%AD-%E9%85%B8%E5%87%A4%E5%A7%90%E5%A4%A7%E9%97%B9%E5%AE%81%E5%9B%BD%E5%BA%9C"><span class="toc-text">第六十八回 苦尤娘赚入大观园　酸凤姐大闹宁国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B9%9D%E5%9B%9E-%E5%BC%84%E5%B0%8F%E5%B7%A7%E7%94%A8%E5%80%9F%E5%89%91%E6%9D%80%E4%BA%BA-%E8%A7%89%E5%A4%A7%E9%99%90%E5%90%9E%E7%94%9F%E9%87%91%E8%87%AA%E9%80%9D"><span class="toc-text">第六十九回 弄小巧用借剑杀人　觉大限吞生金自逝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%9B%9E-%E6%9E%97%E9%BB%9B%E7%8E%89%E9%87%8D%E5%BB%BA%E6%A1%83%E8%8A%B1%E7%A4%BE-%E5%8F%B2%E6%B9%98%E4%BA%91%E5%81%B6%E5%A1%AB%E6%9F%B3%E7%B5%AE%E8%AF%8D"><span class="toc-text">第七十回 林黛玉重建桃花社　史湘云偶填柳絮词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B8%80%E5%9B%9E-%E5%AB%8C%E9%9A%99%E4%BA%BA%E6%9C%89%E5%BF%83%E7%94%9F%E5%AB%8C%E9%9A%99-%E9%B8%B3%E9%B8%AF%E5%A5%B3%E6%97%A0%E6%84%8F%E9%81%87%E9%B8%B3%E9%B8%AF"><span class="toc-text">第七十一回 嫌隙人有心生嫌隙　鸳鸯女无意遇鸳鸯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%BA%8C%E5%9B%9E-%E7%8E%8B%E7%86%99%E5%87%A4%E6%81%83%E5%BC%BA%E7%BE%9E%E8%AF%B4%E7%97%85-%E6%9D%A5%E6%97%BA%E5%A6%87%E5%80%9A%E5%8A%BF%E9%9C%B8%E6%88%90%E4%BA%B2"><span class="toc-text">第七十二回 王熙凤恃强羞说病　来旺妇倚势霸成亲</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B8%89%E5%9B%9E-%E7%97%B4%E4%B8%AB%E5%A4%B4%E8%AF%AF%E6%8B%BE%E7%BB%A3%E6%98%A5%E5%9B%8A-%E6%87%A6%E5%B0%8F%E5%A7%90%E4%B8%8D%E9%97%AE%E7%B4%AF%E9%87%91%E5%87%A4"><span class="toc-text">第七十三回 痴丫头误拾绣春囊　懦小姐不问累金凤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%9B%9B%E5%9B%9E-%E6%83%91%E5%A5%B8%E8%B0%97%E6%8A%84%E6%A3%80%E5%A4%A7%E8%A7%82%E5%9B%AD-%E7%9F%A2%E5%AD%A4%E4%BB%8B%E6%9D%9C%E7%BB%9D%E5%AE%81%E5%9B%BD%E5%BA%9C"><span class="toc-text">第七十四回 惑奸谗抄检大观园　矢孤介杜绝宁国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%BA%94%E5%9B%9E-%E5%BC%80%E5%A4%9C%E5%AE%B4%E5%BC%82%E5%85%86%E5%8F%91%E6%82%B2%E9%9F%B3-%E8%B5%8F%E4%B8%AD%E7%A7%8B%E6%96%B0%E8%AF%8D%E5%BE%97%E4%BD%B3%E8%B0%B6"><span class="toc-text">第七十五回 开夜宴异兆发悲音　赏中秋新词得佳谶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%85%AD%E5%9B%9E-%E5%87%B8%E7%A2%A7%E5%A0%82%E5%93%81%E7%AC%9B%E6%84%9F%E5%87%84%E6%B8%85-%E5%87%B9%E6%99%B6%E9%A6%86%E8%81%94%E8%AF%97%E6%82%B2%E5%AF%82%E5%AF%9E"><span class="toc-text">第七十六回 凸碧堂品笛感凄清　凹晶馆联诗悲寂寞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B8%83%E5%9B%9E-%E4%BF%8F%E4%B8%AB%E9%AC%9F%E6%8A%B1%E5%B1%88%E5%A4%AD%E9%A3%8E%E6%B5%81-%E7%BE%8E%E4%BC%98%E4%BC%B6%E6%96%A9%E6%83%85%E5%BD%92%E6%B0%B4%E6%9C%88"><span class="toc-text">第七十七回 俏丫鬟抱屈夭风流　美优伶斩情归水月</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%80%81%E5%AD%A6%E5%A3%AB%E9%97%B2%E5%BE%81%E5%A7%BD%E5%A9%B3%E8%AF%8D-%E7%97%B4%E5%85%AC%E5%AD%90%E6%9D%9C%E6%92%B0%E8%8A%99%E8%93%89%E8%AF%94"><span class="toc-text">第七十八回 老学士闲征姽婳词　痴公子杜撰芙蓉诔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B9%9D%E5%9B%9E-%E8%96%9B%E6%96%87%E9%BE%99%E6%82%94%E5%A8%B6%E6%B2%B3%E4%B8%9C%E7%8B%AE-%E8%B4%BE%E8%BF%8E%E6%98%A5%E8%AF%AF%E5%AB%81%E4%B8%AD%E5%B1%B1%E7%8B%BC"><span class="toc-text">第七十九回 薛文龙悔娶河东狮　贾迎春误嫁中山狼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%9B%9E-%E6%87%A6%E5%BC%B1%E8%BF%8E%E6%98%A5%E8%82%A0%E5%9B%9E%E4%B9%9D%E6%9B%B2-%E5%A7%A3%E6%80%AF%E9%A6%99%E8%8F%B1%E7%97%85%E5%85%A5%E8%86%8F%E8%82%93"><span class="toc-text">第八十回 懦弱迎春肠回九曲　姣怯香菱病入膏肓</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%80%E5%9B%9E-%E5%8D%A0%E6%97%BA%E7%9B%B8%E5%9B%9B%E7%BE%8E%E9%92%93%E6%B8%B8%E9%B1%BC-%E5%A5%89%E4%B8%A5%E8%AF%8D%E4%B8%A4%E7%95%AA%E5%85%A5%E5%AE%B6%E5%A1%BE"><span class="toc-text">第八十一回 占旺相四美钓游鱼　奉严词两番入家塾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%89%E5%9B%9E-%E7%9C%81%E5%AE%AB%E9%97%B1%E8%B4%BE%E5%85%83%E5%A6%83%E6%9F%93%E6%81%99-%E9%97%B9%E9%97%BA%E9%98%83%E8%96%9B%E5%AE%9D%E9%92%97%E5%90%9E%E5%A3%B0"><span class="toc-text">第八十三回 省宫闱贾元妃染恙　闹闺阃薛宝钗吞声</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%BA%94%E5%9B%9E-%E8%B4%BE%E5%AD%98%E5%91%A8%E6%8A%A5%E5%8D%87%E9%83%8E%E4%B8%AD%E4%BB%BB-%E8%96%9B%E6%96%87%E8%B5%B7%E5%A4%8D%E6%83%B9%E6%94%BE%E6%B5%81%E5%88%91"><span class="toc-text">第八十五回 贾存周报升郎中任　薛文起复惹放流刑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%85%AD%E5%9B%9E-%E5%8F%97%E7%A7%81%E8%B4%BF%E8%80%81%E5%AE%98%E7%BF%BB%E6%A1%88%E7%89%8D-%E5%AF%84%E9%97%B2%E6%83%85%E6%B7%91%E5%A5%B3%E8%A7%A3%E7%90%B4%E4%B9%A6"><span class="toc-text">第八十六回 受私贿老官翻案牍　寄闲情淑女解琴书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%84%9F%E6%B7%B1%E7%A7%8B%E6%8A%9A%E7%90%B4%E6%82%B2%E5%BE%80%E4%BA%8B-%E5%9D%90%E7%A6%85%E5%AF%82%E8%B5%B0%E7%81%AB%E5%85%A5%E9%82%AA%E9%AD%94"><span class="toc-text">第八十七回 感深秋抚琴悲往事　坐禅寂走火入邪魔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%85%AB%E5%9B%9E-%E5%8D%9A%E5%BA%AD%E6%AC%A2%E5%AE%9D%E7%8E%89%E8%B5%9E%E5%AD%A4%E5%84%BF-%E6%AD%A3%E5%AE%B6%E6%B3%95%E8%B4%BE%E7%8F%8D%E9%9E%AD%E6%82%8D%E4%BB%86"><span class="toc-text">第八十八回 博庭欢宝玉赞孤儿　正家法贾珍鞭悍仆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B9%9D%E5%9B%9E-%E4%BA%BA%E4%BA%A1%E7%89%A9%E5%9C%A8%E5%85%AC%E5%AD%90%E5%A1%AB%E8%AF%8D-%E8%9B%87%E5%BD%B1%E6%9D%AF%E5%BC%93%E9%A2%A6%E5%8D%BF%E7%BB%9D%E7%B2%92"><span class="toc-text">第八十九回 人亡物在公子填词　蛇影杯弓颦卿绝粒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E5%9B%9E-%E5%A4%B1%E7%BB%B5%E8%A1%A3%E8%B4%AB%E5%A5%B3%E8%80%90%E5%97%B7%E5%98%88-%E9%80%81%E6%9E%9C%E5%93%81%E5%B0%8F%E9%83%8E%E6%83%8A%E5%8F%B5%E6%B5%8B"><span class="toc-text">第九十回 失绵衣贫女耐嗷嘈　送果品小郎惊叵测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%B8%80%E5%9B%9E-%E7%BA%B5%E6%B7%AB%E5%BF%83%E5%AE%9D%E8%9F%BE%E5%B7%A5%E8%AE%BE%E8%AE%A1-%E5%B8%83%E7%96%91%E9%98%B5%E5%AE%9D%E7%8E%89%E5%A6%84%E8%B0%88%E7%A6%85"><span class="toc-text">第九十一回 纵淫心宝蟾工设计　布疑阵宝玉妄谈禅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%B8%89%E5%9B%9E-%E7%94%84%E5%AE%B6%E4%BB%86%E6%8A%95%E9%9D%A0%E8%B4%BE%E5%AE%B6%E9%97%A8-%E6%B0%B4%E6%9C%88%E5%BA%B5%E6%8E%80%E7%BF%BB%E9%A3%8E%E6%9C%88%E6%A1%88"><span class="toc-text">第九十三回 甄家仆投靠贾家门　水月庵掀翻风月案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%AE%B4%E6%B5%B7%E6%A3%A0%E8%B4%BE%E6%AF%8D%E8%B5%8F%E8%8A%B1%E5%A6%96-%E5%A4%B1%E5%AE%9D%E7%8E%89%E9%80%9A%E7%81%B5%E7%9F%A5%E5%A5%87%E7%A5%B8"><span class="toc-text">第九十四回 宴海棠贾母赏花妖　失宝玉通灵知奇祸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%BA%94%E5%9B%9E-%E5%9B%A0%E8%AE%B9%E6%88%90%E5%AE%9E%E5%85%83%E5%A6%83%E8%96%A8%E9%80%9D-%E4%BB%A5%E5%81%87%E6%B7%B7%E7%9C%9F%E5%AE%9D%E7%8E%89%E7%96%AF%E9%A2%A0"><span class="toc-text">第九十五回 因讹成实元妃薨逝　以假混真宝玉疯颠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9B%9E-%E7%94%84%E5%A3%AB%E9%9A%90%E6%A2%A6%E5%B9%BB%E8%AF%86%E9%80%9A%E7%81%B5-%E8%B4%BE%E9%9B%A8%E6%9D%91%E9%A3%8E%E5%B0%98%E6%80%80%E9%97%BA%E7%A7%80"><span class="toc-text">第一回 甄士隐梦幻识通灵  贾雨村风尘怀闺秀</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9B%9E-%E8%B4%BE%E5%A4%AB%E4%BA%BA%E4%BB%99%E9%80%9D%E6%89%AC%E5%B7%9E%E5%9F%8E-%E5%86%B7%E5%AD%90%E5%85%B4%E6%BC%94%E8%AF%B4%E8%8D%A3%E5%9B%BD%E5%BA%9C"><span class="toc-text">第二回 贾夫人仙逝扬州城  冷子兴演说荣国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%9B%9E-%E9%87%91%E9%99%B5%E5%9F%8E%E8%B5%B7%E5%A4%8D%E8%B4%BE%E9%9B%A8%E6%9D%91-%E8%8D%A3%E5%9B%BD%E5%BA%9C%E6%94%B6%E5%85%BB%E6%9E%97%E9%BB%9B%E7%8E%89"><span class="toc-text">第三回 金陵城起复贾雨村  荣国府收养林黛玉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E8%96%84%E5%91%BD%E5%A5%B3%E5%81%8F%E9%80%A2%E8%96%84%E5%91%BD%E9%83%8E-%E8%91%AB%E8%8A%A6%E5%83%A7%E4%B9%B1%E5%88%A4%E8%91%AB%E8%8A%A6%E6%A1%88"><span class="toc-text">第四回 薄命女偏逢薄命郎  葫芦僧乱判葫芦案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%9B%9E-%E6%B8%B8%E5%B9%BB%E5%A2%83%E6%8C%87%E8%BF%B7%E5%8D%81%E4%BA%8C%E9%92%97-%E9%A5%AE%E4%BB%99%E9%86%AA%E6%9B%B2%E6%BC%94%E7%BA%A2%E6%A5%BC%E6%A2%A6"><span class="toc-text">第五回 游幻境指迷十二钗  饮仙醪曲演红楼梦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%9B%9E-%E8%B4%BE%E5%AE%9D%E7%8E%89%E5%88%9D%E8%AF%95%E4%BA%91%E9%9B%A8%E6%83%85-%E5%88%98%E5%A7%A5%E5%A7%A5%E4%B8%80%E8%BF%9B%E8%8D%A3%E5%9B%BD%E5%BA%9C"><span class="toc-text">第六回 贾宝玉初试云雨情  刘姥姥一进荣国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%9E%97%E9%BB%9B%E7%8E%89%E8%AF%AF%E5%89%AA%E9%A6%99%E8%A2%8B%E5%9B%8A-%E8%B4%BE%E5%85%83%E6%98%A5%E5%BD%92%E7%9C%81%E5%BA%86%E5%85%83%E5%AE%B5"><span class="toc-text">第十八回 林黛玉误剪香袋囊  贾元春归省庆元宵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%89%E5%9B%9E-%E8%A5%BF%E5%8E%A2%E8%AE%B0%E5%A6%99%E8%AF%8D%E9%80%9A%E6%88%8F%E8%AF%AD-%E7%89%A1%E4%B8%B9%E4%BA%AD%E8%89%B3%E8%AF%8D%E8%AD%A6%E8%8A%B3%E5%BF%83"><span class="toc-text">第二十三回 西厢记妙词通戏语  牡丹亭艳词警芳心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%9B%9E-%E9%86%89%E9%87%91%E5%88%9A%E8%BD%BB%E8%B4%A2%E5%B0%9A%E4%B9%89%E4%BE%A0-%E7%97%B4%E5%A5%B3%E5%84%BF%E9%81%97%E5%B8%95%E6%83%B9%E7%9B%B8%E6%80%9D"><span class="toc-text">第二十四回 醉金刚轻财尚义侠  痴女儿遗帕惹相思</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E5%9B%9E-%E9%AD%87%E9%AD%94%E6%B3%95%E5%8F%94%E5%AB%82%E9%80%A2%E4%BA%94%E9%AC%BC-%E9%80%9A%E7%81%B5%E7%8E%89%E8%92%99%E8%94%BD%E9%81%87%E5%8F%8C%E7%9C%9F"><span class="toc-text">第二十五回 魇魔法叔嫂逢五鬼  通灵玉蒙蔽遇双真</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AD%E5%9B%9E-%E8%9C%82%E8%85%B0%E6%A1%A5%E8%AE%BE%E8%A8%80%E4%BC%A0%E5%AF%86%E6%84%8F-%E6%B9%98%E9%A6%86%E6%98%A5%E5%9B%B0%E5%8F%91%E5%B9%BD%E6%83%85"><span class="toc-text">第二十六回 蜂腰桥设言传密意  湘馆春困发幽情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%BB%B4%E7%BF%A0%E4%BA%AD%E6%9D%A8%E5%A6%83%E6%88%8F%E5%BD%A9%E8%9D%B6-%E5%9F%8B%E9%A6%99%E5%86%A2%E9%A3%9E%E7%87%95%E6%B3%A3%E6%AE%8B%E7%BA%A2"><span class="toc-text">第二十七回 滴翠亭杨妃戏彩蝶  埋香冢飞燕泣残红</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%92%8B%E7%8E%89%E5%87%BD%E6%83%85%E8%B5%A0%E8%8C%9C%E9%A6%99%E7%BD%97-%E8%96%9B%E5%AE%9D%E9%92%97%E7%BE%9E%E7%AC%BC%E7%BA%A2%E9%BA%9D%E4%B8%B2"><span class="toc-text">第二十八回 蒋玉函情赠茜香罗  薛宝钗羞笼红麝串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B9%9D%E5%9B%9E-%E4%BA%AB%E7%A6%8F%E4%BA%BA%E7%A6%8F%E6%B7%B1%E8%BF%98%E7%A5%B7%E7%A6%8F-%E7%97%B4%E6%83%85%E5%A5%B3%E6%83%85%E9%87%8D%E6%84%88%E6%96%9F%E6%83%85"><span class="toc-text">第二十九回 享福人福深还祷福  痴情女情重愈斟情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%9B%9E-%E5%AE%9D%E9%92%97%E5%80%9F%E6%89%87%E6%9C%BA%E5%B8%A6%E5%8F%8C%E6%95%B2-%E9%BE%84%E5%AE%98%E5%88%92%E8%94%B7%E7%97%B4%E5%8F%8A%E5%B1%80%E5%A4%96"><span class="toc-text">第三十回 宝钗借扇机带双敲  龄官划蔷痴及局外</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%80%E5%9B%9E-%E6%92%95%E6%89%87%E5%AD%90%E4%BD%9C%E5%8D%83%E9%87%91%E4%B8%80%E7%AC%91-%E5%9B%A0%E9%BA%92%E9%BA%9F%E4%BC%8F%E7%99%BD%E9%A6%96%E5%8F%8C%E6%98%9F"><span class="toc-text">第三十一回 撕扇子作千金一笑  因麒麟伏白首双星</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E5%9B%9E-%E8%AF%89%E8%82%BA%E8%85%91%E5%BF%83%E8%BF%B7%E6%B4%BB%E5%AE%9D%E7%8E%89-%E5%90%AB%E8%80%BB%E8%BE%B1%E6%83%85%E7%83%88%E6%AD%BB%E9%87%91%E9%92%8F"><span class="toc-text">第三十二回 诉肺腑心迷活宝玉  含耻辱情烈死金钏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%B8%89%E5%9B%9E-%E6%89%8B%E8%B6%B3%E8%80%BD%E8%80%BD%E5%B0%8F%E5%8A%A8%E5%94%87%E8%88%8C-%E4%B8%8D%E8%82%96%E7%A7%8D%E7%A7%8D%E5%A4%A7%E6%89%BF%E7%AC%9E%E6%8C%9E"><span class="toc-text">第三十三回 手足耽耽小动唇舌　不肖种种大承笞挞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%9B%9B%E5%9B%9E-%E6%83%85%E4%B8%AD%E6%83%85%E5%9B%A0%E6%83%85%E6%84%9F%E5%A6%B9%E5%A6%B9-%E9%94%99%E9%87%8C%E9%94%99%E4%BB%A5%E9%94%99%E5%8A%9D%E5%93%A5%E5%93%A5"><span class="toc-text">第三十四回 情中情因情感妹妹　错里错以错劝哥哥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%94%E5%9B%9E-%E7%99%BD%E7%8E%89%E9%92%8F%E4%BA%B2%E5%B0%9D%E8%8E%B2%E5%8F%B6%E7%BE%B9-%E9%BB%84%E9%87%91%E8%8E%BA%E5%B7%A7%E7%BB%93%E6%A2%85%E8%8A%B1%E7%BB%9C"><span class="toc-text">第三十五回 白玉钏亲尝莲叶羹　黄金莺巧结梅花络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%9E%97%E6%BD%87%E6%B9%98%E9%AD%81%E5%A4%BA%E8%8F%8A%E8%8A%B1%E8%AF%97-%E8%96%9B%E8%98%85%E8%8A%9C%E8%AE%BD%E5%92%8C%E8%9E%83%E8%9F%B9%E5%92%8F"><span class="toc-text">第三十八回 林潇湘魁夺菊花诗　薛蘅芜讽和螃蟹咏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%9B%9E-%E5%8F%B2%E5%A4%AA%E5%90%9B%E4%B8%A4%E5%AE%B4%E5%A4%A7%E8%A7%82%E5%9B%AD-%E9%87%91%E9%B8%B3%E9%B8%AF%E4%B8%89%E5%AE%A3%E7%89%99%E7%89%8C%E4%BB%A4"><span class="toc-text">第四十回 史太君两宴大观园　金鸳鸯三宣牙牌令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%8C%E5%9B%9E-%E8%98%85%E8%8A%9C%E5%90%9B%E5%85%B0%E8%A8%80%E8%A7%A3%E7%96%91%E7%99%96-%E6%BD%87%E6%B9%98%E5%AD%90%E9%9B%85%E8%B0%91%E8%A1%A5%E4%BD%99%E9%A6%99"><span class="toc-text">第四十二回 蘅芜君兰言解疑癖　潇湘子雅谑补余香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%89%E5%9B%9E-%E9%97%B2%E5%8F%96%E4%B9%90%E5%81%B6%E6%94%92%E9%87%91%E5%BA%86%E5%AF%BF-%E4%B8%8D%E4%BA%86%E6%83%85%E6%9A%82%E6%92%AE%E5%9C%9F%E4%B8%BA%E9%A6%99"><span class="toc-text">第四十三回 闲取乐偶攒金庆寿　不了情暂撮土为香</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%8F%98%E7%94%9F%E4%B8%8D%E6%B5%8B%E5%87%A4%E5%A7%90%E6%B3%BC%E9%86%8B-%E5%96%9C%E5%87%BA%E6%9C%9B%E5%A4%96%E5%B9%B3%E5%84%BF%E7%90%86%E5%A6%86"><span class="toc-text">第四十四回 变生不测凤姐泼醋　喜出望外平儿理妆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%BA%94%E5%9B%9E-%E9%87%91%E5%85%B0%E5%A5%91%E4%BA%92%E5%89%96%E9%87%91%E5%85%B0%E8%AF%AD-%E9%A3%8E%E9%9B%A8%E5%A4%95%E9%97%B7%E5%88%B6%E9%A3%8E%E9%9B%A8%E8%AF%8D"><span class="toc-text">第四十五回 金兰契互剖金兰语　风雨夕闷制风雨词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%85%AD%E5%9B%9E-%E5%B0%B4%E5%B0%AC%E4%BA%BA%E9%9A%BE%E5%85%8D%E5%B0%B4%E5%B0%AC%E4%BA%8B-%E9%B8%B3%E9%B8%AF%E5%A5%B3%E8%AA%93%E7%BB%9D%E9%B8%B3%E9%B8%AF%E5%81%B6"><span class="toc-text">第四十六回 尴尬人难免尴尬事　鸳鸯女誓绝鸳鸯偶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E4%B8%83%E5%9B%9E-%E5%91%86%E9%9C%B8%E7%8E%8B%E8%B0%83%E6%83%85%E9%81%AD%E8%8B%A6%E6%89%93-%E5%86%B7%E9%83%8E%E5%90%9B%E6%83%A7%E7%A5%B8%E8%B5%B0%E4%BB%96%E4%B9%A1"><span class="toc-text">第四十七回 呆霸王调情遭苦打　冷郎君惧祸走他乡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%BB%A5%E6%83%85%E4%BA%BA%E6%83%85%E8%AF%AF%E6%80%9D%E6%B8%B8%E8%89%BA-%E6%85%95%E9%9B%85%E5%A5%B3%E9%9B%85%E9%9B%86%E8%8B%A6%E5%90%9F%E8%AF%97"><span class="toc-text">第四十八回 滥情人情误思游艺　慕雅女雅集苦吟诗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%9B%9E-%E8%8A%A6%E9%9B%AA%E5%BA%B5%E4%BA%89%E8%81%94%E5%8D%B3%E6%99%AF%E8%AF%97-%E6%9A%96%E9%A6%99%E5%9D%9E%E9%9B%85%E5%88%B6%E6%98%A5%E7%81%AF%E8%B0%9C"><span class="toc-text">第五十回 芦雪庵争联即景诗　暖香坞雅制春灯谜</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%BA%8C%E5%9B%9E-%E4%BF%8F%E5%B9%B3%E5%84%BF%E6%83%85%E6%8E%A9%E8%99%BE%E9%A1%BB%E9%95%AF-%E5%8B%87%E6%99%B4%E9%9B%AF%E7%97%85%E8%A1%A5%E9%9B%80%E9%87%91%E8%A3%98"><span class="toc-text">第五十二回 俏平儿情掩虾须镯　勇晴雯病补雀金裘</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B8%89%E5%9B%9E-%E5%AE%81%E5%9B%BD%E5%BA%9C%E9%99%A4%E5%A4%95%E7%A5%AD%E5%AE%97%E7%A5%A0-%E5%9B%BD%E5%BA%9C%E5%85%83%E5%AE%B5%E5%BC%80%E5%A4%9C%E5%AE%B4"><span class="toc-text">第五十三回 宁国府除夕祭宗祠　国府元宵开夜宴</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%8F%B2%E5%A4%AA%E5%90%9B%E7%A0%B4%E9%99%88%E8%85%90%E6%97%A7%E5%A5%97-%E7%8E%8B%E7%86%99%E5%87%A4%E6%95%88%E6%88%8F%E5%BD%A9%E6%96%91%E8%A1%A3"><span class="toc-text">第五十四回 史太君破陈腐旧套　王熙凤效戏彩斑衣</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%BA%94%E5%9B%9E-%E8%BE%B1%E4%BA%B2%E5%A5%B3%E6%84%9A%E5%A6%BE%E4%BA%89%E9%97%B2%E6%B0%94-%E6%AC%BA%E5%B9%BC%E4%B8%BB%E5%88%81%E5%A5%B4%E8%93%84%E9%99%A9%E5%BF%83"><span class="toc-text">第五十五回 辱亲女愚妾争闲气　欺幼主刁奴蓄险心</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%85%AD%E5%9B%9E-%E6%95%8F%E6%8E%A2%E6%98%A5%E5%85%B4%E5%88%A9%E9%99%A4%E5%AE%BF%E5%BC%8A-%E6%97%B6%E5%AE%9D%E9%92%97%E5%B0%8F%E6%83%A0%E5%85%A8%E5%A4%A7%E4%BD%93"><span class="toc-text">第五十六回 敏探春兴利除宿弊　时宝钗小惠全大体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%85%A7%E7%B4%AB%E9%B9%83%E6%83%85%E8%BE%9E%E8%AF%95%E5%BF%99%E7%8E%89-%E6%85%88%E5%A7%A8%E5%A6%88%E7%88%B1%E8%AF%AD%E6%85%B0%E7%97%B4%E9%A2%A6"><span class="toc-text">第五十七回 慧紫鹃情辞试忙玉　慈姨妈爱语慰痴颦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E5%85%AB%E5%9B%9E-%E6%9D%8F%E5%AD%90%E9%98%B4%E5%81%87%E5%87%A4%E6%B3%A3%E8%99%9A%E5%87%B0-%E8%8C%9C%E7%BA%B1%E7%AA%97%E7%9C%9F%E6%83%85%E6%8F%86%E7%97%B4%E7%90%86"><span class="toc-text">第五十八回 杏子阴假凤泣虚凰　茜纱窗真情揆痴理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%8D%81%E4%B9%9D%E5%9B%9E-%E6%9F%B3%E5%8F%B6%E6%B8%9A%E8%BE%B9%E5%97%94%E8%8E%BA%E5%92%A4%E7%87%95-%E7%BB%9B%E4%BA%91%E8%BD%A9%E9%87%8C%E5%8F%AC%E5%B0%86%E9%A3%9E%E7%AC%A6"><span class="toc-text">第五十九回 柳叶渚边嗔莺咤燕　绛云轩里召将飞符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%9B%9E-%E8%8C%89%E8%8E%89%E7%B2%89%E6%9B%BF%E5%8E%BB%E8%94%B7%E8%96%87%E7%A1%9D-%E7%8E%AB%E7%91%B0%E9%9C%B2%E5%BC%95%E6%9D%A5%E8%8C%AF%E8%8B%93%E9%9C%9C"><span class="toc-text">第六十回 茉莉粉替去蔷薇硝　玫瑰露引来茯苓霜</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%80%E5%9B%9E-%E6%8A%95%E9%BC%A0%E5%BF%8C%E5%99%A8%E5%AE%9D%E7%8E%89%E7%9E%92%E8%B5%83-%E5%88%A4%E5%86%A4%E5%86%B3%E7%8B%B1%E5%B9%B3%E5%84%BF%E8%A1%8C%E6%9D%83"><span class="toc-text">第六十一回 投鼠忌器宝玉瞒赃　判冤决狱平儿行权</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%89%E5%9B%9E-%E5%AF%BF%E6%80%A1%E7%BA%A2%E7%BE%A4%E8%8A%B3%E5%BC%80%E5%A4%9C%E5%AE%B4-%E6%AD%BB%E9%87%91%E4%B8%B9%E7%8B%AC%E8%89%B3%E7%90%86%E4%BA%B2%E4%B8%A7"><span class="toc-text">第六十三回 寿怡红群芳开夜宴　死金丹独艳理亲丧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%B9%BD%E6%B7%91%E5%A5%B3%E6%82%B2%E9%A2%98%E4%BA%94%E7%BE%8E%E5%90%9F-%E6%B5%AA%E8%8D%A1%E5%AD%90%E6%83%85%E9%81%97%E4%B9%9D%E9%BE%99%E4%BD%A9"><span class="toc-text">第六十四回 幽淑女悲题五美吟　浪荡子情遗九龙佩</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%BA%94%E5%9B%9E-%E8%B4%BE%E4%BA%8C%E8%88%8D%E5%81%B7%E5%A8%B6%E5%B0%A4%E4%BA%8C%E5%A7%A8-%E5%B0%A4%E4%B8%89%E5%A7%90%E6%80%9D%E5%AB%81%E6%9F%B3%E4%BA%8C%E9%83%8E"><span class="toc-text">第六十五回 贾二舍偷娶尤二姨　尤三姐思嫁柳二郎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%85%AD%E5%9B%9E-%E6%83%85%E5%B0%8F%E5%A6%B9%E8%80%BB%E6%83%85%E5%BD%92%E5%9C%B0%E5%BA%9C-%E5%86%B7%E4%BA%8C%E9%83%8E%E4%B8%80%E5%86%B7%E5%85%A5%E7%A9%BA%E9%97%A8"><span class="toc-text">第六十六回 情小妹耻情归地府　冷二郎一冷入空门</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B8%83%E5%9B%9E-%E9%A6%88%E5%9C%9F%E7%89%A9%E9%A2%A6%E5%8D%BF%E5%BF%B5%E6%95%85%E9%87%8C-%E8%AE%AF%E5%AE%B6%E7%AB%A5%E5%87%A4%E5%A7%90%E8%93%84%E9%98%B4%E8%B0%8B"><span class="toc-text">第六十七回 馈土物颦卿念故里　讯家童凤姐蓄阴谋</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%8B%A6%E5%B0%A4%E5%A8%98%E8%B5%9A%E5%85%A5%E5%A4%A7%E8%A7%82%E5%9B%AD-%E9%85%B8%E5%87%A4%E5%A7%90%E5%A4%A7%E9%97%B9%E5%AE%81%E5%9B%BD%E5%BA%9C"><span class="toc-text">第六十八回 苦尤娘赚入大观园　酸凤姐大闹宁国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%8D%81%E4%B9%9D%E5%9B%9E-%E5%BC%84%E5%B0%8F%E5%B7%A7%E7%94%A8%E5%80%9F%E5%89%91%E6%9D%80%E4%BA%BA-%E8%A7%89%E5%A4%A7%E9%99%90%E5%90%9E%E7%94%9F%E9%87%91%E8%87%AA%E9%80%9D"><span class="toc-text">第六十九回 弄小巧用借剑杀人　觉大限吞生金自逝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%9B%9E-%E6%9E%97%E9%BB%9B%E7%8E%89%E9%87%8D%E5%BB%BA%E6%A1%83%E8%8A%B1%E7%A4%BE-%E5%8F%B2%E6%B9%98%E4%BA%91%E5%81%B6%E5%A1%AB%E6%9F%B3%E7%B5%AE%E8%AF%8D"><span class="toc-text">第七十回 林黛玉重建桃花社　史湘云偶填柳絮词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B8%80%E5%9B%9E-%E5%AB%8C%E9%9A%99%E4%BA%BA%E6%9C%89%E5%BF%83%E7%94%9F%E5%AB%8C%E9%9A%99-%E9%B8%B3%E9%B8%AF%E5%A5%B3%E6%97%A0%E6%84%8F%E9%81%87%E9%B8%B3%E9%B8%AF"><span class="toc-text">第七十一回 嫌隙人有心生嫌隙　鸳鸯女无意遇鸳鸯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%BA%8C%E5%9B%9E-%E7%8E%8B%E7%86%99%E5%87%A4%E6%81%83%E5%BC%BA%E7%BE%9E%E8%AF%B4%E7%97%85-%E6%9D%A5%E6%97%BA%E5%A6%87%E5%80%9A%E5%8A%BF%E9%9C%B8%E6%88%90%E4%BA%B2"><span class="toc-text">第七十二回 王熙凤恃强羞说病　来旺妇倚势霸成亲</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B8%89%E5%9B%9E-%E7%97%B4%E4%B8%AB%E5%A4%B4%E8%AF%AF%E6%8B%BE%E7%BB%A3%E6%98%A5%E5%9B%8A-%E6%87%A6%E5%B0%8F%E5%A7%90%E4%B8%8D%E9%97%AE%E7%B4%AF%E9%87%91%E5%87%A4"><span class="toc-text">第七十三回 痴丫头误拾绣春囊　懦小姐不问累金凤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%9B%9B%E5%9B%9E-%E6%83%91%E5%A5%B8%E8%B0%97%E6%8A%84%E6%A3%80%E5%A4%A7%E8%A7%82%E5%9B%AD-%E7%9F%A2%E5%AD%A4%E4%BB%8B%E6%9D%9C%E7%BB%9D%E5%AE%81%E5%9B%BD%E5%BA%9C"><span class="toc-text">第七十四回 惑奸谗抄检大观园　矢孤介杜绝宁国府</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%BA%94%E5%9B%9E-%E5%BC%80%E5%A4%9C%E5%AE%B4%E5%BC%82%E5%85%86%E5%8F%91%E6%82%B2%E9%9F%B3-%E8%B5%8F%E4%B8%AD%E7%A7%8B%E6%96%B0%E8%AF%8D%E5%BE%97%E4%BD%B3%E8%B0%B6"><span class="toc-text">第七十五回 开夜宴异兆发悲音　赏中秋新词得佳谶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%85%AD%E5%9B%9E-%E5%87%B8%E7%A2%A7%E5%A0%82%E5%93%81%E7%AC%9B%E6%84%9F%E5%87%84%E6%B8%85-%E5%87%B9%E6%99%B6%E9%A6%86%E8%81%94%E8%AF%97%E6%82%B2%E5%AF%82%E5%AF%9E"><span class="toc-text">第七十六回 凸碧堂品笛感凄清　凹晶馆联诗悲寂寞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B8%83%E5%9B%9E-%E4%BF%8F%E4%B8%AB%E9%AC%9F%E6%8A%B1%E5%B1%88%E5%A4%AD%E9%A3%8E%E6%B5%81-%E7%BE%8E%E4%BC%98%E4%BC%B6%E6%96%A9%E6%83%85%E5%BD%92%E6%B0%B4%E6%9C%88"><span class="toc-text">第七十七回 俏丫鬟抱屈夭风流　美优伶斩情归水月</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%80%81%E5%AD%A6%E5%A3%AB%E9%97%B2%E5%BE%81%E5%A7%BD%E5%A9%B3%E8%AF%8D-%E7%97%B4%E5%85%AC%E5%AD%90%E6%9D%9C%E6%92%B0%E8%8A%99%E8%93%89%E8%AF%94"><span class="toc-text">第七十八回 老学士闲征姽婳词　痴公子杜撰芙蓉诔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%8D%81%E4%B9%9D%E5%9B%9E-%E8%96%9B%E6%96%87%E9%BE%99%E6%82%94%E5%A8%B6%E6%B2%B3%E4%B8%9C%E7%8B%AE-%E8%B4%BE%E8%BF%8E%E6%98%A5%E8%AF%AF%E5%AB%81%E4%B8%AD%E5%B1%B1%E7%8B%BC"><span class="toc-text">第七十九回 薛文龙悔娶河东狮　贾迎春误嫁中山狼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%9B%9E-%E6%87%A6%E5%BC%B1%E8%BF%8E%E6%98%A5%E8%82%A0%E5%9B%9E%E4%B9%9D%E6%9B%B2-%E5%A7%A3%E6%80%AF%E9%A6%99%E8%8F%B1%E7%97%85%E5%85%A5%E8%86%8F%E8%82%93"><span class="toc-text">第八十回 懦弱迎春肠回九曲　姣怯香菱病入膏肓</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%80%E5%9B%9E-%E5%8D%A0%E6%97%BA%E7%9B%B8%E5%9B%9B%E7%BE%8E%E9%92%93%E6%B8%B8%E9%B1%BC-%E5%A5%89%E4%B8%A5%E8%AF%8D%E4%B8%A4%E7%95%AA%E5%85%A5%E5%AE%B6%E5%A1%BE"><span class="toc-text">第八十一回 占旺相四美钓游鱼　奉严词两番入家塾</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%89%E5%9B%9E-%E7%9C%81%E5%AE%AB%E9%97%B1%E8%B4%BE%E5%85%83%E5%A6%83%E6%9F%93%E6%81%99-%E9%97%B9%E9%97%BA%E9%98%83%E8%96%9B%E5%AE%9D%E9%92%97%E5%90%9E%E5%A3%B0"><span class="toc-text">第八十三回 省宫闱贾元妃染恙　闹闺阃薛宝钗吞声</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%BA%94%E5%9B%9E-%E8%B4%BE%E5%AD%98%E5%91%A8%E6%8A%A5%E5%8D%87%E9%83%8E%E4%B8%AD%E4%BB%BB-%E8%96%9B%E6%96%87%E8%B5%B7%E5%A4%8D%E6%83%B9%E6%94%BE%E6%B5%81%E5%88%91"><span class="toc-text">第八十五回 贾存周报升郎中任　薛文起复惹放流刑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%85%AD%E5%9B%9E-%E5%8F%97%E7%A7%81%E8%B4%BF%E8%80%81%E5%AE%98%E7%BF%BB%E6%A1%88%E7%89%8D-%E5%AF%84%E9%97%B2%E6%83%85%E6%B7%91%E5%A5%B3%E8%A7%A3%E7%90%B4%E4%B9%A6"><span class="toc-text">第八十六回 受私贿老官翻案牍　寄闲情淑女解琴书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%84%9F%E6%B7%B1%E7%A7%8B%E6%8A%9A%E7%90%B4%E6%82%B2%E5%BE%80%E4%BA%8B-%E5%9D%90%E7%A6%85%E5%AF%82%E8%B5%B0%E7%81%AB%E5%85%A5%E9%82%AA%E9%AD%94"><span class="toc-text">第八十七回 感深秋抚琴悲往事　坐禅寂走火入邪魔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E5%85%AB%E5%9B%9E-%E5%8D%9A%E5%BA%AD%E6%AC%A2%E5%AE%9D%E7%8E%89%E8%B5%9E%E5%AD%A4%E5%84%BF-%E6%AD%A3%E5%AE%B6%E6%B3%95%E8%B4%BE%E7%8F%8D%E9%9E%AD%E6%82%8D%E4%BB%86"><span class="toc-text">第八十八回 博庭欢宝玉赞孤儿　正家法贾珍鞭悍仆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%8D%81%E4%B9%9D%E5%9B%9E-%E4%BA%BA%E4%BA%A1%E7%89%A9%E5%9C%A8%E5%85%AC%E5%AD%90%E5%A1%AB%E8%AF%8D-%E8%9B%87%E5%BD%B1%E6%9D%AF%E5%BC%93%E9%A2%A6%E5%8D%BF%E7%BB%9D%E7%B2%92"><span class="toc-text">第八十九回 人亡物在公子填词　蛇影杯弓颦卿绝粒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E5%9B%9E-%E5%A4%B1%E7%BB%B5%E8%A1%A3%E8%B4%AB%E5%A5%B3%E8%80%90%E5%97%B7%E5%98%88-%E9%80%81%E6%9E%9C%E5%93%81%E5%B0%8F%E9%83%8E%E6%83%8A%E5%8F%B5%E6%B5%8B"><span class="toc-text">第九十回 失绵衣贫女耐嗷嘈　送果品小郎惊叵测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%B8%80%E5%9B%9E-%E7%BA%B5%E6%B7%AB%E5%BF%83%E5%AE%9D%E8%9F%BE%E5%B7%A5%E8%AE%BE%E8%AE%A1-%E5%B8%83%E7%96%91%E9%98%B5%E5%AE%9D%E7%8E%89%E5%A6%84%E8%B0%88%E7%A6%85"><span class="toc-text">第九十一回 纵淫心宝蟾工设计　布疑阵宝玉妄谈禅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%B8%89%E5%9B%9E-%E7%94%84%E5%AE%B6%E4%BB%86%E6%8A%95%E9%9D%A0%E8%B4%BE%E5%AE%B6%E9%97%A8-%E6%B0%B4%E6%9C%88%E5%BA%B5%E6%8E%80%E7%BF%BB%E9%A3%8E%E6%9C%88%E6%A1%88"><span class="toc-text">第九十三回 甄家仆投靠贾家门　水月庵掀翻风月案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E5%9B%9B%E5%9B%9E-%E5%AE%B4%E6%B5%B7%E6%A3%A0%E8%B4%BE%E6%AF%8D%E8%B5%8F%E8%8A%B1%E5%A6%96-%E5%A4%B1%E5%AE%9D%E7%8E%89%E9%80%9A%E7%81%B5%E7%9F%A5%E5%A5%87%E7%A5%B8"><span class="toc-text">第九十四回 宴海棠贾母赏花妖　失宝玉通灵知奇祸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%8D%81%E4%BA%94%E5%9B%9E-%E5%9B%A0%E8%AE%B9%E6%88%90%E5%AE%9E%E5%85%83%E5%A6%83%E8%96%A8%E9%80%9D-%E4%BB%A5%E5%81%87%E6%B7%B7%E7%9C%9F%E5%AE%9D%E7%8E%89%E7%96%AF%E9%A2%A0"><span class="toc-text">第九十五回 因讹成实元妃薨逝　以假混真宝玉疯颠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】纳粹德国的腐败与反腐</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】纳粹德国的腐败与反腐">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/03/29/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%BA%B3%E7%B2%B9%E5%BE%B7%E5%9B%BD%E7%9A%84%E8%85%90%E8%B4%A5%E4%B8%8E%E5%8F%8D%E8%85%90/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="【美】弗兰克•巴约尔  著  徐贲  译">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-03-29">
+      <meta 
+        property="og:article:modified_time" 
+        content="2024-06-16">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%81%E6%9D%83%E4%BD%93%E5%88%B6%E4%B8%8B%E7%9A%84%E7%BA%B3%E7%B2%B9%E8%85%90%E8%B4%A5%E5%92%8C%E5%8F%8D%E8%85%90"><span class="toc-text">极权体制下的纳粹腐败和反腐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9C%89%E7%BB%84%E7%BB%87%E7%9A%84%E8%87%AA%E6%81%8B%E8%87%AA%E7%88%B1%E4%B8%8E%E6%8F%90%E6%90%BA%E5%90%8C%E5%85%9A"><span class="toc-text">1 有组织的自恋自爱与提携同党</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1933%E5%B9%B4%E5%90%8E%E5%AF%B9%E2%80%9C%E8%80%81%E6%88%98%E5%A3%AB%E2%80%9D%E7%9A%84%E2%80%9C%E8%A1%A5%E5%81%BF%E2%80%9D%EF%BC%9B%E5%AF%B9%E5%85%9A%E5%91%98%E7%9A%84%E5%BA%87%E6%8A%A4%E5%92%8C%E8%B5%9E%E5%8A%A9"><span class="toc-text">1933年后对“老战士”的“补偿”；对党员的庇护和赞助</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%A0%E7%A4%BC%E3%80%81%E7%89%B9%E5%88%AB%E5%9F%BA%E9%87%91%E5%92%8C%E5%B0%8F%E9%87%91%E5%BA%93"><span class="toc-text">赠礼、特别基金和小金库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%AC%AC%E4%B8%89%E5%B8%9D%E5%9B%BD%E8%85%90%E8%B4%A5%E7%9A%84%E6%A0%B8%E5%BF%83%E9%A2%86%E5%9F%9F"><span class="toc-text">2 第三帝国腐败的核心领域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%B3%E7%B2%B9%E5%85%9A%E5%8F%8A%E5%85%B6%E5%90%84%E7%BB%84%E7%BB%87%E5%86%85%E9%83%A8%E7%9A%84%E8%85%90%E8%B4%A5"><span class="toc-text">纳粹党及其各组织内部的腐败</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%A9%E7%8C%8E%E3%80%81%E5%88%AB%E5%A2%85%E3%80%81%E5%8A%AB%E6%8E%A0%E8%89%BA%E6%9C%AF%E5%93%81%EF%BC%9A%E7%BA%B3%E7%B2%B9%E7%B2%BE%E8%8B%B1%E9%98%B6%E5%B1%82%E7%9A%84%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F"><span class="toc-text">狩猎、别墅、劫掠艺术品：纳粹精英阶层的生活方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E5%9C%9F%E5%8C%AA%E7%9C%81%E2%80%9D%E5%92%8C%E2%80%9C%E4%B8%91%E9%97%BB%E8%A5%BF%E4%BA%9A%E2%80%9D"><span class="toc-text">“土匪省”和“丑闻西亚”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E4%B8%AD%E8%90%A5%E7%B3%BB%E7%BB%9F%E4%B8%8E%E8%85%90%E8%B4%A5"><span class="toc-text">集中营系统与腐败</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%8D%E7%8A%B9%E4%B8%8E%E8%85%90%E8%B4%A5"><span class="toc-text">3 反犹与腐败</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E7%8A%B9%E6%9A%B4%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E7%9A%84%E4%B8%AD%E9%A5%B1%E7%A7%81%E5%9B%8A"><span class="toc-text">反犹暴力和个人的中饱私囊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E9%9B%85%E5%88%A9%E5%AE%89%E5%8C%96%E2%80%9D%E6%98%AF%E8%85%90%E8%B4%A5%E7%9A%84%E7%BB%93%E6%99%B6%E7%82%B9"><span class="toc-text">“雅利安化”是腐败的结晶点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E5%B1%A0%E6%9D%80%E4%B8%8E%E8%85%90%E8%B4%A5"><span class="toc-text">大屠杀与腐败</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%8F%8D%E8%85%90%E6%96%97%E4%BA%89%E5%8F%8A%E5%85%B6%E5%B1%80%E9%99%90"><span class="toc-text">4 反腐斗争及其局限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BF%E6%B2%BB%E4%B8%8A%E5%AF%B9%E5%8F%8D%E8%85%90%E7%9A%84%E5%88%A9%E7%94%A8"><span class="toc-text">政治上对反腐的利用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%AC%E8%A3%81%E7%9A%84%E4%BD%93%E5%88%B6%E9%97%AE%E9%A2%98"><span class="toc-text">独裁的体制问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8B%E5%85%9A%E4%B9%8B%E4%BA%A4%E3%80%81%E9%97%A8%E9%98%80%E7%BB%9F%E6%B2%BB%E4%B8%8E%E5%AE%98%E5%AE%98%E7%9B%B8%E6%8A%A4"><span class="toc-text">朋党之交、门阀统治与官官相护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%98%E6%97%B6%E7%9A%84%E4%B8%A2%E8%BD%A6%E4%BF%9D%E5%B8%85"><span class="toc-text">战时的丢车保帅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E6%89%93%E6%AD%BB%E8%8B%8D%E8%9D%87%E2%80%A6%E2%80%9D%EF%BC%9A%E4%BA%9A%E8%AF%BA%E5%A4%AB%E6%96%AF%E5%9F%BA%E6%A1%88"><span class="toc-text">“打死苍蝇…”：亚诺夫斯基案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%85%90%E8%B4%A5%E4%B8%8E%E2%80%9C%E6%B0%91%E6%84%8F%E2%80%9D"><span class="toc-text">5 腐败与“民意”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF%EF%BC%8C"><span class="toc-text">词汇积累，</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】纳粹德国的腐败与反腐
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-03-28T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-03-29</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>14.1k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。<br>[美]弗兰克•巴约尔   著<br>徐贲  译</p></div>
+<br />
+<img src="/image/book/readandnote/纳粹德国的腐败与反腐/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/纳粹德国的腐败与反腐/1.png" class="lozad post-image">
+<br />
+<h2 id="极权体制下的纳粹腐败和反腐">极权体制下的纳粹腐败和反腐</h2>
+<p><strong>原文摘录</strong><br>
+《纳粹的腐败》关注的不是一般的腐败，而是特殊的极权制度性腐败。腐败有多种表现形式，“如以权谋私、行贿受贿、结党营私、任人唯亲、挪用公款和公私不分等，在民主国家也同样泛滥，只是程度多寡不同”。但是，在民主国家里，媒体可以揭露这些腐败，政治竞争对手之间可以用腐败来攻击对方，民众可以公开、自由地批评官员或政府的腐败。这些在纳粹的极权制度下是不可能的。<br>
+<br /><br /></p>
+<h2 id="引言">引言</h2>
+<p><strong>原文摘录</strong><br>
+腐败是人类生活的基本常态，自古有之，无孔不入，与政治体制无关。无论是在古典时期还是近代，无论是在独裁制还是民主制国家，腐败素来屡见不鲜，今天依然如此。政治腐败的一般定义是：滥用公职权力，以谋取私利。政治腐败并非仅仅出现在民主制之前的、传统的、独裁专制的政治体制中。它的各种表现形式，如以权谋私、行贿受贿、结党营私、任人唯亲、挪用公款和公私不分等，在民主国家也同样泛滥，只是程度多寡不同。因此，史学家雅各布·范克拉韦伦将腐败划归为“正常情况”，而清正廉洁的统治却是需要解释的“特殊情况”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+纳粹统治下的政治腐败的一大特点是惊人的多样化，远远不仅限于腐败的经典定义——滥用公职权力，以谋取私利。纳粹党人虽然在官方场合谴责腐败行为，但在其实际行动中干的却是另外一套，这决定性地促进了纳粹腐败的多样性的形成。如果我们把当权者对腐败的态度作为标尺，就可以发现，纳粹的腐败有三种基本形式：</p>
+<p>首先是国家和纳粹党官方促进和实施的腐败行为，它不是若干个人的滥用职权，而是一种有组织的滥用权力；它并非促进个人私利，而是有助于体制的功能稳定。这种体制化的腐败包括：劳工部门采取所谓“特别行动”，有组织地对纳粹党员，尤其是“老战士”们，进行特别的优待照顾，赋予其某些特权；或者希特勒向军事、政治、科学或文化界精英人物的馈赠。</p>
+<p>其次是受到容忍的腐败。第三帝国的反腐机制存在一些机构上的缺陷，导致某些腐败行为特别猖獗，当局无奈之下（或者有意识地）只得对这些腐败行为进行容忍。这种腐败行为包括：黑市交易，尤其是在占领区；由于特别基金、小金库和秘密基金的存在，国家财政受到了潜滋暗长的侵蚀和瓦解，这种腐败手段主要是纳粹党的各个省部书记们采用的，他们凌驾于权力和财政监管机制之上。</p>
+<p>最后，纳粹统治下也开展了反腐斗争，即遵循某些规则和手段，根据当前的基本状况，对腐败行为进行刑事处罚。这种遭到打击的腐败五花八门，给纳粹党及其组织造成了沉重负担，比如非常猖獗的侵吞党费和捐款的行为。</p>
+<p>当然，体制化的腐败、受到容忍的腐败和遭到打击的腐败这三者间的界线并不是一成不变的，而是具有11流动性，总是非常模糊、难以界定。那些没有强大的政治靠山的政府官员和公职人员往往仅仅因为微小的过失（比如“缺乏捐款的积极性”或者“亲犹太人行为”）就遭到纪律审查，甚至受到刑事处罚。但对于纳粹党官员来说，除非他们在自己的靠山和保护人眼中失去了利用价值，或者卷入了体制内部的权力斗争，一般不必害怕自己的腐败行为受到检举控诉。随着时间流逝，有些腐败违法行为，比如黑市交易，既受到官方的推动，也受到容忍，有时也受到打击。<br>
+<br /><br /></p>
+<h2 id="1-有组织的自恋自爱与提携同党">1 有组织的自恋自爱与提携同党</h2>
+<h3 id="1933年后对“老战士”的“补偿”；对党员的庇护和赞助">1933年后对“老战士”的“补偿”；对党员的庇护和赞助</h3>
+<p><strong>原文摘录</strong><br>
+社会学家特奥多尔·盖格尔早在1932年就指出，在纳粹党人的“理想主义”宣传的光辉外表背后，藏匿着一种没有理想的理想主义，并没有把物质上的贪婪掩饰好。纳粹党人的基本态度是“绝非理想主义的”，而是“极端的经济和物质主义的”：“他们没有克服经济的、物质主义的心态，而是遮蔽着自己的物质主义。”<br>
+<br /><br /></p>
+<h3 id="赠礼、特别基金和小金库">赠礼、特别基金和小金库</h3>
+<p><strong>原文摘录</strong><br>
+希特勒获取这些遗产，却不曾缴纳过遗产税，因为，就像他的律师吕迪格·冯·德·戈尔茨伯爵向财政部门解释的那样，“众所周知，元首、党和国家是一回事”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+但希特勒的馈赠和礼物并不全是赤裸裸的权力政治的算计、为了控制对方的忠诚。很多在党内斗争中失势、被束之高阁、丧失了全部政治影响力的人也享受到了元首的恩典。对这些人安抚一番，就不必担心他们会做出什么不利于政府的行为。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+根据“民不告官，官不管”的原则，根本不存在有效的财务监督。<br>
+<br /><br /></p>
+<h2 id="2-第三帝国腐败的核心领域">2 第三帝国腐败的核心领域</h2>
+<h3 id="纳粹党及其各组织内部的腐败">纳粹党及其各组织内部的腐败</h3>
+<p><strong>原文摘录</strong><br>
+从1934年1月1日至1941年12月31日，纳粹党总财务官在普通法庭针对“犯有侵害党产”罪行的纳粹党员提起了10887项诉讼。这个数字高得惊人，因为我们要考虑到，侵吞党的财产就是偷窃自己的党内同志，这样做的道德顾虑肯定要比侵吞“无名无姓”的公共财产大得多，既然贪污党产的人都这么多，那么侵吞公款的人肯定更多了。在每个工作日，纳粹党总财务官平均向普通法庭提起四至五项刑事诉讼。因为在提起每一项诉讼之前必然要经过深度的审核和调查，那么我们可以推断，总财务官及其审计人员的很大一部分精力都花在与腐化的党内干部作斗争，以及追踪被侵吞的党产上。另外，这些提起公诉的案件只是冰山一角，因为很多贪污案件在党的“内部”就被处理掉了。</p>
+<p>另外，贪污腐化行为绝不是仅限于纳粹党，在其下属组织机构中更为普遍。例外，在汉堡，所有在最宽泛的意义上与纳粹党相关的刑事诉讼中，只有约15%与纳粹党本身直接相关，而“国家社会主义人民福利行动”(NSV)与德意志劳工阵线(DAF)的贪污案件却占到了总数的将近三分之二。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当时民间有句流传很广的话，描述的就是这种怪现状：“没有两次贪污获诈骗前科的人，当不了财务总管。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+尽管韦伯收入颇丰——作为县议会主席，他能从慕尼黑市政府拿到7.2万帝国马克；经济委员的薪水是7万帝国马克；从希特勒那里拿到5万帝国马克的赠礼；从慕尼黑市政府还能领取25300帝国马克的“荣誉奖金”——但他居然让卡尔来支付自己宅邸“修理电铃导线”的区区1.5帝国马克！韦伯的所作所为很有代表性，富丽堂皇的外表和中饱私囊的贪欲竟与极度的吝啬如影随形。<br>
+<br /><br /></p>
+<h3 id="狩猎、别墅、劫掠艺术品：纳粹精英阶层的生活方式">狩猎、别墅、劫掠艺术品：纳粹精英阶层的生活方式</h3>
+<p><strong>原文摘录</strong><br>
+第三帝国的几乎所有达官贵人都享受着这样可耻的避税特权。公众几乎不可能知道这些情况，因为帝国财政部在1937年和1939年发布了指令，只有柏林—中央财政局和慕尼黑—北方财政局两家单位才有权处理各位帝国部长及纳粹党全国领袖的税务。为了避免更多人知情，在某位权贵去世之后，他的档案也不会被移交给其居住地的财政局，他的遗孀的税务档案也将改由柏林和慕尼黑的财政局处理。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+他的庄园经理提出的改建方案还比较适中，遭到了莱伊的全盘否定：“您的建议还不错，如果我还是当年那个小小的莱伊的话，就会同意。但我已经不是当年的我了。我在这儿必须要有美丽的东西、美丽的建筑。有一天元首会亲自来庄园，看看我的私人产业。如果我在这儿搞得小家子气、缩手缩脚，如果我不把这次重建弄成国家社会主义繁荣昌盛的象征，他会怎么说？”</p>
+<p>按照这段极具启发性的谈话的精神，莱伊对自己的产业进行了奢华的扩建，不仅是为了突出自己在纳粹等级体系中的地位，以及在元首面前争面子，更是为了用盛大壮丽的表现形式夸耀国家社会主义的强大。对纳粹党的权贵们来说，这些言论要比他们同时还在做的另外一项努力——用“大杂烩星期日” 之类的活动拉拢民心，做出简朴和亲民的姿态——要典型得多。<br>
+<br /><br /></p>
+<h3 id="“土匪省”和“丑闻西亚”">“土匪省”和“丑闻西亚”</h3>
+<p><strong>原文摘录</strong><br>
+波兰总督区的腐败绝不仅限于总督身边的统治者小圈子。在占领当局的中下层，比如县长这一级，也有众多的贪官污吏，他们把自己的辖区当作自己的私人领地，不是在管理，而是在统治。<br>
+<br /><br /></p>
+<h3 id="集中营系统与腐败">集中营系统与腐败</h3>
+<h2 id="3-反犹与腐败">3 反犹与腐败</h2>
+<p><strong>原文摘录</strong><br>
+在纳粹政权隐秘地剥夺犹太人权力、消灭其经济基础、强迫其移民、最终是驱逐 和谋杀的所有过程中，始终都伴随着纳粹统治下典型的五花八门的腐败行为。其实官方发布了连篇累牍的规定和命令，要求“依法”处理犹太人问题，严禁个人和机构借此机会中饱私囊。这就使得迫害犹太人过程中的腐败更值得注意。<br>
+<br /><br /></p>
+<h3 id="反犹暴力和个人的中饱私囊">反犹暴力和个人的中饱私囊</h3>
+<p><strong>原文摘录</strong><br>
+仇恨的宣传让人没了道德上的顾虑，再加上政治权力给了人自信，于是很多纳粹活跃分子早在1933年2月就开始“搜罗战利品”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+还是在布雷斯劳，纳粹党县级机关通讯部门的工作人员专门从事敲诈犹太人的行当，将他们传唤到机关，通过威胁和暴力榨取钱财。负责调查此案的布雷斯劳地方法院高级检察官认为这是“国家社会主义的过分热心行为”，根据1934年8月颁布的《赦免法》，将这群犯罪分子赦免。在对抢劫犹太人或者暴力虐犹案进行审判时，法庭常常借助这部法律来为犯罪分子开脱。<br>
+<br /><br /></p>
+<h3 id="“雅利安化”是腐败的结晶点">“雅利安化”是腐败的结晶点</h3>
+<p><strong>原文摘录</strong><br>
+在纳粹国家没有一个机构对抽象的政府和帝国的利益负有责任。纳粹党人往往是打着德意志帝国的旗号出场，他们对自己职权的理解与其个人的权力和统治利益是分不开的，甚至在很大程度上受到个人利益的左右。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在“雅利安化”的环境中，还有很多犯罪分子利用犹太人的绝境大发横财。犯罪分子向犹太商店索取“保护费”；野鸡律师装作搭救遇险的犹太人，拿了律师费预付金后就消失得无影无踪；还有人伪称自己和纳粹党高级领导人有关系，向犹太人许下天花乱坠的诺言，骗得钱财，这些诺言完全是空中楼阁。在“雅利安化”末期，德国境内急于出境的犹太人数量剧增，很多外国领事馆，尤其是南美洲和中美洲国家的领事馆，在发放签证时收取高价。要搞到一本前往阿根廷的入境签证，每人要缴纳5000帝国马克的贿金；去海地的签证就只需要1000帝国马克。这种贿赂救了很多犹太人的性命，被犹太移民称为“行善的腐败”，被认为不完全是坏事，尽管这些贿金首先被官员们私吞，并且对移民来说也是一种经济上的掠夺。</p>
+<p>腐败在“雅利安化”框架内发挥的作用有两个方面。首先，腐败，尤其是“官方”的、以赞助和提携为表现形式的腐败，将获益者直接地与纳粹统治系统捆绑在了一起，即便这些赞助往往并不是为了保证获益者未来的忠诚，而是被理解为对党员在过去做出的物质上的“牺牲”的“补偿”。所谓的在“斗争年代”做出的“牺牲”与1933年后的“补偿”之间的联系构成了“救赎式反犹主义”的一个重要的社会心理元素。绍尔·弗里德伦德尔认为，“救赎式反犹主义”是一种具有特别的德国特色和纳粹特色的反犹主义。</p>
+<p>其次，利用犹太人财产中饱私囊的行为使得反犹政策更加极端化，因为对犹太人的掠夺造就了一群数量不断增长的既得利益者，他们绝不愿意将吃下的东西再吐出来，因此绝不愿意看到犹太人业主回来索回自己的财产。这些既得利益者跨越了道德上的卢比孔河，只能在反犹道路上继续走下去，并且更加极端化，因为他们假如要往回走，就必须承认自己的罪孽，并将侵吞来的财产返还原主人。<br>
+<br /><br /></p>
+<h3 id="大屠杀与腐败">大屠杀与腐败</h3>
+<p><strong>原文摘录</strong><br>
+在有犹太人社区的村庄，已经被驱逐的犹太人财产被拖到大街上拍卖。很多村民没心没肺地购买这些东西，尽管他们一定很清楚，这些东西的原主人就是他们的邻居和熟人。而在大城市，被出售的犹太人财产都是“没名没姓”的，买家更不会有道德顾虑。</p>
+<p>纳粹统治者老谋深算地用这种手段来腐蚀群众的道德，他们认为，德国人民越是彻底地断绝了自己道德上的退路，就越能强烈地认同和支持纳粹统治，也就会更加“狂热”地为“最终胜利”而战。宣传部长戈培尔就此在日记中写道：“尤其是在犹太人问题上，我们已经走得这么远，绝没有任何退路了。这样也好。已经破釜沉舟的政治运动和民族，战斗起来要比还有退路的人坚决得多。”</p>
+<p>但纳粹党的这个算计在战争末期却被证明是落了空的。一位汉堡的犹太商人由于“享受特权的跨种族婚姻”而在纳粹统治中活了下来，他在1945年初在自己的私人文件中写道，一部分德国群众对盟军即将取得的胜利非常恐惧。他写道：“很多占据了犹太人房屋和财物的人，今天非常害怕，担心犹太人会卷土重来，索回自己的财产，然后控告他们的抢劫和盗窃罪行。”</p>
+<p>考虑到纳粹灭绝政策实施过程中发生的劫掠、“疯狂的”中饱私囊、未经授权的没收以及不受监管的对犹太人财产的分配和浪费到了多么惊人的规模，就可以得出结论：腐败绝非孤立的边缘现象，而是体制固有的普遍现象，或者说是纳粹统治系统的一个根本性行为。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当然，如果没有现代国家的官僚机构，对欧洲犹太人的规模如此之大的屠杀是不可能办得到的。但我们绝不可以简单化地将大屠杀视为一场不带个人感情的、官僚的、精确执行的国家罪行。专断残暴、个人和组织的公开谋取私利、个人的极端手段和措施，以及有时达到无政府主义程度的对犹太人的掠夺和谋杀——这些同样是大屠杀的特点。谋求物质利益不是大屠杀的动因，而只是它的一个伴随现象。但对于很多参与者来说，物质利益却是一个不可低估的动机。除了意识形态的狂热和道德败坏的官僚常规外，“低级”的动机（比如贪婪），也对大屠杀起到了推动作用。在这样一个统治系统——重要的国家机构的运作不再受到正常原则的约束和监管，受害者被剥夺人性，受害者的财产则被以意识形态手段诬蔑为赃物——内，腐败找到了理想的温床。</p>
+<p>腐败行为对大屠杀有三种形式的影响：1.腐败是伴随大屠杀发生的“顺带效果”，对谋杀过程的影响是间接的；2.腐败是大屠杀的促进因素，即凶手为了消灭自己腐败罪行的证人，将受害者谋杀；3.有时，腐败阻碍或迟滞了大屠杀的实施，即受害者通过贿赂官员，挽救了自己的性命，或者暂时缓解了危局。</p>
+<p>纳粹政权对“雅利安化”及随后的大屠杀过程中典型的腐败现象的态度是模棱两可的。一方面，腐败对纳粹政权的图谋是有利的，因为它给“犹太人政策”和大屠杀的执行者提供利益驱动，同时让他们深陷大屠杀罪行中，将他们紧紧地捆缚在纳粹体制的战车上，让他们不得脱身。从纳粹政权的角度来看，腐败的这种影响是有用的，否则腐败也不会达到现实中那种程度。</p>
+<p>另一方面，纳粹政权的领导人，尤其是党卫军全国领袖海因里希·希姆莱，致力于将大屠杀与普通的谋财害命区别开，以维持一种建立在意识形态之上的道德观。希姆莱要求党卫军人员在执行大屠杀时也保持“正直”，即将谋杀视为不带个人感情色彩的意识形态的斗争任务，无私地予以执行。腐败与这种要求无法协调起来，因此让这种扭曲的道德观很成问题。主要是希姆莱企图用这种道德观来为大屠杀辩护。因此，与一般的实践相反的是，在处理犹太人的问题上，普通刑法仍然有效：在第三帝国，如果有人出于低级的动机杀死犹太人，而并非在完成组织赋予的任务，那么就算是谋杀犯。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+现实中越是腐化堕落，党卫军全国领袖海因里希·希姆莱就越是慷慨激昂地要求党卫军人员无私和正直。在晚期的讲话中，希姆莱把腐败的责任推向了受害者，就好像犹太人被掠夺和杀害全怪他们自己似的。1944年1月，希姆莱完全不顾事实，但是忠实于“一切罪孽都怪犹太人”的反犹逻辑指出：“我们还没能消灭腐败，是因为我们还没有解决犹太人问题。”<br>
+<br /><br /></p>
+<h2 id="4-反腐斗争及其局限">4 反腐斗争及其局限</h2>
+<h3 id="政治上对反腐的利用">政治上对反腐的利用</h3>
+<p><strong>原文摘录</strong><br>
+1933年5月，纳粹政府对欺诈和贪腐的量刑标准予以提高，“情节严重的”可以判处最高十年监禁。“情节严重”是指“人民的利益受到损害”。这是典型的纳粹法学概念，弹性极大，可以随心所欲地加以解释。</p>
+<p>虽然对刑法作了修订，还设立了专门的反贪局，但纳粹党人希望看到的潮水般的民主党人腐败案件却没有出现。这不仅是由于深度的调查并没有查出多少可以起诉的东西来，还因为纳粹党人对于反腐的利用是非常政治化的——首先是为了对“一体化”进行合法化，还有就是改建政治环境，以利于独裁。</p>
+<p>在1933年初夏，纳粹独裁已经巩固，于是就不需要利用反腐来将自己的某些行为合法化了。新政权在国内的政治稳定不再受到先前的政敌的威胁。新的威胁是纳粹党自己的“革命”活跃分子，这些人是绊脚石，威胁到了纳粹党与保守精英阶层的联盟。于是，在1933年5月31日，希特勒向各省总督发布通令，“在最近几周内出现了一种过激倾向，即对过去发生的违法违规行为穷追不舍，时隔多年还要把人拉出来控告，这种事情必须立即停止”。经济界利益的代言人委托了刑法专家弗里德里希·格林起草一份备忘录，要求“对过往的腐败犯罪行为实施大赦”。帝国经济部长库尔特·施密特告诫，在腐败问题上要“保持克制和冷静”，以避免经济遭到恣意损害。另外，对魏玛共和国腐败案件的“嗅探”对纳粹党来说是搬起石头砸自己的脚，因为在纳粹党上台后的最初几个月内，就暴露出了大量的纳粹党人贪污腐败案件。原本用来清算旧“体制”代表人的法庭如果再开下去，就会变成审判新的统治者了。</p>
+<p>于是，1933年秋季，纳粹党的“反腐热情”迅速消退了。早在1933年9月11日，普鲁士司法部长就解散了新建的反贪局，而且没有任何组织机构来接替反贪局。纳粹党的政治盟友，比如“反贿赂协会”，在共同反对魏玛共和国腐败的过程中还非常受到纳粹党的欢迎，现在却被束之高阁，并被要求与纳粹“合作”。另外，在很短的时间之内，反腐本身也变成了一门油水很足的生意。例如，普鲁士州总理赫尔曼·戈林将烟草工厂主菲利普·F.雷姆茨马的名字从普鲁士司法部的腐败案调查清单上画去。作为回报，在随后的年月中，雷姆茨马向戈林“捐赠”了几百万帝国马克，还给他奉上很多贵重礼品。如此看来，反腐斗士是在贼喊捉贼。<br>
+<br /><br /></p>
+<h3 id="独裁的体制问题">独裁的体制问题</h3>
+<p><strong>原文摘录</strong><br>
+第三帝国蔓延的腐败问题的体制基础早在1933年初的“夺权”阶段就已形成。柏林的国家特别专员利珀特的专制手段——利用“保护性监禁”敲诈钱财——就是一个生动的例子。政治分权制度被废除，所有能够实施权力监管、阻止腐败蔓延的分权制衡机制都被排除掉了。议会被解散，或者被改造成唯一功能就是为领导人鼓掌喝彩的拍马机器。于是议会对行政权力起到平衡作用的监管功能也消失了，对财政的监管权、对违法行为的公开讨论、批判性的质询都不复存在，也不可能由议会任命监管和调查委员会。</p>
+<p>第三帝国的统治者在短短几个月内就摆脱了对自己的行为做解释的所有责任，并通过对新闻界的“一体化”，让公众的批评都噤声了。在1933年之前，新闻界还能让很大一部分公众知晓当时的腐败现象，调动他们的情绪，甚至使得他们做出过激反应（右翼在反对魏玛“体制”的斗争中对此加以了利用）。1933年之后，新闻界的领导者就确保读者只能读到对政府的丰功伟绩歌功颂德的宣传。只有在统治者认为有利的时候，才会允许对贪赃枉法行为做报道。有的时候，这种报道非常晦涩模糊，读者必须要有读懂字里行间言外之意的本事才行。新闻界在报道针对贪腐纳粹党官员的诉讼时，会对被告的政治身份做出非常艺术性的改写。于是，纳粹党的政工干部在报道中就变成了“在某位任职的领导干部”。</p>
+<p>“元首国家”发展起来的统治结构是特别能够滋生腐败的温床。以希特勒为核心的纳粹政权领导层对反腐没什么兴趣，并且他们自视为一个国家社会主义同志集体的领导者，在这个集体里，元首和追随者的关系不仅是基于元首的领袖魅力，还特别依赖提携党羽的网络。从这个角度看，希特勒就是一个政治匪帮的头子。</p>
+<p>与此同时，纳粹政府山头林立、叠床架屋，权力出现了无政府主义混乱状况。各种机关如野草般蔓生，把权力监管弄到了荒谬的地步。如果有新的任务，并不是将其委派给现有的机关，而是交给“领导层直属”的特别办公室和国家专员。党和国家的机关之间的区别也越来越含糊不清。于是，不仅是统一的国家结构，就连统一的国家财政结构也在渐渐瓦解。各种黑基金和特别基金蛀空了国家财政结构，对其生存构成了威胁。在这过程中表现最突出的是那些与元首有着直接关系的机构和个人，比如各省部书记和总督，越来越没人能对他们有所约束。</p>
+<p>另外，很多机构的非常规的办事方式也让人很难对其进行监管。如果谁不受法律规章的约束，自然就没人能对其问责。在纳粹德国，不仅“措施国家” 的经典机构（比如警察）是这样，那些“规则国家”行政机关的核心领域也是如此。这些核心领域同样不按有规则约束的行为准则行事，而是将自己从法制的“束缚”中“解放”出来。<br>
+<br /><br /></p>
+<h3 id="朋党之交、门阀统治与官官相护">朋党之交、门阀统治与官官相护</h3>
+<p><strong>原文摘录</strong><br>
+有效的反腐措施遇到的最严重障碍是纳粹统治集团的关系网以及纳粹运动的朋党之交。这些现象一方面通过提携和扶助党羽，形成了腐败的一个重要来源，正如前文所示；另一方面，通过官官相护，以多种手段保护腐败官员免受处罚，嫌疑犯往往得到自己上司的庇护，批评者则遭到公开的威吓。纳粹统治系统的基本特征植根于纳粹“运动”，系统性地阻挠反腐和调查。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+对于腐败分子来说，除非他们卷入了体制内部的权力斗争，或是在自己的靠山和保护人眼中失去了所有的利用价值，或是侵吞了党及其组织的财产，否则就不必害怕自己的腐败行为受到检举控诉。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+还有一位纳粹党市长和商人，来自巴德霍内夫的贝尔，也享受到了《赦免法》的阳光雨露，尽管他已经被证明犯有贪污罪，而且仅在1934年，波恩检察院还在对他进行多起调查，不仅包括五项贪污罪名，还有四项性犯罪、四项非法监禁、三项逃避处罚、三项侮辱他人、两项人身伤害、两项职务犯罪、一项偷窃汽车的罪名。科隆省部书记约瑟夫·格罗厄在写给帝国司法部的说情信中称，贝尔“本性善良”，做出这些事情，完全是因为对“国家社会主义的过度热情”。另外，格罗厄还在党报《西德意志观察家》发表了两篇文章，将贝尔得到的赦免（它造成了恶劣影响）描述为“粉碎了对我党同志的迫害企图”。</p>
+<p>1934年11月，一些年轻的纳粹主义者在阿豪斯发动爆炸袭击，将当地的犹太会堂大部分摧毁。他们得到了纳粹领导人的照顾和庇护。当时担任副元首幕僚长的马丁·鲍曼发表讲话，要求撤销诉讼，因为“这会给敌对势力的煽动造成口实”；犯罪分子的上级将他们称为“我们的革命理想和革命青年的真正精英”；于是负责此案的哈姆总检察院也同意撤销此案，因为不追究下去，“也不会造成什么影响”。</p>
+<p>除了对司法部门施加影响之外，有些纳粹党人还有一种办法可以阻挠纳粹党官员受到处罚：他们将案件，尤其是腐败案，移交给纳粹党自己的法庭，在党内部处理案件，把普通法庭排除出去。<br>
+<br /><br /></p>
+<h3 id="战时的丢车保帅">战时的丢车保帅</h3>
+<h3 id="“打死苍蝇…”：亚诺夫斯基案">“打死苍蝇…”：亚诺夫斯基案</h3>
+<p><strong>原文摘录</strong><br>
+将个别贪官污吏处死的做法只是证明了群众中流传的那句顺口溜：“打死苍蝇，放走老虎。”尽管一些贪腐分子受到严惩，尽管希特勒命令领导干部要生活节俭，纳粹政权在战争的后半期仍然没有办法迫使党的领导人遵纪守法，对同样的犯罪行为仍然像以前那样，使用双重标准。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+1942年，围绕着柏林的高级鞋匠亚历山大·马尔迈斯特，发生了类似的事情。马尔迈斯特自1930年以来就经营着一家专营定制军官皮靴的高级商店。他的主顾主要是富裕的地主和实业家，也有党和国家的高级干部。战争爆发后，皮革属于管制物资，马尔迈斯特应当向帝国皮革管制委员会报告自己手中的大量鞋底和鞋面用皮革的情况，但他没有这么做，而是逃避了经济管制。因此他能够偷偷地为手中没有配给证的富裕顾客制作皮靴和皮鞋。</p>
+<p>但是在1942年6月，帝国皮革管制委员会在一次企业审查中识破了马尔迈斯特的花招，发现有很多人在没有配给证的情况下从他那里购买了定制皮鞋，有时是用实物交易的。马尔迈斯特的主顾的名单简直就是第三帝国的名人录，其中赫然有：希特勒、戈林、帝国新闻总长奥托·迪特里希博士、党卫军上将维尔纳·洛伦茨、省部书记恩斯特·威廉·博勒、国务秘书奥托·迈斯纳博士、国务秘书保罗·克尔纳、国务秘书赫伯特·巴克、党卫军上将威廉·比特里希、希特勒的副官党卫军中将尤利乌斯·绍布、希姆莱的副官党卫军准将鲁道夫·冯·阿尔文斯莱本、帝国部长拉默斯的女儿和女婿，以及帝国组织部长莱伊的儿子。</p>
+<p>帝国皮革管制委员会火速决定，对上述人士不再进行任何调查，而是将调查局限于那些不属于国家领导人的顾客们。帝国司法部也立即加入了对此案的遮掩。部级领导约埃尔博士作出指示，“对于部级主任以上”，地方警察当局不得对其进行讯问。最后几乎所有针对顾客的调查都被叫停，只有马尔迈斯特自己因为战争经济犯罪被判了三年徒刑。特别法庭对马尔迈斯特格外开恩，因为此案没有造成公众影响。在审讯过程中，他的大部分主顾的名字都被隐去，案件卷宗上盖着这样的章：“根据帝国刑法第83条，此案属于国家机密。”</p>
+<p>此案再次证明，纳粹政权的领导人享有一种特殊地位，哪怕是腐败的事实已经被证实，也不用害怕受到处罚。1942年之后和之前相比的唯一变化是，高级领导人为了安抚群众日渐高涨的不满情绪，愿意牺牲掉中下层的官员，以便转移群众对自己的过失的注意力。纳粹统治系统的结构对于所有的反腐努力来说都是刀枪不入，因为原本有可能起到调查作用的机关几乎总是自己束住自己的手脚，就像马尔迈斯特案中的帝国皮革管制委员会和帝国司法部那样，它们对遮掩腐败案的做法早已烂熟于心，主动放弃了任何形式的批评检查。</p>
+<p>在第三帝国垂死挣扎的剧痛中，纳粹政权的领导层再次掀起了疯狂的反腐活动，成立了新的机关，如“陆军中央法庭”；海因里希·希姆莱在1944年12月发布了一道关于打击内政部门（即传统的职业官僚领域）腐败的荒诞命令；帝国审计总署署长在1945年初大声呼吁要加强反腐。所有这些“措施国家”的上蹿下跳式的活动不仅来得太晚，而且仍然没有触及纳粹政权内所有滋生腐败的体制。1933年以来的事件证明，如果没有权力监管和分权制衡，没有针砭时弊的公众和新闻自由，如果所有的政府机关都不遵守常规的原则，如果没有独立的监管机构，所有的反腐行动都注定要失败。<br>
+<br /><br /></p>
+<h2 id="5-腐败与“民意”">5 腐败与“民意”</h2>
+<p><strong>原文摘录</strong><br>
+自1933年以来，腐败就一直是群众热衷的谈资。它在政府宣传的官方渠道越是被视为禁忌，在群众中就越是发展成一种私下里的“热门话题”。尽管纳粹党人对这方面的“民意”的尊重很有限，例如只是在战争后半期象征性地查处了一些腐败党员，但监视民情的政府机关却对群众的批评和不满作了细致入微的记录，正如盖世太保和党卫军保安处的形势报告能够详细证明的那样。</p>
+<p>“不是干部观察群众，而是群众在观察干部，而且是目光敏锐地观察。”国家警察科隆分局在1935年如此描述群众对腐败这个话题的敏感度。在纳粹统治的最初几年，几乎所有的国家警察分局都记录到了群众“对贪官污吏统治和贪污腐败的怨言”。</p>
+<p>正因为此，群众对政府的信任“一落千丈”。纳粹政权对“扫清党的门户”的要求不能置之不理，因为否则就会“严重损害人民和国家的利益”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+被政府宣传控制的新闻界对这种事情讳莫如深，但这也压制不了群众的怨声载道。恰恰相反，“被驯服的新闻界的沉默”——这是萨克森省长的讽刺说法——对政府来说不但无效，反而有害，而且更助长了谣言的散布。由于遮掩事实和刻意沉默，政府丧失了所有辟谣的机会，导致关于腐败的谣言四处传播，贪腐的金钱数额也被大大夸大。“政府越是不允许群众去一探腐败泥沼的究竟，群众就越是热衷于这个话题，并试图自己去探究，究竟发生了什么事情。”社会民主党流亡理事会关于德国事务的报道在1936年如此描述新闻封堵和造谣传谣之间的关系。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+群众对腐败的其他评论和批评在原则上也都是顺从政府的。例如，人们指责党的干部的行为“不符合团结群众的精神”的时候，绝不是在批评纳粹意识形态本身，而只是批评干部们在实践中没有好好遵从这个意识形态。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在20世纪30年代后半期，有两个新发展使得这种国内政治问题大大缓和了。首先，与纳粹政府内政外交的辉煌成就相比，腐败在民众心目中根本算不得什么重要问题；贪污腐败和结党营私被认为是一个总的来讲非常成功的政权的阴暗面，受到容忍。另外，群众对腐败行为渐渐习以为常，感觉也变得迟钝了。“人民对一切丑行都冷静超然地予以容忍，着实令人震惊。”社会民主党流亡理事会在1937年11月报告称，“从这种冷静超然，我们可以看出，道德已经沦丧到了什么程度。很多群众对任人唯亲和贪污腐败已经甘心容忍。”有些上了年纪的人对腐败的愤怒已经不能被较年轻的人所理解。群众听天由命的基本态度在“民不告，官不管”这句话中体现得淋漓尽致。记者雷蒙德·普雷策尔（化名塞巴斯蒂安·哈夫纳）在30年代末得出结论，人民已经完全领悟了官方对腐败话题的禁忌：</p>
+<p>由于纳粹领导人的贪腐数额极大，困惑的德国公众已经不用正常的名字称呼这种行为了。这些强盗是些大土匪，已经摇身一变成了权势炙手可热的大老爷。他们的权力极大，又极其厚颜无耻，人们不是为遭到抢劫而感到愤慨，倒是要庆幸，自己的东西还没有被抢光。</p>
+<p>30年代后半期经济的蓬勃发展是群众的谅解和容忍态度的另一个重要原因。在经济危机的凄惨岁月之后，群众对富丽堂皇的装扮并不感到反感，在某种程度上还认为这是富足生活和新德国的强大国威的恰当体现，对其表示欢迎。否则，我们就无法解释，奢侈成癖、腐化堕落的赫尔曼·戈林为什么毋庸置疑地受到群众爱戴了。他和他的妻子，曾经是演员的埃米·松内曼，满足了老百姓“追星”的需求。</p>
+<p>1941年底1942年初，群众对腐败无动于衷地容忍甚至是接受的阶段结束了，让位于一种敏感。德军在莫斯科城下的失败、盟军开始集中轰炸德国城市，以及粮食供应的缩减，使得群众发出了“极其激烈的不满呼声”，同时人们也更加抱怨领导人享用的“外交官配给”。亚诺夫斯基和内特林那样的案件如果是在30年代肯定不会引起多少注意，现在却能引起群众的高度关注和一连几周的激烈讨论。</p>
+<p>工人以激烈的言辞表达了对“民族共同体”内不同阶层承受战争苦难的程度不同和享受的生活条件不平等的不满。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+纳粹的“民族共同体”在战争岁月中至少是在一定程度上有了“强盗共同体”的特征。这表现在群众的思想认识和道德觉悟上，比如就有人恬不知耻地要求政府用犹太人财产来补偿遭到轰炸的家庭。尽管广大群众都严厉批评“贪官污吏统治”和腐败现象，但或许人民群众的思想已经被纳粹的强盗心态感染了。<br>
+<br /><br /></p>
+<h2 id="结束语">结束语</h2>
+<p><strong>原文摘录</strong><br>
+纳粹统治下的政治腐败不仅范围极广，而且是纳粹统治系统的一个重要标志。提携党羽、任人唯亲、裙带关系和制度化的官官相护成了纳粹运动的“政治经济”的基础，在政治地位和影响的基础上交换物质利益。政治腐败的根源一方面在于很多纳粹活跃分子在“斗争年代”所抱的期望：他们寄希望于，在期待已久的“夺权”成功之后，自己能够得到个人利益；另一方面在于“元首政党”的小圈子和门客体制，由于缺乏党内民主和表达利益要求的机会，这种体制早在1933年之前就已成形。</p>
+<p>在各式各样的统治和政府体制中都存在政治上的恩主—门客结构，议会民主制下也有这种私人的“小集体”。但是，从魏玛共和国的腐败丑闻可以看出，在民主制之下，由于民主的权力监管和分权制衡的存在，结党营私行为不仅受到主管机关的控制，还受到公众舆论的批评监督。20世纪20年代的公众就对民主各党派的很多腐败行为做了严厉谴责和批评。而随着对公共生活的“一体化”，纳粹党人在1933年之后封锁掉了公众舆论的监督，阉割了监管机构的权力，或者干脆将其彻底撤销。于是，他们取消了所有的控制和调节工具，使得调整国家前进方向的可能性大大减少，因此他们不得不接受这样的事实：在纳粹独裁统治的灌木丛中，腐败这株毒草将会不受阻挠地疯长。所以，第三帝国的腐败不仅是纳粹运动的一个结构性特征，同时也是独裁统治的典型结果。</p>
+<p>纳粹的意识形态也推动了腐败在其统治下的蔓延。种族主义与绝对权力的混合促进了一种敛财导向的“主宰种族”态度的形成。这种态度在纳粹集中营系统、占领区（尤其是在东欧）和所有那些直接参与迫害犹太人的机构中显得特别突出。有些历史学家、政治学家和社会学家强调了参与迫害犹太人的机构的官僚特征，借此突出这样的事实：纳粹党人在系统性地迫害和灭绝对手时，利用了一个现代国家的、基于分工的官僚机器，上演了一出“行政的大屠杀”（汉娜·阿伦特语）。</p>
+<p>如果我们或明或暗地假设，这个“官僚机器”的成员是在经典的官僚体制的框架下活动的——不带个人的喜怒哀乐、遵守严格的规章制度、分工合作、在官僚的等级制中各自只有有限的权力——就大错特错了。</p>
+<p>近期关于迫害犹太人的纳粹机构的研究突出地表明，纳粹统治下的很多“官僚系统”的特点是，将世界观的信仰与不受任何限制的行为方式结合了起来。权力监管的缺失使得纳粹党人得以不受阻挠地谋取私利、掠夺受害者的物质财富。尤其是腐败现象让我们感到，将迫害犹太人的机构描述为经典的“官僚机器”的做法，是值得商榷的，这种描述与其说是澄清了这些机构的特征，倒不如说是让它愈发难解了。</p>
+<p>纳粹统治和社会的各领域受到腐败侵蚀的程度是不同的。腐败最严重的是纳粹体制的那些受到纳粹运动特别影响的统治支柱，尤其是纳粹党内、党的附属组织机构，以及那些被纳粹党人充斥的国家机关；而传统的职业官僚系统、经济界和军队，虽然不是净土，但腐败现象明显要少许多。</p>
+<p>第三帝国的反腐斗争的最大特点是专横霸道和随意任性。很多“达官贵人”由于自己的地位和政治靠山的保护，可以为所欲为，而下级官员在逾矩时却要面对极其严厉的处罚。于是，就出现了遭到打击的腐败、受到容忍的腐败和体制化的腐败三者并存的怪现状，而且这三者之间的界线也是有流动性的。对于某个腐败案件是否要进行查处，首先取决于这么做在政治上是否有利。普通法庭和党内法庭都是“元首国家”的没有独立性的机关，无法实施有效的司法诉讼。但在第三帝国，统治集团内部的臭名昭著的派系斗争却能带来一定程度的腐败监管，因为这种斗争常常是由于各派系互相指责对方腐败而展开的。</p>
+<p>在第三帝国体制化的腐败的顶端，是希特勒本人。他通过赠礼、优待和资助的体制，来额外地巩固自己魅力十足的地位，他的玩世不恭的统治手段以身边人的道德败坏为基础。他努力通过物质手段，将其他领导人拴牢，但这并不能证明纳粹统治系统所谓的独裁特征。“希特勒体制”并非凌驾于数量众多的恩主—门客结构之上，而是与其在同一个层面上共存，这些结构在纳粹体制中是横向发展的。在这方面最突出的是各省的“诸侯”们，他们一般都控制着完善的小金库和基金会的系统，这些系统既不受纳粹党总财务官的监管，也不受国家中央权力的控制。虽然希特勒的权力足够强大，地位足够巩固，能够约束住腐败的封疆大吏们，但是元首在面对腐败问题时却非常冷漠（这很能说明问题），即便罪恶滔天的封臣也能保住自己的位子。</p>
+<p>在纳粹统治集团的上层，腐败不仅仅是狭义的物质财富来源。很多纳粹高级领导人拥有庄园和猎区，还收藏艺术品，他们这是在模仿贵族的生活方式。在获取这些表明身份地位的身外之物的过程中，他们往往杀人越货、胡作非为。他们的骄奢淫逸的生活方式——赫尔曼·戈林是其极端形式的代表——在外观上标示了1933年后精英集团的变化，强调了纳粹党人对社会的领导权，并昭然地突出各自在第三帝国统治集团内的地位。</p>
+<p>如果我们从文化史的视角分析这个事实，比如按照法国社会学家皮埃尔·布尔迪厄为研究权力而发展出的范畴来看这个问题，那么我们就可以如此阐述物质财富在纳粹统治阶层眼中的非物质意义：通过腐败的手段和方式，纳粹党领导人不仅获取了经济资本（地产、房屋和庄园），还获得了文化资本（艺术收藏品）。文化资本通过转换为社会资本和象征资本（忠诚、威望、地位），实现其价值，因为很多纳粹党人没有任何鉴赏这些文化资本的能力。他们把“好看”的画挂在墙上，或者去看瓦格纳歌剧，不是为了欣赏艺术，奢华的私人图书馆也不是为了获取知识，而是一种附庸风雅的表面文章，为的是给主人长脸，彰显他的权力地位。</p>
+<p>如果我们从纳粹体制的效率和工作能力的角度来审视第三帝国的腐败造成的影响，得出的结论是矛盾的。一方面，不计其数的实例可以证明，腐败严重阻碍了政府机能的发挥，在有些方面简直是往第三帝国这台机器的传动装置里撒了沙子，使它无法正常运转。例如，体制上对“老战士”的庇护和照顾使得很多不称职的“金雉鸡”混到了领导岗位上去。他们耀武扬威，却没有真才实干。他们代表的不仅是纳粹政权平庸无能的一面，还是政府专业化程度的降低和执政水平的下降。在对犹太企业“雅利安化”的过程中也出现了类似的趋势。很多由于政治原因被抬上领导岗位的人在经济方面完全是外行，新收购来的企业在他们的瞎搞之下很快就倒闭了。</p>
+<p>由于腐败，国家财政受到了极大的损失。一方面是极高的开支，比如为了彰显国威和领导人威望而制造的排场等，另一方面却是较低的收入，因为纳粹的占领和灭绝政策带来的收益没有被收入帝国国库，而是通过特别基金、小金库和基金会等黑色渠道流失，被私下里分配、挥霍、掠夺和“疯狂”地消费掉了。</p>
+<p>另外，腐败严重地降低了党卫军经济体系的效率。该体系的基础是对集中营囚犯的剥削，这不仅是践踏人性和罪大恶极的，而且在经济上也是效率低下的，因为党卫军不愿意，也没有能力为奴隶劳工提供足够的给养和粮食。除了意识形态原因外，集中营内的腐败也起到了重要作用，尤其是集中营看守系统性地侵吞本应分配给犯人的食品。</p>
+<p>纳粹体制的管理不善和效率低下的例子不胜枚举，因此说纳粹政权进行了有意识的“现代化”的说法是站不住脚的。</p>
+<p>但另一方面，我们面对着这样的问题：我们真的可以用传统的效率标准来评价纳粹政权吗？这种标准对于纳粹政权会不会完全无效呢？在纳粹统治下，货币本来就没有什么作用，政权靠借贷生存，借以开拓资源的则是最原始的手段——掠夺。纳粹政权劫掠和收集大量资产并将其投入灭绝机器的“工作效率”是极高的，也取得了骇人听闻的“成果”。在这样的体制中，腐败造成的高成本和收入亏空不是那么引人注目。在纳粹党人看来，腐败有时降低了效率、破坏了政府机能，但有时却是政治上的朋党体制的“润滑剂”，因此起到了推动政府运转和稳定全局的作用。另外，腐败鼓动更多人加入到“雅利安化”、大屠杀和剥削占领区的活动中。虽然德国群众对腐败进行了大规模的口诛笔伐，但德国社会的确是通过腐败获得了很多好处。</p>
+<p>如果我们不把纳粹统治视为自上而下的独裁政权，而把它看作德国社会以各种方式广泛参与的社会行为，那么我们就会看到，腐败将纳粹统治和德国社会紧密交织起来，很多“普通的德国人”也通过中饱私囊参与到了纳粹的压迫和灭绝政策中来。<br>
+<br /><br /></p>
+<h2 id="词汇积累，">词汇积累，</h2>
+<p>豢养（huan 4）：喂养，驯养；养育；比喻收买并利用</p>
+<p>贲（bi 4 ben 1）：装饰，引申为华美光彩的样子；同“奔”；横膈膜；姓</p>
+<p>深中肯綮（shen 1 zhong 4 ken 3 qing 4）：比喻分析问题深刻，能击中要害，或能阐述到点子上</p>
+<p>“奥革阿斯的牛圈”：传说在奥革阿斯的牛圈三十年从未打扫，污秽不堪，所以在西方常以此来形容“最肮脏的地方或者积累成堆的难以解决的问题”</p>
+<p>欲壑难填：贪欲像深沟一样很难填平</p>
+<p>大杂烩星期日：纳粹党自1933年10月发起“大杂烩星期日”活动，号召群众每年10月至次年3月期间每个月有一个星期日只吃“大杂烩”（德国的一道传统菜），将节约下来的钱捐献给“德意志人民冬季救济活动”。目的是团结群众、节约脂肪和油类（在当时，这些原材料常需要用外汇进口）并救济贫民。</p>
+<p>措施国家：德裔美籍法学家和政治学家恩斯特▪弗伦克尔（1898 - 1975）在其1940年在美国首版的研究纳粹德国的名著《双重国家》中提出了“措施国家”和“规则国家”这两个概念。“规则国家”是指依法行事2、有既定的方针原则并借此保护私营经济的国家。“措施国际”是指没有长期性原则，而是随着形势变化不断推出应对措施的国家。弗伦克尔认为，纳粹德国是兼有“措施国家”和“规则国家”特征的“双重国家”。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/03/29/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%BA%B3%E7%B2%B9%E5%BE%B7%E5%9B%BD%E7%9A%84%E8%85%90%E8%B4%A5%E4%B8%8E%E5%8F%8D%E8%85%90/">
+            https://illusionzone.github.io/2024/03/29/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%BA%B3%E7%B2%B9%E5%BE%B7%E5%9B%BD%E7%9A%84%E8%85%90%E8%B4%A5%E4%B8%8E%E5%8F%8D%E8%85%90/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/04/04/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】朝花夕拾 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/03/18/fancywebsite/%E7%B3%BB%E7%BB%9F%E7%BD%91%E7%AB%99/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【Fancy Website】系统相关网站 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%81%E6%9D%83%E4%BD%93%E5%88%B6%E4%B8%8B%E7%9A%84%E7%BA%B3%E7%B2%B9%E8%85%90%E8%B4%A5%E5%92%8C%E5%8F%8D%E8%85%90"><span class="toc-text">极权体制下的纳粹腐败和反腐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9C%89%E7%BB%84%E7%BB%87%E7%9A%84%E8%87%AA%E6%81%8B%E8%87%AA%E7%88%B1%E4%B8%8E%E6%8F%90%E6%90%BA%E5%90%8C%E5%85%9A"><span class="toc-text">1 有组织的自恋自爱与提携同党</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1933%E5%B9%B4%E5%90%8E%E5%AF%B9%E2%80%9C%E8%80%81%E6%88%98%E5%A3%AB%E2%80%9D%E7%9A%84%E2%80%9C%E8%A1%A5%E5%81%BF%E2%80%9D%EF%BC%9B%E5%AF%B9%E5%85%9A%E5%91%98%E7%9A%84%E5%BA%87%E6%8A%A4%E5%92%8C%E8%B5%9E%E5%8A%A9"><span class="toc-text">1933年后对“老战士”的“补偿”；对党员的庇护和赞助</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%A0%E7%A4%BC%E3%80%81%E7%89%B9%E5%88%AB%E5%9F%BA%E9%87%91%E5%92%8C%E5%B0%8F%E9%87%91%E5%BA%93"><span class="toc-text">赠礼、特别基金和小金库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%AC%AC%E4%B8%89%E5%B8%9D%E5%9B%BD%E8%85%90%E8%B4%A5%E7%9A%84%E6%A0%B8%E5%BF%83%E9%A2%86%E5%9F%9F"><span class="toc-text">2 第三帝国腐败的核心领域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%B3%E7%B2%B9%E5%85%9A%E5%8F%8A%E5%85%B6%E5%90%84%E7%BB%84%E7%BB%87%E5%86%85%E9%83%A8%E7%9A%84%E8%85%90%E8%B4%A5"><span class="toc-text">纳粹党及其各组织内部的腐败</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%A9%E7%8C%8E%E3%80%81%E5%88%AB%E5%A2%85%E3%80%81%E5%8A%AB%E6%8E%A0%E8%89%BA%E6%9C%AF%E5%93%81%EF%BC%9A%E7%BA%B3%E7%B2%B9%E7%B2%BE%E8%8B%B1%E9%98%B6%E5%B1%82%E7%9A%84%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F"><span class="toc-text">狩猎、别墅、劫掠艺术品：纳粹精英阶层的生活方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E5%9C%9F%E5%8C%AA%E7%9C%81%E2%80%9D%E5%92%8C%E2%80%9C%E4%B8%91%E9%97%BB%E8%A5%BF%E4%BA%9A%E2%80%9D"><span class="toc-text">“土匪省”和“丑闻西亚”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E4%B8%AD%E8%90%A5%E7%B3%BB%E7%BB%9F%E4%B8%8E%E8%85%90%E8%B4%A5"><span class="toc-text">集中营系统与腐败</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%8D%E7%8A%B9%E4%B8%8E%E8%85%90%E8%B4%A5"><span class="toc-text">3 反犹与腐败</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E7%8A%B9%E6%9A%B4%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E7%9A%84%E4%B8%AD%E9%A5%B1%E7%A7%81%E5%9B%8A"><span class="toc-text">反犹暴力和个人的中饱私囊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E9%9B%85%E5%88%A9%E5%AE%89%E5%8C%96%E2%80%9D%E6%98%AF%E8%85%90%E8%B4%A5%E7%9A%84%E7%BB%93%E6%99%B6%E7%82%B9"><span class="toc-text">“雅利安化”是腐败的结晶点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E5%B1%A0%E6%9D%80%E4%B8%8E%E8%85%90%E8%B4%A5"><span class="toc-text">大屠杀与腐败</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%8F%8D%E8%85%90%E6%96%97%E4%BA%89%E5%8F%8A%E5%85%B6%E5%B1%80%E9%99%90"><span class="toc-text">4 反腐斗争及其局限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BF%E6%B2%BB%E4%B8%8A%E5%AF%B9%E5%8F%8D%E8%85%90%E7%9A%84%E5%88%A9%E7%94%A8"><span class="toc-text">政治上对反腐的利用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%AC%E8%A3%81%E7%9A%84%E4%BD%93%E5%88%B6%E9%97%AE%E9%A2%98"><span class="toc-text">独裁的体制问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8B%E5%85%9A%E4%B9%8B%E4%BA%A4%E3%80%81%E9%97%A8%E9%98%80%E7%BB%9F%E6%B2%BB%E4%B8%8E%E5%AE%98%E5%AE%98%E7%9B%B8%E6%8A%A4"><span class="toc-text">朋党之交、门阀统治与官官相护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%98%E6%97%B6%E7%9A%84%E4%B8%A2%E8%BD%A6%E4%BF%9D%E5%B8%85"><span class="toc-text">战时的丢车保帅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E6%89%93%E6%AD%BB%E8%8B%8D%E8%9D%87%E2%80%A6%E2%80%9D%EF%BC%9A%E4%BA%9A%E8%AF%BA%E5%A4%AB%E6%96%AF%E5%9F%BA%E6%A1%88"><span class="toc-text">“打死苍蝇…”：亚诺夫斯基案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%85%90%E8%B4%A5%E4%B8%8E%E2%80%9C%E6%B0%91%E6%84%8F%E2%80%9D"><span class="toc-text">5 腐败与“民意”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF%EF%BC%8C"><span class="toc-text">词汇积累，</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%81%E6%9D%83%E4%BD%93%E5%88%B6%E4%B8%8B%E7%9A%84%E7%BA%B3%E7%B2%B9%E8%85%90%E8%B4%A5%E5%92%8C%E5%8F%8D%E8%85%90"><span class="toc-text">极权体制下的纳粹腐败和反腐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9C%89%E7%BB%84%E7%BB%87%E7%9A%84%E8%87%AA%E6%81%8B%E8%87%AA%E7%88%B1%E4%B8%8E%E6%8F%90%E6%90%BA%E5%90%8C%E5%85%9A"><span class="toc-text">1 有组织的自恋自爱与提携同党</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1933%E5%B9%B4%E5%90%8E%E5%AF%B9%E2%80%9C%E8%80%81%E6%88%98%E5%A3%AB%E2%80%9D%E7%9A%84%E2%80%9C%E8%A1%A5%E5%81%BF%E2%80%9D%EF%BC%9B%E5%AF%B9%E5%85%9A%E5%91%98%E7%9A%84%E5%BA%87%E6%8A%A4%E5%92%8C%E8%B5%9E%E5%8A%A9"><span class="toc-text">1933年后对“老战士”的“补偿”；对党员的庇护和赞助</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%A0%E7%A4%BC%E3%80%81%E7%89%B9%E5%88%AB%E5%9F%BA%E9%87%91%E5%92%8C%E5%B0%8F%E9%87%91%E5%BA%93"><span class="toc-text">赠礼、特别基金和小金库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%AC%AC%E4%B8%89%E5%B8%9D%E5%9B%BD%E8%85%90%E8%B4%A5%E7%9A%84%E6%A0%B8%E5%BF%83%E9%A2%86%E5%9F%9F"><span class="toc-text">2 第三帝国腐败的核心领域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%B3%E7%B2%B9%E5%85%9A%E5%8F%8A%E5%85%B6%E5%90%84%E7%BB%84%E7%BB%87%E5%86%85%E9%83%A8%E7%9A%84%E8%85%90%E8%B4%A5"><span class="toc-text">纳粹党及其各组织内部的腐败</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%A9%E7%8C%8E%E3%80%81%E5%88%AB%E5%A2%85%E3%80%81%E5%8A%AB%E6%8E%A0%E8%89%BA%E6%9C%AF%E5%93%81%EF%BC%9A%E7%BA%B3%E7%B2%B9%E7%B2%BE%E8%8B%B1%E9%98%B6%E5%B1%82%E7%9A%84%E7%94%9F%E6%B4%BB%E6%96%B9%E5%BC%8F"><span class="toc-text">狩猎、别墅、劫掠艺术品：纳粹精英阶层的生活方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E5%9C%9F%E5%8C%AA%E7%9C%81%E2%80%9D%E5%92%8C%E2%80%9C%E4%B8%91%E9%97%BB%E8%A5%BF%E4%BA%9A%E2%80%9D"><span class="toc-text">“土匪省”和“丑闻西亚”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E4%B8%AD%E8%90%A5%E7%B3%BB%E7%BB%9F%E4%B8%8E%E8%85%90%E8%B4%A5"><span class="toc-text">集中营系统与腐败</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%8D%E7%8A%B9%E4%B8%8E%E8%85%90%E8%B4%A5"><span class="toc-text">3 反犹与腐败</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E7%8A%B9%E6%9A%B4%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E7%9A%84%E4%B8%AD%E9%A5%B1%E7%A7%81%E5%9B%8A"><span class="toc-text">反犹暴力和个人的中饱私囊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E9%9B%85%E5%88%A9%E5%AE%89%E5%8C%96%E2%80%9D%E6%98%AF%E8%85%90%E8%B4%A5%E7%9A%84%E7%BB%93%E6%99%B6%E7%82%B9"><span class="toc-text">“雅利安化”是腐败的结晶点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E5%B1%A0%E6%9D%80%E4%B8%8E%E8%85%90%E8%B4%A5"><span class="toc-text">大屠杀与腐败</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%8F%8D%E8%85%90%E6%96%97%E4%BA%89%E5%8F%8A%E5%85%B6%E5%B1%80%E9%99%90"><span class="toc-text">4 反腐斗争及其局限</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BF%E6%B2%BB%E4%B8%8A%E5%AF%B9%E5%8F%8D%E8%85%90%E7%9A%84%E5%88%A9%E7%94%A8"><span class="toc-text">政治上对反腐的利用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%AC%E8%A3%81%E7%9A%84%E4%BD%93%E5%88%B6%E9%97%AE%E9%A2%98"><span class="toc-text">独裁的体制问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8B%E5%85%9A%E4%B9%8B%E4%BA%A4%E3%80%81%E9%97%A8%E9%98%80%E7%BB%9F%E6%B2%BB%E4%B8%8E%E5%AE%98%E5%AE%98%E7%9B%B8%E6%8A%A4"><span class="toc-text">朋党之交、门阀统治与官官相护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%98%E6%97%B6%E7%9A%84%E4%B8%A2%E8%BD%A6%E4%BF%9D%E5%B8%85"><span class="toc-text">战时的丢车保帅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%80%9C%E6%89%93%E6%AD%BB%E8%8B%8D%E8%9D%87%E2%80%A6%E2%80%9D%EF%BC%9A%E4%BA%9A%E8%AF%BA%E5%A4%AB%E6%96%AF%E5%9F%BA%E6%A1%88"><span class="toc-text">“打死苍蝇…”：亚诺夫斯基案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%85%90%E8%B4%A5%E4%B8%8E%E2%80%9C%E6%B0%91%E6%84%8F%E2%80%9D"><span class="toc-text">5 腐败与“民意”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF%EF%BC%8C"><span class="toc-text">词汇积累，</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

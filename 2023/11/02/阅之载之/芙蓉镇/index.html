@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】芙蓉镇</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】芙蓉镇">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2023/11/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E8%8A%99%E8%93%89%E9%95%87/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="古华  著">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-11-02">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-01-03">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%B1%B1%E9%95%87%E9%A3%8E%E4%BF%97%E7%94%BB%EF%BC%88%E4%B8%80%E4%B9%9D%E5%85%AD%E4%B8%89%E5%B9%B4%EF%BC%89"><span class="toc-text">第一章 山镇风俗画（一九六三年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E4%B8%80%E8%A7%88%E9%A3%8E%E7%89%A9"><span class="toc-text">一 一览风物</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E5%A5%B3%E7%BB%8F%E7%90%86"><span class="toc-text">二 女经理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E6%BB%A1%E5%BA%9A%E5%93%A5%E5%92%8C%E8%8A%99%E8%93%89%E5%A5%B3"><span class="toc-text">三 满庚哥和芙蓉女</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E5%90%8A%E8%84%9A%E6%A5%BC%E4%B8%BB"><span class="toc-text">四 吊脚楼主</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E2%80%9C%E7%B2%BE%E7%A5%9E%E4%BC%9A%E9%A4%90%E2%80%9D%E5%92%8C%E3%80%8A%E5%96%9C%E6%AD%8C%E5%A0%82%E3%80%8B"><span class="toc-text">五 “精神会餐”和《喜歌堂》</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E2%80%9C%E7%A7%A6%E7%99%AB%E5%AD%90%E2%80%9D"><span class="toc-text">六 “秦癫子”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E2%80%9C%E5%8C%97%E6%96%B9%E5%A4%A7%E5%85%B5%E2%80%9D"><span class="toc-text">七 “北方大兵”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%B1%B1%E9%95%87%E4%BA%BA%E5%95%8A%EF%BC%88%E4%B8%80%E4%B9%9D%E5%85%AD%E5%9B%9B%E5%B9%B4%EF%BC%89"><span class="toc-text">第二章 山镇人啊（一九六四年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E7%AC%AC%E5%9B%9B%E5%BB%BA%E7%AD%91"><span class="toc-text">一 第四建筑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E5%90%8A%E8%84%9A%E6%A5%BC%E5%95%8A"><span class="toc-text">二 吊脚楼啊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E5%A5%B3%E4%BA%BA%E7%9A%84%E8%B4%A6"><span class="toc-text">三 女人的账</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E9%B8%A1%E5%92%8C%E7%8C%B4"><span class="toc-text">四 鸡和猴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E6%BB%A1%E5%BA%9A%E6%94%AF%E4%B9%A6"><span class="toc-text">五 满庚支书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E8%80%81%E8%B0%B7%E4%B8%BB%E4%BB%BB"><span class="toc-text">六 老谷主任</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E5%B9%B4%E7%BA%AA%E8%BD%BB%E8%BD%BB%E7%9A%84%E5%AF%A1%E5%A6%87"><span class="toc-text">七 年纪轻轻的寡妇</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%A1%97%E5%B7%B7%E6%B7%B1%E5%A4%84%EF%BC%88%E4%B8%80%E4%B9%9D%E5%85%AD%E4%B9%9D%E5%B9%B4%EF%BC%89"><span class="toc-text">第三章 街巷深处（一九六九年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E6%96%B0%E9%A3%8E%E6%81%B6%E4%BF%97"><span class="toc-text">一 新风恶俗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E2%80%9C%E4%BC%A0%E7%BB%8F%E4%BD%B3%E8%AF%9D%E2%80%9D"><span class="toc-text">二 “传经佳话”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E9%86%89%E7%9C%BC%E7%9C%8B%E4%B8%96%E6%83%85"><span class="toc-text">三 醉眼看世情</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E5%87%A4%E5%92%8C%E9%B8%A1"><span class="toc-text">四 凤和鸡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E6%89%AB%E8%A1%97%E4%BA%BA%E7%A7%98%E9%97%BB"><span class="toc-text">五 扫街人秘闻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E2%80%9C%E4%BD%A0%E6%98%AF%E8%81%AA%E6%98%8E%E7%9A%84%E5%A7%90%E2%80%9D"><span class="toc-text">六 “你是聪明的姐”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E4%BA%BA%E5%92%8C%E9%AC%BC"><span class="toc-text">七 人和鬼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E4%BB%8A%E6%98%A5%E6%B0%91%E6%83%85%EF%BC%88%E4%B8%80%E4%B9%9D%E4%B8%83%E4%B9%9D%E5%B9%B4%EF%BC%89"><span class="toc-text">第四章 今春民情（一九七九年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E8%8A%99%E8%93%89%E5%92%8C%E5%95%8A%E7%8E%89%E5%8F%B6%E6%BA%AA"><span class="toc-text">一 芙蓉和啊玉叶溪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E6%9D%8E%E5%9B%BD%E9%A6%99%E8%BD%AC%E7%A7%BB"><span class="toc-text">二 李国香转移</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E7%8E%8B%E9%95%87%E9%95%BF"><span class="toc-text">三 王镇长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E4%B9%89%E7%88%B6%E8%B0%B7%E7%87%95%E5%B1%B1"><span class="toc-text">四 义父谷燕山</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E5%90%8A%E8%84%9A%E6%A5%BC%E5%A1%8C%E4%BA%86"><span class="toc-text">五 吊脚楼塌了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E2%80%9C%E9%83%8E%E5%BF%83%E6%8C%82%E5%9C%A8%E5%A6%B9%E5%BF%83%E5%A4%B4%E2%80%9D"><span class="toc-text">六 “郎心挂在妹心头”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E4%B8%80%E4%B8%AA%E6%97%B6%E4%BB%A3%E7%9A%84%E5%B0%BE%E9%9F%B3"><span class="toc-text">七 一个时代的尾音</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】芙蓉镇
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-11-01T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-11-02</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>4.8k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p><p>《芙蓉镇》<br>古华  著</p></div>
+<br />
+<img src="/image/book/readandnote/芙蓉镇/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/芙蓉镇/1.png" class="lozad post-image">
+<br />
+<h2 id="第一章-山镇风俗画（一九六三年）">第一章 山镇风俗画（一九六三年）</h2>
+<h3 id="一-一览风物">一 一览风物</h3>
+<p><strong>原文摘录</strong><br>
+芙蓉镇坐落在湘、粤、桂三省交界的峡谷平坝里，古来为商旅歇宿、豪杰聚义、兵家必争的关隘要地。有一溪一河两条水路绕着镇子流过，流出镇口里把路远就汇合了，因而三面环水，是个狭长半岛似的地形。从镇里出发，往南过渡口，可下广东；往西去，过石拱桥，是一条通向广西的大路。不晓得是哪朝哪代，镇守这里的山官大人施行仁政，或者说是附庸风雅图个县志州史留名，命人傍着绿豆色的一溪一河，栽下了几长溜花枝招展、绿荫拂岸的木芙蓉，成为一镇的风水；又派民夫把后山脚下的大片沼泽开掘成方方湖塘，遍种水芙蓉，养鱼，采莲，产藕，作为山官衙门的“官产”。每当湖塘水芙蓉竞开，或是河岸上木芙蓉斗艳的季节，这五岭山脉腹地的平坝，便颇是个花柳繁华之地、温柔富贵之乡了。木芙蓉根、茎、花、皮，均可入药。水芙蓉则上结莲子，下产莲藕，就连它翠绿色的铜锣一样圆圆盖满湖面的肥大叶片，也可让蜻蜓立足，青蛙翘首，露珠儿滴溜；采摘下来，还可给远行的脚夫包中伙饭菜，做荷叶麦子粑子，盖小商贩的生意担子，遮赶圩女人的竹篮筐，被放牛娃儿当草帽挡日头……一物百用，各个不同。小河、小溪、小镇，因此得名“芙蓉河”、“玉叶溪”、“芙蓉镇”。</p>
+<p>芙蓉镇街面不大。十几家铺子、几十户住家紧紧夹着一条青石板街。铺子和铺子是那样的挤密，以至一家煮狗肉，满街闻香气；以至谁家娃儿跌跤碰脱牙、打了碗，街坊邻里心中都有数；以至妹娃家的私房话，年轻夫妇的打情骂俏，都常常被隔壁邻居听了去，传为一镇的秘闻趣事、笑料谈资。偶尔某户人家弟兄内讧，夫妻斗殴，整条街道便会骚动起来，人们往来奔走，相告相劝，如同一河受惊的鸭群，半天不得平息。不是逢圩的日子，街两边的住户还会从各自的阁楼上朝街对面的阁楼搭长竹竿，晾晒一应布物：衣衫裤子，裙子被子。山风吹过，但见通街上空“万国旗”纷纷扬扬，红红绿绿，五花八门。再加上悬挂在各家瓦檐下的串串红辣椒，束束金黄色的苞谷种，个个白里泛青的葫芦瓜，形成两条颜色富丽的夹街彩带……人在下边过，鸡在下边啼，猫狗在下边梭窜，别有一种风情，另成一番景象。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+马瘦毛长，人瘦面黄。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“买卖买卖，和气生财。”“买主买主，衣食父母。”这是胡玉音从父母那里得来的“家训”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+王秋赦三十几岁年纪，生得圆头圆耳，平常日子像尊笑面佛。可是每逢政府派人下来抓中心，开展什么运动，他就必定跑红一阵，吹哨子传人开会啦，会场上领头呼口号造气氛啦，值夜班看守坏人啦，十分得力。等到中心一过，运动告一段落，他也就像个泄了气的皮球。嘴巴又好油腻，爱沾荤腥，人家一个钱当三个花，他三个钱当一个钱吃。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“瘦狗莫踢，病马莫欺”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+逢圩赶集，跑生意做买卖，鱼龙混杂，清浊合流，面善的，心毒的，面善心也善的，面善心不善的，见风使舵、望水弯船的，巧嘴利舌、活货说死、死货说活的，倒买倒卖、手辣脚狠的，什么样人没有呢？<br>
+<br /><br /></p>
+<h3 id="二-女经理">二 女经理</h3>
+<p><strong>原文摘录</strong><br>
+庙小妖风大，池浅王八多<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+李国香本是县商业局的人事干部，县委财贸书记杨民高的外甥女，全县商业战线以批资本主义出名的女将。据说早在一九五八年，她就献计献策，由县工商行政管理局放出了一颗“工商卫星”：对全县小摊小贩进行了一次突击性大清理。她的事迹还登过省报，一跃而成为县里的红人，很快入了党，提了干。人人都有一本难念的经。今年春上，正当要被提拔为县商业局副局长时，她和有家有室的县委财办主任的秘事不幸泄露。因她去医院打胎时不得不交代出肚里孽种畜生的来历。为了爱护典型，秘事当然被严格控制在极小的范围内。就连负责给她堕胎的女医生，都很快因工作需要被安排到千里之外的洞庭湖区搞“血防”去了。李国香也暂时受点委屈，下到芙蓉镇饮食店来当经理。可怜巴巴的连个股级干部都没够上呢。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+本来成年男女间这一类的表露、试探，如同易燃物，一碰就着。谷燕山这老单身汉却像截湿木头，不着火，不冒烟。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+她是这样的人：常在个人生活的小溪小河里搁浅，却在汹涌着政治波涛的大江大河里鼓浪扬帆。<br>
+<br /><br /></p>
+<h3 id="三-满庚哥和芙蓉女">三 满庚哥和芙蓉女</h3>
+<p><strong>原文摘录</strong><br>
+有人曾在一个月白风清的后半夜，见一群天姿国色的女子在河里洗澡，忽而朵朵莲花浮玉液，忽而个个仙姑戏清波……每个仙姑至少要拉一个青皮后生去配偶。难怪芙蓉河里年年热天都要淹死个把洗冷水澡的年轻人。搞得镇上那些二百五后生子们又惊又怕又喜，个别水性好、胆子大的甚至想：只要不丢了性命，倒也不妨去会会芙蓉仙姑。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+你看看，才过了四五年，对这么件小事就各执一词，众说纷纭，可见中国历史的复杂性。难怪历朝历代都有那么多大学问家做“考证”。凉粉树啊，薜荔藤，在码头石级两旁，形成了烈日射不透的夹道浓荫，荫庇着上下过往行人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当晚，区委书记找民政干事进行了一次严肃的谈话。这在杨民高来讲，已经是够屈尊赏光的了。要是换了别的青年干部，早就把“五粮液”、“泸州老窖”孝敬上来了，洗脸水、洗脚水都打不赢了。杨民高书记以舅老兼月老的身份，还以顶头上司的权威身份，不由分说地把两个年轻人的政治前程、小家庭生活安排，详细地布置了一番。也许是出于一种领导者的习惯，他就像在布置、分派下属干部去完成某项任务一样。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+她太可怜，又太娇嫩。好比倒映在水里的木芙蓉影子，你手指轻轻一搅，就乱了，碎了。<br>
+<br /><br /></p>
+<h3 id="四-吊脚楼主">四 吊脚楼主</h3>
+<p><strong>原文摘录</strong><br>
+人不哄地皮，地不哄肚皮。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+常言道：“攒钱好比金挑土，花钱好比浪淘沙”，“坐吃山空”。<br>
+<br /><br /></p>
+<h3 id="五-“精神会餐”和《喜歌堂》">五 “精神会餐”和《喜歌堂》</h3>
+<p><strong>原文摘录</strong><br>
+女人家总以为是自己的过失。就像鸡婆光啄米不下蛋一样没有尽到职分。<br>
+<br /><br /></p>
+<h3 id="六-“秦癫子”">六 “秦癫子”</h3>
+<h3 id="七-“北方大兵”">七 “北方大兵”</h3>
+<h2 id="第二章-山镇人啊（一九六四年）">第二章 山镇人啊（一九六四年）</h2>
+<h3 id="一-第四建筑">一 第四建筑</h3>
+<h3 id="二-吊脚楼啊">二 吊脚楼啊</h3>
+<h3 id="三-女人的账">三 女人的账</h3>
+<p><strong>原文摘录</strong><br>
+这风声最初是从哪里来的，谁都不晓得，也无须去过问。而人们对于传播新鲜听闻的爱好，就像蝴蝶在春天里要传花授粉一样，是出于一种天性和本能。还往往在这新鲜听闻上添油加醋，增枝长叶，使其疑云闷雨，愈传愈奇，直到产生了另一件新鲜传闻，目标转移为止。<br>
+<br /><br /></p>
+<h3 id="四-鸡和猴">四 鸡和猴</h3>
+<h3 id="五-满庚支书">五 满庚支书</h3>
+<p><strong>原文摘录</strong><br>
+讲到这里，李国香停了一停。她像一切有经验的报告人那样，总要留出个简短的间隙，来让听众思考、消化某个极其重要的问题，或是来记取某一段精辟的座右铭式的词句。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+唉，要是一家两口人都是虱婆子胆，老鼠见了猫一样，岂不只能各人备下一根索，去寻短路？<br>
+<br /><br /></p>
+<h3 id="六-老谷主任">六 老谷主任</h3>
+<p><strong>原文摘录</strong><br>
+斗争是无情的，来不得半点“人情味”、“人性论”这些资产阶级的玩意儿。<br>
+<br /><br /></p>
+<h3 id="七-年纪轻轻的寡妇">七 年纪轻轻的寡妇</h3>
+<p><strong>原文摘录</strong><br>
+她像一只因屋里来了客人而被关进笼子里的母鸡，预感到了有大祸临头。但这“大祸”将是什么样的，她没有听人讲过，也没有亲眼见过。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“乌龟不笑鳖，都在泥里歇。都是一样落难，一样造孽。”<br>
+<br /><br /></p>
+<h2 id="第三章-街巷深处（一九六九年）">第三章 街巷深处（一九六九年）</h2>
+<h3 id="一-新风恶俗">一 新风恶俗</h3>
+<p><strong>原文摘录</strong><br>
+那是什么样的年月？一切真善美和假恶丑、是与非、红与黑全都颠颠倒倒光怪陆离的年月，牛肝猪肺、狼心狗肚一锅煎炒、蒸熬的年月。正义含垢忍辱、苟且偷生，派性应运而生、风火狂阔。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+五类分子们却叫秦癫子的“舞蹈”吓傻了。有的脸色发青，像刚从坟地里爬出来的；有的则低下头转过身子，生怕被小将们或是革命群众点了名，像秦癫子那样地去跳“黑鬼舞”。但谁都没有张皇失措，更没有哭。这些家伙是茅坑里的石头，又硬又臭，早已经适应惯了各式各样的侮辱了。他们哪里还晓得人间尚有“羞耻”二字！<br>
+<br /><br /></p>
+<h3 id="二-“传经佳话”">二 “传经佳话”</h3>
+<p><strong>原文摘录</strong><br>
+五类分子们却叫秦癫子的“舞蹈”吓傻了。有的脸色发青，像刚从坟地里爬出来的；有的则低下头转过身子，生怕被小将们或是革命群众点了名，像秦癫子那样地去跳“黑鬼舞”。但谁都没有张皇失措，更没有哭。这些家伙是茅坑里的石头，又硬又臭，早已经适应惯了各式各样的侮辱了。他们哪里还晓得人间尚有“羞耻”二字！</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+倒不如说在这片神奇肥沃的土地上，每隔一段时间就注定发生一些离奇诡异的故事。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h3 id="三-醉眼看世情">三 醉眼看世情</h3>
+<p><strong>原文摘录</strong><br>
+雪，落着，静静地落着。仿佛大地太污浊不堪了，腌臜垃圾四处都堆着撒着，大雪才赶来把这一切都遮上、盖上，藏污纳垢……一道昏黄的电筒光，照着一行歪歪斜斜的脚印，朝青石板街走去。好在公路大桥已通，五更天气不消喊人摆渡。<br>
+<br /><br /></p>
+<h3 id="四-凤和鸡">四 凤和鸡</h3>
+<p><strong>原文摘录</strong><br>
+王秋赦在全县各地巡回讲用，传授“早请示”、“晚汇报”的款式程序，大受欢迎。所到之处，无不是鞭炮锣鼓接送。精神变物质，物质变精神，日日都有酒宴，他生平没有见过如此众多的鸡鸭鱼肉。油光水滑，食精腻肥，他算真正品尝到了活学活用、活鸡活鱼的甜头。俗话讲，“鸡吃叫，鱼吃跳”呢。<br>
+<br /><br /></p>
+<h3 id="五-扫街人秘闻">五 扫街人秘闻</h3>
+<p><strong>原文摘录</strong><br>
+好像春天、夏天、秋天、冬天，都是在他们的竹枝扫帚下，一个接一个地被扫走了，又被扫来了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+就是秦癫子自己也懂得：运动就要有对象，斗争就要有敌人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+唉唉，子孙的问题就留给子孙去考究吧。如果祖先把下辈的问题都解决了，子孙们岂不会成为头脑简单、无所作为的白痴？危言耸听，不可思议。<br>
+<br /><br /></p>
+<h3 id="六-“你是聪明的姐”">六 “你是聪明的姐”</h3>
+<h3 id="七-人和鬼">七 人和鬼</h3>
+<p><strong>原文摘录</strong><br>
+生命的种子，无比顽强。五岭山区的花岗岩石脊上，常常不知要从哪儿飞来一粒几颗油茶籽那么大的树籽。这些树籽撒落进岩缝石隙里，几乎连指甲片那么一小块泥土都没有啊，只靠了岩石渗出的那一点儿潮气，就发胀了，冒芽了，长根了。那是什么样的根系？犹如龙须虎爪，穿山破石，深深插入岩缝，钻透石隙，含辛茹苦，艰难万分地去获取生命的养分。抽茎了，长叶了，铁骨青枝，傲然屹立。木质细密，坚硬如铁。看到这种树木的人，无不惊异这生命的奇迹。伐木人碰上它，常常使得油锯断齿，刀斧卷刃呢。<br>
+<br /><br /></p>
+<h2 id="第四章-今春民情（一九七九年）">第四章 今春民情（一九七九年）</h2>
+<h3 id="一-芙蓉和啊玉叶溪">一 芙蓉和啊玉叶溪</h3>
+<p><strong>原文摘录</strong><br>
+时间也是一条河，一条流在人们记忆里的河，一条生命的河。似乎是涓涓细流，悄然无声，花花亮眼。然而你晓得它是怎么穿透岩缝渗出地面来的吗？多少座石壁阻它、压它、挤它？千回百转，不回头，不停息。悬崖最是无情，把它摔下深渊，粉身碎骨，化成迷蒙的雾。在幽深的谷底，它却重新结集，重整旗鼓，发出了反叛的吼叫，陡涨了汹涌的气势。浪涛的吼声明确地宣告，它是不可阻挡的。猕猴可以来饮水，麋鹿可以来洗澡，白鹤可以来梳妆，毒蛇可以来游弋，猛兽可以来斗殴。人们可以来走排放筏，可以筑起高山巨壁似的坝闸截堵它，可以把它化成水蒸气。这一切，都不能改变它汇流巨川大海的志向。</p>
+<p>生活也是一条河，一条流着欢乐也流着痛苦的河，一条充满凶险而又兴味无穷的河。人人都在这条河上表演，文唱武打，红脸白脸，花头黑头。人人都显露出了自己的芳颜尊容，叫做“亮相”。夫人揭发首长。儿子检举老子。青梅竹马、至友亲朋成了生死对头。灵魂当了妓女。道德成了淫棍。人性论、人情味属于资产阶级。群众运动，运动群众。运动群众的人自己也被运动。地球在公转和自转，岂能不动？念念不忘你死我活。权力的天地只有拳头那么大，岂能人人都活？右派不臭，左派能香？史无前例、规模空前的“左”的竞走啊，“左”的赛跑。“右”就像无所不在的幽魂鬼怪，必须撒下天罗地网来擒拿。从穿衣吃饭，香水，发型，直到红唇皓齿，文件报告，无休无止的大会小会，如火如荼的政治洪流，都是为着灭资兴无。直到公社社员房前屋后的南瓜、辣椒是资本主义。应该种向日葵，向日葵有象征性。但谁嗑瓜子有罪。谁说没有资本家？从发展的观点看小摊贩就是资本家。自留地、自由市场就是温床。应当主动出击。寸土必争，寸权必夺。把资本主义消灭在萌芽状态、摇篮里。难道要等着它蓬蓬勃勃、泛滥成灾？户户种辣椒、南瓜卖（南瓜还可以酿酒），集体田地不是会荒芜？辣椒、南瓜就成为灾害。粮和钱、穷和富有个辩证关系。如果人人都有钱、都富，生活水平都赶上、超过了解放前的地主、富农，饱食终日，谁还革命？谁还斗争？还有什么阶级阵线？干部下乡，蹲点搞运动，依靠谁？团结谁？争取谁？孤立打击谁？还怎么搞人员的政治排队？怎么能没有了这法宝、仙杖啊。贫下中农就是贫下中农，他们应当永远是大多数。他们上升成了中农、富裕中农，天下大乱，革命断送。中国的问题成堆，是一个资产阶级和小资产阶级的汪洋大海。解决问题必须找到一把万能钥匙：斗。自上而下，五六年一次，急风暴雨，斗斗斗。其乐无穷，上了瘾。你看看：斗，像不像一把古老的铜挂锁的钥匙？中国方块字几经简化，却还保存着一点象形文字的特征。山海关城门，故宫禁苑，孔子文庙，乡村祠堂，财老倌的谷仓、钱柜，乡公所土牢、水牢的铁门，都是一个形状的铜挂锁，一把大同小异的铜钥匙：斗。真是国粹国宝，传世杰作。叫做斗则进，不斗则退、则修。斗斗斗，一直斗到猴年马月，天下一统，世界大同。但马克思主义日月经天，江河行地，光辉永在，绝不会被一个膨胀了的“斗”字所简化、缩小、代替。历史有其自身的规律，决定着人类社会万事万物的扬弃、取舍。多么的严峻无情啊！<br>
+<br /><br /></p>
+<h3 id="二-李国香转移">二 李国香转移</h3>
+<p><strong>原文摘录</strong><br>
+力鼎千钧、断人生死的笔啊，为什么有时大气磅礴、字走龙蛇，有时却枯竭虚弱、万分艰涩？<br>
+<br /><br /></p>
+<h3 id="三-王镇长">三 王镇长</h3>
+<h3 id="四-义父谷燕山">四 义父谷燕山</h3>
+<h3 id="五-吊脚楼塌了">五 吊脚楼塌了</h3>
+<p><strong>原文摘录</strong><br>
+生活往往对不贞的人报以刻薄的嘲讽。<br>
+<br /><br /></p>
+<h3 id="六-“郎心挂在妹心头”">六 “郎心挂在妹心头”</h3>
+<h3 id="七-一个时代的尾音">七 一个时代的尾音</h3>
+<h2 id="词汇积累">词汇积累</h2>
+<p>徕（lai 2 lai 4）：招来；慰劳</p>
+<p>莳（shi 2 shi 4）：莳萝；移植，种植</p>
+<p>栽秧莳田</p>
+<p>油光嘴亮</p>
+<p>嵯峨：山高俊的样子</p>
+<p>饿殍（piao 3）：饿死的人</p>
+<p>斢（tiao 3 tou 3）：赣语，西南官话词汇，调换；黄色；数量单位，表示一幢小房子的意思</p>
+<p>癫子：疯子；用以形容言谈举止不庄重的人</p>
+<p>鬼蜮（yu 4）：鬼怪，蜮，传说中在水里暗中害人的怪物；比喻用心险恶，暗中伤人的小人</p>
+<p>白胖富态</p>
+<p>梅花脚：指狗</p>
+<p>睃（suo 1）：斜视</p>
+<p>青皮后生</p>
+<p>雨急风狂，浊浪滔天</p>
+<p>奴颜婢膝：形容谄媚讨好，卑躬屈膝的奴才相</p>
+<p>涓涓细流：细水缓缓流动的样子</p>
+<p>娭毑（ai 1 jie 3）：祖母。也用以尊称老年的妇女</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2023/11/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E8%8A%99%E8%93%89%E9%95%87/">
+            https://illusionzone.github.io/2023/11/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E8%8A%99%E8%93%89%E9%95%87/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/11/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BF%97%E5%A5%B3%E5%85%BB%E6%88%90%E8%AE%B0/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】俗女养成记 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/10/27/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/The%20Great%20Gastby/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】The Great Gastby </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%B1%B1%E9%95%87%E9%A3%8E%E4%BF%97%E7%94%BB%EF%BC%88%E4%B8%80%E4%B9%9D%E5%85%AD%E4%B8%89%E5%B9%B4%EF%BC%89"><span class="toc-text">第一章 山镇风俗画（一九六三年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E4%B8%80%E8%A7%88%E9%A3%8E%E7%89%A9"><span class="toc-text">一 一览风物</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E5%A5%B3%E7%BB%8F%E7%90%86"><span class="toc-text">二 女经理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E6%BB%A1%E5%BA%9A%E5%93%A5%E5%92%8C%E8%8A%99%E8%93%89%E5%A5%B3"><span class="toc-text">三 满庚哥和芙蓉女</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E5%90%8A%E8%84%9A%E6%A5%BC%E4%B8%BB"><span class="toc-text">四 吊脚楼主</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E2%80%9C%E7%B2%BE%E7%A5%9E%E4%BC%9A%E9%A4%90%E2%80%9D%E5%92%8C%E3%80%8A%E5%96%9C%E6%AD%8C%E5%A0%82%E3%80%8B"><span class="toc-text">五 “精神会餐”和《喜歌堂》</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E2%80%9C%E7%A7%A6%E7%99%AB%E5%AD%90%E2%80%9D"><span class="toc-text">六 “秦癫子”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E2%80%9C%E5%8C%97%E6%96%B9%E5%A4%A7%E5%85%B5%E2%80%9D"><span class="toc-text">七 “北方大兵”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%B1%B1%E9%95%87%E4%BA%BA%E5%95%8A%EF%BC%88%E4%B8%80%E4%B9%9D%E5%85%AD%E5%9B%9B%E5%B9%B4%EF%BC%89"><span class="toc-text">第二章 山镇人啊（一九六四年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E7%AC%AC%E5%9B%9B%E5%BB%BA%E7%AD%91"><span class="toc-text">一 第四建筑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E5%90%8A%E8%84%9A%E6%A5%BC%E5%95%8A"><span class="toc-text">二 吊脚楼啊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E5%A5%B3%E4%BA%BA%E7%9A%84%E8%B4%A6"><span class="toc-text">三 女人的账</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E9%B8%A1%E5%92%8C%E7%8C%B4"><span class="toc-text">四 鸡和猴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E6%BB%A1%E5%BA%9A%E6%94%AF%E4%B9%A6"><span class="toc-text">五 满庚支书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E8%80%81%E8%B0%B7%E4%B8%BB%E4%BB%BB"><span class="toc-text">六 老谷主任</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E5%B9%B4%E7%BA%AA%E8%BD%BB%E8%BD%BB%E7%9A%84%E5%AF%A1%E5%A6%87"><span class="toc-text">七 年纪轻轻的寡妇</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%A1%97%E5%B7%B7%E6%B7%B1%E5%A4%84%EF%BC%88%E4%B8%80%E4%B9%9D%E5%85%AD%E4%B9%9D%E5%B9%B4%EF%BC%89"><span class="toc-text">第三章 街巷深处（一九六九年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E6%96%B0%E9%A3%8E%E6%81%B6%E4%BF%97"><span class="toc-text">一 新风恶俗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E2%80%9C%E4%BC%A0%E7%BB%8F%E4%BD%B3%E8%AF%9D%E2%80%9D"><span class="toc-text">二 “传经佳话”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E9%86%89%E7%9C%BC%E7%9C%8B%E4%B8%96%E6%83%85"><span class="toc-text">三 醉眼看世情</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E5%87%A4%E5%92%8C%E9%B8%A1"><span class="toc-text">四 凤和鸡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E6%89%AB%E8%A1%97%E4%BA%BA%E7%A7%98%E9%97%BB"><span class="toc-text">五 扫街人秘闻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E2%80%9C%E4%BD%A0%E6%98%AF%E8%81%AA%E6%98%8E%E7%9A%84%E5%A7%90%E2%80%9D"><span class="toc-text">六 “你是聪明的姐”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E4%BA%BA%E5%92%8C%E9%AC%BC"><span class="toc-text">七 人和鬼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E4%BB%8A%E6%98%A5%E6%B0%91%E6%83%85%EF%BC%88%E4%B8%80%E4%B9%9D%E4%B8%83%E4%B9%9D%E5%B9%B4%EF%BC%89"><span class="toc-text">第四章 今春民情（一九七九年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E8%8A%99%E8%93%89%E5%92%8C%E5%95%8A%E7%8E%89%E5%8F%B6%E6%BA%AA"><span class="toc-text">一 芙蓉和啊玉叶溪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E6%9D%8E%E5%9B%BD%E9%A6%99%E8%BD%AC%E7%A7%BB"><span class="toc-text">二 李国香转移</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E7%8E%8B%E9%95%87%E9%95%BF"><span class="toc-text">三 王镇长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E4%B9%89%E7%88%B6%E8%B0%B7%E7%87%95%E5%B1%B1"><span class="toc-text">四 义父谷燕山</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E5%90%8A%E8%84%9A%E6%A5%BC%E5%A1%8C%E4%BA%86"><span class="toc-text">五 吊脚楼塌了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E2%80%9C%E9%83%8E%E5%BF%83%E6%8C%82%E5%9C%A8%E5%A6%B9%E5%BF%83%E5%A4%B4%E2%80%9D"><span class="toc-text">六 “郎心挂在妹心头”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E4%B8%80%E4%B8%AA%E6%97%B6%E4%BB%A3%E7%9A%84%E5%B0%BE%E9%9F%B3"><span class="toc-text">七 一个时代的尾音</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%B1%B1%E9%95%87%E9%A3%8E%E4%BF%97%E7%94%BB%EF%BC%88%E4%B8%80%E4%B9%9D%E5%85%AD%E4%B8%89%E5%B9%B4%EF%BC%89"><span class="toc-text">第一章 山镇风俗画（一九六三年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E4%B8%80%E8%A7%88%E9%A3%8E%E7%89%A9"><span class="toc-text">一 一览风物</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E5%A5%B3%E7%BB%8F%E7%90%86"><span class="toc-text">二 女经理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E6%BB%A1%E5%BA%9A%E5%93%A5%E5%92%8C%E8%8A%99%E8%93%89%E5%A5%B3"><span class="toc-text">三 满庚哥和芙蓉女</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E5%90%8A%E8%84%9A%E6%A5%BC%E4%B8%BB"><span class="toc-text">四 吊脚楼主</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E2%80%9C%E7%B2%BE%E7%A5%9E%E4%BC%9A%E9%A4%90%E2%80%9D%E5%92%8C%E3%80%8A%E5%96%9C%E6%AD%8C%E5%A0%82%E3%80%8B"><span class="toc-text">五 “精神会餐”和《喜歌堂》</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E2%80%9C%E7%A7%A6%E7%99%AB%E5%AD%90%E2%80%9D"><span class="toc-text">六 “秦癫子”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E2%80%9C%E5%8C%97%E6%96%B9%E5%A4%A7%E5%85%B5%E2%80%9D"><span class="toc-text">七 “北方大兵”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%B1%B1%E9%95%87%E4%BA%BA%E5%95%8A%EF%BC%88%E4%B8%80%E4%B9%9D%E5%85%AD%E5%9B%9B%E5%B9%B4%EF%BC%89"><span class="toc-text">第二章 山镇人啊（一九六四年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E7%AC%AC%E5%9B%9B%E5%BB%BA%E7%AD%91"><span class="toc-text">一 第四建筑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E5%90%8A%E8%84%9A%E6%A5%BC%E5%95%8A"><span class="toc-text">二 吊脚楼啊</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E5%A5%B3%E4%BA%BA%E7%9A%84%E8%B4%A6"><span class="toc-text">三 女人的账</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E9%B8%A1%E5%92%8C%E7%8C%B4"><span class="toc-text">四 鸡和猴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E6%BB%A1%E5%BA%9A%E6%94%AF%E4%B9%A6"><span class="toc-text">五 满庚支书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E8%80%81%E8%B0%B7%E4%B8%BB%E4%BB%BB"><span class="toc-text">六 老谷主任</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E5%B9%B4%E7%BA%AA%E8%BD%BB%E8%BD%BB%E7%9A%84%E5%AF%A1%E5%A6%87"><span class="toc-text">七 年纪轻轻的寡妇</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%A1%97%E5%B7%B7%E6%B7%B1%E5%A4%84%EF%BC%88%E4%B8%80%E4%B9%9D%E5%85%AD%E4%B9%9D%E5%B9%B4%EF%BC%89"><span class="toc-text">第三章 街巷深处（一九六九年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E6%96%B0%E9%A3%8E%E6%81%B6%E4%BF%97"><span class="toc-text">一 新风恶俗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E2%80%9C%E4%BC%A0%E7%BB%8F%E4%BD%B3%E8%AF%9D%E2%80%9D"><span class="toc-text">二 “传经佳话”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E9%86%89%E7%9C%BC%E7%9C%8B%E4%B8%96%E6%83%85"><span class="toc-text">三 醉眼看世情</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E5%87%A4%E5%92%8C%E9%B8%A1"><span class="toc-text">四 凤和鸡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E6%89%AB%E8%A1%97%E4%BA%BA%E7%A7%98%E9%97%BB"><span class="toc-text">五 扫街人秘闻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E2%80%9C%E4%BD%A0%E6%98%AF%E8%81%AA%E6%98%8E%E7%9A%84%E5%A7%90%E2%80%9D"><span class="toc-text">六 “你是聪明的姐”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E4%BA%BA%E5%92%8C%E9%AC%BC"><span class="toc-text">七 人和鬼</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E4%BB%8A%E6%98%A5%E6%B0%91%E6%83%85%EF%BC%88%E4%B8%80%E4%B9%9D%E4%B8%83%E4%B9%9D%E5%B9%B4%EF%BC%89"><span class="toc-text">第四章 今春民情（一九七九年）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E8%8A%99%E8%93%89%E5%92%8C%E5%95%8A%E7%8E%89%E5%8F%B6%E6%BA%AA"><span class="toc-text">一 芙蓉和啊玉叶溪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E6%9D%8E%E5%9B%BD%E9%A6%99%E8%BD%AC%E7%A7%BB"><span class="toc-text">二 李国香转移</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E7%8E%8B%E9%95%87%E9%95%BF"><span class="toc-text">三 王镇长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E4%B9%89%E7%88%B6%E8%B0%B7%E7%87%95%E5%B1%B1"><span class="toc-text">四 义父谷燕山</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E5%90%8A%E8%84%9A%E6%A5%BC%E5%A1%8C%E4%BA%86"><span class="toc-text">五 吊脚楼塌了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E2%80%9C%E9%83%8E%E5%BF%83%E6%8C%82%E5%9C%A8%E5%A6%B9%E5%BF%83%E5%A4%B4%E2%80%9D"><span class="toc-text">六 “郎心挂在妹心头”</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83-%E4%B8%80%E4%B8%AA%E6%97%B6%E4%BB%A3%E7%9A%84%E5%B0%BE%E9%9F%B3"><span class="toc-text">七 一个时代的尾音</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】奥斯维辛：一部历史</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】奥斯维辛：一部历史">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2023/05/12/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%A5%A5%E6%96%AF%E7%BB%B4%E8%BE%9B%EF%BC%9A%E4%B8%80%E9%83%A8%E5%8E%86%E5%8F%B2/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/book/readandnote/奥斯维辛/indeximg/indeximg.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="作者：[英]劳伦斯•里斯   译者：刘爽">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-05-12">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-06-21">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%AF%BC%E8%AF%BB%E3%80%91%E9%9B%86%E4%B8%AD%E8%90%A5%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%89%B2%E4%BA%BA%E5%92%8C%E5%85%BD%E4%BA%BA%E7%9A%84%E4%B8%96%E7%95%8C"><span class="toc-text">【导读】集中营：一个牲人和兽人的世界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80"><span class="toc-text">序言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%84%8F%E6%83%B3%E4%B8%8D%E5%88%B0%E7%9A%84%E5%BC%80%E7%AB%AF"><span class="toc-text">第一章 意想不到的开端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%9C%8D%E4%BB%8E%E5%91%BD%E4%BB%A4%E4%B8%8E%E8%87%AA%E4%B8%BB%E8%A1%8C%E5%8A%A8"><span class="toc-text">第二章 服从命令与自主行动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%AD%BB%E4%BA%A1%E5%B7%A5%E5%8E%82"><span class="toc-text">第三章 死亡工厂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%85%90%E8%B4%A5"><span class="toc-text">第四章 腐败</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%96%AF%E7%8B%82%E7%9A%84%E6%9D%80%E6%88%AE"><span class="toc-text">第五章 疯狂的杀戮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%A7%A3%E6%94%BE%E4%B8%8E%E6%8A%A5%E5%A4%8D"><span class="toc-text">第六章 解放与报复</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86"><span class="toc-text">信息整理</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/book/readandnote/奥斯维辛/indeximg/indeximg.png" 
+      data-src="/image/book/readandnote/奥斯维辛/indeximg/indeximg.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【阅之载之】奥斯维辛：一部历史 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】奥斯维辛：一部历史
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-05-11T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-05-12</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>8.6k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p></div>
+<br />
+<img src="/image/book/readandnote/奥斯维辛/奥斯维辛.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/奥斯维辛/奥斯维辛.png" class="lozad post-image">
+<br />
+<h2 id="【导读】集中营：一个牲人和兽人的世界">【导读】集中营：一个牲人和兽人的世界</h2>
+<p><strong>原文摘录</strong><br>
+里斯要揭示的犯罪者心态不是少数虐待狂或变态者的心智失常，而是无数心智正常者的心灵黑暗之地。他们是社会中普通的“好人”，他们当中不乏受过良好教育，拥有博士学位的社会精英。上个世纪60年代之后的许多社会心理学研究，如斯坦利·米尔格伦（Stanley Milgram）的“对权威的服从”实验和菲利普·津巴多（Philip G. Zimbardo）的“斯坦福监狱”实验，揭示的正是“好人”如何能在特定的环境下变成恶魔。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+奥斯维辛是一个被纳粹既当作监狱又当作战场的地方（当然还是一个供应奴工的地方），但事实上那既不是监狱也不是战场，而是纳粹统治下经由“累积式激进”形成，并作为永久“例外状态”而存在的“集中营”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这个规模庞大的集中营从1940年开始正式运作，1945年被苏联红军解放，期间被杀害的遇难者达100万以上，百分之九十是犹太人。然而，建立这个集中营的最初目的却并不是要在那里屠杀犹太人。奥斯维辛的第一批囚犯并非犹太人，“而是德国人——准确地说，是30名从萨克森豪森集中营转来的刑事犯”。奥斯维辛后来成为关押纳粹认为有危险的波兰人和苏联战俘的地方。纳粹用它来“威吓当地人”，囤积奴工，“按照最初的设想，奥斯维辛只是在犯人被送往帝国其他集中营之前暂时关押他们的场所，用纳粹的术语来说，一座‘隔离’营。但随着时间的推移，奥斯维辛的功能明显发生了变化，这里将成为有进无出的人间炼狱”。</p>
+<p>通过揭示奥斯维辛的演变过程，里斯要告诉读者的是，纳粹并不是从一开始就精心设计，并按部就班地要把奥斯维辛建成一个杀人魔窟。这个现在恶名昭著的集中营乃是纳粹在不断出现新问题的过程中，一次次临时调适和改变所累积的结果。它的演变成为纳粹极权统治“累积式激进”（cumulative radicalization）的一个缩影。累积式激进指的是，灭绝屠杀犹太人并不是希特勒一个人下达的命令，而是“许多纳粹分子都为此尽心尽力。下层的主动性和推波助澜，是灭绝朝着越来越激进的方向发展的重要原因”。战争结束之后，那些以各种方式参与灭犹的纳粹“试图让这个世界相信做出决定的只有一个人，那就是阿道夫·希特勒”，不少历史学家作出的也是这样的解释。</p>
+<p>《奥斯维辛》的目的和重要意义就在于，它用揭示累积激进的过程来纠正一个历史解释的常见错误。里斯指出，“战争让一切都朝着激进化的方向发展，集中营也不例外”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+意大利政治哲学家阿甘本（Giorgio Agamben）在《无目的的手段：政治学笔记》一书里对集中营（camp，中译作“收容所”）的存在做了本质的分析。他指出，收容所中所发生的事件超出了关于犯罪的司法概念，收容所是一个例外的空间，它被置于监狱法以及刑法的权限范围之外，是被置于正常法律秩序之外的一片领地…在这样的地方，合法的居民“已经被剥夺了所有政治身份，并被完全还原为赤裸生命”，他们也因此成为“牲人”，“人类被完全剥夺他们的权利和特征，以至于达到对他们做任何行为都不算是犯罪的程度”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+里斯指出：“最重要的或许是，奥斯维辛和纳粹的‘最终解决’证实了一个事实：人的处境（situation）对个人行为的影响远远超出我们的想象。”集中营正是这样一个可以发生难以置信的变化的非人化境地。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在集中营这个特殊的非人境地里，囚犯变成了阿甘本所说的“牲人”，而看守则变成了“兽人”。极权统治把人要么变成牲口，要么变成野兽，或者既是牲口又是野兽。这就是制度性的去人性，它逼着人变成动物，而集中营更是一个浓缩的牲人和兽人世界。这个地方浓缩了阿伦特所说的“恶”——那种人不再是人，人不被当人的“恶”。阿伦特在致哲学家雅斯贝尔斯的一封信里，把恶简洁地定义为“把人变为多余”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+恶普遍存在于20世纪的专制和极权制度中，大屠杀只不过是极权之恶的一个显例而已。极权之恶不只是少数虐待狂和疯子的事，而且更与众多以各种方式参与其中的普通人都有关联，对此里斯警告道，不要忽视了纳粹统治环境对千千万万普通德国人的人性改变效应，正是这种环境效应生产了无数心甘情愿跟随希特勒作恶的普通纳粹，他们有的甚至一辈子都无悔意。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+里斯是一位历史学家，他的《奥斯维辛》是一部历史研究著作，从学术的角度来说，历史研究有两个着重点，一个是发掘“史实”材料，一个提出“论述”观点，前一个着重于历史局部和细节，后一个着重于对整体特征和格局的把握。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+史学界有不少关于犹太人大屠杀肇端的辩论，并由此涉及纳粹德国（第三帝国） 的统治制度、政策、权力运作等相关问题，历史学家们不同的整体论述观点形成了“功能主义”（functionalism，又称“结构主义”）和“蓄意主义”（intentionalism）的分歧。分歧集中于两个基本问题上：第一， 究竟希特勒有没有大举屠杀犹太人的整体蓝图？ 蓄意主义认为他有计划，功能主义则认为没有。第二， 犹太人大屠杀是基于希特勒的命令，还是德国纳粹官僚的创造发明？蓄意主义认为是基于希特勒的命令，功能主义认为，这主要是因为许多具体负责的纳粹先是领会上意，然后为了效忠输诚、邀功争宠而不择手段、走火入魔。里斯的观点是功能主义的，但同时又有所修正。这清楚地反映在他对“累积式激进”观点的运用上，在本书“序言”结尾处他只是提到了这个观点，而没有加以强调和引申（在与PBS的访谈中也是这样），是有原因的。</p>
+<p>累积式激进”由德国历史学家汉斯·蒙森（Hans Mommsen）首先提出，标志着纳粹德国研究的一个新视野。在这之前，对纳粹德国和希特勒的研究基本上都是从思想和文化因素来分析纳粹的极权统治和对犹太人的大屠杀，如德国特定的历史文化、传统的激进民族主义、反犹渊源，并将纳粹的政策归因于希特勒的世界观和对德国人有吸引力的纳粹意识形态（我国学界的这方面研究至今仍然是这个路数）。新的历史研究视野更关注的是纳粹制度中社会的力量、因素和条件的作用，以及普通民众的参与所给予纳粹统治的多种多样的支持——沉默、顺从、妥协，合作、积极配合、出谋划策。从新的历史研究角度来看，纳粹体制并非一部一丝不苟地贯彻元首意志的精密有效机器，而是一个政出多门、相互制肘、自我内耗的政权。纳粹政权依靠国家的一些支柱部门（武装部队、党、公务员、党卫军、工业界）的随机应变和自我运作能力。因此，社会中普通民众的自洽和自我调节也就成为纳粹政权存在的重要条件。纳粹统治所依靠的远远不只是负面的恐惧、暴力、威胁，而且更是正面的普通人配合和协助机制。蒙森的“累积式激进”观点另一部分是主张希特勒是一个“弱独裁者”（Weak Dictator）。蒙森认为大屠杀和“最终解决”是“累积激进”的结果，而不是希特勒一人的长期规划。希特勒确实狂热反犹，但大屠杀并不能用希特勒本人的决定和命令来解释。事实上，从1939年开战之后，希特勒就是一个高高在上的独裁者，他不愿意也没有能力详细过问具体的要务，他是统帅，但统帅的却是一个组织分散、内斗激烈的统治集团。这也是导致纳粹自我毁灭和失败的一个主要原因。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这种宁可错杀，不可放过的心态是“人之常情”，许多别的国家里发生的屠杀事件（肃反、镇反、清查和消灭阶级敌人）也都曾经如此。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+对希特勒的归罪具有重要的先例意义，因为无论在世界上哪个地方，只要发生了人道灾难，以“不知情”“不直接过问”“下面的人办坏了事”这类借口来为最高领导人开脱责任，都是不能接受的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+里斯从幸存者和纳粹罪犯那些学到的是，“人类的行为是如此易变和不可预知，常会被他们身处的环境所左右。当然，人们可以自行决定采取什么样的行为，但对很多人来说，个人处境是影响这些决定的关键因素”。这样的结论可以被用来解释人在什么特殊环境会作怎样的恶——人在仇恨和暴力环境促成和加强的许多心理因素作用下（服从威权和命令、从众和害怕、将残害对象妖魔化和非人化、对自己恶行辩护与合理化），会诱发出“好人作恶”的行为结果，极少会有例外。</p>
+<p>但是，同样的结论也可以被作恶者用作对自己主观意愿的推诿和脱罪之词。<br>
+<br /><br /></p>
+<h2 id="序言">序言</h2>
+<p><strong>原文摘录</strong><br>
+戈培尔坚信，强化观众已有的偏见永远胜过试图扭转他们的思想。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+此后的两次反犹高潮，标志着战前纳粹迫害犹太人的两个重要历史时刻：一是1936年《纽伦堡法案》的实施，它剥夺了德国犹太人的公民权；另一个是1938年的“水晶之夜”，这一晚犹太会堂遭到焚毁，成千上万的犹太人被逮捕。<br>
+<br /><br /></p>
+<h2 id="第一章-意想不到的开端">第一章 意想不到的开端</h2>
+<p><strong>原文摘录</strong><br>
+尽管如此此，直到奥斯维辛被解放的那一天，集中营里的犯人日日夜夜在为实现希姆莱的梦想劳动…希姆莱根本没有意识到，在他激情澎湃地向忠诚的下属鲁道夫·霍斯大谈特谈自己的梦想时，数千人将为此付出生命的代价。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>在组织化社会里一件很悲哀的现象是，大部分人都在为小部分人的希望与理想活着，在战争动乱的年代，那些大部分的人献出了宝贵的生命，而在和平安定的年代，他们则付出了碌碌一生。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在加入纳粹党卫队之前，格拉布纳不过是个牛倌，而现在他却对他手下的犯人有着生杀予夺大权。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+权力这种事情很奇妙，有时候他不在于一个人有多大的本领或多了不起的本事，在小群体时，可能是由于有了一把刀、一支枪，或一定钱财，他便有了奴役他人的权力，当群体变得庞大，便更多地依靠意识形态的灌输，使其他人觉得阶级、地位的存在是正常且自然，便可以兵不血刃地驱赶无数人去卖命、去奉献、去牺牲。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="第二章-服从命令与自主行动">第二章 服从命令与自主行动</h2>
+<p><strong>原文摘录</strong><br>
+霍斯和其他很多德国士兵一样，战败后想让全世界都以为他们是一群机器人，不管自己的真实想法是什么，永远只能机械地服从上面给他们的各种命令。而事实上，霍斯跟机器人有着天壤之别。1941年下半年和1942年上半年，霍斯的创造力得到了最大程度的发挥，他并不是简单地服从命令，而是积极主动地改造奥斯维辛，好消灭更多的囚犯。在这个关键时期，有类似想法和行动的并不只是霍斯一人，许多纳粹分子都为此尽心尽力。下层的主动性和推波助澜，是灭绝朝着越来越激进的方向发展的重要原因。战争结束后，霍斯与数百名纳粹同伙一样，试图让这个世界相信做出决定的只有一个人，那就是阿道夫·希特勒。其实，是许多人的集体意志促成了“最终解决”，证明这一结论的最好方法，便是深入了解1941年秋驱逐德国犹太人的决定是如何做出的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+虽然德国普通民众对犹太人的命运都有一定程度的了解，但很少有人对驱逐他们提出抗议。在驱逐行动开始之初的1941年10月，汉堡更是没有一个人站出来反对。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+波兰犯人卡奇米日·什莫伦目睹了他们到达时的场景：“那个时候已经开始下雪——10月份就下雪还是挺少见的——他们（苏联战俘）在距离营地3公里的地方下了车。他们被迫脱光衣服，跳进装着消毒剂的大桶里，然后光着身体跑进奥斯维辛（主营地）。大多数人都特别瘦。”到了主营地后，这些苏联战俘成了第一批身上刺有囚犯编号的犯人，这是奥斯维辛又一自创的“改良”措施，在纳粹德国所有集中营里，只有奥斯维辛通过这种方式辨认囚犯。似乎是因为营中的死亡率极高，而辨认一具有编号的尸体比辨认挂在犯人脖子上、极易脱落的名牌要容易一些。最开始，编号不是刺在犯人手臂上，而是用长针刺在犯人胸口，随后用墨水给伤口上色。如什莫伦所见，许多苏联犯人无法忍受这一痛苦的过程：“他们不停扭动身体，当刺字的工具在身上敲打时，他们会摔倒，不得不让他们靠着墙挨刺。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+显然霍斯毫无愧疚之情，因为苏联战俘像“动物”一样的举止恰恰符合纳粹所宣传的形象。纳粹再一次造就了自我证实的预言。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+群体印象之所以变得牢固，或许不仅在于该群体常年累月的表现形态，还在于外界对该形态的刻板印象迫使该群体一如既往地展示他们的形态。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+”回忆起这些初来乍到的德国犹太人，雅各布·兹伯斯坦说：“他们肯定特别沮丧。我想这是因为他们（德国犹太人）通常看不起波兰犹太人，觉得我们当然比他们还低一等。突然一夕之间自己沦落到跟我们一样了，甚至可能比我们还差，因为他们的生活条件还赶不上我们。”</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+就连被欺压的群体内部也有鄙视链存在，实在说明了大部分人必须依赖“优越感”才能生活下去的事实。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+新的屠杀方式不可少的是用安抚的话哄骗犹太人。集中营当局意识到，对于来自奥斯维辛以外的囚犯，不需要拳打脚踢地把他们赶进毒气室。现在的做法是让新到的人相信，走进焚尸场内的临时毒气室是进入集中营的常规流程，他们不会被杀死，只是洗个澡来“消毒”。这是纳粹的一个突破，解决了早前特别行动队曾面临的不少难题。依靠哄骗让人们进入毒气室比完全依靠武力来得更容易，此外，这种方法也能减轻屠杀者自身的压力。它还解决了纳粹在掠夺受害者财物过程中的另一个现实问题：之前很多次毒气谋杀都是在囚犯穿着衣服的情况下进行的，在他们死后扒下衣服非常困难。现在，这些将死之人会自己脱下衣服，甚至还整齐地叠好，把鞋带系上。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+奥斯维辛开始演化成纳粹德国内一个非常独特的机构。一方面，一部分囚犯成为集中营的正式成员，编号然后工作；另一方面，现在有一群人在到达集中营后的几个小时甚至几分钟内就被杀害。纳粹其他的集中营没有一个以这种方式运作。有海乌姆诺这样的灭绝营，也有达豪这样的集中营，但只有一个奥斯维辛。</p>
+<p>奥斯维辛的双重功能意味着，许多囚犯在这里生活和工作，有时长达数年，而另一些人却还来不及熟悉环境就被杀害。对附近地区那些不适合工作的犹太人来说，到奥斯维辛不啻判处死刑、立即执行；而对那些自集中营建立之初一路撑过来的波兰人来说，奥斯维辛已成为某种程度上扭曲的家园。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我手里有把剃刀，我本可以割断他的喉咙，这是有可能发生的。但我是一个有理性的人。你知道会发生什么吗？我全家都会死，半个集中营的人都会没命，然后会来个新人顶替他的位置。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+对于统治者而言，大部分时刻的大部分人的最大软肋就是家人，或者说，抓住他们在乎的东西，就能轻易控制数量庞大的人群。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+囚犯说，（在获得了“有屋顶的”工作之后）确保自己能活下来的最好方法，是成为对某个德国人有用的人。如果那个德国人开始依赖你，你就能得到关照，甚至有可能免遭惩罚，或在某些情况下逃过死亡。这主要不是出于真心的情感（虽然也不排除这种可能），更多是由于重新寻找和训练一名犯人会给德国人造成诸多不便。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+下达驱逐命令的是德国人，但隔离区的犹太人管理层被迫参与决定对哪些人进行驱逐——又一个纳粹发明、造成犹太人内部分裂的讽刺举措。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在这之前，卡巴奇与犹太人几乎没有任何直接接触。他所居住的村庄没有什么犹太人，他也承认斯洛伐克的犹太人从没给他本人找过什么“麻烦”。他热烈拥护反犹主义政策，不是出于个人恩怨，而是因为他是一位狂热的民族主义者，为现在斯洛伐克成为一个独立国家感到自豪，而且斯洛伐克的领导人告诉大家“犹太人都是打劫斯洛伐克人的骗子”。他的故事有力地证明偏见可以如此迅速地深入人心，只要它融于一整套充满吸引力的价值理念中。为了证明自己是个坚定的、爱国的斯洛伐克民族主义信徒，米夏尔·卡巴奇接受了极端反犹主义的思想。在打击犹太人的过程中，他通过占据他们的财务获得经济上的好处，并把这一罪行粉饰为“正义的复仇”。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+信念加既得利益能把人变成固执坚定的狂热信徒，即使作恶也在所不辞。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在经历了最初的震惊和失去亲人的痛苦后，普雷斯布格尔意识到，要想继续活下去，唯一的办法就是不去理会身边发生的一切，甚至是自己父亲的死。“想活得长，就必须忘得快。”他说。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+鲁道夫·霍斯曾在他的回忆录中强调，如此大规模的屠杀之所以能成功实施，最关键的一点是整个过程在极其平和的气氛中进行。霍斯还写道，如果队伍中有人在前往毒气室的途中说起窒息或屠杀，造成“恐慌迅速蔓延”，那么屠杀会变得困难得多。而这种情况是有可能发生的。后来，纳粹会重点关注那些有可能造成这类麻烦的人，一旦有任何迹象表明精心创造的顺从气氛可能遭到破坏，他们会第一时间不引人注目地把这些人转移到队伍看不见的地方，然后用小口径手枪把他们打死，这种手枪声音较小，可以保证附近的人不会听到。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+只有犯人会死于饥饿。他们在集中营里的生活本来就是一个渐进的处决过程，因为他们要面临饥饿、挨打和重体力劳动。<br>
+<br /><br /></p>
+<h2 id="第三章-死亡工厂">第三章 死亡工厂</h2>
+<p><strong>原文摘录</strong><br>
+希姆莱之所以有信心要求手下在1942年底之前完成对波兰犹太人的屠杀，并不是因为他认为奥斯维辛会发挥主要作用，而是他知道三个新的灭绝营已经在波兰的森林里建成，大部分屠杀行动将在这三地展开。与奥斯维辛不同，这三处很少为公众所知，它们分别是贝尔赛克（Bełżec）、索比堡（Sobibór）和特雷布林卡（Treblinka）。如今，人们大谈特谈的只有奥斯维辛，这其实非常讽刺，因为让三个灭绝营的名字从历史上消失正是纳粹的愿望。他们在屠杀计划得逞后，竭力抹去证明这三个营地曾经存在的每一丝痕迹。早在战争结束前，纳粹就拆除了这几个灭绝营，把它们恢复为森林或重新开垦为农田。与此形成鲜明反差的是，纳粹从没打算销毁奥斯维辛存在的证据，即便在它解放之前的最后日子。奥斯维辛作为集中营，沿用了纳粹体制在战前就已确立的做法，纳粹从来不曾打算向公众隐瞒这类营地的存在，事实上，同为集中营的达豪就建在城镇的郊区地带。对纳粹来说，明确表示他们会关押和“再教育”他们眼中的异见人士，是一种行之有效的政治宣传。正如我们之前所讨论过的，只有在奥斯维辛的囚犯遭遇大规模集体处决之后，这个营地的另一重功能才显现。因此，纳粹撤离奥斯维辛时炸毁了毒气室，却把其他大部分设施完整地保留了下来。</p>
+<p>1942年的贝尔赛克、索比堡和特雷布林卡则有着完全不同的性质。这三个灭绝营不仅在纳粹德国没有先例，甚至可以说在整个人类历史上都不曾出现过。它们没有范例可以参照。在许多方面，它们的存在和运作方式都比奥斯维辛更能准确体现出纳粹“最终解决”的特别之处。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+值得再次提醒的是，纳粹干的是人类历史上前所未有的勾当，也就是在短短数月里，对数百万男女老少进行流水线式的杀戮。虽然这样的比喻令人不悦，但德国人建造的确实就是三个杀人工厂，与任何工业操作一样，每一个环节都需要按部就班地衔接，才能达到预期的结果。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+在凡事追求精简效率的时代，“工厂”，“流水线”等词汇依旧令人胆寒。这意味着在高大上的主义带领下，车轮只能滚滚向前，除非外力的干预，否则几乎没有主动自我停止的可能。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="第四章-腐败">第四章 腐败</h2>
+<p><strong>原文摘录</strong><br>
+最初纳粹只打算建造一座焚尸场，但既然焚尸场的功能发生转变，现在他们也决定增建类似的设施。截至1943年初夏，共有四座焚尸场/毒气室合一的建筑在奥斯维辛-比克瑙建成。其中两个（2号和3号焚尸场）依据修改后的方案建造，也就是把地下室用作毒气室。在比克瑙，新来的受害者下车的地方被称为“坡道”（直到1944年春末才完全建好），这两个焚尸场距坡道不到100米。另外两个（4号和5号焚尸场）建在比克瑙的偏僻角落，与“小红房”和“小白房”中的临时毒气室相邻。这两个焚尸场的毒气室不在地下，而是与焚化炉一起都在一层。对纳粹规划者来说，这个设计是一个明显的“改进”，它意味着尸体不需要再从地下室被运到地面。4号和5号焚尸场各有一个巨大的焚化炉，每个炉子分别有八个炉门。这四个焚尸场加起来每天可以杀死约4700人，同时可以完成对尸体的处理。也就是说，如果新的屠杀设施全部启用，那么每月奥斯维辛可以杀害15万人。</p>
+<p>奥斯维辛的焚尸场——这些砖砌的坚固建筑恰恰是纳粹“最终解决”恐怖之处的有形体现。屠杀无需再在改造的农舍中进行，而是在类似工厂的地方、按照工业生产的方式操作。历史上，对妇女和儿童的血腥屠戮屡见不鲜，但这次完全不同：在纳粹费尽心思建造的屠杀工厂里，人类的牺牲将不见血光。在比克瑙的焚尸场，那一排排整齐的红砖房里，纳粹分子将沉着、镇静、有条不紊地夺取性命。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+经过筛选，犹太人首先会被送到附近的子营地强制劳动，经过数个月的虐待和压榨之后，当他们被认为不再适合工作时，就会被送到几英里之外的奥斯维辛-比克瑙灭绝。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在纳粹最纯正的观点中，奥斯维辛和其他灭绝营所做的不过是维护健康，也就是协助除掉那些对国家发展造成负担或构成威胁的人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+很难预测在特殊的环境中，谁会变成一个丧失人性的怪物。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+奥斯维辛不同地方的差别是巨大的，一边是“游泳池”和妓院，另一边是连儿童也不放过的焚尸场。<br>
+<br /><br /></p>
+<h2 id="第五章-疯狂的杀戮">第五章 疯狂的杀戮</h2>
+<p><strong>原文摘录</strong><br>
+为了赶上犯人运到的速度，纳粹扩大了在奥斯维辛四个焚尸场工作的特遣队（Sonderkommando）队伍，特遣队成员从原来的200人增至近900人。这些犯人所从事的是集中营里最可怕的工作，他们需要引导刚到的人走进毒气室，在此过程中安抚他们，最后在杀戮结束后清理尸体。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+”那时他们还不知道，1942年8月，纳粹经济部门向奥斯维辛和其他集中营的管理者下令，一定长度以上的头发统统需要收集，以便把它们编起来做成“潜水艇上船员的袜子和包裹铁轨用的纺织物”。<br>
+<br /><br /></p>
+<h2 id="第六章-解放与报复">第六章 解放与报复</h2>
+<p><strong>原文摘录</strong><br>
+在战争走向尾声时，斯大林犯下的罪行至少在某种程度上让人想起纳粹的“最终解决”。与希特勒一样，斯大林也对不同族群进行了集体迫害。近10万名来自斯大林格勒南部草原的卡尔梅克人因苏联领导人眼中的“罪行”被集体驱逐到西伯利亚，而所谓的集体“罪行”只是没有尽力抗击德国人。在战争的最后阶段和刚刚结束的那段时期，克里米亚鞑靼人、车臣人和苏联其他许多少数民族都有着相同的遭遇。没人确切知道有多少苏联公民遭到驱逐，但这个数字肯定超过100万。与犹太人不同的是，大多数犹太人在落入纳粹之手后遭到杀害，而被斯大林迫害的少数民族，大部分在他死后得以从西伯利亚回到他们的祖国。尽管如此，我们仍可以肯定，斯大林以个别人的过错处罚整个族群的做法，给车臣人、鞑靼人、卡尔梅克人和其他许多人带来了巨大的苦难。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+许多大屠杀幸存者与琳达·布雷德一样，有着非常痛苦的返乡经历，这些幸存者不仅来自奥斯维辛，也来自其他一些集中营。被囚禁期间，他们一直用回家的信念支撑着自己，以为战争结束后，他们可以再次回到原来的生活。然而，这是不可能实现的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在这段历史上，一个又一个事例表明，对大多数人呢来说，违背社会的主流文化观念行事是极其困难的…选择永远存在，但随大流总是更容易一些。如果大家都持有反犹太主义观点，都想要迫害犹太人，那么跟大家一样就可以了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+轰炸机的发明使得从高空投掷炸弹的飞行员对他的杀戮行为产生了“距离感”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+20世纪的技术手段不仅使被战争夺去性命的人比以往任何时候都多，也让实施杀戮的凶手承受的心理负担和伤害比以往任何时候都小。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这个悲惨的故事进行到最后，留给我们的是什么样的结局呢？可以肯定的是，在奥斯维辛工作过的大多数人没有遭到任何处罚，而集中营里的大多数犯人在经历了如此深重的苦难之后，却始终没有得到足够的补偿，非但如此，很多人在战争结束后还遭受到更多的偏见和伤害。这样的结论自然会让人感到不快。人类从内心深处需要这个世界有公道存在，需要无辜的人最终得到补偿，有罪的人最终受到惩罚。但奥斯维辛的历史没有给我们这样的慰藉。而这段历史最亏欠的，就是比克瑙那些得不到救赎也无法安息的冤魂。作为人类历史上最大的墓地，比克瑙的土地在战后被寻觅贵重物品的当地居民一遍遍翻动。这个墓地以及附近的维斯瓦河就是一百多万人的最终归宿——许多犯人的骨灰倾倒在这条河里。这一百多万人的证词我们已永远无从聆听。<br>
+<br /><br /></p>
+<h2 id="词汇积累">词汇积累</h2>
+<p>巨细靡遗：大小事务都没有遗漏</p>
+<p>饥馑（jin 3）：灾荒，指因粮食歉收等引起的食物严重缺乏的状况</p>
+<p>履新：过新年，任新职</p>
+<h2 id="信息整理">信息整理</h2>
+<p>疖子（jie 1）：发生在肌肤浅表部位感受火毒，致局部红肿、热痛为主要表现的急性化脓性疾病</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2023/05/12/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%A5%A5%E6%96%AF%E7%BB%B4%E8%BE%9B%EF%BC%9A%E4%B8%80%E9%83%A8%E5%8E%86%E5%8F%B2/">
+            https://illusionzone.github.io/2023/05/12/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%A5%A5%E6%96%AF%E7%BB%B4%E8%BE%9B%EF%BC%9A%E4%B8%80%E9%83%A8%E5%8E%86%E5%8F%B2/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/05/12/fancywebsite/%E9%9F%B3%E4%B9%90%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【Fancy Website】音乐相关网站 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/05/09/fancywebsite/%E8%81%9A%E5%90%88%E6%90%9C%E7%B4%A2%E7%BD%91%E7%AB%99/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【Fancy Website】聚合导航搜索网站收录 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%AF%BC%E8%AF%BB%E3%80%91%E9%9B%86%E4%B8%AD%E8%90%A5%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%89%B2%E4%BA%BA%E5%92%8C%E5%85%BD%E4%BA%BA%E7%9A%84%E4%B8%96%E7%95%8C"><span class="toc-text">【导读】集中营：一个牲人和兽人的世界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80"><span class="toc-text">序言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%84%8F%E6%83%B3%E4%B8%8D%E5%88%B0%E7%9A%84%E5%BC%80%E7%AB%AF"><span class="toc-text">第一章 意想不到的开端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%9C%8D%E4%BB%8E%E5%91%BD%E4%BB%A4%E4%B8%8E%E8%87%AA%E4%B8%BB%E8%A1%8C%E5%8A%A8"><span class="toc-text">第二章 服从命令与自主行动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%AD%BB%E4%BA%A1%E5%B7%A5%E5%8E%82"><span class="toc-text">第三章 死亡工厂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%85%90%E8%B4%A5"><span class="toc-text">第四章 腐败</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%96%AF%E7%8B%82%E7%9A%84%E6%9D%80%E6%88%AE"><span class="toc-text">第五章 疯狂的杀戮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%A7%A3%E6%94%BE%E4%B8%8E%E6%8A%A5%E5%A4%8D"><span class="toc-text">第六章 解放与报复</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86"><span class="toc-text">信息整理</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E5%AF%BC%E8%AF%BB%E3%80%91%E9%9B%86%E4%B8%AD%E8%90%A5%EF%BC%9A%E4%B8%80%E4%B8%AA%E7%89%B2%E4%BA%BA%E5%92%8C%E5%85%BD%E4%BA%BA%E7%9A%84%E4%B8%96%E7%95%8C"><span class="toc-text">【导读】集中营：一个牲人和兽人的世界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E8%A8%80"><span class="toc-text">序言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%84%8F%E6%83%B3%E4%B8%8D%E5%88%B0%E7%9A%84%E5%BC%80%E7%AB%AF"><span class="toc-text">第一章 意想不到的开端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%9C%8D%E4%BB%8E%E5%91%BD%E4%BB%A4%E4%B8%8E%E8%87%AA%E4%B8%BB%E8%A1%8C%E5%8A%A8"><span class="toc-text">第二章 服从命令与自主行动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%AD%BB%E4%BA%A1%E5%B7%A5%E5%8E%82"><span class="toc-text">第三章 死亡工厂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%85%90%E8%B4%A5"><span class="toc-text">第四章 腐败</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E7%96%AF%E7%8B%82%E7%9A%84%E6%9D%80%E6%88%AE"><span class="toc-text">第五章 疯狂的杀戮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%A7%A3%E6%94%BE%E4%B8%8E%E6%8A%A5%E5%A4%8D"><span class="toc-text">第六章 解放与报复</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%95%B4%E7%90%86"><span class="toc-text">信息整理</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

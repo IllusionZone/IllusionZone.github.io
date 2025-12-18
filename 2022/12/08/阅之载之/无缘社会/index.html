@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】无缘社会</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】无缘社会">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/08/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%97%A0%E7%BC%98%E7%A4%BE%E4%BC%9A/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/book/readandnote/无缘社会/indeximg/indeximg.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-08">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-01-08">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%AD%90-%E2%80%9C%E6%97%A0%E4%BE%9D%E6%97%A0%E9%9D%A0%E8%80%85%E2%80%9D%E4%B8%8E%E6%97%A5%E4%BF%B1%E5%A2%9E%E7%9A%84%E6%97%A5%E6%9C%AC"><span class="toc-text">引子 “无依无靠者”与日俱增的日本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%BD%E8%B8%AA%E2%80%9C%E5%9C%A8%E9%80%94%E6%AD%BB%E4%BA%A1%E8%80%85%E2%80%9D"><span class="toc-text">第一章 追踪“在途死亡者”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E4%B8%93%E6%A0%8F%E3%80%91-%E6%82%84%E7%84%B6%E6%99%AE%E5%8F%8A%E7%9A%84%E7%9B%B4%E9%80%81%E7%81%AB%E8%91%AC"><span class="toc-text">【专栏】 悄然普及的直送火葬</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%8D%95%E8%BA%AB%E6%97%B6%E4%BB%A3"><span class="toc-text">第三章 单身时代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%81%8C%E5%9C%BA%E7%BC%98%E6%96%AD%E7%BB%9D%E4%B9%8B%E5%90%8E"><span class="toc-text">第四章 职场缘断绝之后</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%90%9F%E5%94%B1%E2%80%9C%E5%8D%95%E8%BA%AB%E6%83%85%E6%AD%8C%E2%80%9D%E7%9A%84%E5%A5%B3%E4%BA%BA"><span class="toc-text">第五章 吟唱“单身情歌”的女人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E4%B8%93%E6%A0%8F%E3%80%91-%E5%85%B1%E5%90%8C%E5%9D%9F%E5%A2%93"><span class="toc-text">【专栏】 共同坟墓</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%B9%B4%E8%BD%BB%E7%BE%A4%E4%BD%93%E4%B8%AD%E8%94%93%E5%BB%B6%E7%9A%84%E2%80%9C%E6%97%A0%E7%BC%98%E6%AD%BB%E2%80%9D%E6%81%90%E6%83%A7"><span class="toc-text">第六章 年轻群体中蔓延的“无缘死”恐惧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E4%B8%93%E6%A0%8F%E3%80%91-%E5%B9%B4%E5%AF%8C%E5%8A%9B%E5%BC%BA%E7%9A%84%E2%80%9C%E5%AE%B6%E9%87%8C%E8%B9%B2%E2%80%9D"><span class="toc-text">【专栏】 年富力强的“家里蹲”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%B6%88%E5%A4%B1%E7%9A%84%E9%AB%98%E9%BE%84%E8%80%85"><span class="toc-text">第八章 消失的高龄者</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/book/readandnote/无缘社会/indeximg/indeximg.png" 
+      data-src="/image/book/readandnote/无缘社会/indeximg/indeximg.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【阅之载之】无缘社会 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】无缘社会
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-12-07T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-08</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>3.9k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p></div>
+<br />
+<img src="/image/book/readandnote/无缘社会/1.png" width="500rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/无缘社会/1.png" class="lozad post-image">
+<br />
+<h2 id="引子-“无依无靠者”与日俱增的日本">引子 “无依无靠者”与日俱增的日本</h2>
+<p><strong>原文摘录</strong><br>
+为什么这个男子刚失去工作，就一下子沦落到了无家可归的境地呢？</p>
+<p>家人、朋友这些“人缘”没能帮助他吗？老家没有他的容身之地吗？没有人对他施以援手吗？</p>
+<p>如今，“穷忙族”可谓满街都是。这些人稍有差池，便会一落千丈，沦落到无家可归的地步。听着他们的倾诉，我们不禁开始思考起“关联”的问题来了。</p>
+<p>那男子但凡遇到有人去采访，便会说出同样的话来：</p>
+<p>“我不想为了自己的事再给别人添更多的麻烦。”</p>
+<p>男子虽然无家可归，但没有领生活救济，依然一直在寻找工作。他对自己的生活毫不气馁，不愿依靠任何人。</p>
+<p>这么说来，所谓“关联”或是“缘”，难道不就意味着互相添麻烦，并允许互相添麻烦吗？采访组成员们心中深深怀着的这个疑问，久久无法打消。</p>
+<p>“不想给别人添麻烦”象征着“关联”是何等脆弱。</p>
+<p>于是，日本社会中的“无依无靠者”便与日俱增起来了。</p>
+<p>我们希望日本是个“自己一个人也能安心生活的社会，自己一个人也能安然迎接死亡的社会”。要实现这一目标，需要做什么呢？我们的采访正是为了寻找这个答案。<br>
+<br /><br /></p>
+<h2 id="第一章-追踪“在途死亡者”">第一章 追踪“在途死亡者”</h2>
+<p><strong>原文摘录</strong><br>
+彩虹大桥上，一辆辆汽车、卡车争分夺秒地疾驰而过，而桥的正下方却在进行溺死者尸体的打捞作业，日常与非日常的活动交错进行在彩虹大桥现场。然而，眼前的光景却令我们感到，对于已经死去的这个男性的存在，似乎没有任何人予以关注。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+每天目睹如此这般的现实，久而久之，无法不让人去想：人的一生难道就该是如此草率吗？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一个人一旦离开故乡，与老家朋友的联系就会减少；到了双亲相继过世之后，更会变得没有老家可回。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一个过着极正常生活的人，失去了一个又一个与社会的连结。</p>
+<p>最后呈现在我们面前的，是他孑然独立，悄然逝去的身影。<br>
+<br /><br /></p>
+<h2 id="【专栏】-悄然普及的直送火葬">【专栏】 悄然普及的直送火葬</h2>
+<p><strong>原文摘录</strong><br>
+一般认为，直送火葬增多的一个很大的原因是“长寿化”。活得越长，认识自己的人中离世的也越多。以前确实存在过的邻里交往和血亲关联，也会因为隔代的原因而趋于中断，以致即使举行丧礼，这些人也不会来参加。硬把人召集到一起举行丧礼的举动，无论对逝者的家人还是周围的人，都不啻为一种“麻烦”。这种观念正在社会上普及。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+人死的时候，说到底也是一个人去死。就算有孩子，我也不愿意给他添麻烦。那种面子上的风光，我根本不需要。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“刚出生时那么得人疼爱，最后送终时却只剩下这个人自己。尽管想来太凄凉了，但我们还是想尽可能诚心诚意地送走他们。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“即使是我们，如果人生道路走错一步，生活中出了某种问题，说不定都会成为独居老人而悄然死去的。绝不是仅有某个特定群体的人才会孤独老死，他们也曾有过像样的一生，或许也曾有过孩子，或许也曾把孩子培养成人，或许自己出生时也曾让爹妈喜出望外。他们都有各自走过的人生，怎么能仅仅因为在生命的最后阶段被孤立了，就让他们的下场如此不堪呢？”<br>
+<br /><br /></p>
+<h2 id="第三章-单身时代">第三章 单身时代</h2>
+<p><strong>原文摘录</strong><br>
+兜售者的高明之处，在于他们深谙独居老人的心理。他们不惜一个小时、两个小时地与老人交谈，甚至聊些与商品无关的事情，以致老人逐渐感到“这个人说的话，还是可以相信的”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这些老人们不想给任何人添麻烦，他们忍耐着孤寂，独自生活着。难道还要从他们那里再夺走什么吗？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+深夜醒来的时候，得了感冒卧病在床的时候，心里就会忽然涌上来一种孤独感，一种对犯罪和死亡的不安。</p>
+<p>尽管如此，老人们还是继续独自生活。从他们的这种举动里，可以看到那种“不能给别人添麻烦”的无可奈何的对亲人的善意，可以看到他们对抗孤独、不安的最大努力。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+藤森君认为，不结婚者增加的原因，可举出以下几项：一、便于独立生活的城市基础设施日趋完备（诸如便利店的普及等）；二、收入不稳定的非正规雇佣更为广泛；三、生活方式发生了变化，到了某个年龄必须结婚的社会规范正在弱化；四、女性经济实力上升，不结婚也能够生活的人增加了。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+私以为还有第五点，即除了上述第一点物质需求的满足外，对于精神、情感方面的获取也变得容易和便捷许多。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“与别人失去关联，就像是一种活着的孤独死。没有一个人关心你，你也发挥不了任何作用，这样的话，不管活着还是死了，不都是一样的吗？这与自己这个人已经消失了不是没什么不同吗？所以我觉得，确认与别人有没有关联，就是在确认自己是否存在。”<br>
+<br /><br /></p>
+<h2 id="第四章-职场缘断绝之后">第四章 职场缘断绝之后</h2>
+<p><strong>原文摘录</strong><br>
+如果说这就是过分投入工作、没有顾及家庭的代价，也许说的是没错，但这个代价也太大了。而从另一个角度来说，因为包括我们自己在内，一心一意为公司忘我工作的人太多了，所以我深深感到，无论谁的身上，都有可能发生同样的事情。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在生活中，比起家庭更注重公司和工作的人比比皆是。如今他们正大批迎来退休。一旦失去与公司的关联，他们便会暴露出与世隔绝的孤独面目。<br>
+<br /><br /></p>
+<h2 id="第五章-吟唱“单身情歌”的女人">第五章 吟唱“单身情歌”的女人</h2>
+<p><strong>原文摘录</strong><br>
+那些“无缘”的人，是没人会给他们担保身份的。对这样的人来说，非营利组织代替了他们的“家庭”。然而，他们切实的想法，却是不愿让有真正家庭的人知道自己是非营利组织的会员。社会如何看待她们的独自生活？“世人的眼睛”如何解读她们的“单身到底”？我意识到，想要保守自己独自生活秘密的老年女性对这些是很在意的。或许她们的确不希望人们投来怜悯的目光。这个采访无意中发现了潜藏在那些英姿飒爽的女性们内心深处的孤寂。<br>
+<br /><br /></p>
+<h2 id="【专栏】-共同坟墓">【专栏】 共同坟墓</h2>
+<p><strong>原文摘录</strong><br>
+“环境变了，社会变了，连职业会变成什么样都无法得知，现在就是这样一个时代。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+随着父母子女、兄弟姐妹、血亲姻亲之间的交流不断减少，维护祖宗代代相传坟墓的意识也在迅速淡化。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在以往的日本社会，埋进祖先代代相传的坟墓，是理所当然的事。共同坟墓急剧增加的背景中，有着日本人意识的巨大变化：即便有亲属，也“不愿给人添麻烦”。而另一方面，也有些人很在意共同坟墓造就的“关联”。在家庭和地域关联逐渐脆弱的情况下，这些人仍想跟什么人互相帮衬着生活下去。共同坟墓反映出的，正是这些人的切实的想法。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>其实，过度的城镇化岂不是罪魁祸首之一？</p>
+<p>为了所谓的“发展”，为了所谓的“政绩”，为了所谓的“现代化”，将所有的历史敲碎，重构出一堆乱七八糟的东西，像一堵密不透风的墙，挡住了人回溯的路。无论是离乡的人，还是呆在家乡的人，都失去了属于自己的根，心里不再有一丝丝归属感，徒留空空荡荡的躯壳，随波逐流，四处浪荡。</p>
+<p>这种情境下，人除了自我，还能有什么眷念之情吗？<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="第六章-年轻群体中蔓延的“无缘死”恐惧">第六章 年轻群体中蔓延的“无缘死”恐惧</h2>
+<p><strong>原文摘录</strong><br>
+“尽管努力工作，结局还是萧条和责任自负。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“我思考了怎么活着以及怎么死去之后，才发现各种死亡中，‘无缘死’也是选项之一，所以我已经做好了思想准备，说不定自己也会那么死去的。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这是一个任何人不与别人交往也可轻易地独自生活下去的时代。<br>
+<br /><br /></p>
+<h2 id="【专栏】-年富力强的“家里蹲”">【专栏】 年富力强的“家里蹲”</h2>
+<p><strong>原文摘录</strong><br>
+这些只重视成果和效率的第一线人员被形势所迫，闭塞感更强，以致感到精神紧张和烦恼时也无法去找职场同事或专家沟通。<br>
+<br /><br /></p>
+<h2 id="第八章-消失的高龄者">第八章 消失的高龄者</h2>
+<p><strong>原文摘录</strong><br>
+事实告诉我们，尽管是普通的家庭，如果长年互不联系，亲属间的关联逐渐弱化，是会变得支离破碎的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这种在劫难逃的事情，是随时有可能突然逃不过去的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在我们的社会渐渐变成“对别人不感兴趣的社会”的今天，尽管回归以往不可能的，但我仍衷心祈愿我们是一个“能够同情别人、同情生命的社会”。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>通篇读注</strong></summary><p-n>
+<p>看书之前，以为自己是一只特立独行的猪，看书之后，才知道早在几年之前，在大洋彼岸的陆地上，就已经有了那么多如此相似的猪。</p>
+<p>一时之间，我竟不知产生的是对发现同类的安慰与喜悦，还是对此等境遇的哀伤与同情。</p>
+<p>不知不觉活到了这样一个岁数，我有时也开始展望余生，我发现未来的生活模式大概率是作为一个不婚不育的个人主义者来度过的。这是综合了各方面的考量，包括性格上的，不再敞开心扉去容纳陌生人，也不适合建立过于亲密的关系；包括能力上的，无法支撑传统婚姻生活的物质与情感需求；也包括观念上的，不认为婚姻是一种必然的生活方式，不认为需要依赖儿女来解决养老问题，不认为必须活得很久，也不认为死后还有轮回…</p>
+<p>但即使我是抱着这样的观念，也为着这样生活做了准备时，当看到这些鲜活的孤独死情景时，依然不免感到伤感。事实上，如果不想因亲密关系牺牲精力与时间，就必然将接受独处时的寂寞；如果不相信生死轮回，就不应该为死后尸首无人埋葬而担忧；再者，对于职业道德感薄弱的我来说，并不会在社会的分工协作中取得所谓的成就感与荣誉感，相反，我是极度厌恶工作的，认为那不过是为了生存不得已而为之的一种“浪费生命”的举动，只会因摆脱了工作而感到畅快。但不可否认的是，人的共情能力却又是自私的，是在将别人的遭遇映射到自己身上时所产生的一种自怜自艾。所以，我的悲感从何而来？</p>
+<p>特别是看到一些老人死在公寓里，数月都不曾被人发现，以至于尸体高度腐烂时，悲伤就变得尤为强烈，像一股滔天巨浪，要将人生吞活剥一般。</p>
+<p>死了就似乎不应该再有什么可以担忧的了，但其实人死后的无人问津，恰恰反映了生前的无人关心，那些老人生前就是过着一种完完全全与世隔绝的生活。他们不见得和我一样，带有一定的自主性与预见性地去迎接这种生活，大部分人是在无常命运的安排下，被迫踏上孤独死的旅途。我的悲伤或许就由此产生的。况且，大部分被社会驯养成机器的现代人，已几乎丧失了作为个体的主见，只得依赖于社会群体提供各种情感上的补助，如荣誉感、成就感等等，而一旦失去与群体的关联，比如退休之后，就彻底失去了获取这些情感的渠道，于是精神自然变得空乏。举个不恰当的例子，为何中国的老年人热衷于广场舞，又如何容易误入传销的骗局，私以为，是由于大部分老年人，甚至世世代代的大部分人，都是被一种无形又强大的力量安排着进行去工作、去生活，去成长，去衰老，他们并不见得有属于自己的精神世界。一旦失去这股力量时，便变得无所适从，像帆船失去了风，再难前进分毫。此时，人们便会重新寻求新的东西来弥补这种空缺，最好的方式是加入到一个新的充满同类的集体，要不就是听从某个言之凿凿、居高临下的声音去行事，总之，就是要重新将自己的自由典当出去，以换取一种无需思考、无需顾虑、无需质疑、无需做出任何选择的生活。（虽然我自认为应该不是这样的人，却不知为何能很有所体会，当然更大的可能性是我的一种不切实际的妄想罢了，在此仅为个人偏见，不足论之。）</p>
+<p>此外，我的伤感或许还来自另一处不确定的部分，那就是我并未真切地体验过与世隔绝是怎样的一种情况，当前的我依旧与其他人有着强烈的羁绊，但作为有着社交需求的人类，如果当某一天失去了与他人的一切关联时，我又会是怎样的感受呢?</p>
+<p>嘿，多想无益，只愿是，生得自在，死得潇洒罢了，睡也，睡也。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/12/08/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%97%A0%E7%BC%98%E7%A4%BE%E4%BC%9A/">
+            https://illusionzone.github.io/2022/12/08/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%97%A0%E7%BC%98%E7%A4%BE%E4%BC%9A/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/12/09/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%9C%88%E4%BA%AE%E4%B8%8E%E5%85%AD%E4%BE%BF%E5%A3%AB/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】月亮与六便士 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/12/07/fancywebsite/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BDAI%E7%BD%91%E7%AB%99/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【Fancy Website】人工智能AI网站 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%AD%90-%E2%80%9C%E6%97%A0%E4%BE%9D%E6%97%A0%E9%9D%A0%E8%80%85%E2%80%9D%E4%B8%8E%E6%97%A5%E4%BF%B1%E5%A2%9E%E7%9A%84%E6%97%A5%E6%9C%AC"><span class="toc-text">引子 “无依无靠者”与日俱增的日本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%BD%E8%B8%AA%E2%80%9C%E5%9C%A8%E9%80%94%E6%AD%BB%E4%BA%A1%E8%80%85%E2%80%9D"><span class="toc-text">第一章 追踪“在途死亡者”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E4%B8%93%E6%A0%8F%E3%80%91-%E6%82%84%E7%84%B6%E6%99%AE%E5%8F%8A%E7%9A%84%E7%9B%B4%E9%80%81%E7%81%AB%E8%91%AC"><span class="toc-text">【专栏】 悄然普及的直送火葬</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%8D%95%E8%BA%AB%E6%97%B6%E4%BB%A3"><span class="toc-text">第三章 单身时代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%81%8C%E5%9C%BA%E7%BC%98%E6%96%AD%E7%BB%9D%E4%B9%8B%E5%90%8E"><span class="toc-text">第四章 职场缘断绝之后</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%90%9F%E5%94%B1%E2%80%9C%E5%8D%95%E8%BA%AB%E6%83%85%E6%AD%8C%E2%80%9D%E7%9A%84%E5%A5%B3%E4%BA%BA"><span class="toc-text">第五章 吟唱“单身情歌”的女人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E4%B8%93%E6%A0%8F%E3%80%91-%E5%85%B1%E5%90%8C%E5%9D%9F%E5%A2%93"><span class="toc-text">【专栏】 共同坟墓</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%B9%B4%E8%BD%BB%E7%BE%A4%E4%BD%93%E4%B8%AD%E8%94%93%E5%BB%B6%E7%9A%84%E2%80%9C%E6%97%A0%E7%BC%98%E6%AD%BB%E2%80%9D%E6%81%90%E6%83%A7"><span class="toc-text">第六章 年轻群体中蔓延的“无缘死”恐惧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E4%B8%93%E6%A0%8F%E3%80%91-%E5%B9%B4%E5%AF%8C%E5%8A%9B%E5%BC%BA%E7%9A%84%E2%80%9C%E5%AE%B6%E9%87%8C%E8%B9%B2%E2%80%9D"><span class="toc-text">【专栏】 年富力强的“家里蹲”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%B6%88%E5%A4%B1%E7%9A%84%E9%AB%98%E9%BE%84%E8%80%85"><span class="toc-text">第八章 消失的高龄者</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E5%AD%90-%E2%80%9C%E6%97%A0%E4%BE%9D%E6%97%A0%E9%9D%A0%E8%80%85%E2%80%9D%E4%B8%8E%E6%97%A5%E4%BF%B1%E5%A2%9E%E7%9A%84%E6%97%A5%E6%9C%AC"><span class="toc-text">引子 “无依无靠者”与日俱增的日本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%BD%E8%B8%AA%E2%80%9C%E5%9C%A8%E9%80%94%E6%AD%BB%E4%BA%A1%E8%80%85%E2%80%9D"><span class="toc-text">第一章 追踪“在途死亡者”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E4%B8%93%E6%A0%8F%E3%80%91-%E6%82%84%E7%84%B6%E6%99%AE%E5%8F%8A%E7%9A%84%E7%9B%B4%E9%80%81%E7%81%AB%E8%91%AC"><span class="toc-text">【专栏】 悄然普及的直送火葬</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%8D%95%E8%BA%AB%E6%97%B6%E4%BB%A3"><span class="toc-text">第三章 单身时代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%81%8C%E5%9C%BA%E7%BC%98%E6%96%AD%E7%BB%9D%E4%B9%8B%E5%90%8E"><span class="toc-text">第四章 职场缘断绝之后</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%90%9F%E5%94%B1%E2%80%9C%E5%8D%95%E8%BA%AB%E6%83%85%E6%AD%8C%E2%80%9D%E7%9A%84%E5%A5%B3%E4%BA%BA"><span class="toc-text">第五章 吟唱“单身情歌”的女人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E4%B8%93%E6%A0%8F%E3%80%91-%E5%85%B1%E5%90%8C%E5%9D%9F%E5%A2%93"><span class="toc-text">【专栏】 共同坟墓</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%B9%B4%E8%BD%BB%E7%BE%A4%E4%BD%93%E4%B8%AD%E8%94%93%E5%BB%B6%E7%9A%84%E2%80%9C%E6%97%A0%E7%BC%98%E6%AD%BB%E2%80%9D%E6%81%90%E6%83%A7"><span class="toc-text">第六章 年轻群体中蔓延的“无缘死”恐惧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%90%E4%B8%93%E6%A0%8F%E3%80%91-%E5%B9%B4%E5%AF%8C%E5%8A%9B%E5%BC%BA%E7%9A%84%E2%80%9C%E5%AE%B6%E9%87%8C%E8%B9%B2%E2%80%9D"><span class="toc-text">【专栏】 年富力强的“家里蹲”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%B6%88%E5%A4%B1%E7%9A%84%E9%AB%98%E9%BE%84%E8%80%85"><span class="toc-text">第八章 消失的高龄者</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】重读经典的伟大冒险</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】重读经典的伟大冒险">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/06/29/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%8D%E8%AF%BB%E7%BB%8F%E5%85%B8%E7%9A%84%E4%BC%9F%E5%A4%A7%E5%86%92%E9%99%A9/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="略">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-06-29">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-07-07">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%AD%A6%E6%9C%9F"><span class="toc-text">第一学期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%8D%B7%E9%A9%AC"><span class="toc-text">第一章 荷马</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%80%8A%E4%BC%8A%E5%88%A9%E4%BA%9A%E7%89%B9%E3%80%8B"><span class="toc-text">《伊利亚特》</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%B1%E5%BE%B7%E5%8D%8E%E2%80%A2%E6%B3%B0%E5%8B%92%E6%95%99%E6%8E%88%E8%AF%B4%EF%BC%8C%E6%88%91%E4%BB%AC%E5%B0%86%E5%BB%BA%E7%AB%8B%E8%87%AA%E6%88%91"><span class="toc-text">爱德华•泰勒教授说，我们将建立自我</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%A1%E5%9B%AD%E4%B9%A6%E5%BA%97"><span class="toc-text">校园书店</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%91%E6%B2%A1%E6%B3%A8%E6%84%8F%E5%88%B0%E7%9A%84%E4%BA%8B%E7%89%A9"><span class="toc-text">我没注意到的事物</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%A5%E4%BC%A6%E6%AF%94%E4%BA%9A%E5%A4%A7%E5%AD%A6%E5%AD%A6%E7%94%9F%E7%9A%84%E4%BB%8A%E6%98%94"><span class="toc-text">哥伦比亚大学学生的今昔</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BD%93%E4%BB%A3%E6%96%87%E6%98%8E%E8%AF%BE%E5%BC%80%E5%A7%8B%EF%BC%9A%E5%AE%89%E5%BE%B7%E6%96%AF%E2%80%A2%E5%8F%B2%E8%92%82%E8%8A%AC%E6%A3%AE%E4%B8%8E%E8%A5%BF%E6%96%B9%E5%8E%86%E6%B3%95%E7%9A%84%E9%9C%B8%E6%9D%83"><span class="toc-text">当代文明课开始：安德斯•史蒂芬森与西方历法的霸权</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%B0%E5%8B%92%E6%95%99%E6%8E%88%E8%AE%B2%E6%8E%88%E3%80%8A%E4%BC%8A%E5%88%A9%E4%BA%9A%E7%89%B9%E3%80%8B"><span class="toc-text">泰勒教授讲授《伊利亚特》</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8B%B1%E9%9B%84%E9%98%BF%E5%96%80%E7%90%89%E6%96%AF"><span class="toc-text">英雄阿喀琉斯</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】重读经典的伟大冒险
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-06-28T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-06-29</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>1.5k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p></div>
+<br />
+<img src="/image/book/readandnote/重读经典的伟大冒险/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/重读经典的伟大冒险/1.png" class="lozad post-image">
+<br />
+<h2 id="第一学期">第一学期</h2>
+<h3 id="第一章-荷马">第一章 荷马</h3>
+<h4 id="《伊利亚特》">《伊利亚特》</h4>
+<h4 id="爱德华•泰勒教授说，我们将建立自我">爱德华•泰勒教授说，我们将建立自我</h4>
+<p><strong>原文摘录</strong><br>
+“别被虚假不实的想法给扯进去，”他说，“你们在这里不是出于政治。你们在这里是为了很自私的原因，那就是要建立自我。自我是创造出来的，不是继承得到的。创造自我的方法之一是借鉴过去。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+“‘诠释的圆圈’，”泰勒说，“这是狄尔泰（Wilhelm Dilthey）说的。除非你掌握了结构，你才会知道怎么处理细节；而同时，除非你知道了细节，你才知道该怎么处理结构。在人生和文学中都是如此。诠释的圆圈是个恶性循环。<br>
+</br></br></p>
+<h4 id="校园书店">校园书店</h4>
+<h4 id="我没注意到的事物">我没注意到的事物</h4>
+<h4 id="哥伦比亚大学学生的今昔">哥伦比亚大学学生的今昔</h4>
+<h4 id="当代文明课开始：安德斯•史蒂芬森与西方历法的霸权">当代文明课开始：安德斯•史蒂芬森与西方历法的霸权</h4>
+<p><strong>原文摘录</strong><br>
+所谓清单并不无辜的看法，正是攻击“经典”的主要理由。那些清单充斥着排除异己的味道。“文学的传授就是价值观的传授，”著名的非裔美国学者及评论家小亨利·路易斯·盖茨（Henry Louis Gates Jr.）在1990年写道，“这并不是必然的，而是偶然的，这不仅是而且已经变成了一种审美和政治秩序的传授，女性和有色人种从未在其中找到他们自己形象的投射，或听到他们自己文化声音的回响。”盖茨并不鼓吹瓦解传统的经典，而是要将其范围扩大，容纳那些未被听到的声音。然而有许多人意见激烈得多，进一步攻击当初制造出那些经典作品名单的权威阶层。这样的名单（哥伦比亚大学核心课程当然不是唯一的一个）达成了一套单一或几乎单一的价值观和想法，在一串不停地自我确认的过程中建立起它的中心甚至世界性的地位，就像是一个坚持会员高人一等的俱乐部，拒不承认其他人的特质。这样一个传统里被呈现为“世界性”的东西（那些人主张），事实上只代表了有限的一群人的经验和权力欲。所谓的世界性不仅是假的，是烟幕和骗局，而且更具有政治性的企图和实质影响。而本来只是重要作品的集合的“经典”，就是白种欧裔美国男性“霸权”中的一个重要元素，带着伪装的意识形态，推进或好或坏的西方模式，如个人主义、市场资本主义、帝国主义、种族主义和性别歧视。</p>
+<p>如果文学人文课的泰勒说的是“这些书会形成你的人格”，教当代文明的史蒂芬森说的则是“这些书是被选来形成你的人格的”。然而，当我坐在那里时，我感到的不是惊慌，而是一股骄傲的暖流。这感觉简直令人全身舒畅：这自希腊文学发源之时便展开的巨大历史洪流，是针对我们来的。</p>
+<p>“这些之所以是经典作品，”他说，“在于它们不断地接受重新诠释。”这也解释了他将采取的上课方式。他不会告诉我们该怎么想，他只会监督讨论的过程并保证它不离题。学生们要轮流针对各个作者上台做“报告”。 “我们永远不能接受这些文本表面的样.<br>
+232子，”他说，“而是要质询它们。‘客观’的观点也许不存在，但严肃的阅读是存在的。”我们将严肃阅读这些书，在书堆中打发日子。但怎么做呢？<br>
+</br></br></p>
+<h4 id="泰勒教授讲授《伊利亚特》">泰勒教授讲授《伊利亚特》</h4>
+<h4 id="英雄阿喀琉斯">英雄阿喀琉斯</h4>
+<p><strong>原文摘录</strong><br>
+英雄毕竟是英雄。阿喀琉斯愤而退出战场本来看起来很幼稚，最多是自恋的心受了伤，因为他的战利品——女奴情妇，被大佬抢走了，但却有种醍醐灌顶的效果，让这个高傲的年轻人看到了战争的另一层意义。突然之间，他开始有些明白荣誉并不建立在女人和货物的交换上，也不建立在男人对彼此英勇程度的评价上。“我们都有着一致的评价……一事无成的人难逃一死，成就斐然的人亦然。”对全世界最伟大的战将而言，承认这一点是很具破坏力的。从我们的观点看来，阿喀琉斯已经跃进了一种私人的甚至心灵的价值观：荣誉是一个男人和宙斯之间，或者和自己之间的事，而到头来，没有人的死能被补偿；生命的价值是不能度量的。当你把这段演说拿来与其他战将的行为和言谈比较时（泰勒就带着学生这么读），你就看得出阿喀琉斯已经快要和荷马笔下战士社会中的荣誉／耻辱观决裂了。虽然不见得很成功，但他已经试着要有所觉悟，而（对于现代的读者而言）这种觉悟是在此之前一直在诗中付之阙如的。<br>
+</br></br></p>
+<h2 id="信息积累">信息积累</h2>
+<p>汲汲营营：形容人急切求取名利的样子</p>
+<p>付之阙如：即付诸阙如、亦作暂付阙如，指欠缺本应具有之物</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/06/29/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%8D%E8%AF%BB%E7%BB%8F%E5%85%B8%E7%9A%84%E4%BC%9F%E5%A4%A7%E5%86%92%E9%99%A9/">
+            https://illusionzone.github.io/2024/06/29/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%8D%E8%AF%BB%E7%BB%8F%E5%85%B8%E7%9A%84%E4%BC%9F%E5%A4%A7%E5%86%92%E9%99%A9/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/06/29/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%99%BD%E7%97%B4/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】白痴 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/06/14/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E6%AE%8A%E9%80%94%E5%90%8C%E5%BD%92/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【察之作之】殊途同归 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%AD%A6%E6%9C%9F"><span class="toc-text">第一学期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%8D%B7%E9%A9%AC"><span class="toc-text">第一章 荷马</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%80%8A%E4%BC%8A%E5%88%A9%E4%BA%9A%E7%89%B9%E3%80%8B"><span class="toc-text">《伊利亚特》</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%B1%E5%BE%B7%E5%8D%8E%E2%80%A2%E6%B3%B0%E5%8B%92%E6%95%99%E6%8E%88%E8%AF%B4%EF%BC%8C%E6%88%91%E4%BB%AC%E5%B0%86%E5%BB%BA%E7%AB%8B%E8%87%AA%E6%88%91"><span class="toc-text">爱德华•泰勒教授说，我们将建立自我</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%A1%E5%9B%AD%E4%B9%A6%E5%BA%97"><span class="toc-text">校园书店</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%91%E6%B2%A1%E6%B3%A8%E6%84%8F%E5%88%B0%E7%9A%84%E4%BA%8B%E7%89%A9"><span class="toc-text">我没注意到的事物</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%A5%E4%BC%A6%E6%AF%94%E4%BA%9A%E5%A4%A7%E5%AD%A6%E5%AD%A6%E7%94%9F%E7%9A%84%E4%BB%8A%E6%98%94"><span class="toc-text">哥伦比亚大学学生的今昔</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BD%93%E4%BB%A3%E6%96%87%E6%98%8E%E8%AF%BE%E5%BC%80%E5%A7%8B%EF%BC%9A%E5%AE%89%E5%BE%B7%E6%96%AF%E2%80%A2%E5%8F%B2%E8%92%82%E8%8A%AC%E6%A3%AE%E4%B8%8E%E8%A5%BF%E6%96%B9%E5%8E%86%E6%B3%95%E7%9A%84%E9%9C%B8%E6%9D%83"><span class="toc-text">当代文明课开始：安德斯•史蒂芬森与西方历法的霸权</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%B0%E5%8B%92%E6%95%99%E6%8E%88%E8%AE%B2%E6%8E%88%E3%80%8A%E4%BC%8A%E5%88%A9%E4%BA%9A%E7%89%B9%E3%80%8B"><span class="toc-text">泰勒教授讲授《伊利亚特》</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8B%B1%E9%9B%84%E9%98%BF%E5%96%80%E7%90%89%E6%96%AF"><span class="toc-text">英雄阿喀琉斯</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%AD%A6%E6%9C%9F"><span class="toc-text">第一学期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%8D%B7%E9%A9%AC"><span class="toc-text">第一章 荷马</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E3%80%8A%E4%BC%8A%E5%88%A9%E4%BA%9A%E7%89%B9%E3%80%8B"><span class="toc-text">《伊利亚特》</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%88%B1%E5%BE%B7%E5%8D%8E%E2%80%A2%E6%B3%B0%E5%8B%92%E6%95%99%E6%8E%88%E8%AF%B4%EF%BC%8C%E6%88%91%E4%BB%AC%E5%B0%86%E5%BB%BA%E7%AB%8B%E8%87%AA%E6%88%91"><span class="toc-text">爱德华•泰勒教授说，我们将建立自我</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%A1%E5%9B%AD%E4%B9%A6%E5%BA%97"><span class="toc-text">校园书店</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%88%91%E6%B2%A1%E6%B3%A8%E6%84%8F%E5%88%B0%E7%9A%84%E4%BA%8B%E7%89%A9"><span class="toc-text">我没注意到的事物</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%93%A5%E4%BC%A6%E6%AF%94%E4%BA%9A%E5%A4%A7%E5%AD%A6%E5%AD%A6%E7%94%9F%E7%9A%84%E4%BB%8A%E6%98%94"><span class="toc-text">哥伦比亚大学学生的今昔</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BD%93%E4%BB%A3%E6%96%87%E6%98%8E%E8%AF%BE%E5%BC%80%E5%A7%8B%EF%BC%9A%E5%AE%89%E5%BE%B7%E6%96%AF%E2%80%A2%E5%8F%B2%E8%92%82%E8%8A%AC%E6%A3%AE%E4%B8%8E%E8%A5%BF%E6%96%B9%E5%8E%86%E6%B3%95%E7%9A%84%E9%9C%B8%E6%9D%83"><span class="toc-text">当代文明课开始：安德斯•史蒂芬森与西方历法的霸权</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%B0%E5%8B%92%E6%95%99%E6%8E%88%E8%AE%B2%E6%8E%88%E3%80%8A%E4%BC%8A%E5%88%A9%E4%BA%9A%E7%89%B9%E3%80%8B"><span class="toc-text">泰勒教授讲授《伊利亚特》</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8B%B1%E9%9B%84%E9%98%BF%E5%96%80%E7%90%89%E6%96%AF"><span class="toc-text">英雄阿喀琉斯</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

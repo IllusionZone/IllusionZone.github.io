@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【妄想记】家</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【妄想记】家">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%AE%B6/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-10-20">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-10-22">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="妄想记">
+        
+          <meta 
+            property="og:article:tag" 
+            content="现世行">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【妄想记】家
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-10-19T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-10-20</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+          class="post-meta-link">
+          妄想记
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>11.3k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+            class="post-meta-link">
+            妄想记
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+            class="post-meta-link">
+            现世行
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <p>趁着沉沉夜色，悄悄回了躺老家，生怕惊扰了时间的齿轮，令之又心急火燎地多转几圈。</p>
+<p>不知从何时起，世界仿佛套上金箍，驾上筋斗云，目露凶光、满脸狂热，星驰电掣奔着所谓大道——西天马不停蹄地赶去，似乎唯有修成正果的一刹那方算得上生命之功德圆满。凡世的生灵皆被这具疾行身躯掀起的狂风抛起，荡悠悠，轻飘飘，仅一瞬，却连一声叹息都未落下，便已化为尘土消匿于泥土中，无声无息，激不起一丁点涟漪。</p>
+<p>钢筋水泥构筑的建筑总归厚重些。一如既往的小区门口，两扇深褐色铁门敞开着，堆满自行车和摩托车的庭院，带有镂空纹饰的楼道，沿楼梯向上拐15个弯，自家屋前那扇浅紫色的门便出现在眼前。一切都那么熟悉，一切又那么陌生，仿似一切从未改变，又仿似早已物似人非。</p>
+<p>推门而入，凌乱不堪的屋内是一幅久未打理的颓废模样，门框、桌面、柜台、窗沿、脚下的瓷砖…四下皆积着厚厚的灰，受我的闯入所惊扰，纷纷扬扬逃逸至半空，游丝飞絮随处飘荡。所幸客厅尚有一把老藤椅，一张旧玻璃茶几，一根60瓦白炽灯管，支起这间熟悉的屋子，容我平缓因奔波而有些激荡的内心。</p>
+<p>由于长时间无人居住，门窗紧闭着，屋内无端闷生出一团氤氲气息，似浸满温水的海绵膨胀着占据了所有空间，令人在烦躁与恶心中体验到窒息感。可本不该如此，此处位于顶层，居高临下，前后通透，习习的风日夜不息地流淌着，仿佛这房子跃动的脉搏，只使人觉得舒畅、轻快、自在。我无比怀念那种感受，于是前去将窗户打开，霎时间，晚风扑面而至，一如十多年前那般柔和、清凉，直吹进心窝，涤荡去一切不适感，似久别重逢的好友，欲与我互诉思念。</p>
+<p>这里便是我住了十多年的家，承载了我自呱呱坠地至即将成年之间绝大部分时光，也是我日思夜想，无数次在梦里潜逃回来的地方。虽然这只是一套相当平凡的两居室，坐落在一座离海三十余公里远的四线小城市内，这片海风吹不到的土地，一条泛着波光的江半月形将之揽住，像托着个饱满圆润的孕肚，蔌蔌江风将湿润水汽带入城内，哺育出水灵通透的万物生灵。属于市区的部分实乃一隅之地，开车无需二十分钟就能从城西驶至城东，不过在老一辈用惯了双腿丈量大地的印象中，却总叹觉路途遥远。在我出生的前几年，城南一栋五层高、“凹”字形工厂前面，三幢相连着、比工厂还多出三层的集资房呈L型与之夹出一片三角形空地，工厂探出住宅楼的部分又与西边一间门卫起居的平房以及两扇推拉式铁门圈出更小的一块方形空地，并就此组成个小区。于是，由大门进入，经过小庭院左转，从集资楼与工厂间仅容一人经过的夹角拐进去，才能沿着楼道回到各家各户。如此怪异的不规则结构造就一种独特的原始野性，宛若紧紧相挨着的两山间留出的一道缝隙，侧身而入，却发觉内里别有洞天，一块空地被三面高楼围住，深幽幽的气息盈溢其底，日晖斜打在楼宇顶端，印得灰色墙体发白，将建筑切割为明暗两个部分。迎面而立的一号住宅楼与厂房间留存的缝隙铸以铁栅栏相连，一片狭长的阳光误入其中，顺着一节节铁管滑下，直至泫然落入地面，光幕中，粉尘懒洋洋飘浮于半空，如扇着翅膀的精灵，时不时闪烁着微芒。似水柔光慢慢悠悠地流淌，许久才将明暗分界线压低稍许。</p>
+<p>小区是典型的八九十年代风格，临街外墙规则地贴满晶莹的小块马赛克瓷片，其余墙体则一色粗粝近黑的深灰，每套房都有一至两道又长又宽的阳台，阳台和窗户向外延伸一圈铁质防盗网，客厅装有两扇巨大的推拉式茶色玻璃窗，地上铺砌或深色水磨石或浅素瓷砖，天花板未加花里胡哨的吊顶，与四面墙一般简洁的雪白透亮，与厨房平开式木窗边框及窗沿被明媚日光涂成清新的梨黄色，和浅棕色木门，配合天角悄然溢入屋内的一抹品蓝，呈现极佳的空间感，并创造出某种淡雅的朴质，像盛在白瓷杯中甘醇而波澜不惊的乌龙茶，淡淡热气缓缓升腾。</p>
+<p>与小区共为一体的工厂大楼俨然采用的是典型的工业化风格，一丝不苟、严丝合缝的绝对轴对称形状，每层都装着一排井然划一的青灰色玻璃窗，平常深邃厂房内部不易透光，只有当阳光足够明媚时，才能瞧见窗后宽大车间内，原本存放的机床早已清空，取而代之的是积结在空荡荡房间墙角及横梁上丝网状的灰尘。视线在其中畅通无阻，经入口处的玻璃调制，似乎空气都染上些许靛青色，稀薄的浅黄色光束若有若无，冷暖两种色调相交融，半空中凝成一粒素白的雪，乌溜溜的瞳孔将之捕获，一丝冰凉顺势而入，沁入心脾。被拉伸的阳光轻巧地盖在水泥地面，像散落一地凋谢了的花瓣，有某种说不出的衰败的美感。寂静无声中，若朝里边喊上一声，立刻会有无数回声响应，侧耳倾听，仿佛其中还夹杂有多年前的自己那有些稚嫩而尖锐的声音。</p>
+<p>1号楼作为“L”型建筑的底部，是小区内最大的单元，每层两至三户，其中两户共用一条长长的阳台，从小区拐角处进入，迎面抬头望去，像一面高墙前特意安上一排排花篮，可以看见富贵竹顶端乱蓬蓬的苍绿叶子，观音柳垂下青翠枝条盖在布满绒针的仙人球上，万绿丛中有数枚小巧红嫩的石榴花点缀，夹杂着花香和青草气味的熏风摩挲其间，枝芽轻晃，仿佛在静悄悄地呼吸一般，令单调绿意活了起来。大概是更受阳光雨露照顾的缘故，亦或是那里的人家更懂得照料花草，越上层窗口的植物越发茂盛，结满果实的金桔，大红大紫的花团，颜色亦越发丰富，艳丽非常。1号楼一端以相当锐利的角度陡然转折，接上同在笔直一排的2号楼和3号楼，站在天台夹角处朝下望，目光迅速顺着两面墙壁所形成的轨道滑落，触地，有目眩心惊之感。2、3号楼是小单元，每层仅一至两户，</p>
+<p>两排建筑间形成一个锐利的夹角，站在天台顶端朝下望，目光顺着两面墙</p>
+<p>·</p>
+<p>这两个单元每层只有两户，户型也大致相似，</p>
+<p>最先入夜的总是屋内，黑乎乎的夜色充斥在房间内，</p>
+<p>屋外霞光满天，</p>
+<p>而我家便位于最接近入口拐角处的三号楼。</p>
+<p>从印着红色数字“3”的楼梯口上去，第一层装有该栋所有住户电表的铁皮箱，再往上</p>
+<p>犹记当年家里断电后，跟在大人身后打着手电筒下楼</p>
+<p>我家位于最接近拐角的三号楼，</p>
+<p>不可或缺的一部分</p>
+<p>一丝不苟</p>
+<p>几乎要蔓出铁栅栏，</p>
+<p>太过华丽反而容易令人产生倦意，反而是淡淡的单薄的几片花瓣，怎么也看不够，</p>
+<p>无声轻晃，</p>
+<p>越上层的植物越茂盛，大概是更受阳光雨露照顾的缘故，大红大紫的花团，挂满硕果的金桔，</p>
+<p>从拐角进入，</p>
+<p>人，事</p>
+<p>窗框窗沿</p>
+<p>与木窗边框及窗沿上清新的梨黄色，和浅棕色木门，配合天角悄然溢入屋内的一抹品蓝，</p>
+<p>呈现出极佳的空间感，窗户及</p>
+<p>厚厚的云层犹如棉絮一般，火星一沾上，立刻大片大片燃烧开来，蔓延了大半边天空，天边的火球落下去，残留的一点夕阳如火柴芯最后一点余光，一转眼便消逝，站在高处俯瞰脚下的城市，如深蓝潮水漫上金黄色的沙滩，散去晒了</p>
+<p>将一整天的火气，潮水褪去后，被浸透的深色沙子，沉沉地</p>
+<p>沿着阶梯捨级而上，</p>
+<p>顶层的房子向来都不讨喜，我却庆幸能在，原因无他，唯能近拥天台而已，</p>
+<p>深幽幽</p>
+<p>草木丛生的山涧口，从层层遮掩中的一条缝隙侧身通过，却发觉内里别有洞天，</p>
+<p>三面高楼围住一块幽森森的空地，</p>
+<p>借着斜射在住宅阳光中荡荡悠悠的尘埃，</p>
+<p>山涧口草木杂乱生长，仅留一条缝隙，侧身通过，</p>
+<p>这种怪异的不规则形状自带</p>
+<p>临街的外墙上贴满了</p>
+<p>自呱呱坠地起住了十多年的家，</p>
+<p>小区门口两扇深褐色的大铁门一如既往敞开着，</p>
+<p>前庭左手边是座齐腰高的长条形花坛，右手边是间门卫生活起居的平房，院里排满自行车和摩托车，</p>
+<p>里面泛白的土凝成一整块，，，零星不知名的植物顽强生长在</p>
+<p>中干涸的泥土凝成块，零星不知名的植物顽强生长着</p>
+<p>右手边，左手边</p>
+<p>消匿</p>
+<p>轻飘飘，悠悠荡荡，于空中飞舞、盘旋，</p>
+<p>这具疾行身躯掀起狂风，席卷一路，将尘世间的生灵全抛至半空中，</p>
+<p>非要在修成正果的那一刻体验</p>
+<p>成年之后，时间便仿佛</p>
+<p>我想从老家开始写起，那是一套坐落在四五线小城市内，墙上贴着马赛克瓷砖，八九十年代建筑风格的小区，很不起眼的</p>
+<p>粗犷的野性，刺鼻的硝烟味近在咫尺绽放，俯瞰下方目光，聚焦到</p>
+<p>我想以散文的形式，以“家”为题，用三万字左右的篇幅，来写在一片八、九十年代建筑风格楼群中的一套平凡二居室，那是我曾住了十余载的家，承载了我自出生至成年的绝大部分时光，乃至于塑造了今时今日的我。</p>
+<p>人是在时空中漫游的生物，西到东，左到右，前到后，古到今，因其绵延着某种特质，由个人的部分——经历、体验、记忆、感悟等，由社会的部分——身份、交际、关系等，使自我于变动中存续。农耕定居式习性煲煨出的思维总不如游牧迁徙式来得自由灵活，因为家，尤其是一个容许安稳度过童年的家，像一口锚，将人牢牢锁定，不过对身处惊涛骇浪时代中的人而言，这却或许并非全然是坏事，反而当被激涌裹挟着随波逐流时，有机会得以回到最开始的起点，探寻自己原初的目标与方向。尤其当急遽膨胀的科技与近乎止步不前的人文撕裂出的真空地带被某类无所适从的急躁情绪填充，且这种急躁呈现在现实的方方面面，乃至于周糟环境在不到三十年间发生了翻天覆地、面目全非的改变时，似乎回归自我便变得更加困难重重。</p>
+<p>私以为，人之一生无非是在朝向往求与向内求两个方向不断延伸。总是在年少时从家一点点迈出去，逐步接触广袤的世界和探索自我与他人之间的边界，直至某个时期，则开始回归家中，并尝试深入幽暗曲折的内心。</p>
+<p>于是我想用文字回溯曾经的家，那是在一座离海三十多公里远的四五线小城市内，这片海风吹不到的土地，有一条潺潺流淌的江月牙形将之托住，蔌蔌江风将湿润水汽带入城内，哺育出水灵通透的万物生灵。属于城区的部分实乃一隅之地，开车无需二十分钟便能从城南驶至城北，不过在老一辈用惯了双腿丈量土地的印象中，却总叹觉路途遥远，那时候楼房普遍不高，大约在五至八层左右，而我家正是城南的顶层住户之一，极目远眺，可以望见北部暗绿山丘上高耸的电视铁塔，东边街道上两侧小屋鳞次栉比排至江边，不时传来渡轮发动煤油机时呜呜轰鸣声，向西目送夕阳一直沉入地平线，夜幕降临，华灯初上，天上繁星好似人间的水中倒影，仿佛居于小屋内，便已将小城尽览眼底。</p>
+<p>我要写的便是曾经这样平凡、普通，充满烟火气息，混杂着记忆与想象，对我而言却是那么熟悉，亲切的一处所在。</p>
+<p>弹丸之地的城区，从北至南</p>
+<p>则开始慢慢地往回赶，试图</p>
+<p>回到一开始的家里，进而幽暗的内心。</p>
+<p>一寸一寸从家里走出去，尝试着探索广袤的世界以及丈量自我与他人的边界，成年后，则更多</p>
+<p>，比如城市中旧式小区不到被高楼大厦迅速取代，即便是想留下点什么历史遗迹之类，也基本以推倒重建的方式草草了事，时，似乎回归自我便变得更加困难重重。</p>
+<p>远超人文发展的科技</p>
+<p>星驰电掣的科技拉扯着几乎止步不前的人文，急躁填充了，且这种急躁呈现在现实的方方面面，比如城市建筑便是其中一面</p>
+<p>急不可耐</p>
+<p>其中便有一簇燎在</p>
+<p>科技的进步远超人文，人心真空的</p>
+<p>特别是不知何时起愈发急躁的</p>
+<p>提供了自我向内求的机会，避免漫无目的地随波逐流，</p>
+<p>可处于急遽变化的时代潮流，维持不变却似乎更加困难，以至于时常在随意飘荡过程中迷失了自我。但家，尤其是一个容许安稳度过童年的家，则像抛下的锚，</p>
+<p>在急遽变化的时代中，维持不变比追求改变</p>
+<p>无论经过何种变动都依旧能存续下来</p>
+<p>在时空中漫游的人，</p>
+<p>常有这么一种论调，“”，它们简练、有力、易懂，诸如此类的道理层出不穷，每隔一段时间便被人从厚厚的格言册中翻出来，犹如笔直的利剑，以其毋庸置疑的锋芒，干净利落地劈散混沌的云雾，予人以明晰的方向以及无所畏惧的勇气。</p>
+<p>我却以为，人无法抛下过去前行，</p>
+<p>人拥有的自我性，在于从过去到当下，至未来的延绵不绝</p>
+<p>我之所以是我，在于</p>
+<p>我之所以从前是我，如今是我，未来仍将是我，在于有一种不变的特质延续下来，而这之中，曾经所经历产生的记忆</p>
+<p>在这离海三十多公里远的小城市，海风吹不到的地儿，一条潺潺流淌的江半月形将之托住，像捧着孕妇鼓鼓囊囊的肚子。蔌蔌江风裹携着湿润水汽，朝岸上一圈圈荡漾开去，</p>
+<p>溯源</p>
+<p>来写一座离海三十多公里远的四五线小城市。这片海风吹不到的土地，有一条潺潺流淌的江月牙形将之托住，蔌蔌江风将湿润水汽带入城内，</p>
+<p>源源不断涌入清凉的江风，将湿润的水汽</p>
+<p>趁着夜色，悄悄回了趟家，生怕惊扰了时间的齿轮，又急遽多转了几圈。</p>
+<p>一如既往的小区大门、庭院，楼道，只要沿着楼梯往上拐15个弯，就能看到家里那扇浅紫色的锈迹斑斑的铁门。一切都那么熟悉，一切又都那么陌生。</p>
+<p>推门而入，屋内凌乱不堪，显露出一幅久未打理的颓废模样。所幸的是，客厅里尚有一把老旧藤椅，一张旧玻璃茶几，一盏明灯，支起这间熟悉的屋子，容我平缓有些激荡的心。这里已经很长一段时间没有人居住，门窗都紧闭着，导致屋里闷生出了一团愠气，令人烦躁不堪。但本不该如此，此处位于顶层，居高临下、前后通透，习习的风日夜不息地流淌在屋里，像这房子跳动着的脉搏，使人舒畅、快活、自在。我无比怀念那种感觉，便前去把门窗拉开，霎那间，晚风扑面而来，一如几年前那般柔和，清凉，直吹进了心窝，似久别重逢的老友般，与我互诉思念。</p>
+<p>这个我曾经住了十几年的家，是我日思夜想着，在无数个梦里面潜逃回来的地方。而这间小房子是我父亲以前任职的工厂筹建的集资房中的一套，后来厂子倒闭了，倒是小区和厂房留了下来。三栋八层高的宿舍楼连成一片，外加背面一栋五层楼高的大厂房，围成了这个狭小的小区，恰恰是这种不规则的造型，反而产生了一种独特的、纯粹的自然之美。从小区的大门进来，右手边是一间供门卫生活起居的低矮砖房，左手边则是一个花圃，上面乱七八糟地长满了不知名的植物，顺着花圃再往前，穿过夹在3栋楼与厂房之间的拐角，就到了小区的停车场，这里是一处梯形空地，密密麻麻挤满了自行车与摩托车，哪怕楼道里的一点空隙也几乎被车子占据了。从里往外数，依次是一栋单元、二栋单元、三栋单元，我家就在最靠近拐角的用红色画笔勾勒出“3”的建筑顶层。</p>
+<p>在我出生之前，家人就在此住下了，算起来，这屋子大概虚长我几岁，似我的一位发小，或甚乎于一位兄长。也许，对一间房子产生亲人般的感情是件很不可思议的事，但鉴于我本就是个古怪的人，且这种情感又真真切切、清清楚楚地藏在于我身体里，所以又似乎无需大惊小怪了。</p>
+<p>与现在正截然相反的是，小时候的我并非多么恋家，反而总希冀着到屋外去，也没什么特别的念想，只是单纯地觉得外面的世界会更加精彩，有许许多多新奇和好玩的事情正在发生或即将发生，足以消耗我无处发泄的旺盛精力。可当时家里的大人们已经为着每天的生计焦头烂额了，谁也挤不出多余的精力来关心这个小屁孩的白日梦，于是我大部分时间里都呆在了这方圆寸土之内。</p>
+<p>但高墙向来是禁锢不住跳动的心，我总有办法去追寻属于我的远方。我会攀上窗台的墙沿，或跑到天台上去，借着高处的优势将屋外的一切尽收眼底，让思维随风肆意挥霍开去，去往近处的街道小巷，远处的高楼大厦，以及天边的云朵与山峦。</p>
+<p>那时候的我可以一整天就那么独自静静看着、望着，那时候的时间总是那么漫长，那时候的岁月又是那么静好。和煦的清风，枯黄的落叶，摇曳的枝杈，斑驳的墙壁，悠扬的天际，昏红的落日，总令我沉浸于内无法自拔。有时窥见远处一扇窗子被推开了，我就忍不住地想，是什么人将它打开的，那人是否也同我一般迷恋这屋外的美妙，屋内又是什么样的装潢摆设，从那个窗口望出来又是怎样一番景象？我就这样漫无目的地坐着，看着，想着，享受着生命，消磨着时间，当时的我认为生活就理所应当如此，也应当一直如此。</p>
+<p>因此，我自信没有人比我更熟悉这一切了，我闭起眼睛，就能在脑中描绘出周围的每一处细节。</p>
+<p>每扇窗都是一个独特的视角，透过不同的窗户，看到的便不同，得到的惊喜也不同。客厅那扇最大的茶色玻璃窗，正对面是隔一条街道，有一样高度、红白两色砖瓦装饰的高档花园式住宅楼，两幢楼之间的距离到了几乎可以互相窥视的地步，因此大家都心照不宣用黑色的纱网遮住了窗户。在对面这座花园式小区还没建成的时候，则是一大片辽阔的菜地果园，极目远眺可以直接看到远处山顶又高又尖的电视塔和白色的塔楼；向左边探出脑袋能看到自家贴着小马赛克瓷砖的闪亮外墙，还有从上往下油饰着黄绿蓝黑的各色铁窗，左下方只露出一小截街道，行人或车辆在那里不断地冒出又消失，一幅忙碌着谋生的芸芸众生像。东边阳台向右可以看到十字路口后层层叠叠着的楼房，一直蔓延到看不见的江边，再往后是江对岸隐隐约约的山脉，那是太阳升起的地方；北边的阳台则可以俯视厂房铺满棕红色隔热砖的屋顶，有两棵比厂房还高出一大截的高耸青翠大树，这里视野比较开阔，放眼望去，附近都是一样风格的小区楼，密密地挨在一起，当夜幕降临时，朵朵橙红与白亮的灯光闪烁其间，使一切喧嚣归于平淡与温馨。我还特别喜欢躺在客厅的中央。背靠着客厅冰凉的灰棕色纹饰瓷砖，盯着被阳光印得发亮的白色天花板，还有那蓝得似乎要溢入房间的一角天空，再添上亮黄色的木窗和门框，这边边框框便收住了我的心。</p>
+<p>我总会在看着、望着间，蓦然神游天际，魂不知所往，却又无所不至，那时的我是无比自由的。而散发自由气息最浓郁的地方，则当属天台。</p>
+<p>我家作为顶层的住户之一，自然是近水楼台先得月，更多地享用了天台的资源，我也一直将之视为家的一部分。实际上，顶层的房子一直因为夏热冬寒，出入不便等种种原因总被购房者所嫌弃，所唯恐避之不及，但，却被我所一直庆幸的。</p>
+<p>天台面积很大。四周是一道灰扑扑的围墙，与地上深黑色的隔热板浑然一体，这种朴素的颜色才是最能衬托自然的美，况且在梦幻多彩的天空下，一切的色彩都显得浮夸与多余。上面有着十余个蓄水池，各自属于最高两层的住户所有，以应付经常因水压不足无水可用的情况（这也不可避免成为顶层的缺憾之一）。这种八九十年代特有产物的顶部，是我最喜欢去的地方。起初约一米八高的水池对我而言是高不可攀的，但心之所向，身必随之。在经过无数次的尝试与失败后，我逐渐开发出了各式各样的攀登方法。如最简单的一种方式，是以裸露在水池壁外面的一节节水管为阶梯往上爬，这种方式最简便，却有损坏水管之嫌，一旦被大人看到就不免被骂个狗血淋头；所以随之我采取了另一种方法，这种方法稍需要一些技巧，必须纵身跳起让双手捉住水池顶部的边缘，同时迅速发力让身子像钟摆一样倾斜着荡上去，接着膝盖准确靠住水池顶部，再由手臂跟膝盖一齐发力将身子挪上去；此外还可以借助地形之便，让双手分别握住水池附近的两根柱子，双脚踩着池壁向上蹬，随之带动身子也上去…当然，由于蓄水池各有所异，攀爬方式也就不尽相同，当时的我一股心思都在摸索此中门道，并乐在其中，逐渐便将之一一降服了，把技巧传授给了其他小伙伴。由此产生的成就感和满足感是用言语不足以表达的，至今仍留有几丝在心底。只是等再大一些，就无需任何花里胡哨的动作，单手抓住池壁，轻轻一跃就上去了。</p>
+<p>之所以费尽心思想要到水池上去，只为了“穷尽千里目”，处在更高的位置，不仅能获得更辽阔的视野，还能距离无拘无束的天空更近一点，再近一点。</p>
+<p>天空一直是最深谙色彩之道的。</p>
+<p>夏季是天空最多姿多彩的季节，像一个才情横溢的画家，从清晨开始，便一遍一遍地大肆泼洒着颜料，将白蒙蒙的一张画布涂抹上浓郁而鲜艳的蓝色，直到几乎把纸张浸透了，变得湿漉漉的却又异常鲜活。不知不觉间，云朵悄然出现在地平线上，越积越厚，越累越高，像巍峨山峦一般，随着风掠过，一整片荡了起来，散了开去。在猛烈的阳光下，可以看见飘过来的巨大云团上的明暗分明的皱褶，还有云团边缘白得发亮的曲面，像一团泡沫，悠悠然占据着天空大块大块的版面。到了下午四时左右，经过阳光数小时的炙烤，那原本潮湿的蓝终于变得干结，连同远处的云和山都如染料凝固在了画布之上，呈现出油画质地的美，幸运时可以看见云缝间漏出一簇淡淡的蓝丝绒，那是整个夏季最漂亮的色彩。过得一阵，或许是不想浪费这一天所剩无几的光亮，天空开始像个孩子一样热切地展示他所有的色彩，于是西边的蓝色逐渐变淡，掺入了些许青色，接着像刚被削去表皮的梨肉，露出一点浅浅的晶莹的黄，稍瞬即逝间，又成了浓郁的橘黄色。如果此时刚好有云层遮住了沉落中的夕阳，耀眼的光束便会从云层的各个边缘射出，像刃尺般穿插于天地之间，很快把云团撕开出一道裂缝，从里面溢出来鲜艳欲滴的血红，如滴在了宣纸上，迅速向着四周渗透，渐变出无数种红，幻化出无数种紫，显得迷幻而高贵。</p>
+<p>天空多彩的一面仅在如天台这类不受遮挡的空旷处才能领略到，往往当东边仍碧空如洗时，西方已是一片霞光满天的黄昏了，而当西方留下纯粹的紫罗兰色时，东方则成了深邃的湛蓝。随着时间的流逝而逐渐变深，直到夜幕彻底降临了，黑色才开始笼罩大地。夏天留给我的印象如此之深，是因为小时候母亲常把晚饭后的锅碗瓢盆带到天台上刷洗，我常常跟着。此时太阳没入一片楼海，绚烂已然结束，只是天空依然清晰，月牙挂在穹顶晃呀晃，被丝状的云絮轻轻萦绕着，像披了一条薄薄的纱巾。点点星光从四周缓缓渗出来，若有若无，似真似幻，恍若梦境。习习晚风自东南向着西北掠过，如奔流不息的溪流，淌漾在天台上。那时的我就在天台上绕着走着，上蹿下跳着，抬头一望，月亮正形影不离追随着我。</p>
+<p>天空除了蓄水池外，还有大片空地，这些空间很自然地被利用了起来，各家各户是种菜的种菜，养花的养花，独得一种喧嚣闹市之中的怡然自乐。我家就用砖砌了三块花圃，一片种了蔬菜，有时是生菜青葱，有时是香叶番薯，有时是丝瓜南瓜…另外两片则种些花花草草，此外大大小小的花盆若干，我记得有桃、杏、桑葚、桂花、茉莉、菊花、薄荷、芦荟、石榴，蝴蝶兰等等。</p>
+<p>当春季来临时，天空就会变得多愁善感，即使不下雨，也是一副哀伤的灰色。但也因此，这个时候的天台反而是最好看的，粉色的桃花，白净的杏花，紫得发亮的桑葚、雪点般的桂花，蓝白相间的蝴蝶兰竞相悬在了枝桠上，翠绿娇羞的小草也破土而出，花花草草在周遭单调的灰色的衬托下，格外地艳丽多姿。特别当下起了雨，密密麻麻的雨丝如细毛般飘落，打湿了花瓣和枝叶，使之更为鲜嫩，打湿了黄褐色的泥土，使之变得黝黑，打湿了灰色的地板和砖墙，使之如水墨般空灵，若若有若无。每当这个时候，我就喜欢撑起伞，套着拖鞋，游荡在天台各个角落，或看蝴蝶轻盈地飞舞，或看蜗牛背着被雨水洗刷得晶莹剔透的壳缓缓蠕动，或看雨水在土堆里汇集，打转，最后汇聚成水束沿着砖缝钻到了地面上，似乎在这个生机勃勃的季节，世间万物都肆意生长着，蔓延着，一刻也不肯停息，一如小小的我也在这雨水中长大。有时嘴巴实在寂寞难耐了，就会去挖些四叶草藏在土里的根部，或摘下垂挂的饱满桑葚，放进嘴里咀嚼，使酸的，甜的，涩的各种味道在嘴里交融着，体味着这难得的小窃喜。</p>
+<p>天台上向来比较安静，有种与世隔绝之感，只有春雨落在伞面，落在花草，落在地板，落在水泽，淅淅沥沥，像一曲轻柔的咏叹调，不绝于耳。溅起的雨水升腾成雾气，弥漫在四周，感觉像转换了一个世界，留在伞底的是不变的自己，于是强烈的自我的感觉变得格外强烈，仿佛可以听到自己的小小心脏砰砰跳着，像水泵一样将身体内无法描述的淡淡的忧伤情绪抽了出来，随雨水萦绕着，升腾着，弥漫在了茫茫雨幕里。</p>
+<p>我印象中的春天，正是这样一幅朦胧的水彩画。</p>
+<p>冬季则截然相反，总板着一张严肃而冷峻的脸。所有色彩格外分明，明媚的阳光，深色的阴影，像互不相容的对手，划着极为明显的界线。亮与暗彼此隔开、又互相衬托，于是亮的越发地亮，暗的越发地暗，世间万物从未如此刻这般清晰，予人以一种条理分明，层级森严的感觉，似乎世界是一具钢铁般的大机器，万物各居其位，各司其职，不容得半分僭越。天台受此感召，也一般的干净简洁，不加一丝一毫的多余装饰。枯黄的落叶深埋进了土中，只有光秃秃的枝丫迎风傲立，即便留着叶子的植物也收敛起艳丽的服饰，换以深色质朴的戎装默然矗立，一同送别逝去的时光。</p>
+<p>冬天偶尔还是会露出它柔情的一面。当北风呼啸而过，卷得铁皮“噌噌噌”直响，连同花草也“沙沙沙”地响时，淡淡的阳光就会被厚实的叶子剪得七零八碎，洒到地面上。此时我喜欢躲一旁，让手穿过遮阴的房檐伸向明亮的空地，让温热与阴寒在同一个条臂上交汇，使阳光如流水淌漾着，忽而沿着指端流向肩头，忽而又退回到手掌处，如同享受着轻抚一般，暖暖的，痒痒的，很是舒服。可一旦当太阳完全隐于云层背后，大地立马回归肃杀本色，大片的云层像江河里翻腾不息的浪潮，滚滚而来，滚滚而去，不肯停歇。</p>
+<p>我最喜欢的季节莫过于秋天。喜欢的理由有很多，但主要的还是两件期待很久的事情的发生，一是放风筝，二是中秋节。</p>
+<p>春常雨，夏少风，冬卷风，都不宜放风筝，唯有秋天是最合适的。秋季最美的是午后的天空，像披了件轻薄的金纱，若隐若现，若即若离，有一种飘渺虚无感，看得入神了，人也随之阔达淡雅，清微豁然了。在这种时候放风筝是一种纯粹的享受，我已经数不清放飞了多少个风筝，但我印象最深的还是第一个，那是和父母去沙滩玩时买的，一个极其精致的，印有孙悟空图案的风筝，可惜那时候的我还很小，还完全不懂得如何进行有趣的运动。</p>
+<p>我一开始跟着电视里有样学样，以为必须借跑才能带飞风筝，但天台没有这样发挥的空间，后来我发现了，根本无需大费周章，放风筝讲究的是因时，借势，而秋天恰是适宜的，毫不吝啬送来不疾不徐，恰到好处的风。只需要找个没有遮拦的地方，比如水池顶部，左手握住风筝的一角，当风筝在风流下开始挣扎抖动时，便迅速放手，一边根据风势下拽或上引鱼线微调其飞行姿势，一边适当放长绳索，待得风筝到了一定高度，就只需任由线筒哗啦啦地滚动着。我喜欢将几个线团接在一起，这样风筝就能飞得极高，只剩下一个小小的点，似乎自己也随之去往了那片奇妙的空间。</p>
+<p>中秋节可不只是我期盼着，全小区的大小伙伴都热烈盼望着。每逢佳节之期，住户们会选择到天台上去祭月，像我家这种顶层的住户，就将自家的大圆桌搬上去，拿排插引来电，装上吊灯，于是天台灯火通明，这也是在365天中天台上唯一一次亮起灯火的夜晚，也是最热闹开心的夜晚。晚饭后七八点钟，大桌小桌就被抬上去，随之摆满了五颜六色的贡品，小孩子耐不住寂寞先跑了上去，竞相燃起烟花爆竹，有飞天猴，蹿地鼠，流光火树…，最后剩下焰火棒在孩子手里舞动着，把一道道璀璨的荧光画在夜空里。等到大人们都料理完一天的事务，就终于盼到了重轴戏。有一位大叔叔像孩子王一样，组织孩子们搬来土块残砖，捡些枯枝残叶，然后他便用这些材料搭起一个小小的砖窑，往底部铺上一层薄薄的土，点燃干枯的草料，再添些木块，很快，溅出几滴火星，火便燃了起来，升腾起一阵热浪。我们围坐在这个小火炉前，急切地张着红彤彤的脸，听着噼噼啪啪作响的柴火，看着从窑口窜出来的火舌，抬头望着温润如水的月光，说着笑着。等到木块都烧透了，变成黑黝黝的炭了，就把顶部的几块砖卸下来，再安上一块铁网，便成了个简简单单的烧烤架，而我们这些小馋虫早急不可耐了，迅速把准备好的鸡翅、火腿、肉丸都摊到架子上去，焦急地等待接下来的美味。</p>
+<p>那是一年里最美好的夜晚。</p>
+<p>我突然很想看看那片无拘无束的天空，于是轻轻带上门，来到天台。这里本是我距离自由最近的地方。当我满怀期待地抬头望去的时候，却发现那里的星光已经被吓跑了，只余一团被各色灯光粉饰得妖艳媚气的黑。我顿觉索然无味，颇感寂寥落寞。</p>
+<p>我忽然间明白了，不管我再怎么不乐意，过去已不复存在。追忆是苦乐并存的，苦的一面就在于，当发现了一切已是物非人也非，自己也对此无能为力的时候。</p>
+<p>人之非是必然的。人正如潮水般，一波波地涌进小区，涨起，退去，又涨起，又退去，每次都卷走一些，又留下一些，留下的成了居民，离去的则遁入茫茫人海，无迹可寻。每次留下的人都会使小区以一种新的截然不同的气息存在着，就像不同的食物堆放在一起会产生的千奇百怪的气味一样，我只觉得以往那种使我感觉温馨而轻松的气氛消失了，缺而代指的是一种生疏感，也许当周遭都是陌生人的时候，反而自己才是那个格格不入的入侵者吧。当这种不适感袭遍全身时，我猛然察觉，变的又何止是其他人，其实自己也变了，变得面目全非，变得形态可憎，不知总在为何而烦闷困苦，不知总在为何而焦躁难安，似乎迫不及待着赶去赴死，却又苟延残喘着拼命求存。这发现令我更感悲哀。我已无法拾回那种能够观看一整个午后风景的安逸心态，也难再有那种能够左顾右盼着探寻新奇的闲情雅致了。</p>
+<p>比如爬楼梯，小时候的我人小腿短，所以只得一级一级顺着阶梯走。却因此发现了在楼梯的途中也可以是一种享受，去发现一些难以发现的美，可以收获一些隐藏在角落里的乐趣。比如透过镂空的雕花纹饰，能够看见外面的景色在随着每一层的高度变化而变化着，于是有无数种角度去看外面的同一间房，同一颗树，同一片砖，也可以看写着不同祝语的春联，听隐隐约约透墙而出的剁肉炒菜之声或叨念琐事之语。可当我步子越迈越大，越迈越快，变成一步两级，一步三级向上走去时，我就再无暇他顾了，只想着向上爬去，楼梯只被当成了通向目的地的工具。</p>
+<p>相较而言，物之非更使得我错愕。我本以为钢筋水泥构造的房子该比人加倍的坚强结实，未料它竟也如此脆弱，灰斑墙壁上布满了如皱纹般的道道裂痕，脱落了墙皮中裸露出了绣红的钢筋，都使它如同一位饱经沧桑，岌岌可危的老人，事实也确是如此，它为这个小区的居民们遮挡了几十年的风雨，虽仍旧倔强地昂首挺立着，可也无法阻止地老去。被周边一栋栋拔地而起的新式高楼像铜墙铁壁般困住了，使之更显得佝偻瘦弱，已再难瞧见地平线上蜿蜒的山脉，再难寻觅头顶漆黑如墨的夜空和点点荧光，再难散发出那种气壮山河的豪情气概。我突然感到有些惶恐，万一哪天连这房子消失了，我又有何地可去留恋与追思呢？</p>
+<p>可我究竟为何总想回到那个曾经的“家”呢？事实上我所记得的，并不仅仅只有关于美好的，也有关于丑陋的。无论小区再小，也是一个社会的小角落，同样鱼龙混杂，泥沙俱下。有和善者，也有恶毒者，有平易近人者，也有斤斤计较者，有豁达大度者，也有勾心斗角者，这里酸甜苦辣皆备，神佛妖魔具有，并非就如我所愿般完美无憾。但我始终无法割舍，哪怕只是想象着房子的消失，也会心如刀割。毕竟这个容载着我生活了十多年的地方，已将我人生最初始的岁月，几乎所有的开心、悲伤、得意、失落种种一切、点点滴滴伴随着时光，融化进房间里的每一个角落，如种子埋入泥土，生根着，发芽着，纠缠着。于是我被塑造成了如今的我，无论是性格，情感，还是对于家的印象，或是对于美的理解…</p>
+<p>这个地方如此之深刻地影响着我，包括我的思想、我的行为都烙上了它的印记。哪怕我在外租房，也要费尽心机地去找带有广阔视野的高层。我并不如何青睐窗明几亮的新式住房，反而更钟爱与我家类似风格的旧式小区房，因为当我见到这一类的建筑时，就会被一些特殊的美感所侵染，其中的一种美是无序之美，每间屋子别具一格，代表着主人独特的品味与生活习惯，不存在千篇一律的单调感，而是蕴藏着无数耐人寻味的小地方，只要有心便会有惊喜的收获。另一种美我称之为熟悉之美，当我望向这栋房子时，我既可以看见阳光铺满地板的场景，也可以看见白漆墙面在阴天的衬托下闪耀着灰蓝的色彩，还可以看见夜色笼罩下透出窗口的朦胧灯光。当我可以同时看见这个房子每一个时间的姿态与每一个角落的样子时，又如何能不觉得它是美的？</p>
+<p>或许正是因为迷恋着这种美，我仍然在无数个梦里遁回了家，恰似十几年前那般，独坐窗前，看着前方朦胧的未来。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%AE%B6/">
+            https://illusionzone.github.io/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%AE%B6/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【妄想记】妄想记 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%AF%B9%E5%BD%93%E4%B8%8B%E7%BB%8F%E6%B5%8E%E7%A4%BE%E4%BC%9A%E7%9A%84%E4%B8%80%E7%82%B9%E4%BD%93%E9%AA%8C%E4%B9%8B%E6%84%9F/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【妄想记】在公元2023年的当下谈谈一点自己对经济社会的体验与思考 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

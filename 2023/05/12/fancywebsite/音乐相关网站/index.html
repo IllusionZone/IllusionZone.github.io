@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【Fancy Website】音乐相关网站</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【Fancy Website】音乐相关网站">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2023/05/12/fancywebsite/%E9%9F%B3%E4%B9%90%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="略">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-05-12">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-07-14">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="Fancy Website">
+        
+          <meta 
+            property="og:article:tag" 
+            content="音乐">
+        
+          <meta 
+            property="og:article:tag" 
+            content="music">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">音乐相关网站收录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%AB%E9%9F%B3%E7%A4%BE"><span class="toc-text">漫音社</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iMoongo"><span class="toc-text">iMoongo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%9C%E9%92%9F"><span class="toc-text">铜钟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mp3-banana-pro"><span class="toc-text">mp3-banana.pro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%BD%E7%8B%97%E9%9F%B3%E4%B9%90"><span class="toc-text">顽狗音乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ZZ123"><span class="toc-text">ZZ123</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E8%8C%83%E4%B8%9D%E2%80%94%E2%80%94%E7%94%B5%E5%BD%B1%E9%9F%B3%E4%B9%90%E7%B2%BE%E9%80%89"><span class="toc-text">音范丝——电影音乐精选</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kunstderfuge"><span class="toc-text">kunstderfuge</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%BD%E5%90%AC%E8%BD%BB%E9%9F%B3%E4%B9%90%E7%BD%91%E2%80%94%E2%80%94%E6%9C%80%E5%A5%BD%E5%90%AC%E7%9A%84%E8%BD%BB%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB%E3%80%81%E8%AF%95%E5%90%AC%E3%80%81%E6%AC%A3%E8%B5%8F%E3%80%81%E4%B8%8B%E8%BD%BD%E3%80%81%E6%8E%A8%E8%8D%90%E3%80%81%E6%8E%92%E8%A1%8C"><span class="toc-text">好听轻音乐网——最好听的轻音乐分享、试听、欣赏、下载、推荐、排行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MusicEnc%E2%80%94%E2%80%94Search-MP3-song-lyrics"><span class="toc-text">MusicEnc——Search MP3 song lyrics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MyFreeMP3"><span class="toc-text">MyFreeMP3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Artlist"><span class="toc-text">Artlist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Epidemic-Sound"><span class="toc-text">Epidemic Sound</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%8C%E6%9B%B2%E5%AE%9D"><span class="toc-text">歌曲宝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#musicForProgramming"><span class="toc-text">musicForProgramming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FreeMind%E2%80%94%E2%80%94%E8%87%AA%E7%84%B6%E4%B9%8B%E5%A3%B0%EF%BC%8C%E5%BF%83%E7%81%B5%E5%B9%B3%E9%9D%99%E7%BB%BF%E6%B4%B2"><span class="toc-text">FreeMind——自然之声，心灵平静绿洲</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Radiooooo"><span class="toc-text">Radiooooo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E4%BA%BA%E7%A7%91%E6%8A%80"><span class="toc-text">原始人科技</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#freesoud%E2%80%94%E2%80%94%E6%97%A0%E7%89%88%E6%9D%83%E9%9F%B3%E4%B9%90%E5%BA%93"><span class="toc-text">freesoud——无版权音乐库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#stockstune%E2%80%94%E2%80%94AI%E7%94%9F%E6%88%90%E9%9F%B3%E4%B9%90%E5%BA%93"><span class="toc-text">stockstune——AI生成音乐库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kongnao-com%E2%80%94%E2%80%94%E5%9B%BD%E5%A4%96%E5%85%8D%E7%89%88%E6%9D%83%E9%9F%B3%E4%B9%90%E7%AB%99"><span class="toc-text">kongnao.com——国外免版权音乐站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%80%E4%B9%90"><span class="toc-text">雀乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%8C%E8%AF%8D%E6%98%93"><span class="toc-text">歌词易</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MinorSong%E2%80%94%E2%80%94Global-Voices"><span class="toc-text">MinorSong——Global Voices</span></a></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【Fancy Website】音乐相关网站
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-05-11T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-05-12</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/Fancy-Website/" 
+          class="post-meta-link">
+          Fancy Website
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>480 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/Fancy-Website/" 
+            class="post-meta-link">
+            Fancy Website
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E9%9F%B3%E4%B9%90/" 
+            class="post-meta-link">
+            音乐
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/music/" 
+            class="post-meta-link">
+            music
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"></div>
+<h1>音乐相关网站收录</h1>
+<h2 id="漫音社">漫音社</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.zzzz688.com/">https://www.zzzz688.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>动漫音乐分享下载<br>
+<img src="/image/fancywebsite/音乐网站/漫音社.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/漫音社.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="iMoongo">iMoongo</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://imoongo.com/discover">https://imoongo.com/discover</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>纯音乐在线聆听<br>
+<img src="/image/fancywebsite/音乐网站/iMoongo.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/iMoongo.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="铜钟">铜钟</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://tonzhon.com/">https://tonzhon.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/铜钟.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/铜钟.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="mp3-banana-pro"><a target="_blank" rel="noopener" href="http://mp3-banana.pro">mp3-banana.pro</a></h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://mp3-banana.pro/">https://mp3-banana.pro/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/mp3-banana.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/mp3-banana.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="顽狗音乐">顽狗音乐</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://music.dogged.cn/">https://music.dogged.cn/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/顽狗音乐.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/顽狗音乐.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="ZZ123">ZZ123</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://zz123.com/">https://zz123.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/ZZ123.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/ZZ123.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="音范丝——电影音乐精选">音范丝——电影音乐精选</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.yinfans.me/">https://www.yinfans.me/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/音范丝.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/音范丝.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="kunstderfuge">kunstderfuge</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.kunstderfuge.com/">https://www.kunstderfuge.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>MIDI格式的古典音乐免费下载网站<br>
+<img src="/image/fancywebsite/音乐网站/kunstderfuge.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/kunstderfuge.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="好听轻音乐网——最好听的轻音乐分享、试听、欣赏、下载、推荐、排行">好听轻音乐网——最好听的轻音乐分享、试听、欣赏、下载、推荐、排行</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="http://www.htqyy.com/">http://www.htqyy.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/好听轻音乐网.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/好听轻音乐网.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="MusicEnc——Search-MP3-song-lyrics">MusicEnc——Search MP3 song lyrics</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.musicenc.com/">https://www.musicenc.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/MusicEnc.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/MusicEnc.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="MyFreeMP3">MyFreeMP3</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="http://tool.liumingye.cn/music/#/">http://tool.liumingye.cn/music/#/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/MusicEnc.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/MusicEnc.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="Artlist">Artlist</h2>
+<p><a target="_blank" rel="noopener" href="https://artlist.io/">https://artlist.io/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/artlist.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/artlist.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="Epidemic-Sound">Epidemic Sound</h2>
+<p><a target="_blank" rel="noopener" href="https://www.epidemicsound.com/">https://www.epidemicsound.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/epidemicsound.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/epidemicsound.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="歌曲宝">歌曲宝</h2>
+<p><a target="_blank" rel="noopener" href="https://www.gequbao.com/">https://www.gequbao.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/歌曲宝.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/歌曲宝.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="musicForProgramming">musicForProgramming</h2>
+<p><a target="_blank" rel="noopener" href="https://musicforprogramming.net/latest/">https://musicforprogramming.net/latest/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>收集一些程序员们工作的时候喜欢听的音乐<br>
+<img src="/image/fancywebsite/音乐网站/musicForProgramming.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/musicForProgramming.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="FreeMind——自然之声，心灵平静绿洲">FreeMind——自然之声，心灵平静绿洲</h2>
+<p><a target="_blank" rel="noopener" href="https://freemind.fit/">https://freemind.fit/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>白噪音网站，以大自然的声音为主，包括自然中的各种声音，如刮风、下雨，还有动物、城市中的各种声音。<br>
+<img src="/image/fancywebsite/音乐网站/FreeMind.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/FreeMind.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="Radiooooo">Radiooooo</h2>
+<p><a target="_blank" rel="noopener" href="https://freemind.fit/">https://freemind.fit/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>允许用户根据不同的国家和不同的时代来探索音乐。只需选择一个国家和一个时间段，就可以听到那个时代该国家的流行音乐，适合音乐爱好者探索未知的音乐领域。<br>
+<img src="/image/fancywebsite/音乐网站/Radiooooo.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/Radiooooo.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="原始人科技">原始人科技</h2>
+<p><a target="_blank" rel="noopener" href="http://ciyuans.com/">http://ciyuans.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/原始人科技.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/原始人科技.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="freesoud——无版权音乐库">freesoud——无版权音乐库</h2>
+<p><a target="_blank" rel="noopener" href="https://www.freesound.cn/">https://www.freesound.cn/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/freesoud.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/freesoud.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="stockstune——AI生成音乐库">stockstune——AI生成音乐库</h2>
+<p><a target="_blank" rel="noopener" href="https://stocktune.com/">https://stocktune.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/stockstune.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/stockstune.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="kongnao-com——国外免版权音乐站"><a target="_blank" rel="noopener" href="http://kongnao.com">kongnao.com</a>——国外免版权音乐站</h2>
+<p><a target="_blank" rel="noopener" href="https://kongano.com/">https://kongano.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/kongnao.com.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/kongnao.com.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="雀乐">雀乐</h2>
+<p><a target="_blank" rel="noopener" href="https://www.indie.cn/about">https://www.indie.cn/about</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/音乐网站/雀乐.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/雀乐.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="歌词易">歌词易</h2>
+<p><a target="_blank" rel="noopener" href="https://geciyi.com/zh-cn">https://geciyi.com/zh-cn</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>提供了500w+首歌词<br>
+<img src="/image/fancywebsite/音乐网站/歌词易.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/歌词易.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="MinorSong——Global-Voices">MinorSong——Global Voices</h2>
+<p><a target="_blank" rel="noopener" href="https://geciyi.com/zh-cn">https://geciyi.com/zh-cn</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>主要提供外国音乐资源<br>
+<img src="/image/fancywebsite/音乐网站/MinorSong.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/音乐网站/MinorSong.png" class="lozad post-image"><br /></p>
+</details>
+<br /><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2023/05/12/fancywebsite/%E9%9F%B3%E4%B9%90%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99/">
+            https://illusionzone.github.io/2023/05/12/fancywebsite/%E9%9F%B3%E4%B9%90%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/05/12/fancywebsite/%E6%B8%B8%E6%88%8F%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【Fancy Website】游戏相关网站 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/05/12/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%A5%A5%E6%96%AF%E7%BB%B4%E8%BE%9B%EF%BC%9A%E4%B8%80%E9%83%A8%E5%8E%86%E5%8F%B2/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】奥斯维辛：一部历史 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">音乐相关网站收录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%AB%E9%9F%B3%E7%A4%BE"><span class="toc-text">漫音社</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iMoongo"><span class="toc-text">iMoongo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%9C%E9%92%9F"><span class="toc-text">铜钟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mp3-banana-pro"><span class="toc-text">mp3-banana.pro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%BD%E7%8B%97%E9%9F%B3%E4%B9%90"><span class="toc-text">顽狗音乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ZZ123"><span class="toc-text">ZZ123</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E8%8C%83%E4%B8%9D%E2%80%94%E2%80%94%E7%94%B5%E5%BD%B1%E9%9F%B3%E4%B9%90%E7%B2%BE%E9%80%89"><span class="toc-text">音范丝——电影音乐精选</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kunstderfuge"><span class="toc-text">kunstderfuge</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%BD%E5%90%AC%E8%BD%BB%E9%9F%B3%E4%B9%90%E7%BD%91%E2%80%94%E2%80%94%E6%9C%80%E5%A5%BD%E5%90%AC%E7%9A%84%E8%BD%BB%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB%E3%80%81%E8%AF%95%E5%90%AC%E3%80%81%E6%AC%A3%E8%B5%8F%E3%80%81%E4%B8%8B%E8%BD%BD%E3%80%81%E6%8E%A8%E8%8D%90%E3%80%81%E6%8E%92%E8%A1%8C"><span class="toc-text">好听轻音乐网——最好听的轻音乐分享、试听、欣赏、下载、推荐、排行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MusicEnc%E2%80%94%E2%80%94Search-MP3-song-lyrics"><span class="toc-text">MusicEnc——Search MP3 song lyrics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MyFreeMP3"><span class="toc-text">MyFreeMP3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Artlist"><span class="toc-text">Artlist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Epidemic-Sound"><span class="toc-text">Epidemic Sound</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%8C%E6%9B%B2%E5%AE%9D"><span class="toc-text">歌曲宝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#musicForProgramming"><span class="toc-text">musicForProgramming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FreeMind%E2%80%94%E2%80%94%E8%87%AA%E7%84%B6%E4%B9%8B%E5%A3%B0%EF%BC%8C%E5%BF%83%E7%81%B5%E5%B9%B3%E9%9D%99%E7%BB%BF%E6%B4%B2"><span class="toc-text">FreeMind——自然之声，心灵平静绿洲</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Radiooooo"><span class="toc-text">Radiooooo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E4%BA%BA%E7%A7%91%E6%8A%80"><span class="toc-text">原始人科技</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#freesoud%E2%80%94%E2%80%94%E6%97%A0%E7%89%88%E6%9D%83%E9%9F%B3%E4%B9%90%E5%BA%93"><span class="toc-text">freesoud——无版权音乐库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#stockstune%E2%80%94%E2%80%94AI%E7%94%9F%E6%88%90%E9%9F%B3%E4%B9%90%E5%BA%93"><span class="toc-text">stockstune——AI生成音乐库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kongnao-com%E2%80%94%E2%80%94%E5%9B%BD%E5%A4%96%E5%85%8D%E7%89%88%E6%9D%83%E9%9F%B3%E4%B9%90%E7%AB%99"><span class="toc-text">kongnao.com——国外免版权音乐站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%80%E4%B9%90"><span class="toc-text">雀乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%8C%E8%AF%8D%E6%98%93"><span class="toc-text">歌词易</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MinorSong%E2%80%94%E2%80%94Global-Voices"><span class="toc-text">MinorSong——Global Voices</span></a></li></ol></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">音乐相关网站收录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%AB%E9%9F%B3%E7%A4%BE"><span class="toc-text">漫音社</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#iMoongo"><span class="toc-text">iMoongo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%9C%E9%92%9F"><span class="toc-text">铜钟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mp3-banana-pro"><span class="toc-text">mp3-banana.pro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%BD%E7%8B%97%E9%9F%B3%E4%B9%90"><span class="toc-text">顽狗音乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ZZ123"><span class="toc-text">ZZ123</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E8%8C%83%E4%B8%9D%E2%80%94%E2%80%94%E7%94%B5%E5%BD%B1%E9%9F%B3%E4%B9%90%E7%B2%BE%E9%80%89"><span class="toc-text">音范丝——电影音乐精选</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kunstderfuge"><span class="toc-text">kunstderfuge</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%BD%E5%90%AC%E8%BD%BB%E9%9F%B3%E4%B9%90%E7%BD%91%E2%80%94%E2%80%94%E6%9C%80%E5%A5%BD%E5%90%AC%E7%9A%84%E8%BD%BB%E9%9F%B3%E4%B9%90%E5%88%86%E4%BA%AB%E3%80%81%E8%AF%95%E5%90%AC%E3%80%81%E6%AC%A3%E8%B5%8F%E3%80%81%E4%B8%8B%E8%BD%BD%E3%80%81%E6%8E%A8%E8%8D%90%E3%80%81%E6%8E%92%E8%A1%8C"><span class="toc-text">好听轻音乐网——最好听的轻音乐分享、试听、欣赏、下载、推荐、排行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MusicEnc%E2%80%94%E2%80%94Search-MP3-song-lyrics"><span class="toc-text">MusicEnc——Search MP3 song lyrics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MyFreeMP3"><span class="toc-text">MyFreeMP3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Artlist"><span class="toc-text">Artlist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Epidemic-Sound"><span class="toc-text">Epidemic Sound</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%8C%E6%9B%B2%E5%AE%9D"><span class="toc-text">歌曲宝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#musicForProgramming"><span class="toc-text">musicForProgramming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FreeMind%E2%80%94%E2%80%94%E8%87%AA%E7%84%B6%E4%B9%8B%E5%A3%B0%EF%BC%8C%E5%BF%83%E7%81%B5%E5%B9%B3%E9%9D%99%E7%BB%BF%E6%B4%B2"><span class="toc-text">FreeMind——自然之声，心灵平静绿洲</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Radiooooo"><span class="toc-text">Radiooooo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%A7%8B%E4%BA%BA%E7%A7%91%E6%8A%80"><span class="toc-text">原始人科技</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#freesoud%E2%80%94%E2%80%94%E6%97%A0%E7%89%88%E6%9D%83%E9%9F%B3%E4%B9%90%E5%BA%93"><span class="toc-text">freesoud——无版权音乐库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#stockstune%E2%80%94%E2%80%94AI%E7%94%9F%E6%88%90%E9%9F%B3%E4%B9%90%E5%BA%93"><span class="toc-text">stockstune——AI生成音乐库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kongnao-com%E2%80%94%E2%80%94%E5%9B%BD%E5%A4%96%E5%85%8D%E7%89%88%E6%9D%83%E9%9F%B3%E4%B9%90%E7%AB%99"><span class="toc-text">kongnao.com——国外免版权音乐站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%80%E4%B9%90"><span class="toc-text">雀乐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%8C%E8%AF%8D%E6%98%93"><span class="toc-text">歌词易</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MinorSong%E2%80%94%E2%80%94Global-Voices"><span class="toc-text">MinorSong——Global Voices</span></a></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

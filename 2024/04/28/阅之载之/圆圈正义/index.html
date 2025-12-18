@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】圆圈正义</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】圆圈正义">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/04/28/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="罗翔  著">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-04-28">
+      <meta 
+        property="og:article:modified_time" 
+        content="2024-05-19">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">圆圈正义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%9A%E4%B8%80%E4%B8%AA%E5%8B%87%E6%95%A2%E7%9A%84%E6%B3%95%E5%BE%8B%E4%BA%BA"><span class="toc-text">做一个勇敢的法律人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E8%87%AA%E6%81%8B%E4%B8%AD%E6%94%80%E7%99%BB%E4%BB%87%E6%81%A8%E7%9A%84%E9%AB%98%E5%B3%B0"><span class="toc-text">在自恋中攀登仇恨的高峰</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89%E4%B8%8E%E5%AE%89%E6%8F%90%E6%88%88%E6%B6%85"><span class="toc-text">圆圈正义与安提戈涅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E2%80%9C%E5%88%80%E6%8A%8A%E5%AD%90%E2%80%9D%E5%88%B0%E2%80%9C%E5%8F%8C%E5%88%83%E5%89%91%E2%80%9D"><span class="toc-text">从“刀把子”到“双刃剑”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A9%E7%94%9F%E7%8A%AF%E7%BD%AA%E4%BA%BA"><span class="toc-text">天生犯罪人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%95%E6%B2%BB%E7%9A%84%E5%A6%A5%E5%8D%8F"><span class="toc-text">法治的妥协</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%87%95%E5%9B%AD%E6%97%A7%E8%AE%AD-%E8%96%AA%E7%81%AB%E7%9B%B8%E4%BC%A0"><span class="toc-text">燕园旧训 薪火相传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%8A%E6%9E%AA%E6%94%AF%E6%89%B9%E5%A4%8D%E3%80%8B%E7%9A%84%E6%83%85%E7%90%86%E6%B3%95"><span class="toc-text">《枪支批复》的情理法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E6%9C%9D%E7%8A%AF%E7%BD%AA%E6%98%AF%E5%90%A6%E7%BB%88%E8%BA%AB%E5%8F%97%E5%88%B6"><span class="toc-text">一朝犯罪是否终身受制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">何谓榜样</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%AA%E5%BF%B5%E4%B8%80%E5%8F%AA%E8%B6%8A%E7%8B%B1%E6%9C%AA%E9%81%82%E7%9A%84%E9%B9%A6%E9%B9%89"><span class="toc-text">纪念一只越狱未遂的鹦鹉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E8%B0%93%E6%A6%9C%E6%A0%B7"><span class="toc-text">何谓榜样</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%B7%AA"><span class="toc-text">下跪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8B%82%E4%BA%BA%E7%BD%97%E5%A4%A7%E6%8B%BF%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-text">狂人罗大拿的故事</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%9F%E5%A4%A7%E7%9A%84%E6%A2%A6%E6%83%B3%E4%BE%9D%E7%84%B6%E5%9C%A8%E5%BF%83%E4%B8%AD"><span class="toc-text">伟大的梦想依然在心中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%88%E7%94%9F%E4%B9%8B%E9%81%93"><span class="toc-text">师生之道</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">道德谴责的打开方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E8%BD%BB%E6%98%93%E5%90%91%E4%BB%96%E4%BA%BA%E6%8A%A1%E8%B5%B7%E9%81%93%E5%BE%B7%E7%9A%84%E6%9D%80%E5%A8%81%E6%A3%92"><span class="toc-text">不要轻易向他人抡起道德的杀威棒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%93%E5%BE%B7%E8%B0%B4%E8%B4%A3%E7%9A%84%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F"><span class="toc-text">道德谴责的打开方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%8B%E5%B8%88%E4%B8%BA%E4%BB%80%E4%B9%88%E5%96%9C%E6%AC%A2%E4%B8%BA%E2%80%9C%E5%9D%8F%E4%BA%BA%E2%80%9D%E5%81%9A%E8%BE%A9%E6%8A%A4"><span class="toc-text">律师为什么喜欢为“坏人”做辩护</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E5%88%80%E7%A0%8D%E5%90%91%E5%90%8C%E8%83%9E%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%E6%98%AF%E5%AF%B9%E5%BC%82%E6%97%8F%E7%9A%84%E4%BB%87%E6%81%A8"><span class="toc-text">大刀砍向同胞的第一步是对异族的仇恨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E8%83%BD%E5%8E%9F%E8%B0%85%E8%BF%99%E6%A0%B7%E7%9A%84%E2%80%9C%E4%BA%BA%E6%B8%A3%E2%80%9D%E5%90%97%EF%BC%9F"><span class="toc-text">你能原谅这样的“人渣”吗？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">身负权力各自珍重</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%8E%E7%AE%A1%E6%8A%BD%E6%A2%AF%E5%AD%90%EF%BC%9A%E4%BD%95%E7%BD%AA%E4%B9%8B%E6%9C%89%E5%92%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">城管抽梯子：何罪之有和该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BA%AB%E8%B4%9F%E6%9D%83%E5%8A%9B-%E5%90%84%E8%87%AA%E7%8F%8D%E9%87%8D"><span class="toc-text">身负权力 各自珍重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%84%E8%8C%83%E6%89%A7%E6%B3%95%EF%BC%8C%E8%AE%A9%E9%9B%B7%E6%B4%8B%E6%A1%88%E4%B8%8D%E5%86%8D%E7%BB%A7%E7%BB%AD"><span class="toc-text">规范执法，让雷洋案不再继续</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%91%E6%B3%95%E8%A7%84%E5%88%B6%E7%BD%91%E7%BB%9C%E6%B0%B4%E5%86%9B%E5%BA%94%E6%85%8E%E9%87%8D"><span class="toc-text">刑法规制网络水军应慎重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E6%83%B3%E3%80%81%E8%A8%80%E8%AE%BA%E5%92%8C%E6%83%A9%E7%BD%9A%E7%9A%84%E8%BE%B9%E7%95%8C"><span class="toc-text">思想、言论和惩罚的边界</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">法律人的理智和多数人的情感</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%81%E6%AD%BB%E4%B8%8D%E6%95%91%EF%BC%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">见死不救，该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E8%BE%B9%E7%9A%84%E9%87%8E%E8%8D%89%E4%BD%A0%E4%B8%8D%E8%83%BD%E9%87%87%EF%BC%9F"><span class="toc-text">路边的野草你不能采？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%88%86%E8%AE%BA%E7%9C%9F%E8%83%BD%E7%BB%91%E6%9E%B6%E5%8F%B8%E6%B3%95%E5%90%97%EF%BC%9F"><span class="toc-text">舆论真能绑架司法吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%B1%E6%AF%8D%E6%9D%80%E4%BA%BA%EF%BC%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">辱母杀人，该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%A0%E5%AE%A2%E5%BF%83%EF%BC%8C%E6%B3%95%E6%B2%BB%E8%B7%AF"><span class="toc-text">侠客心，法治路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%AB%E6%9F%90%E7%BA%B5%E7%81%AB%E4%B8%8E%E6%AD%BB%E5%88%91%E9%80%82%E7%94%A8"><span class="toc-text">莫某纵火与死刑适用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%95%E5%BE%8B%E4%BA%BA%E7%9A%84%E7%90%86%E6%99%BA%E5%92%8C%E5%A4%9A%E6%95%B0%E4%BA%BA%E7%9A%84%E6%83%85%E6%84%9F"><span class="toc-text">法律人的理智和多数人的情感</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E4%BE%B5%E7%8A%AF%E7%BD%AA%E4%B8%8E%E4%B8%8D%E5%90%8C%E6%84%8F"><span class="toc-text">性侵犯罪与不同意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%AB%E8%AE%A9%E8%99%90%E5%BE%85%E5%84%BF%E7%AB%A5%E7%9A%84%E5%8D%95%E4%BD%8D%E7%8A%AF%E7%BD%AA%E6%9D%A1%E6%AC%BE%E8%99%9A%E7%BD%AE"><span class="toc-text">莫让虐待儿童的单位犯罪条款虚置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">生命的尊严</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E8%AE%BA%E5%A4%9A%E4%B9%88%E4%BC%9F%E5%A4%A7-%E7%BB%88%E6%9C%89%E4%B8%80%E5%A4%A9%E8%B0%A2%E5%B9%95"><span class="toc-text">无论多么伟大 终有一天谢幕</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E7%B1%BB%E7%9A%84%E8%A7%82%E5%BF%B5%E4%BC%9A%E5%B4%A9%E6%BA%83%E5%90%97%EF%BC%9F"><span class="toc-text">人类的观念会崩溃吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8A%E5%A4%A9%EF%BC%8C%E4%BD%A0%E5%88%B7%E5%AD%98%E5%9C%A8%E6%84%9F%E4%BA%86%E5%90%97%EF%BC%9F"><span class="toc-text">今天，你刷存在感了吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%B1%E8%A6%81%E5%B8%B8%E8%A7%89%E4%BA%8F%E6%AC%A0-%E5%AE%A2%E8%A6%81%E4%B8%80%E5%91%B3%E6%AC%BE%E5%BE%85"><span class="toc-text">爱要常觉亏欠 客要一味款待</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%8B%E5%AE%A2%E6%9D%80%E4%BA%BA%EF%BC%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">看客杀人，该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%A5%E9%9B%AA%E8%8B%A5%E7%9B%90-%E8%A7%A6%E5%9C%B0%E5%8D%B3%E5%8C%96"><span class="toc-text">春雪若盐 触地即化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E7%9A%84%E5%B0%8A%E4%B8%A5%EF%BC%9A%E6%9C%AA%E7%9F%A5%E6%AD%BB%EF%BC%8C%E7%84%89%E7%9F%A5%E7%94%9F%EF%BC%9F"><span class="toc-text">生命的尊严：未知死，焉知生？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">心怀永恒活在当下</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E6%B3%95%E5%AD%A6%E6%96%B0%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E5%B0%81%E4%BF%A1%EF%BC%9A%E5%85%B3%E4%BA%8E%E8%AF%BB%E4%B9%A6"><span class="toc-text">致法学新人的第一封信：关于读书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E6%B3%95%E5%AD%A6%E6%96%B0%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%BA%8C%E5%B0%81%E4%BF%A1%EF%BC%9A%E4%B8%8E%E4%BA%BA%E5%92%8C%E7%9D%A6%E7%9B%B8%E5%A4%84"><span class="toc-text">致法学新人的第二封信：与人和睦相处</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E6%B3%95%E5%AD%A6%E6%96%B0%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%89%E5%B0%81%E4%BF%A1%EF%BC%9A%E4%B8%8E%E5%BE%B7%E7%9B%B8%E9%9A%8F"><span class="toc-text">致法学新人的第三封信：与德相随</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%83%E6%80%80%E6%B0%B8%E6%81%92-%E6%B4%BB%E5%9C%A8%E5%BD%93%E4%B8%8B"><span class="toc-text">心怀永恒 活在当下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E7%A0%B4%E6%A5%BC%E5%85%B0%E7%BB%88%E4%B8%8D%E8%BF%98"><span class="toc-text">不破楼兰终不还</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E4%B8%80%E7%94%9F%E9%83%BD%E8%B5%B0%E5%9C%A8%E5%9B%9E%E5%AE%B6%E7%9A%84%E8%B7%AF%E4%B8%8A"><span class="toc-text">我们一生都走在回家的路上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8A%E5%A4%A9%E6%98%AF%E8%89%B0%E9%9A%BE%E7%9A%84%EF%BC%8C%E4%BD%86%E4%B9%9F%E6%98%AF%E7%B2%BE%E5%BD%A9%E7%9A%84"><span class="toc-text">今天是艰难的，但也是精彩的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BA%86%E5%91%8A%E5%88%AB%E7%9A%84%E8%81%9A%E4%BC%9A"><span class="toc-text">为了告别的聚会</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E6%94%B6%E5%BD%95"><span class="toc-text">词汇收录</span></a></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】圆圈正义
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-04-27T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-04-28</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>10k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。圆圈正义罗翔    著</p></div>
+<br />
+<img src="/image/book/readandnote/圆圈正义/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/圆圈正义/1.png" class="lozad post-image">
+<br />
+<h1>圆圈正义</h1>
+<h2 id="做一个勇敢的法律人">做一个勇敢的法律人</h2>
+<h2 id="在自恋中攀登仇恨的高峰">在自恋中攀登仇恨的高峰</h2>
+<p><strong>原文摘录</strong><br>
+人的本性喜好拉帮结派，甚至不惜“互拉仇恨”，其中的根源在于人的自恋。</p>
+<p>当生命中缺乏一个终极的敬仰对象，人就不可避免地会把自己置于生命中最重要的地位，形成无法抑制的自恋。自恋让人总是自觉优越：或是出生的优越、种族的优越，或是智力的优越、知识的优越，或是财富的优越、阶层的优越，或是地域的优越、口音的优越，甚至是道德的优越、宗教的优越。正是这种自我的优越感使得人类冲突不断。无论是儒家的“华夷之辨”，清政府的“非我族类，其心必异”，本质上都是人类自恋的产物。</p>
+<p>自恋让人很容易发现并放大他人的问题，但却很少会反思自己也犯着相同的问题。“为什么看见你弟兄眼中有刺，却不想自己眼中有梁木呢？”我们很容易记起近代史的屈辱与伤害，但很少愿意思考我们曾经对外族，甚至是同胞犯下的罪过。</p>
+<p>自恋让人执着于对他人的利用，所有的人际交往都只是在满足自我的需要。如果他人不再有利用价值，人的“爱”也就会消失殆尽。因此，我们很容易记住对他人的恩惠，却很容易忘记他人对自己的恩情。</p>
+<p>自恋让人缺乏安全感。人知道自己的有限，无法主宰未来，但自恋让人靠不断的自我提升来对抗对未来的焦虑。只不过不断的自我成功带来的却是更大的不安全感，以及对同类更深的敌意。人们总是在贪图虚名，互相嫉妒。在人的眼中，每个人都是潜在的竞争对象，没有朋友，只有敌人。</p>
+<p>正是自恋，让人与人之间充满着仇恨。仇恨带来恐惧，恐惧又带来更多的仇恨。</p>
+<p>恐惧让人选择结盟，盟友都是具有相同优越感的人，如共同的出生地，共同的种族，共同的国别。“物以类聚，人以群分”，盟友们在对抗其他群体中获得了短暂的安全，并让优越感得以强化，通过对敌人的“同仇敌忾”深化了盟友的自我优越感。</p>
+<p>然而，这种安全极不稳定。一方面，结盟会让群体之间的冲突加大，产生更大的仇恨；另一方面，人自恋与仇恨的天性也会在盟友内部形成新的派别、新的冲突、新的仇恨。一个仇恨异族的人，也一定会在本族中分门别类，造成争端，人的本性就是如此，习惯拉帮结派，彼此为敌。</p>
+<p>仇恨是爱的缺失，是一种无望的虚空，唯有真正的爱可以填满这种虚空。我们习惯了仇恨，每天电视中充斥的“抗日神剧”“宫斗剧”不断强化着这个我们对外对内的仇恨意识。人们根本不知何为“爱”。我们从小被教导的就是“世上没有无缘无故的爱，也没有无缘无故的恨”，人所定义的“爱”与仇恨只是一线之隔，“对待同志要像春天般的温暖，对待敌人要像严冬一样残酷无情”。“爱”在很多时候，成为放纵、堕落与伤害的遮羞布。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+爱“人类”，却不爱具体的人是很多文人的通病。人类是抽象的，并无具体的对象，无须投入真心，收放自如，还可以为自己赢得道德上的优越感，但具体的人总是有那么多的问题，总是那么的不可爱。爱是要付出代价、恒久忍耐的。真正的爱永远是对具体个人的爱。<br>
+<br /><br /></p>
+<h2 id="圆圈正义与安提戈涅">圆圈正义与安提戈涅</h2>
+<h2 id="从“刀把子”到“双刃剑”">从“刀把子”到“双刃剑”</h2>
+<p><strong>原文摘录</strong><br>
+比犯罪更可怕的是不受限制的国家权力。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+只要将刑法作为工具，权力的滥用也就不可避免，人治可以打着法治的名义大行其道。任何事物一旦成为工具，就必须为使用者服务，当工具可以满足使用者的目的时，工具可以获得各种美赞，而当工具妨碍了使用者实现目的，自然也就会弃之如敝屣。无论将法律定义为何种工具，它都无法避免为人任意裁剪取舍的命运。</p>
+<p>法律工具主义是权力至善的必然体现。深信权力毋庸置疑的正确性导致掌权者很难有一颗谦卑的心去接受束缚，法律自然只能成为掌权者推行政策的工具。</p>
+<p>已有的事，后必再有；已行的事，后必再行。日光之下，并无新事。历史已经，而且还将继续告诫我们，国家权力绝不是完美无瑕的，刑法也不应成为统治者任意操控的工具。刑法要追求公平和正义，而不能唯权力马首是瞻。法律是对世俗社会的诫命，它要约束包括统治者在内的一切权力。在这个意义上，不是法律匍匐于权力之下，而是权力在法律之下俯首称臣。</p>
+<p>因此，刑法不仅要惩罚犯罪，还必须有效地限制国家的刑罚权，保障公民的基本人权。</p>
+<p>古话说：“刑不可知，威不可测，则民畏上也。”如果刑法的使命只是打击犯罪，其实没有必要制定成文刑法。它只需存于统治者的内心深处，一种秘而不宣的刑法较之公开明示的法律更能打击一切所谓具有社会危害性的行为。刑法理论也是简单明快的：因为你实施了危害社会的行为，所以你犯罪了，那么你就要接受包括死刑在内的一切刑罚。这样的话，一切有关谁应该构成犯罪、谁不应该构成犯罪的问题，也就只能依赖于权力者的个人偏好，在某些时候，可能是有关道德与否的争论。这样，我们大可不必担心出现疑难案件，因为只要是我们想打击的，那它就是犯罪。正如有学者所指出的那样：一个国家对付犯罪并不需要刑事法律，没有刑法并不妨碍国家对犯罪的有效打击和镇压，而且没有立法的犯罪打击可能是更加灵活、有效、及时与便利的。如果从这个角度讲，刑法本身是多余和伪善的，它除了在宣传上与标榜上有美化国家权力的作用外，主要是束缚国家机器面对犯罪的反应速度与灵敏度。</p>
+<p>那么，人类为什么要有刑法？这个问题欧洲启蒙思想家们在300年前就作出了回答：刑事法律要遏制的不是犯罪人，而是国家。也就是说，尽管刑法规范的是犯罪及其刑罚，但它针对的对象却是国家。</p>
+<p>在法治社会，刑法不再是“刀把子”，而是“双刃剑”：一刃针对犯罪，一刃针对国家权力。这也就是德国学者拉德布鲁赫所说的刑法的悖论性：</p>
+<p>“自从有刑法存在，国家代替受害人施行报复时开始，国家就承担双重责任，正如国家在采取任何行为时，不仅要为社会利益反对犯罪者，也要保护犯罪人不受被害人的报复。现在刑法同样不只反对犯罪人，也保护犯罪人，它的目的不仅在于设立国家刑罚权力，同时也要限制这一权力，它不只是可罚性的缘由，也是它的界限，因此表现出悖论性：刑法不仅要面对犯罪人以保护国家，也要面对国家保护犯罪人，不单面对犯罪人，也要面对检察官保护市民，成为公民反对司法专横和错误的大宪章。”</p>
+<p>正是基于刑法的双重使命,1997年我国刑法规定了罪刑法定原则——法无明文规定不为罪，法无明文规定不处罚。刑法既要惩罚犯罪，又要限制惩罚犯罪的权力。刑法也就开始实现了从“刀把子”到“双刃剑”的转化，虽然这种转化仍未完待续。<br>
+<br /><br /></p>
+<h2 id="天生犯罪人">天生犯罪人</h2>
+<p><strong>原文摘录</strong><br>
+传统刑法理论推崇意志自由论，认为人们实施犯罪是基于意志自由，是自我选择的结果，犯罪人必须承担道义上的责任，刑罚并不仅仅是为了惩罚犯罪，还要发挥积极地威慑作用，防止他人走上犯罪道路。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+优生学包括两种倾向，一是积极地改良人类品种，二是消极地淘汰劣等人种。于是，我们看到，从被动优生到种族灭绝，仅一步之遥。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我始终铭记德国诗人荷尔德林的一句名言：</p>
+<p>往往是那些善良的愿望，把人类带入了人间地狱。<br>
+<br /><br /></p>
+<h2 id="法治的妥协">法治的妥协</h2>
+<p><strong>原文摘录</strong><br>
+对中国的司法制度有了解的人都知道，法院一旦作出无罪判决，将会直接导致公安机关、检察机关承担一定的国家赔偿责任，甚至就连具体办案的警察、检察官也会受到“错案责任追究”。甚至，在司法机关内部还存在着一些成文或不成文的绩效考核规定，对刑事破案率、批捕率、无罪判决率、撤诉率等进行考核。检察机关往往把无罪判决率作为案件质量考核的硬指标，出现无罪判决，责任人要承担不利后果。一些时候，当事人权利与司法机关绩效考核发生了本不该有的联系。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+法治的基本要义在于用公开的规则去约束权力，让民众能够有合理的预期，免于惶惶未知的恐惧。合理预期是包括人类在内的所有生物的基本天性。科学家做过一个试验，铁笼中养着一只白鼠，左右各开一小门，左边放着一根通电的棍棒，右边放着一块蛋糕，科学家用木棍驱赶老鼠，经过几次训练，白鼠习惯了右跑，一看到木棍，就会主动往右跑。此时，试验者把食物和棍子对调，白鼠往右跑时，等待它的变成敲打鼻子的痛苦，慢慢地它又学会向左跑，试验者再次对调食物与棍子。几次对调，试验者发现，不论再用什么刺激白鼠，它都不愿再跑——它已经疯了。老鼠之所以发疯，是因为失去了对未来的合理预期，它不知道世界为什么突然变了。对未来的合理预期是所有生物存活的基本条件。作为万物之灵的人类更是需要合理预期，法律必须保障人们的这种需要，让人免于恐惧。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+法治必须约束权力，保障自由。通俗地说，国家只拥有法律所规定的权力，而法律所不禁止的则是公民自由驰骋之地。当权力有其固定的边界时，民众才能享有法律所赋予的免于恐惧的自由。如若法外另有民众无法知悉内部规则，人们也就无法形成合理的预期，不可避免地会陷入未知的恐惧。</p>
+<p>当前，一个非常值得警惕的现象就是“以法治之名行法家之实”。两者虽然都是循“法”而治，一字之差，但却谬之千里。早在清末，当时的修律大臣沈家本就一针见血地指出了法家与法治的区别，他说：“抑知申、韩之学以刻核为宗旨，恃威相劫，实专制之尤。泰西（法治）之学，以保护治安为宗旨，人人有自由之便利，仍人人不得稍越法律之范围。两者相衡，判然有别。则以申韩议泰西，亦无究厥宗旨耳。”法家虽然也强调制定规则，但在规则之外仍有大量不为民众知悉的例外秘术：“法者，编著之图籍，设之于官府，而布之于百姓者也。术者，藏之于胸中，以偶众端而潜御群臣者也。故法莫如显，而术不欲见。是以明主言法，则境内卑贱莫不闻知也……用术，则亲爱近习莫之得闻也”，“刻薄少恩”推行专制的法家与保障自由限制国家权力的法治可谓风马牛不相及。</p>
+<p>不得不说的是，一旦进入司法体系，涉案的当事人无论有罪还是无罪都会感到恐惧。是什么样的力量使得当事人如此的恐惧。如果司法是一种让人莫名恐惧的力量，那这一定是法家的幽灵，而绝非法治的精神。<br>
+<br /><br /></p>
+<h2 id="燕园旧训-薪火相传">燕园旧训 薪火相传</h2>
+<h2 id="《枪支批复》的情理法">《枪支批复》的情理法</h2>
+<p><strong>原文摘录</strong><br>
+我国当前的刑法既非客观主义，也非主观主义，而是主客观相统一，认定犯罪，既要考虑客观上的行为，也要考虑主观上的罪过。</p>
+<p>在主观罪过中，行为人的认识错误有时可以排除故意，如想杀猪却误杀人（杀猪案），这就无论如何也不构成故意杀人罪。</p>
+<p>当然，对枪支的认识错误是一种非常特别的认识错误。在德国刑法理论中这属于归类性错误。</p>
+<p>首先，归类性错误不同于单纯的事实认识错误。在单纯的事实认识错误中，行为人并不存在价值观的混乱，他只是主观上对一个纯粹的事实出现了误认。比如，在杀猪案中，行为人把人当成了猪。</p>
+<p>但在归类性错误中，行为人却出现了评价的错误。比如，行为人贩卖某影星艳照，他却真诚地认为这是艺术品，在他的评价中，他所贩卖的是艺术品，而非淫秽物品。</p>
+<p>其次，归类性错误不是禁止性错误，禁止性错误是对某种行为是否为法律所禁止出现的误解，而不是对客观事实规范属性的误解。错误地认为上面说的“艺术品”不属于淫秽物品，这不是禁止性错误，而误认为“贩卖淫秽物品”属于立法者所容忍的“雅癖”，这才是禁止性错误。</p>
+<p>归类性错误是一种介于单纯的事实认识错误和禁止性错误之间的错误。因此，它的处理原则非常特别。</p>
+<p>换言之，对此错误不能按照单纯的事实认识错误，只根据行为人主观立场进行归责。在单纯的事实错误中，只要行为人真诚地认为他在杀猪，没有杀人，那就可以排除故意杀人罪的罪过。此外，也不能按照禁止性错误那样，认为行为人对法律的认识错误一般都不影响其故意的成立。</p>
+<p>归类性错误是一种评价性错误，一般应当遵循“在外行领域的平行性判断”，根据社会主流的价值观念，按照一般人的观念进行判断。这种价值观不是行为人的价值观，也不是法律强推的价值观，而是道德生活所赋予的一般人之价值观。</p>
+<p>日本有过类似判例，虽然法律对某种概念有过规定，但行为人却对事物的概念归属产生了错误，如著名的“狸、貉事件”和“鼹鼠事件”。在日本的《狩猎法》中，狸和鼹鼠都是被禁止捕获的保护动物，但行为人却对某种动物的归属产生了错误认识。在“狸、貉事件”中，行为人误认为当地通称为“貉”的动物与狸不同而加以捕获，但当地人大多都持这种见解。而在“鼹鼠事件”中，行为人不知道当地称为“貘玛”的动物就是“鼹鼠”，而当地人一般都知道“貘玛”就是“鼹鼠”。在第一个案件中，被告被判没有故意，不成立犯罪。而在第二个案件中，法官却认为被告成立故意犯罪。显然，这两个案件中的认识错误都是归类性错误，应当根据社会一般观念进行判断。在第一个案件中，行为人的认识没有偏离社会一般观念，故不成立故意，而在第二个案件中，行为人的认识有违社会一般观念，故不能排除犯罪故意的成立。</p>
+<p>在我国司法实践中，归类性错误比比皆是，如购买宠物禽鸟，但却不知此鸟是法律意义上的珍稀鸟类。再如，随手采摘葡萄，不料此葡萄为科研用葡萄，价值连城，卖肾都赔不起。对此类案件，都应该和对枪支的认识错误一样，看社会一般人能否出现误判，如果你我普罗大众都会出现认识错误，那自然就可否定犯罪的故意。</p>
+<p>司法实践中有些司法机关习惯性地认为，民众必须接受法律所推行的价值观，而忘记了法律的价值观本身来源于民众朴素的道德期待。法律只是道德的载体，权力意志不能任意产生道德法则，道德在法律之上，法律及立法者的意志在道德之下。法律的超验权威不是人的理性所创造的，而是写在历史、文化、传统和习俗中，写在活生生的社会生活之中。</p>
+<p>法律本身应当有其超验的根源，因此立法者的意志并非最高意志，在其上至少还有道德的源头，政府并非最高道德权威的化身。一如保守主义大师斯蒂芬所告诫我们的：任何法律制度都注定存在缺陷，“人们的愚蠢、软弱和无知，在所有人类制度中都留有深深的烙印，就像其他任何时代和地点一样，他们现在仍然清晰可见”。作为法律源头的道德是对法律权威的一种必要限制。</p>
+<p>因此，刑法的合理性不是来自形而上学的推理，而是来自它所服务的道德观念。还是斯蒂芬的话，他说：在任何情况下，立法都要适应一国当时的道德水准。如果社会没有毫不含糊地普遍谴责某事，那么你不可能对它进行惩罚，不然必会“引起严重的虚伪和公愤”。公正的法律惩罚必须取得在道德上占压倒优势的多数的支持，因为“法律不可能比它的民族更优秀，尽管它能够随着标准的提升而日趋严谨”。<br>
+<br /><br /></p>
+<h2 id="一朝犯罪是否终身受制">一朝犯罪是否终身受制</h2>
+<h1>何谓榜样</h1>
+<h2 id="纪念一只越狱未遂的鹦鹉">纪念一只越狱未遂的鹦鹉</h2>
+<h2 id="何谓榜样">何谓榜样</h2>
+<h2 id="下跪">下跪</h2>
+<h2 id="狂人罗大拿的故事">狂人罗大拿的故事</h2>
+<h2 id="伟大的梦想依然在心中">伟大的梦想依然在心中</h2>
+<h2 id="师生之道">师生之道</h2>
+<h1>道德谴责的打开方式</h1>
+<h2 id="不要轻易向他人抡起道德的杀威棒">不要轻易向他人抡起道德的杀威棒</h2>
+<h2 id="道德谴责的打开方式">道德谴责的打开方式</h2>
+<h2 id="律师为什么喜欢为“坏人”做辩护">律师为什么喜欢为“坏人”做辩护</h2>
+<h2 id="大刀砍向同胞的第一步是对异族的仇恨">大刀砍向同胞的第一步是对异族的仇恨</h2>
+<h2 id="你能原谅这样的“人渣”吗？">你能原谅这样的“人渣”吗？</h2>
+<h1>身负权力各自珍重</h1>
+<h2 id="城管抽梯子：何罪之有和该当何罪？">城管抽梯子：何罪之有和该当何罪？</h2>
+<p><strong>原文摘录</strong><br>
+在条件关系的基础上，只有对结果的发生具有重要促进作用的条件才能认为与结果具有刑法上的因果关系。要说明这个问题，首先就要明白刑罚惩罚的正当性根据。</p>
+<p>惩罚的根据是报应，而不是预防，是对已然之罪的报复，而不是对未然之罪的防控。如只以预防作为惩罚的导向，那么为了威慑犯罪，司法机关就可随意抓一个“替罪羊”顶罪，以树立司法机关凡案必破、法网严密的光辉形象，威慑普罗大众。但是，这显然是错误的，违反了无罪不罚这个最基本的常识。</p>
+<p>因果关系涉及的是已经发生的危害行为与结果之间的关系，因此评判它的依据自然也是报应。只有那些严重伤害人们正义情感的行为，才可认为它与危害结果存在刑法上的因果关系，绝对不能因为预防的需要来设定因果关系。比如，劫匪劫持人质，警察出于恶意故意将人质击毙，虽然劫匪的劫持行为与人质之死有一定关系，但人质之死主要与警察有关。如果为了警告将来的劫犯，防止绑架案件的出现，而让劫匪对人质死亡结果承担责任，这明显是不公平的。</p>
+<p>报应是社会公众的一种朴素的正义观，当多种原因交织在一起，只有那些在人类经验法则上极有可能引起危害结果的原因才具有刑法上的意义。如果在我们的经验情感中，是一个行为独立地导致结果发生，就应当将结果归责于该行为，而不能追溯至先前条件，这就是所谓的禁止溯及理论。张三叫李四来吃饭，结果李四在路上遭遇车祸。在经验法则中，李四是被车撞死的，而不是被张三杀害的，因此张三的邀请与李四的死亡充其量只有事实上的因果关系，而不存在法律上的因果关系。事实上，任何如张三一样的人也只会为此事略感愧疚，但不会愧疚到去公安机关投案自首的程度。</p>
+<p>在抽梯事故中，具体的因果流程是：</p>
+<p>企业主违法雇工→城管执法抽梯→ 欧某天冷下地→最后坠亡</p>
+<p>用专业术语来说，这多因一果的现象也就是出现了所谓的介入因素，也即介于先前行为与最后结果之间的因素。介入因素在因果链上的复杂性在于它不仅直接产生了结果，而且使得某些本来不会产生这种结果的先在行为和结果发生了联系。如甲故意伤害乙，乙在被送往医院过程中发生车祸身死。伤害行为（前行为）本来不会直接导致死亡，但由于介入因素（路上的车祸）使得前行为与死亡结果发生了联系。在这种情况下，前行为与危害结果之间是否还存在刑法上的因果关系呢？这就要从一般人的常识来看介入因素与前行为是否具有伴随关系，如果前行为会高概率导致介入因素，而介入因素又引起了最后的结果，那么前行为就与结果有刑法上的因果关系。再如，甲在张三身上泼油点火，张三为了灭火跳入深井而死，死亡结果自然可以归责于甲的点火行为。但若介入因素的出现与前行为并无伴随关系，那么就不能将结果归责于前行为。又如，张三被甲泼油点火，痛苦万分，李四为免张三之苦，将其击毙，这种介入因素就太过异常，与前面的点火行为没有伴随关系。</p>
+<p>在抽梯事故中，作为介入因素的城管将梯子撤走的行为简直匪夷所思，令人发指，电视编剧绞尽脑汁估计都编不出来。因此，雇人安装广告牌的企业负责人与工人的死亡结果不可能存在丝毫刑法上的因果关系，也就不可能构成重大责任事故罪，否则有违人类基本的报应情感。</p>
+<p>然而，城管的抽梯与工人的死亡事故之间则存在刑法上的因果关系。显然，这又涉及另外的介入因素——欧某在梯子被撤后从三楼顶部顺着绳索滑楼。当天郑州最低气温是零下5摄氏度，城管在傍晚时分抽走梯子，三层楼顶相当寒冷，且天快黑了，安装人员自行想办法落地是人之常理。这个介入因素和城管抽梯行为自然有高度伴随关系，因此死亡结果可以归责于城管的抽梯行为。</p>
+<p>事实上，涉事城管因涉嫌玩忽职守罪而被控制，公安机关也认为城管的行为与工人的死亡结果存在刑法上的因果关系。</p>
+<p>但是，涉事城管故意撤走梯子的行为不宜以玩忽职守论，而属于滥用职权。</p>
+<p>滥用职权与玩忽职守最大的区别在于违背职责是故意为之，还是过失而为，虽然两者对于事故结果的发生都可能出于过失。在本案中，城管撤走梯子的行为明显是故意实施的违背职责的行为，而不是疏忽大意违背职责。因此，以滥用职权罪追究其刑事责任可能更为合理。</p>
+<p>刑法第397条第1款规定：“国家机关工作人员滥用职权或者玩忽职守，致使公共财产、国家和人民利益遭受重大损失的，处三年以下有期徒刑或者拘役；情节特别严重的，处三年以上七年以下有期徒刑。本法另有规定的，依照规定。”虽然滥用职权罪和玩忽职守罪的刑罚是一样的，但是对于同等情节，故意型的滥用职权自然要重于过失型的玩忽职守。<br>
+<br /><br /></p>
+<h2 id="身负权力-各自珍重">身负权力 各自珍重</h2>
+<p><strong>原文摘录</strong><br>
+在当下的中国，我们最要警惕的是一种新的“中学为体，西学为用”的思维，即用传统法家的思想冠以功利主义、市场经济和法治的幌子。</p>
+<p>法家崇拜权力，对其而言，权力永远超越法律，知法守法只是针对老百姓而言的，权力则高高在上，可以任意悔法造法。“法治”“法家”虽只一字之别，但却差之千里。在法家看来，最重要的不是法律的规定，而是掌权者的心思。</p>
+<p>法治的本质在于对权力的约束，这和法家完全是风马牛不相及。法治的精神来源于对人性幽暗面的洞察。人性中那些天然的良善和道德，时刻面临着各种严酷的试探和特权的侵蚀，并且事实无数次地证明，我们的人性最终无法抵制这些致命的诱惑。英国前首相威廉·皮特说：“不被限制的权力倾向于腐化那些拥有它之人的灵魂。”这也恰好印证了阿克顿勋爵的至理名言：“权力导致腐败，绝对权力往往导致绝对腐败。”</p>
+<p>一些“法家”不仅顶着法治的“大帽子”，还扯来了功利主义和自由竞争两面大旗。一方面，言必称最大多数的最大利益，不顾少数群体的利益。另一方面，则以自由竞争来规避对弱者本应承担的道义责任。</p>
+<p>如果处在这样一种“中学为体，西学为用”的思维中，人们难免会对权力顶礼膜拜，而失去对一切的敬畏，这种“权力至上”的思维不断释放着人性深处的邪恶。</p>
+<p>在任何行业，如果人们信奉强者为大，也就不可能真正遵守规则，因为规则只对弱者有效，强者永远跳出规则之外。<br>
+<br /><br /></p>
+<h2 id="规范执法，让雷洋案不再继续">规范执法，让雷洋案不再继续</h2>
+<h2 id="刑法规制网络水军应慎重">刑法规制网络水军应慎重</h2>
+<p><strong>原文摘录</strong><br>
+“法无明文规定不为罪，法无明文规定不处罚”，这是法治最基本的原则。法治的精神并不是通过法律规定人们应如何行为，而是划定一个行为的禁区。凡是法律所不禁止的，便是民众可自由驰骋之地。<br>
+<br /><br /></p>
+<h2 id="思想、言论和惩罚的边界">思想、言论和惩罚的边界</h2>
+<p><strong>原文摘录</strong><br>
+腹诽是有理论依据的，据《荀子·宥坐》等文献记载，它来源于孔子的春秋大义。鲁定公十四年（公元前496年），孔子时来运转，受聘为鲁国最高司法官员（大司寇）并代理宰相一职（摄相事），上台仅七天，就诛杀了当时的著名学者少正卯。据荀子与东汉王充考证，少正卯和孔子一样，都系当时名重一方的著名学者，但两人学术观念迥然有别，两人同时都在讲学，而且少正卯的授课方式可能更受学生欢迎，以致孔子的学生也跑去旁听，孔子的课堂一度出现三满三空的现象。最绝的一次，课堂上只剩下颜渊一个人，其他人都跑了。孔子掌权之后，第一件事情就是拿这位学术对手开刀。孔子给少正卯罗织了五大罪名：其一，心达而险，为人通达但居心叵测；其二，行辟而坚，行为乖僻但意志坚强；其三，言伪而辩，观点不对但却善于狡辩；其四，记丑而博，宣扬歪理邪说但却非常博学；其五，顺非而泽，是顺从异端且大力赞赏。孔子说，这五种罪恶，有其中一种就应被诛杀，而少正卯五条全占齐了，是小人的奸雄，不杀不足以平民愤。最后，孔子用《诗经》的话总结道：“忧心悄悄，愠于群小”——宵小成群，让人担忧啦！</p>
+<p>这可谓开思想治罪之先河，后世的君王都或明或暗对这种做法非常推崇，汉文帝就觉得杀得好，遵照这个指示，一大批博士（官名）把孔子的教诲直接写进了《王制》，成了定罪的正式法律条文：“行伪而坚、言伪而辩、学非而博、顺非而泽以疑众，杀。”颜异的“腹诽”、岳飞的“莫须有”、于谦的“意欲罪”以至后世反反复复的文字大狱都是从这个传统脱胎而出，而且越走越远，越走越宽。<br>
+<br /><br /></p>
+<h1>法律人的理智和多数人的情感</h1>
+<h2 id="见死不救，该当何罪？">见死不救，该当何罪？</h2>
+<h2 id="路边的野草你不能采？">路边的野草你不能采？</h2>
+<h2 id="舆论真能绑架司法吗？">舆论真能绑架司法吗？</h2>
+<p><strong>原文摘录</strong><br>
+司法真正忌惮的从来不是舆论，而是舆论背后那种捉摸不定的权力意志。如果说舆论会干扰判决，那也只是问题的表象，深层次的原因仍是权力对司法的干涉。如果司法能够摆脱权力的肆意干涉，舆论根本就不可能影响司法的独立裁决。新闻舆论的监督自由与司法的独立裁判本是法治社会存在的重要前提，两者本可形成良好互动，但恰恰因为司法的现状，造成了媒体、舆论干扰司法的表象。</p>
+<p>真正能够绑架司法的是权力、金钱、人情，还是舆论？如果拒绝舆论对司法的监督，在司法领域中，权力会不会肆无忌惮？在哪一个热点案件中，舆论导致案件的处理背离了正义的原则呢？是“聂树斌案”“呼格吉勒图案”，还是“念斌投毒案”“赵作海案”，甚或“佘祥林案”“天津老太贩枪案”？哪一个热点案件会因为舆论的关注而使案件的判决违背了事实和法律呢？认为舆论绑架司法的人，希望你们能够诚实地回答上述问题。</p>
+<p>建设法治国家，首先就是约束权力，舆论在这方面功不可没。法治不是普法教育，不是天天“今日说法”，夜夜“法制节目”，只要求百姓知法守法是刻薄寡恩的法家，而非以限权为己任的法治。法治的基本精神是对一切权力的限制，“权力导致腐败，绝对权力往往导致绝对腐败”。人性中那些天然的良善和道德，时刻面临着各种严酷的试探和特权的侵蚀，并且事实无数次的证明，我们的人性最终无法抵制这些致命的诱惑。在所有的国家权力中，刑罚最为可怕，它直接针对公民的人身、财产和自由，甚至生命，如果这种权力腐化滥用，后果不堪设想。如培根所言，一次犯罪不过是污染了水流，而一次不公正的司法却是污染了水源。相比犯罪，随时可能被滥用的刑罚权对社会的危害可能更大。</p>
+<p>作为法律人，我们接受了太多技术主义训练，拥有很多的法律知识。但是，如果没有良知的约束，法律技术主义比法盲更可怕。</p>
+<p>法学是一种关于权利与义务的科学，而权利、义务与道德规范有密不可分的联系。无论如何定义法律，法律在原则上都不能超越社会良知的约束。刑事惩罚的一个重要依据就是在道义上是否值得惩罚，因此，任何人都有权利就此发表看法，这不取决于他的职业、他的学历、他的财富，而只是因为他是一个人，一个拥有理性和良知的人。</p>
+<p>如果刑法问题只有法律人士才可以发表见解，如何保证这少数群体不会被收买呢？在纳粹德国，就有许多法律学者以学术的名义，将犯罪与道德完全剥离，视犯罪为一种“疾病”，罪犯也就成了“病人”，当犯罪和疾病被等量齐观，那么专家就可以将任何让政府不爽的行为冠以“疾病”的名义对其实施强制性的“治疗”。对此，“病人”以及民众都无法质疑，因为专家使用的是“治疗”“疾病”等专业概念，对于这些专业概念，普罗大众根本没有发言权。</p>
+<p>没有感性的理性是冰冷的机器，没有理性的感性则是狂热的激情，法律人应当平衡理性与感性。我们要尊重舆论的感性表达，但同时我们也要超越舆论的偏见与盲目，防止多数人的暴政。舆论有可能为某些势力所利用，西太后般对义和拳的利用在历史上屡见不鲜。托克维尔在《论美国的民主》中一再提醒人们警惕多数人的暴政，并认为这是民主制度的悖论，如果不妥善处理好这个问题，民主将会被其自身所摧毁。但是，托氏很高兴地发现，在美国，对抗这种问题的最有效武器就是法律人的规则意识与保守精神。法律要承载人类共通的道德规范，尊重每个个体的尊严，通过正当程序让正义在每个个案中得到践行。如果一种舆论为人蛊惑利用，肆意突破人类基本的道德良知，践踏个体的尊严，法律必须超越这种偏见。<br>
+<br /><br /></p>
+<h2 id="辱母杀人，该当何罪？">辱母杀人，该当何罪？</h2>
+<h2 id="侠客心，法治路">侠客心，法治路</h2>
+<h2 id="莫某纵火与死刑适用">莫某纵火与死刑适用</h2>
+<h2 id="法律人的理智和多数人的情感">法律人的理智和多数人的情感</h2>
+<h2 id="性侵犯罪与不同意">性侵犯罪与不同意</h2>
+<p><strong>原文摘录</strong><br>
+在我国刑法中，至少有两个与性侵犯有关的犯罪，一是强奸罪，二是强制猥亵罪。前罪的对象是女性，其基本刑是3年以上10年以下有期徒刑，如果有加重情节的，如强奸造成其他严重后果的（如导致女性自杀）可以判处10年以上有期徒刑、无期徒刑甚至死刑。因此，其追诉时效最高可达20年。如果过了20年还有必要追诉，可以报请最高人民检察院核准。后罪的对象既包括女性，又包括男性，其最高刑可达15年有期徒刑。<br>
+<br /><br /></p>
+<h2 id="莫让虐待儿童的单位犯罪条款虚置">莫让虐待儿童的单位犯罪条款虚置</h2>
+<h1>生命的尊严</h1>
+<h2 id="无论多么伟大-终有一天谢幕">无论多么伟大 终有一天谢幕</h2>
+<p><strong>原文摘录</strong><br>
+2018年3月14日，霍金去世，享年76岁。霍金是英国剑桥大学著名物理学家，现代最伟大的物理学家之一，著有《时间简史》等书。</p>
+<p>霍金去世的日子，正好是著名科学家爱因斯坦的诞辰日（1879年出生）。而霍金的出生日（1942年1月8日），则是另一位科学家伽利略逝世（1642年1月8日）300周年的日子。<br>
+<br /><br /></p>
+<h2 id="人类的观念会崩溃吗？">人类的观念会崩溃吗？</h2>
+<h2 id="今天，你刷存在感了吗？">今天，你刷存在感了吗？</h2>
+<h2 id="爱要常觉亏欠-客要一味款待">爱要常觉亏欠 客要一味款待</h2>
+<p><strong>原文摘录</strong><br>
+对抽象的人类的爱是无须付出代价的，但对具体的人的爱则总是要投入大量的时间和精力。<br>
+<br /><br /></p>
+<h2 id="看客杀人，该当何罪？">看客杀人，该当何罪？</h2>
+<h2 id="春雪若盐-触地即化">春雪若盐 触地即化</h2>
+<h2 id="生命的尊严：未知死，焉知生？">生命的尊严：未知死，焉知生？</h2>
+<h1>心怀永恒活在当下</h1>
+<h2 id="致法学新人的第一封信：关于读书">致法学新人的第一封信：关于读书</h2>
+<h2 id="致法学新人的第二封信：与人和睦相处">致法学新人的第二封信：与人和睦相处</h2>
+<h2 id="致法学新人的第三封信：与德相随">致法学新人的第三封信：与德相随</h2>
+<h2 id="心怀永恒-活在当下">心怀永恒 活在当下</h2>
+<h2 id="不破楼兰终不还">不破楼兰终不还</h2>
+<h2 id="我们一生都走在回家的路上">我们一生都走在回家的路上</h2>
+<h2 id="今天是艰难的，但也是精彩的">今天是艰难的，但也是精彩的</h2>
+<h2 id="为了告别的聚会">为了告别的聚会</h2>
+<h2 id="词汇收录">词汇收录</h2>
+<p>缗（min 2）：古代穿铜钱用的绳子</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/04/28/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89/">
+            https://illusionzone.github.io/2024/04/28/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/05/19/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%A5%9E%E7%BB%8F%E7%9A%84%E9%80%BB%E8%BE%91/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】神经的逻辑：谜样的人类行为和解谜的人脑机制 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/04/16/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【善恶之屑/外道之歌】视频合集 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">圆圈正义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%9A%E4%B8%80%E4%B8%AA%E5%8B%87%E6%95%A2%E7%9A%84%E6%B3%95%E5%BE%8B%E4%BA%BA"><span class="toc-text">做一个勇敢的法律人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E8%87%AA%E6%81%8B%E4%B8%AD%E6%94%80%E7%99%BB%E4%BB%87%E6%81%A8%E7%9A%84%E9%AB%98%E5%B3%B0"><span class="toc-text">在自恋中攀登仇恨的高峰</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89%E4%B8%8E%E5%AE%89%E6%8F%90%E6%88%88%E6%B6%85"><span class="toc-text">圆圈正义与安提戈涅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E2%80%9C%E5%88%80%E6%8A%8A%E5%AD%90%E2%80%9D%E5%88%B0%E2%80%9C%E5%8F%8C%E5%88%83%E5%89%91%E2%80%9D"><span class="toc-text">从“刀把子”到“双刃剑”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A9%E7%94%9F%E7%8A%AF%E7%BD%AA%E4%BA%BA"><span class="toc-text">天生犯罪人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%95%E6%B2%BB%E7%9A%84%E5%A6%A5%E5%8D%8F"><span class="toc-text">法治的妥协</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%87%95%E5%9B%AD%E6%97%A7%E8%AE%AD-%E8%96%AA%E7%81%AB%E7%9B%B8%E4%BC%A0"><span class="toc-text">燕园旧训 薪火相传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%8A%E6%9E%AA%E6%94%AF%E6%89%B9%E5%A4%8D%E3%80%8B%E7%9A%84%E6%83%85%E7%90%86%E6%B3%95"><span class="toc-text">《枪支批复》的情理法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E6%9C%9D%E7%8A%AF%E7%BD%AA%E6%98%AF%E5%90%A6%E7%BB%88%E8%BA%AB%E5%8F%97%E5%88%B6"><span class="toc-text">一朝犯罪是否终身受制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">何谓榜样</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%AA%E5%BF%B5%E4%B8%80%E5%8F%AA%E8%B6%8A%E7%8B%B1%E6%9C%AA%E9%81%82%E7%9A%84%E9%B9%A6%E9%B9%89"><span class="toc-text">纪念一只越狱未遂的鹦鹉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E8%B0%93%E6%A6%9C%E6%A0%B7"><span class="toc-text">何谓榜样</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%B7%AA"><span class="toc-text">下跪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8B%82%E4%BA%BA%E7%BD%97%E5%A4%A7%E6%8B%BF%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-text">狂人罗大拿的故事</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%9F%E5%A4%A7%E7%9A%84%E6%A2%A6%E6%83%B3%E4%BE%9D%E7%84%B6%E5%9C%A8%E5%BF%83%E4%B8%AD"><span class="toc-text">伟大的梦想依然在心中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%88%E7%94%9F%E4%B9%8B%E9%81%93"><span class="toc-text">师生之道</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">道德谴责的打开方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E8%BD%BB%E6%98%93%E5%90%91%E4%BB%96%E4%BA%BA%E6%8A%A1%E8%B5%B7%E9%81%93%E5%BE%B7%E7%9A%84%E6%9D%80%E5%A8%81%E6%A3%92"><span class="toc-text">不要轻易向他人抡起道德的杀威棒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%93%E5%BE%B7%E8%B0%B4%E8%B4%A3%E7%9A%84%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F"><span class="toc-text">道德谴责的打开方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%8B%E5%B8%88%E4%B8%BA%E4%BB%80%E4%B9%88%E5%96%9C%E6%AC%A2%E4%B8%BA%E2%80%9C%E5%9D%8F%E4%BA%BA%E2%80%9D%E5%81%9A%E8%BE%A9%E6%8A%A4"><span class="toc-text">律师为什么喜欢为“坏人”做辩护</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E5%88%80%E7%A0%8D%E5%90%91%E5%90%8C%E8%83%9E%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%E6%98%AF%E5%AF%B9%E5%BC%82%E6%97%8F%E7%9A%84%E4%BB%87%E6%81%A8"><span class="toc-text">大刀砍向同胞的第一步是对异族的仇恨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E8%83%BD%E5%8E%9F%E8%B0%85%E8%BF%99%E6%A0%B7%E7%9A%84%E2%80%9C%E4%BA%BA%E6%B8%A3%E2%80%9D%E5%90%97%EF%BC%9F"><span class="toc-text">你能原谅这样的“人渣”吗？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">身负权力各自珍重</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%8E%E7%AE%A1%E6%8A%BD%E6%A2%AF%E5%AD%90%EF%BC%9A%E4%BD%95%E7%BD%AA%E4%B9%8B%E6%9C%89%E5%92%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">城管抽梯子：何罪之有和该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BA%AB%E8%B4%9F%E6%9D%83%E5%8A%9B-%E5%90%84%E8%87%AA%E7%8F%8D%E9%87%8D"><span class="toc-text">身负权力 各自珍重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%84%E8%8C%83%E6%89%A7%E6%B3%95%EF%BC%8C%E8%AE%A9%E9%9B%B7%E6%B4%8B%E6%A1%88%E4%B8%8D%E5%86%8D%E7%BB%A7%E7%BB%AD"><span class="toc-text">规范执法，让雷洋案不再继续</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%91%E6%B3%95%E8%A7%84%E5%88%B6%E7%BD%91%E7%BB%9C%E6%B0%B4%E5%86%9B%E5%BA%94%E6%85%8E%E9%87%8D"><span class="toc-text">刑法规制网络水军应慎重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E6%83%B3%E3%80%81%E8%A8%80%E8%AE%BA%E5%92%8C%E6%83%A9%E7%BD%9A%E7%9A%84%E8%BE%B9%E7%95%8C"><span class="toc-text">思想、言论和惩罚的边界</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">法律人的理智和多数人的情感</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%81%E6%AD%BB%E4%B8%8D%E6%95%91%EF%BC%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">见死不救，该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E8%BE%B9%E7%9A%84%E9%87%8E%E8%8D%89%E4%BD%A0%E4%B8%8D%E8%83%BD%E9%87%87%EF%BC%9F"><span class="toc-text">路边的野草你不能采？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%88%86%E8%AE%BA%E7%9C%9F%E8%83%BD%E7%BB%91%E6%9E%B6%E5%8F%B8%E6%B3%95%E5%90%97%EF%BC%9F"><span class="toc-text">舆论真能绑架司法吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%B1%E6%AF%8D%E6%9D%80%E4%BA%BA%EF%BC%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">辱母杀人，该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%A0%E5%AE%A2%E5%BF%83%EF%BC%8C%E6%B3%95%E6%B2%BB%E8%B7%AF"><span class="toc-text">侠客心，法治路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%AB%E6%9F%90%E7%BA%B5%E7%81%AB%E4%B8%8E%E6%AD%BB%E5%88%91%E9%80%82%E7%94%A8"><span class="toc-text">莫某纵火与死刑适用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%95%E5%BE%8B%E4%BA%BA%E7%9A%84%E7%90%86%E6%99%BA%E5%92%8C%E5%A4%9A%E6%95%B0%E4%BA%BA%E7%9A%84%E6%83%85%E6%84%9F"><span class="toc-text">法律人的理智和多数人的情感</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E4%BE%B5%E7%8A%AF%E7%BD%AA%E4%B8%8E%E4%B8%8D%E5%90%8C%E6%84%8F"><span class="toc-text">性侵犯罪与不同意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%AB%E8%AE%A9%E8%99%90%E5%BE%85%E5%84%BF%E7%AB%A5%E7%9A%84%E5%8D%95%E4%BD%8D%E7%8A%AF%E7%BD%AA%E6%9D%A1%E6%AC%BE%E8%99%9A%E7%BD%AE"><span class="toc-text">莫让虐待儿童的单位犯罪条款虚置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">生命的尊严</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E8%AE%BA%E5%A4%9A%E4%B9%88%E4%BC%9F%E5%A4%A7-%E7%BB%88%E6%9C%89%E4%B8%80%E5%A4%A9%E8%B0%A2%E5%B9%95"><span class="toc-text">无论多么伟大 终有一天谢幕</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E7%B1%BB%E7%9A%84%E8%A7%82%E5%BF%B5%E4%BC%9A%E5%B4%A9%E6%BA%83%E5%90%97%EF%BC%9F"><span class="toc-text">人类的观念会崩溃吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8A%E5%A4%A9%EF%BC%8C%E4%BD%A0%E5%88%B7%E5%AD%98%E5%9C%A8%E6%84%9F%E4%BA%86%E5%90%97%EF%BC%9F"><span class="toc-text">今天，你刷存在感了吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%B1%E8%A6%81%E5%B8%B8%E8%A7%89%E4%BA%8F%E6%AC%A0-%E5%AE%A2%E8%A6%81%E4%B8%80%E5%91%B3%E6%AC%BE%E5%BE%85"><span class="toc-text">爱要常觉亏欠 客要一味款待</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%8B%E5%AE%A2%E6%9D%80%E4%BA%BA%EF%BC%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">看客杀人，该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%A5%E9%9B%AA%E8%8B%A5%E7%9B%90-%E8%A7%A6%E5%9C%B0%E5%8D%B3%E5%8C%96"><span class="toc-text">春雪若盐 触地即化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E7%9A%84%E5%B0%8A%E4%B8%A5%EF%BC%9A%E6%9C%AA%E7%9F%A5%E6%AD%BB%EF%BC%8C%E7%84%89%E7%9F%A5%E7%94%9F%EF%BC%9F"><span class="toc-text">生命的尊严：未知死，焉知生？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">心怀永恒活在当下</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E6%B3%95%E5%AD%A6%E6%96%B0%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E5%B0%81%E4%BF%A1%EF%BC%9A%E5%85%B3%E4%BA%8E%E8%AF%BB%E4%B9%A6"><span class="toc-text">致法学新人的第一封信：关于读书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E6%B3%95%E5%AD%A6%E6%96%B0%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%BA%8C%E5%B0%81%E4%BF%A1%EF%BC%9A%E4%B8%8E%E4%BA%BA%E5%92%8C%E7%9D%A6%E7%9B%B8%E5%A4%84"><span class="toc-text">致法学新人的第二封信：与人和睦相处</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E6%B3%95%E5%AD%A6%E6%96%B0%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%89%E5%B0%81%E4%BF%A1%EF%BC%9A%E4%B8%8E%E5%BE%B7%E7%9B%B8%E9%9A%8F"><span class="toc-text">致法学新人的第三封信：与德相随</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%83%E6%80%80%E6%B0%B8%E6%81%92-%E6%B4%BB%E5%9C%A8%E5%BD%93%E4%B8%8B"><span class="toc-text">心怀永恒 活在当下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E7%A0%B4%E6%A5%BC%E5%85%B0%E7%BB%88%E4%B8%8D%E8%BF%98"><span class="toc-text">不破楼兰终不还</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E4%B8%80%E7%94%9F%E9%83%BD%E8%B5%B0%E5%9C%A8%E5%9B%9E%E5%AE%B6%E7%9A%84%E8%B7%AF%E4%B8%8A"><span class="toc-text">我们一生都走在回家的路上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8A%E5%A4%A9%E6%98%AF%E8%89%B0%E9%9A%BE%E7%9A%84%EF%BC%8C%E4%BD%86%E4%B9%9F%E6%98%AF%E7%B2%BE%E5%BD%A9%E7%9A%84"><span class="toc-text">今天是艰难的，但也是精彩的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BA%86%E5%91%8A%E5%88%AB%E7%9A%84%E8%81%9A%E4%BC%9A"><span class="toc-text">为了告别的聚会</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E6%94%B6%E5%BD%95"><span class="toc-text">词汇收录</span></a></li></ol></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">圆圈正义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%81%9A%E4%B8%80%E4%B8%AA%E5%8B%87%E6%95%A2%E7%9A%84%E6%B3%95%E5%BE%8B%E4%BA%BA"><span class="toc-text">做一个勇敢的法律人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E8%87%AA%E6%81%8B%E4%B8%AD%E6%94%80%E7%99%BB%E4%BB%87%E6%81%A8%E7%9A%84%E9%AB%98%E5%B3%B0"><span class="toc-text">在自恋中攀登仇恨的高峰</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%86%E5%9C%88%E6%AD%A3%E4%B9%89%E4%B8%8E%E5%AE%89%E6%8F%90%E6%88%88%E6%B6%85"><span class="toc-text">圆圈正义与安提戈涅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E2%80%9C%E5%88%80%E6%8A%8A%E5%AD%90%E2%80%9D%E5%88%B0%E2%80%9C%E5%8F%8C%E5%88%83%E5%89%91%E2%80%9D"><span class="toc-text">从“刀把子”到“双刃剑”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A9%E7%94%9F%E7%8A%AF%E7%BD%AA%E4%BA%BA"><span class="toc-text">天生犯罪人</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%95%E6%B2%BB%E7%9A%84%E5%A6%A5%E5%8D%8F"><span class="toc-text">法治的妥协</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%87%95%E5%9B%AD%E6%97%A7%E8%AE%AD-%E8%96%AA%E7%81%AB%E7%9B%B8%E4%BC%A0"><span class="toc-text">燕园旧训 薪火相传</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%80%8A%E6%9E%AA%E6%94%AF%E6%89%B9%E5%A4%8D%E3%80%8B%E7%9A%84%E6%83%85%E7%90%86%E6%B3%95"><span class="toc-text">《枪支批复》的情理法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E6%9C%9D%E7%8A%AF%E7%BD%AA%E6%98%AF%E5%90%A6%E7%BB%88%E8%BA%AB%E5%8F%97%E5%88%B6"><span class="toc-text">一朝犯罪是否终身受制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">何谓榜样</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%AA%E5%BF%B5%E4%B8%80%E5%8F%AA%E8%B6%8A%E7%8B%B1%E6%9C%AA%E9%81%82%E7%9A%84%E9%B9%A6%E9%B9%89"><span class="toc-text">纪念一只越狱未遂的鹦鹉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E8%B0%93%E6%A6%9C%E6%A0%B7"><span class="toc-text">何谓榜样</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%B7%AA"><span class="toc-text">下跪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8B%82%E4%BA%BA%E7%BD%97%E5%A4%A7%E6%8B%BF%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-text">狂人罗大拿的故事</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%9F%E5%A4%A7%E7%9A%84%E6%A2%A6%E6%83%B3%E4%BE%9D%E7%84%B6%E5%9C%A8%E5%BF%83%E4%B8%AD"><span class="toc-text">伟大的梦想依然在心中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%88%E7%94%9F%E4%B9%8B%E9%81%93"><span class="toc-text">师生之道</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">道德谴责的打开方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E8%BD%BB%E6%98%93%E5%90%91%E4%BB%96%E4%BA%BA%E6%8A%A1%E8%B5%B7%E9%81%93%E5%BE%B7%E7%9A%84%E6%9D%80%E5%A8%81%E6%A3%92"><span class="toc-text">不要轻易向他人抡起道德的杀威棒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%93%E5%BE%B7%E8%B0%B4%E8%B4%A3%E7%9A%84%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F"><span class="toc-text">道德谴责的打开方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%8B%E5%B8%88%E4%B8%BA%E4%BB%80%E4%B9%88%E5%96%9C%E6%AC%A2%E4%B8%BA%E2%80%9C%E5%9D%8F%E4%BA%BA%E2%80%9D%E5%81%9A%E8%BE%A9%E6%8A%A4"><span class="toc-text">律师为什么喜欢为“坏人”做辩护</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E5%88%80%E7%A0%8D%E5%90%91%E5%90%8C%E8%83%9E%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5%E6%98%AF%E5%AF%B9%E5%BC%82%E6%97%8F%E7%9A%84%E4%BB%87%E6%81%A8"><span class="toc-text">大刀砍向同胞的第一步是对异族的仇恨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E8%83%BD%E5%8E%9F%E8%B0%85%E8%BF%99%E6%A0%B7%E7%9A%84%E2%80%9C%E4%BA%BA%E6%B8%A3%E2%80%9D%E5%90%97%EF%BC%9F"><span class="toc-text">你能原谅这样的“人渣”吗？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">身负权力各自珍重</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%8E%E7%AE%A1%E6%8A%BD%E6%A2%AF%E5%AD%90%EF%BC%9A%E4%BD%95%E7%BD%AA%E4%B9%8B%E6%9C%89%E5%92%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">城管抽梯子：何罪之有和该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BA%AB%E8%B4%9F%E6%9D%83%E5%8A%9B-%E5%90%84%E8%87%AA%E7%8F%8D%E9%87%8D"><span class="toc-text">身负权力 各自珍重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%84%E8%8C%83%E6%89%A7%E6%B3%95%EF%BC%8C%E8%AE%A9%E9%9B%B7%E6%B4%8B%E6%A1%88%E4%B8%8D%E5%86%8D%E7%BB%A7%E7%BB%AD"><span class="toc-text">规范执法，让雷洋案不再继续</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%91%E6%B3%95%E8%A7%84%E5%88%B6%E7%BD%91%E7%BB%9C%E6%B0%B4%E5%86%9B%E5%BA%94%E6%85%8E%E9%87%8D"><span class="toc-text">刑法规制网络水军应慎重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E6%83%B3%E3%80%81%E8%A8%80%E8%AE%BA%E5%92%8C%E6%83%A9%E7%BD%9A%E7%9A%84%E8%BE%B9%E7%95%8C"><span class="toc-text">思想、言论和惩罚的边界</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">法律人的理智和多数人的情感</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%81%E6%AD%BB%E4%B8%8D%E6%95%91%EF%BC%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">见死不救，该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E8%BE%B9%E7%9A%84%E9%87%8E%E8%8D%89%E4%BD%A0%E4%B8%8D%E8%83%BD%E9%87%87%EF%BC%9F"><span class="toc-text">路边的野草你不能采？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%88%86%E8%AE%BA%E7%9C%9F%E8%83%BD%E7%BB%91%E6%9E%B6%E5%8F%B8%E6%B3%95%E5%90%97%EF%BC%9F"><span class="toc-text">舆论真能绑架司法吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BE%B1%E6%AF%8D%E6%9D%80%E4%BA%BA%EF%BC%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">辱母杀人，该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%A0%E5%AE%A2%E5%BF%83%EF%BC%8C%E6%B3%95%E6%B2%BB%E8%B7%AF"><span class="toc-text">侠客心，法治路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%AB%E6%9F%90%E7%BA%B5%E7%81%AB%E4%B8%8E%E6%AD%BB%E5%88%91%E9%80%82%E7%94%A8"><span class="toc-text">莫某纵火与死刑适用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%95%E5%BE%8B%E4%BA%BA%E7%9A%84%E7%90%86%E6%99%BA%E5%92%8C%E5%A4%9A%E6%95%B0%E4%BA%BA%E7%9A%84%E6%83%85%E6%84%9F"><span class="toc-text">法律人的理智和多数人的情感</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E4%BE%B5%E7%8A%AF%E7%BD%AA%E4%B8%8E%E4%B8%8D%E5%90%8C%E6%84%8F"><span class="toc-text">性侵犯罪与不同意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%AB%E8%AE%A9%E8%99%90%E5%BE%85%E5%84%BF%E7%AB%A5%E7%9A%84%E5%8D%95%E4%BD%8D%E7%8A%AF%E7%BD%AA%E6%9D%A1%E6%AC%BE%E8%99%9A%E7%BD%AE"><span class="toc-text">莫让虐待儿童的单位犯罪条款虚置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">生命的尊严</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E8%AE%BA%E5%A4%9A%E4%B9%88%E4%BC%9F%E5%A4%A7-%E7%BB%88%E6%9C%89%E4%B8%80%E5%A4%A9%E8%B0%A2%E5%B9%95"><span class="toc-text">无论多么伟大 终有一天谢幕</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%BA%E7%B1%BB%E7%9A%84%E8%A7%82%E5%BF%B5%E4%BC%9A%E5%B4%A9%E6%BA%83%E5%90%97%EF%BC%9F"><span class="toc-text">人类的观念会崩溃吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8A%E5%A4%A9%EF%BC%8C%E4%BD%A0%E5%88%B7%E5%AD%98%E5%9C%A8%E6%84%9F%E4%BA%86%E5%90%97%EF%BC%9F"><span class="toc-text">今天，你刷存在感了吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%B1%E8%A6%81%E5%B8%B8%E8%A7%89%E4%BA%8F%E6%AC%A0-%E5%AE%A2%E8%A6%81%E4%B8%80%E5%91%B3%E6%AC%BE%E5%BE%85"><span class="toc-text">爱要常觉亏欠 客要一味款待</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%8B%E5%AE%A2%E6%9D%80%E4%BA%BA%EF%BC%8C%E8%AF%A5%E5%BD%93%E4%BD%95%E7%BD%AA%EF%BC%9F"><span class="toc-text">看客杀人，该当何罪？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%A5%E9%9B%AA%E8%8B%A5%E7%9B%90-%E8%A7%A6%E5%9C%B0%E5%8D%B3%E5%8C%96"><span class="toc-text">春雪若盐 触地即化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E7%9A%84%E5%B0%8A%E4%B8%A5%EF%BC%9A%E6%9C%AA%E7%9F%A5%E6%AD%BB%EF%BC%8C%E7%84%89%E7%9F%A5%E7%94%9F%EF%BC%9F"><span class="toc-text">生命的尊严：未知死，焉知生？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">心怀永恒活在当下</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E6%B3%95%E5%AD%A6%E6%96%B0%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E5%B0%81%E4%BF%A1%EF%BC%9A%E5%85%B3%E4%BA%8E%E8%AF%BB%E4%B9%A6"><span class="toc-text">致法学新人的第一封信：关于读书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E6%B3%95%E5%AD%A6%E6%96%B0%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%BA%8C%E5%B0%81%E4%BF%A1%EF%BC%9A%E4%B8%8E%E4%BA%BA%E5%92%8C%E7%9D%A6%E7%9B%B8%E5%A4%84"><span class="toc-text">致法学新人的第二封信：与人和睦相处</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E6%B3%95%E5%AD%A6%E6%96%B0%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%89%E5%B0%81%E4%BF%A1%EF%BC%9A%E4%B8%8E%E5%BE%B7%E7%9B%B8%E9%9A%8F"><span class="toc-text">致法学新人的第三封信：与德相随</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%83%E6%80%80%E6%B0%B8%E6%81%92-%E6%B4%BB%E5%9C%A8%E5%BD%93%E4%B8%8B"><span class="toc-text">心怀永恒 活在当下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E7%A0%B4%E6%A5%BC%E5%85%B0%E7%BB%88%E4%B8%8D%E8%BF%98"><span class="toc-text">不破楼兰终不还</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E4%BB%AC%E4%B8%80%E7%94%9F%E9%83%BD%E8%B5%B0%E5%9C%A8%E5%9B%9E%E5%AE%B6%E7%9A%84%E8%B7%AF%E4%B8%8A"><span class="toc-text">我们一生都走在回家的路上</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8A%E5%A4%A9%E6%98%AF%E8%89%B0%E9%9A%BE%E7%9A%84%EF%BC%8C%E4%BD%86%E4%B9%9F%E6%98%AF%E7%B2%BE%E5%BD%A9%E7%9A%84"><span class="toc-text">今天是艰难的，但也是精彩的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E4%BA%86%E5%91%8A%E5%88%AB%E7%9A%84%E8%81%9A%E4%BC%9A"><span class="toc-text">为了告别的聚会</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E6%94%B6%E5%BD%95"><span class="toc-text">词汇收录</span></a></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

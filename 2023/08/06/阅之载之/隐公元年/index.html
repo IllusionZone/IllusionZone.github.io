@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】隐公元年：一部另类的中国思想史</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】隐公元年：一部另类的中国思想史">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2023/08/06/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%9A%90%E5%85%AC%E5%85%83%E5%B9%B4/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="熊逸  著">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-08-06">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-12-09">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E7%89%88%E5%BA%8F"><span class="toc-text">初版序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%B7-%E9%9A%90%E5%85%AC%E5%85%83%E5%B9%B4%E6%98%A5"><span class="toc-text">第一卷 隐公元年春</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E3%80%8A%E6%98%A5%E7%A7%8B%E3%80%8B%E7%AC%AC%E4%B8%80%E4%B9%89"><span class="toc-text">第一章 《春秋》第一义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%98%A5%E7%8E%8B%E6%AD%A3%E5%85%83"><span class="toc-text">第二章 春王正元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%89%E6%9C%88%EF%BC%8C%E5%85%AC%E5%8F%8A%E9%82%BE%E4%BB%AA%E7%88%B6%E7%9B%9F%E4%BA%8E%E8%94%91"><span class="toc-text">第三章 三月，公及邾仪父盟于蔑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E4%BB%96%E5%92%8C%E5%88%A9%E5%B7%B1"><span class="toc-text">利他和利己</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BE%E4%BC%9A%E8%BF%9B%E6%AD%A5%E4%B8%8E%E5%8E%86%E5%8F%B2%E8%BF%9B%E6%AD%A5"><span class="toc-text">社会进步与历史进步</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%B7"><span class="toc-text">第二卷</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E3%80%8A%E5%B7%A6%E4%BC%A0%E3%80%8B%E7%BB%8F%E8%A7%A3%EF%BC%9A%E9%83%91%E4%BC%AF%E5%85%8B%E6%AE%B5%E4%BA%8E%E9%84%A2"><span class="toc-text">第一章 《左传》经解：郑伯克段于鄢</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E9%83%91%E5%9B%BD%E7%9A%84%E7%AB%8B%E5%9B%BD%E4%B8%8E%E8%BF%81%E5%BE%99%EF%BC%9A%E4%BB%8E%E9%83%91%E5%9B%BD%E4%B8%9C%E8%BF%81%E7%9C%8B%E5%8F%A4%E4%BA%BA%E7%9A%84%E5%AE%B6%E5%9B%BD%E8%A7%82%E5%BF%B5"><span class="toc-text">（一）郑国的立国与迁徙：从郑国东迁看古人的家国观念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%B9%B6%E5%90%8E%E3%80%81%E5%8C%B9%E5%AB%A1%E3%80%81%E4%B8%A4%E6%94%BF%E3%80%81%E8%80%A6%E5%9B%BD%EF%BC%8C%E4%B9%B1%E4%B9%8B%E6%9C%AC%E4%B9%9F"><span class="toc-text">（二）并后、匹嫡、两政、耦国，乱之本也</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%85%8B%E6%AE%B5%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%97%B6%E9%97%B4%E8%B7%A8%E5%BA%A6%E4%B8%8E%E9%98%B4%E8%B0%8B%E7%90%86%E8%AE%BA"><span class="toc-text">（三）克段事件的时间跨度与阴谋理论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E3%80%8A%E5%B7%A6%E4%BC%A0%E3%80%8B%E7%9A%84%E2%80%9C%E4%B9%A6%E6%9B%B0%E2%80%9D%E5%92%8C%E2%80%9C%E5%90%9B%E5%AD%90%E6%9B%B0%E2%80%9D"><span class="toc-text">（四）《左传》的“书曰”和“君子曰”</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%AC%E7%BE%8A%E5%85%8B%E6%AE%B5%E8%A7%A3"><span class="toc-text">第二章 公羊克段解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%AF%82%E6%A2%81%E5%85%8B%E6%AE%B5%E8%A7%A3"><span class="toc-text">第三章 毂梁克段解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E2%80%9C%E5%85%8B%E2%80%9D%E5%AD%97%E8%AF%B8%E5%AE%B6%E8%A7%A3"><span class="toc-text">第四章 “克”字诸家解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%AD%E8%AF%82%E4%B9%8B%E4%BA%89%E4%B8%8E%E4%B9%89%E7%90%86%E4%B9%8B%E4%BA%89"><span class="toc-text">（一）训诂之争与义理之争</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E8%AF%9B%E5%BF%83%E4%B9%8B%E8%AE%BA%E4%B8%8E%E5%8E%9F%E5%BF%83%E5%AE%9A%E7%BD%AA%E2%80%A2%E8%B5%B5%E7%9B%BE%E5%BC%91%E5%90%9B"><span class="toc-text">（二）诛心之论与原心定罪•赵盾弑君</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%BF%97%E5%90%8C%E5%88%99%E4%B9%A6%E5%90%8C%EF%BC%9A%E7%9F%AB%E6%9E%89%E8%BF%87%E6%AD%A3"><span class="toc-text">（三）志同则书同：矫枉过正</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E7%BB%8F%E4%B8%8E%E6%9D%83%E4%B9%8B%E4%B8%80%E4%BE%8B%EF%BC%9A%E8%AE%B8%E7%A9%86%E5%A4%AB%E4%BA%BA"><span class="toc-text">（四）经与权之一例：许穆夫人</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E6%99%8B%E4%BA%BA%E7%BA%B3%E6%8E%A5%E8%8F%91%E4%BA%8E%E9%82%BE%E5%A8%84%EF%BC%8C%E5%BC%97%E5%85%8B%E7%BA%B3"><span class="toc-text">（五）晋人纳接菑于邾娄，弗克纳</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E8%AF%9B%E6%9D%80%E4%BA%B2%E6%97%8F%E7%9A%84%E7%A4%BC%E4%BB%AA"><span class="toc-text">（六）诛杀亲族的礼仪</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%83%EF%BC%89%E9%83%91%E4%BC%AF%E4%B9%8B%E5%BC%9F%E6%AE%B5%E5%87%BA%E5%A5%94%E5%85%B1%EF%BC%8C%E7%A7%A6%E4%BC%AF%E4%B9%8B%E5%BC%9F%E9%8D%BC%E5%87%BA%E5%A5%94%E6%99%8B"><span class="toc-text">（七）郑伯之弟段出奔共，秦伯之弟鍼出奔晋</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%85%8B%E6%AE%B5%E7%9A%84%E4%BA%8B%E4%BB%B6%E7%96%91%E7%82%B9%E4%B8%8E%E8%A4%92%E8%B4%AC%E5%88%86%E6%AD%A7"><span class="toc-text">第五章 克段的事件疑点与褒贬分歧</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%91%E6%97%B6%E4%B9%8B%E5%BC%8A%EF%BC%8C%E9%9D%A9%E7%A4%BC%E4%B9%8B%E8%96%84%EF%BC%9A%E5%95%96%E5%8A%A9%E3%80%81%E9%99%86%E6%B7%B3%E3%80%81%E8%B5%B5%E5%8C%A1%E7%9A%84%E5%AD%A6%E6%9C%AF%E9%9D%A9%E5%91%BD"><span class="toc-text">（一）救时之弊，革礼之薄：啖助、陆淳、赵匡的学术革命</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%AE%8B%E5%AD%A6%E7%AE%A1%E7%AA%A5"><span class="toc-text">（二）宋学管窥</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%AD%99%E5%A4%8D"><span class="toc-text">1. 孙复</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%88%98%E6%95%9E"><span class="toc-text">2. 刘敞</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E7%8E%8B%E5%AE%89%E7%9F%B3"><span class="toc-text">3. 王安石</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E8%8B%8F%E8%BD%BC%E4%B8%8E%E8%8B%8F%E8%BE%99"><span class="toc-text">4. 苏轼与苏辙</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E8%83%A1%E5%AE%89%E5%9B%BD"><span class="toc-text">5. 胡安国</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E7%9C%9F%E5%BE%B7%E7%A7%80"><span class="toc-text">6. 真德秀</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-%E5%90%95%E7%A5%96%E8%B0%A6%E3%80%8A%E4%B8%9C%E8%8E%B1%E5%8D%9A%E8%AE%AE%E3%80%8B%EF%BC%9A%E7%A7%91%E4%B8%BE%E8%8C%83%E6%96%87"><span class="toc-text">7. 吕祖谦《东莱博议》：科举范文</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-%E8%B5%B5%E9%B9%8F%E9%A3%9E%E3%80%8A%E6%98%A5%E7%A7%8B%E7%BB%8F%E8%8D%83%E3%80%8B%EF%BC%9A%E4%B8%BA%E5%8F%94%E6%AE%B5%E8%BE%A9%E6%8A%A4"><span class="toc-text">8. 赵鹏飞《春秋经荃》：为叔段辩护</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E7%BB%8F%E5%AD%A6%E7%90%86%E5%AD%A6%E5%8C%96%EF%BC%8C%E5%AD%94%E5%AD%90%E6%9C%B1%E5%AD%90%E5%8C%96"><span class="toc-text">9. 经学理学化，孔子朱子化</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%AE%8B%E5%85%83%E4%B9%8B%E9%99%85%EF%BC%9A%E4%B8%8D%E4%BB%95%E4%BA%8C%E6%9C%9D%E4%B8%8E%E5%8D%8E%E5%A4%B7%E4%B9%8B%E8%BE%A9"><span class="toc-text">（三）宋元之际：不仕二朝与华夷之辩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E6%98%8E%E4%BB%A3%EF%BC%9A%E9%9D%96%E9%9A%BE%E4%B9%8B%E5%8F%98%E4%B8%8E%E5%85%8B%E6%AE%B5%E6%96%B0%E8%A7%A3"><span class="toc-text">（四）明代：靖难之变与克段新解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E6%B8%85%E4%BB%A3%E5%85%8B%E6%AE%B5%E8%A7%A3%E4%B8%89%E4%BE%8B"><span class="toc-text">（五）清代克段解三例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E4%B8%A5%E5%90%AF%E9%9A%86"><span class="toc-text">1. 严启隆</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%AF%9B%E5%A5%87%E9%BE%84%E3%80%81%E4%B8%87%E6%96%AF%E5%A4%A7"><span class="toc-text">2. 毛奇龄、万斯大</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E6%9D%8E%E5%A1%A8"><span class="toc-text">3. 李塨</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E7%BB%93%E8%AF%AD"><span class="toc-text">（六）结语</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%9D%8E%E8%B4%BD%E9%97%AE%E9%A2%98"><span class="toc-text">1. 李贽问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%BF%AE%E6%98%94%E5%BA%95%E5%BE%B7%E7%9A%84%E8%99%9A%E6%9E%84%E4%B8%8E%E7%91%9E%E6%A0%BC%E7%91%9E%E6%A0%BC%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-text">2. 修昔底德的虚构与瑞格瑞格的故事</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E6%95%B4"><span class="toc-text">词汇整</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】隐公元年：一部另类的中国思想史
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-08-05T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-08-06</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>15.5k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p><p>《隐公元年：一部另类的中国思想史》<br>熊逸  著</p></div>
+<br />
+<img src="/image/book/readandnote/隐公元年/1.png" width="500rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/隐公元年/1.png" class="lozad post-image">
+<br />
+<h2 id="初版序">初版序</h2>
+<p><strong>原文摘录</strong><br>
+中国人一向被认为有着世界第一的历史传统，而实质上，中国历代对历史的态度与其说表现为一种历史传统，不如说表现为一种政治传统。史，是作为政治与意识形态的附属物而绵延了两千多年的，所谓秉笔直书的精神无疑是被曲解与夸大了的——至少是在另外一种“秉笔直书”的层面上被理解的。这正是本书在梳理“《春秋》三传”之阐释史的过程中要展现给读者的。</p>
+<p>经与史，是一枚硬币的两面。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+宇宙有其自身的规律，这些规律与人类相互矛盾的梦想和愿望毫不相干，而在这些规律形成的过程中，我们并没有为其添一块砖加一片瓦，只不过随意用一些词语为它们命名，还有，古往今来的一切都告诉我们，宇宙利用这些规律想要达到的目的总是远远超出我们的理解能力。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+经学的这些现象，看上去完全符合宗教社会学家贝格尔所谓人类建造意义世界之过程的三个阶段：外在化、客观化和内在化。用《神圣的帷幕》一书译者所做的概括：“外在化，就是人通过其肉体和精神的活动，不断将自己的存在倾注入世界的过程。所谓客观化，是指人类的产物都具有一个规律，即它一旦产生，就具有了独立性，有其自身的逻辑，它的创造主体在某种意义上就开始受制于它。而内在化，则意味着人将客观化了的产物重新吸收进自己的意识，于是它们就既是外在的实在，又是内在于人自己意识中的现象。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在经学的视野里，真实的孔子也许并不那么重要。因为真正在中国历史上发生巨大影响的那些所谓儒家思想、孔子真义，其实和孔子本人并没有太大关系，和原典本身也没有太大关系，而真正发生巨大影响的却是何休版孔子、杜预版孔子、郑玄版孔子、孔颖达版孔子、朱熹版孔子、王阳明版孔子……要了解儒家思想以及儒家思想与社会历史之间的互动，就该对这些不同时代、不同版本的孔子投以比对孔子本人更大的关注，让典籍从字面上孤立的文本“立体化”，让典籍包含有社会史、思想史、阐释史的内容。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+作为与“误读”相对立的“正解”，至少存在三个层面，即事实正确、义理正确和政治正确。正文中会有详细的分析，这里先用一个小孩子的问题来表达之：</p>
+<p>所谓“事实正确”，小毛说：“我有一个爸爸。”</p>
+<p>所谓“义理正确”，小毛的爸爸是汉奸。小毛恨恨地说：“我没有这个爸爸。”</p>
+<p>所谓“政治正确”，四岁的小毛问妈妈：“是你和爸爸一起生的我吗？”妈妈回答说：“你是从石头缝蹦出来、被妈妈捡回家的。”</p>
+<p>小毛有一个血缘上的爸爸，这是一个斩钉截铁的事实，无论时代如何变换，无论社会风气如何变换，无论小毛是否见过自己的爸爸，这个事实都是永恒而唯一的。在“事实正确”的层面上，真相只有一个，而在“义理正确”和“政治正确”的层面上，真相却有很多。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+儒学的历史是一个人们不断地赋予儒家经典以意义的过程，同时也是人们给自己所生活的世界赋予意义的过程。这些被人们所赋予的意义反过来又深切地影响着人们自身，是为前文所述的贝格尔之论，这是经学史的宗教性一面。<br>
+<br /><br /></p>
+<h2 id="第一卷-隐公元年春">第一卷 隐公元年春</h2>
+<h3 id="第一章-《春秋》第一义">第一章 《春秋》第一义</h3>
+<p><strong>原文摘录</strong><br>
+公元前722年，即东周时代之鲁隐公元年，是《春秋》二百四十二年记事之首年：</p>
+<p>元年春王正月。</p>
+<p>三月，公及邾仪父盟于蔑。</p>
+<p>夏五月，郑伯克段于鄢。</p>
+<p>秋七月，天王使宰咺来归惠公、仲子之赗。</p>
+<p>九月，及宋人盟于宿。</p>
+<p>冬十有二月，祭伯来。公子益师卒。</p>
+<p>以上是《春秋》对鲁隐公元年整整一年中的全部记事，一共六十二字，平均每月五字。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+汉书·艺文志》有“左史记言，右史记事；事为《春秋》，言为《尚书》”，虽然左史和右史的职能之分在《礼记·玉藻》里完全颠倒，但这最低限度也能说明古代的史官有可能是存在两套书写传统的：一是记言，记录的是重要领导人的重要讲话（《尚书》里就多是这样的内容，还有不少是铸在青铜礼器上的，长篇大论在所多有）；一是记事，就像《春秋》这样的体例，言简意赅，不温不火，如同《人民日报》上的新闻标题（虽然《春秋》该不该被归到史官系统里，还是一个很大的问题）。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+史官记事编史，是一种地地道道的政治行为。周代史官记事编史的政治功能主要表现在两个方面：一是监察君臣，二是为后世立法”。若论“流长”，“文革”时期连历史照片都会篡改，这已是尽人皆知的事情了。从这里，我们倒可以很好地领会克罗齐的名言：“一切历史都是当代史”，因为历史的面貌似乎并不取决于历史本身，而更多地取决于当下的意识形态需要。甚至，这样一种在现代眼光下看似有些荒诞的观念在古代并不是偷偷摸摸的，而常常是被堂而皇之地奉为圭臬。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+公羊传·哀公十四年》又有“所见异辞，所闻异辞，所传闻异辞”，《春秋》二百四十二年于是被划分为所见、所闻、所传闻三个阶段。隐公时代属于“所传闻”的阶段，史实得之于辗转相传，至于《春秋》末期的定公、哀公时代，则正是孔子所生活的时代，属于“所见”的阶段。这个解释似也有理，而且推想一下，《春秋》始隐不过是孔子追溯传闻的“力所能及”罢了，此中似乎并无深意。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+而将周公与孔子并举，也代表着时代风气——宋朝以前是“周孔”并称，宋朝以后才“孔孟并称”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+毕竟，对答案的评判不能只看它是否合理，因为合理的答案未必就是正确的答案。在若干个合理答案之中，“更合理”或者“最合理”的那个也不一定就是正确的。不是所有人在所有时候都只按照理性行事，也不是所有人都具有同样的思维方式，对一个历史事件的所有记载更不会毫无遗漏地告诉我们有关这一事件的所有环节。于是，事件常常是需要拼凑的，“合理”常常是存在缺环的，不合理的答案未必是不正确的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+现在看来，作为“误读”对立面的“正解”，至少存在着三个层次，即事实正确、义理正确、政治正确。</p>
+<p>所谓“诗无达诂，文无达诠”，“有一千个观众就有一千个哈姆雷特”，这只是针对文艺作品来说的，法官在面对不同证词的时候，显然就不大适合使用这种毫无标准的标准。那么，就“事实正确”来说，真相只有一个。学者们抽丝剥茧，是为了达致这一真相，达致这一唯一的真相——不管道德风尚怎么变，不管政治形势怎么变，真相始终就是那一个，永远不变。以这种眼光来看待经典，也就是把经典从经学当中抽离出来，将之纳入史学范畴，信者传信，疑者传疑。</p>
+<p>我在序言里引述过的贝格尔的意思，这是“人们给一个无意义的世界不断赋予意义的过程”，这可以说是人类的本能。就“义理正确”来说，胡安国和吕大圭都是典型。“义理正确”并不是唯一的，它会随时代风气而变，会随学者的个人气质与学术修养而变。两种相互对立的“义理正确”并不一定可以证伪对方，它们既可以同时正确，也可以在各自特定的历史位置上各自正确。它们也可能既是正确的，又是错误的，即便在同一个时间里。当然，一般只有旁观者才会这么看，当事人往往坚信自己手中握到的就是那唯一的真理。</p>
+<p>就“政治正确”来说，上述乾隆帝的做法就是一个典型，汉代石渠阁和白虎观的两大会议，也都是“政治正确”的范例。儒学也好，墨学也罢，种种学说在“政治正确”的领域里几乎仅仅作为名义上的学派而存在，而实质性的学派只有一个，就是官学。“政治正确”当然也不是唯一的，它更容易随时代的不同而变化，随统治者的不同而变化。对其衡量的标准大多都是当时当地的，这个时代的“政治正确”在另一个时代里很可能就不再“政治正确”了。</p>
+<p>“正确”的这三个层次往往并不统一：义理正确，不一定事实正确；事实正确，也不一定政治正确。</p>
+<p>再者，“一部经学史就是一部误读史”，这句话还可以作如下的理解：一部经学史就是一部大家互相以正解自居而指斥别人为误读的历史。</p>
+<p>只要有正统，就必然有异端；越感觉自己正统，也就越容易感觉别人异端。在多元化观念兴起之前，对异端当然不会客气，因为打击异端至少符合“义理正确”，当然很多时候还同时符合“政治正确”。<br>
+<br /><br /></p>
+<h3 id="第二章-春王正元">第二章 春王正元</h3>
+<p><strong>原文摘录</strong><br>
+周予同归纳经学三大派，论其特点与利弊，以一言蔽之：“今文学以孔子为政治家，以六经为孔子致治之说，所以偏重于‘微言大义’，其特色为功利的，而其流弊为狂妄。古文学以孔子为史学家，以六经为孔子整理古代史料之书，所以偏重于‘名物训诂’，其特色为考证的，而其流弊为烦琐。宋学以孔子为哲学家，以六经为孔子载道之具，所以偏重于心性气理，其特色为玄想的，而其流弊为空疏。”</p>
+<p>一个形象越模糊、越复杂，就提供了越多的诠释乃至于借题发挥的余地。“孔丘究竟是一个学者还是一个受天命的王，这是古文经学和今文经学的一个根本分歧之点。孔丘究竟是一个人还是一个神，这是古文经学和谶纬的一个根本分歧之点。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+乌托邦在古代还是在未来，时人应该复古还是应该维新，这两派都能在同样的厚典中找到理论依据。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这可以说是一种打补丁式的解决方案，当旧补丁遇到新破绽的时候，就需要新补丁来弥合；或者说像是圆谎，当已有的谎言被指出有漏洞的时候，就用新的谎言来解释。最终的结果难免会是补丁越来越厚，谎言越来越多，而在致用的方面，在需要选择理论武器的时候，所能选择的范围也就越大。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+孔丘姓子，孔是他的氏，前述“殷商后人已经分化成十几个姓了”，其实该是分化成十几个“氏”，只不过姓和氏的区别到秦汉以后基本消失。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当理论和事实冲突的时候，让位的往往是事实。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+从某种意义上说，人类社会是一个需求导向型的社会，重要的不是事实，而是需求，有需求就有创造。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“日南至”即冬至，确认冬至的具体时间是古代历法推算的重点，章鸿钊《中国古历析疑》即谓“考我国之天文学实以‘定月建’与‘求日至’两大法为其始基”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+汉武帝“罢黜百家，独尊儒术”，独尊的不是“儒学”，而是“儒术”，这两者并非同一个概念。现在所谓的“学术”一词，原本分别为“学”和“术”两个独立的概念。朱维铮考察这个问题，说司马迁给儒林或公卿作传的时候，“倘指学问或学人，必用‘文学’，倘指方法或手段，必用‘儒术’，二者从不混用。《汉书》也是如此，不过或改文学为‘经学’，或称儒术为‘经术’。那时为什么重视术学之辨？因为术贵实用，学贵探索。”汉初从叔孙通到董仲舒，一众儒学名家（其实该称为儒术名家），无不是现实色彩很重的实用主义者。进一步说，当时所谓的“独尊儒术”，实际上就是独尊公羊学，董仲舒便是公羊学的一代宗师。而当时的所谓尊孔，原因也正在于《春秋》。《公羊传》附丽于《春秋》之后，《春秋》之学名为《春秋》，实为《公羊》；至于《论语》，在当时却无甚地位——即便在后来“四书”大行的时代，很多时候《春秋》之学仍属“大学课程”，“四书”只是“中小学课程”而已。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+王晖在《古文字与商周史新证》里分析说：周代的宗法制度是建立在血缘宗族关系之上的君位继承法，要实行这种君位继承法，首先必须严格区别嫡庶关系。嫡庶之分，是为了立贵，目的是在成群的妻妾嫔妃中确定母后之子的地位。而母后一般都出身较高，非王室诸侯则为贵族阶层，然后再通过聘定、送迎、告庙、婚礼等一系列程式而确立下来。子以母贵，而母贵一般又是以母方势力、地位为背景来决定的。这种以母贵来决定嫡子的身份地位，是天生素定的，一般不掺杂人为的因素——这就是《左传·昭公二十六年》所说的周礼“王后无適（嫡），则择立长。年均以德，德均以卜。王不立爱，公卿无私，古之制也”。需要说明的是，汉儒所说的“子以母贵，母以子贵”（《公羊传·隐公元年》），前对后错。“子以母贵”确实符合西周春秋时代的宗法制，而“母以子贵”则是战国以来宗法制度崩溃、中央集权逐渐形成之后的现象，并不符合周代宗法制的要求。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+并非“真实的事实”本身，而是这种被“当作”的“真实的事实”，在社会与政治上产生着“真实的影响”。这就是社会学所谓的“托马斯定理”，即“如果人们将某种情境定义为真实的，那么这种情境就会造成真实的影响”。比如，人们认为是女巫造成了干旱，所以要烧死女巫，在这个时候，女巫与干旱无关这个“真实的事实”对于女巫的自救来讲几乎起不到任何作用。与此相近的是所谓的“自证预言”，比如人们“相信”某家银行将要破产而去疯狂挤兑，结果这家本来毫无问题的银行果然破产了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“《春秋》公羊学强调严肃宗法和政治的纲纪，严格等级秩序，提倡正名分、大一统，目的是为了强化中央集权等级制度的权威，这种具有法治精神的学说虽加强了国家的统一，但同时也使宗法伦常温情脉脉的一面大为削弱。与公羊学不同，穀梁学十分重视礼义教化，重视宗法情感，把礼的观念提到了突出的地位，而这具有缓和统治集团内部矛盾，稳定政治统治，保护统治阶级长远利益的作用。比如在解释《春秋》隐公‘元年春王正月’时，《公羊传》说‘立適以长不以贤，立子以贵不以长’‘子以母贵，母以子贵’，强调等级制度的秩序；而《穀梁传》则宣扬‘孝子扬父之美，不扬父之恶’，侧重人伦情绪”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+早期的版本，经是经，传是传，各自独立成书，到晋人杜预手上这才把《左传》的文字拆开，按照时间顺序一一编排在《春秋》每一年的经文当中，使经与传合而为一，是为《经传集解》。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不管一个人多么聪明，多么卓绝，如果说他设计出一幅社会蓝图并付诸实行，并由此取得了伟大的成功，这种事情的可信度能有多高？这是我在《春秋大义》里仔细讨论过的一个问题。一个有趣的现象是：当谈起过去的时候，会说历史是由劳动人民创造的，谈起现在的时候，社会美景却是由伟人设计出来的，等现在变成了过去，不知又该怎么说。所以，话说回来，对种种的设计论最好小心为上。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+聪明人有聪明办法，陈筱芳曾经在和古罗马的婚姻制度比较之后，颇有几分幽默地这样盛赞我们祖先的智慧：“春秋一夫多妻制是一种高级形式的一夫多妻制，既单方面地为男性保留了对异性的原始多占性，又颇具艺术性地增添了文明社会的秩序、礼仪、原则的色彩，并且赋予广家族、繁子孙的冠冕堂皇的使命。”<br>
+<br /><br /></p>
+<h3 id="第三章-三月，公及邾仪父盟于蔑">第三章 三月，公及邾仪父盟于蔑</h3>
+<p><strong>原文摘录</strong><br>
+执牛耳。作为牺牲的那头牲畜被割下了左耳，这只左耳（按照郑玄的描述）被盛放在一个镶着宝珠的木头盘子里，持在了主盟者的手上——这个动作就叫作“执牛耳”。</p>
+<p>“执牛耳”一词到现在还用，只不过和许多渊源古老的词汇一样，意思已经发生变化了，个中原因很可能是：主盟者很容易被人想当然地认为是盟主。但其实并非如此。如果是几个诸侯会盟，惯例是小国执牛耳，甚至执牛耳的人连小国的国君都不是，而是陪同这位小国国君与会的一位大臣。第一个歃血的才是与会的最强者，也就是说，后世意义上的执牛耳者实际上等同于周代歃血排序中的第一人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+儒家讲做人，有“仁、义、礼、智、信”这五大标准，而春秋时代的信观念总体说来不在个人修养而在国家之间的外交行为。这和一些现代观念有所不同——也许是随着国家性质的变化，现代人会以为国家利益高于一切，外交是内政的延伸，国家之间只有永恒的利益而无永恒的敌我，乃至为了国家利益可以理直气壮地背信弃义，而春秋时代的人们也许要单纯一些，至少在表面上还是常常会把信字置于利益之上的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+虽然归根到底，想象的宗法共同体毕竟也只存在于想象之中而已，但在大家都把它当真之后，它也确实发挥了相当实际的作用。这样一种旧瓶装新酒式的概念改造，很像先秦文化中“华夷之辨”的观念变迁——虽然极端的排外主义者无时不有，但总体来说，在社会发展到一定阶段之后，华夷之别的判断标准，从原先的血缘认知变成了文化认知，开放性更强了；张载的宗子与宗臣之论，也使宗法关系由旧有的血缘政治结构变作了哲学本体论，观念上的宗法想象变成了维系社会秩序的一条纽带。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+取侯马盟书中“委质类”的盟书为例，这一类盟书通常都是某些家臣脱离了原来的主君，投奔到新主君这边宣誓效忠，这是要在新主君的宗庙里举行神圣仪式的，要在这里向新主君的先君亡灵剖明忠心，一种新的人身依附关系就这样形成了，而对这些人来讲，主君的利益从此高于一切，这种观念在当时是天经地义的。</p>
+<p>这一类的盟书，开头往往会提到“自质于君所”——“质”字可以通“贽”，《六书故·动物四》“质，亦作贽，通作挚”，意即见面礼，无论是定亲还是拜会，都要带上一些礼物，周人常用大雁，是谓贽。据《〈侯马盟书〉丛考》：“‘自质于君所’的‘质’，它的本义是指盟誓时参盟人对鬼神所奉献的各种信物。如《国语·晋语》：‘所不与舅氏同心者，有如河水。沉璧以质。’注：‘质，信也。’又《国语·鲁语》：‘质之以牺牲。’注：‘质，信也，谓使之盟，以信其约也。’但是，在盟书中，不仅仅是这个意思，还包括把自己‘委质’于新君，自献其身，表示永不背叛的意思。”</p>
+<p>应该就是经过这样的发展，“质”就渐渐从大雁变成了人，于是又有了后来所谓的“人质”——即“以人为质”。</p>
+<p>在欧洲的“封建社会”，这种以人为质的事情几乎也是一样的渊源、一样发生、一样演变着，“委质”的仪式被译为“臣服礼”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+带来这种种心理暗示的力量，可以称之为“仪式力量”，它的另一层重要意义就是起到一种座右铭或戒指的功效，总之，是负责不断提醒当事人的。这和人类记忆力的特点紧密相关，因为“每当人们认为有必要留下记忆的时候，就会发生流血、酷刑和牺牲”，例证是“那最恐怖的牺牲和祭品（诸如牺牲头生子），那最可怕的截肢（例如阉割），那些所有宗教礼仪中最残酷的仪式”，理由是“疼痛是维持记忆力的最强有力的手段”。尼采在《论道德的谱系》一书中如是说，联系到这里所讲的会盟，“流血、酷刑和牺牲”却是非常准确地形容了那些被割了耳朵的牛，当然，在更原始的情境中，当事人要割伤的往往是自己的身体（现代社会依然流行的文身在一定程度上就是这一传统的遗留）。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+所以，像孔子和荀子那般充满着理性智慧的头脑，面对鬼神与仪式的问题时，才会表现出那般看似自相矛盾或曰虚伪的态度，因此收到了墨家等敌对学术势力的猛烈抨击。孔子的这种态度具有相当程度的宗教内涵，涂尔干的一段论述正可为之做一番深入阐发：</p>
+<p>尤其在那些最开化的民族和环境之中，我们经常能够遇到这样的信仰者，虽然当他们个别地看待每个仪式的时候，会对教条所归之的特殊效力抱有怀疑，但他们仍然坚持不懈地参加膜拜。他们无法肯定仪式所规定的各种细节是否可以根据理性来判定，但他们发觉如果让自己摆脱各种繁文缛节而赢得自由，则不可能不陷入道德混乱的状态之中。他们的内心信仰失去了理智基础这一事实，恰恰凸现了他们赖以存在的深刻根源。正因为如此，对于那些统而化之地把各种仪式规定归结为简单粗陋的理性主义的肤浅批评，信仰者通常会不屑一顾：因为宗教仪轨的真正验证并不在与它们表面上所追求的目标，而在于某种看不见的作用，这种作用施加在我们的心灵上，并借此对我们的精神状态产生影响。同理，当布道者号召人们信仰的时候，他并没有把精力放在直截了当地确立和有条有理地论证任何特殊命题的正确性上面，或者是各种教规的功利性上面，而是通过定期举行膜拜仪式来唤起并不断唤起人们的情感，以获得精神上的惬意。这样，他们就创建了信仰的心理倾向，这种倾向要比证明更重要，它可以使心灵忽略逻辑推理的不充分性，并为人们亟欲接受的命题做了铺垫。这种有益的偏见，这种信任的冲动恰恰构成了信仰；同时信仰也树立了仪式的权威，对于信仰者来说，不论他是基督徒还是澳洲人（按：这里所谓“澳洲人”是指澳洲土著），这种权威都没有差别。基督徒的唯一优势，在于能够更好地说明信仰得以形成的心理过程；他知道“唯有信仰，才能获救”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+时至春秋，会盟仪式或许可以被追溯为一种路径依赖的结果，其成因或许还可以分两途来做揣测：一是涂尔干提出的“事物之所以具有神圣性，是因为它就是集体情感的对象”，因此，所谓鬼神的约束力实际上相当程度地来自当时当地的“集体情感”，即风俗、道德等等，联系上文提到的“信”观念的流行更可见出端倪；二是列维-布留尔悉心研究的“原始思维”，诸如“互渗律”之类的思维方式（这种思维方式直到现代社会依然遗存遍布）。</p>
+<p>这些约束力量在很多时候都可以对社会发生相当程度的影响，但每每在社会变革之际，对现实利益的考量终于会冲垮这些心灵堤坝，尤其在其中起到催化剂作用的是：一旦有一个或几个开先例者不但没有受到应有的惩罚，反而获益甚多——这就像曾经有经济学家对《镜花缘》中的君子国所做的推断：只要君子国里混进了一个小人，他所引起的连锁反应或许就能够把整个君子国变成小人国。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+现代人大都知道的一则流传甚广的国际外交常识是：没有永远的朋友，也没有永远的敌人，只有永远的利益。世界发展了两千多年，观念也在不断变迁，鬼神信仰和仪式力量几乎连一星半点儿的约束力都没有了，赤裸裸地只剩下了利益，甚至，背盟者往往还会理直气壮地认为，为了国家利益而背弃盟约，是爱国的、正义的、高尚的。</p>
+<p>个人之间、公司之间订立盟约（契约），受到法律的保障，必要时会有国家机器来强行执法，但国际盟约显然“上边没人”，因而毁约方不但很难被约规制裁，甚至往往因背信弃义而大得其利。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+关于鬼神给人的现世报和来世报，摩莱里抓住了问题的症结，他认为具有惩罚与报复之属性的鬼神是人类在堕落之后于心中拟就的自我镜像。苏东坡和佛印的一则传说广为人知：自己心中是佛，看别人看到的就是佛；自己心中是屎，看别人看到的就是屎。这其实是一则很实用的心理技巧：多观察一个人经常是怎样揣测别人的，你大略就可以判断出这个揣测者是个什么样的人，因为人们常常以己度人。摩莱里的推论正如此理：</p>
+<p>他们行为的堕落自然使他们产生如下的观念：与其说神行善，倒不如说它可怕而富于报复性。我们人类就不可避免地成为最可耻的私利和千万种幻觉的恐惧的卑贱奴隶，而无数愚蠢的谬误使人觉得好像看到整个自然，甚至自己的感情都在与自己作对；人终于不得不成为自我厌恶的对象，并以为造物主会对人类怀有类似的憎恶感情。人自己的狂怒和悔恨、宽恕和冒犯、怜悯和残忍、慈爱和憎恨、高傲和卑贱的冲动，一句话，人作恶与为善之间的永恒摇摆也就必然使人类造出类似于自己的神的形象。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+更加令人不满的是：当鬼神约束至少还在形式上获得延续时，背信弃义便已成为一种司空见惯的现实选择，按照通行本《老子》“大道废，有仁义；智慧出，有大伪；六亲不和，有孝慈；国家昏乱，有忠臣”这个独具慧眼的著名逻辑，如果“信”观念成为口号，就说明这个社会已经在滑向“不信”了。旧形式与新选择之间，挤出了很多虚伪。当然，如果按照马基雅维利的标准，也不该对那些背信弃义的君王以任何谴责，因为“一位英明的统治者绝不能够，也不应当遵守信义”，况且，如果国家利益高于一切，自然高于道德、高于正义、高于所有国民的福祉，更何况信义呢？<br>
+<br /><br /></p>
+<h4 id="利他和利己">利他和利己</h4>
+<h4 id="社会进步与历史进步">社会进步与历史进步</h4>
+<p><strong>原文摘录</strong><br>
+词语经常有一些奇妙的暗示力量，政客与商人往往深谙此道，比如头等舱之后不是二等舱、三等舱，而是经济舱，找不到工作不叫失业而叫待业，国企工人回家不是失业而是下岗。“进化”一词也含有这类暗示效应，它意味着演化进程是进步的、是渐趋美好的，由此而暗示出存在某些“进化规律”和“历史发展的规律”。</p>
+<p>如果可以这样来理解“进化”这一概念，那么，伯特兰•罗素的推论大可以鼓舞我们：“假如进化论的伦理学能够成立，那么对于这个进化过程会发生什么事情，我们大可漠不关心。因为无论它是什么，都可以由此证明它是最好的。”这番话后来被哈耶克当了靶子，哈耶克说：“我不认为集体选择的传统造成的结果肯定是‘好的’——我丝毫不打算主张，在进化过程中长期生存下来的另一些东西，譬如蟑螂，也有道德价值。”</p>
+<p>其实，罗素和哈耶克远没有像我们那样会受到“进化“一词在词语的暗示意义上的干扰——如果可以把evolution翻译为”演化“而不是”进化“，也许会恰当一些。</p>
+<p>“社会的演化”——如果可以这样表达的话——应该能够适度地消弭“进化”一词给我们带来的该词语原本并不具有的一些暗示含义，无论是礼崩乐坏还是狂飙突进，都像是《鲁拜集》里的那首小诗所描绘的：“我像流水不由自主地来到宇宙，不知何来也不知何由；像荒漠之风不由自主地飘去，不知何往，也不能停留。”</p>
+<p>由此牵扯到另外一个问题：这首小诗里所描绘的世界似乎是一个无意义的世界，而人要健康地生活，却往往需要为自己和世界赋予意义，从这层意义而言，宗教的确可以说是人的本能，而所谓“春秋大义”，无论它是否真实，都会在这层意义上顽强地存在着——或许，一部古老的史书被人们在两千年来不断赋予了神圣的宗教意义，而这些原本了无根基的意义又不断地以相当真实的力量影响着两千年来的现实生活。一词而言，经典（或无论何种事情）的真假并不重要，重要的是人们是否把它“当真”。<br>
+<br /><br /></p>
+<h2 id="第二卷">第二卷</h2>
+<h3 id="第一章-《左传》经解：郑伯克段于鄢">第一章 《左传》经解：郑伯克段于鄢</h3>
+<h4 id="（一）郑国的立国与迁徙：从郑国东迁看古人的家国观念">（一）郑国的立国与迁徙：从郑国东迁看古人的家国观念</h4>
+<p><strong>原文摘录</strong><br>
+在史实的种种谜团之上往往纠缠着种种真实的观念——史实也许模糊，观念却很鲜明；训诂也许失据，而观念依然被表达得如此真实而活泼，于是在经学的章句训诂与史学的辨析考据之外呈现出了另一种历史与社会的样貌。<br>
+<br /><br /></p>
+<h4 id="（二）并后、匹嫡、两政、耦国，乱之本也">（二）并后、匹嫡、两政、耦国，乱之本也</h4>
+<p><strong>原文摘录</strong><br>
+叔段在京邑发展势力，被杜预称之为“据大都以耦国”，所谓耦国，《左传·桓公十八年》杜注：“都如国”，就是国中封邑的规模和国都一样大，封邑足以与一国之中央抗衡，形成实质上的两君对峙的局面。现在形容一个人很有钱叫“富可敌国”，古人会说“家富耦国”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+《左传·桓公十八年》记载辛伯有一句非常精辟的话：“并后、匹嫡、两政、耦国，乱之本也。”这是说：媵妾的身份等同于正妻，庶子的地位等同于嫡子，权臣的权力等同于君长，封邑的规模等同于国都，这都是祸乱之本。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+地有高下，天有晦明，民有君臣。国有都鄙，这是自古以来的制度。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+末大必折，尾大不掉<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+国家就变得至高无上了；国家对个体的兴趣并不在于将其当作个体，而仅仅当作某个行业或阶层或‘利益集团’的成员而加以组织，以满足自身经济或行政方面的需求。结果每一个体就此变成国家的奴隶。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+《礼记·丧服四制》：“天无二日，土无二王，国无二君，家无二尊，以一治之也。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+《诗经·小雅·北山》“溥天之下，莫非王土；率土之滨，莫非王臣”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+赵歧注《孟子》，说所谓“不孝有三”，一是家长干坏事，儿子不但不拦着，还在一旁曲意逢迎；二是家里贫穷、爹妈老迈，儿子却不去工作挣钱；而比这两点更糟糕的就是第三点：不结婚生儿子，断了香火。孙奭说前两点都是“不孝之小而已”，而“先祖无以承，后世无以继”，这才是“不孝之大者”。</p>
+<p>“无后”在古人那里也被称为“绝祀”，意思就是“对祖先的祭祀断绝了”。《尚书·虞夏书·皋陶谟》“夙夜浚明有家”，《尚书正义》孔颖达疏有“大夫受采邑，赐氏族，立宗庙，世不绝祀，故称‘家’”，尽管孔颖达把原文之“家”解释为大夫之家恐怕不确，但这里所反映的观念却是真实不虚的——大夫（或者可以追溯为更早时候的氏族首领）有土有庙，最高追求就是“世不绝祀”。</p>
+<p>“世不绝祀”就是所谓孝道的最高追求，而孝顺父母之类的反而是等而下之的。所谓中华传统文化当中的孝道，名词在两千多年来都是同一个名词，但内涵却有一个演变的过程，到专制社会以后，到《孝经》被列入儒家官方经典以后，孝道的实质就渐渐变成了忠道，违犯孝道就像耦国之类属于“乱之本也”一样，属于“大乱之道也”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+很多时候，社会变了，词语却来不及变，而适应于旧时代的旧观念无法在新时代里继续安身立命，旧瓶装新酒的情形就难免发生。所以，当宗法社会崩溃以后，人们在祭起周公和孔子的大旗的时候必然会面临一种两难处境：如果当真要搞周孔那套，与时政格格不入，很难再行得通；如果想行得通，就得或多或少地挂羊头卖狗肉，要搞修正主义的周孔主义。</p>
+<p>就后者而言，真正在中国传统中大行其道的名义上是周公和孔子，实际上却是董仲舒版、何休版、郑玄版、孔颖达版、朱熹版等等各种版本的周公和孔子，羊头很大，狗肉很多；就前者而言，最典型的例子就是对井田制的复古理想，经学读到原教旨主义的程度，很容易在现实当中碰得头破血流——比如“在王安石的改革失败后，一个当时的哲学家看来忧伤失望地写道：‘即使是禹（他被说成是中国第一个王朝的创建者）也无法成功恢复财产的公社所有制。因为每件事都变化了。河流在河床中干涸，所有被时间磨蚀的东西都永远消失了。’”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果要对社会结构以及观念上的差异在世界范围内做出一些当然未必精确的比较的话，周人强大的宗法观念虽然在秦汉以后社会制度翻天覆地的变革之下失去了相当程度的立足之地，但旧瓶装新酒式的解经方式仍然保留着一些旧有观念的强大惯性，尽管这些观念是以借尸还魂的形式重新被呈现的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+周代社会在很大程度上可以说是贵族民主制度，但这种民主依然要被统辖在宗法制度之下，很难产生出分立与制衡的观念。余风所及，政治气候便是“不是东风压倒西风，就是西风压倒东风”，东风与西风的共存既是不可想象的，也是不被认可的。一旦有东风与西风并立的现象出现，至少在名义上一定要争出谁是正统。<br>
+<br /><br /></p>
+<h4 id="（三）克段事件的时间跨度与阴谋理论">（三）克段事件的时间跨度与阴谋理论</h4>
+<p><strong>原文摘录</strong><br>
+“惟能以礼制其心，斯能以礼慎其守”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“人之多言，亦可畏也”<br>
+<br /><br /></p>
+<h4 id="（四）《左传》的“书曰”和“君子曰”">（四）《左传》的“书曰”和“君子曰”</h4>
+<p><strong>原文摘录</strong><br>
+史学理论中有一种老生常谈，说的是由事实而得出的故事是一种浓缩，即将行为经历的时间浓缩为讲述的时间，将人们有关某个特定历史时期所知的一切事实缩减成只剩那些重要的事实”，但是，浓缩虽然是必要的，也是不可避免的，而由浓缩所造成的暗示有时却也容易给读者形成误导。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+无论是经世之功，还是道德之用，这类观念直到今天依然非常强悍，缺乏“以史为鉴”色彩的史学似乎是难以为人广泛接受的，一部历史书常常被要求具备弘扬爱国主义和民族主义，增强民族自信心的功效，或者可以让人学习做人、做事的现实道理——不管怎样，在“史实”的背后，总要有一些“道理”才好。故而史书要效法《春秋》，以褒贬而非事实为依归，如四库馆臣赞扬欧阳修《新五代史》“大致褒贬祖《春秋》，故义例谨严；叙述祖《史记》，故文章高简”，最后提到史实，却是“事实则不甚经意”。<br>
+<br /><br /></p>
+<h3 id="第二章-公羊克段解">第二章 公羊克段解</h3>
+<p><strong>原文摘录</strong><br>
+从元代起，科举考试就曾经因为《春秋》的这一“属辞比事”的特点而推出过一种特殊的出题形式：合题，即合《春秋》数事为一题，让考生通过这数事的联系、对照来发挥其中义理。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+《春秋》仅一万余字，谜题却在所多有：记事有深意，记时也有深意；符合体例的地方有深意，破例的地方也有深意；写了什么有深意，没写的也有深意。“夏五月”和“夏”，这么一个区别，就被公羊家嚼出了无穷深意。时间上看似简单的寥寥记载，在公羊家眼里反映了圣人治世大法的一则核心义理。<br>
+<br /><br /></p>
+<h3 id="第三章-毂梁克段解">第三章 毂梁克段解</h3>
+<h3 id="第四章-“克”字诸家解">第四章 “克”字诸家解</h3>
+<h4 id="（一）训诂之争与义理之争">（一）训诂之争与义理之争</h4>
+<p><strong>原文摘录</strong><br>
+但是，真善美往往并不统一，真的未必就善，善的也未必就真，孰是孰非，殊难定论。<br>
+<br /><br /></p>
+<h4 id="（二）诛心之论与原心定罪•赵盾弑君">（二）诛心之论与原心定罪•赵盾弑君</h4>
+<p><strong>原文摘录</strong><br>
+汉景帝时《诗经》博士辕固和很可能是黄老一派的黄生争论汤、武受命的问题，黄生提出了一个著名的命题：“冠虽敞必加于首，履虽新必贯于足”，帽子就算破了也要戴在头上，鞋子就算是新的也只能穿在脚上，这就是上下之分。辕固反诘道：“难道本朝高皇帝代秦立汉也错了不成？”此题无解，汉景帝做了一个巧妙的结论：“食肉毋食马肝，未为不知味也；言学者毋言汤、武受命，不为愚。”这就给帽子和鞋子的关系问题设置了一个学术禁区。<br>
+<br /><br /></p>
+<h4 id="（三）志同则书同：矫枉过正">（三）志同则书同：矫枉过正</h4>
+<p><strong>原文摘录</strong><br>
+《春秋》判断是非，是看动机而不是看结果，所以才有哦“《春秋》原心定罪”这个说法。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+所以说，在《春秋》里看赵盾，可以看到忠的极至，看许世子止，可以看到孝的极至。</p>
+<p>“三传”虽然在史实的记载上有些出入，但对事件的评论基本上并无二致。而《穀梁传》清晰地提出了一个史书概念：“志同则书同”，这个“志”和《左传》评郑伯克段的“谓之郑志”的“志”是一个意思，表示意志、心愿。“志同则书同”，是说史官在记录事件的时候，主要看的是当事人的意愿，也就是说，如果两个人都有同样的打算，一个当真着手去实现这个意愿了，另一个则只是想想而已，但对于史官来说，这两人的所作所为都是一样的，所以会在史册上以同样的文辞来记录这两个人。</p>
+<p>这样一个在现代人看来完全罔顾事实的史录方式却被孔子誉为“书法不隐”，而所谓“书法不隐”，也就是秉笔直书。这样一种“秉笔直书”的传统被后代儒家发扬光大，而以宋人此风尤重。章学诚谓“史之大原本乎《春秋》，《春秋》之义昭乎笔削”，《春秋》堪称后世史书之本原，但这也提醒我们：古人所谓的秉笔直书和现代意义上的实录并不一样，史书的可信度也不是那么让人放心的。<br>
+<br /><br /></p>
+<h4 id="（四）经与权之一例：许穆夫人">（四）经与权之一例：许穆夫人</h4>
+<p><strong>原文摘录</strong><br>
+处事的方法有两种：恒久不变的原则叫作“经”，变通而合宜的措施叫作“权”。许穆夫人的所作所为只是通达权变罢了。</p>
+<p>有经有权，既讲原则也讲变通，这也就是孟子那个著名命题“嫂溺援之以手”的道理。用现代语言说，就是既要讲原则性，也要讲灵活性，但灵活性必须以更大的原则性为依归，即“取舍去就之间不离于道，乃所谓权也”，或者说以权补经，而非以权破经，正所谓“法不能无弊，有权则法无弊”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+《春秋》因此而成为一部寓言之书，史实的真伪无关紧要，重要的是其中所要阐明的义理，如皮锡瑞所谓：“论《春秋》借事明义之旨，止是借当时之事做一样子，其事之合与不合、备与不备，本所不计”。其理论依据就是孔子所说的“我欲载之空言，不如见之于行事之深切著明也”。如此，则考据精当、逻辑自洽反而属于章句小道，如冯班称道汉儒：“汉儒释经不必尽合，然断大事，决大疑，可以立，可以权，是有用之学。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+经学要讲的是政治正确，为了这个高尚的目的可以罔顾事实。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+《春秋》所衍生的这种思想实在影响深远，我们不必把目光放得太远就可以看到无数的例子。比如几十年前书报杂志刊登的一些新中国建国以来的历史照片，在政治上被打倒的人同时也会在照片上消失——这些底片挖补工作就是新时代的春秋笔法，当一个人在“义理正确”的层面上被打入另册之后，在“事实正确”的层面上便也跟着不复存在了。<br>
+<br /><br /></p>
+<h4 id="（五）晋人纳接菑于邾娄，弗克纳">（五）晋人纳接菑于邾娄，弗克纳</h4>
+<h4 id="（六）诛杀亲族的礼仪">（六）诛杀亲族的礼仪</h4>
+<h4 id="（七）郑伯之弟段出奔共，秦伯之弟鍼出奔晋">（七）郑伯之弟段出奔共，秦伯之弟鍼出奔晋</h4>
+<p><strong>原文摘录</strong><br>
+即便是《左传》的坚定反对者，在解释春秋大义的时候依然无法脱离《左传》的叙事背景。而《春秋》叙事的简略又给了经学家们无穷无尽解读义理的可能——即便可以确定《春秋》当真是孔子所作，但孔子遣词造句的种种真义我们恐怕永远也无法得知，而一代代的经学家们借着阐发孔学义理的工作构筑起了儒学的一块块基石，孔子是神圣的，但只是一块神圣的招牌。<br>
+<br /><br /></p>
+<h3 id="第五章-克段的事件疑点与褒贬分歧">第五章 克段的事件疑点与褒贬分歧</h3>
+<h4 id="（一）救时之弊，革礼之薄：啖助、陆淳、赵匡的学术革命">（一）救时之弊，革礼之薄：啖助、陆淳、赵匡的学术革命</h4>
+<p><strong>原文摘录</strong><br>
+以权辅正，以诚断礼，正以忠道，原情为本，不拘浮名，不尚狷介，从宜救乱，因时黜陟，进退抑扬，去华居实。<br>
+<br /><br /></p>
+<h4 id="（二）宋学管窥">（二）宋学管窥</h4>
+<h5 id="1-孙复">1. 孙复</h5>
+<h5 id="2-刘敞">2. 刘敞</h5>
+<p><strong>原文摘录</strong><br>
+上之不足诳鬼，下之不足诬人，内之不足欺心<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+戒之以祸、喻之以理、悟之以心<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+道德感越纯，手中的大棒挥舞起来也就越狠。<br>
+<br /><br /></p>
+<h5 id="3-王安石">3. 王安石</h5>
+<h5 id="4-苏轼与苏辙">4. 苏轼与苏辙</h5>
+<p><strong>原文摘录</strong><br>
+孔子是虚的，时政才是实的<br>
+<br /><br /></p>
+<h5 id="5-胡安国">5. 胡安国</h5>
+<p><strong>原文摘录</strong><br>
+《春秋》推荐至隐，首诛其意<br>
+<br /><br /></p>
+<h5 id="6-真德秀">6. 真德秀</h5>
+<h5 id="7-吕祖谦《东莱博议》：科举范文">7. 吕祖谦《东莱博议》：科举范文</h5>
+<p><strong>原文摘录</strong><br>
+种种议论，除了学者专著之外，还有大量的科举论文，要想把文章写得既别出心裁又不至于偏离官学划定的意识形态准绳，那就得把圣人的深意比别人挖得更深。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+哀莫大于心死，而身死亦次之<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+解经一路发展，从凿空之言到过苛之论，不一而足。当前人在某一点上做到极至之后，后人便容易从其他角度或其他立场来做一些翻案文章，非如此不足以出新。这大约是社会发展的一般规律，不仅经学如此，其他领域亦然。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+和宗教不一样的是，神自然有能力洞悉人的内心世界，人又有多大可能隔着肚皮、隔着粗糙的史料、隔着千百年前史官的眼睛、隔着千百年前辗转了不知几手的传闻来洞悉古人的内心？<br>
+<br /><br /></p>
+<h5 id="8-赵鹏飞《春秋经荃》：为叔段辩护">8. 赵鹏飞《春秋经荃》：为叔段辩护</h5>
+<h5 id="9-经学理学化，孔子朱子化">9. 经学理学化，孔子朱子化</h5>
+<p><strong>原文摘录</strong><br>
+自宋代以后，整体的学术风气大约可以这么来说：经学理学化，孔子朱子化。</p>
+<p>现在常说“四书五经”，仿佛“四书”是很要紧的东西。所谓“四书”，《大学》和《中庸》本来都是《礼记》里的单篇，而《论语》和《孟子》原本也都属于诸子书。《礼记》《论语》《孟子》在汉代都曾立过博士，列为经学，但在群经之中地位并不太高。到了唐代，官学“九经”当中便只有《礼记》了，而《论语》和《孟子》到了宋代才又被列入“十三经”之内。</p>
+<p>宋代，这四部书先是受到了“二程”的大力提倡，认为是儒学入门的东西，直到朱熹才把它们汇编在了一起，顺序是《大学》《论语》《孟子》《中庸》，认为这是一个循序渐进的次序，并为之作注，作为初学者的入门教材。</p>
+<p>朱注“四书”到了元代才被定为科举教科书，学生们不但要背“四书”本身，还要背朱熹的小注，经学格局至此又为之一变。</p>
+<p>从前文已经可以充分看出，所谓经学，大体上可以说是一种挂羊头卖狗肉的东西，牌匾上永远号称孔子圣学，事实上孔子的真意永远是含混不清、一时一变的。<br>
+<br /><br /></p>
+<h4 id="（三）宋元之际：不仕二朝与华夷之辩">（三）宋元之际：不仕二朝与华夷之辩</h4>
+<p><strong>原文摘录</strong><br>
+开国初期的皇帝往往都是这样，打天下的时候是一个逻辑，坐天下的时候又是一个逻辑，打天下的时候是一个天命，坐天下的时候又是一个天命，而且还得想方设法让大家把打天下时候的逻辑和天命都忘记，让老百姓把打天下的时候对他们的许诺都忘记，谁要敢旧事重提谁就是犯禁，必须给以严惩。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+忠诚不仕二主，烈女不嫁二夫<br>
+<br /><br /></p>
+<h4 id="（四）明代：靖难之变与克段新解">（四）明代：靖难之变与克段新解</h4>
+<p><strong>原文摘录</strong><br>
+前者利诱，后者威逼，人才奴才化似乎便是不可避免的趋势了。人才更关心理想，奴才更关心活命，这也是人之常情。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+真德秀这个“四端”的说法，是孟子的一个经典概念，即“恻隐之心，仁之端也；羞恶之心，义之端也；辞让之心，礼之端也；是非之心，智之端也”。孟子提出，恻隐之心、羞恶之心、辞让之心、是非之心，这都是人天生所具有的，如果没有这些那就不是人了。这所谓“四端”也就是每个人天生具备的仁、义、礼、智的苗头，苗头需要扩而充之，就像火焰会越烧越旺盛，就像泉水会越流越湍急。这个“扩而充之”非常关键，如果一个人能把这四端“扩而充之”，那就“足以保四海”，如果做不到“扩而充之”，那就“不足以事父母”。<br>
+<br /><br /></p>
+<h4 id="（五）清代克段解三例">（五）清代克段解三例</h4>
+<p><strong>原文摘录</strong><br>
+名弧石勒诛，触眇符生戮——《闻湖州》 顾炎武<br>
+<br /><br /></p>
+<h5 id="1-严启隆">1. 严启隆</h5>
+<h5 id="2-毛奇龄、万斯大">2. 毛奇龄、万斯大</h5>
+<h5 id="3-李塨">3. 李塨</h5>
+<h4 id="（六）结语">（六）结语</h4>
+<h5 id="1-李贽问题">1. 李贽问题</h5>
+<h5 id="2-修昔底德的虚构与瑞格瑞格的故事">2. 修昔底德的虚构与瑞格瑞格的故事</h5>
+<h2 id="词汇整">词汇整</h2>
+<p>阏（e 4 yan 1）：遏止，抑制；堵塞；阏氏，汉时匈奴单于之正妻的称号</p>
+<p>塨（gong 1）：人名用字</p>
+<p>揆（kui 2）：本意是测量方位，也指因宰相管理百官百事</p>
+<p>繻（xu 1）：彩色的缯帛；古代作通行证用的帛</p>
+<p>籖（qian 1）：剥掉，去掉</p>
+<p>蟊贼：原指吃禾苗的两种害虫，后喻危害人民或国家的人</p>
+<p>好辨善訾</p>
+<p>菅（jiang 1）：植物名；姓</p>
+<p>祊（beng 1）：古代称宗庙之门，也指庙门设祭祀之处</p>
+<p>翚（hui 1）：古书中指五彩山雉，也指山雉的羽毛；飞翔</p>
+<p>颢（hao 4）：形容白色</p>
+<p>聩（kui 4）：耳聋；糊涂，不明事理</p>
+<p>皎然死节</p>
+<p>皎然（jiao 3）：明亮洁白貌；高洁貌；清晰貌</p>
+<p>旌忠惩奸</p>
+<p>赓（geng 1）：连续。继续；姓</p>
+<p>斮（zhuo 2）：斩、砍；击、打；削去</p>
+<p>拳拳之心：本意为奉持之貌、紧握不舍，引申为诚挚、诚恳、深厚</p>
+<p>袒裼（tan 3 xi 1）：脱去上衣左袖，露出内衣；脱去上衣，裸露肢体</p>
+<p>斫（zhuo 2）：用刀斧等砍或削</p>
+<p>攻讦（jie 2）：举发他人的过失或因私而加以攻击</p>
+<p>谶纬（chen 4）：汉代流行的神学迷信。“谶”是巫师或方士制作的一种隐语或预言，作为吉凶的符验或征兆。“纬”指方士化的儒生编集起来附会儒家经典的各种著作</p>
+<p>索微：研求深奥玄妙的道理</p>
+<p>挂一漏万：列举不周，必多遗漏</p>
+<p>转捩点（lie 4）：转折点</p>
+<p>簋（gui 3）：古代中国用于盛放煮熟饭食的器皿，也用作礼器</p>
+<p>诗无达诂：意谓对《诗经》没有通达的或一成不变的解释，因时因人而有歧义</p>
+<p>文无达诠：文章不可能做到一个审美，一个理解</p>
+<p>彝（yi 2）：古代宗庙常用的礼器总名，也指盛酒的尊；法度，常规，如彝准；彝族</p>
+<p>遽（ju 4）：赶快，疾速；仓猝，匆忙；惊慌，惧怕，如惶遽</p>
+<p>朐（qu 2）：临朐，地名，在山东省</p>
+<p>頵（yun 1）：头大貌，常用作人名</p>
+<p>僿（sai 4）：闭塞不通</p>
+<p>彄（kou 1）：本意指弓弩两端用来系线的地方；环子、戒指一类的东西；笔管；姓</p>
+<p>雩（yu 2）：古代为祈雨而举行的祭祀</p>
+<p>谳（yan 4）：议罪；判定</p>
+<p>卯（mao 3）：地支的第四位；早晨五时至七时</p>
+<p>赜（ze 2）：深奥；精微</p>
+<p>虺（hui 3）：古代蝮蛇一类的毒蛇；借指土灰色</p>
+<p>燮（xie 4）：和顺；协和；调和；如燮理阴阳</p>
+<p>邾（zhu 1）：古代诸侯国。故地在今山东省邹县境；姓</p>
+<p>京畿（ji 1）：国都及其行政官署所辖地区</p>
+<p>祚（zuo 4）：福运；君位，如帝祚</p>
+<p>甿（meng 2）：在古籍中常用来指农村居民</p>
+<p>苣（ju 3）：古代对“芋”的别称；中国周代诸侯国名</p>
+<p>祊（beng 1）：古代称宗庙之门。也指庙门内设祭之处</p>
+<p>曲学阿世（e 1）：歪曲自己的学术，以投世俗之好</p>
+<p>忝（tian 3）：表示辱骂他人，有愧于</p>
+<p>骨鲠：中医病名，指各种骨类或其他不同的异物哽于咽、喉或食道等部位而言</p>
+<p>筱（xiao 3）：小竹子；同“筱”</p>
+<p>邾（zhu 1）：古代诸侯国名，故地在今山东省邹县境；姓</p>
+<p>槃（pan 2）：同盘，木盘；形状如盘</p>
+<p>诅祝：祈求鬼神加祸于敌对的人</p>
+<p>昺（bing 3）：明亮，光明</p>
+<p>亟（ji 2 qi 4）：紧急，急迫；屡次，一再</p>
+<p>质次价高</p>
+<p>彘（zhi 4）：猪；姓</p>
+<p>畿（ji 1）：古指国都附近的地区，如畿辅；</p>
+<p>采邑（yi 4）：古指卿大夫的封邑</p>
+<p>河清海晏：黄河水清，沧海波平。旧时用来形容国内安定，天下太平</p>
+<p>芈（mi 3）：羊鸣；姓</p>
+<p>矬子（cuo 2）：身材短小的人</p>
+<p>虢（guo 2）：古国名；姓</p>
+<p>郐（kuai 4）：古代诸侯国民；姓</p>
+<p>芣（fu 2）：古书上指“车前”</p>
+<p>騩（gui 1）：浅黑色的马；山名，大騩山，在今河南省密县附近；</p>
+<p>溱（zhen 1 qin 2）：溱水，古水名；地名</p>
+<p>洧水（wei 4）：古水名</p>
+<p>褫夺（chi 3）：夺去，剥夺</p>
+<p>感时伤事</p>
+<p>闿（kai 3）：开启，如闿彻</p>
+<p>妘（yun 2）：本意为姓；</p>
+<p>湔（jian 1）：湔水，在四川；用水洗</p>
+<p>巳（si 4）：地支的第六位</p>
+<p>缁（zi 1）：黑色；黑色僧袍，也指僧侣</p>
+<p>吊民伐罪：慰问受害的百姓，讨伐有罪的人</p>
+<p>隰（xi 2）：低湿的地方；新开垦的田；姓</p>
+<p>苌楚（chang 2）：即羊桃。开紫红花，实如小桃，可食</p>
+<p>筚路蓝缕：坐着柴车，穿着破衣服去开辟山林。形容创业艰辛。</p>
+<p>蕞尔（zui 4）：形容小</p>
+<p>汲冢（ji 2 zhong 3）：汲冢遗址在河南省新乡市汲县县城（现卫辉市）西南10公里，孙杏村乡娘娘庙（村）南。因墓地在汲得名（汲县古称汲郡）。为战国时墓冢。</p>
+<p>藜藿（li 2 huo 4）：藜和藿。泛指粗劣的饭菜</p>
+<p>蓬蒿（peng 2 hao 1）：蓬草和蒿草。也泛指草丛，草莽；茼蒿的别名。</p>
+<p>要骂无好口，要打无好手：俗语，互相对打起来，就不会有饶人的拳头，互相对骂起来，就不会有中听的话语</p>
+<p>爯（cheng 1 cheng 4）：手并举；巨大</p>
+<p>罗生门：原为日语，后用来借指人世与地狱之界门，事实与假象之别。通常指：事件当事人各执一词，分别按照对自己有利的方式进行表述证明或编织谎言，最终使得事实真相扑朔迷离，难以水落石出。</p>
+<p>碏（que 4 xi 1）：敬；石杂色；碍</p>
+<p>碏碏（que 4）：敏捷而恭敬的样子</p>
+<p>羹（geng 1）：古同羮，带汁的肉</p>
+<p>弁（bian 4）：本意指古代一种尊贵的冠，也指掌管帝王的冕服及等制，又比喻首领、魁首</p>
+<p>夨（ze 4）：倾头，引申为倾侧；西周晚期古国名</p>
+<p>罃（ying 1）：一种长颈汲瓶；引申为泛指各种瓶子</p>
+<p>耜（si 4）：本意指古代农具名，耒（lei 3）耜的主要部件，似楸</p>
+<p>曷（he 2）：代词，表示疑问，相当于“何”，“什么”，“怎么”；副词，表示反问，“何不”，“难道”</p>
+<p>餬（hu 2）：稠粥；指粉加水调和煮成的胶状物</p>
+<p>鬯（chang 4）：古代宗庙祭祀用的香酒，以郁金香合黑黍酿成；用同“畅”，鬯行</p>
+<p>肸（xi 1）：多用于人名；散布，传播；振动</p>
+<p>痤（cuo 2）：一种皮肤病，俗称“粉刺”</p>
+<p>言人人殊：意思是指各人有各人的意见。同一消息或事情，各人却说成各不相同的情形。</p>
+<p>獆（hao 2）：泛指野兽吼叫</p>
+<p>畚（ben 3）：用草绳或竹篾编制的盛物器具；用畚箕装载；手相，指斗型指纹</p>
+<p>斗筲（shao 1）：比喻人的才识短浅，气量狭窄</p>
+<p>鄘（yong 1）：古诸侯国名</p>
+<p>菑（zi 1）：初耕的田地，如菑亩；耕耘；姓</p>
+<p>貜（jue 2）：大猴，大猿，泛指猿猴</p>
+<p>鍼（qian 2）：约束；姓</p>
+<p>啖（dan 4）：吃；用利益引诱或收买</p>
+<p>黜陟（chu 4 zhi 4）：指人才的进退，官吏的升降</p>
+<p>穿凿附会：把毫无关系的事硬拉到一起。指勉强生硬解释，把没有意义硬说成是有某种意义</p>
+<p>蒍（wei 3）：芦苇花</p>
+<p>璩（qu 2）：玉名；姓</p>
+<p>荃（quan 2）：捕鱼的竹器</p>
+<p>空口白牙</p>
+<p>儁（jun 4）：才智过人的人；特异之物；杰出</p>
+<p>鄑（zi 1）：春秋鲁地；春秋纪邑</p>
+<p>枭（xiao 1）：猫头鹰；骁勇，豪雄；魁首，杰出者；斩首悬以示众，也泛指斩，杀</p>
+<p>郅（zhi 4）：最，极</p>
+<p>颉（xie 2 jie 2）：鸟飞而下；姓；用于人名</p>
+<p>蹙（cu 4）：紧急；逼迫；困窘</p>
+<p>牯（gu 4）：养牛马的栅栏；缚于牛角以防触人的横木，引申为桎梏，束缚</p>
+<p>敉（mi 3）：安抚；安定</p>
+<p>乂（yi 4）：割草；治理；安定</p>
+<p>烝（zheng 1）：众多，如烝民</p>
+<p>瞽（gu 3）：目失明；昏昧，不明事理</p>
+<p>瞍（sou 3）：瞎子；眼睛无瞳者，看不见东西</p>
+<p>鲧（gun 3）：传说中古代部落酋长名，禹之父；古书上说的一种大鱼</p>
+<p>庳（bi 4）：低洼；低矮</p>
+<p>雠（chou 2）：校勘，校对；同“仇”</p>
+<p>亟（ji 2 qi 4）：紧急，急迫；屡次，一再</p>
+<p>苟（gou 3）：随便，马虎；暂且，勉强；假如，如果</p>
+<p>湔（jian 1）：洗涤；清除</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2023/08/06/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%9A%90%E5%85%AC%E5%85%83%E5%B9%B4/">
+            https://illusionzone.github.io/2023/08/06/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%9A%90%E5%85%AC%E5%85%83%E5%B9%B4/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/08/06/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%A4%8D%E6%98%8E%E6%BC%AB%E6%B8%B8%E8%AE%B0/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】复明症漫记 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/07/29/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E7%BB%98%E5%9B%BE%E4%B9%A0%E4%BD%9C/%E7%BB%98%E5%9B%BE%E4%B9%A0%E4%BD%9C/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【察之作之】绘图习作 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E7%89%88%E5%BA%8F"><span class="toc-text">初版序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%B7-%E9%9A%90%E5%85%AC%E5%85%83%E5%B9%B4%E6%98%A5"><span class="toc-text">第一卷 隐公元年春</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E3%80%8A%E6%98%A5%E7%A7%8B%E3%80%8B%E7%AC%AC%E4%B8%80%E4%B9%89"><span class="toc-text">第一章 《春秋》第一义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%98%A5%E7%8E%8B%E6%AD%A3%E5%85%83"><span class="toc-text">第二章 春王正元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%89%E6%9C%88%EF%BC%8C%E5%85%AC%E5%8F%8A%E9%82%BE%E4%BB%AA%E7%88%B6%E7%9B%9F%E4%BA%8E%E8%94%91"><span class="toc-text">第三章 三月，公及邾仪父盟于蔑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E4%BB%96%E5%92%8C%E5%88%A9%E5%B7%B1"><span class="toc-text">利他和利己</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BE%E4%BC%9A%E8%BF%9B%E6%AD%A5%E4%B8%8E%E5%8E%86%E5%8F%B2%E8%BF%9B%E6%AD%A5"><span class="toc-text">社会进步与历史进步</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%B7"><span class="toc-text">第二卷</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E3%80%8A%E5%B7%A6%E4%BC%A0%E3%80%8B%E7%BB%8F%E8%A7%A3%EF%BC%9A%E9%83%91%E4%BC%AF%E5%85%8B%E6%AE%B5%E4%BA%8E%E9%84%A2"><span class="toc-text">第一章 《左传》经解：郑伯克段于鄢</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E9%83%91%E5%9B%BD%E7%9A%84%E7%AB%8B%E5%9B%BD%E4%B8%8E%E8%BF%81%E5%BE%99%EF%BC%9A%E4%BB%8E%E9%83%91%E5%9B%BD%E4%B8%9C%E8%BF%81%E7%9C%8B%E5%8F%A4%E4%BA%BA%E7%9A%84%E5%AE%B6%E5%9B%BD%E8%A7%82%E5%BF%B5"><span class="toc-text">（一）郑国的立国与迁徙：从郑国东迁看古人的家国观念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%B9%B6%E5%90%8E%E3%80%81%E5%8C%B9%E5%AB%A1%E3%80%81%E4%B8%A4%E6%94%BF%E3%80%81%E8%80%A6%E5%9B%BD%EF%BC%8C%E4%B9%B1%E4%B9%8B%E6%9C%AC%E4%B9%9F"><span class="toc-text">（二）并后、匹嫡、两政、耦国，乱之本也</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%85%8B%E6%AE%B5%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%97%B6%E9%97%B4%E8%B7%A8%E5%BA%A6%E4%B8%8E%E9%98%B4%E8%B0%8B%E7%90%86%E8%AE%BA"><span class="toc-text">（三）克段事件的时间跨度与阴谋理论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E3%80%8A%E5%B7%A6%E4%BC%A0%E3%80%8B%E7%9A%84%E2%80%9C%E4%B9%A6%E6%9B%B0%E2%80%9D%E5%92%8C%E2%80%9C%E5%90%9B%E5%AD%90%E6%9B%B0%E2%80%9D"><span class="toc-text">（四）《左传》的“书曰”和“君子曰”</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%AC%E7%BE%8A%E5%85%8B%E6%AE%B5%E8%A7%A3"><span class="toc-text">第二章 公羊克段解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%AF%82%E6%A2%81%E5%85%8B%E6%AE%B5%E8%A7%A3"><span class="toc-text">第三章 毂梁克段解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E2%80%9C%E5%85%8B%E2%80%9D%E5%AD%97%E8%AF%B8%E5%AE%B6%E8%A7%A3"><span class="toc-text">第四章 “克”字诸家解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%AD%E8%AF%82%E4%B9%8B%E4%BA%89%E4%B8%8E%E4%B9%89%E7%90%86%E4%B9%8B%E4%BA%89"><span class="toc-text">（一）训诂之争与义理之争</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E8%AF%9B%E5%BF%83%E4%B9%8B%E8%AE%BA%E4%B8%8E%E5%8E%9F%E5%BF%83%E5%AE%9A%E7%BD%AA%E2%80%A2%E8%B5%B5%E7%9B%BE%E5%BC%91%E5%90%9B"><span class="toc-text">（二）诛心之论与原心定罪•赵盾弑君</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%BF%97%E5%90%8C%E5%88%99%E4%B9%A6%E5%90%8C%EF%BC%9A%E7%9F%AB%E6%9E%89%E8%BF%87%E6%AD%A3"><span class="toc-text">（三）志同则书同：矫枉过正</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E7%BB%8F%E4%B8%8E%E6%9D%83%E4%B9%8B%E4%B8%80%E4%BE%8B%EF%BC%9A%E8%AE%B8%E7%A9%86%E5%A4%AB%E4%BA%BA"><span class="toc-text">（四）经与权之一例：许穆夫人</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E6%99%8B%E4%BA%BA%E7%BA%B3%E6%8E%A5%E8%8F%91%E4%BA%8E%E9%82%BE%E5%A8%84%EF%BC%8C%E5%BC%97%E5%85%8B%E7%BA%B3"><span class="toc-text">（五）晋人纳接菑于邾娄，弗克纳</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E8%AF%9B%E6%9D%80%E4%BA%B2%E6%97%8F%E7%9A%84%E7%A4%BC%E4%BB%AA"><span class="toc-text">（六）诛杀亲族的礼仪</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%83%EF%BC%89%E9%83%91%E4%BC%AF%E4%B9%8B%E5%BC%9F%E6%AE%B5%E5%87%BA%E5%A5%94%E5%85%B1%EF%BC%8C%E7%A7%A6%E4%BC%AF%E4%B9%8B%E5%BC%9F%E9%8D%BC%E5%87%BA%E5%A5%94%E6%99%8B"><span class="toc-text">（七）郑伯之弟段出奔共，秦伯之弟鍼出奔晋</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%85%8B%E6%AE%B5%E7%9A%84%E4%BA%8B%E4%BB%B6%E7%96%91%E7%82%B9%E4%B8%8E%E8%A4%92%E8%B4%AC%E5%88%86%E6%AD%A7"><span class="toc-text">第五章 克段的事件疑点与褒贬分歧</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%91%E6%97%B6%E4%B9%8B%E5%BC%8A%EF%BC%8C%E9%9D%A9%E7%A4%BC%E4%B9%8B%E8%96%84%EF%BC%9A%E5%95%96%E5%8A%A9%E3%80%81%E9%99%86%E6%B7%B3%E3%80%81%E8%B5%B5%E5%8C%A1%E7%9A%84%E5%AD%A6%E6%9C%AF%E9%9D%A9%E5%91%BD"><span class="toc-text">（一）救时之弊，革礼之薄：啖助、陆淳、赵匡的学术革命</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%AE%8B%E5%AD%A6%E7%AE%A1%E7%AA%A5"><span class="toc-text">（二）宋学管窥</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%AD%99%E5%A4%8D"><span class="toc-text">1. 孙复</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%88%98%E6%95%9E"><span class="toc-text">2. 刘敞</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E7%8E%8B%E5%AE%89%E7%9F%B3"><span class="toc-text">3. 王安石</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E8%8B%8F%E8%BD%BC%E4%B8%8E%E8%8B%8F%E8%BE%99"><span class="toc-text">4. 苏轼与苏辙</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E8%83%A1%E5%AE%89%E5%9B%BD"><span class="toc-text">5. 胡安国</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E7%9C%9F%E5%BE%B7%E7%A7%80"><span class="toc-text">6. 真德秀</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-%E5%90%95%E7%A5%96%E8%B0%A6%E3%80%8A%E4%B8%9C%E8%8E%B1%E5%8D%9A%E8%AE%AE%E3%80%8B%EF%BC%9A%E7%A7%91%E4%B8%BE%E8%8C%83%E6%96%87"><span class="toc-text">7. 吕祖谦《东莱博议》：科举范文</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-%E8%B5%B5%E9%B9%8F%E9%A3%9E%E3%80%8A%E6%98%A5%E7%A7%8B%E7%BB%8F%E8%8D%83%E3%80%8B%EF%BC%9A%E4%B8%BA%E5%8F%94%E6%AE%B5%E8%BE%A9%E6%8A%A4"><span class="toc-text">8. 赵鹏飞《春秋经荃》：为叔段辩护</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E7%BB%8F%E5%AD%A6%E7%90%86%E5%AD%A6%E5%8C%96%EF%BC%8C%E5%AD%94%E5%AD%90%E6%9C%B1%E5%AD%90%E5%8C%96"><span class="toc-text">9. 经学理学化，孔子朱子化</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%AE%8B%E5%85%83%E4%B9%8B%E9%99%85%EF%BC%9A%E4%B8%8D%E4%BB%95%E4%BA%8C%E6%9C%9D%E4%B8%8E%E5%8D%8E%E5%A4%B7%E4%B9%8B%E8%BE%A9"><span class="toc-text">（三）宋元之际：不仕二朝与华夷之辩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E6%98%8E%E4%BB%A3%EF%BC%9A%E9%9D%96%E9%9A%BE%E4%B9%8B%E5%8F%98%E4%B8%8E%E5%85%8B%E6%AE%B5%E6%96%B0%E8%A7%A3"><span class="toc-text">（四）明代：靖难之变与克段新解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E6%B8%85%E4%BB%A3%E5%85%8B%E6%AE%B5%E8%A7%A3%E4%B8%89%E4%BE%8B"><span class="toc-text">（五）清代克段解三例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E4%B8%A5%E5%90%AF%E9%9A%86"><span class="toc-text">1. 严启隆</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%AF%9B%E5%A5%87%E9%BE%84%E3%80%81%E4%B8%87%E6%96%AF%E5%A4%A7"><span class="toc-text">2. 毛奇龄、万斯大</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E6%9D%8E%E5%A1%A8"><span class="toc-text">3. 李塨</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E7%BB%93%E8%AF%AD"><span class="toc-text">（六）结语</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%9D%8E%E8%B4%BD%E9%97%AE%E9%A2%98"><span class="toc-text">1. 李贽问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%BF%AE%E6%98%94%E5%BA%95%E5%BE%B7%E7%9A%84%E8%99%9A%E6%9E%84%E4%B8%8E%E7%91%9E%E6%A0%BC%E7%91%9E%E6%A0%BC%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-text">2. 修昔底德的虚构与瑞格瑞格的故事</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E6%95%B4"><span class="toc-text">词汇整</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E7%89%88%E5%BA%8F"><span class="toc-text">初版序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%B7-%E9%9A%90%E5%85%AC%E5%85%83%E5%B9%B4%E6%98%A5"><span class="toc-text">第一卷 隐公元年春</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E3%80%8A%E6%98%A5%E7%A7%8B%E3%80%8B%E7%AC%AC%E4%B8%80%E4%B9%89"><span class="toc-text">第一章 《春秋》第一义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%98%A5%E7%8E%8B%E6%AD%A3%E5%85%83"><span class="toc-text">第二章 春王正元</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%89%E6%9C%88%EF%BC%8C%E5%85%AC%E5%8F%8A%E9%82%BE%E4%BB%AA%E7%88%B6%E7%9B%9F%E4%BA%8E%E8%94%91"><span class="toc-text">第三章 三月，公及邾仪父盟于蔑</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A9%E4%BB%96%E5%92%8C%E5%88%A9%E5%B7%B1"><span class="toc-text">利他和利己</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BE%E4%BC%9A%E8%BF%9B%E6%AD%A5%E4%B8%8E%E5%8E%86%E5%8F%B2%E8%BF%9B%E6%AD%A5"><span class="toc-text">社会进步与历史进步</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%B7"><span class="toc-text">第二卷</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E3%80%8A%E5%B7%A6%E4%BC%A0%E3%80%8B%E7%BB%8F%E8%A7%A3%EF%BC%9A%E9%83%91%E4%BC%AF%E5%85%8B%E6%AE%B5%E4%BA%8E%E9%84%A2"><span class="toc-text">第一章 《左传》经解：郑伯克段于鄢</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E9%83%91%E5%9B%BD%E7%9A%84%E7%AB%8B%E5%9B%BD%E4%B8%8E%E8%BF%81%E5%BE%99%EF%BC%9A%E4%BB%8E%E9%83%91%E5%9B%BD%E4%B8%9C%E8%BF%81%E7%9C%8B%E5%8F%A4%E4%BA%BA%E7%9A%84%E5%AE%B6%E5%9B%BD%E8%A7%82%E5%BF%B5"><span class="toc-text">（一）郑国的立国与迁徙：从郑国东迁看古人的家国观念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%B9%B6%E5%90%8E%E3%80%81%E5%8C%B9%E5%AB%A1%E3%80%81%E4%B8%A4%E6%94%BF%E3%80%81%E8%80%A6%E5%9B%BD%EF%BC%8C%E4%B9%B1%E4%B9%8B%E6%9C%AC%E4%B9%9F"><span class="toc-text">（二）并后、匹嫡、两政、耦国，乱之本也</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%85%8B%E6%AE%B5%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%97%B6%E9%97%B4%E8%B7%A8%E5%BA%A6%E4%B8%8E%E9%98%B4%E8%B0%8B%E7%90%86%E8%AE%BA"><span class="toc-text">（三）克段事件的时间跨度与阴谋理论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E3%80%8A%E5%B7%A6%E4%BC%A0%E3%80%8B%E7%9A%84%E2%80%9C%E4%B9%A6%E6%9B%B0%E2%80%9D%E5%92%8C%E2%80%9C%E5%90%9B%E5%AD%90%E6%9B%B0%E2%80%9D"><span class="toc-text">（四）《左传》的“书曰”和“君子曰”</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%AC%E7%BE%8A%E5%85%8B%E6%AE%B5%E8%A7%A3"><span class="toc-text">第二章 公羊克段解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%AF%82%E6%A2%81%E5%85%8B%E6%AE%B5%E8%A7%A3"><span class="toc-text">第三章 毂梁克段解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E2%80%9C%E5%85%8B%E2%80%9D%E5%AD%97%E8%AF%B8%E5%AE%B6%E8%A7%A3"><span class="toc-text">第四章 “克”字诸家解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%AD%E8%AF%82%E4%B9%8B%E4%BA%89%E4%B8%8E%E4%B9%89%E7%90%86%E4%B9%8B%E4%BA%89"><span class="toc-text">（一）训诂之争与义理之争</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E8%AF%9B%E5%BF%83%E4%B9%8B%E8%AE%BA%E4%B8%8E%E5%8E%9F%E5%BF%83%E5%AE%9A%E7%BD%AA%E2%80%A2%E8%B5%B5%E7%9B%BE%E5%BC%91%E5%90%9B"><span class="toc-text">（二）诛心之论与原心定罪•赵盾弑君</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%BF%97%E5%90%8C%E5%88%99%E4%B9%A6%E5%90%8C%EF%BC%9A%E7%9F%AB%E6%9E%89%E8%BF%87%E6%AD%A3"><span class="toc-text">（三）志同则书同：矫枉过正</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E7%BB%8F%E4%B8%8E%E6%9D%83%E4%B9%8B%E4%B8%80%E4%BE%8B%EF%BC%9A%E8%AE%B8%E7%A9%86%E5%A4%AB%E4%BA%BA"><span class="toc-text">（四）经与权之一例：许穆夫人</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E6%99%8B%E4%BA%BA%E7%BA%B3%E6%8E%A5%E8%8F%91%E4%BA%8E%E9%82%BE%E5%A8%84%EF%BC%8C%E5%BC%97%E5%85%8B%E7%BA%B3"><span class="toc-text">（五）晋人纳接菑于邾娄，弗克纳</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E8%AF%9B%E6%9D%80%E4%BA%B2%E6%97%8F%E7%9A%84%E7%A4%BC%E4%BB%AA"><span class="toc-text">（六）诛杀亲族的礼仪</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%83%EF%BC%89%E9%83%91%E4%BC%AF%E4%B9%8B%E5%BC%9F%E6%AE%B5%E5%87%BA%E5%A5%94%E5%85%B1%EF%BC%8C%E7%A7%A6%E4%BC%AF%E4%B9%8B%E5%BC%9F%E9%8D%BC%E5%87%BA%E5%A5%94%E6%99%8B"><span class="toc-text">（七）郑伯之弟段出奔共，秦伯之弟鍼出奔晋</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%85%8B%E6%AE%B5%E7%9A%84%E4%BA%8B%E4%BB%B6%E7%96%91%E7%82%B9%E4%B8%8E%E8%A4%92%E8%B4%AC%E5%88%86%E6%AD%A7"><span class="toc-text">第五章 克段的事件疑点与褒贬分歧</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E6%95%91%E6%97%B6%E4%B9%8B%E5%BC%8A%EF%BC%8C%E9%9D%A9%E7%A4%BC%E4%B9%8B%E8%96%84%EF%BC%9A%E5%95%96%E5%8A%A9%E3%80%81%E9%99%86%E6%B7%B3%E3%80%81%E8%B5%B5%E5%8C%A1%E7%9A%84%E5%AD%A6%E6%9C%AF%E9%9D%A9%E5%91%BD"><span class="toc-text">（一）救时之弊，革礼之薄：啖助、陆淳、赵匡的学术革命</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%8C%EF%BC%89%E5%AE%8B%E5%AD%A6%E7%AE%A1%E7%AA%A5"><span class="toc-text">（二）宋学管窥</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%AD%99%E5%A4%8D"><span class="toc-text">1. 孙复</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%88%98%E6%95%9E"><span class="toc-text">2. 刘敞</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E7%8E%8B%E5%AE%89%E7%9F%B3"><span class="toc-text">3. 王安石</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-%E8%8B%8F%E8%BD%BC%E4%B8%8E%E8%8B%8F%E8%BE%99"><span class="toc-text">4. 苏轼与苏辙</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-%E8%83%A1%E5%AE%89%E5%9B%BD"><span class="toc-text">5. 胡安国</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6-%E7%9C%9F%E5%BE%B7%E7%A7%80"><span class="toc-text">6. 真德秀</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7-%E5%90%95%E7%A5%96%E8%B0%A6%E3%80%8A%E4%B8%9C%E8%8E%B1%E5%8D%9A%E8%AE%AE%E3%80%8B%EF%BC%9A%E7%A7%91%E4%B8%BE%E8%8C%83%E6%96%87"><span class="toc-text">7. 吕祖谦《东莱博议》：科举范文</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#8-%E8%B5%B5%E9%B9%8F%E9%A3%9E%E3%80%8A%E6%98%A5%E7%A7%8B%E7%BB%8F%E8%8D%83%E3%80%8B%EF%BC%9A%E4%B8%BA%E5%8F%94%E6%AE%B5%E8%BE%A9%E6%8A%A4"><span class="toc-text">8. 赵鹏飞《春秋经荃》：为叔段辩护</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#9-%E7%BB%8F%E5%AD%A6%E7%90%86%E5%AD%A6%E5%8C%96%EF%BC%8C%E5%AD%94%E5%AD%90%E6%9C%B1%E5%AD%90%E5%8C%96"><span class="toc-text">9. 经学理学化，孔子朱子化</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%B8%89%EF%BC%89%E5%AE%8B%E5%85%83%E4%B9%8B%E9%99%85%EF%BC%9A%E4%B8%8D%E4%BB%95%E4%BA%8C%E6%9C%9D%E4%B8%8E%E5%8D%8E%E5%A4%B7%E4%B9%8B%E8%BE%A9"><span class="toc-text">（三）宋元之际：不仕二朝与华夷之辩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%9B%9B%EF%BC%89%E6%98%8E%E4%BB%A3%EF%BC%9A%E9%9D%96%E9%9A%BE%E4%B9%8B%E5%8F%98%E4%B8%8E%E5%85%8B%E6%AE%B5%E6%96%B0%E8%A7%A3"><span class="toc-text">（四）明代：靖难之变与克段新解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E4%BA%94%EF%BC%89%E6%B8%85%E4%BB%A3%E5%85%8B%E6%AE%B5%E8%A7%A3%E4%B8%89%E4%BE%8B"><span class="toc-text">（五）清代克段解三例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E4%B8%A5%E5%90%AF%E9%9A%86"><span class="toc-text">1. 严启隆</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%AF%9B%E5%A5%87%E9%BE%84%E3%80%81%E4%B8%87%E6%96%AF%E5%A4%A7"><span class="toc-text">2. 毛奇龄、万斯大</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E6%9D%8E%E5%A1%A8"><span class="toc-text">3. 李塨</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BC%88%E5%85%AD%EF%BC%89%E7%BB%93%E8%AF%AD"><span class="toc-text">（六）结语</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%9D%8E%E8%B4%BD%E9%97%AE%E9%A2%98"><span class="toc-text">1. 李贽问题</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%BF%AE%E6%98%94%E5%BA%95%E5%BE%B7%E7%9A%84%E8%99%9A%E6%9E%84%E4%B8%8E%E7%91%9E%E6%A0%BC%E7%91%9E%E6%A0%BC%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-text">2. 修昔底德的虚构与瑞格瑞格的故事</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E6%95%B4"><span class="toc-text">词汇整</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

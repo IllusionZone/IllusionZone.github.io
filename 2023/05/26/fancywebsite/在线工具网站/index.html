@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【Fancy Website】在线工具网站</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【Fancy Website】在线工具网站">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2023/05/26/fancywebsite/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="略">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-05-26">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-09-22">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="Fancy Website">
+        
+          <meta 
+            property="og:article:tag" 
+            content="在线工具">
+        
+          <meta 
+            property="og:article:tag" 
+            content="快捷处理">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">在线工具网站收录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BA%92%E9%BA%9F%E4%BC%A0%E9%80%81"><span class="toc-text">麒麟传送</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ToolB"><span class="toc-text">ToolB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E8%BE%BE%E4%BA%BA"><span class="toc-text">工具达人</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E9%93%81%E7%9B%92%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">热铁盒工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MikuTools%E5%B7%A5%E5%85%B7%E7%9B%92"><span class="toc-text">MikuTools工具盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%AA%E7%81%B5"><span class="toc-text">纪灵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TinyWow"><span class="toc-text">TinyWow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Omni-Calculator%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E5%85%8D%E8%B4%B9%E8%AE%A1%E7%AE%97%E6%9C%BA"><span class="toc-text">Omni Calculator——在线免费计算机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E6%95%8C%E6%8E%A5%E7%A0%81%E5%B9%B3%E5%8F%B0%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6"><span class="toc-text">无敌接码平台——在线短信接收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7SIM-PRO%E2%80%94%E2%80%94%E5%9B%BD%E5%A4%96%E6%89%8B%E6%9C%BA%E5%8F%B7%E5%9C%A8%E7%BA%BF%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6"><span class="toc-text">7SIM.PRO——国外手机号在线短信接收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%B0%8F%E5%BF%99%E2%80%94%E2%80%94%E8%85%BE%E8%AE%AF%E5%B7%A5%E5%85%B7%E7%99%BE%E5%AE%9D%E7%AE%B1"><span class="toc-text">帮小忙——腾讯工具百宝箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E9%92%A2%E7%90%B4autopiano%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E9%92%A2%E7%90%B4"><span class="toc-text">自由钢琴autopiano——在线钢琴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GitMind"><span class="toc-text">GitMind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lingva-Translate%E2%80%94%E2%80%94%E8%B0%B7%E6%AD%8C%E7%BF%BB%E8%AF%91%E9%95%9C%E5%83%8F%E7%BD%91%E7%AB%99"><span class="toc-text">Lingva Translate——谷歌翻译镜像网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IconKitchen%E2%80%94%E2%80%94App-Icon-Generator"><span class="toc-text">IconKitchen——App Icon Generator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E5%93%87%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%85%A8"><span class="toc-text">工具哇——在线工具大全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%91%E9%B8%BD%E2%80%94%E2%80%94%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8A%A9%E6%89%8B%E7%BD%91%E9%A1%B5%E7%89%88"><span class="toc-text">云鸽——文件传输助手网页版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Genes-to-Congnition-Online"><span class="toc-text">Genes to Congnition Online</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PDF%EF%BC%8Cepub%EF%BC%8C%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6%E7%BF%BB%E8%AF%91%E2%80%94%E2%80%94%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91"><span class="toc-text">PDF，epub，字幕文件翻译——沉浸式翻译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lyrify-Translator%E2%80%94%E2%80%94%E8%81%9A%E5%90%88%E5%BC%8F%E7%BF%BB%E8%AF%91"><span class="toc-text">Lyrify Translator——聚合式翻译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zoom-Earth%E2%80%94%E2%80%94%E5%A4%A9%E6%B0%94%E5%9B%BE%EF%BC%8C%E5%AE%9E%E6%97%B6%E9%A3%8E%E6%9A%B4%E8%B7%9F%E8%B8%AA%E5%99%A8"><span class="toc-text">Zoom Earth——天气图，实时风暴跟踪器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%B7%E4%BD%A0%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">迷你工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94%E4%BD%A0%E7%9A%84%E5%B7%A5%E5%85%B7%E7%9B%92"><span class="toc-text">在线工具——你的工具盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-to-Speech%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E6%96%87%E6%9C%AC%E8%BD%AC%E8%AF%AD%E9%9F%B3"><span class="toc-text">Text to Speech——在线文本转语音</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#123APPS%E2%80%94%E2%80%94%E7%BC%96%E8%BE%91%E3%80%81%E8%BD%AC%E6%8D%A2%E3%80%81%E5%88%9B%E5%BB%BA"><span class="toc-text">123APPS——编辑、转换、创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cover-Paint%E2%80%94%E2%80%94%E5%BC%80%E6%BA%90%E5%B0%81%E9%9D%A2%E5%9C%A8%E7%BA%BF%E7%94%9F%E6%88%90"><span class="toc-text">Cover Paint——开源封面在线生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%87%E8%BF%B9%E7%A7%80%E5%B7%A5%E5%85%B7%E7%9B%92%E2%80%94%E2%80%94%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%9A%84%E7%99%BE%E5%AE%9D%E7%AE%B1"><span class="toc-text">奇迹秀工具盒——设计师的百宝箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Free-Broken-Line-Checking-Tool%E2%80%94%E2%80%94dead-link-checker"><span class="toc-text">Free Broken Line Checking Tool——dead link checker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">我的工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B6"><span class="toc-text">在线屏幕录制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Super-Designer-%E2%80%94%E2%80%94-Create-beautiful-design-with-a-few-clicks"><span class="toc-text">Super Designer —— Create beautiful design with a few clicks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-DO%E2%80%94%E2%80%94%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6gmail%E9%82%AE%E7%AE%B1"><span class="toc-text">22.DO——免费临时gmail邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cock-li%E2%80%94%E2%80%94%E5%85%8D%E8%B4%B9%E5%8C%BF%E5%90%8D%E9%82%AE%E7%AE%B1"><span class="toc-text">Cock.li——免费匿名邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6"><span class="toc-text">在线短信接收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Extractor-Image"><span class="toc-text">Extractor Image</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%83%E7%9B%92%E5%B7%A5%E5%85%B7"><span class="toc-text">千盒工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E8%9C%82%E5%B7%A5%E5%85%B7%E7%9B%92"><span class="toc-text">无蜂工具盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtool-pro%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E5%8D%B0%E7%AB%A0%E5%B7%A5%E5%85%B7"><span class="toc-text">vtool.pro——个人印章工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TempMail-so%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">TempMail.so——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TempMail100%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">TempMail100——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GitHub-%E6%96%87%E4%BB%B6%E5%8A%A0%E9%80%9F"><span class="toc-text">GitHub 文件加速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MinMail-app%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">MinMail.app——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MUSELINK%E2%80%94%E2%80%94%E6%9E%81%E7%AE%80%E6%95%B0%E5%AD%97%E5%90%8D%E7%89%87"><span class="toc-text">MUSELINK——极简数字名片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%B8%E7%94%B1%E6%88%91-PaperMe%E2%80%94%E2%80%94%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%93%E5%8D%B0%E7%BA%B8%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-text">纸由我 PaperMe——自定义打印纸生成器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%BE%E5%A3%B3%E2%80%94%E2%80%94GitHub%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F%E7%BD%91%E7%AB%99"><span class="toc-text">虾壳——GitHub下载加速网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MoeMail%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">MoeMail——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FLoderPort%E2%80%94%E2%80%94Instant-Floder-Sharing"><span class="toc-text">FLoderPort——Instant Floder Sharing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E9%B8%ADPLAY%E2%80%94%E2%80%94github%E6%96%87%E4%BB%B6%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7"><span class="toc-text">软鸭PLAY——github文件镜像下载工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NB-Map%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E5%9C%B0%E5%9B%BE%E5%B7%A5%E5%85%B7"><span class="toc-text">NB Map——三维地图工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-to-Handwriting%E2%80%94%E2%80%94Free-Online-Tool"><span class="toc-text">Text to Handwriting——Free Online Tool</span></a></li></ol></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【Fancy Website】在线工具网站
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-05-25T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-05-26</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/Fancy-Website/" 
+          class="post-meta-link">
+          Fancy Website
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>1.4k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/Fancy-Website/" 
+            class="post-meta-link">
+            Fancy Website
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/" 
+            class="post-meta-link">
+            在线工具
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E5%BF%AB%E6%8D%B7%E5%A4%84%E7%90%86/" 
+            class="post-meta-link">
+            快捷处理
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"></div>
+<h1>在线工具网站收录</h1>
+<h3 id="麒麟传送">麒麟传送</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://qilindrop.cn/#">https://qilindrop.cn/#</a><br>
+不同设备间的文件传输，免去接线困扰，页面简洁直接，赞</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/麒麟传送.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/麒麟传送.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="ToolB">ToolB</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://toolb.cn/">https://toolb.cn/</a><br>
+多种在线工具集合</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/ToolB.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/ToolB.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="工具达人">工具达人</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://toolsdar.com/#term-538">https://toolsdar.com/#term-538</a><br>
+多种在线工具集合</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/工具达人.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/工具达人.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="热铁盒工具箱">热铁盒工具箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://tool.retiehe.com/">https://tool.retiehe.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/热铁盒工具箱.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/热铁盒工具箱.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="MikuTools工具盒">MikuTools工具盒</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://wantwords.net/">https://wantwords.net/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/MikuTools.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/MikuTools.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="纪灵">纪灵</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="http://remeins.com/">http://remeins.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/纪灵.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/纪灵.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="TinyWow">TinyWow</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://tinywow.com/">https://tinywow.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/tInywow.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/tInywow.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Omni-Calculator——在线免费计算机">Omni Calculator——在线免费计算机</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.omnicalculator.com/">https://www.omnicalculator.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>网站提供了3518个不同类别的计算器，涵盖了各行各业，各类需求。比如生物学、化学、建造、转换、生态、日常、生活、金融、食物、健康、数学、物理、运动、统计、数据等。<br>
+<img src="/image/fancywebsite/在线工具/omnicalculator.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/omnicalculator.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="无敌接码平台——在线短信接收">无敌接码平台——在线短信接收</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://bestsms.xyz/">https://bestsms.xyz/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>网站提供的号码可用于注册一些不重要的网站账号或者APP账号，防止个人隐私被泄漏，杜绝被骚扰。<br>
+<img src="/image/fancywebsite/在线工具/omnicalculator.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/omnicalculator.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="7SIM-PRO——国外手机号在线短信接收"><a target="_blank" rel="noopener" href="http://7SIM.PRO">7SIM.PRO</a>——国外手机号在线短信接收</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://7sim.pro/">https://7sim.pro/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>当需要国外虚拟手机号接受短信验证码时可派上用场<br>
+<img src="/image/fancywebsite/在线工具/7SIMPRO.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/7SIMPRO.png" class="lozad post-image"><br /></p>
+</details>
+<br /> 
+<h3 id="帮小忙——腾讯工具百宝箱">帮小忙——腾讯工具百宝箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://tool.browser.qq.com">https://tool.browser.qq.com</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>帮小忙是腾讯出品的免费在线综合工具平台，它提供多种实用工具，无需下载多个软件，直接就能在网站上免费使用。<br>
+<img src="/image/fancywebsite/在线工具/帮小忙.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/帮小忙.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="自由钢琴autopiano——在线钢琴">自由钢琴autopiano——在线钢琴</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.autopiano.cn/">https://www.autopiano.cn/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/autopiano.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/autopiano.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="GitMind">GitMind</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://gitmind.cn/">https://gitmind.cn/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/gitmind.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/gitmind.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="临时邮箱">临时邮箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="http://24mail.chacuo.net/">http://24mail.chacuo.net/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/临时邮箱.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/临时邮箱.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Lingva-Translate——谷歌翻译镜像网站">Lingva Translate——谷歌翻译镜像网站</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://lingva.ml/">https://lingva.ml/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/Lingva.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/Lingva.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="IconKitchen——App-Icon-Generator">IconKitchen——App Icon Generator</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://icon.kitchen/">https://icon.kitchen/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>可为安卓、IOS、web、TV等平台快速的制作应用程序图标<br>
+<img src="/image/fancywebsite/在线工具/IconKitchen.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/IconKitchen.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="工具哇——在线工具大全">工具哇——在线工具大全</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://toolwa.com/">https://toolwa.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/工具哇.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/工具哇.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="云鸽——文件传输助手网页版">云鸽——文件传输助手网页版</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://yunge.in/">https://yunge.in/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>跨平台文件传输工具<br>
+<img src="/image/fancywebsite/在线工具/云鸽.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/云鸽.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Genes-to-Congnition-Online">Genes to Congnition Online</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="http://www.g2conline.org/">http://www.g2conline.org/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>神经认知相关网站，有3D脑区模型等<br>
+<img src="/image/fancywebsite/在线工具/genestocognition-1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/genestocognition-1.png" class="lozad post-image"><br>
+<img src="/image/fancywebsite/在线工具/genestocognition-2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/genestocognition-2.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="PDF，epub，字幕文件翻译——沉浸式翻译">PDF，epub，字幕文件翻译——沉浸式翻译</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://app.immersivetranslate.com/">https://app.immersivetranslate.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>当前支持的文件格式：pdf，epub，html，txt；字幕文件：srt，ass<br>
+<img src="/image/fancywebsite/在线工具/沉浸式翻译.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/沉浸式翻译.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Lyrify-Translator——聚合式翻译">Lyrify Translator——聚合式翻译</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://lyrify.sipc.ink/">https://lyrify.sipc.ink/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>聚合翻译站点，支持几十种语言可同步调用七种翻译引擎<br>
+<img src="/image/fancywebsite/在线工具/Lyrify.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/Lyrify.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Zoom-Earth——天气图，实时风暴跟踪器">Zoom Earth——天气图，实时风暴跟踪器</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://zoom.earth/maps/satellite/#view=-11.6,66.3,4z">https://zoom.earth/maps/satellite/#view=-11.6,66.3,4z</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>提供卫星图像的在线平台<br>
+<img src="/image/fancywebsite/在线工具/zoomearth.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/zoomearth.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="迷你工具箱">迷你工具箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="http://www.lizibuluo.com/">http://www.lizibuluo.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/迷你工具箱.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/迷你工具箱.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="在线工具——你的工具盒">在线工具——你的工具盒</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://tool.lu/">https://tool.lu/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/在线工具.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/在线工具.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Text-to-Speech——在线文本转语音">Text to Speech——在线文本转语音</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="http://www.ttsonline.cn/">http://www.ttsonline.cn/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/Text to Speech.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/Text to Speech.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="123APPS——编辑、转换、创建">123APPS——编辑、转换、创建</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://123apps.com/cn/">https://123apps.com/cn/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>主要分为了视频、音频、pdf工具、转换器这4大类工具<br>
+<img src="/image/fancywebsite/在线工具/123APPS.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/123APPS.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Cover-Paint——开源封面在线生成">Cover Paint——开源封面在线生成</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://coverpaint.xiaole.site/zh">https://coverpaint.xiaole.site/zh</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>免费的封面在线生成器，背景图可以搜索开源图库unsplash里的图，也可自行上传。可设置标题、作者、摘要、头像，封面背景，支持中文。<br>
+<img src="/image/fancywebsite/在线工具/Cover Paint.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/Cover Paint.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="奇迹秀工具盒——设计师的百宝箱">奇迹秀工具盒——设计师的百宝箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.qijishow.com/down/index.html">https://www.qijishow.com/down/index.html</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/奇迹秀工具盒.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/奇迹秀工具盒.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Free-Broken-Line-Checking-Tool——dead-link-checker">Free Broken Line Checking Tool——dead link checker</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.deadlinkchecker.com/">https://www.deadlinkchecker.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>在线对网站进行死链检测<br>
+<img src="/image/fancywebsite/在线工具/Free Broken Line Checking Tool.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/Free Broken Line Checking Tool.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="我的工具箱">我的工具箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://toolgg.com/">https://toolgg.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/我的工具箱.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/我的工具箱.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="在线屏幕录制">在线屏幕录制</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://toolwa.com/record/">https://toolwa.com/record/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/在线屏幕录制.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/在线屏幕录制.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Super-Designer-——-Create-beautiful-design-with-a-few-clicks">Super Designer —— Create beautiful design with a few clicks</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://superdesigner.co/">https://superdesigner.co/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>无需登录注册，免费直接使用。提供了多个设计工具，只需要用鼠标点几下，就可以制作出不同的图案，有背景、图案，定制化高，<br>
+<img src="/image/fancywebsite/在线工具/Super Designer.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/Super Designer.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="22-DO——免费临时gmail邮箱"><a target="_blank" rel="noopener" href="http://22.DO">22.DO</a>——免费临时gmail邮箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://22.do/">https://22.do/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/22do.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/22do.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Cock-li——免费匿名邮箱"><a target="_blank" rel="noopener" href="http://Cock.li">Cock.li</a>——免费匿名邮箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://cock.li/">https://cock.li/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>免费注册使用<br>
+<img src="/image/fancywebsite/在线工具/Cockli.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/Cockli.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="在线短信接收">在线短信接收</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.114sim.com/">https://www.114sim.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/在线短信接收.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/在线短信接收.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Extractor-Image">Extractor Image</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://extract.pics/">https://extract.pics/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>从网页中提取图片，免登录情况下每天有免费次数<br>
+<img src="/image/fancywebsite/在线工具/Extractor Image.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/Extractor Image.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="千盒工具">千盒工具</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://1000tool.com/">https://1000tool.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/千盒工具.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/千盒工具.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="无蜂工具盒">无蜂工具盒</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://tool.8kmm.com/">https://tool.8kmm.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/无蜂工具盒.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/无蜂工具盒.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="vtool-pro——个人印章工具"><a target="_blank" rel="noopener" href="http://vtool.pro">vtool.pro</a>——个人印章工具</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://vtool.pro/seal/index.html">https://vtool.pro/seal/index.html</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/vtoolpro.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/vtoolpro.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="TempMail-so——临时邮箱"><a target="_blank" rel="noopener" href="http://TempMail.so">TempMail.so</a>——临时邮箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://tempmail.so/">https://tempmail.so/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>适合在需要临时注册或验证时使用<br>
+<img src="/image/fancywebsite/在线工具/TempMailso.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/TempMailso.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="TempMail100——临时邮箱">TempMail100——临时邮箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://tempmail100.com/zh-cn/">https://tempmail100.com/zh-cn/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/TempMail100.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/TempMail100.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="GitHub-文件加速">GitHub 文件加速</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://github.cmliussss.net/">https://github.cmliussss.net/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/GitHub 文件加速.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/GitHub 文件加速.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="MinMail-app——临时邮箱">MinMail.app——临时邮箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://minmail.app/cn">https://minmail.app/cn</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/MinMail.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/MinMail.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="MUSELINK——极简数字名片">MUSELINK——极简数字名片</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://muselink.cc/">https://muselink.cc/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/MUSELINK.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/MUSELINK.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="纸由我-PaperMe——自定义打印纸生成器">纸由我 PaperMe——自定义打印纸生成器</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://paperme.toolooz.com/">https://paperme.toolooz.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/纸由我.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/纸由我.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="虾壳——GitHub下载加速网站">虾壳——GitHub下载加速网站</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://xiake.pro/">https://xiake.pro/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/虾壳.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/虾壳.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="MoeMail——临时邮箱">MoeMail——临时邮箱</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://moemail.app/">https://moemail.app/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/在线工具/MoeMail.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/MoeMail.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="FLoderPort——Instant-Floder-Sharing">FLoderPort——Instant Floder Sharing</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://folderport.com/zh">https://folderport.com/zh</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>文件夹分享工具<br>
+<img src="/image/fancywebsite/在线工具/FLoderPort.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/FLoderPort.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="软鸭PLAY——github文件镜像下载工具">软鸭PLAY——github文件镜像下载工具</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="http://play.ruanyazyk.com/github.html">http://play.ruanyazyk.com/github.html</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>支持GitHub（Git Clone、Releases、Archive、Gist、Raw）文件加速访问<br>
+<img src="/image/fancywebsite/在线工具/软鸭PLAY.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/软鸭PLAY.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="NB-Map——三维地图工具">NB Map——三维地图工具</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://zhang.kuaitu.cc/">https://zhang.kuaitu.cc/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>可随意调节地图颜色、板块高度、旋转不同的角度，可下载透明背景PNG格式。也可点击动画按钮后录制成视频。<br>
+<img src="/image/fancywebsite/在线工具/NB Map.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/NB Map.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h3 id="Text-to-Handwriting——Free-Online-Tool">Text to Handwriting——Free Online Tool</h3>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://text-to-handwriting.org/">https://text-to-handwriting.org/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>文字转手写体<br>
+<img src="/image/fancywebsite/在线工具/Text to Handwriting.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/在线工具/Text to Handwriting.png" class="lozad post-image"><br /></p>
+</details>
+<br /><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2023/05/26/fancywebsite/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99/">
+            https://illusionzone.github.io/2023/05/26/fancywebsite/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/06/12/fancywebsite/%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90%E7%BD%91%E7%AB%99/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【Fancy Website】视频解析下载网站 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/05/12/fancywebsite/%E6%B8%B8%E6%88%8F%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【Fancy Website】游戏相关网站 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">在线工具网站收录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BA%92%E9%BA%9F%E4%BC%A0%E9%80%81"><span class="toc-text">麒麟传送</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ToolB"><span class="toc-text">ToolB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E8%BE%BE%E4%BA%BA"><span class="toc-text">工具达人</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E9%93%81%E7%9B%92%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">热铁盒工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MikuTools%E5%B7%A5%E5%85%B7%E7%9B%92"><span class="toc-text">MikuTools工具盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%AA%E7%81%B5"><span class="toc-text">纪灵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TinyWow"><span class="toc-text">TinyWow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Omni-Calculator%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E5%85%8D%E8%B4%B9%E8%AE%A1%E7%AE%97%E6%9C%BA"><span class="toc-text">Omni Calculator——在线免费计算机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E6%95%8C%E6%8E%A5%E7%A0%81%E5%B9%B3%E5%8F%B0%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6"><span class="toc-text">无敌接码平台——在线短信接收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7SIM-PRO%E2%80%94%E2%80%94%E5%9B%BD%E5%A4%96%E6%89%8B%E6%9C%BA%E5%8F%B7%E5%9C%A8%E7%BA%BF%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6"><span class="toc-text">7SIM.PRO——国外手机号在线短信接收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%B0%8F%E5%BF%99%E2%80%94%E2%80%94%E8%85%BE%E8%AE%AF%E5%B7%A5%E5%85%B7%E7%99%BE%E5%AE%9D%E7%AE%B1"><span class="toc-text">帮小忙——腾讯工具百宝箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E9%92%A2%E7%90%B4autopiano%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E9%92%A2%E7%90%B4"><span class="toc-text">自由钢琴autopiano——在线钢琴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GitMind"><span class="toc-text">GitMind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lingva-Translate%E2%80%94%E2%80%94%E8%B0%B7%E6%AD%8C%E7%BF%BB%E8%AF%91%E9%95%9C%E5%83%8F%E7%BD%91%E7%AB%99"><span class="toc-text">Lingva Translate——谷歌翻译镜像网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IconKitchen%E2%80%94%E2%80%94App-Icon-Generator"><span class="toc-text">IconKitchen——App Icon Generator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E5%93%87%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%85%A8"><span class="toc-text">工具哇——在线工具大全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%91%E9%B8%BD%E2%80%94%E2%80%94%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8A%A9%E6%89%8B%E7%BD%91%E9%A1%B5%E7%89%88"><span class="toc-text">云鸽——文件传输助手网页版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Genes-to-Congnition-Online"><span class="toc-text">Genes to Congnition Online</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PDF%EF%BC%8Cepub%EF%BC%8C%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6%E7%BF%BB%E8%AF%91%E2%80%94%E2%80%94%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91"><span class="toc-text">PDF，epub，字幕文件翻译——沉浸式翻译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lyrify-Translator%E2%80%94%E2%80%94%E8%81%9A%E5%90%88%E5%BC%8F%E7%BF%BB%E8%AF%91"><span class="toc-text">Lyrify Translator——聚合式翻译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zoom-Earth%E2%80%94%E2%80%94%E5%A4%A9%E6%B0%94%E5%9B%BE%EF%BC%8C%E5%AE%9E%E6%97%B6%E9%A3%8E%E6%9A%B4%E8%B7%9F%E8%B8%AA%E5%99%A8"><span class="toc-text">Zoom Earth——天气图，实时风暴跟踪器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%B7%E4%BD%A0%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">迷你工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94%E4%BD%A0%E7%9A%84%E5%B7%A5%E5%85%B7%E7%9B%92"><span class="toc-text">在线工具——你的工具盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-to-Speech%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E6%96%87%E6%9C%AC%E8%BD%AC%E8%AF%AD%E9%9F%B3"><span class="toc-text">Text to Speech——在线文本转语音</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#123APPS%E2%80%94%E2%80%94%E7%BC%96%E8%BE%91%E3%80%81%E8%BD%AC%E6%8D%A2%E3%80%81%E5%88%9B%E5%BB%BA"><span class="toc-text">123APPS——编辑、转换、创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cover-Paint%E2%80%94%E2%80%94%E5%BC%80%E6%BA%90%E5%B0%81%E9%9D%A2%E5%9C%A8%E7%BA%BF%E7%94%9F%E6%88%90"><span class="toc-text">Cover Paint——开源封面在线生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%87%E8%BF%B9%E7%A7%80%E5%B7%A5%E5%85%B7%E7%9B%92%E2%80%94%E2%80%94%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%9A%84%E7%99%BE%E5%AE%9D%E7%AE%B1"><span class="toc-text">奇迹秀工具盒——设计师的百宝箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Free-Broken-Line-Checking-Tool%E2%80%94%E2%80%94dead-link-checker"><span class="toc-text">Free Broken Line Checking Tool——dead link checker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">我的工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B6"><span class="toc-text">在线屏幕录制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Super-Designer-%E2%80%94%E2%80%94-Create-beautiful-design-with-a-few-clicks"><span class="toc-text">Super Designer —— Create beautiful design with a few clicks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-DO%E2%80%94%E2%80%94%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6gmail%E9%82%AE%E7%AE%B1"><span class="toc-text">22.DO——免费临时gmail邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cock-li%E2%80%94%E2%80%94%E5%85%8D%E8%B4%B9%E5%8C%BF%E5%90%8D%E9%82%AE%E7%AE%B1"><span class="toc-text">Cock.li——免费匿名邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6"><span class="toc-text">在线短信接收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Extractor-Image"><span class="toc-text">Extractor Image</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%83%E7%9B%92%E5%B7%A5%E5%85%B7"><span class="toc-text">千盒工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E8%9C%82%E5%B7%A5%E5%85%B7%E7%9B%92"><span class="toc-text">无蜂工具盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtool-pro%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E5%8D%B0%E7%AB%A0%E5%B7%A5%E5%85%B7"><span class="toc-text">vtool.pro——个人印章工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TempMail-so%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">TempMail.so——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TempMail100%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">TempMail100——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GitHub-%E6%96%87%E4%BB%B6%E5%8A%A0%E9%80%9F"><span class="toc-text">GitHub 文件加速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MinMail-app%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">MinMail.app——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MUSELINK%E2%80%94%E2%80%94%E6%9E%81%E7%AE%80%E6%95%B0%E5%AD%97%E5%90%8D%E7%89%87"><span class="toc-text">MUSELINK——极简数字名片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%B8%E7%94%B1%E6%88%91-PaperMe%E2%80%94%E2%80%94%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%93%E5%8D%B0%E7%BA%B8%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-text">纸由我 PaperMe——自定义打印纸生成器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%BE%E5%A3%B3%E2%80%94%E2%80%94GitHub%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F%E7%BD%91%E7%AB%99"><span class="toc-text">虾壳——GitHub下载加速网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MoeMail%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">MoeMail——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FLoderPort%E2%80%94%E2%80%94Instant-Floder-Sharing"><span class="toc-text">FLoderPort——Instant Floder Sharing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E9%B8%ADPLAY%E2%80%94%E2%80%94github%E6%96%87%E4%BB%B6%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7"><span class="toc-text">软鸭PLAY——github文件镜像下载工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NB-Map%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E5%9C%B0%E5%9B%BE%E5%B7%A5%E5%85%B7"><span class="toc-text">NB Map——三维地图工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-to-Handwriting%E2%80%94%E2%80%94Free-Online-Tool"><span class="toc-text">Text to Handwriting——Free Online Tool</span></a></li></ol></li></ol></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">在线工具网站收录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BA%92%E9%BA%9F%E4%BC%A0%E9%80%81"><span class="toc-text">麒麟传送</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ToolB"><span class="toc-text">ToolB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E8%BE%BE%E4%BA%BA"><span class="toc-text">工具达人</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E9%93%81%E7%9B%92%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">热铁盒工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MikuTools%E5%B7%A5%E5%85%B7%E7%9B%92"><span class="toc-text">MikuTools工具盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%AA%E7%81%B5"><span class="toc-text">纪灵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TinyWow"><span class="toc-text">TinyWow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Omni-Calculator%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E5%85%8D%E8%B4%B9%E8%AE%A1%E7%AE%97%E6%9C%BA"><span class="toc-text">Omni Calculator——在线免费计算机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E6%95%8C%E6%8E%A5%E7%A0%81%E5%B9%B3%E5%8F%B0%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6"><span class="toc-text">无敌接码平台——在线短信接收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7SIM-PRO%E2%80%94%E2%80%94%E5%9B%BD%E5%A4%96%E6%89%8B%E6%9C%BA%E5%8F%B7%E5%9C%A8%E7%BA%BF%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6"><span class="toc-text">7SIM.PRO——国外手机号在线短信接收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%AE%E5%B0%8F%E5%BF%99%E2%80%94%E2%80%94%E8%85%BE%E8%AE%AF%E5%B7%A5%E5%85%B7%E7%99%BE%E5%AE%9D%E7%AE%B1"><span class="toc-text">帮小忙——腾讯工具百宝箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E9%92%A2%E7%90%B4autopiano%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E9%92%A2%E7%90%B4"><span class="toc-text">自由钢琴autopiano——在线钢琴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GitMind"><span class="toc-text">GitMind</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lingva-Translate%E2%80%94%E2%80%94%E8%B0%B7%E6%AD%8C%E7%BF%BB%E8%AF%91%E9%95%9C%E5%83%8F%E7%BD%91%E7%AB%99"><span class="toc-text">Lingva Translate——谷歌翻译镜像网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IconKitchen%E2%80%94%E2%80%94App-Icon-Generator"><span class="toc-text">IconKitchen——App Icon Generator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E5%93%87%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E5%A4%A7%E5%85%A8"><span class="toc-text">工具哇——在线工具大全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%91%E9%B8%BD%E2%80%94%E2%80%94%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8A%A9%E6%89%8B%E7%BD%91%E9%A1%B5%E7%89%88"><span class="toc-text">云鸽——文件传输助手网页版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Genes-to-Congnition-Online"><span class="toc-text">Genes to Congnition Online</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PDF%EF%BC%8Cepub%EF%BC%8C%E5%AD%97%E5%B9%95%E6%96%87%E4%BB%B6%E7%BF%BB%E8%AF%91%E2%80%94%E2%80%94%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91"><span class="toc-text">PDF，epub，字幕文件翻译——沉浸式翻译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lyrify-Translator%E2%80%94%E2%80%94%E8%81%9A%E5%90%88%E5%BC%8F%E7%BF%BB%E8%AF%91"><span class="toc-text">Lyrify Translator——聚合式翻译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Zoom-Earth%E2%80%94%E2%80%94%E5%A4%A9%E6%B0%94%E5%9B%BE%EF%BC%8C%E5%AE%9E%E6%97%B6%E9%A3%8E%E6%9A%B4%E8%B7%9F%E8%B8%AA%E5%99%A8"><span class="toc-text">Zoom Earth——天气图，实时风暴跟踪器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%B7%E4%BD%A0%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">迷你工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94%E4%BD%A0%E7%9A%84%E5%B7%A5%E5%85%B7%E7%9B%92"><span class="toc-text">在线工具——你的工具盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-to-Speech%E2%80%94%E2%80%94%E5%9C%A8%E7%BA%BF%E6%96%87%E6%9C%AC%E8%BD%AC%E8%AF%AD%E9%9F%B3"><span class="toc-text">Text to Speech——在线文本转语音</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#123APPS%E2%80%94%E2%80%94%E7%BC%96%E8%BE%91%E3%80%81%E8%BD%AC%E6%8D%A2%E3%80%81%E5%88%9B%E5%BB%BA"><span class="toc-text">123APPS——编辑、转换、创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cover-Paint%E2%80%94%E2%80%94%E5%BC%80%E6%BA%90%E5%B0%81%E9%9D%A2%E5%9C%A8%E7%BA%BF%E7%94%9F%E6%88%90"><span class="toc-text">Cover Paint——开源封面在线生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%87%E8%BF%B9%E7%A7%80%E5%B7%A5%E5%85%B7%E7%9B%92%E2%80%94%E2%80%94%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%9A%84%E7%99%BE%E5%AE%9D%E7%AE%B1"><span class="toc-text">奇迹秀工具盒——设计师的百宝箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Free-Broken-Line-Checking-Tool%E2%80%94%E2%80%94dead-link-checker"><span class="toc-text">Free Broken Line Checking Tool——dead link checker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">我的工具箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B6"><span class="toc-text">在线屏幕录制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Super-Designer-%E2%80%94%E2%80%94-Create-beautiful-design-with-a-few-clicks"><span class="toc-text">Super Designer —— Create beautiful design with a few clicks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-DO%E2%80%94%E2%80%94%E5%85%8D%E8%B4%B9%E4%B8%B4%E6%97%B6gmail%E9%82%AE%E7%AE%B1"><span class="toc-text">22.DO——免费临时gmail邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cock-li%E2%80%94%E2%80%94%E5%85%8D%E8%B4%B9%E5%8C%BF%E5%90%8D%E9%82%AE%E7%AE%B1"><span class="toc-text">Cock.li——免费匿名邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E7%9F%AD%E4%BF%A1%E6%8E%A5%E6%94%B6"><span class="toc-text">在线短信接收</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Extractor-Image"><span class="toc-text">Extractor Image</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%83%E7%9B%92%E5%B7%A5%E5%85%B7"><span class="toc-text">千盒工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E8%9C%82%E5%B7%A5%E5%85%B7%E7%9B%92"><span class="toc-text">无蜂工具盒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vtool-pro%E2%80%94%E2%80%94%E4%B8%AA%E4%BA%BA%E5%8D%B0%E7%AB%A0%E5%B7%A5%E5%85%B7"><span class="toc-text">vtool.pro——个人印章工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TempMail-so%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">TempMail.so——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TempMail100%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">TempMail100——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GitHub-%E6%96%87%E4%BB%B6%E5%8A%A0%E9%80%9F"><span class="toc-text">GitHub 文件加速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MinMail-app%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">MinMail.app——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MUSELINK%E2%80%94%E2%80%94%E6%9E%81%E7%AE%80%E6%95%B0%E5%AD%97%E5%90%8D%E7%89%87"><span class="toc-text">MUSELINK——极简数字名片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%B8%E7%94%B1%E6%88%91-PaperMe%E2%80%94%E2%80%94%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%93%E5%8D%B0%E7%BA%B8%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-text">纸由我 PaperMe——自定义打印纸生成器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%BE%E5%A3%B3%E2%80%94%E2%80%94GitHub%E4%B8%8B%E8%BD%BD%E5%8A%A0%E9%80%9F%E7%BD%91%E7%AB%99"><span class="toc-text">虾壳——GitHub下载加速网站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MoeMail%E2%80%94%E2%80%94%E4%B8%B4%E6%97%B6%E9%82%AE%E7%AE%B1"><span class="toc-text">MoeMail——临时邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FLoderPort%E2%80%94%E2%80%94Instant-Floder-Sharing"><span class="toc-text">FLoderPort——Instant Floder Sharing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E9%B8%ADPLAY%E2%80%94%E2%80%94github%E6%96%87%E4%BB%B6%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7"><span class="toc-text">软鸭PLAY——github文件镜像下载工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NB-Map%E2%80%94%E2%80%94%E4%B8%89%E7%BB%B4%E5%9C%B0%E5%9B%BE%E5%B7%A5%E5%85%B7"><span class="toc-text">NB Map——三维地图工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-to-Handwriting%E2%80%94%E2%80%94Free-Online-Tool"><span class="toc-text">Text to Handwriting——Free Online Tool</span></a></li></ol></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

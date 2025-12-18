@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【Fancy Website】影视相关网站收录</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【Fancy Website】影视相关网站收录">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/07/fancywebsite/%E5%BD%B1%E8%A7%86%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-07">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-03-24">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="Fancy Website">
+        
+          <meta 
+            property="og:article:tag" 
+            content="电影">
+        
+          <meta 
+            property="og:article:tag" 
+            content="电视剧">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">影视相关网站收录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E8%A7%86%E5%BD%B1%E8%A7%86"><span class="toc-text">注视影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E7%8C%AB%E7%9A%84%E4%BB%93%E5%BA%93"><span class="toc-text">影猫的仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%B6%E6%9D%AF%E8%99%8E"><span class="toc-text">茶杯虎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%B6%E6%9D%AF%E7%8B%90"><span class="toc-text">茶杯狐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LIBVIO"><span class="toc-text">LIBVIO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%A4%E8%AF%AD%E7%89%87"><span class="toc-text">粤语片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BT%E9%83%A8%E8%90%BD%E5%A4%A9%E5%A0%82"><span class="toc-text">BT部落天堂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E5%91%8A%E7%89%87%E4%B8%96%E7%95%8C"><span class="toc-text">预告片世界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%94%E5%98%80%E5%BD%B1%E8%A7%86"><span class="toc-text">哔嘀影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1891%E5%BD%B1%E8%A7%86"><span class="toc-text">1891影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%BE%E5%8F%B0%E8%AF%8D"><span class="toc-text">找台词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Yarn%E2%80%94%E2%80%94Search-clips-by-quote"><span class="toc-text">Yarn——Search clips by quote</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%9F%E5%BD%B1%E8%A7%86%E9%A2%91"><span class="toc-text">星影视频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E8%A7%86%E8%A7%89%E5%BD%B1%E9%99%A2"><span class="toc-text">新视觉影院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%B7%E5%85%94%E5%BD%B1%E9%99%A2"><span class="toc-text">海兔影院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%96%B5%E7%89%A9%E6%AC%A1%E5%85%83%E2%80%94%E2%80%94%E8%87%B4%E5%8A%9B%E9%AB%98%E8%B4%A8%E9%87%8F%E8%BF%BD%E7%95%AA%E5%8A%A8%E6%BC%AB%E7%BD%91%E7%AB%99"><span class="toc-text">喵物次元——致力高质量追番动漫网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trace-Moe%E2%80%94%E2%80%94Anime-Scene-Search-Engine"><span class="toc-text">Trace Moe——Anime Scene Search Engine</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E9%A3%9ETV%E2%80%94%E2%80%94%E5%A5%88%E9%A3%9E%E5%BD%B1%E8%A7%86%E5%89%A7%E9%9B%86%E5%BC%B9%E5%B9%95%E7%BD%91"><span class="toc-text">网飞TV——奈飞影视剧集弹幕网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RARBG%E2%80%94%E2%80%94%E6%97%A0%E5%AD%97%E5%B9%95%E7%89%87%E6%BA%90"><span class="toc-text">RARBG——无字幕片源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MVCAT-%E5%BD%B1%E7%8C%AB%E5%AF%BC%E8%88%AA"><span class="toc-text">MVCAT 影猫导航</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%AD%97%E5%B9%95%E7%BF%BB%E8%AF%91"><span class="toc-text">在线字幕翻译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#KuKuTool%E2%80%94%E2%80%94%E7%9F%AD%E8%A7%86%E9%A2%91%E5%8E%BB%E6%B0%B4%E5%8D%B0"><span class="toc-text">KuKuTool——短视频去水印</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TVB%E4%BA%91%E6%92%AD"><span class="toc-text">TVB云播</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%88%E9%9D%9E%E5%BD%B1%E8%A7%86"><span class="toc-text">奈非影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A3%98%E9%9B%B6%E7%94%B5%E5%BD%B1%E7%BD%91"><span class="toc-text">飘零电影网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E5%B9%95%E5%BA%93%E2%80%94%E2%80%94%E5%AD%97%E5%B9%95%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99"><span class="toc-text">字幕库——字幕下载网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SubHD%E2%80%94%E2%80%94%E5%88%86%E4%BA%AB%E4%B8%8B%E8%BD%BD%E4%BA%A4%E6%B5%81%E5%AD%97%E5%B9%95%E5%B9%B3%E5%8F%B0"><span class="toc-text">SubHD——分享下载交流字幕平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LeisiDianying%E2%80%94%E2%80%94%E5%AF%BB%E6%89%BE%E6%9C%80%E4%BD%B3%E7%B1%BB%E4%BC%BC%E7%94%B5%E5%BD%B1"><span class="toc-text">LeisiDianying——寻找最佳类似电影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AC%E5%BC%80%E7%BA%AA%E5%BD%95%E7%89%87%E4%B8%8B%E8%BD%BD%E7%BD%91"><span class="toc-text">公开纪录片下载网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E6%A0%B8%E6%8C%87%E5%8D%97%E2%80%94%E2%80%94%E4%B8%93%E6%B3%A8%E6%94%B6%E5%BD%95%E5%85%8D%E8%B4%B9%E4%B8%94%E4%BC%98%E8%B4%A8%E7%9A%84%E5%BD%B1%E9%9F%B3%E5%A8%B1%E4%B9%90%E7%BD%91%E7%AB%99%EF%BC%8C%E7%B2%BE%E9%80%89%E5%85%A8%E7%BD%91%E9%AB%98%E6%B8%85%E7%94%B5%E5%BD%B1%E3%80%81%E4%BA%8C%E6%AC%A1%E5%85%83%E3%80%81%E9%9F%B3%E4%B9%90%E3%80%81%E6%B8%B8%E6%88%8F%E3%80%81%E5%A3%81%E7%BA%B8%E3%80%81%E7%94%B5%E5%AD%90%E4%B9%A6%E7%9A%84%E5%85%8D%E8%B4%B9%E7%BD%91%E7%AB%99%E5%92%8C-APP"><span class="toc-text">硬核指南——专注收录免费且优质的影音娱乐网站，精选全网高清电影、二次元、音乐、游戏、壁纸、电子书的免费网站和 APP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E5%89%A7"><span class="toc-text">搜剧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E5%B9%95%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">字幕工具箱</span></a></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【Fancy Website】影视相关网站收录
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-12-06T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-07</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/Fancy-Website/" 
+          class="post-meta-link">
+          Fancy Website
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>733 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/Fancy-Website/" 
+            class="post-meta-link">
+            Fancy Website
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E7%94%B5%E5%BD%B1/" 
+            class="post-meta-link">
+            电影
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E7%94%B5%E8%A7%86%E5%89%A7/" 
+            class="post-meta-link">
+            电视剧
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"></div>
+<h1>影视相关网站收录</h1>
+<h2 id="注视影视">注视影视</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://gaze.run/">https://gaze.run/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/注视影视-1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/注视影视-1.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="影猫的仓库">影猫的仓库</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://ymck.vip/">https://ymck.vip/</a><br>
+<a target="_blank" rel="noopener" href="https://ymck.me/?ref=ymck.vip">https://ymck.me/?ref=ymck.vip</a><br>
+<a target="_blank" rel="noopener" href="http://ymck.xyz/">http://ymck.xyz/</a><br>
+<a target="_blank" rel="noopener" href="https://search.ymck.me/">https://search.ymck.me/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/影猫的仓库-1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/影猫的仓库-1.png" class="lozad post-image"><img src="/image/fancywebsite/影视网站/影猫的仓库-2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/影猫的仓库-2.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="茶杯虎">茶杯虎</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.725998.com/">https://www.725998.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/茶杯虎-1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/茶杯虎-1.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="茶杯狐">茶杯狐</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://cupfox.app/">https://cupfox.app/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/茶杯狐-1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/茶杯狐-1.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="LIBVIO">LIBVIO</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.libvio.me/">https://www.libvio.me/</a><br>
+<a target="_blank" rel="noopener" href="https://www.libvio.fun/">https://www.libvio.fun/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/LIBVIO.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/LIBVIO.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="粤语片">粤语片</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.yueyp.com/">https://www.yueyp.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/粤语片-1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/粤语片-1.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="BT部落天堂">BT部落天堂</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.btbuluo.net/">https://www.btbuluo.net/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>注重体验与质量的影视资源下载网站<br>
+<img src="/image/fancywebsite/影视网站/BT部落天堂.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/BT部落天堂.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="预告片世界">预告片世界</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.yingshiguang.com/allmovies">https://www.yingshiguang.com/allmovies</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>专门分享电影预告片资源的网站（包括电影预告片、主题曲MV、幕后特辑等视频片段）<br>
+<img src="/image/fancywebsite/影视网站/预告片世界.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/预告片世界.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="哔嘀影视">哔嘀影视</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.bdys03.com/">https://www.bdys03.com/</a><br>
+<a target="_blank" rel="noopener" href="https://www.bdys10.com/">https://www.bdys10.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/哔嘀影视-1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/哔嘀影视-1.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="1891影视">1891影视</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.1891sp.com/">https://www.1891sp.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/1891影视.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/1891影视.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="找台词">找台词</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="http://www.zhaotaici.cn/">http://www.zhaotaici.cn/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>输入电影的某一段台词，点击搜台词即可找到有这段台词的电影。上下文内还提供了该台词出现的具体时间和前后台词。<br>
+<img src="/image/fancywebsite/影视网站/找台词.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/找台词.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="Yarn——Search-clips-by-quote">Yarn——Search clips by quote</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://getyarn.io/">https://getyarn.io/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>通过台词搜索电影<br>
+<img src="/image/fancywebsite/影视网站/Yarn.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/Yarn.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="星影视频">星影视频</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.xy1080.net/">https://www.xy1080.net/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/星影.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/星影.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="新视觉影院">新视觉影院</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.6080yy3.com/">https://www.6080yy3.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/新视觉.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/新视觉.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="海兔影院">海兔影院</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://www.haitu.vip/">https://www.haitu.vip/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/海兔影院.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/海兔影院.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="喵物次元——致力高质量追番动漫网站">喵物次元——致力高质量追番动漫网站</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://catw.moe/">https://catw.moe/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/喵物次元.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/喵物次元.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="Trace-Moe——Anime-Scene-Search-Engine">Trace Moe——Anime Scene Search Engine</h2>
+<p>网址：<br>
+<a target="_blank" rel="noopener" href="https://trace.moe/">https://trace.moe/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>动漫场景搜索引擎，可以通过该网站搜索图片来源自哪个动漫。<br>
+<img src="/image/fancywebsite/影视网站/TraceMore.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/TraceMore.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="网飞TV——奈飞影视剧集弹幕网">网飞TV——奈飞影视剧集弹幕网</h2>
+<p><a target="_blank" rel="noopener" href="https://www.wangfei.eu/">https://www.wangfei.eu/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/网飞TV.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/网飞TV.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="RARBG——无字幕片源">RARBG——无字幕片源</h2>
+<p><a target="_blank" rel="noopener" href="https://www2.rarbggo.to/">https://www2.rarbggo.to/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/RARBG.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/RARBG.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="MVCAT-影猫导航">MVCAT 影猫导航</h2>
+<p><a target="_blank" rel="noopener" href="https://www.mvcat.com/">https://www.mvcat.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>电影资源网站，简洁免费无广告，败笔是需要微信关注登录。以思维脑图方式布局，卡片式阅览。解说、混剪、海报、音乐皆有。<br>
+<img src="/image/fancywebsite/影视网站/MVCAT.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/MVCAT.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="在线字幕翻译">在线字幕翻译</h2>
+<p><a target="_blank" rel="noopener" href="https://srttran.leavesc.com/">https://srttran.leavesc.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>需要科学方式<br>
+<img src="/image/fancywebsite/影视网站/在线字幕翻译.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/在线字幕翻译.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="KuKuTool——短视频去水印">KuKuTool——短视频去水印</h2>
+<p><a target="_blank" rel="noopener" href="https://dy.kukutool.com/douyin.html">https://dy.kukutool.com/douyin.html</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>输入短视频网址以获得一个新的无水印视频地址，打开后可直接下载，以及视频封面的下载地址。<br>
+<img src="/image/fancywebsite/影视网站/KuKuTool.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/KuKuTool.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="TVB云播">TVB云播</h2>
+<p><a target="_blank" rel="noopener" href="http://www.hktvyb.vip/">http://www.hktvyb.vip/</a><br>
+<a target="_blank" rel="noopener" href="http://www.tvyb03.com/">http://www.tvyb03.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p>TVB电视剧<br>
+<img src="/image/fancywebsite/影视网站/TVB云播.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/TVB云播.png" class="lozad post-image"><br>
+<img src="/image/fancywebsite/影视网站/TVB云播-2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/TVB云播-2.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="奈非影视">奈非影视</h2>
+<p><a target="_blank" rel="noopener" href="http://www.sxbjedu.cn/">http://www.sxbjedu.cn/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/奈非影视.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/奈非影视.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="飘零电影网">飘零电影网</h2>
+<p><a target="_blank" rel="noopener" href="http://www.jixingz56.com/">http://www.jixingz56.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/飘零电影网.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/飘零电影网.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="字幕库——字幕下载网站">字幕库——字幕下载网站</h2>
+<p><a target="_blank" rel="noopener" href="https://srtku.com/">https://srtku.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/字幕库.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/字幕库.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="SubHD——分享下载交流字幕平台">SubHD——分享下载交流字幕平台</h2>
+<p><a target="_blank" rel="noopener" href="https://subhd.tv/">https://subhd.tv/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/SubHD.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/SubHD.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="LeisiDianying——寻找最佳类似电影">LeisiDianying——寻找最佳类似电影</h2>
+<p><a target="_blank" rel="noopener" href="https://leisidianying.com/">https://leisidianying.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/LeisiDianying.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/LeisiDianying.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="公开纪录片下载网">公开纪录片下载网</h2>
+<p><a target="_blank" rel="noopener" href="https://www.opclass.com/">https://www.opclass.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/公开纪录片下载网.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/公开纪录片下载网.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="硬核指南——专注收录免费且优质的影音娱乐网站，精选全网高清电影、二次元、音乐、游戏、壁纸、电子书的免费网站和-APP">硬核指南——专注收录免费且优质的影音娱乐网站，精选全网高清电影、二次元、音乐、游戏、壁纸、电子书的免费网站和 APP</h2>
+<p><a target="_blank" rel="noopener" href="https://yinghezhinan.com/">https://yinghezhinan.com/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/硬核指南.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/硬核指南.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="搜剧">搜剧</h2>
+<p><a target="_blank" rel="noopener" href="https://so.planorg.cn/">https://so.planorg.cn/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/搜剧.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/搜剧.png" class="lozad post-image"><br /></p>
+</details>
+<br />
+<h2 id="字幕工具箱">字幕工具箱</h2>
+<p><a target="_blank" rel="noopener" href="https://zm.i8k.tv/">https://zm.i8k.tv/</a></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>详情</strong></summary><p><img src="/image/fancywebsite/影视网站/字幕工具箱.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/fancywebsite/影视网站/字幕工具箱.png" class="lozad post-image"><br /></p>
+</details>
+<br /><script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/12/07/fancywebsite/%E5%BD%B1%E8%A7%86%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/">
+            https://illusionzone.github.io/2022/12/07/fancywebsite/%E5%BD%B1%E8%A7%86%E7%9B%B8%E5%85%B3%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/12/07/fancywebsite/%E5%9C%A8%E7%BA%BF%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【Fancy Website】在线格式转换网站 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/12/07/fancywebsite/%E8%AE%BE%E8%AE%A1%E7%B4%A0%E6%9D%90/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【Fancy Website】设计素材相关网站 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">影视相关网站收录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E8%A7%86%E5%BD%B1%E8%A7%86"><span class="toc-text">注视影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E7%8C%AB%E7%9A%84%E4%BB%93%E5%BA%93"><span class="toc-text">影猫的仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%B6%E6%9D%AF%E8%99%8E"><span class="toc-text">茶杯虎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%B6%E6%9D%AF%E7%8B%90"><span class="toc-text">茶杯狐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LIBVIO"><span class="toc-text">LIBVIO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%A4%E8%AF%AD%E7%89%87"><span class="toc-text">粤语片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BT%E9%83%A8%E8%90%BD%E5%A4%A9%E5%A0%82"><span class="toc-text">BT部落天堂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E5%91%8A%E7%89%87%E4%B8%96%E7%95%8C"><span class="toc-text">预告片世界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%94%E5%98%80%E5%BD%B1%E8%A7%86"><span class="toc-text">哔嘀影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1891%E5%BD%B1%E8%A7%86"><span class="toc-text">1891影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%BE%E5%8F%B0%E8%AF%8D"><span class="toc-text">找台词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Yarn%E2%80%94%E2%80%94Search-clips-by-quote"><span class="toc-text">Yarn——Search clips by quote</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%9F%E5%BD%B1%E8%A7%86%E9%A2%91"><span class="toc-text">星影视频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E8%A7%86%E8%A7%89%E5%BD%B1%E9%99%A2"><span class="toc-text">新视觉影院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%B7%E5%85%94%E5%BD%B1%E9%99%A2"><span class="toc-text">海兔影院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%96%B5%E7%89%A9%E6%AC%A1%E5%85%83%E2%80%94%E2%80%94%E8%87%B4%E5%8A%9B%E9%AB%98%E8%B4%A8%E9%87%8F%E8%BF%BD%E7%95%AA%E5%8A%A8%E6%BC%AB%E7%BD%91%E7%AB%99"><span class="toc-text">喵物次元——致力高质量追番动漫网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trace-Moe%E2%80%94%E2%80%94Anime-Scene-Search-Engine"><span class="toc-text">Trace Moe——Anime Scene Search Engine</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E9%A3%9ETV%E2%80%94%E2%80%94%E5%A5%88%E9%A3%9E%E5%BD%B1%E8%A7%86%E5%89%A7%E9%9B%86%E5%BC%B9%E5%B9%95%E7%BD%91"><span class="toc-text">网飞TV——奈飞影视剧集弹幕网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RARBG%E2%80%94%E2%80%94%E6%97%A0%E5%AD%97%E5%B9%95%E7%89%87%E6%BA%90"><span class="toc-text">RARBG——无字幕片源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MVCAT-%E5%BD%B1%E7%8C%AB%E5%AF%BC%E8%88%AA"><span class="toc-text">MVCAT 影猫导航</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%AD%97%E5%B9%95%E7%BF%BB%E8%AF%91"><span class="toc-text">在线字幕翻译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#KuKuTool%E2%80%94%E2%80%94%E7%9F%AD%E8%A7%86%E9%A2%91%E5%8E%BB%E6%B0%B4%E5%8D%B0"><span class="toc-text">KuKuTool——短视频去水印</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TVB%E4%BA%91%E6%92%AD"><span class="toc-text">TVB云播</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%88%E9%9D%9E%E5%BD%B1%E8%A7%86"><span class="toc-text">奈非影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A3%98%E9%9B%B6%E7%94%B5%E5%BD%B1%E7%BD%91"><span class="toc-text">飘零电影网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E5%B9%95%E5%BA%93%E2%80%94%E2%80%94%E5%AD%97%E5%B9%95%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99"><span class="toc-text">字幕库——字幕下载网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SubHD%E2%80%94%E2%80%94%E5%88%86%E4%BA%AB%E4%B8%8B%E8%BD%BD%E4%BA%A4%E6%B5%81%E5%AD%97%E5%B9%95%E5%B9%B3%E5%8F%B0"><span class="toc-text">SubHD——分享下载交流字幕平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LeisiDianying%E2%80%94%E2%80%94%E5%AF%BB%E6%89%BE%E6%9C%80%E4%BD%B3%E7%B1%BB%E4%BC%BC%E7%94%B5%E5%BD%B1"><span class="toc-text">LeisiDianying——寻找最佳类似电影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AC%E5%BC%80%E7%BA%AA%E5%BD%95%E7%89%87%E4%B8%8B%E8%BD%BD%E7%BD%91"><span class="toc-text">公开纪录片下载网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E6%A0%B8%E6%8C%87%E5%8D%97%E2%80%94%E2%80%94%E4%B8%93%E6%B3%A8%E6%94%B6%E5%BD%95%E5%85%8D%E8%B4%B9%E4%B8%94%E4%BC%98%E8%B4%A8%E7%9A%84%E5%BD%B1%E9%9F%B3%E5%A8%B1%E4%B9%90%E7%BD%91%E7%AB%99%EF%BC%8C%E7%B2%BE%E9%80%89%E5%85%A8%E7%BD%91%E9%AB%98%E6%B8%85%E7%94%B5%E5%BD%B1%E3%80%81%E4%BA%8C%E6%AC%A1%E5%85%83%E3%80%81%E9%9F%B3%E4%B9%90%E3%80%81%E6%B8%B8%E6%88%8F%E3%80%81%E5%A3%81%E7%BA%B8%E3%80%81%E7%94%B5%E5%AD%90%E4%B9%A6%E7%9A%84%E5%85%8D%E8%B4%B9%E7%BD%91%E7%AB%99%E5%92%8C-APP"><span class="toc-text">硬核指南——专注收录免费且优质的影音娱乐网站，精选全网高清电影、二次元、音乐、游戏、壁纸、电子书的免费网站和 APP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E5%89%A7"><span class="toc-text">搜剧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E5%B9%95%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">字幕工具箱</span></a></li></ol></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">影视相关网站收录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E8%A7%86%E5%BD%B1%E8%A7%86"><span class="toc-text">注视影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BD%B1%E7%8C%AB%E7%9A%84%E4%BB%93%E5%BA%93"><span class="toc-text">影猫的仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%B6%E6%9D%AF%E8%99%8E"><span class="toc-text">茶杯虎</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%B6%E6%9D%AF%E7%8B%90"><span class="toc-text">茶杯狐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LIBVIO"><span class="toc-text">LIBVIO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%A4%E8%AF%AD%E7%89%87"><span class="toc-text">粤语片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BT%E9%83%A8%E8%90%BD%E5%A4%A9%E5%A0%82"><span class="toc-text">BT部落天堂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E5%91%8A%E7%89%87%E4%B8%96%E7%95%8C"><span class="toc-text">预告片世界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%94%E5%98%80%E5%BD%B1%E8%A7%86"><span class="toc-text">哔嘀影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1891%E5%BD%B1%E8%A7%86"><span class="toc-text">1891影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%BE%E5%8F%B0%E8%AF%8D"><span class="toc-text">找台词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Yarn%E2%80%94%E2%80%94Search-clips-by-quote"><span class="toc-text">Yarn——Search clips by quote</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%9F%E5%BD%B1%E8%A7%86%E9%A2%91"><span class="toc-text">星影视频</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E8%A7%86%E8%A7%89%E5%BD%B1%E9%99%A2"><span class="toc-text">新视觉影院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%B7%E5%85%94%E5%BD%B1%E9%99%A2"><span class="toc-text">海兔影院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%96%B5%E7%89%A9%E6%AC%A1%E5%85%83%E2%80%94%E2%80%94%E8%87%B4%E5%8A%9B%E9%AB%98%E8%B4%A8%E9%87%8F%E8%BF%BD%E7%95%AA%E5%8A%A8%E6%BC%AB%E7%BD%91%E7%AB%99"><span class="toc-text">喵物次元——致力高质量追番动漫网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trace-Moe%E2%80%94%E2%80%94Anime-Scene-Search-Engine"><span class="toc-text">Trace Moe——Anime Scene Search Engine</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E9%A3%9ETV%E2%80%94%E2%80%94%E5%A5%88%E9%A3%9E%E5%BD%B1%E8%A7%86%E5%89%A7%E9%9B%86%E5%BC%B9%E5%B9%95%E7%BD%91"><span class="toc-text">网飞TV——奈飞影视剧集弹幕网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RARBG%E2%80%94%E2%80%94%E6%97%A0%E5%AD%97%E5%B9%95%E7%89%87%E6%BA%90"><span class="toc-text">RARBG——无字幕片源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MVCAT-%E5%BD%B1%E7%8C%AB%E5%AF%BC%E8%88%AA"><span class="toc-text">MVCAT 影猫导航</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E7%BA%BF%E5%AD%97%E5%B9%95%E7%BF%BB%E8%AF%91"><span class="toc-text">在线字幕翻译</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#KuKuTool%E2%80%94%E2%80%94%E7%9F%AD%E8%A7%86%E9%A2%91%E5%8E%BB%E6%B0%B4%E5%8D%B0"><span class="toc-text">KuKuTool——短视频去水印</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TVB%E4%BA%91%E6%92%AD"><span class="toc-text">TVB云播</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%88%E9%9D%9E%E5%BD%B1%E8%A7%86"><span class="toc-text">奈非影视</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A3%98%E9%9B%B6%E7%94%B5%E5%BD%B1%E7%BD%91"><span class="toc-text">飘零电影网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E5%B9%95%E5%BA%93%E2%80%94%E2%80%94%E5%AD%97%E5%B9%95%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99"><span class="toc-text">字幕库——字幕下载网站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SubHD%E2%80%94%E2%80%94%E5%88%86%E4%BA%AB%E4%B8%8B%E8%BD%BD%E4%BA%A4%E6%B5%81%E5%AD%97%E5%B9%95%E5%B9%B3%E5%8F%B0"><span class="toc-text">SubHD——分享下载交流字幕平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LeisiDianying%E2%80%94%E2%80%94%E5%AF%BB%E6%89%BE%E6%9C%80%E4%BD%B3%E7%B1%BB%E4%BC%BC%E7%94%B5%E5%BD%B1"><span class="toc-text">LeisiDianying——寻找最佳类似电影</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AC%E5%BC%80%E7%BA%AA%E5%BD%95%E7%89%87%E4%B8%8B%E8%BD%BD%E7%BD%91"><span class="toc-text">公开纪录片下载网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E6%A0%B8%E6%8C%87%E5%8D%97%E2%80%94%E2%80%94%E4%B8%93%E6%B3%A8%E6%94%B6%E5%BD%95%E5%85%8D%E8%B4%B9%E4%B8%94%E4%BC%98%E8%B4%A8%E7%9A%84%E5%BD%B1%E9%9F%B3%E5%A8%B1%E4%B9%90%E7%BD%91%E7%AB%99%EF%BC%8C%E7%B2%BE%E9%80%89%E5%85%A8%E7%BD%91%E9%AB%98%E6%B8%85%E7%94%B5%E5%BD%B1%E3%80%81%E4%BA%8C%E6%AC%A1%E5%85%83%E3%80%81%E9%9F%B3%E4%B9%90%E3%80%81%E6%B8%B8%E6%88%8F%E3%80%81%E5%A3%81%E7%BA%B8%E3%80%81%E7%94%B5%E5%AD%90%E4%B9%A6%E7%9A%84%E5%85%8D%E8%B4%B9%E7%BD%91%E7%AB%99%E5%92%8C-APP"><span class="toc-text">硬核指南——专注收录免费且优质的影音娱乐网站，精选全网高清电影、二次元、音乐、游戏、壁纸、电子书的免费网站和 APP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%9C%E5%89%A7"><span class="toc-text">搜剧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E5%B9%95%E5%B7%A5%E5%85%B7%E7%AE%B1"><span class="toc-text">字幕工具箱</span></a></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

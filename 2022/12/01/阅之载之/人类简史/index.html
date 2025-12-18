@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】人类简史</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】人类简史">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/01/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/book/readandnote/人类简史/indeximg/indeximg.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-01">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-01-08">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第一部分 认知革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BA%BA%E7%B1%BB%EF%BC%9A%E4%B8%80%E7%A7%8D%E4%B9%9F%E6%B2%A1%E4%BB%80%E4%B9%88%E7%89%B9%E5%88%AB%E7%9A%84%E5%8A%A8%E7%89%A9"><span class="toc-text">第一章 人类：一种也没什么特别的动物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%9F%A5%E6%81%B6%E5%96%84%E6%A0%91"><span class="toc-text">第二章 知恶善树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%BA%9A%E5%BD%93%E5%92%8C%E5%A4%8F%E5%A8%83%E7%9A%84%E4%B8%80%E5%A4%A9"><span class="toc-text">第三章 亚当和夏娃的一天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%AF%81%E5%A4%A9%E7%81%AD%E5%9C%B0%E7%9A%84%E4%BA%BA%E7%B1%BB%E6%B4%AA%E6%B0%B4"><span class="toc-text">第四章 毁天灭地的人类洪水</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第二部分 农业革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A4%A7%E9%AA%97%E5%B1%80"><span class="toc-text">第五章 史上最大骗局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%9B%96%E8%B5%B7%E9%87%91%E5%AD%97%E5%A1%94"><span class="toc-text">第六章 盖起金字塔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E8%AE%B0%E5%BF%86%E8%BF%87%E8%BD%BD"><span class="toc-text">第七章 记忆过载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%8E%86%E5%8F%B2%E4%BB%8E%E6%97%A0%E6%AD%A3%E4%B9%89"><span class="toc-text">第八章 历史从无正义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第三部分 人类的融合统一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E5%8E%86%E5%8F%B2%E7%9A%84%E6%96%B9%E5%90%91"><span class="toc-text">第九章 历史的方向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E9%87%91%E9%92%B1%E7%9A%84%E5%91%B3%E9%81%93"><span class="toc-text">第十章 金钱的味道</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E5%B8%9D%E5%9B%BD%E7%9A%84%E6%84%BF%E6%99%AF"><span class="toc-text">第十一章 帝国的愿景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-%E5%AE%97%E6%95%99%E7%9A%84%E6%B3%95%E5%88%99"><span class="toc-text">第十二章 宗教的法则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E6%88%90%E5%8A%9F%E7%9A%84%E7%A7%98%E5%AF%86"><span class="toc-text">第十三章 成功的秘密</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第四部分 科学革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E5%8F%91%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%97%A0%E7%9F%A5"><span class="toc-text">第十四章 发现自己的无知</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E7%AB%A0-%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%81%94%E5%A7%BB"><span class="toc-text">第十五章 科学与帝国的联姻</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E6%95%99%E6%9D%A1"><span class="toc-text">第十六章 资本主义教条</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%83%E7%AB%A0-%E5%B7%A5%E4%B8%9A%E7%9A%84%E5%B7%A8%E8%BD%AE"><span class="toc-text">第十七章 工业的巨轮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E7%AB%A0-%E4%B8%80%E5%9C%BA%E6%B0%B8%E8%BF%9C%E7%9A%84%E9%9D%A9%E5%91%BD"><span class="toc-text">第十八章 一场永远的革命</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B9%9D%E7%AB%A0-%E4%BB%8E%E6%AD%A4%E8%BF%87%E7%9D%80%E5%B9%B8%E7%A6%8F%E5%BF%AB%E4%B9%90%E7%9A%84%E6%97%A5%E5%AD%90"><span class="toc-text">第十九章 从此过着幸福快乐的日子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E7%AB%A0-%E6%99%BA%E4%BA%BA%E6%9C%AB%E6%97%A5"><span class="toc-text">第二十章 智人末日</span></a></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/book/readandnote/人类简史/indeximg/indeximg.png" 
+      data-src="/image/book/readandnote/人类简史/indeximg/indeximg.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【阅之载之】人类简史 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】人类简史
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-11-30T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-01</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>11.4k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p></div>
+<br />
+<img src="/image/book/readandnote/人类简史/人类简史-封面.png" width="400rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/人类简史/人类简史-封面.png" class="lozad post-image">
+<br />
+<h1>第一部分 认知革命</h1>
+<h2 id="第一章-人类：一种也没什么特别的动物">第一章 人类：一种也没什么特别的动物</h2>
+<p><strong>原文摘录</strong><br>
+大约在135亿年前，经过所谓的“大爆炸”（Big Bang）之后，宇宙的物质、能量、时间和空间才成了现在的样子。宇宙的这些基本特征，就成了“物理学”。</p>
+<p>在这之后过了大约30万年，物质和能量开始形成复杂的结构，称为“原子”，再进一步构成“分子”。至于这些原子和分子的故事以及它们如何互动，就成了“化学”。</p>
+<p>大约38亿年前，在这个叫作地球的行星上，有些分子结合起来，形成一种特别庞大而又精细的结构，称为“有机体”。有机体的故事，就成了“生物学”。</p>
+<p>到了大约7万年前，一些属于“智人”（Homo sapiens）这一物种的生物，开始创造出更复杂的架构，称为“文化”。而这些人类文化继续发展，就成了“历史学”。</p>
+<p>在历史的路上，有三大重要革命：大约7万年前，“认知革命”（Cognitive Revolution）让历史正式启动。大约12000年前，“农业革命”（Agricultural Revolution）让历史加速发展。而到了大约不过是500年前，“科学革命”（Scientific Revolution）可以说是让历史画下句点而另创新局。这本书的内容，讲述的就是这三大革命如何改变了人类和其他生物。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+此外，由于人类出生的时候尚未发育完全，比起其他动物，也就更能够用教育和社会化的方式加以改变。大多数哺乳动物脱离子宫的时候，就像是已经上釉的陶器出了窑，如果还想再做什么调整，不是刮伤，就是碎裂。然而，人类脱离子宫的时候，却像是从炉里拿出了一团刚熔化的玻璃，可以旋转、拉长，可塑性高到令人叹为观止。正因如此，才会有人是基督徒或佛教徒，有人是资本主义者或社会主义者，又或有人好战，有人爱好和平。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+不可否认拥有文化属性的人类具有更好的可塑性，但人和动物在某种程度上是一样的，每一个个体都是具有鲜活而不可替代的独特性，我们称之为个性，即使同一窝生的小鸡，有的亲人，有的怕人，有的活泼，有的安静，只不过人类受文化影响，个性能够延展到更遥远的地方，倘若是鸡群也发展出了它们的“文化”，未免就不能诞生出它们的所谓资本主义者或社会主义者了。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+毕竟，宽容可不是智人的特色。即使到了现代，不过是因为肤色、方言、宗教等等微小的差异，就足以让智人彼此大动干戈、非要把对方赶尽杀绝。而远古的智人面对的可是个完全不同的人类物种，又岂能期待他们更加宽容？很有可能，当智人碰上尼安德特人的时候，就发生了史上第一次也是最严重的一次种族净化运动。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+求同排异是物之天性，但何为同，何为异，事实上可以有无数种区分的方法，而且对于某个个体而言，也一直都在根据自身利益判断而改变着，只不过由此衍生出的对异己的暴力性却是恒久未变的。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+很有可能对智人来说，虽然尼安德特人和自己相似到不足一提，但也相异到无法忍受。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+目前最可能的解答，正是让人得以辩论的原因：智人之所以能征服世界，是因为有独特的语言。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+也许并不该说是独特的语言，而是丰富的语言，足以描述大部分已知与不可知的（如想象的）事物。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="第二章-知恶善树">第二章 知恶善树</h2>
+<p><strong>原文摘录</strong><br>
+然而，人类语言真正最独特的功能，并不在于能够传达关于人或狮子的信息，而是能够传达关于一些根本不存在的事物的信息。据我们所知，只有智人能够表达关于从来没有看过、碰过、耳闻过的事物，而且讲得煞有其事。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>作者试图说明人类优于其他生物的生存能力，不在于使用和制造工具，不在于能说会道，而是在于其独特的语言系统，喜爱八卦，迅速有效地在群体内传播信息，又可以捏造一些虚构的事物，由此而促成了大规模的合作。</p>
+<p>但其中有一个点，我却很难赞同，他这么说道，只有智人能够谈论和相信并不真正存在的事物，即使跟猴子说将香蕉交到当前人的手上，死后它就可以到一个有吃不完香蕉的天堂去，猴子也是断然不肯相信的。这个说法如此地缺乏依据，也并不能实验去证实这么一个论点，因为猴子的语言系统并不如人类的丰富，你根本无法向猴子传达这么一个意思，并要求它能够完整地理解你的意思。</p>
+<p>很多的书本都会出现这个问题，当你顺着作者思路一路读下去的时候，似乎并未觉得有什么不妥，但其实很多举例和类比是很值得商榷的，这也是为何书要读一遍以上的原因，第一次跟着作者思路读，努力地从他的逻辑去理解他的观点，透过他的视角去看另一片空间，第二遍则是由自己的思路读去，去试图与作者进行一场隔空的辩论，这大概就是阅读的乐趣之一吧。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+任何大规模人类合作的根基，都在于某种只存在于集体想象中的虚构故事。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+除了存在于人类共同的想象之外，这个宇宙中根本没有神、没有国家、没有钱、没有人权、没有法律，也没有正义。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+通过文字创造出想象的现实，就能让大批互不相识的人有效合作，而且效果还不只如此。正由于大规模的人类合作是以虚构的故事作为基础，只要改变所讲的故事，就能改变人类合作的方式。只要在对的情境之下，这些故事就能迅速改变。例如在1789年，法国人几乎是在一夕之间，相信的故事就从“天赋君权”转成“人民做主”。因此，自从认知革命之后，智人就能依据不断变化的需求迅速调整行为。这等于开启了一条采用“文化演化”的快速道路，而不再停留在“基因演化”这条总是堵车的道路上。走上这条快速道路之后，智人合作的能力一日千里，很快就远远甩掉了其他所有人类和动物物种。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+认知革命之后，我们要解释智人的发展，依赖的主要工具就不再是生物学理论，而改用历史叙事。就像是如果要理解为何儒家或共产主义能在中国传播，光知道基因、荷尔蒙和有机体这些还不够，另外也得考虑到各种想法、图像和幻想的互动才行。</p>
+<p>然而，这并不代表智人从此就不再遵守生物法则。我们仍然是动物，我们的身体、情感和认知能力仍然是由DNA所形塑。而我们的社会建构其实也和尼安德特人或黑猩猩相同，我们越深入研究其中的成分（像是种种知觉、情感、家庭关系），就越会发现我们和其他猿类并没有太大的差异。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+文化确实使得人类得以在一定程度上摆脱基因的控制，发展出一部分独立超脱的意识，但依旧难免受到身为生物体的束缚。在进化论之前，人类对自我的认知皆是神造理论，自比于神的儿子，这个理论的好处在于使人类确立了身为主宰的正当性，于是便可以理所当然地屠宰并享食万物生灵，但进化论恰恰掐灭了这丝气焰嚣张的火焰，证明人终究只是万千种生物中的一种，并无何高贵神性可言。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="第三章-亚当和夏娃的一天">第三章 亚当和夏娃的一天</h2>
+<p><strong>原文摘录</strong><br>
+现代人必须专精于自身小领域的知识，但对于其他生活中的必需，绝大多数都是靠着其他各领域的专家，每个人懂的都只限于自己的那一小方天地。就整体而言，现今人类所知远超过远古人类。但在个人层面上，远古的采集者则是有史以来最具备多样知识和技能的人类。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>这是否是人类进化的副产品？也是否是人类的悲哀呢？</p>
+<p>当然，后文也讲到了，人类逐渐分工细化的好处在于，即使是完全没有生存能力的人也可以存活着，同时人类可以不用时时刻刻担惊受怕，而逐渐有了稳定的生活状态。</p>
+<p>但到了当今时代，社会化分工在不断推向极致的进程中，却导致了个体舍弃了个体的“完整性”，沦为一个个单一的部件，即单一的细胞组合成有自主意识与自主行动能力的个体，但个体过于追逐所谓的“强大”，又舍弃了他们的自主性，沦为了如细胞般仅具有单一性功能的器件，并再度组合成了一个更大的生命体——社会，并且在这种趋势下，无论愿意与否，所有个体都在被迫着成为“细胞”，人类越发变得狭隘与偏见。</p>
+<p>虽然无法判断孰更为重要，况且社会的趋势看似并不可逆，但我却总觉得有那么一丝悲凉与落寞。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+整个动物界从古至今，最重要也最具破坏性的力量，就是这群四处游荡，讲着故事的智人。<br>
+<br /><br /></p>
+<h2 id="第四章-毁天灭地的人类洪水">第四章 毁天灭地的人类洪水</h2>
+<p><strong>原文摘录</strong><br>
+对全世界上所有的大型动物来说，这场人类洪水的唯一幸存者可能只剩下人类自己，还有其他登上诺亚方舟但只作为人类盘中佳肴的家禽家畜。<br>
+<br /><br /></p>
+<h1>第二部分 农业革命</h1>
+<h2 id="第五章-史上最大骗局">第五章 史上最大骗局</h2>
+<p><strong>原文摘录</strong><br>
+学者曾经以为农业就是起源于中东，再传布到全球各地，但现在则认为农业是同时间在各地独自发展而开花结果，而不是由中东的农民传到世界各地。中美洲人驯化了玉米和豆类，但不知道中东人种了小麦和豌豆。南美人学会如何栽培马铃薯和驯养羊驼，但也不知道在墨西哥或地中海东部又发生了什么事。中国最早驯化的是稻米、小米和猪。北美最早的农夫，也是因为懒得再在树丛里四处寻找南瓜，决定干脆自己种。新几内亚驯化了甘蔗和香蕉，西非农民也驯化了小米、非洲稻、高粱和小麦。就从这些最早的出发点，农业开始往四方远播。到了公元1世纪，全球大多数地区的绝大多数人口都从事农业。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+其实不是我们驯化了小麦，而是小麦驯化了我们。“驯化”（domesticate）一词来自拉丁文“domus”，意思就是“房子”。但现在关在房子里的可不是小麦，而是智人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+种种想让生活变得轻松的努力，反而给人带来无穷的麻烦；而且这可不是史上的最后一次。就算今天，仍然如此。有多少年轻的大学毕业生投身大企业、从事各种劳心劳力的工作，发誓要努力赚钱，好在35岁就退休，去从事他们真正有兴趣的事业？但等他们到了35岁，却发现自己背着巨额贷款，要付子女的学费，要养在高级住宅区的豪宅，每家得有两部车，而且觉得生活里不能没有高级红酒和去国外的假期。他们该怎么做？他们会放下一切，回去野外采果子挖树根吗？当然不可能，而是加倍努力，继续把自己累得半死。</p>
+<p>奢侈品史上常有这样的情况，就是原本的奢侈品往往最后会成为必需品，而且带来新的义务。等到习惯某种奢侈品，就开始认为这是天经地义。接着就是一种依赖。最后，生活中就再也不能没有这种奢侈品了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+从狭隘的演化观点来看，演化成功与否的标准就在于DNA的拷贝数，于是农业革命对于鸡、牛、猪、羊来说可是一大福音。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+相较之下，肉牛这个物种虽然在数量上大获成功，却完全无法安慰那些单独个体所承受的痛苦。</p>
+<p>我们从农业革命能学到的最重要一课，很可能就是物种演化上的成功并不代表个体的幸福。<br>
+<br /><br /></p>
+<h2 id="第六章-盖起金字塔">第六章 盖起金字塔</h2>
+<p><strong>原文摘录</strong><br>
+不管是《汉谟拉比法典》还是美国《独立宣言》，都声称自己说的是普遍且永恒的公平正义原则，但美国人认为所有人都是平等的，而巴比伦人显然并不这样认为。但事实上，他们都错了。不管是汉谟拉比还是美国的开国元勋，心中都有个想象的现实，想象着这个世界有着放诸四海皆准、永恒不变的正义原则（例如平等或阶级），但这种不变的原则其实只存在于智人丰富的想象力里，只存在于他们创造并告诉彼此的虚构故事中。这些原则，从来就没有客观的正确性。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+自然界的秩序是稳定不变的，就算人类不再相信世界上有重力，重力也不会一夜之间就消失。但相反的是，想象所建构出来的秩序总是有一夕崩溃的风险，因为这些秩序背后靠的都是虚构的故事，只要人们不再相信，一切就风云变色。为了维持想象建构出来的秩序，必须持续投入大量心力，甚至还得掺入些暴力和胁迫的成分。像是为了让民众不违反想象建构的秩序，国家就需要有军队、警察、法院和监狱不分昼夜发挥作用。</p>
+<p>…</p>
+<p>然而，光靠暴力还不足以维持由想象所建构出来的秩序，我们另外还需要一些真正坚信如此的信徒。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不管是基督宗教、民主还是资本主义，都只是由想象所建构出来的秩序。而要怎样才能让人相信这些秩序？第一，对外的说法绝对要坚持它们千真万确、绝非虚构。永远要强调，这种维持社会稳定的秩序是个客观事实，是由伟大的神或是自然的法则所创造。如果要说人人不平等，不是因为汉谟拉比自己这么说，而是因为恩利尔和马杜克这两位神的旨意。如果要说人人平等，也不是因为托马斯·杰斐逊自己这么说，而是因为这是上帝造人的方式。如果要说自由市场是最好的经济制度，不是因为亚当·斯密（Adam Smith）自己这么说，而是因为这是自然不变的规律。</p>
+<p>第二，在教育上也要彻底贯彻同一套原则。从人出生的那一刻起，就要不断提醒他们这套想象建构出来的秩序，要在一切事物中融入这套原则，不管是童话、戏剧、绘画、歌曲、礼仪、政治宣传、建筑、食谱还是时尚。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+有三大原因，让人类不会发现组织自己生活的种种秩序其实是想象：</p>
+<ol>
+<li class="lvl-3">
+<p>想象建构的秩序深深与真实的世界结合。</p>
+</li>
+<li class="lvl-3">
+<p>想象建构的秩序塑造了我们的欲望。</p>
+</li>
+<li class="lvl-3">
+<p>想象建构的秩序存在于人和人之间思想的连接。</p>
+</li>
+</ol>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>这大概是全书最“颠覆”的一章，在于作者告诉我们，那些我们习以为常的东西实际上是依靠想象维持的。也是我们从小在潜移默化间被灌输进大脑之中，称之为“文化”，因此我们都是拥有“文化”属性的生物，这使得我们受两类完全不同的因素控制，一是体内的基因，二是文化，于是人类才如此明显地区别于地球上的生物，某种程度上超脱了基因的控制，又悄然落入到文化的枷锁中。</p>
+<p>由于我们生于文化，又葬于文化，使得我们很难察觉到文化对我们的影响，就像人类活了几万年才知道重力的存在。但知道了这一切又有什么用呢？我以为，可以让我们更深刻地审视自我与世界，对那些原本固执于思想中的“对”与“错”，“好”与“坏”，”“正义”与“邪恶”，“自由”与“平等”再细细琢磨下，而这些概念，恰恰又是指引我们行动与生活的重要指标。</p>
+<p>而作者在此章谈到了想象的重要性，却在后文谈到体验主义的“虚伪”之处，这在我看来是相互矛盾的。人类的想象是建构在体验之上，而无法脱离了体验无中生有，这使得人类如果想要有超越当下的桎梏获得更开阔的想象，就必然要去经历不一样的生活。就像富人与穷人最大的差距，实际上是他们之间的体验全然不同，正如“何不食肉糜”与“翠柏苦犹食”，处于不同的体验，想法与观念也自然是全然不同的。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="第七章-记忆过载">第七章 记忆过载</h2>
+<p><strong>原文摘录</strong><br>
+因为智人的社会秩序是通过想象建构，维持秩序所需的关键信息无法单纯靠DNA复制就传给后代，需要通过各种努力，才能维持种种法律、习俗、程序、礼仪，否则社会秩序很快就会崩溃。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+古代的抄写员不但得会读会写，还得知道如何查目录、辞典、日历、表格和图表。他们得要学习并内化种种编目、检索和处理信息的技巧，而且这些都和大脑原本内建的机制非常不同。在大脑里，所有数据都自由地互相联结。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+这里实际上揭露了学习的本质，学习是在改造本来的思维方式。而人类学习的最重要的成果和目的，就是培养自己存储、编排、检索和处理信息的能力，缺一不可。当然，还有些信息储存在大脑中后，并不能立刻被检索与展示出价值，而是潜移默化地影响着人的行为模式和思考方式。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+文字对人类历史所造成的最重要的影响：它逐渐改变了人类思维和看待这个世界的方式。过去的自由连接、整体思考，已经转变为分割思考、官僚制度。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+语言使经验留传，形成了文化，进而改造了人类的思维，并促使行为方式的变化。因此语言是尝试了解不同文化区间人们思维方式的一把钥匙。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="第八章-历史从无正义">第八章 历史从无正义</h2>
+<p><strong>原文摘录</strong><br>
+历史的铁则告诉我们，每一种由想象建构出来的秩序，都绝不会承认自己出于想象和虚构，而会大谈自己是自然、必然的结果。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+大多数人都会认为只有自己社会的阶级是自然的，而其他社会的阶级分法都实在是虚假又荒谬。现代的西方教育对种族阶级制度嗤之以鼻，如果现在有法律禁止黑人住在白人小区、进入白人学校就读或到白人医院就医，一定会引发轩然大波。但如果说的是贫富阶级，有钱人住在独立、豪华的住宅区，就读专为有钱人提供的私立名校，能进到专为有钱人提供的高档医疗机构，这一点对于许多美国和欧洲人来说，却似乎再天经地义不过。但事实已经证明，大多数有钱人之所以有钱，只是因为他出生在有钱的家庭，而大多数穷人一辈子没钱，也就只是因为他出生在贫穷的家庭而已。</p>
+<p>但不幸的是，复杂的人类社会似乎就是需要这些由想象建构出来的阶级制度和歧视。当然，各种阶级制度的道德意义不一，某些社会的歧视也比其他社会更为严重或极端，但至少就目前学者研究，还没有任何一个大型人类社会能真正免除歧视的情形。一次又一次，人类要让社会有秩序的方法，就是会将成员分成各种想象出来的阶级，像是上等人、平民和奴隶；白人和黑人；贵族和平民；婆罗门和首陀罗；又或是富人和穷人。所有这些阶级，就是要让某些人在法律上、政治上或社会上高人一等，从而规范了数百万人的关系。</p>
+<p>阶级有其重要功能。有了阶级之后，陌生人不用浪费时间和精力真正了解彼此，也能知道该如何对待对方。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当然，天生自然的能力也很可能影响社会阶级差异，但是种种不同的能力和性格常常还是会受到想象阶级的影响。关于这一事实主要有两大方面。第一，也是最重要的一点，就是大多数的能力也需要培养和发展。就算某个人天生就有某种才能，如果不经过积极培养、磨炼和运用，常常也就没什么表现的机会。但这些机会绝非人人平等，常常都是要看他们在想象建构出的社会阶级中身处何处而定。</p>
+<p>第二，就算身处不同阶级的人发展出了完全一样的能力，因为他们面对的游戏规则不同，最后结果也可能天差地别。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+虽然说所有社会的背后都是由想象建构出来的秩序，但种种秩序却又各有不同。这些差异的原因为何？传统的印度社会是用种姓制度来分阶级，土耳其人用宗教，美国用种族，但为何如此？这些阶级制度开始时多半只是因为历史上的偶发意外，但部分群体取得既得利益之后，世世代代不断加以延续改良，才形成现在的样子。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这样的恶性循环可能持续几百年甚至几千年，让原本只是历史偶发事件形成的阶级制度变得根深蒂固。随着时间流逝，不公不义的歧视常常只是加剧而不是改善。富者越富，而贫者越贫。教育带来进一步的教育，而无知只会造成进一步的无知。历史上过去的受害者，很可能会再次受害。而历史上过去的特权分子，他们的特权也很可能依然存在。</p>
+<p>大多数社会政治阶级制度其实都没有逻辑或生物学的基础，不过就是由历史的偶然事件引起，再用虚构的故事延续壮大。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+由于人类拥有无与伦比的卓越的马后炮的能力，因此世界对于当世人来说是偶然的，对于后世人来说则必然是必然的。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h1>第三部分 人类的融合统一</h1>
+<h2 id="第九章-历史的方向">第九章 历史的方向</h2>
+<p><strong>原文摘录</strong><br>
+农业革命之后，人类社会规模变得更大、更复杂，而维系社会秩序的虚构故事也更为细致完整。人类几乎从出生到死亡都被种种虚构的故事和概念围绕，让他们以特定的方式思考，以特定的标准行事，想要特定的东西，也遵守特定的规范。就是这样，让数百万计的陌生人能遵照着这种人造而非天生的直觉，合作无间。这种人造的直觉就是“文化”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+全球文化虽然单一，却非同质。就像是单一的有机体有许多不同的器官和细胞，单一的全球文化也包含着许多不同类型的人和生活方式。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+公元前的1000年间，出现了三种有可能达到全球一家概念的秩序，相信这些秩序，就有可能相信全球的人类都“在一起”，都由同一套规则管辖，让所有人类都成了“我们”（至少有这个可能），“他们”也就不复存在。这三种全球秩序，首先第一种是经济上的货币秩序，第二种是政治上的帝国秩序，而第三种则是宗教上的全球性宗教，像是佛教、基督教和伊斯兰教。<br>
+<br /><br /></p>
+<h2 id="第十章-金钱的味道">第十章 金钱的味道</h2>
+<p><strong>原文摘录</strong><br>
+人人都想要钱，是因为其他人也都想要钱，所以有钱就几乎可以换到所有东西。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+金钱正是有史以来最普遍也最有效的互信系统。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+虽然各地的人们还是继续讲着不同的语言，服从不同的统治者，敬拜不同的神灵，但都信服着同样的黄金白银、金币银币。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这些看似无害的原则还是有黑暗的一面。如果一切都能换成金钱，而大家相信的又是不具名的硬币和贝壳，就可能伤害当地传统、亲密关系和人的价值，让冷酷无情的供需法则取而代之。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>金钱有着无穷的魅力，引得无论是英雄美女、帝王将相、平民百姓等等竞皆折腰。金钱的伟大之处就在于，它使人类得以构建一个庞大的陌生人协作系统，继而能够以分工合作的方式日益壮大。金钱所构建的体系好处如此之明显，以至于所有的个人与国家都被纳入系统之内。</p>
+<p>不过，作者后面又言，仅凭金钱构建的关系也可能存在弊端。弊端在哪呢？</p>
+<p>大概从诞生之日起，人类就极度迷恋一种全知全能的理论，能够解析和指导世间万物的一切行动。特别是物理领域中那些简洁明了的公式一经发现，人们更是为之疯狂，自此，每当发现一种新理论，人们都会蜂拥而至成为忠实信徒，然后以一种信徒般的狂热迫切要将之推广到所有目之可及的领域，同时不遗余力地排斥一切相异的解释。</p>
+<p>现代社会便是如此成为以资本主导的世界，但以金钱为的衡量标准可以用于陌生人之间，却不见得适用于亲人之间、家庭之间，当熟人社会里到处充斥着铜臭味时，很容易被这滔天洪水冲得七零八散，再酝酿不出曾有的亲密关系，只剩冷漠与隔阂。熟人社会实际上更适合原始以物易物的人情模式。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="第十一章-帝国的愿景">第十一章 帝国的愿景</h2>
+<p><strong>原文摘录</strong><br>
+如果一个帝国连一场战役都输不起，又怎么称得上是帝国？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+帝国正是造成民族多样性大幅减少的主因之一。帝国就像一台压路机，将许多民族独特的多样性逐渐夯平（例如努曼西亚人），整合制造出他们更大的新群体。<br>
+<br /><br /></p>
+<h2 id="第十二章-宗教的法则">第十二章 宗教的法则</h2>
+<p><strong>原文摘录</strong><br>
+我们可以说宗教是“一种人类规范及价值观的系统，建立在超人类的秩序之上”。这里有两大基本要素：</p>
+<p>1）宗教认为世界有一种超人类的秩序，而且并非出于人类的想象或是协议。</p>
+<p>2）以这种超人类的秩序为基础，宗教会发展出它认为具有约束力的规范和价值观。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+虽然宗教有可能让各种社会和政治秩序合法化，但并不是所有宗教都能做到这点。某个宗教如果想要将幅员广阔、族群各异的人群都收归旗下，就还必须具备另外两种特质。第一，它信奉的超人类秩序必须普世皆同，不论时空而永恒为真。第二，它还必须坚定地将这种信念传播给大众。像是伊斯兰教和佛教这些最为人所知的宗教，就同时具备普世特质和推广特质，但也常让我们误以为所有宗教都是如此。但其实，多数古代宗教反而是具备“区域特质”与“排他特质”，信众只信奉当地的神灵，而且也没有意愿将信仰推己及人。据我们所知，要到了公元前1000年间，才开始出现具备普世和推广特质的宗教。这可以说是史上最重要的革命之一，对于人类的统一有重大贡献，绝不亚于帝国或金钱。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+农业革命最初的宗教意义，就是让动植物从与人类平等的生物，变成了人类的所有物。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+很多古代神话其实就是一种法律契约，人类承诺要永远崇敬某些神灵，换取人类对其他动植物的控制权；<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+正如古罗马帝国的主神是朱庇特、阿兹特克帝国的主神是维齐洛波奇特利，每个基督宗教国家也有自己的守护圣人，协助解决困难、赢得战争。英格兰的守护圣人是圣乔治，苏格兰是圣安德鲁，匈牙利是圣史蒂芬，而法国是圣马丁。而不论是大城、小镇、职业甚至疾病，也都各有负责守护的圣人。像是意大利米兰有圣安布鲁瓦兹负责守护，威尼斯则有圣马克负责照料。圣阿尔莫守护着烟囱清洁工的安全，圣马修抚慰着收税员的烦恼。如果你头痛，该找圣亚贾西亚；但如果痛的是牙，圣阿波罗尼亚就更对症下药。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+从历史上来看，一神论就像是个万花筒，承继了一神论、二元论、多神论和泛神论，收纳在同一个神圣论述之下。结果就是，基督徒大致上是信奉一神论的上帝，相信二元论的魔鬼，崇拜多神论的圣人，还相信泛神论的鬼魂。像这样同时有着不同甚至矛盾的思想，而又结合各种不同来源的仪式和做法，宗教学上有一个特别的名称：综摄（syncretism）。很有可能，综摄才是全球最大的单一宗教。<br>
+<br /><br /></p>
+<h2 id="第十三章-成功的秘密">第十三章 成功的秘密</h2>
+<p><strong>原文摘录</strong><br>
+历史上的每一个时间点，都像是一个十字路口。虽然从过去到现在已经只剩单行道，但到未来却有无数岔路可走。其中某些路比较宽、比较平坦，路标比较明确，所以也是比较可能的选择。然而，历史有时候就是选了一些完全出人意表的道路。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+描述“如何”的时候，是要重建一连串从一点导致另一点的事件顺序。至于要解释“为何”的时候，则是要找出因果关系，看看究竟为什么发生的是这一连串的事件，而不是另一连串的事件。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+然而，历史就是这样的一团混沌，历史就是无法解释得斩钉截铁，无法预测得十拿九稳。在同一时间，有多方力量互相影响、互相牵制，只要某方力量有了极小的改变，结果就会有巨大的不同。不仅如此，历史还是所谓的“二级”混沌系统。混沌系统分成两级，一级混沌指的是“不会因为预测而改变”。例如天气就属于一级混沌系统。虽然天气也是受到无数因素影响，但我们可以建立计算模型，不断加入越来越多因素，让天气预报也越来越准确。至于二级混沌系统，指的是“会受到预测的影响而改变”，因此就永远无法准确预测。例如市场就属于二级混沌系统。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+历史不像是物理学或经济学，目的不在于做出准确预测。我们之所以研究历史，不是为了要知道未来，而是要拓展视野，要了解现在的种种绝非“自然”，也并非无可避免。未来的可能性远超过我们的想象。<br>
+<br /><br /></p>
+<h1>第四部分 科学革命</h1>
+<h2 id="第十四章-发现自己的无知">第十四章 发现自己的无知</h2>
+<p><strong>原文摘录</strong><br>
+现代科学与先前的知识体系有三大不同之处：</p>
+<p>1.愿意承认自己的无知。</p>
+<p>2.以观察和数学为中心。</p>
+<p>3.取得新能力。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+科学革命并不是“知识的革命”，而是“无知的革命”。真正让科学革命起步的伟大发现，就是发现“人类对于最重要的问题其实毫无所知”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在1620年，培根（Francis Bacon）发表了《新工具》（The New Instrument）的科学宣言，提出“知识就是力量”。对“知识”的考验，不在于究竟是否真实，而在于是否能让人类得到力量或权力。科学家一般公认，没有任何一种理论百分之百正确。因此，用“真实”与否来为知识评分并不妥当。真正的考验就是实用性。能让我们做出新东西来的，就是知识。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在19世纪前，军事上的主要变革都在于组织而不是科技。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+贫困、疾病、战争、饥荒、年老和死亡看来都已不再是人类必然的命运，而只是无知造成的限制。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+科学研究之所以能得到经费，多半是因为有人认为这些研究有助于达到某些政治、经济或宗教的目的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+正因为资源有限，我们就必须回答像“什么更重要”和“怎样才算花得适当”这种问题。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+只是历史告诉我们，人类一直都靠着浪费各种资源走到今天的。此处的资源并不单单是指能源一类，还包括人类的精力与创造力等等。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+科学研究一定得和某些宗教或意识形态联手，才有蓬勃发展的可能。意识形态能够让研究所耗的成本合理化。而代价就是意识形态能够影响科学的进程表，并且决定如何使用研究成果。<br>
+<br /><br /></p>
+<h2 id="第十五章-科学与帝国的联姻">第十五章 科学与帝国的联姻</h2>
+<p><strong>原文摘录</strong><br>
+正因为我们已经太熟悉欧洲这些“探索、征服”的过程，常常忘了这件事其实非常特殊。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+正因为帝国与科学密切合作，就让它们有了如此强大的力量，能让整个世界大为改观；也是因为如此，我们很难简单断言它们究竟是善是恶。正是帝国创造了我们所认识的世界，而且，其中还包含我们用以判断世界的意识形态。<br>
+<br /><br /></p>
+<h2 id="第十六章-资本主义教条">第十六章 资本主义教条</h2>
+<p><strong>原文摘录</strong><br>
+“信任”就是世上绝大多数金钱的唯一后盾。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+所谓的“资本主义”（Capitalism），认为“资本”（capital）与“财富”（wealth）有所不同。资本指的是投入生产的各种金钱、物品和资源。而财富指的则是那些埋在地下或者浪费在非生产性活动的金钱、物品和资源。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果不谈科学，就会觉得资本主义能够发展真是莫名其妙。资本主义认为经济可以无穷无尽地发展下去，但这和我们日常生活观察到的宇宙现象完全背道而驰。比如对于狼群来说，如果它们觉得作为猎物的羊群会无限扩大，岂不是荒谬至极？然而，人类的经济在整个现代时期就是这样不可思议地持续指数增长。唯一的原因，就在于科学家总是能每隔几年就取得另一项发现，提出另一项发明，像美洲大陆、内燃机引擎，或者运用基因工程的羊。印钞票的是银行和政府，但最后买单的是科学家。</p>
+<p>在过去几年里，我们看到银行和政府疯狂地印钞票。每个人都担心经济危机会让经济停滞、不再增长，于是他们就这样无中生有地印了数万亿的美元、欧元和日元，让金融体系里凭空出现一大笔便宜信贷，只盼望着科学家、技术人员和工程师能够在经济泡沫破灭之前，设法想出得以力挽狂澜的创世发明或发现。一切指望，就在于那些实验室里的人。比如生物科技、纳米科技的新发现，就可能创造出全新的产业，带来庞大的利润，于是就能拿来打平那些银行和政府从2008年以来虚拟创造出的几万亿数字。而如果实验室的脚步不敌泡沫破灭的速度，可以想见经济前景就会令人十分担忧。<br>
+<br /><br /></p>
+<h2 id="第十七章-工业的巨轮">第十七章 工业的巨轮</h2>
+<p><strong>原文摘录</strong><br>
+历史上人类成就的几乎所有事情，第一步靠的都是将植物取得的太阳能转换为肌肉的力量。</p>
+<p>正因如此，人类历史在过去一直是由两大周期来主导：植物的生长周期，以及太阳能的变化周期（白天和黑夜，夏季和冬季）。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+工业革命的核心，其实就是能源转换的革命。我们已经一再看到，我们能使用的能源其实无穷无尽。更确切地说，唯一的限制只在于我们的无知。每隔几十年，我们就能找到新的能源来源，所以人类能用的能源总量其实在不断增加。</p>
+<p>为什么这么多人担心我们会耗尽所有能源？为什么他们担心我们用完所有化石燃料之后，会有一场大灾难？显然，这世界缺的不是能源，而是能够驾驭并转换符合我们所需的知识。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+机械化不只是机器的事，连植物和动物也同样遭到机械化。差不多就是在以人为本的宗教将智人提升到神的地位的时候，各种农场上的动物已经不再被视为活生生、能够感受到痛苦的生物，而是被视为机器一般对待。时至今日，这些动物常常是在像工厂一样的地方被大规模制造，它们的身体被依照产业的需求来形塑。这些动物的一生就像是巨大生产线的齿轮，决定它们生命长短及质量的，就只是各种商业组织的利润和亏损。虽然业界让它们存活、吃得饱、维持基本健康，但却对它们的社会和心理需求毫不关心（除非直接影响到了生产）。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+大西洋奴隶贸易并非出于对非洲人的仇恨，而现代畜牧业也同样不是出于对动物的仇恨。这两者背后共同的推手，就是冷漠。<br>
+<br /><br /></p>
+<h2 id="第十八章-一场永远的革命">第十八章 一场永远的革命</h2>
+<p><strong>原文摘录</strong><br>
+现代所兴起的两大想象社群，就是“民族”和“消费大众”。所谓民族，是国家的想象社群。而所谓消费大众，则是市场的想象社群。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+历史上，社会的改变很少是大刀阔斧的革命，多半是无数个小步骤逐渐累积而成。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+身处时代中的人类正随着无数微小变化而变化着，很难切实感知这种变化。只能靠着后人马后炮的能力，总结来这翻天覆地的革新。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="第十九章-从此过着幸福快乐的日子">第十九章 从此过着幸福快乐的日子</h2>
+<p><strong>原文摘录</strong><br>
+一切顺利的时候，我们的期望跟着膨胀，于是就算客观条件其实改善了，我们还是可能不满意。而在一切不顺的时候，我们的期望也变得保守，于是就算又碰上其他的麻烦，很可能心情也不会更低落。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+对现代人来说，虽然有各种镇静剂和止痛药任我们使用，但我们越来越期望能得到舒适和快感，也越来越不能忍受不便和不适。结果就是我们感受到的痛苦程度可能还高于我们的先人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+纵观历史，穷人和受压迫者之所以还能自我安慰，就是因为死亡是唯一完全公平的事。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+正如尼采所言，只要有了活下去的理由，几乎什么都能够忍受。生活有意义，就算在困境中也能甘之如饴；生活无意义，就算在顺境中也度日如年。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+从我们所知的纯粹科学角度来看，人类的生命本来就完全没有意义。人类只是在没有特定目标的演化过程中，盲目产生的结果。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+所谓的快乐，很可能只是让个人对意义的错觉和现行的集体错觉达成同步而已。只要我自己的想法能和身边的人的想法达成一致，我就能说服自己、觉得自己的生命有意义，而且也能从这个信念中得到快乐。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+佛教认为，快乐既不是主观感受到愉悦，也不是主观觉得生命有意义，反而是在于放下追求主观感受这件事。<br>
+<br /><br /></p>
+<h2 id="第二十章-智人末日">第二十章 智人末日</h2>
+<p><strong>原文摘录</strong><br>
+或许真正该问的问题不是“我们究竟想要变成什么”，而是“我们究竟希望自己想要什么”，如果还对这个问题视若等闲，可能就是真的还没想通。<br>
+<br /><br /></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/12/01/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2/">
+            https://illusionzone.github.io/2022/12/01/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/12/02/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%8F%AF%E8%83%BD%E6%80%A7%E8%89%BA%E6%9C%AF%EF%BC%9A%E6%AF%94%E8%BE%83%E6%94%BF%E6%B2%BB%E5%AD%A630%E8%AE%B2/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】可能性的艺术：通过比较理解政治 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E4%B8%96%E7%95%8C%E7%9A%84%E7%9C%9F%E7%90%86/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【妄想记】真相与真理 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第一部分 认知革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BA%BA%E7%B1%BB%EF%BC%9A%E4%B8%80%E7%A7%8D%E4%B9%9F%E6%B2%A1%E4%BB%80%E4%B9%88%E7%89%B9%E5%88%AB%E7%9A%84%E5%8A%A8%E7%89%A9"><span class="toc-text">第一章 人类：一种也没什么特别的动物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%9F%A5%E6%81%B6%E5%96%84%E6%A0%91"><span class="toc-text">第二章 知恶善树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%BA%9A%E5%BD%93%E5%92%8C%E5%A4%8F%E5%A8%83%E7%9A%84%E4%B8%80%E5%A4%A9"><span class="toc-text">第三章 亚当和夏娃的一天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%AF%81%E5%A4%A9%E7%81%AD%E5%9C%B0%E7%9A%84%E4%BA%BA%E7%B1%BB%E6%B4%AA%E6%B0%B4"><span class="toc-text">第四章 毁天灭地的人类洪水</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第二部分 农业革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A4%A7%E9%AA%97%E5%B1%80"><span class="toc-text">第五章 史上最大骗局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%9B%96%E8%B5%B7%E9%87%91%E5%AD%97%E5%A1%94"><span class="toc-text">第六章 盖起金字塔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E8%AE%B0%E5%BF%86%E8%BF%87%E8%BD%BD"><span class="toc-text">第七章 记忆过载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%8E%86%E5%8F%B2%E4%BB%8E%E6%97%A0%E6%AD%A3%E4%B9%89"><span class="toc-text">第八章 历史从无正义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第三部分 人类的融合统一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E5%8E%86%E5%8F%B2%E7%9A%84%E6%96%B9%E5%90%91"><span class="toc-text">第九章 历史的方向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E9%87%91%E9%92%B1%E7%9A%84%E5%91%B3%E9%81%93"><span class="toc-text">第十章 金钱的味道</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E5%B8%9D%E5%9B%BD%E7%9A%84%E6%84%BF%E6%99%AF"><span class="toc-text">第十一章 帝国的愿景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-%E5%AE%97%E6%95%99%E7%9A%84%E6%B3%95%E5%88%99"><span class="toc-text">第十二章 宗教的法则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E6%88%90%E5%8A%9F%E7%9A%84%E7%A7%98%E5%AF%86"><span class="toc-text">第十三章 成功的秘密</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第四部分 科学革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E5%8F%91%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%97%A0%E7%9F%A5"><span class="toc-text">第十四章 发现自己的无知</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E7%AB%A0-%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%81%94%E5%A7%BB"><span class="toc-text">第十五章 科学与帝国的联姻</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E6%95%99%E6%9D%A1"><span class="toc-text">第十六章 资本主义教条</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%83%E7%AB%A0-%E5%B7%A5%E4%B8%9A%E7%9A%84%E5%B7%A8%E8%BD%AE"><span class="toc-text">第十七章 工业的巨轮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E7%AB%A0-%E4%B8%80%E5%9C%BA%E6%B0%B8%E8%BF%9C%E7%9A%84%E9%9D%A9%E5%91%BD"><span class="toc-text">第十八章 一场永远的革命</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B9%9D%E7%AB%A0-%E4%BB%8E%E6%AD%A4%E8%BF%87%E7%9D%80%E5%B9%B8%E7%A6%8F%E5%BF%AB%E4%B9%90%E7%9A%84%E6%97%A5%E5%AD%90"><span class="toc-text">第十九章 从此过着幸福快乐的日子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E7%AB%A0-%E6%99%BA%E4%BA%BA%E6%9C%AB%E6%97%A5"><span class="toc-text">第二十章 智人末日</span></a></li></ol></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第一部分 认知革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BA%BA%E7%B1%BB%EF%BC%9A%E4%B8%80%E7%A7%8D%E4%B9%9F%E6%B2%A1%E4%BB%80%E4%B9%88%E7%89%B9%E5%88%AB%E7%9A%84%E5%8A%A8%E7%89%A9"><span class="toc-text">第一章 人类：一种也没什么特别的动物</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%9F%A5%E6%81%B6%E5%96%84%E6%A0%91"><span class="toc-text">第二章 知恶善树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%BA%9A%E5%BD%93%E5%92%8C%E5%A4%8F%E5%A8%83%E7%9A%84%E4%B8%80%E5%A4%A9"><span class="toc-text">第三章 亚当和夏娃的一天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%AF%81%E5%A4%A9%E7%81%AD%E5%9C%B0%E7%9A%84%E4%BA%BA%E7%B1%BB%E6%B4%AA%E6%B0%B4"><span class="toc-text">第四章 毁天灭地的人类洪水</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第二部分 农业革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A4%A7%E9%AA%97%E5%B1%80"><span class="toc-text">第五章 史上最大骗局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E7%9B%96%E8%B5%B7%E9%87%91%E5%AD%97%E5%A1%94"><span class="toc-text">第六章 盖起金字塔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E8%AE%B0%E5%BF%86%E8%BF%87%E8%BD%BD"><span class="toc-text">第七章 记忆过载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E5%8E%86%E5%8F%B2%E4%BB%8E%E6%97%A0%E6%AD%A3%E4%B9%89"><span class="toc-text">第八章 历史从无正义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第三部分 人类的融合统一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E5%8E%86%E5%8F%B2%E7%9A%84%E6%96%B9%E5%90%91"><span class="toc-text">第九章 历史的方向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E9%87%91%E9%92%B1%E7%9A%84%E5%91%B3%E9%81%93"><span class="toc-text">第十章 金钱的味道</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E5%B8%9D%E5%9B%BD%E7%9A%84%E6%84%BF%E6%99%AF"><span class="toc-text">第十一章 帝国的愿景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-%E5%AE%97%E6%95%99%E7%9A%84%E6%B3%95%E5%88%99"><span class="toc-text">第十二章 宗教的法则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E6%88%90%E5%8A%9F%E7%9A%84%E7%A7%98%E5%AF%86"><span class="toc-text">第十三章 成功的秘密</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">第四部分 科学革命</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E5%8F%91%E7%8E%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%97%A0%E7%9F%A5"><span class="toc-text">第十四章 发现自己的无知</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E7%AB%A0-%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%B8%9D%E5%9B%BD%E7%9A%84%E8%81%94%E5%A7%BB"><span class="toc-text">第十五章 科学与帝国的联姻</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AD%E7%AB%A0-%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E6%95%99%E6%9D%A1"><span class="toc-text">第十六章 资本主义教条</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%83%E7%AB%A0-%E5%B7%A5%E4%B8%9A%E7%9A%84%E5%B7%A8%E8%BD%AE"><span class="toc-text">第十七章 工业的巨轮</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E7%AB%A0-%E4%B8%80%E5%9C%BA%E6%B0%B8%E8%BF%9C%E7%9A%84%E9%9D%A9%E5%91%BD"><span class="toc-text">第十八章 一场永远的革命</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B9%9D%E7%AB%A0-%E4%BB%8E%E6%AD%A4%E8%BF%87%E7%9D%80%E5%B9%B8%E7%A6%8F%E5%BF%AB%E4%B9%90%E7%9A%84%E6%97%A5%E5%AD%90"><span class="toc-text">第十九章 从此过着幸福快乐的日子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E7%AB%A0-%E6%99%BA%E4%BA%BA%E6%9C%AB%E6%97%A5"><span class="toc-text">第二十章 智人末日</span></a></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】哲学的邀请</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】哲学的邀请">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/04/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%93%B2%E5%AD%A6%E7%9A%84%E9%82%80%E8%AF%B7/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/book/readandnote/哲学的邀请/indeximg/indeximg.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-04">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-01-08">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F"><span class="toc-text">序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E8%AF%BB%E8%80%85"><span class="toc-text">致读者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%93%B2%E5%AD%A6"><span class="toc-text">引言 为什么需要哲学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%8E%E5%93%AA%E5%84%BF%E4%B8%8A%E8%B7%AF"><span class="toc-text">第一章 从哪儿上路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%88%91%E5%8F%AA%E7%9F%A5%E9%81%93%E6%88%91%E4%B8%80%E6%97%A0%E6%89%80%E7%9F%A5%EF%BC%9F"><span class="toc-text">第二章 我只知道我一无所知？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%88%91%E6%98%AF%E8%B0%81%EF%BC%9F%E6%88%91%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">第三章 我是谁？我是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%88%91%E4%BB%AC%E4%BD%95%E4%BB%A5%E4%B8%BA%E4%BA%BA%EF%BC%9F"><span class="toc-text">第四章 我们何以为人？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%88%91%E4%BB%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F%E4%B8%96%E7%95%8C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">第五章 我们在哪里？世界是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%87%AA%E7%94%B1%E5%BE%97%E4%B8%8D%E8%87%AA%E7%94%B1%EF%BC%9F"><span class="toc-text">第六章 自由得不自由？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E8%87%AA%E7%84%B6%E5%BE%97%E4%B8%8D%E8%87%AA%E7%84%B6%EF%BC%9F"><span class="toc-text">第七章 自然得不自然？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E7%A4%BE%E4%BC%9A%E6%9C%BA%E5%99%A8%EF%BC%9F%E5%A4%A7%E5%90%8C%E4%B8%96%E7%95%8C%EF%BC%9F"><span class="toc-text">第八章 社会机器？大同世界？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E7%BE%8E%E7%9A%84%E6%88%98%E6%A0%97%EF%BC%9F"><span class="toc-text">第九章 美的战栗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E8%BF%B7%E5%A4%B1%E4%BA%8E%E6%97%B6%E9%97%B4%E4%B8%AD%EF%BC%9F"><span class="toc-text">第十章 迷失于时间中？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD-%E6%B2%A1%E6%9C%89%E7%BC%98%E7%94%B1%E7%9A%84%E7%94%9F%E5%91%BD%EF%BC%9F"><span class="toc-text">结语 没有缘由的生命？</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/book/readandnote/哲学的邀请/indeximg/indeximg.png" 
+      data-src="/image/book/readandnote/哲学的邀请/indeximg/indeximg.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【阅之载之】哲学的邀请 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】哲学的邀请
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-12-03T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-04</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>14.3k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p></div>
+<br />
+<img src="/image/book/readandnote/哲学的邀请/哲学的邀请.png" width="500rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/哲学的邀请/哲学的邀请.png" class="lozad post-image">
+<br />
+<h2 id="序">序</h2>
+<p><strong>原文摘录</strong><br>
+《哲学的邀请》不是《苏菲的世界》的翻版，它的主角是作为哲学家的”我“，而不是少女苏菲；它邀请读者进入的世界是成年人的大千世界，而不是梦幻般的童话世界。…将会讨论世界的罪恶、人的死亡、宇宙的来源、自由的抉择、人和上帝的存在、美的真谛等重要而严肃的问题。本书共分十章，每一章讨论一个哲学问题，加上引言和结语中的问题，一共讨论了十二个问题，堪称一本哲学概论。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>每本书的序我都不愿跳过，因为序言的内容都很有趣。序言有两种，有的是他人代写的序，有的是作者自己写的序。他人代写的序，可以当做是一篇他人的读后感，可以借由一个他人的角度来理解本书。而作者自己写的序，则可以当做是一份提纲，一篇作者写作时的感悟与感受。序可以作为一个切入书籍内容的起点，试着从作者的写作思路去理解他的思想，虽然这样很难，但跳出自己固有的观点，去尝试理解他人的观点，本就不是一件容易的事</p>
+<p>此序为赵敦华先生所作，由此可知本书是以第一人称的“我”来展开，一共讨论了十二个问题，这十二个问题中有我非常迫不及待想阅读的，比如罪恶、死亡、宇宙、自由、美等，而人和上帝存在却明显是西方基督世界才会将其列为严肃与重要的领域，如果在中国那显然是人与神仙的存在，但是无论是神仙，上帝，还是恶魔，却都勾不起我的兴趣。</p>
+<p>哲学书首推还是外国编著的，一方面是因为哲学本就源自于国外，另一方面是哲学在中国一直是一门“无用”的学科，聪明的中国人普遍信奉的是“实用主义”、“拿来主义”，中国也不需要太多的哲学家，只需要庞大的工人来支撑社会这个大机器的运作就可以了，哲学这种不能立刻产生出金银与面包的学科自然会遭受唾弃与冷遇。</p>
+<p>但或许我有一种特殊的病，我一直不可遏制地对许许多多虚无缥缈的东西感兴趣，特别是死亡这个令我恐惧也令我着迷的问题，于是我对于涉及到类似议题的书籍都不免拿来一阅，这便是其中一本了，也是我觉得很不错的书。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="致读者">致读者</h2>
+<p><strong>原文摘录</strong><br>
+为了达到这一目的，我们无疑必须时常追溯到苏格拉底和其他一些大师的教诲，但是我们不应该仅限于记录和评论他们的发现，哲学不能也不可能只是一本名言录，恰恰相反，它应当像加塞特的名言所说的那样：“哲学是一种与信息和博学完全相反的东西。”…哲学不是无所不知者向全然无知者的启示，而是互相平等的个体之间的一种对话。他们共同为理性的力量所折服，而不是向强权的理性屈服。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>我喜欢读哲学的原因就在于其所提倡的怀疑精神，也不知道从何时起，我便很反感所有一切言之凿凿的说法，因为随着我的经历增多，我反而觉得人类其实一直都很无知，却偏偏要自以为是，显示出一副无所不知的样子。当然，过度的怀疑会使得自己固步自封，举步不前，这也着实需要适度地调整心态去解决的。</p>
+<p>此外，虽然我对人类引以为豪的理性力量表示深刻的怀疑，但不妨碍我对这段话的喜欢。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="引言-为什么需要哲学">引言 为什么需要哲学</h2>
+<p><strong>原文摘录</strong><br>
+在现今这个时代，人们都只愿接收那些直接的和现成的答案，没有终极答案的问题总是会让人感到有些不舒服。也许在这个人人都自以为有所知的世界里，哲学家是唯一愿意承认自身一无所知的人…</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+无知无畏，无知是福。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+根据卡利克勒的看法，不管法律说得如何动听，真正正义的是：强者统制弱者，身价高的人统治身价低的人，有能力的人统治无能力的人。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+这句话在原文中是略带讽刺意味地放在哲学的对立面，本该是欲扬先抑，用于后面表现哲学的重要性。但我觉得这句话说得十分真实，世界本就如此，至少生物世界中，弱肉强食才是被深深刻在了基因里的常识。只不过由于人类的生存需要依赖于彼此的协作，因此人们才为自身的社会关系抹上一层厚厚的彩妆，以试图遮掩原本丑陋的嘴脸。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果要将对哲学的指责概括为四个字，那就是“毫无用处”。哲学家们比谁都更执著于一些想象的东西，而实际上他们只是一些爱耍嘴皮子的人。那么，谁才真正知道那些真正应该知道的关于世界和社会的知识呢？是那些科学家，技术工作者，专家，以及所有有能力给出关于现实的有用信息的人。归根结底，哲学家们只是热衷于讨论一些他们根本不知道的东西。苏格拉底本人就是这么认为的，他曾说过一句名言：“我只知道我一无所知。”问题是，如果他一无所知，我们凭什么要听他讲呢？</p>
+<p>…</p>
+<p>总之，我们已经无需知道更多关于所发生的事情的信息，重要的是要知道：我们所拥有的信息意味着什么？我们应该如何解释它？如何将它与之前或同时产生的信息联系起来？这一切在我们所生活于其中的现实的总体条件下又意味着什么？我们在这样一个境遇中能够或者应该怎么去做？这些恰恰就是我们称之为“哲学”的东西所要严肃对待的。我们将理解分为三个层次：</p>
+<p>1、信息。即事实提供给我们的东西以及所发生的事件的原初机制；</p>
+<p>2、知识。即反思所收到的信息，根据其意义上的重要性划分等级，并寻找总体原则将其整合起来；</p>
+<p>3、智慧。即把知识与人生选择和我们能够选择的价值观联系起来，确立如何根据我们已知的东西更好地生活</p>
+<p>我认为：科学介于第一层次与第二层次之间，哲学则介于第二层次与第三层次之间</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>人类的世界里从来对无用之物采取零容忍的态度，哪怕是地上的尘土都要为其赋予意义，对于人类来说，或许最大的罪恶并非其他，而只是“无用”，于是这本书将哲学介绍给读者时，也必须为原本承认”一无所知“与”毫无用处”的哲学找到其有所用处的地方，不是说了“确立如何根据我们已知的东西更好地生活”吗？这个好处显然已经能让读者更加兴致勃勃地继续阅读了。但，难道世界上的一切必须有用才有它存在的理由吗？整个宇宙，无数星球的运转都必须是有意义的吗？或许，有用与有意义两者不过是人类为了其自身的繁衍与扩张所特别关注的东西罢了。</p>
+<p>当然书里也讲了哲学的用处，那就是理解与处理已获取信息的能力，说到底也就是个人的思维方式。人类建立自己思想的过程，都莫过于观察，总结规律，固化经验。只不过每个步骤都因人而异，也就有了千千万万种思维的人。所以阅读本书，接触先哲们独特的思维方式，最好把其思想当成是一种思考的可能性看待，只做借鉴与开拓思维之用，而不是如获至宝般全然接受。</p>
+<p>其实，又岂止读书该是如此呢。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+让我们从一个新的例子出发，或者更准确地说，通过一个比喻来寻找另一个视角。假想我们站在普拉多博物馆中一幅最有名的画—波希的《乐园》面前，我们从这样一幅天才的作品中能够获得什么样的理解呢？首先我们应做的，或许是对画家所使用的画布的质地，以及展现于画布上的各种色素的成分进行一番物理化学分析，甚至我们应该使用X光来找出隐藏于主画面之下的其他形象或是草稿的痕迹。总之，这幅画是一件物品，与其他东西一样，具有重量和尺寸，可被分析和弄碎等等。但是，它无疑也是一张平面，通过色彩的搭配和构造不同的形式，表现了一定数目的人物形象。因此，为了真正理解这幅画，我们还需分析一下这幅画中呈现的所有人物和场景的总合，无论它们是人物，动物，鬼怪，还是植物和普通物件。此外，我们还需要弄明白这幅由三部分组成的画中每一部分的布局。然而，这些人物和场景并非无缘无故地在某一天出现za在这块画布上。因此，理解这幅画的另一种方式，就是弄清楚作者生于1450年，卒于1516年。他是弗拉门科学派的一名卓越画家，以直接、干练、笔触细腻的风格标志了中世纪绘画的终结。然而他的画作所表现的主体，却属于中世纪的宗教和象征世界、尽管其阐述方式体现了高度的主观性和自由度。如果按照他所处在的那个时代的肖像学去耐心琢磨他的作品，我们还可领会（或者说试图领会）他的作品中许多形象的隐喻内涵，而其余的则完全可以根据弗洛伊德精神分析理论中对梦的解释来进行阐释。另一方面，与收藏于里斯本博物馆的《圣安东尼的诱惑》一样，《乐园》是作者艺术生涯中期的一幅作品。在后期的创作生涯中，作者就改变了在这幅画中展现出来的表现序列和人物布局风格等。</p>
+<p>我们还可以设想出另一种方式来理解这幅画，这种方式并不忽视或者舍弃上述任何一种视角，而是力图尽可能地涵盖它们，也就是说试图以一种整全的视角来把握这幅画。从这个更为野心勃勃的角度来看，《乐园》除了是一件物品之外，同时也是一位历史见证人、一个神话故事、一种对人类野心的讽刺和一种对作者本人更为隐蔽的人格的艺术表达。它尤其还是一件具有深刻内涵的东西，在诞生多少个世纪之后，还在向我们每一个欣赏它的人个人化地提出种种问题。它指向我们所知道、所想象的和所欲求的关于现实的一切；它引发我们思考如何以其他象征的和艺术的方式居住于这个世界上，并传递所有使我们思考、欢笑和歌唱的一切；它使我们思考我们全体人类（无论是活着的、死去的还是尚未出生的人）所共有的生存条件…这种将我们从这幅画引向我们自身、又将我们从全部现实重新引回到这幅画本身的视角，或许就可被我们称为哲学的思维角度。现在我们已经明白，关于每一个事物都存在着一种哲学的理解角度，而不仅仅是伟大的绘画作品才有。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>所以，看待一件事物的方式有多少种呢？从上文的诉述中可以归纳如下：</p>
+<ul>
+<li>客观画作本身</li>
+    <ul>
+    <li>物理层面</li>
+        <ul>
+        <li>重量</li>
+        <li>尺寸</li>
+        </ul>
+    <li>化学层面</li>
+        <ul>
+        <li>成分</li>
+        <li>材料</li>
+        </ul>
+    <li>历史层面</li>
+        <ul>
+        <li>诞生的时代</li>
+        </ul>
+    <li>作者层面</li>
+        <ul>
+        <li>作者性格</li>
+        <li>作者所拥有技法</li>
+        <li>作者年龄</li>
+        <li>作者世界观、人生观、价值观</li>
+        <li>作者潜意识</li>
+        <li>作者作画时情绪、状态</li>
+        </ul>
+    <li>画面</li>
+        <ul>
+        <li>色彩搭配</li>
+        <li>绘画内容</li>
+        <li>数量</li>
+        <li>形象</li>
+        </ul>
+    </ul>
+<li>观画者主观本身</li>
+    <ul>
+    <li>观画者本身阅历</li>
+    <li>观画者所处时代</li>
+    <li>观画者性格、潜意识、三观</li>
+    <li>观画者观画时情绪</li>
+    </ul>
+</ul>
+当然，观察一件事物肯定远远不止上面所罗列的观察的角度，一件事物可以从无数的角度去看待，也可以有无数种解读。因此，我认为哲学与其说是一门学科，倒不如说是一种思考的态度，一种保持着多样性与怀疑的思考态度。如何看待一件事物的因素有如此之多，特别是还包含看待者自身，以至于几乎不可能有两个完全相同的看法，甚至乎我们可以说，只要是人产生出的想法，都不是客观的---哪怕你只是所为一名旁观者，也会作为旁观者去影响着你所观察的系统。所以哲学是什么？是每个人独特的想法，独特的观察角度，对事物的思考方式，只要一个人对一件事物产生了好奇与怀疑，试图以自己的方式去理解，那便是哲学思维，哲学只是警醒人们千万别那么自满自得，多一些谦虚谨慎才是。
+</p-n>
+<br />
+<img src="/image/book/readandnote/哲学的邀请/乐园.jfif" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/哲学的邀请/乐园.jfif" class="lozad post-image">
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+让我们再次试着界定“科学”和“哲学”之间的区别。首先跃入我们脑海的，不是两者之间的区别，而是两者之间的相似之处：不论是科学还是哲学，都试图回答由现实产生的问题。事实上，从它们的起源来看，科学与哲学曾经是一个连体婴儿，只是在漫长的岁月中，物理、化学、天文学和心理学等学科，逐渐从它们共同的母体——哲学——中独立出来。今天，科学试图解释事情是如何构成、如何运转的，哲学则将自己的任务集中在事物对我们来说有什么意义上；科学在讨论自己的主题时（甚至当它研究我们人类自身时！）必须采取一种客观化的视角，哲学则总是自觉地保持这样一种意识；知识必然具有一个主体，人类必然是它的主角；科学渴望认识存在的事物和所发生的事件，哲学则会去思考为我们所知的发生的事和存在的事物对我们来说有什么意义；科学可以增加知识的视角和领域，也就是将认知分割和细化，哲学则坚持将一种知识与其他知识都安置在一种超越多样性的统一理论框架之中；科学将现实的表象拆分成种种不可见的、波形的、粒子的、可量化的理论因子和无法觉察的抽象元素，哲学虽然既不忽视也不鄙视这种分析，但却强调要从表象中赎回人类的生命现实——我们就是在其中度过我们具体的生命旅程的（比如：科学向我们揭示树木和桌子都是由电子、中子等构成的，哲学虽然不贬低科学的这种揭示的价值，但它的主要任务是还给我们一个有树木有桌子的人类现实）。科学寻求知识而不是纯粹的假设，哲学则想要知道我们的知识整体对我们来说意味着什么…哲学甚至还要对到底是真正的知识还是经过伪装的无知进行发问！因为哲学通常要对科学家们（当然也包括普通人）认为是不言而喻的道理进行质疑。内格尔说得好：“哲学的主要任务，就是质疑并澄清我们每个人日用不疑的极其普通的概念。历史学家可能会问自己在过去的某个时间发生了什么事，哲学家则会问：时间是什么？数学家可能会研究数与数之间的关系、哲学家则会问：数是什么？物理学家可能会问原子是由什么构成的、重力是由什么引起的，哲学家则会问：我们何以知道在我们的思维之外还存在着其他东西？心理学家可能会研究小孩子是如何学会一门语言的，哲学家则会问：何以一个单词能够表达某种意义？每个人都可以问自己不买票而偷偷溜进电影院是否不好，哲学家则会问：何以一个行为是好或是坏的？”</p>
+<p>无论如何，不管科学还是哲学，都是在回答由现实引发的问题。它们的不同之处在于，科学对这些问题提出解决方案，也就是说，对所提出的问题的解答十分令人满意，以至于由此而取消和化解了该问题。当一个科学的回答如此有效时，就再也没有必要坚持原来的问题了，因为它不再能引起人们的兴趣。（比如，一旦水的化学成分被确定为H20，我们就再也不会有兴趣去追问水的成分是什么，并且这个关于水的化学成分的确定的知识，自动废除了以往科学家曾经给出的种种解答，尽管同时它也开启了新的问题的可能性。）相反，哲学并不提供一劳永逸的解决方案，而只是提供各种问题——这些回答并不就此取消问题，而是允许我们理性地与它们共存，尽管我们仍不得不一遍又一遍地扪心自问。我们已知有很多关于什么是正义和什么是时间的哲学回答，但我们永远也不会停止问自己什么是正义、什么是时间，我们也永远不会将以往哲学家对这些问题的各种回答视为无关痛痒的或是已被超越的。哲学回答不能解决现实中的问题（尽管某些时候的某些哲学家自以为解决了），它们毋宁说是培育了问题，突出了问题的本质，并帮助我们继续追问下去，使我们一次比一次问得更好，使我们能够与追问永久性地和谐共存。因为，如果人不是一种能够追问的动物，一种能够继续不断地对任何一种可想象的回答进行进一步追问的动物，人又能够是什么呢？</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>从某种程度上说，哲学是平淡无奇的，只要人尝试去思索一些诸如我是谁？我为何存在？我存在的意义是什么？之类的问题时，他便是在接触哲学。</p>
+<p>从某种程度上说哲学是自私的，因为它只是从“我”出发，只为解决困扰着“我”的问题。</p>
+<p>从某种程度上说哲学是无用的，如果一个人并不需要对其自身有所解释的话，那么它便是毫无用处的。</p>
+<p>当今社会并不需要会追问的人，而是需要能够不知疲倦劳作的机械般的人。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="第一章-从哪儿上路">第一章 从哪儿上路</h2>
+<p><strong>原文摘录</strong><br>
+意识到我自己将会死去，难道不正是死亡本身的一部分吗？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+正是死亡的确定性，使得生命—我的唯一的和不可重复的生命—变得对我来说至关重要。我们生命的全部任务和使命，都只不过是在死亡面前的种种抵抗形式，尽管我们知道死亡是不可避免的。正是对死亡的意识，使生命变成一件对每个人来说都是十分严肃和值得深思的事情。也正因为有死亡的意识，生命才变得神秘和令人敬畏，变成一种我们应为之奋斗、为之努力、为之思索的宝贵的奇迹。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在临死之际，任何人都完完全全只是他自身，而不可能是他人。正如我们在出生的时候带来了世界上从未有过的东西，在我们死去的时候，我们也带走了永远不会再度出现的东西。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+关于死亡我们还知道一点：它不仅仅是确定无疑的，它还永远都是随时可能降临的。死亡不只是老人和病人的事，从我们来到这个世界上的第一刻起，我们就已经不得不准备迎接死亡的到来。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+愉快的梦境就衍生出天堂的概念，噩梦则是地狱的预兆。…我们就有更充分的理由认为所谓的来世（死去以后的生活），正是由我们能够做梦的机能所激发的灵感。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>当然，人们产生出的天堂跟地狱等等实体化场景，只是为了填补他们对死去后的想象。但是如果死后仍然能有各种想法，那么那种状态根本就不能称之为死亡，而应该是另一种状态的活着。</p>
+<p>人们的梦境让人们以为死后也能如梦境那般充满着奇迹与未知，那是因为他们选择性忘记了，做梦的时候他们的大脑还好端端地躺在枕头上，但死去了，就什么都没有了，到时又有什么能够支撑起他们无边无际的想象呢？<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+关于死亡最明证的资料是：别人的死会给我们造成痛苦，特别是当我们想起死亡本身时，我们会产生畏惧感。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+为那些我们已经不在人世间的将来的岁月感到不安和忧虑，与为那些我们尚未来到人间的过去的岁月感到不安和忧虑一样怪异。我们在出生之前从未因不存在而痛苦，因而，假设我们死后会因自身的最终消失而痛苦，就是不合情理的。…我们应该明了，至少现在我们是活着的，或许我们应该稍微思考一下出生所带来的惊喜，这种惊喜应该与死亡的惊恐同等强烈。如果死亡就是不存在，那么我们至少战胜过它一次，那就是在我们出生的那一天。</p>
+<p>…</p>
+<p>当我还不存在的时候，并没有任何一个渴望存在的“我”；没有人会从我身上剥夺任何东西，因为我还不存在；也就是说，既不存在，就没有任何失去的意识。但是现在我已曾活过，我知道什么是活着，也能够预见随着死亡会失去的东西。因此，死亡如今就成了困扰我的东西，也就是说，我已经事先产生了失去我所拥有的这一恐惧感。此外，坏的未来比坏的过去更糟糕，因为从现在开始我们就被对坏的未来的恐惧所折磨。三年前，我的肾脏做过一次手术，这里我们假设我已经确切地知道，三个月后我还得做一次类似的手术。尽管过去的手术已经不会让我再疼了，未来的手术现在尚不能让我感到疼痛，但是很显然，我对这两次手术的感觉是不会一样的：即将到来的手术让我忧虑得多，恐惧得多，因为它在向我逼近，而过去的手术则在渐渐远去…尽管两个手术在客观上是同样的，但在主观上则完全不同，因为一个不愉快的回忆、并不像一个即将到来的威胁那样让人如此不安。在这个例子中，过去的镜子并不能对称地反映未来的伤害。就死亡而言，也是同样的道理。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+所以说。死亡使我们思考，强行将我们变成思想者，变成一种沉思的存在者。尽管如此，我们仍然无法确知该对死亡做何思考。拉罗什福科公爵在他的《箴言集》中曾经说过：“死亡和太阳一样，都不能面对面地注视。”</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+关于死亡的问题，或许终将永远得不到答案，但由于死亡的存在却使得我会主动地寻找生命的意义。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="第二章-我只知道我一无所知？">第二章 我只知道我一无所知？</h2>
+<p><strong>原文摘录</strong><br>
+有时候，更好地理解一个人提出的问题，几乎就已经是一种回答了。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+以我的经验来看，大部分时候，理解对方的讲话是什么意思，是一件困难的事。即使是两个亲密的人之间看似热烈而心领神会的交谈，实际上却一点也不了解对方表达的意思，只在各说各话罢了。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+问题绝不可能产生于纯粹的无知。如果一个人什么也不知道，或者不相信自己至少略微有所知，他就绝不可能提出问题。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+我的理解大概是，人的思维并非凭空出现的，而是经由许许多多细微的，确定的信息汇聚而成的，这些信息可以是来自于刻录在基因中的欲望，也可以是成长环境中耳濡目染获取得到的。总之我无法对我未知的东西提出疑惑，因为它甚至从未出现在我的脑海。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我应该从质疑我自认为已经拥有的知识入手。关于这些知识，我至少可以向自己提出另外三个问题：</p>
+<p>1、我是如何获得这些知识的？（我是如何知道我所知道或者我自认为知道的东西？）</p>
+<p>2、我对它们的确定性有多大？</p>
+<p>3、我如何才能扩展和提升这些知识，或者有可能的话，用其他更可靠的知识来替代它们？</p>
+<p>有些事物为我所知，是因为别人曾告诉过我。</p>
+<p>…</p>
+<p>另一些事物为我所知，是因为我曾学过它们。</p>
+<p>…</p>
+<p>但于此同时，还有好多东西我则是通过自己的亲身经历得知的。</p>
+<p>…</p>
+<p>当然，不是对每一件事物我都同等程度地确信，也不是每一样知识在我看来都同等可靠。…仅凭别人告诉我就去相信，并不是一种很严谨的做法，他们自己就有可能出错，或者他们有可能想要骗我…学习这种方式虽然相对来说要更可靠些，但却也并非所有学习材料的内容都绝对可靠…甚至我能够亲身经验的事物，也不完全是知识的可靠来源…</p>
+<p>上面所说的这一切是想说我永远不该相信别人告诉我的、我所学习到的、我所经验过的东西吗？绝不是。但绝对有必要不时地去修正一些我认为我知道的东西，将它们与我能够找到的其他知识相对照，用批判的态度校验它们，以及与一些能够帮助我更好地理解它们的人进行辩论…用通俗一点的话来说就是运用理性…“一种能够（至少是部分地）建立和捕捉使事物之间互相依赖的关系，并使事物以某种特定的方式而不是以另一种方式构成的能力”…<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+但并不是所有真理都属于同一类，因为现实包括了许多不同的维度…理性的首要使命之一就是，界定分布在现实（我们也是其中的一个组成部分）之中的不同的真理之域…<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+有时候，某个真理之域中的必然和充足的可靠性，在另一个领域却是不可能的，甚至是有害于理智的，如果我们在其中强求的话。最后，我们的生命包含了各种截然不同的形式的现实，因此，理性在为我们服务时，应该能够自如地从一种形式转换到另一种形式。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+很可惜的是，现在的媒体平台上大量充斥着一锅乱炖的胡言乱语。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+加塞特曾在“概念”和“信念”之间作过区分：我们的理智构建是概念（比如某些植物的显花功能或者相对论），而那些我们一直视作正确的以至于从来都不假思索的东西（比如走出家门，我们来到一条熟悉的大街上，而不是面对月球上的风景；或者我们看见从眼前驶过的一辆汽车在尾部还备有一对轮胎）则构成了我们的信念。我们有这样或那样的概念，但是我们处于这样或那样的信念之中。或许哲学的奇特任务，就是不时地针对我们的信念提出质疑（哲学问题之所以经常给我们带来不快，正是因为这个原因！），并用能够经受住论证校验的概念来替代它们。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们能够（至少部分地能够）理解现实，是因为我们正是现实的组成部分，而且我们自身也是按照相类似的原则被构成的。我们的感觉和我们的思维都是真实的，惟其如此，它们才能或好或坏地反映现实的其余部分。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+迄今为止，对于认知问题最富洞察力的答案，也许是康德于18世纪末在他的《纯粹理性批判》中所给出的。在康德看来，我们所谓的“知识”，是现实所提供的一切，与我们的感性形式和我们的认知性范畴的结合物。我们不能认识物自身，而只能认识我们通过我们的感官感受并经由知性整理之后所呈现的那个样子。换句话说，我们并不能认识纯粹的现实，而只能认识对于我们来说是现实的东西。我们所认识的东西是真实的，但我们的认知只能达到我们的官能所允许的限度，由于我们不能通过我们的感官（它们负责提供我们知识的原材料）接收到足够的信息，我们也就不能真正地知道任何东西。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+于是我们所以为的现实世界，其实只是我们感官系统所能触及的那一部分现实。
+<p>这段话是我觉得这一章中对认知讲解得较为透彻的一部分了。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="第三章-我是谁？我是什么？">第三章 我是谁？我是什么？</h2>
+<p><strong>原文摘录</strong><br>
+也许哲学的目的就在于力图澄清由于我们所使用的语言造成的许多混乱。其中一个很大的误解就是，假设每个词汇都对应着世界上某种物质的、切实可感的东西。而实际上，许多词汇所指的只不过是一些抽象的位置、关系或原则而已。另一个语言上的虚妄之处在于。认为所有的动词都是行动的名词，因此不加区分地去寻找实施该行为的主体。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+语言是抽象现实世界的工具，因此它并不能够面面俱到地解释这个世界。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+利希滕贝格在他的《格言集》中曾说过：“我的身体是世界的一部分，而我的思想能够改变世界。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+因此，有两种阅读我的生命的方式，两种阅读什么是我的方式：一种是外在的方式，可以根据我的各种运作方式来加以评判，主要是评价我的各种器官是否正常运转（正如我们通过看一个家用电器上的指示灯来判断机器是处于运行状态还是关闭状态），判断我的体能和职业能力如何，我的所作所为是否符合法律规定，我有没有违法犯罪等等；另一种是内在的方式，它是一种体验，唯有我自己从自己的内心才能斟酌判断我的所得与所失，比较我所想要的和我所不想要的，等等。当然，我的运作方式会对我的体验产生决定性的影响，反之亦然。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不存在任何私人语言。人类的所有语言要得以存在，都必须能够为其他人所理解。语言的目的，就是能与他人一起共享意义的世界。从我开始思考自身起，我就在我的内心世界找到了一种语言，没有它我就不可能去思考，甚至连做梦都不可能…语言赋予了我的内心世界以形式，通过语言，我能假定且必须假定其他人的内心世界的存在——语言在不同的内心世界之间起着揭示性的桥梁纽带作用。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+我设想了一下，如果没有语言，那么我此刻大脑中便只能浮现些画面与声音，而甚至无法组织起哪怕是最简单的逻辑。
+<p>也许人类与动物区别的本质只在于人类有着日趋复杂的语言系统。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="第四章-我们何以为人？">第四章 我们何以为人？</h2>
+<p><strong>原文摘录</strong><br>
+英国哲学家罗杰▪斯克鲁顿说得好：“人们关于理性的定义通常相处甚远。它们之间的区别是如此之大，以至于让我们不由得感到，当哲学家试图用理性来界定人类和动物之间的区别时，他们实际上是在用人类和动物之间的区别来界定理性。”</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+动物虽然很少有创造性的行为发生，但我们总归是会稀少地看到这种情况的发生，比如有些猫或狗能打开装有把手的门进入屋内，有些鸟类能够学会说人类的某些语言或者听懂人类发出的特定的声音，甚至于人类特意训练出来的导盲犬、缉毒犬、救生海豚等等，这些功能性的技能可跟动物的本能没有丝毫关系。这是否也说明了动物其实是有超越其本能的学习能力呢？---即上文自豪地提出的“理性思考“，即使这些现象的产生并不如人类所展现出来的那般普遍和轻松。
+<p>那么人类和动物的区别究竟在哪？依我看，其实是将创造性延续下去的能力，某一个体难得地创造了一些新的东西，而这东西却只属于它自己所有，该个体一旦死去或者遗忘了，这项超越了本能就如一刹那的火光也就随之消失得无影无踪。而人类却能通过语言，文字等工具将这种新能力分享与延续下去，于是人类历史上的星星之火汇聚了起来，成了耀眼的文明之光，这或许，才是人类与动物如今迥然命运的真正区别吧。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+因为有语言，那些已经不存在或者尚未开始存在的东西，甚至是那些根本不可能存在的东西对人类来说也具有了意义<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+语言的主要任务不是向世界揭示“我”，而是帮助我理解这个世界。参与到这个世界中来。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+由于语言的存在，我们人类就不再仅仅居住在一个生物环境中，而是居住在一个具有独立的、有意义的现实（即使有时它们不能切实存在）的世界中。因为我们所居住的这个世界依赖于我们所讲的语言，所以有些语言学家（其中最突出的是萨丕尔和沃尔夫大胆假定：每一种语言都开启了一个不同的世界。受他们的影响，有些当代的相对主义者推断说：每一个语言团体都有他们自己的宇宙，这个宇宙对于那些不懂他们语言的人来说，或多或少是封闭的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们是一些童年被延长了的灵长类动物，因为我们需要很多时间来学习各种各样的符号，这些符号在我们长大成人之后会相互交织构成我们的生存方式。在某种意义上，我们永远都只是小孩，因为我们从来无法停止学习新的符号。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+符号仅仅间接地指示某种物理上的事实，但它却能直接地表明精神的、思维的、想象的、有意义构成的事实。就后一种事实而言，我们只是作为人类，而不是作为具有一定智力的灵长类动物居于其中。神话、宗教、科学、艺术、政治、历史、当然还有哲学…都是不同的符号系统。这些符号系统都以语言这个尤为突出的符号系统为基础。我们如此珍视的生命本身，和我们如此畏惧的死亡，都不仅是生理上的事件，也是符号的过程。因此，既有人随时准备为了捍卫自己的生命符号而牺牲自己物理意义上的生命，也有一些符号上的死亡，我们畏惧它们更甚于畏惧我们纯粹肉体上的死亡。正如诗人波德莱尔所说，我们居住在一个“符号的丛林”中，意思是说我们徘徊于其中的人类的丛林是由符号构成的。<br>
+<br /><br /></p>
+<h2 id="第五章-我们在哪里？世界是什么？">第五章 我们在哪里？世界是什么？</h2>
+<p><strong>原文摘录</strong><br>
+用斯宾诺莎的话来说：“观念不是别的，是思维上对自然的表述。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+对于一个神话，我们不可能提出反驳意见，而只能是无条件地完全认同它。正因如此，在产生神话的文化共同体之外，这些神话也就显得有些专横和荒唐。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“秩序”的概念，总是与一种统一许多不同的元素并在其间建立关系的意图相连，不论这种统一性是内在于事物本身，还是来自我们的思维方式。<br>
+<br /><br /></p>
+<h2 id="第六章-自由得不自由？">第六章 自由得不自由？</h2>
+<p><strong>原文摘录</strong><br>
+人非其所是，是其所非。——黑格尔<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在我们这个时代，有太多的理论都在试图将我们从责任的重担中解脱出来，而独享自由。但是它们却忘了：主体有实施某个行动的自由，却没有从相应的后果中脱身的自由。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+因此，自由不是一种类似于奖赏的东西，而同时也是一种负担。很多貌似成熟实际上却未必尽然的人，也就是说那些自主性很差、对自身绝少有清醒认识的人，宁愿放弃自由而将它交移到一位社会领袖手中，让他代替自己做决定，并承担错误的重压。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+社会中绝大部分的人都属于这一类人，这也正说明了为何会有统治阶级与被统治阶级之分。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="第七章-自然得不自然？">第七章 自然得不自然？</h2>
+<p><strong>原文摘录</strong><br>
+对于每一样事物来说，自然地“好”的东西就是能够使得它按照原有的样式继续存在的东西，自然地“坏”的东西就是阻碍或者破坏其原有存在方式的东西。但是，由于在大自然中有许许多多（是否无限多？）的不同事物，每一样事物都有与其天性相对应的特殊利益，这就使得绝不可能有一种放之四海而皆准的“善”与“恶”，而只能有和现实中不同事物一样多数量的“好”与“坏”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+生活，难道不正是想要成为与自然不同的一种东西吗？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果一切自然的东西都是“纯粹”自然的，那么任何事物就其自身而言都不比任何其他事物更有价值，或者说，任何事物就其自身价值而言都没有价值；如果在自然的事物中有某种“超自然”的东西，那么其价值也是来自这种附加的神性，而不是来自其自身。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“技术”从来都不是指一种偶然的、独一无二的行为（不论这种行为有多么天才），而是指一整套能够被传播、被学习、被复制的方式和规则，即某种有效的传统。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+技术是以控制性为目的的建设性或破坏性热情。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+今天，任何一个实现了基本工业化的国家的的公民，都有着数十年前闻所未闻的享受和消遣的可能性，但是也许他的生活也在越来越受到纯粹猎奇的消费主义的奴役，他变得日益盲目，再也无法平静地认识自己和他人。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+这或是非常之有洞见的一段话，不过我有时会想，认识自己与他人有所以为的那么重要吗？甚至人真的可以透彻地认识自己或他人吗？也许费尽一生的思考也无法得到答案，那么纯粹地做个盲目的人活着，是否也是一种并不怎么糟糕的选择呢？
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+今天，任何一个实现了基本工业化的国家的的公民，都有着数十年前闻所未闻的享受和消遣的可能性，但是也许他的生活也在越来越受到纯粹猎奇的消费主义的奴役，他变得日益盲目，再也无法平静地认识自己和他人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+每一项发明都蕴含着新的发明的可能性和需要。每个满足了的欲望都会激发起千百个新的欲望，每一个在大自然身上所取得的胜利都会激发起新的更大的胜利。人类这种贪婪的动物的灵魂是永不满足的，他的意志永远都不能感到满意。这就是对人类的生活方式的诅咒，但是人类命运之伟大也正在于此。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+机器完完全全是“人性的”，因为它们是按照我们的计划和我们的意愿被制造出来的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们的作品，无论是机器还是任何一种其他产品，都不仅是完全“人性的”，而且甚至比我们自己更加人性，因为我们每个人都依赖于一个不是由人脑所发明的生物程序。机器则是人性的，甚至于太过人性，因为它唯一的来源就是人类的计算，而我们同时也是偶然和某种必然性，即某种逃离了任何计算的产物。<br>
+<br /><br /></p>
+<h2 id="第八章-社会机器？大同世界？">第八章 社会机器？大同世界？</h2>
+<p><strong>原文摘录</strong><br>
+如果孤独地生活，没有人能够成为“人”——我们互相使对方变成了人。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+虽然我很想反驳这一点，但很遗憾的是，结合之前谈论的语言的社会性属性，也许人确实不可避免地正是一种社会性的动物。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们从来就不是我们真正想要成为的那个样子，而只是他人要求我们成为的那个样子！<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+社会是虚幻的，唯一真实存在的只有个人。——撒切尔夫人<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一个好的交流的首要前提，就是努力去理解我们要求理解我们的哪个人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们生活在一个极其理性、然而却又是极其不合理的世界上。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+事实上，充当那些大型的集体性对抗的主角的，一般都不是一些生性好斗的个人，而是由纪律严明、善于服从的人所组成的群体。他们深信，自己的共同利益取决于同那些“怪异”的对手作斗争，并将他们消灭掉。他们不是由于“反社会”的原因而好斗，而是由于社会性太强了：他们有着强烈的热情要表现得“正常”，要尽可能地与群体中的其他人相似，要不惜一切代价地保持自己的“身份”，随时准备消灭与他们不同的人、外乡人、具有不一样的信仰和习惯的人，以及他们认为威胁到了他们整个群体的合法或僭越的利益的所有人。不，恶狼并不太多，存在的那些恶狼也并不是对人类和谐的最大威胁，真正的危险通常来自发疯了的羊群。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+使我们和其他人靠近的理由，同样也能使他们变成我们的敌人。为什么会这样呢？因为我们是社会性的动物，因为我们互相之间非常相似（这种相似性，当然要远远大于不同的文化和生活方式给我们带来的差异性），大致而言，我们在本性上都喜欢同样一些东西：承认、陪伴、保护、富足、娱乐、安全…但也正是由于我们是如此的相似，我们也经常会欲求同样的东西（无论是物质上的还是符号性的），并为这些东西相互争夺。甚至于经常还会出现这样的情形：我们之所以想要某些好处，只是因为我们发现他人也想要它们。于是，我们最终也就难免会沦为随大流和没主见的人！<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+尽管设想出各种乌托邦的哲学家们的意图是美好的，但是少数人的创造一种预定的，没有瑕疵的和谐的梦想，一旦在历史上被实现，总是会变成所有其他人的噩梦。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+或许政治最突出的艺术就是掌握好鸡尾酒中各个成分的剂量，一方面要整合各种成分，另一方面又不能造成社会的“消化不良”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一个有人权的社会，应该是一个没有人遭到遗弃的社会。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+憧憬社会美好的理想，往往反衬着现实的残酷。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+20世纪最大病痛——对民族主义的典型的执着，将每个人对于乡土的必然“从属”关系变得神圣化，并将其变成一种致命性的骄傲。从根本上说，这只不过是一种面目可憎的占有欲的心态，不仅想在家里和物品贴上主人的标签，而且还想占有土地和风景。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+如果由此前讨论的人性的观念来看的话，这或许也是不可根治的人性的表现。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="第九章-美的战栗？">第九章 美的战栗？</h2>
+<p><strong>原文摘录</strong><br>
+在其最后一篇著作《法律篇》中，年迈的柏拉图认为：我们人类强行要接受两位要求严格的老师——快乐和痛苦——的教育。它们以自己令人愉悦或令人恐怖的强制，教导我们去生存和生活。由于让人类享受和痛苦的大多数东西都是相同的，因此，快乐和痛苦也就成为人们之间普遍情谊的黏合剂。但是没有两个人会完全相同地享受或痛苦，在不同人的生命历程中，也不会接受完全一样的快乐和痛苦的刺激。在赋予我们每个人的人生以不可复制的真正独特性的东西中，同样也包括快乐和痛苦。快乐和痛苦告诉我们：我们总体来说是“一样的”，但在具体方面我们却又是各自“不同的”。这再次证明了，将我们联系在一起的东西，我们的“利益（兴趣）”，同时也是使我们分开、使我们个性化，以及或许迟早会使我们发生冲突的东西。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+审美价值永远意味着拓宽生活狭隘的有限性，并尽可能地缩小死亡的压迫性领地。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果哥伦布在1492年没有到达美洲大陆，迟早会有另一个人从欧洲出发进行同样的旅行，就像斯堪的纳维亚半岛的海岛们在更为久远的时代所做的那样；如果弗莱明没有发现青霉素，迟早也会有另一个聪明人发现这种神奇的菌类的治疗功能；百米赛跑的世界纪录曾被多次打破，并且迟早会再次被打破。发现者、科学家和运动冠军是第一个到达前任未曾达到过的地方的人，但只是在已经存在的领域，而且这些领域先前已经激发了任何一个人的好奇心和才能。然而，如果莫扎特和塞万提斯在摇篮中就夭折了，就不会再有人谱写出《魔笛》，也不会再有人讲述堂吉诃德的故事。没有贝尔，我们仍可以想象电话；没有爱因斯坦，我们仍能想象相对论；但是没有委拉斯凯兹，我们就无法想象《宫娥》。因此我们说，所谓创造者，就是制造那些没有他们就不可能存在的东西的人，那些给这个世界带来新事物的人，无论这些事物是大是小，没有他们，就不可能正好以那种方式、而不是以另一种类似的方式存在。艺术作品不是关于现存事物的可能性或已经实现的性质，而是来源于完成它的艺术家的独特个性。艺术作品与艺术家之间具有相似性，作品既反映了其作者的个性，也反映了所构成的世界的现实。艺术家不是第一个发现或得到某种东西的人，而是以一种不可替代的方式“创造”某种东西的唯一的人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当代哲学家阿兰写过许多关于艺术过程的文章，他指出：“美既不让人喜欢，也不让人讨厌，而是让人为之驻足。”<br>
+<br /><br /></p>
+<h2 id="第十章-迷失于时间中？">第十章 迷失于时间中？</h2>
+<p><strong>原文摘录</strong><br>
+充满悖论色彩的是，已经不复存在的过去的时刻，和尚未来临的未来时刻，似乎要比当下这一刻更容易把握，当下这一刻刚一来临便即刻消失，或者更切确地说，当我们刚想专注于当下这一刻的时候，它就已经消失了。我们看见当下这一刻来临和远去，但是我们却从来不曾见它停留。一个从来就不停留的东西，我们如何能够决定它“是”什么呢？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在空间中，我们可以探索未知的领域，发现我们之前不知道存在于那里的事物。但是唯有在时间中，才能出现我们所想象的、与纯粹可在现实中被证实的事物相决裂的东西。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+生命永远不会让我们无动于衷，因为它总是处于一种即将结束的状态：死亡的觊觎，能够使哪怕最平淡无味的时刻都有趣得让人心碎。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+灵魂把时间设想成一种只对身体起作用的东西，虽然灵魂是通过对身体的无止境的消耗来维持自身的。<br>
+<br /><br /></p>
+<h2 id="结语-没有缘由的生命？">结语 没有缘由的生命？</h2>
+<p><strong>原文摘录</strong><br>
+哲学不是要走出疑问，而是走进疑问。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们从我们已知的东西出发，对我们尚且不知的东西进行哲学思考，对那些似乎我们永远都不可能知道的东西进行哲学思考。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们所说的意义，是指那些想要通过另一件事物来表达某种内容，或者根据某种特定的目的来思考的东西。一个词语或一个句子的意义，是它想要表达的内容；一个信号的意义，是它想要指示的（比如一个方向、一种类型的人等等）或想要体现的内容（比如一个危险、起床的时间、行人的路过等等）；一个物体的意义，是它想要服务的东西（比如喝汤、杀死敌人、跟远方的人说话等等）；一部艺术作品的意义，是其作者想要表现的内容（比如一种美的形式、对现实的再现、对现实的不满，以及对理想的幻想等等）；一个行为或一种制度的意义，是想要通过它来获得的东西（比如爱情、安全、娱乐、财富、秩序、公正等等）。</p>
+<p>在每种情况下，决定某件事物意义的，都是其背后的意图…没有生命的地方，也就没有意图，因而也就不存在意义。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当一个人克服了恐惧感，他就会发现，与他终有一死同样确定的是现在他活着这一事实。如果死亡就是在任何地方都不能以任何一种方式存在，那么我们每个人都已经将死亡打败过一次，而且是决定性地打败过一次。怎么打败的？通过出生。对于我们来说，没有永远的死亡，因为我们已经活着了，而且仍然活着。<br>
+<br /><br /></p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/12/04/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%93%B2%E5%AD%A6%E7%9A%84%E9%82%80%E8%AF%B7/">
+            https://illusionzone.github.io/2022/12/04/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%93%B2%E5%AD%A6%E7%9A%84%E9%82%80%E8%AF%B7/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/12/05/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%B0%8F%E7%8E%8B%E5%AD%90/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】小王子 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/12/03/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%93%B2%E5%AD%A6%E5%B0%8F%E5%8F%B2%EF%BC%9A%E8%A5%BF%E6%96%B9%E5%93%B2%E5%AD%A640%E8%AE%B2/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】哲学小史：西方哲学40讲 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F"><span class="toc-text">序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E8%AF%BB%E8%80%85"><span class="toc-text">致读者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%93%B2%E5%AD%A6"><span class="toc-text">引言 为什么需要哲学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%8E%E5%93%AA%E5%84%BF%E4%B8%8A%E8%B7%AF"><span class="toc-text">第一章 从哪儿上路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%88%91%E5%8F%AA%E7%9F%A5%E9%81%93%E6%88%91%E4%B8%80%E6%97%A0%E6%89%80%E7%9F%A5%EF%BC%9F"><span class="toc-text">第二章 我只知道我一无所知？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%88%91%E6%98%AF%E8%B0%81%EF%BC%9F%E6%88%91%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">第三章 我是谁？我是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%88%91%E4%BB%AC%E4%BD%95%E4%BB%A5%E4%B8%BA%E4%BA%BA%EF%BC%9F"><span class="toc-text">第四章 我们何以为人？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%88%91%E4%BB%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F%E4%B8%96%E7%95%8C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">第五章 我们在哪里？世界是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%87%AA%E7%94%B1%E5%BE%97%E4%B8%8D%E8%87%AA%E7%94%B1%EF%BC%9F"><span class="toc-text">第六章 自由得不自由？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E8%87%AA%E7%84%B6%E5%BE%97%E4%B8%8D%E8%87%AA%E7%84%B6%EF%BC%9F"><span class="toc-text">第七章 自然得不自然？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E7%A4%BE%E4%BC%9A%E6%9C%BA%E5%99%A8%EF%BC%9F%E5%A4%A7%E5%90%8C%E4%B8%96%E7%95%8C%EF%BC%9F"><span class="toc-text">第八章 社会机器？大同世界？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E7%BE%8E%E7%9A%84%E6%88%98%E6%A0%97%EF%BC%9F"><span class="toc-text">第九章 美的战栗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E8%BF%B7%E5%A4%B1%E4%BA%8E%E6%97%B6%E9%97%B4%E4%B8%AD%EF%BC%9F"><span class="toc-text">第十章 迷失于时间中？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD-%E6%B2%A1%E6%9C%89%E7%BC%98%E7%94%B1%E7%9A%84%E7%94%9F%E5%91%BD%EF%BC%9F"><span class="toc-text">结语 没有缘由的生命？</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F"><span class="toc-text">序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E8%AF%BB%E8%80%85"><span class="toc-text">致读者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%93%B2%E5%AD%A6"><span class="toc-text">引言 为什么需要哲学</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E4%BB%8E%E5%93%AA%E5%84%BF%E4%B8%8A%E8%B7%AF"><span class="toc-text">第一章 从哪儿上路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%88%91%E5%8F%AA%E7%9F%A5%E9%81%93%E6%88%91%E4%B8%80%E6%97%A0%E6%89%80%E7%9F%A5%EF%BC%9F"><span class="toc-text">第二章 我只知道我一无所知？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%88%91%E6%98%AF%E8%B0%81%EF%BC%9F%E6%88%91%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">第三章 我是谁？我是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%88%91%E4%BB%AC%E4%BD%95%E4%BB%A5%E4%B8%BA%E4%BA%BA%EF%BC%9F"><span class="toc-text">第四章 我们何以为人？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%88%91%E4%BB%AC%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%9F%E4%B8%96%E7%95%8C%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-text">第五章 我们在哪里？世界是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%87%AA%E7%94%B1%E5%BE%97%E4%B8%8D%E8%87%AA%E7%94%B1%EF%BC%9F"><span class="toc-text">第六章 自由得不自由？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E8%87%AA%E7%84%B6%E5%BE%97%E4%B8%8D%E8%87%AA%E7%84%B6%EF%BC%9F"><span class="toc-text">第七章 自然得不自然？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E7%A4%BE%E4%BC%9A%E6%9C%BA%E5%99%A8%EF%BC%9F%E5%A4%A7%E5%90%8C%E4%B8%96%E7%95%8C%EF%BC%9F"><span class="toc-text">第八章 社会机器？大同世界？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E7%BE%8E%E7%9A%84%E6%88%98%E6%A0%97%EF%BC%9F"><span class="toc-text">第九章 美的战栗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E8%BF%B7%E5%A4%B1%E4%BA%8E%E6%97%B6%E9%97%B4%E4%B8%AD%EF%BC%9F"><span class="toc-text">第十章 迷失于时间中？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD-%E6%B2%A1%E6%9C%89%E7%BC%98%E7%94%B1%E7%9A%84%E7%94%9F%E5%91%BD%EF%BC%9F"><span class="toc-text">结语 没有缘由的生命？</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

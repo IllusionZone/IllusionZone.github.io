@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】性学三论</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】性学三论">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/06/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%A7%E5%AD%A6%E4%B8%89%E8%AE%BA/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/book/readandnote/性学三论/indeximg/indeximg.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="略">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-06">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-05-14">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E6%9C%89%E7%82%B9%E2%80%9C%E6%80%A7%E5%8F%98%E6%80%81%E2%80%9D"><span class="toc-text">一、每个人都有点“性变态”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AD%A9%E5%AD%90%E4%BB%AC%E7%9A%84%E2%80%9C%E6%80%A7%E5%86%B2%E5%8A%A8%E2%80%9D"><span class="toc-text">二、孩子们的“性冲动”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%9D%92%E6%98%A5%E6%9C%9F%E4%B8%8E%E2%80%9C%E6%80%A7%E6%88%90%E7%86%9F%E2%80%9D"><span class="toc-text">三、青春期与“性成熟”</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/book/readandnote/性学三论/indeximg/indeximg.png" 
+      data-src="/image/book/readandnote/性学三论/indeximg/indeximg.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【阅之载之】性学三论 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】性学三论
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-12-05T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-06</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>6k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p></div>
+<br />
+<img src="/image/book/readandnote/性学三论/性学三论.png" width="500rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/性学三论/性学三论.png" class="lozad post-image">
+<br />
+<h2 id="一、每个人都有点“性变态”">一、每个人都有点“性变态”</h2>
+
+<div class="markmap-container" style="height:800rpx">
+  <svg data="{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:1,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;第一章&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;性欲（Geschlechtstriebs）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;人和动物所真实存在的生理需求&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;力比多[Libido]或原欲&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;引发性欲的性饥渴&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;性对象（Sex-ualobjekt）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;代表着性吸引来源的人&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;性目标（Sexualziel）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[8,9]},&quot;v&quot;:&quot;性冲动所竭力达成的行为&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;性对象的变异&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[10,11]},&quot;v&quot;:&quot;性倒错（Inversion）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;bullet_list&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;性对象不是异性的现象&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[12,13]},&quot;v&quot;:&quot;性倒错的行为表现&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[13,14]},&quot;v&quot;:&quot;完全性倒错者&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[14,15]},&quot;v&quot;:&quot;性对象只能是同性人群&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[15,16]},&quot;v&quot;:&quot;两栖性倒错者&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[16,17]},&quot;v&quot;:&quot;性对象既可以是同性也可以是异性&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[17,18]},&quot;v&quot;:&quot;偶然性倒错者&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[18,19]},&quot;v&quot;:&quot;特定情况下才将同性列为性对象&quot;}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[19,20]},&quot;v&quot;:&quot;性倒错者的自我评判&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[20,21],&quot;index&quot;:1},&quot;v&quot;:&quot;1. 正常&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[21,22],&quot;index&quot;:2},&quot;v&quot;:&quot;2. 病态的强迫症行为&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[22,23]},&quot;v&quot;:&quot;性倒错的实质&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[23,24]},&quot;v&quot;:&quot;第一种看法：神经变异的先天表现&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[24,25]},&quot;v&quot;:&quot;变异性（Degeneration）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[25,26]},&quot;v&quot;:&quot;并非由创伤或感染所引起的疾病症候&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[26,27]},&quot;v&quot;:&quot;佐证性倒错者并非变异者的事实&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:12,&quot;p&quot;:{&quot;lines&quot;:[27,28],&quot;index&quot;:1},&quot;v&quot;:&quot;1. 并无太多异常行为的人身上有性倒错现象&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:12,&quot;p&quot;:{&quot;lines&quot;:[28,29],&quot;index&quot;:2},&quot;v&quot;:&quot;2. 正常能力分毫未损，有着极高心智发展和道德文化成就的人有性倒错现象&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:12,&quot;p&quot;:{&quot;lines&quot;:[29,30],&quot;index&quot;:3},&quot;v&quot;:&quot;3. 性倒错是一种常见现象，总会在古老氏族文明发展到一定高度时出现&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:12,&quot;p&quot;:{&quot;lines&quot;:[30,31],&quot;index&quot;:4},&quot;v&quot;:&quot;4. 性倒错在原始和野蛮的部落中也极为普遍&quot;}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[31,32]},&quot;v&quot;:&quot;先天性（Angeborensein）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[32,33]},&quot;v&quot;:&quot;表现为性倒错者从未在人生的任何一个阶段有过其他性冲动取向&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[33,34]},&quot;v&quot;:&quot;只有完全性倒错者才可以用先天性进行解释，两栖性倒错者和偶然性倒错者很难用此进行解释&quot;}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[34,35]},&quot;v&quot;:&quot;第二种看法：一种后天习得的性冲动（对先天性的反对）&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[35,36]},&quot;v&quot;:&quot;性倒错只是性冲动的一种常见变形，它由个体生活中所受到的一系列外部情形所决定&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[36,37]},&quot;v&quot;:&quot;理由&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[37,38],&quot;index&quot;:1},&quot;v&quot;:&quot;1. 在许多性倒错者身上都有早年遭遇强烈性印象留下的痕迹，其同性恋倾向是这些经历持续发酵的结果&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[38,39],&quot;index&quot;:2},&quot;v&quot;:&quot;2. 在许多性倒错者身上也可观察到外部影响力的存在，其或阻碍或助长了性倒错，终究固化了性倒错的存在&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[39,40],&quot;index&quot;:3},&quot;v&quot;:&quot;3. 性倒错可以通过催眠暗示消除，这对先天特性几乎是不可能&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[40,41]},&quot;v&quot;:&quot;对该观点的辩驳&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[41,42]},&quot;v&quot;:&quot;许多人曾受到诱奸、相互手淫等所谓性影响，但并未成为性倒错者&quot;}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[42,43]},&quot;v&quot;:&quot;第三种看法：双性理论&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[43,44]},&quot;v&quot;:&quot;从解剖学角度，一定的生理上雌雄同体是正常的，即在每一个正常的男人或女人身上都可以找到异性器官的残迹，性倒错是心理上雌雄同体的表现&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[44,45]},&quot;v&quot;:&quot;该观点不成立的原因&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[45,46]},&quot;v&quot;:&quot;心理雌雄同体与可以被证实的生理雌雄同体之间并没有一一对应的紧密关系，性倒错和生理雌雄同体总体上是互相独立的&quot;}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[46,47]},&quot;v&quot;:&quot;性倒错者的性对象&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[47,48],&quot;index&quot;:1},&quot;v&quot;:&quot;1. 男性性倒错者&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[48,49],&quot;index&quot;:1},&quot;v&quot;:&quot;1. 需要性对象有男性的身体和心理特征&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[49,50],&quot;index&quot;:2},&quot;v&quot;:&quot;2. 需要性对象有女性的心理特征，但必须有男性的性器官，从而与自身的双性倾向形成呼应&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[50,51],&quot;index&quot;:2},&quot;v&quot;:&quot;2. 女性性倒错者&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[51,52]},&quot;v&quot;:&quot;要求性对象具有典型的女性气质&quot;}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[52,53]},&quot;v&quot;:&quot;性倒错者的性目标&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;ordered_list&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[53,57],&quot;start&quot;:1},&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[53,54],&quot;index&quot;:1},&quot;v&quot;:&quot;1. 男性性倒错者&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[54,55]},&quot;v&quot;:&quot;肛门性交并不普遍，手淫往往才是性目标（手淫仅仅为了宣泄自己的情感）&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[55,56],&quot;index&quot;:2},&quot;v&quot;:&quot;2. 女性性倒错者&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[56,57]},&quot;v&quot;:&quot;以口腔黏膜的相互接触最为普遍&quot;}]}]},{&quot;t&quot;:&quot;bullet_list&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[57,58]},&quot;v&quot;:&quot;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[57,58]},&quot;v&quot;:&quot;事实上，性冲动很可能与性对象无关，也可能并不是对来自性对象的刺激的应和&quot;}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[58,59]},&quot;v&quot;:&quot;恋童癖和恋动物癖&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[59,60]},&quot;v&quot;:&quot;性目标的转变&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[60,61]},&quot;v&quot;:&quot;通常意义的性行为&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[61,62]},&quot;v&quot;:&quot;两性器官在性交过程中相互结合，从而使性紧张感得以消除，性冲动暂时得到满足。&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:3,&quot;p&quot;:{&quot;lines&quot;:[62,63]},&quot;v&quot;:&quot;性反常&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[63,64]},&quot;v&quot;:&quot;行为分类&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[64,65]},&quot;v&quot;:&quot;性交所涉及的身体部位发生解剖学意义上的超越&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[65,66]},&quot;v&quot;:&quot;对性对象的高估&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[66,67]},&quot;v&quot;:&quot;对性对象生理层面和心理层面的高估，导致不满足于将性目标停留在性器官的结合，需要将其他身体部位也发展成性目标&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[67,68]},&quot;v&quot;:&quot;恋物癖&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[68,69]},&quot;v&quot;:&quot;在有些情况下，正常的性对象会为另一个与之存在关联，但却完全不适合作为性对象的物品所取代&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[69,70]},&quot;v&quot;:&quot;患有恋物癖的人，其追求正常性目标的能力几乎都受过损伤（如性器官衰竭）。只有在精神层面高估其性对象，才能和常人保持一致&quot;}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:5,&quot;p&quot;:{&quot;lines&quot;:[70,71]},&quot;v&quot;:&quot;与性对象的关系仍然停留在过渡行为阶段&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[71,72]},&quot;v&quot;:&quot;所有可能妨碍正常性目标实现的内部和外部因素（如性无能、性目标难以获得、性行为存在危险等）都会使人停留在性行为的过渡阶段，并从中发掘新的性目标以取代旧的性目标&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:7,&quot;p&quot;:{&quot;lines&quot;:[72,73]},&quot;v&quot;:&quot;类型&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[73,74],&quot;index&quot;:1},&quot;v&quot;:&quot;1. 触摸&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[74,75]},&quot;v&quot;:&quot;正常人实现性目标的过程中，一定程度的抚摸必不可少&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[75,76],&quot;index&quot;:2},&quot;v&quot;:&quot;2. 观看&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[76,77]},&quot;v&quot;:&quot;人眼发现性对象的美，进而完成了性对象的选择过程&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[77,78]},&quot;v&quot;:&quot;被视为变态行为的观看&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:13,&quot;p&quot;:{&quot;lines&quot;:[78,79],&quot;index&quot;:1},&quot;v&quot;:&quot;1. 观看的对象仅限于性器官&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:13,&quot;p&quot;:{&quot;lines&quot;:[79,80],&quot;index&quot;:2},&quot;v&quot;:&quot;2. 观看的过程中需要克服厌恶感&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:13,&quot;p&quot;:{&quot;lines&quot;:[80,81],&quot;index&quot;:3},&quot;v&quot;:&quot;3. 观看行为阻碍了正常性目标的实现&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:15,&quot;p&quot;:{&quot;lines&quot;:[81,82]},&quot;v&quot;:&quot;临床上往往表现为露阴癖&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:15,&quot;p&quot;:{&quot;lines&quot;:[82,83]},&quot;v&quot;:&quot;暴露自己的性器官，希望以此为交换，达到窥视异性性器官的目的&quot;}]}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:9,&quot;p&quot;:{&quot;lines&quot;:[83,84],&quot;index&quot;:3},&quot;v&quot;:&quot;3. 施虐行为和受虐行为&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[84,85]},&quot;v&quot;:&quot;施虐行为既可以指积极、暴力地对性对象施以虐待行为，也可以泛指由一方的屈服和受虐所带来的满足感&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:11,&quot;p&quot;:{&quot;lines&quot;:[85,86]},&quot;v&quot;:&quot;一切在性行为中被动地接受性对象的虐待，并将自己的快感与从性对象获得的生理和心理上的痛苦联系到一起的行为&quot;}]}]}]}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[86,87]},&quot;v&quot;:&quot;性变态总论&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[87,88]},&quot;v&quot;:&quot;变形与病症&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[88,89]},&quot;v&quot;:&quot;健康人性生活中一定时期内可以将性变态行为视为正常性目标&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[89,90]},&quot;v&quot;:&quot;目前无法在正常生理变形和病态症状之间分清界限&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[90,91]},&quot;v&quot;:&quot;性变态患者并不一定有其他反常行为或精神疾病&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[91,92]},&quot;v&quot;:&quot;只有当正常的性行为被彻底地排挤和取代，性变态行为将正常行为彻底排除时，才可断定为病态&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[92,93]},&quot;v&quot;:&quot;性变态的心理因素&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[93,94]},&quot;v&quot;:&quot;以羞耻感和厌恶感作为代表的精神力量与性冲动相互制衡，使性冲动被圈定在正常的范围&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[94,95]},&quot;v&quot;:&quot;性冲动由多个元素构成&quot;}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[95,96]},&quot;v&quot;:&quot;精神病患者的性冲动&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[96,97]},&quot;v&quot;:&quot;精神分析&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[97,98]},&quot;v&quot;:&quot;反常性冲动是精神病唯一的、持续的，也是最为重要的力量源泉&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[98,99]},&quot;v&quot;:&quot;精神病症状就是患者的性活动&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[99,100]},&quot;v&quot;:&quot;精神分析研究的结论&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[100,101]},&quot;v&quot;:&quot;精神病症是内心需求的替代品，其力量源自人们的性冲动&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[101,102]},&quot;v&quot;:&quot;歇斯底里症是由过多的性需求和过强的性阻碍之间的对峙所引起&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[102,103]},&quot;v&quot;:&quot;精神病与性变态&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[103,104]},&quot;v&quot;:&quot;所有精神病患者在潜意识中都具有性倒错倾向，他们的源于一直停留在同性人群身上&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[104,105]},&quot;v&quot;:&quot;精神病患者在潜意识中倾向于完成解剖学意义上的超越，尤以将口腔和肛门黏膜视作性器官的倾向最为普遍&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[105,106]},&quot;v&quot;:&quot;一些成对出现的部分性冲动诱发了新的性目标，如窥视欲与露阴癖，主动或被动的虐待欲等&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[106,107]},&quot;v&quot;:&quot;凡是成对出现的冲动，必然会在潜意识中一道起作用。每一种主动的性变态行为都会在一种被动的性变态行为打的陪伴下出现。一般会由其中一种行为占据主导地位&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[107,108]},&quot;v&quot;:&quot;典型的精神病案例中，往往会出现多种彼此间不会相互影响的反常性行为&quot;}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[108,109]},&quot;v&quot;:&quot;部分性冲动和快感区&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[109,110]},&quot;v&quot;:&quot;冲动——持续的内在生理刺激所引起的心理反应，以消除器官的刺激&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[110,111]},&quot;v&quot;:&quot;非常规的快感区是性器官的辅助品和替代物&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[111,112]},&quot;v&quot;:&quot;精神病患者中性变态盛行的原因&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[112,113]},&quot;v&quot;:&quot;精神病患者的（主要是被动的）性变态倾向虽然严重，却也是疏导源于的必然需求&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[113,114]},&quot;v&quot;:&quot;精神病成因&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[114,115]},&quot;v&quot;:&quot;有的人天生就具有性变态倾向&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[115,116]},&quot;v&quot;:&quot;有的人是由于原欲偏离了正常的性目标和性对象&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[116,117]},&quot;v&quot;:&quot;只有当体质和经验朝着一个方向共同作用时，精神病症才会趋于极端&quot;}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[117,118]},&quot;v&quot;:&quot;幼儿性欲&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[118,119]},&quot;v&quot;:&quot;性冲动最初是天生的，在某些情况下会演变成实际的性行为&quot;}]}]}"></svg>
+</div>
+
+<p><strong>原文摘录</strong><br>
+饥饿感会引发食欲，但我们的日常用语中却没有相应的词语可以形容生理上的饥饿感；在学术界，类似的性饥渴被称为“力比多”（Libido）或“原欲”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+代表着性吸引来源的人，我们称之为“性对象”（Sex-ualobjekt）；性冲动所竭力达成的行为，我们称之为“性目标”（Sexualziel）。</p>
+<p>科学研究发现，在性对象和性目标这两方面，都存在一些偏离常态的现象。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>正如现实中不存在完美的“圆”，但每个人都知道“圆”是什么？</p>
+<p>我们总是先通过想象中的完美概念来认识世界，而之后现实世界则会矫正我们的想法，向我们展示真实世界的复杂性与多样性，及其不以人类意志而变化的独立性。</p>
+<p>但往往有人会陷入完美概念而无法自拔，他们认为一切与自己想象不符的事物都是异常的，需要被排斥与消灭。</p>
+<p>其实同样作为个体的我们，对外界的任何看法只会带着强烈的主观性，却又时常自以为客观地对其他个体进行评判，侃侃而论正常与否。也许某些个体能够凭借卓越的智识稍微提升自己观察事物的高度，但总归是众生一员，由同样的物质构成，有种相似的结构，并不能居高临下地给予其他人任何真理，充其量只是分享了他个人的一点视角罢了。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果说有些男人的行对象不是女人而是男人，或是有些女人的性对象不是男人而是女人，一定会令人大跌眼镜。我们称这类人为同性恋者，或者换种更好的说法是性倒错者。这种现象被称为“性倒错”（Inversion）。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+性倒错人群也有着截然不同的行为表现：</p>
+<p>α）完全性倒错者。也就是说，他们的性对象只能是同性人群，异性人群不但不能成为他们的性对象，还会使他们感到索然无趣，甚至产生性厌恶。对于男性来说，这种厌恶感将使得他们无法完成正常的性行为，或是在正常性行为发生的过程中无法感受到任何乐趣。</p>
+<p>β）两栖性倒错者（性心理上表现为雌雄同体）。也就是说，他们的性对象既可以是同性，也可以是异性。这种性倒错不具有排他性。</p>
+<p>γ）偶然性倒错者。这类人仅在特定的条件下，如正常的性对象遥不可及，或无法模仿正常的性行为时，才将同性列为性对象，并在与同性的性行为中获得满足。</p>
+<p>同样，性倒错者对自己奇特的性冲动也有着大相径庭的评判。有些人视性倒错为理所当然，认为其与正常人的性欲并无区别，因此也就强烈主张将其与正常的性冲动等而待之。另一些人则排斥自己的性倒错，将其视作一种病态的强迫症行为。</p>
+<p>性倒错现象出现的时间点也因人而异。有些人的性倒错行为似乎是与生俱来的，有的人则是到了青春期前后的某个特定时段，才发觉了自己的性倒错取向。性倒错伴随部分人一生，但也可能在某些时间段消失，或是作为性发育的一个正常阶段出现；没错，它甚至还可以在一个性取向长期正常的人那儿突然出现。还有些人在正常的和倒错的性对象之间周期性地游离不定，这在临床上也有观察和记载。更有趣的是，在一些案例中，患者是在与正常性对象的一次不愉快经历后，才开始出现性倒错行为的。</p>
+<p>通常来说，这些不同类型的行为表现之间并无联系。只有在最极端案例中，患者才会周期性地认为自己的性倒错行为由来已久，将其看作是自身不可或缺的一部分。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+对于性倒错，有一种评价认为它是神经变异的先天表现…这种看法包含了两种说法，即“先天性“和”变异性”，我们需要对他们分别做出评判。</p>
+<p>…“变异”这个词似乎尤其不适用于一下两类情景：</p>
+<p>（1）没有太多偏离常态的行为发生时。</p>
+<p>（2）工作和生存的一般能力并没有受到严重损伤时。</p>
+<p>由此可见，性倒错者并非变异者，以下这些事实都可以予以佐证：</p>
+<p>（1）在一些并没有太多异常行为的人身上，也可以观察到性倒错现象；</p>
+<p>（2）同样的现象也出现在那些正常能力分毫未损，甚至还有着极高的心智发展和道德文化成就的人身上；</p>
+<p>（3）哪怕不看患者的临床经历，而是从更为宏观的角度看这个问题，光凭以下两方面的事实也足以否定性倒错即变异的说法：</p>
+<p>（a）我们必须主义到，性倒错是一种十分常见的现象，它总会在古老氏族的文明发展到一定高度时出现，并具有很重要的功能意义。</p>
+<p>（b）性倒错在许多原始和野蛮的部落中也极为普遍，而变异这一概念通常只适用于高等文明。</p>
+<p>显然，只有α型——最为极端的完全性倒错人群才谈得上先天性，它主要表现为性倒错者自身从未在人生的任何一个阶段有过其他的性冲动取向。而后两类人群，尤其是γ型的性倒错现象，则很难用先天性去解释。因此，持先天性观点的人们倾向于将完全性倒错人群与其他两类人群区分开来，这也导致人们在性倒错这个问题上缺乏统一的认识，按照这些人的说法，性倒错在某些案例中是天生的特征，而在另一些案例中则可能通过其他的方式产生。</p>
+<p>持反对观点的人们则认为，性倒错是一种后天习得的性冲动。他们的理由是：</p>
+<p>（1）在许多性倒错者（也包括部分完全性倒错者）身上都有早年遭遇强烈的性印象所留下的痕迹，其同性恋倾向正是这些经历持续发酵的结果；</p>
+<p>（2）在其他许多性倒错者身上，也能观察到外部影响力（如同性之间的长期排他性交往、战时的共同相处、狱中的囚禁、对同性性交危害的认识、禁欲以及性弱等）的存在，它们或为性倒错推波助澜，或成为其阻力，但或早或晚都固化了性倒错的存在。</p>
+<p>（3）性倒错可以通过催眠暗示消除，这对于先天特性来说几乎是不可能的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+事实上，性冲动很可能与性对象无关，也可能并不是对来自性对象的刺激的应和。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+无论是健康人还是精神病患者，他们在性方面并没有太多的差异，这一点值得我们深思。在我看来，这件事情可以这样解释：性生活所需的冲动，是最不受高级精神活动控制的冲动之一。那些从社会和道德角度看精神不太正常的人，完全可以拥有规律的性生活；许多人在性生活方面具有反常的倾向，这却并不妨碍他们在生活中做一个普通人。这些人完全可以适应文化的发展，而性问题正是文化的弱点。</p>
+<p>通过上述分析，我们大致可以得出一点结论：在许多条件下，在许多人的身上，性对象的形式和价值都是次要的。在性冲动的形成过程中，有一些别的东西才是最根本、最持久的。（古人与今人情欲生活的最大差别，可能是古人更重视性冲动本身，而今人更重视其所作用的性对象。古人视冲动为圣物，认为它能够神化相对低贱的对象；而今人则认为性冲动是低俗的，只有当其作用在某些对象身上时，才能为人们所宽宥。）<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+性生活所需要的冲动，是最不受高级精神活动控制的冲动之一。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+古人与今人情欲生活的最大差别，可能是古人更重视性冲动本身，而今人更重视其所作用的性对象。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+<p>这段话是否可以理解为，古人对待性为吃喝拉撒睡一般的日常活动，只要一产生相应的冲动，就身体本能地去产生相应的行为，更趋向于原始的兽性，受制于基因与激素。</p>
+<p>对今人而言，由于生活的富足与不断为各种事物和行为加持的文化属性，则将对行为的一部分控制权移交给了大脑，于是，无论是吃喝拉撒睡或者性等问题上，今人更注重品鉴与选择了。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+除一些特殊情况外，一个人对性对象的评价，绝不会仅限于其性器官，而会覆盖其全身，并把来自性对象的所有情感都包括在内。这种对性对象的高估也同样体现在心理层面上，所谓“情人眼里出西施”，一个人被性对象的精神成就和完美人格蒙蔽了双眼，乃至丧失了判断力，也是常有的事情。爱情的盲从，如果不算是“权威”一词的最初来源，至少也应该是其重要来源之一。</p>
+<p>一个人一旦对性对象过于高估，就不能满足于将性目标仅仅停留在性器官的结合上，而要千方百计地将其他身体部位也发展成性目标。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+患有恋物癖的人，其追求正常性目标的能力几乎无一例外都受到过损伤（如性器官衰竭）。这些人只有在精神层面上高估其性对象，才能与常人保持一致，这也就不可避免地使得他们将所有与之相关联的事物都视作珍宝。在正常人的情感生活中，这种现象也可能发生，尤其是在正常的性目标尚无法实现时，就更是如此。<br>
+…<br>
+一旦对替代物的追求超越了这一范畴，取代了正常的性目标，甚至完全脱离了某个特定的对象，成了独立的性目标，恋物癖就成了一种病态。正是这一原则，决定了一个人到底仅仅是性冲动略有偏差，还是已经完全陷入了病态。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在实际生活中，施虐行为的含义十分复杂，它既可以指积极、暴力地对性对象施以虐待的行为，也可以泛指由一方的屈服和受虐所带来的满足感。<br>
+…<br>
+受虐狂也泛指：一切在性行为中被动地接受性对象的虐待，并将自己的快感与从性对象那儿获得的生理和心理上的痛苦联系到一起的行为。与施虐狂相比，受虐狂这种性变态行为与正常的性目标之间相差更远。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+那些以在性生活中对他人施虐为乐的人，往往也具备将性行为中的痛苦转化为快乐的能力。施虐狂往往也是受虐狂，只不过总有一种形式会稍占上风，成为其主要的性取向。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+日常生活经验表明，大多数略显出格的亲密性行为，其实也是健康人性生活的一部分。只要情况允许，一个正常人也完全可以在一段时期内将性变态行为视作正常的性目标，甚至实现两者之间的和谐共处。在一个健康人的性生活中，这些变态行为都可能存在。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果性反常行为仅仅是与正常行为并列出现（两者具有共同的性目标和性对象），那么即便客观条件有利于反常行为而不利于正常行为，也称不上是病态。只有当正常的性行为被彻底地排挤和取代，性变态行为将正常行为彻底排除在外时，我们才可以将这类症状断定为病态。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+精神病症状也就是患者的性冲动<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+精神分析研究发现，歇斯底里症其实是一系列影响深远的精神活动、愿望和期许的替代品。在某些特殊的心理过程（压抑作用）的排挤下，内心的愿望被压抑已久，却又无法及时转化为其他的精神活动，得到及时的宣泄。这些在潜意识中蓄积的念头，需要以某种恰当的方式加以疏导，最终就以歇斯底里的这种生理方式表现了出来，这也就是歇斯底里症的成因。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+精神分析研究发现，歇斯底里症其实是一系列影响深远的精神活动、愿望和期许的替代品。在某些特殊的心理过程（压抑作用）的排挤下，内心的愿望被压抑已久，却又无法及时转化为其他的精神活动，得到及时的宣泄。这些在潜意识中蓄积的念头，需要以某种恰当的方式加以疏导，最终就以歇斯底里的这种生理方式表现了出来，这也就是歇斯底里症的成因。患有歇斯底里症的人，往往表现出超乎常人的性压抑。他们的羞耻感、厌恶感和道德心极大地阻碍了性冲动的发展，甚至使得他们本能地刻意回避性话题。在极端情况下，有些人在完全步入性成熟期后，还对性一无所知。</p>
+<p>然而，歇斯底里症患者同样也有着异常强烈的性冲动。这种性冲动抵消了阻碍因素的作用，如果不加以细致观察，就很难发现上述这个歇斯底里症的重要特征。只有精神分析研究才能发现这一点，并证实歇斯底里症正是由过多的性需求和过强的性阻碍之间的对峙所引起，从而解开了歇斯底里症的谜团。</p>
+<p>当歇斯底里症患者步入成熟期后，或是在某些外界因素的影响下，他们真正的性需求必须得到释放时，病情也就即将爆发了。在性冲动和性阻碍的双重压迫下，摆在患者面前的也就只有发病这一条路。</p>
+<p>虽然精神病并不能消除矛盾，但它却能使原欲得到转化，借由发病得到宣泄。除此之外，极少会有哪个歇斯底里症患者仅仅因为其他的一些情绪波动就发病的。精神分析研究证实，以性为中心的矛盾冲突才导致了歇斯底里症的发作，它使患者的精神生活脱离了常态。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+“冲动”顾名思义，指的是持续的内在生理刺激所引起的心理反应，它与“刺激”的区别，就在于后者通常是来自外界的单一因素所引起的。也就是说，本能这个概念划定了精神和肉体之间的界限。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+冲动本身并没有含义，它仅仅是用于衡量精神生活需求的强烈程度的一种单位。这种看法虽然简单，倒也贴切。各式各样的冲动之所以属性不同，是因为其生理刺激来源和目的不同。某个器官受到了强烈的刺激，就引发了冲动，而冲动的目的，就是消除对这一器官的刺激。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+新增的快感区是性器官的辅助品和替代物，其作用在歇斯底里症患者身上尤为明显，但这绝不是说它不适用于其他精神疾病。只不过强迫症和妄想症这类疾病的快感区尚不明晰，其发病部位不是某个控制身体功能的中枢，而是某个更容易对一个人的心理活动产生影响的区域。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+精神病患者的（主要是被动的）性变态倾向虽然严重，却也是疏导原欲的必然需求。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+性变态有一定的先天性成分，但这种先天性是全人类所共有的，它时强时弱，也可能在生活的影响下日趋显现。<br>
+<br /><br /></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>本章读注</strong></summary><p-n>
+<p>本章主要是对一些现象做出定义，主要观点归纳如下：</p>
+<p>1、性反常通常指个人对性目标与性对象异于常规，但实际上每个人或多或少存在偏离常态的现象</p>
+<p>2、性倒错人群可以分为完全性倒错者、两栖性倒错者、偶然性倒错者</p>
+<p>3、性倒错者对自我的评判，有视为理所当然的，也有视为病态行为的</p>
+<p>4、性倒错并非后天变异的结果，而是一种常见的现象<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="二、孩子们的“性冲动”">二、孩子们的“性冲动”</h2>
+
+<div class="markmap-container" style="height:800rpx">
+  <svg data="{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:1,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;第二章&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;对幼儿期的遗忘&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;童年时期的记忆对大部分人来说是模糊不清的，却在个人的精神生活中留下深刻痕迹，甚至决定了未来的发展&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;童年的性潜伏期及其中止&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;性发育自胚胎时已经开始，在幼儿三四周岁时即可观察到性活动现象&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;性压抑&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;生活在文明社会中的孩子会在教化中形成能够压抑性冲动发展的精神力量（厌恶感、羞耻感、审美和道德上的理想化要求等）&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[7,8]},&quot;v&quot;:&quot;反向作用和升华作用&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[8,9]},&quot;v&quot;:&quot;升华作用——性冲动脱离原来的性目标，转向新的目标的过程（如文学、艺术等文化的缔造）&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[9,10]},&quot;v&quot;:&quot;反向作用&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[10,11]},&quot;v&quot;:&quot;因生殖器官并未发育成熟从冲动无作用空间&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:10,&quot;p&quot;:{&quot;lines&quot;:[11,12]},&quot;v&quot;:&quot;源于快感区的性欲在个体发育过程个人带来的不快唤醒的反作用力&quot;}]}]}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[12,13]},&quot;v&quot;:&quot;潜伏期的中止&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[13,14]},&quot;v&quot;:&quot;有时一部分性表现会从升华作用中脱离回来&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[14,15]},&quot;v&quot;:&quot;有时性行为会在潜伏期保持蠢蠢欲动状态，直到青春期冲破束缚&quot;}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[15,16]},&quot;v&quot;:&quot;幼儿性欲的表现&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[16,17]},&quot;v&quot;:&quot;吮吸现象——指有规律地用嘴（或嘴唇）去反复触碰一样事物，但并非以汲取营养为目的，是婴儿的一种性表现&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[17,18]},&quot;v&quot;:&quot;自体享乐（Autoerotismus）&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[18,19]},&quot;v&quot;:&quot;最初的时候快感区的满足和食欲的满足是同步产生的&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[19,20]},&quot;v&quot;:&quot;天生嘴唇敏感的孩子喜欢吮吸并成人后善于接吻，可能亲吻同性，极可能养成抽烟酗酒的习惯&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[20,21]},&quot;v&quot;:&quot;并非所有孩子喜欢吮吸动作，内心强烈排挤会影响食欲&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[21,22]},&quot;v&quot;:&quot;从吮吸动了解幼儿性欲表现的三大基本特征&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[22,23]},&quot;v&quot;:&quot;性欲的产生与人类的进食功能关系密切&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[23,24]},&quot;v&quot;:&quot;性欲没有性对象，处于自体享乐阶段&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:8,&quot;p&quot;:{&quot;lines&quot;:[24,25]},&quot;v&quot;:&quot;性目的受快感区直接控制&quot;}]}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[25,26]},&quot;v&quot;:&quot;幼儿性欲的性目标&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[26,27]},&quot;v&quot;:&quot;快感区的特征&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[27,28]},&quot;v&quot;:&quot;快感区——某处在特定[规律性]的刺激下能够使人获得一定快感的皮肤或黏膜（促使快感的产生仍需具备特定条件，暂不了解）&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[28,29]},&quot;v&quot;:&quot;有些身体部分天生就是快感区，任何一处其他皮肤或黏膜都可以在特定的条件下，转化为快感区&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[29,30]},&quot;v&quot;:&quot;刺激的强烈程度更取决于所生存的快感的强度，而非其所作用的身体部位&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[30,31]},&quot;v&quot;:&quot;幼儿的性目标&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[31,32]},&quot;v&quot;:&quot;通过对特定快感区的一定刺激，获得性满足，这种满足感必须是幼儿之前经历过的，内心又重复这种满足感的需求&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[32,33]},&quot;v&quot;:&quot;手淫的性表现&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[33,34]},&quot;v&quot;:&quot;不同快感区之间最大的区别，就在于要使人产生满足感，所需的动作也不尽相同；由于每个区域构造和状况的不同，所需的肌肉动作也存在区别&quot;}]},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[34,35]},&quot;v&quot;:&quot;肛门区的活动&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[35,36]},&quot;v&quot;:&quot;生殖区的活动&quot;}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[36,37]},&quot;v&quot;:&quot;幼儿的性研究&quot;}]}"></svg>
+</div>
+
+<p><strong>原文摘录</strong><br>
+一般来看，幼儿的性活动在三四周岁时就能被观察到。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+以下文字引自利普舒茨的《青春腺及其作用》一书：“我们之所以认为认为青春期是性成熟的标志，是因为这一时期性发展开始加速。但实际上，这一过程早就已经开始，在我们看来始于胚胎时期。”费伦茨也曾经撰文指出：“我们现在所说的青春期，其实只是青春期的第二个阶段，它出现在十五六岁左右…从出生到十五六岁这一阶段，我们可以称之为青春期的中间阶段。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+最初的时候，快感区的满足和食欲的满足是同步产生的。人类的性行为最初是与维系生存的功能紧密结合在一起的，随后才从中独立出来。如果你曾经将一个喝饱了奶的孩子从母亲的胸前抱开，他红扑扑的脸蛋和睡梦中满足的微笑，一定会让你联想到成年人获得性满足时的表情。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不是所有的孩子都喜欢做吮吸这个动作，只有那些天生就具有敏感的嘴唇的孩子才会如此做。如果这种行为一直保持下去，这些孩子在长大成人后一定是善于接吻的人，甚至可能会亲吻同性；如果孩子碰巧是男性，还极可能养成抽烟酗酒的习惯。</p>
+<p>可是，如果他们的这类冲动在内心受到过于强烈的排挤，他们也会出现厌食的症状，甚至会歇斯底里般地呕吐。这是因为嘴唇是接吻和进食所共用的部位，对性欲的排挤也会影响到食欲。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在经过了更多的思考和对其他观察结果的评价之后，我相信所有的身体部位和内脏器官都具有成为快感区的潜质。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+幼儿期性冲动的目标，是通过对特定快感区的一定刺激，获得性满足。这种满足感必须是幼儿之前已经经历过的，他的内心中有重复这种满足感的需求，可谓冥冥之中自有天意，我们的大自然已经在这方面做了精心的安排。 此前我们已经提到过，唇部在摄入食物时，同时使人感受到了性快感，以后我们还将遇见更多类似的例子。</p>
+<p>当一个人想要重复此前所获得的满足感时，他的状态大致如此：一方面，他会有一种奇特的紧张感，这更多地使他感到不快；另一方面，其神经中枢会发痒，并将这种感觉投射到其他边缘的快感区中。所以我们完全可以认为，人类的性目标是用外来的刺激替代内心投射到快感区的瘙痒感，在消除这种瘙痒感的同时获得满足。这种外在的刺激方式往往与吮吸这个动作具有一定的相似性。</p>
+<p>生理学知识告诉我们，性需求也可以在边缘区域生成，从而造成快感区的实际变化。然而，对同一个区域的刺激，既可以消除某种感觉，又可以使人产生新的快感，这听上去多少有些天方夜谭。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+但通过对健康人和精神病患者童年的研究，我发现窥视欲更多地是一种孩子自发的性表现。小孩的注意力一旦集中到了自己的性器官上——这通常是伴随着手淫产生的——如果没有外来的干预，他们就会将这种关注扩展到玩伴的性器官身上。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+儿童性冲动中的暴力成分，更是与快感区的性活动无关。儿童容易性情残酷，是因为其自制力和同情心成形较晚，从而使征服他人、从他人的痛苦中取乐的念头得以为所欲为。对于这种冲动的来源，迄今为止还没有很成功的精神分析。但我们有理由相信，儿童的暴力倾向来自他们的控制欲，当性器官还没能真正实现其功能时，这种暴力倾向就成了性生活的一部分。</p>
+<p>这段性生活受暴力倾向控制的时期，我们称之为性器官前期（prägenitale Organisation）。那些对小动物和玩伴表现得十分残酷的孩子，早年往往经历过强烈的快感区性活动，而快感区的性活动是所有早熟的性冲动的最主要标志。如果没有同情心的限制，儿童时期与快感区紧密联系的暴力倾向可能伴随一个人一生，这无疑是十分危险的。<br>
+<br /><br /></p>
+<h2 id="三、青春期与“性成熟”">三、青春期与“性成熟”</h2>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/12/06/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%A7%E5%AD%A6%E4%B8%89%E8%AE%BA/">
+            https://illusionzone.github.io/2022/12/06/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%A7%E5%AD%A6%E4%B8%89%E8%AE%BA/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/12/06/fancywebsite/%E7%BD%91%E7%9B%98%E6%90%9C%E7%B4%A2%E7%BD%91%E7%AB%99%E6%94%B6%E5%BD%95/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【Fancy Website】网盘搜索相关网站收录 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/12/05/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%B0%8F%E7%8E%8B%E5%AD%90/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】小王子 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E6%9C%89%E7%82%B9%E2%80%9C%E6%80%A7%E5%8F%98%E6%80%81%E2%80%9D"><span class="toc-text">一、每个人都有点“性变态”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AD%A9%E5%AD%90%E4%BB%AC%E7%9A%84%E2%80%9C%E6%80%A7%E5%86%B2%E5%8A%A8%E2%80%9D"><span class="toc-text">二、孩子们的“性冲动”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%9D%92%E6%98%A5%E6%9C%9F%E4%B8%8E%E2%80%9C%E6%80%A7%E6%88%90%E7%86%9F%E2%80%9D"><span class="toc-text">三、青春期与“性成熟”</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%AF%8F%E4%B8%AA%E4%BA%BA%E9%83%BD%E6%9C%89%E7%82%B9%E2%80%9C%E6%80%A7%E5%8F%98%E6%80%81%E2%80%9D"><span class="toc-text">一、每个人都有点“性变态”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AD%A9%E5%AD%90%E4%BB%AC%E7%9A%84%E2%80%9C%E6%80%A7%E5%86%B2%E5%8A%A8%E2%80%9D"><span class="toc-text">二、孩子们的“性冲动”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%9D%92%E6%98%A5%E6%9C%9F%E4%B8%8E%E2%80%9C%E6%80%A7%E6%88%90%E7%86%9F%E2%80%9D"><span class="toc-text">三、青春期与“性成熟”</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  <script src="/js/markmap.js"></script></body>
+</html>

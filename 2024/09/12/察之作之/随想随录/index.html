@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【察之作之】随想随录</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【察之作之】随想随录">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/09/12/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E9%9A%8F%E6%83%B3%E9%9A%8F%E5%BD%95/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-09-12">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-10-22">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="察之作之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="小说">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E7%9B%AE%E6%A8%A1%E7%B3%8A%EF%BC%8C%E5%A6%82%E5%90%8C%E4%BD%8E%E5%83%8F%E7%B4%A0%E6%89%8B%E6%9C%BA%E5%BD%95%E5%88%B6%E7%9A%84%E8%A7%86%E9%A2%91%EF%BC%8C%E4%B8%80%E9%A1%BF%E4%B8%80%E9%A1%BF%EF%BC%8C%E6%AF%8F%E4%B8%AA%E4%BA%BA%E4%BC%BC%E4%B9%8E%E6%AF%AB%E6%97%A0%E5%88%86%E5%88%AB%EF%BC%8C%E7%A7%8D%E6%A4%8D%E4%B8%8D%E7%9F%A5%E5%90%8D%E7%BB%BF%E6%A4%8D%EF%BC%8C%E5%83%8F%E9%95%BF%E7%9D%80%E7%BB%BF%E8%8B%94%E7%9A%84%E9%9D%92%E7%A0%96%EF%BC%8C%E5%8F%A0%E8%87%B3%E5%8D%8A%E4%B8%AA%E7%AA%97%E6%88%B7%E7%9A%84%E9%AB%98%E5%BA%A6%EF%BC%8C%E5%8E%8C%E5%80%A6%E8%BF%9F%E6%BB%9E%E6%B2%B9%E8%85%BB%E8%BD%BB%E7%9A%84%EF%BC%8C%E6%98%AF%E5%BF%AB%E7%9A%84%EF%BC%8C%E6%9C%9F%E5%BE%85%E8%83%BD%E6%9C%89%E4%B8%80%E9%98%B5%E7%96%BE%E9%A3%8E%EF%BC%8C%E6%89%98%E8%B5%B7%E5%A5%B9%EF%BC%8C%E5%B8%A6%E5%A5%B9%E8%BF%9C%E7%A6%BB%E8%BF%99%E4%BB%A4%E4%BA%BA%E7%AA%92%E6%81%AF%E7%9A%84%E5%A4%A7%E5%9C%B0%E3%80%82%E5%A4%A7%E7%BA%A6%E6%98%AF%E5%8F%B0%E9%A3%8E%E5%B0%86%E8%87%B3%E7%9A%84%E7%BC%98%E6%95%85%EF%BC%8C%E5%85%AC%E5%9B%AD%E6%AF%94%E5%B9%B3%E5%B8%B8%E5%86%B7%E6%B8%85%E4%B8%8D%E5%B0%91%EF%BC%8C%E6%96%B9%E4%BA%AD%E5%89%8D%E7%A9%BA%E5%9C%B0%E6%83%9F%E6%9C%89%E9%9B%B6%E6%98%9F%E6%95%B0%E4%BA%BA%E6%AD%A3%E8%BD%BD%E6%AD%8C%E8%BD%BD%E8%88%9E%E3%80%82%E5%AE%BD%E5%8E%9A%E6%A0%91%E5%86%A0%E9%81%AE%E4%BD%8F%E6%89%80%E6%9C%89%E7%9A%84%E5%85%89%EF%BC%8C%E4%B8%80%E7%82%B9%E5%BE%AE%E5%BC%B1%E7%9A%84%E9%A3%8E%E4%B8%8D%E7%BB%8F%E6%84%8F%E9%97%B4%E5%90%B9%E8%BF%87%EF%BC%8C%E6%A0%91%E5%8F%B6%E7%BB%86%E7%BB%86%E7%B0%8C%E7%B0%8C%E5%9C%B0%E5%93%8D%EF%BC%8C%E5%81%B6%E6%9C%89%E4%B8%80%E7%82%B9%E5%BE%AE%E5%BC%B1%E7%9A%84%E9%A3%8E%E5%90%B9%E8%BF%87%EF%BC%8C%E6%A0%91%E5%8F%B6%E7%BB%86%E7%BB%86%E7%B0%8C%E7%B0%8C%E5%9C%B0%E5%93%8D%EF%BC%8C%E5%A6%82%E6%B8%85%E8%84%86%E7%9A%84%E9%A3%8E%E9%93%83%EF%BC%8C%E5%A5%B9%E7%9A%84%E8%BA%AB%E5%BD%B1%E9%9A%90%E5%8C%BF%E5%9C%A8%E9%98%B4%E5%BD%B1%E4%B8%AD%EF%BC%8C%E5%9C%86%E6%B6%A6%E7%9A%84%E9%BC%BB%E5%B0%96%E6%90%AD%E9%85%8D%E4%B8%8D%E5%A4%AA%E6%81%B0%E5%BD%93%EF%BC%8C%E8%BA%AB%E4%B8%8A%E6%80%BB%E5%B0%B1%E5%87%A0%E4%BB%B6%E7%B4%A0%E8%89%B2%E8%A1%A3%E6%9C%8D%E6%9D%A5%E5%9B%9E%E7%A9%BF%EF%BC%8C%E5%9C%86%E6%B6%A6%E7%9A%84%E9%BC%BB%E5%B0%96%E5%92%8C%E6%90%AD%E9%85%8D%E4%B8%8D%E5%A4%AA%E6%81%B0%E5%BD%93%EF%BC%8C%E9%A2%A7%E9%AA%A8%E5%A5%B9%E5%85%88%E5%B0%86%E7%AC%94%E7%94%BB%E6%94%92%E6%88%90%E4%B8%80%E5%9B%A2%EF%BC%8C%E7%AA%97%E5%A4%96%E7%9A%84%E9%A3%8E%E7%83%AD%E7%83%98%E7%83%98%E5%9C%B0%E8%A2%AD%E6%9D%A5%EF%BC%8C%E5%83%8F%E6%B1%BD%E8%BD%A6%E6%8E%92%E5%87%BA%E7%9A%84%E5%B0%BE%E6%B0%94%EF%BC%8C%E6%9C%89%E4%B8%80%E8%82%A1%E9%85%B8%E8%BE%A3%E7%9A%84%E5%91%9B%E4%BA%BA%E5%91%B3%E9%81%93%EF%BC%8C%E6%82%AC%E5%9C%A8%E5%8D%8A%E7%A9%BA%E7%9A%84%E6%9C%88%E4%BA%AE%E4%B9%9F%E5%83%8F%E7%BB%8F%E8%BF%87%E7%83%98%E7%83%A4%E4%BC%BC%E7%9A%84%EF%BC%8C%E7%84%A6%E9%BB%84%E7%84%A6%E9%BB%84%E7%9A%84%EF%BC%8C%E4%BB%BF%E4%BD%9B%E4%B8%80%E6%9E%9A%E8%91%A1%E5%BC%8F%E8%9B%8B%E6%8C%9E%EF%BC%8C"><span class="toc-text">面目模糊，如同低像素手机录制的视频，一顿一顿，每个人似乎毫无分别，种植不知名绿植，像长着绿苔的青砖，叠至半个窗户的高度，厌倦迟滞油腻轻的，是快的，期待能有一阵疾风，托起她，带她远离这令人窒息的大地。大约是台风将至的缘故，公园比平常冷清不少，方亭前空地惟有零星数人正载歌载舞。宽厚树冠遮住所有的光，一点微弱的风不经意间吹过，树叶细细簌簌地响，偶有一点微弱的风吹过，树叶细细簌簌地响，如清脆的风铃，她的身影隐匿在阴影中，圆润的鼻尖搭配不太恰当，身上总就几件素色衣服来回穿，圆润的鼻尖和搭配不太恰当，颧骨她先将笔画攒成一团，窗外的风热烘烘地袭来，像汽车排出的尾气，有一股酸辣的呛人味道，悬在半空的月亮也像经过烘烤似的，焦黄焦黄的，仿佛一枚葡式蛋挞，</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【察之作之】随想随录
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-09-11T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-09-12</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+          class="post-meta-link">
+          察之作之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>11k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+            class="post-meta-link">
+            察之作之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E5%B0%8F%E8%AF%B4/" 
+            class="post-meta-link">
+            小说
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"></div>
+<p>小说和现实的区别是，有时作家为了使故事的连贯性，会为了事件发生间的逻辑性绞尽脑汁，但现实有时却像是个顽皮的孩童，他一意孤行、自顾自的就让事情那么毫无征兆与无法理解的方式出现了，这使得现实往往小说更荒唐，更诡异，</p>
+<p>令人难以理解的方式展开费尽心机去串联事件之间的</p>
+<p>初晨鲜嫩的阳光打在肌肤上，</p>
+<p>人走在冬日的暖阳里，微风裹着日华轻轻荡漾着，人像泡在一湾温温热热的溪水里，擦着人裸露在外的肌肤流着，</p>
+<p>只要是攀附在大山上，那么再狂的风，再烈的日，也断不了这流水，但没料到的是，这次却是山崩地裂，山倒了，轰隆隆的岩石砸下来，砸坏了花草树木，砸断了各条干流支流，飞鸟像被捅了蜂窝似的乌泱泱一片腾空飞起四散而逃，</p>
+<p>现代人有一种孩童般迫切的狂热，即偶然得到一点东西就迫不及待奉为圭臬，并十分冲动地要拿出去跟人炫耀。这往往使得他们缺乏了一些敬畏与慎重，仿若狂热的信徒，特别是搞学问的人，一旦接触到一点点新知识，就立刻成为其拥趸，不加以批判和怀疑，轻而易举成为狂热的信徒</p>
+<p>白蒙蒙的云环绕堆积在山谷的四周，凝出中间一片冰蓝色的深邃天空，繁密的星辰在其中随波荡漾着，似银灿灿的一湾湖水，</p>
+<p>黑底衬衫的中央嵌着一颗金黄色的仰头咆哮的雄狮头颅。鬃毛四下飞舞，仿佛在彰其主人的滔天威严，</p>
+<p>清清脆脆的空气被鼻子大力地吸入肺中，换出一团温温热热的湿润气体，</p>
+<p>这么一个社会就像一瓶玻璃罐子装的油乎乎沙茶酱，一层薄薄的油浮在顶上，红褐色的黏糊糊的酱料沉在底下，占据了绝大部分的位置，谁都知道沙茶酱的主体是底下的这些酱料，可偏偏站在顶端的是这一撇油，油腻腻，空泛泛的</p>
+<p>沉淀在最下面的人，他们实在太绝望了，群体数量如此多，挤在一起的绝望凝成一整块大大的残渣，互相拖累着沉在最底下，</p>
+<p>他写得快极了，似乎要把心中的情感全都倾泻出来，水性笔管里的油墨疾风骤雨地泼在了纸上，很快密密麻麻的字像雨点一般浸满了整张白纸</p>
+<p>他站起身，宽大的裤脚互相摩擦着发出“呼咻呼咻”的声音，逐渐消失在了远处。</p>
+<p>写作某种意义上也是在追求永生，并非肉体的永生而是灵魂的永生，期待着当时当刻头脑中凝聚出来的思想能被后世读者的脑中被激活与重现</p>
+<p>事实上一切的追问，无非是为自己的生命寻找意义，可意义一词终究而言还是太模糊，太耐人寻味了，于是有必要在此基础上继续追问下去，生命的意义是什么？</p>
+<p>意义一词或许还是太模糊了，具体而言便是找到一种自己生存下去的模式，为此种模式赋予正当性，比如，并</p>
+<p>现下这个时代的大城市是从不吝啬能源的，大大小小的角落都被万盏灯火照得透亮，即使是在僻静的地方，他此刻就走在这样的道路上，宽大的街面只有偶尔几辆载满货的大卡车哐哧哐哧压过去，大部分时间一个人影都见不到，写字楼荧光屏上闪烁的灯光一遍一遍地给地面刷上各种颜色的漆，红的、黄的、绿的、紫的…</p>
+<p>半壁斜阳懒洋洋地披挂在白扑扑的粉墙上</p>
+<p>他上身一件崭新名牌白衬衫，外套一件黑色西装，下身一条湛蓝笔挺长裤，双脚各一只黑黝黝的皮鞋，全身上下加起来，顶过普通人家三五年的收入，可惜衣物是好衣物，人却是多余的，要是没了中间这团油腻腻的肥肉，说不定还能更好看些。</p>
+<p>有些人适合素净的打扮，有的人适合浮华的装饰，素净的人挑了浮华的打扮，或是浮华的人选了素净的衣物，都会显得格格不入</p>
+<p>人的自我是依托在什么样的层面上？一方面人是社会性生物，需要依靠群体的好恶来塑造自我的好恶，另一方面个体又是独立的，自我的生命与他者的生命截然不同，</p>
+<p>她密密碎碎的声音就像两排瓷白牙齿，像是将听者的耳朵细细啃咬，仿佛要将含在嘴里的人和事研磨碾碎再含在一口浓痰里直接吐进旁人的胃中，以至于最后别人都飞也似的逃离她声音覆盖的范围，</p>
+<p>虽然一开始她感觉怪别扭的，她本也不是这样的人，但是和周围的人谈一谈，说一说，交流交流，发现大家都似乎是一般的想法，大家的是非观似乎是一致的，加上她时不时也在心里给自己梳理一下，捋顺弯弯绕绕的疙瘩，竟终于让她将这一捆乱麻调得理直气壮，自得其所，于是她就这么变了一个人，与以前自己的三观有着迥然区别的一个人。</p>
+<p>斗争是人的天性，相较于有更多机会在职场上体验尔虞我诈的男性，对于日复一日打理着枯燥家务活的主妇们来说，这一被压抑已久的天性会在日积月累的情况下演变成一种强烈的冲动，一种对斗争的强烈欲求</p>
+<p>发挥起</p>
+<p>可我深思熟虑后，仍旧觉得这是最极致的幸运，可我深思熟虑后觉得，能在数万万年历史成河中，见到一个同龄的如此心怡的她，单凭这一点，就已经是最极致的幸运了。</p>
+<p>她有时也试图开开玩笑，不过显然他们是不同年龄段的人，别人不一定听得懂她的话，再加上又多是易怒易猜忌之人，一句话容易被他们逮住了使劲薅，散去所有的绒毛，只剩下光秃秃的一根杆，然后指着那枚尖尖的刺芒说：“你这是什么意思？要讽刺我？还是要害我呀。”，于是几次过后，她便小心翼翼控制住自己不要开口了，说多错多，那便不如不说，做一尊不哭不闹的佛像也许还能博得一点点尊重罢。</p>
+<p>他愈发随心所欲地耍着威风，感觉好像大家都能感受他那威猛的雄风、澎湃的霸气，所有人都应当畏惧他，尊敬他，认可他的厉害，可惜的是他从未站到镜子前看自己一眼，否则他就会发现与自己挺不错的自我感觉不同的是，一张可憎的怒容间掺揉着的是稚嫩的顽童般的咬牙切齿。噢。他原来并没有随着年龄长大过。</p>
+<p>面目下掺杂着稚嫩的顽童般的咬牙切齿。</p>
+<p>这个世界太寡淡了，</p>
+<p>他的手上，脸上有着深一块浅一块的棕褐色寿斑，一如这周围白色墙壁上一块块发黑的痕迹，时间之下的</p>
+<p>她毫无疑问是个美人，但她的美既没有为她添什么福分，也没有造成什么祸患，倒仿佛显得她的美毫无用处。</p>
+<p>当他看到A时，就会自然而然地假定持有A的人同时也有邪恶、贪婪、狡猾、不可理喻、富有、</p>
+<p>聪明村里住着一群聪明人，他们的聪明表现在方方面面，但尤其在，这些天生聪明使得他们如泥鳅般，灵活而得意地穿梭在泥藻潭中</p>
+<p>他忽然觉得，他之所以能在如此社会取得如此成就和地位，恰恰是因为他思想简单到处于社会的中下游水平，从不屑于思考人生的意义和自由、平等、正义、时间、空间等诸如此类的虚无缥缈到极致的问题，这使得他可以非常自如地在自己的大脑中植入外界所灌注的理念，比如权钱至上，那么他便毫无顾虑地去追逐金钱，巴结权贵，</p>
+<p>他的脑中本来是有一叶小舟，随着A的句子像从一划一划的锋利无比的利刃开凿出来的航道向前行驶着，可不多时，他就感觉从A的嘴里蹦出来的成了一个个词汇，像被一把电击钻把岩石打得四处飞扬的砂砾，他听了短短一会，就已无法跟上对方思维突突突的节奏，于是便放任意识任意漫游了。</p>
+<p>他的眼中闪着骇人的寒芒，若是没有经过长时间的大量练习，这种似刀锋般要将人杀死的光芒是无论如何也不可能含在两片软软的眼睑之中的。</p>
+<p>他原本为了这一个场面储存了十天十夜的能量，却不料消耗得如此惊人，宴会才刚开始不久，他却显然已经控制不住维持着的那幅虚伪的笑容，脸上的肌肉一抖一抖、一抽一抽，仿佛恶心到要立马从那肉的集合体中脱离出来，各自远逃，但宴会远远还未结束，为了史诗般意义重大的这个灿烂夜晚，为了恢宏远大的光明未来，他还是不得不继续顶着一抖一抖、一抽一抽的笑脸，继续扮演着他的角色他的意志在与脸上的肌肉做着激烈斗争一点寒芒闪烁在茫茫夜色之中泥巴和枯木搭起的摇摇欲坠的小屋内昏黄的灯光从缝隙里漏出一点指引着饥肠辘辘的人们上前</p>
+<p>透过树叶落下来的斑驳阳光</p>
+<p>尘归尘 土归土来处来 去处去</p>
+<p>他沉默地把眼神投向夜空中的星辰，但繁星们也正悄无声息地凝视着他，一种可怕的令人窒息的沉默在周边扩散着</p>
+<p>还在于他们能很快发现规则中的漏洞，大大小小的规则中隐藏着无数大大小小的洞，即便像一件被织得密不透风的羊毛衫，他们也尽可以很快找到极微小的线孔并穿梭其中，</p>
+<p>虽然不知道他的相貌在上个世纪或上上个世纪是不是属于畅销款，至少在这个世纪，完完全全属于滞销的那一类</p>
+<p>这事若是从书上或影视剧上看到，那么他大概会感觉离奇，可这事偏偏是现实中发生的，而且被他亲眼见证到，他便只感觉荒唐，他忽然惊觉自己竟能分辨出离奇与荒唐的微妙区别，可惜自己不是什么语言学家，否则肯定要借此机会深入研究一通。</p>
+<p>男的说：“你个子这么矮，以后我们的孩子不也注定了长不高吗？”</p>
+<p>女人怒骂：“个子高矮不是一眼就看出来的吗？当初娶我的时候你怎么不嫌我矮？”</p>
+<p>男人说“唉，我以为你嫁过来之后会长个子。”</p>
+<p>“哪有嫁人后还会长个的说话？”</p>
+<p>“唉，真是浪费了你吃下去的许多食物！”</p>
+<p>龟笑鳖没毛</p>
+<p>中穿梭来穿梭去，</p>
+<p>于是他们觉得，我们有如此之多的知识和智慧，这些知识和智慧必须要传承下去，成为我们的文化，于是他们开始将知识打包，力求全部能灌进他们的每一个后代那湿溚溚的脑袋中，于是我们可以看到，他们的小孩，大概在断奶的第42天，肩上就已经背着比他们身躯还大的书包，而且这个书包将伴随他们整个成长时期，且书包的成长效率总是高他们一筹，为了背负这些宝贵的无价的沉重的负担，他们不得不躬下腰去，像蜗牛一般慢吞吞地在地上蠕动着前行</p>
+<p>数十亿星辰仿佛玻璃碎屑一般，静静躺在一片黑幕里</p>
+<p>他清了清喉咙，全场鸦雀无声，他又清了清喉咙，终于慢慢地吐出了一个字，立刻掌声雷动，于是他又不得不等掌声停下来再说话，这为他空空如也的脑袋争取到多生产几个词汇的时间，</p>
+<p>现场有些人不愿相信亲眼见到他们心目中独一无二的霸主以这种方式输掉了比赛，于是纷纷转而打开手机，希望从网络转播中收获一些安慰，他们做到了。由于几乎一瞬间有数以十亿计的流量冲击着网络转播的服务器，导致服务器承载不住地出现了延迟，转播页面上出现了难以忍受的空白，不过在人们锲而不舍地刷新下，总算出现了点东西，一开始是两只球队各自的队徽，湛蓝色的和金黄色的巨钳螃蟹，后来那令支持者们尴尬的比分也出现了，坐实了这一场令他们感到尴尬无比的失利，不过还好有评论系统，他们寻找的安慰正在此处，那里一色的评论正以指数的方式增长着，比如痛骂主教练安排不当的，队友实力不济的，裁判判罚有误的，又有，这一下仿佛令败方的支持者们找到了温暖的大本营，使他们又可以趾高气扬地，而不是失败者的嘴脸走出赛馆。</p>
+<p>他们做到了，一开始确实是令人难以下咽的实力比分，即使他们</p>
+<p>越是庞大复杂的文明的后代们所要背负的总是更多，比如他们必须千方百计地区分敌我双方的边界在哪，因为他们曾经被，又比如必须理清是如何从树叶的脉络中发现规律，进而</p>
+<p>一片树叶改造成一艘航空母舰的伟大的创造的历史，</p>
+<p>干燥的暖风哽住他的喉咙，令他几乎都没办法继续呼吸了</p>
+<p>医生显然对眼前这个人束手无措，因为此人竟然觉得自己是一头牛，即使医生们采取了许多种治疗手段，依旧拿他没有任何办法，他始终认为自己就是一头牛，于是医生们只得将这种情况上报给院长，院长有着数十年的临床经验，曾经手并完美解决了许许多多的旁人难以处理的疑难杂症，在业界颇有名望，后来退居管理层，只见气定神闲地说：“这么简单你们都处理不了，让我来吧。”于是他拿了一张牛的照片和一面镜子到病人跟前，先将牛的照片递给他跟他说：“看，这是牛的照片”那人点了点头，表示那上面确实是一头牛，接着让他照了一下镜子说：“看清楚了，这是你自己。”，那人又点了点头，于是院长高兴地转身对众人宣布，问题已经解决了，众人也都很高兴，纷纷表达钦佩。但等院长得意洋洋地离开后，他们就发现，问题不仅没解决，反而更糟糕了，因为问题多出了一条，就是该如何让那病人分清楚，他所以为的镜子其实是一张牛的照片，而他所以为的照片才是一面镜子。苍天啊，医生们感觉头比先前更大了</p>
+<p>狂风骤雨倾泻而至，仿佛有谁拿着类似大平洋一样的东西隔着滤网往下猛倒，电闪雷鸣，骇人的闪电不时划过天际，炸出骤然而逝的一片亮白，随即沉沉暗下去，然后又是不经意一阵爆亮，像电焊枪不小心碰到了生铁。风更猛烈了许多，旋着转了起来，街道两边的树被拦腰折断，水流又猛又急，全堵在下水道口焦急地打着转，很快便漫上台阶，淹过门槛，朝屋内灌去，左一道右一道闪电切割着天空，竟好似将滤网隔开了一道口，碗口大的冰雹、扑腾的鱼以及其他不知名的物体纷纷宣泄般往地上砸，仿佛要将地面砸出个大坑来。</p>
+<p>他显然已经摆脱此前令其不快的经历重新回到原本生活的轨道上，就像电视播放的录像带被他收到柜子里，不愿再多看一眼，这并不纯粹是由于他健忘，更或是种洒脱，或更真切是一种无所谓式的没心没肺，这或许是种洒脱，或许是因为健忘，又或许只是单纯地没心没肺，总之他向来很容易，这种特性确实予他以些许帮助，又很容易使他再一次陷入循环之中，因为他从来学不会吸取任何教训。这种心态或者说行为习惯的资本，来自于他孑然一身的缘故</p>
+<p>从认知上可以大致分为两类，一类是人类曾受过神启以至于几乎到了无所不至的地步，只是由于粗心大意和不够重视等缘故使之遗失在时间长河中，导致成了如今这副吊儿郎当的模样，另一类则是人类是从一无所知不断发掘并积累对世界的认知，不过现实常常如此轻易被一分为二，大部分时间两者总是混在一起，像是一杯冰淇淋融化了的雪顶咖啡，总会同时尝到两种味道</p>
+<p>房东笑脸相迎，她大约50岁左右年纪，微胖，模样显得和蔼可亲，她开口说：“是你要租房吗，小伙子。”他点点头作为回应，说：“方便先带我看一下房间吗？&quot;</p>
+<p>“当然可以，跟我来。”女人笑着说，“你一个人住？”</p>
+<p>“是啊，因为准备在这附近找工作。”</p>
+<p>“哦，你是哪里人？刚毕业吗？”</p>
+<p>“我是X市的，今年刚毕业。”</p>
+<p>“一个人过来大城市打拼，也是不容易呢。我看你老实本分，就知道是个不错的孩子，</p>
+<p>“一个人到大城市来</p>
+<p>“咱们也算很有缘分，我已经计划好后天要出去旅游，</p>
+<p>“我有三栋楼，两栋出售给二手房东打理，我</p>
+<p>他们一个月给我五万块，我在住的这一栋就由自己管理，</p>
+<p>反正我交给你的那阵是完好无损的，</p>
+<p>她的丈夫走上前，用力将两扇玻璃窗卸了下来，指着贴合轨道的缝隙说：“这里还这么多灰！你就敢说打扫干净了？”</p>
+<p>我也看跟你挺有缘分，就租我这里吧</p>
+<p>“昨天602房收到的钱呢？”房东太太问她老公。</p>
+<p>男人愣了一愣，大声反问道：“</p>
+<p>和蔼的妇人亮出她的獠牙来，满脸的皱纹一翘一翘地抖动着，像最狡猾的狐狸和最歹毒的恶狼的胡须，</p>
+<p>他搜肠刮肚将装在肚子里从学校里学到的东西都翻了一遍，有的都是什么类似根号2是无理数，圆周率是3.14159，但没有一条是足以解决眼前问题的，他就这么呆呆愣愣地站在一旁，像一台飞速计算得快冒烟的计算机，可在旁人看来却仍旧只像是一堆静止的铁疙瘩，</p>
+<p>什么有理数、无理数、圆周率、牛顿定律方程、万有引力公式、麦克斯韦方程式、洛沦磁力公式、质能方程、化学反应方程式、</p>
+<p>重力加速度公式、化学反应方程式、欧拉级数、泰勒方程、</p>
+<p>他仿佛一下子打通了任督二脉，整个人的气质陡然一变，他显然已经青出于蓝了脱胎换骨了</p>
+<p>他扮演了整整一周的好丈夫和好父亲，虽然期间吵了几架，还摔烂了几个杯子，可相对于平常来说，他的表现已经是前所未有地好了，他现在身心俱疲，现在想要做的只是酣畅淋漓地喝上一大杯啤酒，然后美美地睡上一觉，因为明天周末他就要去他的父母那扮演一个好儿子，不过这项任务总是相对轻松些，毕竟在那边只需要张牙舞爪地吹上个把钟牛就可以交差，况且他还能从中收获不错的愉悦感，正是这个原因让他其实挺乐意到父母那去一趟的，尽管由于总是忙得团团转的生活他有时几个月才会去一次，虽然他也不尽然清楚自己总在忙些什么，但要为忙碌找到理由还是轻而易举的，</p>
+<p>她的眼睛突然像西奥多·杰柯利《一个疯女人》中泛起猩红的血丝，锐利的眼神中透出刀片般的锋铓，她不自觉弓起背，仿佛准备扑杀猎物的嗜血恶狼，</p>
+<p>他惊喜地发现在这个星球上，一天的时间有32个小时，这意味着他可以在工作八小时之后足足有24小时的休息时间，即使需要加班至24小时，仍旧有8个小时供他酣畅大睡，这个发现令他雀跃不已，不过很快他的好心情就消失不见了，因为他得知根据这个星球的劳动法规定，一天的工作时长不得低于18个小时，企业安排的加班时长可以多于15个小时，这说明如果条件允许他将一天工作33个小时。噢，天哪，更何况这里一个月有60天，一年有36个月，而法定节假日仅仅只有七天，七天！甚至没有双休！</p>
+<p>电闪雷鸣，炫目的强光一闪而过，将他和周围变得透明透亮，他刚想趁机观察周围的环境，却也迅速地重新迷失在无边无际的黑暗中。</p>
+<p>一时之间所有人都沉默了，似乎知道一开口苦涩的滋味就会从嘴角流出来，可是继续默然不语，却也只是在将痛苦延续下去，从这一秒延续到下一秒，从现在延续到未来，于事情的解决毫无益处。</p>
+<p>挑食会丢失很多人生的乐趣，我之所以大致懂得这一点道理，在于我之前是极度</p>
+<p>我小的时候极度挑食，对于不喜欢吃的东西坚决不会放入口中，但后来却转变了，促使我转变的原因大概有三，一是</p>
+<p>按我们掌握到的信息来看，你们对一条命的赔偿价大约是在20~30万之间，即使算上您作为劳动力在未来可能创造的价值，至多也就是100万，而那颗被您划到的宝石市场价则是6000万，也就是你如果选择采取这种兑子方式处理的话，那么您至少还将背负5900万的欠款可我都已经死了啊那倒是，不过先生，您也不希望您的妻女知道吧！</p>
+<p>阳光从窗外随摆动的帘布而入，掺和着吊顶铝板垂下的白皙灯光，落在实验室内青灰色的地板上。几个人围在电脑前，密切关注着屏幕上不断闪现的实验数据。</p>
+<p>像是在透过鱼眼观察一样，视角中心一直聚焦在试验台前的几个人身上，周围则是膨胀而模糊，不过那扇明媚干净的窗户却是个例外，连记忆的主人也说不清楚那为何会对之印象深刻。</p>
+<p>他简直就跟猪没什么两样，当然这么说有些冒犯了，不是对人冒犯，而是对猪冒犯，因为猪什么都不用想，照样好吃好喝待着，而人穷极一生费尽心思坑蒙拐骗，最终却沦落到和猪一样待宰的命运。</p>
+<p>高耸的颧骨也变得锐利，他微眯着眼，眼睑里仿佛含着一枚锐利的刀片，寒芒掠过对方眼眸，令之不由得心头一惊</p>
+<p>奶油色的建筑上端，仿佛蛋糕</p>
+<p>圈着三道亮红色的，仿佛蛋糕焦糖，</p>
+<p>大厅中央吊着一簇大灯，灯罩上垂着一圈晶莹玻璃珠穗，在橙黄灯光照耀下熠熠生辉。璀璨</p>
+<p>他感觉出他对自己的没反应有了反应，</p>
+<p>窗外的风热烘烘地袭来，像汽车排出的尾气，有一股酸辣的呛人味道，悬在半空的月亮也像经过烘烤似的，焦黄焦黄的，仿佛一枚葡式蛋挞，</p>
+<p>月亮泛着清幽幽的光，在炎热的天气里制造出一丝瘆人的寒意</p>
+<p>有她的梦总是很美如同午夜开了一瓶香槟金黄的洁白的泡沫</p>
+<p>繁星洒在靛蓝的夜，仿若</p>
+<p>别离之哀</p>
+<p>沉重的消息并非总是如雪崩般塌下，恰恰相反，它搭载着一通轻盈的电话抵达，像一片枯黄的落叶，带来一个人逝去的讯息。时钟照例慢条斯理地走着，一分，一秒，一秒，一分，生老病死本就属于世间常态，没有谁会为了一条生命的离开——如此稀疏平常之事而停下来哀悼，哪怕收信之人亦是如此，只是针扎了似，有那么一丁点刺痛的感觉，他朝右望，屋外晴空万里，灼灼的太阳炙烤着大地，蒸干所有水分，连一滴眼泪也未流下，干燥环境产生不出分毫悲伤的气氛。</p>
+<p>机车嗖嗖飞驰，如一条白绫随风摆动。屋内白发老翁盘腿倚着椅背，一进门就听他喑哑凄怆地喊：“阿嬷没了！”<br>
+从未见过的失态模样。俗世繁杂缭乱的礼节接连蹦出，似瓶颈处的活塞，迅速挤压思考的时间与空间，不留一丝余地愚钝而麻木的大脑被推着一圈圈朝前滚，是戏屏灯车的轮子。</p>
+<p>初秋的雨淅淅沥沥洒入干涸的河床，留在心口的那一枚冰针终于消融，化为一滩酸涩的水混入血液，随波逐流。流至指尖，触感冰冰凉凉，宛如搭在那布满棕褐色寿斑的手背上，想要探前握紧，却来不及抓住，只搅乱了空中的气流；流至耳边，窸窸窣窣，仿佛听见亲切的吩咐声：“弟呵，到家没？我吃饭那阵就念叨着你总该下班了，正在路上和行人挤着呢。”<br>
+又听：“弟啊，你生日要到了，记得要弄点好吃的，可不能太省，要照顾好身体。”<br>
+照例答话，却再未得到回应。流至眼角，暖风一熏，全变成白灿灿的盐粒，硌得眼睛起了泡，模糊光影中好似浮现出牙齿掉光后皱巴巴往内塌缩微笑的嘴，仅一瞬便已消散。风簌簌地吹，记忆中的触感、声音、容貌正随之渐渐淡去，数十年时光熟悉了一个人的存在，却要花费余生所有的时间去遗忘。是夜，散发着昏黄光晕的满月悬于穹顶，心里的月却永远缺了个角。</p>
+<p>流至眼角处，夜风一吹，变成白灿灿的盐粒，硌得眼睛起了泡，流至耳垂，仿佛传来熟悉的吩咐：“弟阿，</p>
+<p>数十年熟悉了一个人的存在，却要花费余生所有时间去遗忘，</p>
+<p>是夜，散发着昏黄光晕的满月悬挂于穹顶，心里的月却永远缺了个角。</p>
+<p>成为木轮被推着一圈圈往前滚，</p>
+<p>被推着朝前滚，像木制车轮，</p>
+<p>繁杂的事务将思考的</p>
+<p>留在心口的那一枚冰刺融化了一滩酸涩的液体混进血液，随波逐流</p>
+<p>当流至耳边，忽然</p>
+<p>抵达时</p>
+<p>虽日光正盛，阴寒却缠上了身，不禁打了</p>
+<p>梦里便知晓那是梦，因为美好地难以置信正因不愿轻易醒来，所以躲在眼皮下一遍遍将梦舔舐</p>
+<p>梦里觉得是梦，醒来更觉得先前是梦，因为</p>
+<p>她的眼珠不住地四下滚动，不禁让人联想到石狮子嘴里的石珠。</p>
+<hr>
+<p>台风过境（草稿）</p>
+<p>刚打开窗，突如其来一阵风便钻了进来，掀开桌上的书，刷啦啦，刷啦啦，接连翻开好几页，数不清的文字摩肩接踵，纷纷跃起优雅的弧线，从一个平面迅速蹦落至另一个平面，打通了本不相连的两处空间。书桌前的女孩双肘支起捧住下巴，努起嘴，将油性签字笔别在上嘴唇和鼻子之间，微昂着头，望着茫茫夜色发呆，黑魆魆的窗口恰好当作她思维的画板，任由她在上面涂涂画画。</p>
+<p>她先左右各出一条横线，末端朝上一提，再往下一挫，稍带出锋，便是两道英气勃勃的眉毛，眼睛则有些小，弯弯的，狭长的榆木叶形状，中间夹着漆黑的眼珠，玻璃珠似的，反着光。她又用洗练的线条勾勒出脸部的轮廓，接着耐心地一竖一斜，一竖一斜，攒出许许多多短促的线段，密密地织，想必是天热的缘故，新理的细碎短发。她伸手撩开垂在额前的一络发丝，换了个姿势，双手十指展开扣在桌上，前不久涂上粉红色指甲油的指甲，小巧玲珑，像精挑细选出来十枚晶莹剔透的饱满石榴果肉，亮闪闪，水汪汪。她忽地幽幽叹了口气，唉，却不知他有没有注意到呢，自己特意摆在桌上，可偷瞄过他几眼，却从未发现他的眼神落在自己身上，真想张嘴咬住他肉乎乎的耳垂，俯在他耳边低声教他好好瞧一瞧。</p>
+<p>他总在低头写着东西，偶尔翻开书看看，他的字并不十分好看，粗枝大叶，凑在一块乱糟糟的，沼泽地里的枯枝残叶。说起来，他的长相也很普通，个子不高，皮肤偏栗棕色，宽厚的鼻梁跟清瘦的脸颊并不相搭，圆润的鼻尖更与棱角分明的高耸颧骨颇有几分关公战秦琼的感觉，身上就几件素色衣服来回地穿，是没入人群中便消失不见的角色。可偏偏单独拎出来看，似乎也并不讨厌，还略有几分滋味，总期待着能久久凝视着他，将他额头上的每一根头发都数清楚，将他脸上的每一个毛孔都看仔细，将他下巴每一粒没刮干净的胡须渣子都摸个遍，直到清晨的曙光照向他熟睡中毫无防备的脸上，用自己的双唇，悄悄地、轻轻地，蜻蜓点水般，往他的额头中央一点，往他的鼻尖上一点，最后贴住他那两瓣薄淡的嘴唇，将自己一点点融进他的梦里。</p>
+<p>由于玻璃窗被打开，屋外的空气趁虚而入，占据了一部分逃逸了的冷气的空间，热烘烘的气息像汽车排出的尾气，夹着一股又酸又辣的呛人味道，熏得她双颊粉嫩粉嫩，耳角亦泛起潮红，心跳变得紊乱，呼吸急促起来，像从几公里外的地一口气跑回家。她在房间中已呆不下去。</p>
+<p>玄关处，她边换鞋边喊：“我出去一下哦。”</p>
+<p>“去哪儿？时候不早了，是有什么事吗？”母亲的声音传来。</p>
+<p>“没事。太闷了，我出去走走。”她说。</p>
+<p>“哦。可别太晚回，天气不好。”母亲的身影出现在廊道尽头，关切地说。</p>
+<p>“嗯，知道了。”她头也不回地关上门。</p>
+<p>临走前耳边传来天气预报的声音“…预计将于凌晨登陆…”</p>
+<p>她站在街上，回首望向逼仄密集的住宅区——在夜幕中隐约露出臃肿的轮廓，一墙的空调外机风扇嗡嗡嗡轰鸣着，一架永远无法升空的破旧飞机。她飞也似地逃离。</p>
+<p>夜空万里无云，没有风，地面热浪滚滚，双脚像淌在温泉里朝前跋涉。两个跑步的人喘着粗气从她身旁穿过，摆动的胳膊和大腿在橙黄路灯下，好似架在碳炉上翻转着滋滋冒油的烤肉，悬在半空的月亮经过高温烘烤，焦黄焦黄，如一枚葡式蛋挞，让人忍不住想咬一口。</p>
+<p>世界是一条饱腹的蟒蛇正缓慢蠕动，唯独她不同，她忽然间已厌倦极了这迟滞、黏稠、迟滞的一切，她期待自己是一缕尘烟，能被一阵疾风托起，远离令人窒息的牢笼般的大地。</p>
+<p>不经意间到了图书馆前，一把冰冷的锁牢牢铐住左右两扇门的把手，硬生生地将她横冲直撞的魂魄弹回原地。她愣了一下，抬头看向六楼的窗户，左起第七扇窗便是她早上坐的位置。是和他相遇的地方，两人也仅限于在那儿相遇，第一次坐到一起是缘于两人都要抢占靠窗的位置，自此便莫名产生了某种默契，先到的人会刻意为后来的人留下对面的位置，随后各自看书，互不相扰，连一句完整的话都没说过，半句话却还是有过的。朝窗外望出去，一片八九十年代建筑风格的民房鳞次栉比排开，房顶花草茂盛，不知名的藤曼缠满不锈钢架子，像长着绿苔的青砖，歪歪斜斜叠了有半个窗户高。悬在半空的镂空绣红铁梯中间一折，探入楼下人家的阳台之内，栏杆挂着几件衣服，夕阳斜照，暖洋洋的光荡漾在土黄色外墙上，拥有平凡生活气息的律动感。他住的房子会是哪一间呢？他从来都是步行过来，肯定也是在附近吧。从窗外收回目光，猝不及防撞上他也正转过头，两人短暂交汇了一下目光，随即迅速分开。她的心怦然一跳，对面的眼眸有那么一瞬间将她完全包裹在内，她不自觉地伸手想拿水杯喝口水，不小心将笔碰下桌，咕噜噜滚到对面，他俯身帮忙捡起，顺着衣领窥见他两节光滑的锁骨，像是玉如意优雅的柄端。她道了声谢，他也嘟哝回应一声后急急低下头，听不清楚，大概是不用谢之类的意思。</p>
+<p>唉，墙上果然贴着“闭馆通知”的告示，她失落地离开图书馆。</p>
+<p>大约是台风将至的缘故，公园比往常冷清不少，方亭前空地只有一伙人正唱歌跳舞，不远处零星数人在摇扇纳凉聊着天。灌木丛深处蛙虫尖声呱噪着，宽厚树冠遮住所有的光，一点微弱的风吹过，树叶窸窸窣窣地响，像翻书声。她的身影隐匿在阴影中，留下嫩红的一个点，一下一下跳动着，带动缠绕于周遭的庞杂网络一次又一次地循环，每一次循环便历经一次人类历史的轮回，无数生命诞生、消逝、诞生、消逝…子代延续着父辈所做过的事、走过的路，或许偶尔稍有偏离，大方向却是不改，依旧朝着宿命之地步履不停。她和他亦只是这庞大远征队伍中短暂的接棒员，一眼万年，生老病死，是啊，不过如此而已。起风了，犹如一把蒲扇扇出一阵风，将树上一部分枯叶扫下，沙沙作响，落在地面打着旋。生命的终结，风中的沙砾，泥里的尘埃，多么荒唐，多么可笑。一缕俏皮的风潜入她的衣领，白皙的脖颈顿觉凉飕飕，她将衣服往上提了提。岂料风一阵却停了，燥热的空气重新将她裹住，雾蒙蒙的蒸汽糊住她双眼，世界万物在她眼中宛若用低像素手机录制的视频，一卡一顿，面目模糊，唯独他是灼烧着心脏的清晰的金黄色火焰，摇曳着一束深蓝色焰心。</p>
+<p>她又在树下坐了很长一段时间，才起身回家。</p>
+<p>砰砰砰，仿佛有人在敲她的窗，将她吵醒。屋外狂风怒号，呼啸着穿梭于楼宇之间，刮得雨棚噌噌响，像个门外汉在学用低音鼓伴吊镲打节奏，很急很乱，声音忽大忽小，完全不着调。趿着拖鞋走至桌前，玻璃窗上水幕一层层往下剥落，朦朦胧胧，她上半身的轮廓印在上面，看不清脸。她悄悄掰开一点窗，骤雨迫不及待从缝隙里迎面泼来，洒在她的面上、脖颈上、手臂上、冰凉透骨。街上的树被吹得左摇右晃，锯齿般的树叶将昏黄街灯剪得支离破碎，像被打散了的蛋液流到地上。风一阵阵席卷着，半空中掬起一捧水洒下，哗啦啦啦，哗啦啦啦，密集的雨点在栏杆上溅起大朵大朵的水花。她急忙关上窗，将一切挡在外面，声响顿时减弱许多。桌上时钟滴答滴答，她看一眼时间，已经凌晨了，但风雨丝毫没有停下来的意思，漆黑一片的天空好似要将永夜延续下去，不透出一点光亮，誓要给浮躁的万物从肉体至灵魂来一次彻彻底底的洗礼。她打开手机，很快查到置顶头条新闻，“…台风已于今晨登录，预计未来三天将有大暴雨至特大暴雨，我市已启动防汛应急预案，请各位居民做好防范，非必要不要外出…”，清冷的屏幕光印在她脸上，一如她肃寂的心。她又刷了一会自寻，这才将屏幕熄灭。房间重回黑暗，两根时钟指针泛着荧光，一丝不苟执行它的天职。她将轻薄的天蓝色绒毯重新抖开，裹住侧卧的自己，蜷缩起身子，想象有一条臂弯温柔地将她搂在怀里，结实的胸膛紧紧贴住她的后背。不稍片刻，便沉沉地进入了梦乡。</p>
+<h2 id="面目模糊，如同低像素手机录制的视频，一顿一顿，每个人似乎毫无分别，种植不知名绿植，像长着绿苔的青砖，叠至半个窗户的高度，厌倦迟滞油腻轻的，是快的，期待能有一阵疾风，托起她，带她远离这令人窒息的大地。大约是台风将至的缘故，公园比平常冷清不少，方亭前空地惟有零星数人正载歌载舞。宽厚树冠遮住所有的光，一点微弱的风不经意间吹过，树叶细细簌簌地响，偶有一点微弱的风吹过，树叶细细簌簌地响，如清脆的风铃，她的身影隐匿在阴影中，圆润的鼻尖搭配不太恰当，身上总就几件素色衣服来回穿，圆润的鼻尖和搭配不太恰当，颧骨她先将笔画攒成一团，窗外的风热烘烘地袭来，像汽车排出的尾气，有一股酸辣的呛人味道，悬在半空的月亮也像经过烘烤似的，焦黄焦黄的，仿佛一枚葡式蛋挞，">面目模糊，如同低像素手机录制的视频，一顿一顿，每个人似乎毫无分别，种植不知名绿植，像长着绿苔的青砖，叠至半个窗户的高度，厌倦迟滞油腻轻的，是快的，期待能有一阵疾风，托起她，带她远离这令人窒息的大地。大约是台风将至的缘故，公园比平常冷清不少，方亭前空地惟有零星数人正载歌载舞。宽厚树冠遮住所有的光，一点微弱的风不经意间吹过，树叶细细簌簌地响，偶有一点微弱的风吹过，树叶细细簌簌地响，如清脆的风铃，她的身影隐匿在阴影中，圆润的鼻尖搭配不太恰当，身上总就几件素色衣服来回穿，圆润的鼻尖和搭配不太恰当，颧骨她先将笔画攒成一团，窗外的风热烘烘地袭来，像汽车排出的尾气，有一股酸辣的呛人味道，悬在半空的月亮也像经过烘烤似的，焦黄焦黄的，仿佛一枚葡式蛋挞，</h2>
+<p>人与人之间相处最难之处在于如何平衡各自的欲求，处理不妥，便是灾难性冲突的根源。每一个个体都有其独特的特质，由其自身特质、生存环境、认知理解而无时无刻不在产生出各种各样形形色色的欲求。并由于人类独特的思维系统，同一时段中会有最大欲求与其他零散欲求同时存在。</p>
+<p>当自己与他人的最大欲求一致时，自然是很容易相处，但当自己与他人的最大欲求不同步时，则很容易爆发冲突。政客对其利益集团的操控便是对其欲求的掌控，要么塑造其欲求，要么满足其欲求，在这其中货币发挥了很大的作用，因为货币可以被使用用于满足许许多多的欲求，诸如吃、玩、喝、乐，因此只需满足其对货币的需求，也便满足了其大部分的需求</p>
+<p>诚实自然是理想社会道德，亦是人性取代兽性的步骤，但显然，社会中说谎却是其中常态，乃至于我们在思辨中很难想象一个没有谎言的社会，我们总会为各种各样的特殊情形找出需要谎言的理由，因为社会中只要有一个人说谎，那么不说谎的社会环境便无法构成。其次，水至清则无鱼，一旦构造出的从不撒谎，并彻底将谎言定性为不道德的社会中，出现一名说谎者，那么这个社会必将分崩离析，彻底走向灭亡</p>
+<p>唉哟，瞧你嘴里这股冲人的膻味，你是爬着找鸡屎吃给吃出来的吧</p>
+<p>爱慕之思</p>
+<p>夏风吹散她的发丝</p>
+<p>两颗黑溜溜的眼珠始终躲在两瓣眼皮后面</p>
+<p>北风像蛟龙般在楼宇间穿梭游荡，坚硬的鳞片刮得四处蹭蹭直响</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/09/12/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E9%9A%8F%E6%83%B3%E9%9A%8F%E5%BD%95/">
+            https://illusionzone.github.io/2024/09/12/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E9%9A%8F%E6%83%B3%E9%9A%8F%E5%BD%95/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/09/12/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E8%AF%A1%E6%A2%A6%E5%AE%9E%E5%BD%95/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【察之作之】诡梦实录 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/09/01/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/ComfyUI%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【学之思之】ComfyUI知识整理 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E7%9B%AE%E6%A8%A1%E7%B3%8A%EF%BC%8C%E5%A6%82%E5%90%8C%E4%BD%8E%E5%83%8F%E7%B4%A0%E6%89%8B%E6%9C%BA%E5%BD%95%E5%88%B6%E7%9A%84%E8%A7%86%E9%A2%91%EF%BC%8C%E4%B8%80%E9%A1%BF%E4%B8%80%E9%A1%BF%EF%BC%8C%E6%AF%8F%E4%B8%AA%E4%BA%BA%E4%BC%BC%E4%B9%8E%E6%AF%AB%E6%97%A0%E5%88%86%E5%88%AB%EF%BC%8C%E7%A7%8D%E6%A4%8D%E4%B8%8D%E7%9F%A5%E5%90%8D%E7%BB%BF%E6%A4%8D%EF%BC%8C%E5%83%8F%E9%95%BF%E7%9D%80%E7%BB%BF%E8%8B%94%E7%9A%84%E9%9D%92%E7%A0%96%EF%BC%8C%E5%8F%A0%E8%87%B3%E5%8D%8A%E4%B8%AA%E7%AA%97%E6%88%B7%E7%9A%84%E9%AB%98%E5%BA%A6%EF%BC%8C%E5%8E%8C%E5%80%A6%E8%BF%9F%E6%BB%9E%E6%B2%B9%E8%85%BB%E8%BD%BB%E7%9A%84%EF%BC%8C%E6%98%AF%E5%BF%AB%E7%9A%84%EF%BC%8C%E6%9C%9F%E5%BE%85%E8%83%BD%E6%9C%89%E4%B8%80%E9%98%B5%E7%96%BE%E9%A3%8E%EF%BC%8C%E6%89%98%E8%B5%B7%E5%A5%B9%EF%BC%8C%E5%B8%A6%E5%A5%B9%E8%BF%9C%E7%A6%BB%E8%BF%99%E4%BB%A4%E4%BA%BA%E7%AA%92%E6%81%AF%E7%9A%84%E5%A4%A7%E5%9C%B0%E3%80%82%E5%A4%A7%E7%BA%A6%E6%98%AF%E5%8F%B0%E9%A3%8E%E5%B0%86%E8%87%B3%E7%9A%84%E7%BC%98%E6%95%85%EF%BC%8C%E5%85%AC%E5%9B%AD%E6%AF%94%E5%B9%B3%E5%B8%B8%E5%86%B7%E6%B8%85%E4%B8%8D%E5%B0%91%EF%BC%8C%E6%96%B9%E4%BA%AD%E5%89%8D%E7%A9%BA%E5%9C%B0%E6%83%9F%E6%9C%89%E9%9B%B6%E6%98%9F%E6%95%B0%E4%BA%BA%E6%AD%A3%E8%BD%BD%E6%AD%8C%E8%BD%BD%E8%88%9E%E3%80%82%E5%AE%BD%E5%8E%9A%E6%A0%91%E5%86%A0%E9%81%AE%E4%BD%8F%E6%89%80%E6%9C%89%E7%9A%84%E5%85%89%EF%BC%8C%E4%B8%80%E7%82%B9%E5%BE%AE%E5%BC%B1%E7%9A%84%E9%A3%8E%E4%B8%8D%E7%BB%8F%E6%84%8F%E9%97%B4%E5%90%B9%E8%BF%87%EF%BC%8C%E6%A0%91%E5%8F%B6%E7%BB%86%E7%BB%86%E7%B0%8C%E7%B0%8C%E5%9C%B0%E5%93%8D%EF%BC%8C%E5%81%B6%E6%9C%89%E4%B8%80%E7%82%B9%E5%BE%AE%E5%BC%B1%E7%9A%84%E9%A3%8E%E5%90%B9%E8%BF%87%EF%BC%8C%E6%A0%91%E5%8F%B6%E7%BB%86%E7%BB%86%E7%B0%8C%E7%B0%8C%E5%9C%B0%E5%93%8D%EF%BC%8C%E5%A6%82%E6%B8%85%E8%84%86%E7%9A%84%E9%A3%8E%E9%93%83%EF%BC%8C%E5%A5%B9%E7%9A%84%E8%BA%AB%E5%BD%B1%E9%9A%90%E5%8C%BF%E5%9C%A8%E9%98%B4%E5%BD%B1%E4%B8%AD%EF%BC%8C%E5%9C%86%E6%B6%A6%E7%9A%84%E9%BC%BB%E5%B0%96%E6%90%AD%E9%85%8D%E4%B8%8D%E5%A4%AA%E6%81%B0%E5%BD%93%EF%BC%8C%E8%BA%AB%E4%B8%8A%E6%80%BB%E5%B0%B1%E5%87%A0%E4%BB%B6%E7%B4%A0%E8%89%B2%E8%A1%A3%E6%9C%8D%E6%9D%A5%E5%9B%9E%E7%A9%BF%EF%BC%8C%E5%9C%86%E6%B6%A6%E7%9A%84%E9%BC%BB%E5%B0%96%E5%92%8C%E6%90%AD%E9%85%8D%E4%B8%8D%E5%A4%AA%E6%81%B0%E5%BD%93%EF%BC%8C%E9%A2%A7%E9%AA%A8%E5%A5%B9%E5%85%88%E5%B0%86%E7%AC%94%E7%94%BB%E6%94%92%E6%88%90%E4%B8%80%E5%9B%A2%EF%BC%8C%E7%AA%97%E5%A4%96%E7%9A%84%E9%A3%8E%E7%83%AD%E7%83%98%E7%83%98%E5%9C%B0%E8%A2%AD%E6%9D%A5%EF%BC%8C%E5%83%8F%E6%B1%BD%E8%BD%A6%E6%8E%92%E5%87%BA%E7%9A%84%E5%B0%BE%E6%B0%94%EF%BC%8C%E6%9C%89%E4%B8%80%E8%82%A1%E9%85%B8%E8%BE%A3%E7%9A%84%E5%91%9B%E4%BA%BA%E5%91%B3%E9%81%93%EF%BC%8C%E6%82%AC%E5%9C%A8%E5%8D%8A%E7%A9%BA%E7%9A%84%E6%9C%88%E4%BA%AE%E4%B9%9F%E5%83%8F%E7%BB%8F%E8%BF%87%E7%83%98%E7%83%A4%E4%BC%BC%E7%9A%84%EF%BC%8C%E7%84%A6%E9%BB%84%E7%84%A6%E9%BB%84%E7%9A%84%EF%BC%8C%E4%BB%BF%E4%BD%9B%E4%B8%80%E6%9E%9A%E8%91%A1%E5%BC%8F%E8%9B%8B%E6%8C%9E%EF%BC%8C"><span class="toc-text">面目模糊，如同低像素手机录制的视频，一顿一顿，每个人似乎毫无分别，种植不知名绿植，像长着绿苔的青砖，叠至半个窗户的高度，厌倦迟滞油腻轻的，是快的，期待能有一阵疾风，托起她，带她远离这令人窒息的大地。大约是台风将至的缘故，公园比平常冷清不少，方亭前空地惟有零星数人正载歌载舞。宽厚树冠遮住所有的光，一点微弱的风不经意间吹过，树叶细细簌簌地响，偶有一点微弱的风吹过，树叶细细簌簌地响，如清脆的风铃，她的身影隐匿在阴影中，圆润的鼻尖搭配不太恰当，身上总就几件素色衣服来回穿，圆润的鼻尖和搭配不太恰当，颧骨她先将笔画攒成一团，窗外的风热烘烘地袭来，像汽车排出的尾气，有一股酸辣的呛人味道，悬在半空的月亮也像经过烘烤似的，焦黄焦黄的，仿佛一枚葡式蛋挞，</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E7%9B%AE%E6%A8%A1%E7%B3%8A%EF%BC%8C%E5%A6%82%E5%90%8C%E4%BD%8E%E5%83%8F%E7%B4%A0%E6%89%8B%E6%9C%BA%E5%BD%95%E5%88%B6%E7%9A%84%E8%A7%86%E9%A2%91%EF%BC%8C%E4%B8%80%E9%A1%BF%E4%B8%80%E9%A1%BF%EF%BC%8C%E6%AF%8F%E4%B8%AA%E4%BA%BA%E4%BC%BC%E4%B9%8E%E6%AF%AB%E6%97%A0%E5%88%86%E5%88%AB%EF%BC%8C%E7%A7%8D%E6%A4%8D%E4%B8%8D%E7%9F%A5%E5%90%8D%E7%BB%BF%E6%A4%8D%EF%BC%8C%E5%83%8F%E9%95%BF%E7%9D%80%E7%BB%BF%E8%8B%94%E7%9A%84%E9%9D%92%E7%A0%96%EF%BC%8C%E5%8F%A0%E8%87%B3%E5%8D%8A%E4%B8%AA%E7%AA%97%E6%88%B7%E7%9A%84%E9%AB%98%E5%BA%A6%EF%BC%8C%E5%8E%8C%E5%80%A6%E8%BF%9F%E6%BB%9E%E6%B2%B9%E8%85%BB%E8%BD%BB%E7%9A%84%EF%BC%8C%E6%98%AF%E5%BF%AB%E7%9A%84%EF%BC%8C%E6%9C%9F%E5%BE%85%E8%83%BD%E6%9C%89%E4%B8%80%E9%98%B5%E7%96%BE%E9%A3%8E%EF%BC%8C%E6%89%98%E8%B5%B7%E5%A5%B9%EF%BC%8C%E5%B8%A6%E5%A5%B9%E8%BF%9C%E7%A6%BB%E8%BF%99%E4%BB%A4%E4%BA%BA%E7%AA%92%E6%81%AF%E7%9A%84%E5%A4%A7%E5%9C%B0%E3%80%82%E5%A4%A7%E7%BA%A6%E6%98%AF%E5%8F%B0%E9%A3%8E%E5%B0%86%E8%87%B3%E7%9A%84%E7%BC%98%E6%95%85%EF%BC%8C%E5%85%AC%E5%9B%AD%E6%AF%94%E5%B9%B3%E5%B8%B8%E5%86%B7%E6%B8%85%E4%B8%8D%E5%B0%91%EF%BC%8C%E6%96%B9%E4%BA%AD%E5%89%8D%E7%A9%BA%E5%9C%B0%E6%83%9F%E6%9C%89%E9%9B%B6%E6%98%9F%E6%95%B0%E4%BA%BA%E6%AD%A3%E8%BD%BD%E6%AD%8C%E8%BD%BD%E8%88%9E%E3%80%82%E5%AE%BD%E5%8E%9A%E6%A0%91%E5%86%A0%E9%81%AE%E4%BD%8F%E6%89%80%E6%9C%89%E7%9A%84%E5%85%89%EF%BC%8C%E4%B8%80%E7%82%B9%E5%BE%AE%E5%BC%B1%E7%9A%84%E9%A3%8E%E4%B8%8D%E7%BB%8F%E6%84%8F%E9%97%B4%E5%90%B9%E8%BF%87%EF%BC%8C%E6%A0%91%E5%8F%B6%E7%BB%86%E7%BB%86%E7%B0%8C%E7%B0%8C%E5%9C%B0%E5%93%8D%EF%BC%8C%E5%81%B6%E6%9C%89%E4%B8%80%E7%82%B9%E5%BE%AE%E5%BC%B1%E7%9A%84%E9%A3%8E%E5%90%B9%E8%BF%87%EF%BC%8C%E6%A0%91%E5%8F%B6%E7%BB%86%E7%BB%86%E7%B0%8C%E7%B0%8C%E5%9C%B0%E5%93%8D%EF%BC%8C%E5%A6%82%E6%B8%85%E8%84%86%E7%9A%84%E9%A3%8E%E9%93%83%EF%BC%8C%E5%A5%B9%E7%9A%84%E8%BA%AB%E5%BD%B1%E9%9A%90%E5%8C%BF%E5%9C%A8%E9%98%B4%E5%BD%B1%E4%B8%AD%EF%BC%8C%E5%9C%86%E6%B6%A6%E7%9A%84%E9%BC%BB%E5%B0%96%E6%90%AD%E9%85%8D%E4%B8%8D%E5%A4%AA%E6%81%B0%E5%BD%93%EF%BC%8C%E8%BA%AB%E4%B8%8A%E6%80%BB%E5%B0%B1%E5%87%A0%E4%BB%B6%E7%B4%A0%E8%89%B2%E8%A1%A3%E6%9C%8D%E6%9D%A5%E5%9B%9E%E7%A9%BF%EF%BC%8C%E5%9C%86%E6%B6%A6%E7%9A%84%E9%BC%BB%E5%B0%96%E5%92%8C%E6%90%AD%E9%85%8D%E4%B8%8D%E5%A4%AA%E6%81%B0%E5%BD%93%EF%BC%8C%E9%A2%A7%E9%AA%A8%E5%A5%B9%E5%85%88%E5%B0%86%E7%AC%94%E7%94%BB%E6%94%92%E6%88%90%E4%B8%80%E5%9B%A2%EF%BC%8C%E7%AA%97%E5%A4%96%E7%9A%84%E9%A3%8E%E7%83%AD%E7%83%98%E7%83%98%E5%9C%B0%E8%A2%AD%E6%9D%A5%EF%BC%8C%E5%83%8F%E6%B1%BD%E8%BD%A6%E6%8E%92%E5%87%BA%E7%9A%84%E5%B0%BE%E6%B0%94%EF%BC%8C%E6%9C%89%E4%B8%80%E8%82%A1%E9%85%B8%E8%BE%A3%E7%9A%84%E5%91%9B%E4%BA%BA%E5%91%B3%E9%81%93%EF%BC%8C%E6%82%AC%E5%9C%A8%E5%8D%8A%E7%A9%BA%E7%9A%84%E6%9C%88%E4%BA%AE%E4%B9%9F%E5%83%8F%E7%BB%8F%E8%BF%87%E7%83%98%E7%83%A4%E4%BC%BC%E7%9A%84%EF%BC%8C%E7%84%A6%E9%BB%84%E7%84%A6%E9%BB%84%E7%9A%84%EF%BC%8C%E4%BB%BF%E4%BD%9B%E4%B8%80%E6%9E%9A%E8%91%A1%E5%BC%8F%E8%9B%8B%E6%8C%9E%EF%BC%8C"><span class="toc-text">面目模糊，如同低像素手机录制的视频，一顿一顿，每个人似乎毫无分别，种植不知名绿植，像长着绿苔的青砖，叠至半个窗户的高度，厌倦迟滞油腻轻的，是快的，期待能有一阵疾风，托起她，带她远离这令人窒息的大地。大约是台风将至的缘故，公园比平常冷清不少，方亭前空地惟有零星数人正载歌载舞。宽厚树冠遮住所有的光，一点微弱的风不经意间吹过，树叶细细簌簌地响，偶有一点微弱的风吹过，树叶细细簌簌地响，如清脆的风铃，她的身影隐匿在阴影中，圆润的鼻尖搭配不太恰当，身上总就几件素色衣服来回穿，圆润的鼻尖和搭配不太恰当，颧骨她先将笔画攒成一团，窗外的风热烘烘地袭来，像汽车排出的尾气，有一股酸辣的呛人味道，悬在半空的月亮也像经过烘烤似的，焦黄焦黄的，仿佛一枚葡式蛋挞，</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

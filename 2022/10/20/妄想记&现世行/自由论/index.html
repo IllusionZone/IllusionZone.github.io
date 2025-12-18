@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【妄想记】自由论</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【妄想记】自由论">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E8%87%AA%E7%94%B1%E8%AE%BA/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/妄想记/自由论-1.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-10-20">
+      <meta 
+        property="og:article:modified_time" 
+        content="2024-03-28">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="妄想记">
+        
+          <meta 
+            property="og:article:tag" 
+            content="现世行">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/妄想记/自由论-1.png" 
+      data-src="/image/妄想记/自由论-1.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【妄想记】自由论 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【妄想记】自由论
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-10-19T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-10-20</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+          class="post-meta-link">
+          妄想记
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>9.1k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+            class="post-meta-link">
+            妄想记
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+            class="post-meta-link">
+            现世行
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <p>人们从未丧失议论自由的热情，作为一种人的基本权利，因它在过去数千年的大部分时间内被不断地过分抑制而愈发地璀璨夺目。作为一种个体的心理感受，讨论自由就必须将之落在个体的维度上，因为我们可以很自然地说一个人是自由或不自由的，却很难说清楚一个群体或一个细胞自由与否。可自由却又是与不自由相伴而生的，恰是自由受制时，我们对自由的感受才更加刻骨铭心。若以个体在其生命周期中时刻依据自己的主观意愿去行动来定义自由的话，纵观古今，遍览寰宇，却发现从未有一人自由、从未有一物自在，自由似乎只是个徒有其表的“欺世盗名者”，枉费了古往今来多少文人墨客对其的讴歌赞颂，岂不令人心寒。而我又确切地品尝过自由的滋味，哪怕只有短暂的瞬间，已令我心向往之。</p>
+<p>所以，需要把绵延的生命切碎，落到每一次欲求的维度上，于此又可再分为三个层次，所欲间为第一层，所欲与所求间为第二层，所求与所得间为第三层。如我此刻想写点什么的念头不受干扰地产生了，这便是所欲的自由；当欲望产生时，身体可以去执行意识下达的指令以尝试实现所欲求的事物，如我手执笔落字，忠实地服从意识的驱使，便得到了所求的自由；当落于纸上的每一个字凑出了预期中的这篇文稿时，我便收获了所得的自由。</p>
+<p>毫无疑问，三个层次的自由的获取难度在逐层递增，与此相对地，其所能释放的自由感受也在随之增长。</p>
+<p>当虚妄的所念所想转变为现实时，产生的酣畅淋漓的自由感受是最令人着迷与难以抗拒的，因此人这样一具欲望集结体才会在或长期或短期的，或大或小的欲望的驱使下运转起来，乐此不疲地奔波劳碌着，或者说，所有欲望的本初目的皆是要化为所得，只有当求而不得，才会退而求其次，回落到了所求与所欲上。基于这一点，通常对人们最极致的祝愿才会都是诸如“心想事成”或“梦想成真”之类。对所得的强烈渴望，一定程度地呈现在对购物的热衷上，特别是时下蓬勃发展乃至有些病态的网购与快递业上，仅需手指轻敲屏幕，想要的东西就可迅速传递到手上，欲望从产生到实现如此轻快便捷，也无怪乎购物容易成为一种令人上瘾的癖好。很显然，无论是谁都无法一直走在从所欲直达所得的坦途上，这不仅是因为现实中存在种种困难，还在于心底的欲望总是悬浮于现实之上，当一个欲望被实现后就会顺势产生一个更饱满的欲望，对自由的感受阈值也随之调升，以至于需要新的更强烈的欲望的达成才能撩动这根心弦以发出愉悦的呻吟。这样一种“实现的自由”注定是稀少与难得的，故当其遭遇挫折时，出于心理的补偿性需要就会自动将之降至行动层面寻求自由，“行动的自由”所代表的是个体支配身体的权利，虽则相较所得的自由务实了许多，但阻碍此自由顺利表达的因素却也不少，大体可以从几个方面来讨论。首先从个体的角度看，一是身体并不受意识的完全掌控，力不从心的情况并不罕见，如手脚有疾患导致的行动不便，二是意识的超现实性，如想飞却没有翅膀，想潜水却没有鳃，三是同样来自现实的层层干扰，如手脚被束缚住了无法动弹，嘴巴被胶带黏住无法说话等等；其次是人类的社会化习性，使之成为“公民自由”或“社会自由”，即个体在社会生活中的行为权限，特别是需要为个体利益与他人、集体利益冲突之间做出平衡性的修订。对此穆勒的观点是，个体行为只要在不涉及损害他人利益的范围便拥有其自由，而当个体行为损害了他人利益时则需为此负责。除此之外，每个人都应当有充足的通过驱动身体去实现欲求的自由，毕竟人类集结成社会的目的是为了追求幸福，而失去了自由幸福则无从谈起。一旦“行动自由”受阻，则继而会落到所欲的维度上，即所谓的“意志的自由”。即便在现实中一无所得，受尽屈辱，即便在现实中一事无成，憋屈抑郁，即便在现实中无地容身，穷顿困苦，也尽可以如李太白之感“长风破浪会有时，直挂云帆济沧海”，如阿Q之思“我总算被儿子打了，现在的世界真不像样……”，如卖火柴的小女孩之从烛光中遥想到无穷无尽的佳肴美食。即便是如《1984》那个思想警察遍地，监控探头漫天的世界，也控制不了如温斯顿·史密斯和裘莉亚之人在封闭的大脑中滋生“叛逆思想”。思想是自由最后的保留地，纵然外界战火纷飞，内心也依旧可以营造出一片属于自己的极乐净土。</p>
+<p>可这却又是一种超验的自由，因为个体无从证明他的想法是自发的而非外界影响下所产生的，我所想的未必是自己想要想的，我所想要的也未必是自己想要得到的，此点从商界与政界塑造群众的思想与欲望所取得的非凡成就上可见一般，意识形态与文化的加持可以使一个人成为一种人、一类人，美化与宣传可以使华而不实的商品摇身一变成为人人竞相追逐的宝贝。内心的自我意识很难在外界信息的冲击下维持不变，所以在审讯敌人时可以使用不间断地诘问与训诂以模糊甚至扭曲其思维和记忆。因此随心所欲并不如所以为的那般简单，大部分情况下，操纵总是在悄无声息间完成它的目的，在人们毫无知觉的情况下植入他们的脑袋，钳制他们的思维导向，促使他们成为某一特定想法的忠实奴仆。</p>
+<p>但在这片掀起的炮火中最有可能使自由壁垒彻底沦陷的，是逐步发展中的认知神经学、脑科学和解剖学，随着身上一块块皮肉被切割地越来越细，一片片的头盖骨被逐渐掀开，人的隐私与尊严也随之荡然无存。如果所有的主观感受只是一堆激素的化学反应，如果大脑的思维只是一些化学—电信号的传递与纠缠，当一切进步到仅凭药物或电流的刺激就可以影响、改造一个人的想法时，自由岂不是像一只左右腾挪的蚊虫在避无可避的一击下灰飞烟灭了。如此一来，自由便是虚妄的吗？当我们意识到自由也不过如此，意识到自由消失的可能性之后，当下的自由还是否存在？还是否仍值得苦苦追寻？我以为，自由并未就此消失，正如当我们把一切物质的东西拆分到只有夸克大小的时候，我们依旧不能否定物质的真实存在，特别是微观世界与宏观世界的规律差异，或许提示了我们集结的整体与构成它的个体是有所区别的，当量变引发了质变之后，联结的整体会拥有某种超越个体层面的新的特质，使得整体与个体在量与质的边界两端如此地截然不同，虽然我们并不清楚这一条边界在哪里，但显然整体的东西需要放在整体的维度上来认知，而个体的东西只能摆在个体的维度上去认知。加之感觉的超验性既是让我们无法肯定其存在，却也同样让我们无法轻易否定其存在，我们是在依赖感觉的基础上才能去产生进一步认知的。正如死亡使生命变得鲜活，意识的预见性在触碰到了冰冷渗人的禁锢之壁后，亦使自由如星辰般熠熠生辉，也使我们理所当然地把自由作为了幸福生活不可动摇的根基（请注意这里指的是生活而非生存），乃至于是人的一种最基本的权利，促使着当下的我们不断地努力去珍惜与守护。人又何尝不都是在反复地践行自身欲求中度过一生，并由此收获自由并能有所成就的呢？</p>
+<p>对自由的议论在于想尝试解答这样两个问题，其一是人需要把自由摆在一个什么样的位置？其次是人需要在多大的程度上为自己的自由负责？</p>
+<p>第一个问题多是从个体角度出发，即我们需要用怎样的程度去捍卫与追寻自由？比如当自由与生命，自由与金钱和地位产生冲突时，该如何处置？对这类问题的看法折射在我们面对相应情境的行动上，而此情此景会非常频繁地在生命中出现，一次又一次地向我们关于自由观念的底线发起挑战，并进而使“我”成为了什么样的“我”。所以思考这个问题是如此地重要，以至于并不该那么简单地泛泛而谈。由于自由是每一次欲求的实现，而欲望的产生是无穷无尽、无边无际的，欲求的实现又是在多个层次上的，因此上述的关于自由与金钱、地位、生命等等之争，本质上是不同维度的自由之争。金钱和地位意味着可以有更大程度上的物质与行动自由，生命则是关于未来的一切自由，而与之产生冲突的自由却多是指一种当下的行为自由，或是一种延续性的、触碰灵魂深处的精神、思想的自由。纷繁叠现的自由中，总是有一部分自由需要为另一部分自由做出让步，在人类文化观念中，很显然精神自由是更被人尊崇与欣赏的一方，即便实际仅有极少数人奉行了这一原则，大部分人宁愿将其出卖以换取从金钱、地位以及生命上所取得的更加务实的自由。纵使这样，我依旧想试图论述一番这清高孤傲的精神自由，为何是比之金钱、地位、生命更加值得向往与期许的，甚至于从金钱、地位、生命获得的种种好处都难以与之相匹配。从自由的层层递进性来说，思想的自由才是一切自由的源头，只有通过所欲的自由，才能够有接下来的行动的自由以及实现的自由可言，与之相对地，放弃了所欲的自由，或者所欲的自由遭到扭曲与篡改，那么行动的自由与实现的自由就无从谈起。再之，作为人之内核的精神，是灵魂之所在，是一个人之所以是独一无二之人的关键，倘若连此一份本性之自由都得不到伸张，都必须在各种各样的现实状况中被彻底抑制的话，人也就沦为了很难再被称之为人的不知所谓的行尸走肉了。</p>
+<p>在针对这个问题试探的过程中，就引发了第二个问题的探讨——从个体的自由上所引发的责任，会出现这个问题，是因为我们尊重并坚持这样一个观念——每个人都同样拥有自由的权利。倘若某一个体的自由实现妨碍了其他个体的自由产生，该如何来平衡这源于不同个体间的自由冲突，再进一步地想，万一某一个体的自由行为损害了另一个体的自由利益，又需要迫害方做些什么来弥补受害方的损失。从这个问题出发引出的更深层次的种种讨论，其复杂性并不亚于第一个问题所产生的取舍诘难，且同样很难得出放之四海皆准的结论。为了确保这种平等的自由有所保障，我们就必须要求个体只能拥有在不践踏他人自由利益的范围之内的自由权利，但这显然是超越了实际的美好愿望，现实中的我们必然在一系列社会性活动中惹出各式各样的矛盾与冲突，总不可避免地被迫或有意地使其他个体的自由权益蒙受损失，或自己遭受到来自其他个体施加的对于自由的侵犯。为了防止各种戕害个体自由权益的行为发生，就不得不提前采取各种措施来限制人们的行动自由，乃至于最后会发现唯一有效的方法，竟是控制并改造一个人的思想使之成为“良善之民”，这就率先违背了自由的宗旨，像是要救治一个重病患者却手起刀落将他杀死一样。为避免这种悖论性局面的出现，就只得与之相对地使用一些后果性规则来加以限制，简而言之就是，个体都享有其自由，也需要为其自由的后果承担相应的责任。这也应当是每一个文明社会里的每一个人所必须奉行的准则，而这一措施的成果即是法律——一套明晰的关于种种行为后果的可预见性的社会规则。关于法律的诸多讨论在此便不再赘述，只想就一个问题再多做一些思索，个体需要在何种程度上为其自身的自由行动负责？特别想指出的，是诸如青少年与精神病患等心智不健全者，关于这一点，实际上想探讨的是，行为的连带性责任究竟是应该以结果为导向还是以意志为导向。通常而言，能使青少年与精神病患逃脱追责的关键论点就在于，其主体不具备完善的主观的自由意志，认知的缺陷或控制力的不足使之行为处于失常状态，由此便不该承担相应的责任。不可否认，社会确实应当予以心智不健全之人一些宽容的空间，但这种容忍却是有限度的，底线就在于当其行为制造了伤人性命或致人残疾等剥夺了他人无可挽回的一切自由权益的后果时，就不该再有任何免于制裁的借口，因为用良善之人的良善去承担无知者的恶果本身就是违背道德的，也背离了平等自由的初衷，更是为恶之花的滋生提供了一片绝佳的肥沃土壤。再进一步地推想，如果对自由行为的追责是完完全全地惟心而定的话，且不论有何手段去窥测个体的本来意图，若将本心的概念延伸开去，那么如《动物庄园》中从小被猪驯化的狗以及类似的现实中千千万万的人，是否也尽可以自由意志受到扭曲蒙蔽的理由来为自身的恶行脱罪呢？</p>
+<p>事实上，即使是完全地依照可预见性的后果性的规则来维护平等自由，也依旧会有不少的麻烦出现。比如这么一种情形，A怀着承担一切可预见性后果的决心不计代价地要去侵犯B的自由权益，并且A毫无顾忌地将该意图公之于众，对此有两种处理方式，一是提前控制A的行动自由避免B受到侵害，虽则这样缺乏了判决的依据，二是眼睁睁等待A的行为变为现实再对之处罚，这却无疑又一次地将良善之人的良善置于地狱中炙烤。将这种情形稍加演变，A通过散布恐吓性言辞声称要侵犯B，在他将这一行为付诸实现之前，包括A和B在内无论是谁，都并不清楚这种意图是否将会得到落实，具体什么时候会得到落实，这些恐吓却确确实实严重地影响了B，致使B一直处于担惊受怕的状态而无法享受正常生活所应有的各项自由权益，作为受害者B本身和作为社会规则的公众权力又能做出什么反应？或者将情形展开至极端，A丝毫未曾显露其邪恶的想法却暗中密谋行动，或只在言语上对B进行精神伤害，又将如何？那么一个人只要拥有了承担所有行为后果的觉悟就拥有了侵害他人的一切自由行动的权力了吗？譬如穷凶极恶的、施虐成性的连环杀人魔，其行为所需承担的最严重的后果不过是一死，而死亡远远无法偿还其行为的罪孽，或死亡于其而言更像是解脱而非惩罚，又待如何？</p>
+<p>对于前两种情况，或许我们可以简单地认为只要对不当言论者进行一定的控制即可，如进行思想教化或采取行动限制的措施，但此种方式的问题在于，该如何判断表述者意图的真伪，究竟是玩笑或是无意间的言语之失，再之要将其行动的自由限制在怎样的范围之内，又该维持此种限制多长时间呢？实际上这里面会牵扯出又一连串的深度诘问，前面我们对公众自由的种种探讨都是限定在行为的维度上，因为思想自由是一种纯粹的颅内的精神活动，并不会突破个体屏障去影响其他人的自由实现，这也是我们始终坚持保护思想自由的原因之一，只有当思想作用于行动表达了出来，才可能会在现实层面妨碍以及侵犯了他人自由，进而需要去承担相当的责任。不过，弱化一些的行动自由即表述的自由，指通过言语、表情、文字、图画、影视等途径将脑内的想法、情绪带到现实中并实例化的方式，虽则多数情况下不像其他大多数行为那般地直接了当与显而易见，却往往会在不知不觉间侵入思想领域并发挥其强有力的效应。在这之中，恶语相加、冷嘲热讽、造谣生事与搬弄是非可归为一类（这里省略了对谣言与预言、是与非的辨析步骤，因其不在主题之内，所以此处的谣言与是非特指的就是确切被证实了的谣言与是非），有道是“恶语伤人六月寒”，语言暴力有时候对人的摧残可谓入骨三分，其能够在身体与精神层面对个人的自由进行全方位的剥夺与凌虐，蚕食掉一切生存下去的可能性。正因如此，舆论才会作为一种社会力量经久不衰地发挥其效应。对于此种赤裸裸的人身攻击，理所应当地要予以禁止，至少要将之限制在无损于他人利益的程度内，如果说这是毫无争议的必要措施的话，那么接下来的另一类情况，思想浸染，就相对地隐晦与难解了许多。这实际上又回到了前面思想自由的问题，考虑这么一种情形，思想的产生与行为的施行并不一定是在同一个体的身上发生，思想可以跨越个体的界限在其他个体身上实现其意图，这在现实中并不鲜见，恶劣的有如仰仗职权之利的支使、蛊惑诱导的煽动、软硬兼施的驯服等等，但我们并不能就简单地凭此作为禁止表述自由的理由。原因有如下几点，一是任何个体，无论其看起来有多么地高尚与博识，都无法客观正确地判断某一思想的真假、善恶，也就不能以一种居高临下的姿态去企图指导与干涉他人的自由思想的表达，在此基础上，社会的进步恰有赖于出现的各种不同思想的碰撞与摩擦，反之一潭死水只会置人类社会于更压抑和恶劣的境地；二是思想的表述者与思想的接受者之间可能存在认知断层，我们很难评断接受者是否是忠实于表述者的意图还是扭曲了表述者的意图继而产生了恶果，因此就不能粗暴地令表述者与施行者承担同样的罪责来处理，也不能从施行者的恶果来反推并限制这一表述的自由；三是思想并非能轻易地受到操纵和改造，否则教育就将会是一项轻易可以完成的事业了，一段信息既可能使A深化认知却也可能使之厌恶和排斥，产生何种效应一定程度上取决于A的本性，动物庄园里的恶犬之所以成为恶犬，是在于其本身带有狗的思维与行为倾向，所以思想绑架总是要在绑架了其他行为的辅助下才能实现其操纵的目的，如限制人身自由以禁止个体接收外界信息，或对之长时间不间断地洗脑式信息轰炸，仅此极端之举才可落到行为层面对其进行归责。正因为我们崇敬意志及思想自由，所以对从中延伸的表述自由，若非其进行了人身攻击，也都应该予以尊重与认可，而只有从对个人意志自由的尊重的层面上才是真正意义上对一个人给予了充分的尊重。因此，对于最后一种情况，即A持有的担负后果却未曾暴露的伤人意图我们也就无能为力了，仅有当其意图通过行为成为了现实，才能够去后知后觉地做出弥补和修正，而社会所唯一能做的，就是设置一些合理的适配行为的后果性规则去进行约束。即便随着技术的发展有了一定手段去“有所为”时，却也需要慎之又慎，万不可轻易触碰这一潘多拉魔盒，否则自由就只会在不断的压缩下无处藏身，乃至坠入万劫不复的境地。这是自由的阿克琉斯之踵，侵犯自由似乎是权力的天性，它总在蠢蠢欲动，一旦尝及甜头，舌头就会不断往伤口深处试探，一边肆无忌惮地吸血吮髓壮大自身，一边气指颐使地顾盼自雄、耀武扬威。对此，或许我们必然是要容忍一些自由的不完美，去留住与争取更博大与和善也更美好的自由。</p>
+<p>前文中是将自由拆分为一些细碎的、短小的欲求上来进行讨论的，但对一个有着相对完善的意识主体——人来说，自由却是更多地来自于一种自灵魂贯穿全身的、无比深切且浓烈的个人意志，这一个人意志有赖于许许多多小的欲求的实现而实现，却又明显地凌驾于这些小的欲求之上，乃至于当这一个人意志受到抑制时，当许许多多的小的欲求的实现依旧无法促成这一个人意志的实现时，那么再多欲求的实现都无济于事，都难以换得一丝自由的空气。甚至当小的欲求与个人意志的结果相违背时，即便手脚健全、行动自如，却仍然会不由自主地产生一种厚重而压抑的厌恶感。相反，个人意志会相较于普遍的小的欲求有着明显的宏大且长远的特质，或可以说那是某种程度上脱离了现实的短期欲求的一种缥缈的深层次的需要，且往往会被迫选择舍弃一些小的欲求，但这一些小的欲求的牺牲比之可能换得的个人意志的实现却是完全值得的。这样的观念普遍存在于绝大多数人的意识中，哪怕自己并无法践行这一想法，也依旧是会对那些努力克制短期欲求的诱惑以争取长期个人意志实现的人产生出认可与钦佩的情感。创业者与受雇者身上普遍会展现出两种迥然的形态，前者通常是积极的，元气满满且不辞辛劳的，因为他们始终践行的是自我的意志，后者则相对是消极的，不思进取而慵懒倦怠的，因为他们践行的是他人的意志。于此也能看出个人意志之于人的重要性，可以说，个人意志能否得到伸张，自由能否获得，是区分生活与生存的一项重要因素。对于那些显然无法凭借一己之力去实现的鸿业远图，前者就必须去寻找或驯服一部分志同道合者，让自己的个人意志去取代或填补他者的个人意志，让相同的欲求驱动不同的个体使这一意志得以贯彻。</p>
+<p>虽然我一直以来都是以“将自由作为个人必不可少的一项高贵权利”为前提在加以讨论的，但不得不正视这么一种普遍情况，现实中有着一部分人，也许这部分人不在少数，他们对自由需求与意愿非常薄弱，相比于自由所会产生的副产品——责任，他们更愿意舍弃自由以减轻责任的压力，若能有“贵人扶持”，为之铺设好一切轨道，替其安排好了个各个时间节点所需要处理的任务，然后只要按部就班去完成即可，那么这批人大概都会感恩戴德、磕头拜谢、心满意足地自觉嵌入对应的凹槽中去。甚至于连选择的自由也可以抛弃，就好比商业中颇受消费者喜爱的盲盒与套餐模式一样，一份外在的现成的个人意志更像是一种黏合剂，即能弥补了他们空乏的心灵又不至于担负过大的风险与责任，又有何乐而不为呢？</p>
+<p>即便我用了略带些许讥讽意味的语气来表述这种情况，可也并非全然是批判的态度，因为我也意识到每一个个体都无不是在不断的妥协与进取的挣扎中存活着，只是因其挣扎的幅度差异呈现了不同的形态罢了。更何况，或许正是因为存在少数人对自我意志的自命不凡与多数人缺乏或甘愿舍弃自我意志的这两个要素相互补，才促成了社会性的人类群体的存在。</p>
+<p>只是对自由过分淡漠的人，却容易丧失了对自由的尊重，进而敌视自由，厌恶一切“离经叛道”、“桀骜不驯”之人物、之行为、之现象，最终化身为自由的阻力。且因其人数不少，加诸少数意志的挑逗与利用，隐隐然成为了社会中不容忽视的屏障，或化为习俗，或化为文化，或化为公众情绪，或化为规则，开始了对自由的无情镇压。此情此景下弥漫着一股自持以精英或家长身份的傲慢，凭借自以为是的智识与权力的优越感，信口雌黄、指手画脚，可惜本身只是芸芸众生中的一员，并未有通晓万物，熟知古今的本事，所以远远地看去，就像一个个顽童争相在墙上涂来改去，却只得越抹越脏，越脏越乱，终是一幅丑态百出至令人啼笑皆非的画面。这正是如今很普遍的监管错位的乱象，对需要加以限制之处放任不管，在无关紧要之处严加把控、吹毛求疵，比如对劣质电动车的生产和制造毫不干涉，却仅仅以加装了后视镜或所谓超重等危害驾驶的理由，无视公民基本的私人财产权益，大肆对电动车进行围捕、扫荡、收缴，又比如对开发商始终无法兑现交房承诺一事毫无作为，却牢牢钳制住购房者抗议的嘴巴并要求他们为着一套未曾获得的房子继续支付着沉重的房贷。对历史的观察中可以看到，此种乱象逐渐加深的一个标志，即是对个人的要求从“不能做”跨向了“必须做”，从对权利的剥离和削弱进化为了对义务的增多与深化，当个人需要越来越多地把时间和精力耗费在那些不得不为的事情上，自然就越发地鲜有时间和精力去执行自我意志了。</p>
+<p>所以，广泛的自由既必须置于规则之下才能得至伸张，却又容易遭到被权力所利用的规则的侵犯，并在迫害下蜷缩成特权自由——即少数人的自由霸凌着多数人的自由。因此需得是合理的良性规则，才能不使良善者坠入深渊地狱，不使弄权者徇私舞弊、胡作非为，不使自由遭受践踏，也不使自由任意妄为。可又如何才有可能使之规则是良性的，首先是规则的设立有赖于制定者们的蕴含着丰富包容心和同理心的博大胸襟，他们需是切实的公众利益的代表，并且清醒地意识了到广泛自由的脆弱与宝贵，更明白个人智慧与见识的有限性，因此并非像一头急于释放所掌握的权力的无头苍蝇般四处乱窜，也并非雷厉风行地大刀阔斧地施以琐碎繁多的律令，妄图以细细密密的丝线控制人们的一举一动，与之相反的是，他们只先对一些根本的原则性问题对自由加诸限制，对随之更深入的特别是尚不明确后果的规则，则小心翼翼至有些诚惶诚恐，并从这种心态中衍生出几分对自由的偏袒，以至于宁愿暂时地放纵也不愿轻率地横加干涉，只有等待仔细的推敲与审慎的讨论之后，方才可能把规则落实下来。当然，良性的自由氛围不仅仰赖于自上而下的规则制定，还有赖于平行的规则之下每一个体的维护。万物似乎都蕴含着某种趋同的天性，正所谓物以类聚、人以群分，在此心理的作祟下，人们要么希望我类能成为他类，要么他类能转变为我类，否则就希望那些异己全部彻底地消失。可对于有理性的人类来说，以及从美好希望渗透下来的对自由的尊重，则恰是要对这部分的情感进行约束，并以尊重自我自由那般尊重着他人自由，即便自身对自由的需求较为寡淡，即便自身无法理解他人的行为，只要他人的行为并未越过规则红线，并未触犯原则性的种种禁忌，那么就应当承认其自由表达合理性和合法性，并且需要明白的是，大多数时间里我们总对自我过分地纵容而对他者过分地严苛，以至于忘记了选择权是掌握在自己的手中，比如对不喜欢的作品可以进行选择不看或者批评议论而无需指责谩骂，对不喜欢的节目可以选择换台关机而无需责令其停播封杀，对不喜欢的人可以选择敬而远之而无需赶尽杀绝。我们应当要求自我将自身的自由表达控制在一个恰当的范围之内，因为从对于他人自由的不干涉中实现的对于广泛自由的维护，实际上也是在对自我的自由的一种尊重。其实数千年前的人就为个人的自由表达设置了一条底线准则——“己所不欲、勿施于人”，很可惜的是，至今我们依旧距离这条标准相当地遥远。</p>
+<p>唯有在这样的土壤上，才有可能令数不清的散落于泥土的种子，破土、发芽、打苞、抽穗，虽则它们会枯萎、会凋谢、会消失，但总会有新一批种子重新生长，而我们总更希望是一片郁郁葱葱、多姿多彩、生机勃勃的景象，而不愿是一片死寂沉沉的赤地千里、一枝独秀的景象吧。再者，允许自由在相较宽敞的空间中呈现出千姿百态，不也正是对我们乏味单调的自身最好的补充吗？</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E8%87%AA%E7%94%B1%E8%AE%BA/">
+            https://illusionzone.github.io/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E8%87%AA%E7%94%B1%E8%AE%BA/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E7%88%B1%E6%AC%B2%E4%B9%8B%E6%80%9D/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【妄想记】情欲之思 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/10/20/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E7%BB%93%E8%AF%AD/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【妄想记】结语 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【学之思之】Hexo+Kaze+Github搭建个人博客</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【学之思之】Hexo+Kaze+Github搭建个人博客">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/21/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/hexo+kaze+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/学之思之/博客搭建/indeximg/indeximg.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-21">
+      <meta 
+        property="og:article:modified_time" 
+        content="2024-08-09">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="hexo">
+        
+          <meta 
+            property="og:article:tag" 
+            content="学之思之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="个人博客">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">博客搭建记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E5%8F%8A%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">账号申请及软件安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2%E9%AB%98%E7%BA%A7Markdown%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="toc-text">更换高级Markdown渲染器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8D%B8%E8%BD%BDhexo-renderer-marked"><span class="toc-text">1、卸载hexo-renderer-marked</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85hexo-renderer-markdown-it"><span class="toc-text">2、安装hexo-renderer-markdown-it</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">3、配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%AE%89%E8%A3%85%E5%BF%85%E8%A6%81%E6%8F%92%E4%BB%B6"><span class="toc-text">4、安装必要插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E9%87%8D%E5%90%AF%E7%94%B5%E8%84%91"><span class="toc-text">5、重启电脑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E9%85%8D%E7%BD%AE"><span class="toc-text">主页配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%88%87%E6%8D%A2%E7%99%BD%E5%A4%A9-%E5%A4%9C%E6%99%9A%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%9B%B4%E6%94%B9%E4%BD%9C%E8%80%85%E5%A4%B4%E5%83%8F"><span class="toc-text">在切换白天&#x2F;夜晚模式下更改作者头像</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C"><span class="toc-text">实现效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%80%9D%E8%B7%AF%E5%8F%8A%E7%9B%B8%E5%BA%94%E6%93%8D%E4%BD%9C%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-text">处理思路及相应操作如下：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E9%A1%B5%E9%85%8D%E7%BD%AE"><span class="toc-text">内容页配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-text">基础配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="toc-text">应用思维导图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8simple-mindmap"><span class="toc-text">1、使用simple-mindmap</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-text">1、安装插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-text">2、使用实例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8markmap"><span class="toc-text">1、使用markmap</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6-2"><span class="toc-text">1、安装插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8%E5%AE%9E%E4%BE%8B-2"><span class="toc-text">2、使用实例</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/学之思之/博客搭建/indeximg/indeximg.png" 
+      data-src="/image/学之思之/博客搭建/indeximg/indeximg.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【学之思之】Hexo+Kaze+Github搭建个人博客 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【学之思之】Hexo+Kaze+Github搭建个人博客
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-12-20T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-21</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/" 
+          class="post-meta-link">
+          学之思之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>1.9k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/hexo/" 
+            class="post-meta-link">
+            hexo
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/" 
+            class="post-meta-link">
+            学之思之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" 
+            class="post-meta-link">
+            个人博客
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>本博客是采用<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>架构，配合<a target="_blank" rel="noopener" href="https://demo.theme-kaze.top/document/">Kaze</a>主题搭建，经<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>和<a target="_blank" rel="noopener" href="https://gitee.com/">Gitee</a>发布。</p><p>我也是偶然接触到，但这种既不需花钱，又没有审核，资源可以长久存在而不怕遗失，布局可以自定义而无需拘泥于一种风格的诱惑，对我而言实在太大了。于是义无反顾地一心扑了上来。</p><p>断断续续经过了一个月，期间生了点流行性小病，加上前后端知识的生疏，且网上资料不全，折腾许久才算勉强整出来这么点成果来。</p><p>当然，还存在很多瑕疵，只能是在后续的搭建过程中一边学习一边完善了。</p><p>此文也就此做下整理，记录本博客的搭建过程，以备日后之需。</p></div>
+<h1>博客搭建记录</h1>
+<h2 id="账号申请及软件安装">账号申请及软件安装</h2>
+<h2 id="更换高级Markdown渲染器">更换高级Markdown渲染器</h2>
+<p>Hexo默认搭配的Markdown渲染器是hexo-renderer-marked,可选择更换为hexo-renderer-markdown-it，以实现更多功能以及更快的渲染速度</p>
+<h3 id="1、卸载hexo-renderer-marked">1、卸载hexo-renderer-marked</h3>
+<pre class="highlight"><span class="line">npm un hexo-renderer-marked --saved</span><br></pre>
+<h3 id="2、安装hexo-renderer-markdown-it">2、安装hexo-renderer-markdown-it</h3>
+<pre class="highlight"><span class="line">npm i hexo-renderer-markdown-it --save</span><br></pre>
+<h3 id="3、配置文件">3、配置文件</h3>
+<p>在hexo根目录/_config.yml加入如下文本</p>
+<pre class="highlight"><span class="line">markdown:</span><br><span class="line">  preset: <span class="string">&quot;default&quot;</span></span><br><span class="line">  render:</span><br><span class="line">    html: true</span><br><span class="line">    xhtmlOut: false</span><br><span class="line">    langPrefix: <span class="string">&quot;language-&quot;</span></span><br><span class="line">    breaks: true</span><br><span class="line">    linkify: true</span><br><span class="line">    typographer: true</span><br><span class="line">    quotes: <span class="string">&quot;“”‘’&quot;</span></span><br><span class="line">  enable_rules:</span><br><span class="line">  disable_rules:</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-cjk-breaks</span><br><span class="line">    - markdown-it-deflist</span><br><span class="line">    - markdown-it-emoji</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-mark</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">    - markdown-it-checkbox</span><br><span class="line">    - markdown-it-imsize</span><br><span class="line">    - markdown-it-expandable</span><br><span class="line">    - name: markdown-it-container</span><br><span class="line">      options: success</span><br><span class="line">    - name: markdown-it-container</span><br><span class="line">      options: tips</span><br><span class="line">    - name: markdown-it-container</span><br><span class="line">      options: warning</span><br><span class="line">    - name: markdown-it-container</span><br><span class="line">      options: danger</span><br><span class="line">  anchors:</span><br><span class="line">    level: <span class="number">2</span></span><br><span class="line">    collisionSuffix: <span class="string">&quot;&quot;</span></span><br><span class="line">    permalink: false</span><br><span class="line">    permalinkClass: <span class="string">&quot;header-anchor&quot;</span></span><br><span class="line">    permalinkSide: <span class="string">&quot;left&quot;</span></span><br><span class="line">    permalinkSymbol: <span class="string">&quot;¶&quot;</span></span><br><span class="line">    case: <span class="number">0</span></span><br><span class="line">    separator: <span class="string">&quot;-&quot;</span></span><br></pre>
+<h3 id="4、安装必要插件">4、安装必要插件</h3>
+<pre class="highlight"><span class="line">npm i markdown-it-checkbox</span><br><span class="line">npm i markdown-it-imsize</span><br><span class="line">npm i markdown-it-expandable</span><br></pre>
+<h3 id="5、重启电脑">5、重启电脑</h3>
+<h2 id="主页配置">主页配置</h2>
+<h3 id="在切换白天-夜晚模式下更改作者头像">在切换白天/夜晚模式下更改作者头像</h3>
+<h4 id="实现效果">实现效果</h4>
+<p>&quot;左边栏&quot;的作者头像以及&quot;关于&quot;页面的作者图像会根据白天/黑夜模式，切换为对应的白天作者头像/黑夜作者头像<br>
+<img src="/image/学之思之/博客搭建/1.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/博客搭建/1.png" class="lozad post-image"><img src="/image/学之思之/博客搭建/2.png" / srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/学之思之/博客搭建/2.png" class="lozad post-image"><br /></p>
+<h4 id="处理思路及相应操作如下：">处理思路及相应操作如下：</h4>
+<p>1、在关于页面的作者头像标签加入id属性，方便后续进行头像更换控制，同时对该页面进行检测，根据其模式确定需要显示的作者头像</p>
+<p>1） 文件路径：./themes/hexo-theme-Kaze/layout/about.ejs</p>
+<p>2） 为标签添加id</p>
+<pre class="highlight"><span class="line">&lt;% <span class="keyword">if</span>(theme.<span class="property">author_img</span>) &#123; %&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">img</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">src</span>=<span class="string">&quot;&lt;%= url_for(theme.author_img) %&gt;&quot;</span> </span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      <span class="attr">class</span>=<span class="string">&quot;about-card-avatar&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">      &lt;!<span class="attr">--</span> <span class="attr">此处设置标签卡id为isdark</span> <span class="attr">--</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      id=&quot;isdark&quot; </span></span><br><span class="line"><span class="language-xml">      alt=&quot;Blog Author Avatar&quot; /&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre>
+<p>3） 在最后面添加代码，对页面进行检测，主要是通过全局变量isdark进行判断（该全局变量在下一个步骤创建），变量值为dark则显示黑夜模式的作者头像，变量为null或light则显示为白天模式的作者头像</p>
+<pre class="highlight"><span class="line">&lt;script&gt;</span><br><span class="line"><span class="comment">// 变量imgSrc用于存储id为isdark的标签对象</span></span><br><span class="line">  <span class="keyword">var</span> imgSrc;</span><br><span class="line">  <span class="keyword">if</span>(<span class="variable language_">window</span>.<span class="property">isdark</span> == <span class="string">&#x27;dark&#x27;</span>)&#123;</span><br><span class="line">    <span class="comment">// 如果为黑夜模式，则将img标签的src设置为黑夜图片路径</span></span><br><span class="line">      imgSrc = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;isdark&#x27;</span>)</span><br><span class="line">      imgSrc.<span class="property">src</span> = <span class="string">&#x27;/image/logo/黑夜作者头像.png&#x27;</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      imgSrc = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;isdark&#x27;</span>)</span><br><span class="line">      imgSrc.<span class="property">src</span> = <span class="string">&#x27;/image/logo/白天作者头像.png&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre>
+<p>2、在head加载页设置一个全局变量，获取当前模式状态。</p>
+<p>1） 文件路径：./themes/hexo-theme-Kaze/layout/_partial/head.ejs</p>
+<p>2） 设置全局变量isdark，并在点击模式切换时，更改相应的作者头像</p>
+<pre class="highlight"><span class="line">&lt;% <span class="keyword">if</span>(config.<span class="property">prismjs</span> &amp;&amp; config.<span class="property">prismjs</span>.<span class="property">enable</span> &amp;&amp; theme.<span class="property">prism</span> &amp;&amp; theme.<span class="property">prism</span>.<span class="property">darkTheme</span>) &#123; %&gt;</span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">var</span> setDarkmode = <span class="keyword">function</span>(<span class="params">mode</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">var</span> setting = mode || <span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&#x27;user-color-scheme&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span>(setting === <span class="title function_">getCssMediaQuery</span>()) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="title function_">removeAttribute</span>(<span class="string">&#x27;data-user-color-scheme&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">localStorage</span>.<span class="title function_">removeItem</span>(<span class="string">&#x27;user-color-scheme&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">content</span> = themeColor[setting];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">dataset</span>.<span class="property">mode</span> = setting;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="title function_">prismThemeChange</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125; <span class="keyword">else</span> <span class="keyword">if</span>(reverseDarkList[setting]) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="title function_">setAttribute</span>(<span class="string">&#x27;data-user-color-scheme&#x27;</span>, setting);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">content</span> = themeColor[setting];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">dataset</span>.<span class="property">mode</span> = setting;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="title function_">prismThemeChange</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125; <span class="keyword">else</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="title function_">removeAttribute</span>(<span class="string">&#x27;data-user-color-scheme&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">localStorage</span>.<span class="title function_">removeItem</span>(<span class="string">&#x27;user-color-scheme&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">content</span> = themeColor[<span class="title function_">getCssMediaQuery</span>()];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">dataset</span>.<span class="property">mode</span> = <span class="title function_">getCssMediaQuery</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="title function_">prismThemeChange</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">setDarkmode</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">  &lt;% &#125; <span class="keyword">else</span> &#123; %&gt;</span><br><span class="line">  <span class="comment">// 这段代码是模式切换按钮，即点击按钮切换到相应的色调</span></span><br><span class="line">    <span class="language-xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">var</span> setDarkmode = <span class="keyword">function</span>(<span class="params">mode</span>) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">var</span> setting = mode || <span class="variable language_">localStorage</span>.<span class="title function_">getItem</span>(<span class="string">&#x27;user-color-scheme&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// setting获取到的值有三种情况，null,dark,light分别对应刚未点击模式切换按钮时的状态，模式切换按钮为黑夜时的状态以及模式切换按钮为白天时的状态，将此值赋予全局变量isdark</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="variable language_">window</span>.<span class="property">isdark</span> = setting;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span>(setting === <span class="title function_">getCssMediaQuery</span>()) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">//setting为light</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="title function_">removeAttribute</span>(<span class="string">&#x27;data-user-color-scheme&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">localStorage</span>.<span class="title function_">removeItem</span>(<span class="string">&#x27;user-color-scheme&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">content</span> = themeColor[setting];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">dataset</span>.<span class="property">mode</span> = setting;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125; <span class="keyword">else</span> <span class="keyword">if</span>(reverseDarkList[setting]) &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">//setting为dark</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="title function_">setAttribute</span>(<span class="string">&#x27;data-user-color-scheme&#x27;</span>, setting);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">content</span> = themeColor[setting];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">dataset</span>.<span class="property">mode</span> = setting;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125; <span class="keyword">else</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">//setting为null</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="property">documentElement</span>.<span class="title function_">removeAttribute</span>(<span class="string">&#x27;data-user-color-scheme&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">localStorage</span>.<span class="title function_">removeItem</span>(<span class="string">&#x27;user-color-scheme&#x27;</span>);</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">content</span> = themeColor[<span class="title function_">getCssMediaQuery</span>()];</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;theme-color&#x27;</span>).<span class="property">dataset</span>.<span class="property">mode</span> = <span class="title function_">getCssMediaQuery</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        </span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// setting 的值是Light、null和dark</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 自定义添加的代码，当切换至其他页面时失效，所以在about和author页面添加同样的代码</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="comment">// 根据按键更换dark模式和light/null模式下的作者头像</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      <span class="keyword">if</span>(setting === <span class="string">&quot;dark&quot;</span>)&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">//判断是否进入“关于”页面，进入则同样修改“关于”页面的作者头像</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">if</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;isdark&#x27;</span>))&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;isdark&#x27;</span>).<span class="title function_">setAttribute</span>(<span class="string">&#x27;src&#x27;</span>,<span class="string">&#x27;/image/logo/logo3.png&#x27;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="comment">//修改左边栏作者头像</span></span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;authorimg&#x27;</span>).<span class="title function_">setAttribute</span>(<span class="string">&#x27;src&#x27;</span>,<span class="string">&#x27;/image/logo/logo3.png&#x27;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125; <span class="keyword">else</span> &#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="keyword">if</span>(<span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;isdark&#x27;</span>))&#123;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">          <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;isdark&#x27;</span>).<span class="title function_">setAttribute</span>(<span class="string">&#x27;src&#x27;</span>,<span class="string">&#x27;/image/logo/logo2.png&#x27;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">        <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;authorimg&#x27;</span>).<span class="title function_">setAttribute</span>(<span class="string">&#x27;src&#x27;</span>,<span class="string">&#x27;/image/logo/logo2.png&#x27;</span>)</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">      &#125;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    &#125;;</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    <span class="title function_">setDarkmode</span>();</span></span></span><br><span class="line"><span class="language-javascript"><span class="language-xml">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre>
+<p>3、在关于页面进行检测，当处于黑夜/白天模式时，切换对于的作者头像</p>
+<p>1） 文件路径：./themes/hexo-theme-Kaze/layout/about.ejs</p>
+<p>2） 在文件最后添加如下代码</p>
+<pre class="highlight"><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">var</span> imgSrc;</span><br><span class="line">  <span class="keyword">if</span>(<span class="variable language_">window</span>.<span class="property">isdark</span> == <span class="string">&#x27;dark&#x27;</span>)&#123;</span><br><span class="line">      imgSrc = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;isdark&#x27;</span>)</span><br><span class="line">      imgSrc.<span class="property">src</span> = <span class="string">&#x27;/image/logo/logo3.png&#x27;</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      imgSrc = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;isdark&#x27;</span>)</span><br><span class="line">      imgSrc.<span class="property">src</span> = <span class="string">&#x27;/image/logo/logo2.png&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre>
+<h2 id="内容页配置">内容页配置</h2>
+<h3 id="基础配置">基础配置</h3>
+<pre class="highlight"><span class="line">title: 标题</span><br><span class="line">date: 发布日期</span><br><span class="line">update: 更新日期</span><br><span class="line">comments: 是否支持评论（true/false）</span><br><span class="line">tags: 标签（[“标签名1”，“标签名2”，...]）</span><br><span class="line">categories: 分类名</span><br><span class="line">banner_img: 封面图片</span><br><span class="line">excerpt：简介</span><br></pre>
+<h3 id="应用思维导图">应用思维导图</h3>
+<h4 id="1、使用simple-mindmap">1、使用simple-mindmap</h4>
+<h5 id="1、安装插件">1、安装插件</h5>
+<pre class="highlight"><span class="line">npm install hexo-simple-mindmap</span><br></pre>
+<h5 id="2、使用实例">2、使用实例</h5>
+<p>会自动将pullquote标签中的内容转换为思维导图</p>
+<pre class="highlight"><span class="line">&#123;% pullquote mindmap mindmap-md %&#125;</span><br><span class="line">- [在 Hexo 中使用思维导图](https://hunterx.xyz/use-mindmap-in-hexo.html)</span><br><span class="line">  - 安装思维导图插件</span><br><span class="line">  - 使用标签</span><br><span class="line">  - 实现效果 </span><br><span class="line">&#123;% endpullquote %&#125;</span><br></pre>
+<p>效果展示</p>
+<blockquote class="pullquote mindmap mindmap-md"><ul class="lvl-0">
+<li class="lvl-2">
+<p>一级主题</p>
+<ul class="lvl-2">
+<li class="lvl-4">二级主题A
+<ul class="lvl-4">
+<li class="lvl-6"><a target="_blank" rel="noopener" href="https://hunterx.xyz/use-mindmap-in-hexo.html">在 Hexo 中使用思维导图</a>
+<ul class="lvl-6">
+<li class="lvl-8">安装思维导图插件</li>
+<li class="lvl-8">使用标签</li>
+<li class="lvl-8">实现效果</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h4 id="1、使用markmap">1、使用markmap</h4>
+<h5 id="1、安装插件-2">1、安装插件</h5>
+<pre class="highlight"><span class="line">npm install hexo-markmap</span><br></pre>
+<h5 id="2、使用实例-2">2、使用实例</h5>
+<p>会自动将markmap标签中的内容转换为思维导图，并且可以设置高度</p>
+<pre class="highlight"><span class="line">&#123;% markmap 200rpx %&#125;</span><br><span class="line">## 一级主题</span><br><span class="line">  ### 二级主题A</span><br><span class="line">  - [在 Hexo 中使用思维导图](https://hunterx.xyz/use-mindmap-in-hexo.html)</span><br><span class="line">    - 安装思维导图插件</span><br><span class="line">    - 使用标签</span><br><span class="line">    - 实现效果</span><br><span class="line">  ### 二级主题B</span><br><span class="line">  1. 序号1</span><br><span class="line">  2. 序号2 </span><br><span class="line">&#123;% endmarkmap %&#125;</span><br></pre>
+<p>效果展示</p>
+
+<div class="markmap-container" style="height:200rpx">
+  <svg data="{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:1,&quot;p&quot;:{&quot;lines&quot;:[0,1]},&quot;v&quot;:&quot;一级主题&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[1,2]},&quot;v&quot;:&quot;二级主题A&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[2,3]},&quot;v&quot;:&quot;&lt;a href=\&quot;https://hunterx.xyz/use-mindmap-in-hexo.html\&quot;&gt;在 Hexo 中使用思维导图&lt;/a&gt;&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[3,4]},&quot;v&quot;:&quot;安装思维导图插件&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[4,5]},&quot;v&quot;:&quot;使用标签&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:6,&quot;p&quot;:{&quot;lines&quot;:[5,6]},&quot;v&quot;:&quot;实现效果&quot;}]}]},{&quot;t&quot;:&quot;heading&quot;,&quot;d&quot;:2,&quot;p&quot;:{&quot;lines&quot;:[6,7]},&quot;v&quot;:&quot;二级主题B&quot;,&quot;c&quot;:[{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[7,8],&quot;index&quot;:1},&quot;v&quot;:&quot;1. 序号1&quot;},{&quot;t&quot;:&quot;list_item&quot;,&quot;d&quot;:4,&quot;p&quot;:{&quot;lines&quot;:[8,9],&quot;index&quot;:2},&quot;v&quot;:&quot;2. 序号2&quot;}]}]}"></svg>
+</div>
+
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/12/21/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/hexo+kaze+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+            https://illusionzone.github.io/2022/12/21/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/hexo+kaze+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/12/26/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89%E7%9A%84%E5%B7%A5%E4%BD%9C/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】毫无意义的工作 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/12/15/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E8%AE%A4%E8%AF%86%E8%BA%AB%E4%BD%93%EF%BC%9A%E6%8E%A2%E7%B4%A2%E4%BA%BA%E4%BD%93%E5%BE%AE%E5%AE%87%E5%AE%99/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】认识身体：探索人体微宇宙 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">博客搭建记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E5%8F%8A%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">账号申请及软件安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2%E9%AB%98%E7%BA%A7Markdown%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="toc-text">更换高级Markdown渲染器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8D%B8%E8%BD%BDhexo-renderer-marked"><span class="toc-text">1、卸载hexo-renderer-marked</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85hexo-renderer-markdown-it"><span class="toc-text">2、安装hexo-renderer-markdown-it</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">3、配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%AE%89%E8%A3%85%E5%BF%85%E8%A6%81%E6%8F%92%E4%BB%B6"><span class="toc-text">4、安装必要插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E9%87%8D%E5%90%AF%E7%94%B5%E8%84%91"><span class="toc-text">5、重启电脑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E9%85%8D%E7%BD%AE"><span class="toc-text">主页配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%88%87%E6%8D%A2%E7%99%BD%E5%A4%A9-%E5%A4%9C%E6%99%9A%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%9B%B4%E6%94%B9%E4%BD%9C%E8%80%85%E5%A4%B4%E5%83%8F"><span class="toc-text">在切换白天&#x2F;夜晚模式下更改作者头像</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C"><span class="toc-text">实现效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%80%9D%E8%B7%AF%E5%8F%8A%E7%9B%B8%E5%BA%94%E6%93%8D%E4%BD%9C%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-text">处理思路及相应操作如下：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E9%A1%B5%E9%85%8D%E7%BD%AE"><span class="toc-text">内容页配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-text">基础配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="toc-text">应用思维导图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8simple-mindmap"><span class="toc-text">1、使用simple-mindmap</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-text">1、安装插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-text">2、使用实例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8markmap"><span class="toc-text">1、使用markmap</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6-2"><span class="toc-text">1、安装插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8%E5%AE%9E%E4%BE%8B-2"><span class="toc-text">2、使用实例</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">博客搭建记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E5%8F%8A%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">账号申请及软件安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%8D%A2%E9%AB%98%E7%BA%A7Markdown%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="toc-text">更换高级Markdown渲染器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%8D%B8%E8%BD%BDhexo-renderer-marked"><span class="toc-text">1、卸载hexo-renderer-marked</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85hexo-renderer-markdown-it"><span class="toc-text">2、安装hexo-renderer-markdown-it</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">3、配置文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%AE%89%E8%A3%85%E5%BF%85%E8%A6%81%E6%8F%92%E4%BB%B6"><span class="toc-text">4、安装必要插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E9%87%8D%E5%90%AF%E7%94%B5%E8%84%91"><span class="toc-text">5、重启电脑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A1%B5%E9%85%8D%E7%BD%AE"><span class="toc-text">主页配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E5%88%87%E6%8D%A2%E7%99%BD%E5%A4%A9-%E5%A4%9C%E6%99%9A%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%9B%B4%E6%94%B9%E4%BD%9C%E8%80%85%E5%A4%B4%E5%83%8F"><span class="toc-text">在切换白天&#x2F;夜晚模式下更改作者头像</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C"><span class="toc-text">实现效果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%80%9D%E8%B7%AF%E5%8F%8A%E7%9B%B8%E5%BA%94%E6%93%8D%E4%BD%9C%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="toc-text">处理思路及相应操作如下：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E9%A1%B5%E9%85%8D%E7%BD%AE"><span class="toc-text">内容页配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-text">基础配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE"><span class="toc-text">应用思维导图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8simple-mindmap"><span class="toc-text">1、使用simple-mindmap</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6"><span class="toc-text">1、安装插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="toc-text">2、使用实例</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E4%BD%BF%E7%94%A8markmap"><span class="toc-text">1、使用markmap</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6-2"><span class="toc-text">1、安装插件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2%E3%80%81%E4%BD%BF%E7%94%A8%E5%AE%9E%E4%BE%8B-2"><span class="toc-text">2、使用实例</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  <script src="/js/markmap.js"></script></body>
+</html>

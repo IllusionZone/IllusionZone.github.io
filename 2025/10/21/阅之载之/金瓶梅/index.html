@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】金瓶梅</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】金瓶梅">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="兰陵笑笑生   著">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2025-10-21">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-12-18">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9B%9E-%E8%A5%BF%E9%97%A8%E5%BA%86%E7%83%AD%E7%BB%93%E5%8D%81%E5%85%84%E5%BC%9F-%E6%AD%A6%E4%BA%8C%E9%83%8E%E5%86%B7%E9%81%87%E4%BA%B2%E5%93%A5%E5%AB%82"><span class="toc-text">第一回 西门庆热结十兄弟 武二郎冷遇亲哥嫂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9B%9E-%E4%BF%8F%E6%BD%98%E5%A8%98%E5%B8%98%E4%B8%8B%E5%8B%BE%E6%83%85-%E8%80%81%E7%8E%8B%E5%A9%86%E8%8C%B6%E5%9D%8A%E8%AF%B4%E6%8A%80"><span class="toc-text">第二回 俏潘娘帘下勾情 老王婆茶坊说技</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%9B%9E-%E5%AE%9A%E6%8C%A8%E5%85%89%E7%8E%8B%E5%A9%86%E5%8F%97%E8%B4%BF-%E8%AE%BE%E5%9C%88%E5%A5%97%E6%B5%AA%E5%AD%90%E7%A7%81%E6%8C%91"><span class="toc-text">第三回 定挨光王婆受贿 设圈套浪子私挑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E8%B5%B4%E5%B7%AB%E5%B1%B1%E6%BD%98%E6%B0%8F%E5%B9%BD%E6%AC%A2-%E9%97%B9%E8%8C%B6%E5%9D%8A%E7%9A%B2%E5%93%A5%E4%B9%89%E6%84%A4"><span class="toc-text">第四回 赴巫山潘氏幽欢 闹茶坊皲哥义愤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%9B%9E-%E6%8D%89%E5%A5%B8%E8%AE%A1%E7%9A%B2%E5%93%A5%E5%AE%9A%E8%AE%A1-%E9%A5%AE%E9%B8%A9%E8%8D%AF%E6%AD%A6%E5%A4%A7%E9%81%AD%E6%AE%83"><span class="toc-text">第五回 捉奸计皲哥定计 饮鸩药武大遭殃</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%9B%9E-%E4%BD%95%E4%B9%9D%E5%8F%97%E8%B4%BF%E7%9E%92%E5%A4%A9-%E7%8E%8B%E5%A9%86%E5%B8%AE%E9%97%B2%E9%81%87%E9%9B%A8"><span class="toc-text">第六回 何九受贿瞒天  王婆帮闲遇雨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%9B%9E-%E8%96%9B%E5%AA%92%E5%A9%86%E8%AF%B4%E5%A8%B6%E5%AD%9F%E4%B8%89%E5%84%BF-%E6%9D%A8%E5%A7%91%E5%A8%98%E6%B0%94%E9%AA%82%E5%BC%A0%E5%9B%9B%E8%88%85"><span class="toc-text">第七回 薛媒婆说娶孟三儿  杨姑娘气骂张四舅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%9B%9E-%E7%9B%BC%E6%83%85%E9%83%8E%E4%BD%B3%E4%BA%BA%E5%8D%A0%E9%AC%BC%E5%8D%A6-%E7%83%A7%E5%A4%AB%E7%81%B5%E5%92%8C%E5%B0%9A%E5%90%AC%E5%A3%B0"><span class="toc-text">第八回 盼情郎佳人占鬼卦  烧夫灵和尚听声</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%9B%9E-%E8%A5%BF%E9%97%A8%E5%BA%86%E5%81%B7%E5%A8%B6%E6%BD%98%E9%87%91%E8%8E%B2-%E6%AD%A6%E9%83%BD%E5%A4%B4%E8%AF%AF%E6%89%93%E6%9D%8E%E7%9A%82%E9%9A%B6"><span class="toc-text">第九回 西门庆偷娶潘金莲  武都头误打李皂隶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9E-%E4%B9%89%E5%A3%AB%E5%85%85%E9%85%8D%E5%AD%9F%E5%B7%9E%E9%81%93-%E5%A6%BB%E5%A6%BE%E7%8E%A9%E8%B5%8F%E8%8A%99%E8%93%89%E4%BA%AD"><span class="toc-text">第十回 义士充配孟州道  妻妾玩赏芙蓉亭</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E5%9B%9E-%E6%BD%98%E9%87%91%E8%8E%B2%E6%BF%80%E6%89%93%E5%AD%99%E9%9B%AA%E5%A8%A5-%E8%A5%BF%E9%97%A8%E5%BA%86%E6%A2%B3%E7%AC%BC%E6%9D%8E%E6%A1%82%E5%A7%90"><span class="toc-text">第十一回 潘金莲激打孙雪娥  西门庆梳笼李桂姐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%9B%9E-%E6%BD%98%E9%87%91%E8%8E%B2%E7%A7%81%E4%BB%86%E5%8F%97%E8%BE%B1-%E5%88%98%E7%90%86%E6%98%9F%E9%AD%87%E8%83%9C%E6%B1%82%E8%B4%A2"><span class="toc-text">第十二回 潘金莲私仆受辱  刘理星魇胜求财</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E5%9B%9E-%E6%9D%8E%E7%93%B6%E5%A7%90%E5%A2%99%E5%A4%B4%E5%AF%86%E7%BA%A6-%E8%BF%8E%E6%98%A5%E5%84%BF%E9%9A%99%E5%BA%95%E7%A7%81%E7%AA%A5"><span class="toc-text">第十三回 李瓶姐墙头密约  迎春儿隙底私窥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E5%9B%9E-%E8%8A%B1%E5%AD%90%E8%99%9A%E5%9B%A0%E6%B0%94%E4%B8%A7%E8%BA%AB-%E6%9D%8E%E7%93%B6%E5%84%BF%E8%BF%8E%E5%A5%B8%E8%B5%B4%E4%BC%9A"><span class="toc-text">第十四回 花子虚因气丧身  李瓶儿迎奸赴会</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E5%9B%9E-%E4%BD%B3%E4%BA%BA%E7%AC%91%E8%B5%8F%E7%8E%A9%E7%81%AF%E6%A5%BC-%E7%8B%8E%E5%AE%A2%E5%B8%AE%E5%AB%96%E4%B8%BD%E6%98%A5%E9%99%A2"><span class="toc-text">第十五回 佳人笑赏玩灯楼  狎客帮嫖丽春院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AD%E5%9B%9E-%E8%A5%BF%E9%97%A8%E5%BA%86%E6%8B%A9%E5%90%89%E4%BD%B3%E6%9C%9F-%E5%BA%94%E4%BC%AF%E7%88%B5%E8%BF%BD%E6%AC%A2%E5%96%9C%E5%BA%86"><span class="toc-text">第十六回 西门庆择吉佳期  应伯爵追欢喜庆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%83%E5%9B%9E-%E5%AE%87%E7%BB%99%E4%BA%8B%E5%8A%BE%E5%80%92%E6%9D%A8%E6%8F%90%E7%9D%A3-%E6%9D%8E%E7%93%B6%E5%84%BF%E8%AE%B8%E5%AB%81%E8%92%8B%E7%AB%B9%E5%B1%B1"><span class="toc-text">第十七回 宇给事劾倒杨提督  李瓶儿许嫁蒋竹山</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%B5%82%E7%9B%B8%E5%BA%9C%E8%A5%BF%E9%97%A8%E8%84%B1%E7%A5%B8-%E8%A7%81%E5%A8%87%E5%A8%98%E6%95%AC%E6%B5%8E%E9%94%80%E9%AD%82"><span class="toc-text">第十八回 赂相府西门脱祸 见娇娘敬济销魂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B9%9D%E5%9B%9E-%E8%8D%89%E9%87%8C%E8%9B%87%E9%80%BB%E6%89%93%E8%92%8B%E7%AB%B9%E5%B1%B1-%E6%9D%8E%E7%93%B6%E5%84%BF%E6%83%85%E6%84%9F%E8%A5%BF%E9%97%A8%E5%BA%86"><span class="toc-text">第十九回 草里蛇逻打蒋竹山 李瓶儿情感西门庆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9E-%E5%82%BB%E5%B8%AE%E9%97%B2%E8%B6%8B%E5%A5%89%E9%97%B9%E5%8D%8E%E7%AD%B5-%E7%97%B4%E5%AD%90%E5%BC%9F%E4%BA%89%E9%94%8B%E6%AF%81%E8%8A%B1%E9%99%A2"><span class="toc-text">第二十回 傻帮闲趋奉闹华筵  痴子弟争锋毁花院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%80%E5%9B%9E-%E5%90%B4%E6%9C%88%E5%A8%98%E6%89%AB%E9%9B%AA%E7%83%B9%E8%8C%B6-%E5%BA%94%E4%BC%AF%E7%88%B5%E6%9B%BF%E8%8A%B1%E9%82%80%E9%85%92"><span class="toc-text">第二十一回 吴月娘扫雪烹茶  应伯爵替花邀酒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%8C%E5%9B%9E-%E8%95%99%E8%8E%B2%E5%84%BF%E5%81%B7%E6%9C%9F%E8%92%99%E7%88%B1-%E6%98%A5%E6%A2%85%E5%A7%90%E6%AD%A3%E8%89%B2%E9%97%B2%E9%82%AA"><span class="toc-text">第二十二回 蕙莲儿偷期蒙爱  春梅姐正色闲邪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%89-%E5%9B%9E%E8%B5%8C%E6%A3%8B%E6%9E%B0%E7%93%B6%E5%84%BF%E8%BE%93%E9%92%9E-%E8%A7%91%E8%97%8F%E6%98%A5%E6%BD%98%E6%B0%8F%E6%BD%9C%E8%B8%AA"><span class="toc-text">第二十三 回赌棋枰瓶儿输钞  觑藏春潘氏潜踪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%9B%9E-%E6%95%AC%E6%B5%8E%E5%85%83%E5%A4%9C%E6%88%8F%E5%A8%87%E5%A7%BF-%E6%83%A0%E7%A5%A5%E6%80%92%E8%A9%88%E6%9D%A5%E6%97%BA%E5%A6%87"><span class="toc-text">第二十四回 敬济元夜戏娇姿  惠祥怒詈来旺妇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E5%9B%9E-%E5%90%B4%E6%9C%88%E5%A8%98%E6%98%A5%E6%98%BC%E7%A7%8B%E5%8D%83-%E6%9D%A5%E6%97%BA%E5%84%BF%E9%86%89%E4%B8%AD%E8%B0%A4%E4%BB%99"><span class="toc-text">第二十五回 吴月娘春昼秋千  来旺儿醉中谤仙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AD%E5%9B%9E-%E6%9D%A5%E6%97%BA%E5%84%BF%E9%80%92%E8%A7%A3%E5%BE%90%E5%B7%9E-%E5%AE%8B%E8%95%99%E8%8E%B2%E5%90%AB%E7%BE%9E%E8%87%AA%E7%BC%A2"><span class="toc-text">第二十六回 来旺儿递解徐州  宋蕙莲含羞自缢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%9D%8E%E7%93%B6%E5%84%BF%E7%A7%81%E8%AF%AD%E7%BF%A1%E7%BF%A0%E8%BD%A9-%E6%BD%98%E9%87%91%E8%8E%B2%E9%86%89%E9%97%B9%E8%91%A1%E8%90%84%E6%9E%B6"><span class="toc-text">第二十七回 李瓶儿私语翡翠轩  潘金莲醉闹葡萄架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E5%9B%9E-%E9%99%88%E6%95%AC%E6%B5%8E%E5%BE%BC%E5%B9%B8%E5%BE%97%E9%87%91%E8%8E%B2-%E8%A5%BF%E9%97%A8%E5%BA%86%E7%B3%8A%E6%B6%82%E6%89%93%E9%93%81%E6%A3%8D"><span class="toc-text">第二十八回 陈敬济徼幸得金莲  西门庆糊涂打铁棍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】金瓶梅
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2025-10-20T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2025-10-21</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>11.9k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。《金瓶梅》<br>兰陵笑笑生   著</p></div>
+<br />
+<img src="/image/book/readandnote/金瓶梅/1.jpg" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/金瓶梅/1.jpg" class="lozad post-image">
+<br />
+<h2 id="第一回-西门庆热结十兄弟-武二郎冷遇亲哥嫂">第一回 西门庆热结十兄弟 武二郎冷遇亲哥嫂</h2>
+<p><strong>原文摘录</strong><br>
+单道世上人，营营逐逐，急急巴巴，跳不出七情六欲关头，打不破酒色财气圈子。到头来同归于尽，着甚要紧！虽是如此说，只这酒色财气四件中，惟有“财色”二者更为利害。</p>
+<p>怎见得他的利害？假如一个人到了那穷苦的田地，受尽无限凄凉，耐尽无端懊恼，晚来摸一摸米瓮，苦无隔宿之炊，早起看一看厨前，愧无半星烟火，妻子饥寒，一身冻馁，就是那粥饭尚且艰难，那讨馀钱沽酒！更有一种可恨处，亲朋白眼，面目寒酸，便是凌云志气，分外消磨，怎能够与人争气！正是：一朝马死黄金尽，亲者如同陌路人。</p>
+<p>到得那有钱时节，挥金买笑，一掷巨万。思饮酒真个琼浆玉液，不数那琥珀杯流；要斗气钱可通神，果然是颐指气使。趋炎的压脊挨肩，附势的吮痈舐痔，真所谓得势叠肩而来，失势掉臂而去。古今炎冷恶态，莫有甚于此者。这两等人，岂不是受那财的利害处！如今再说那色的利害。请看如今世界，你说那坐怀不乱的柳下惠，闭门不纳的鲁男子，与那秉烛达旦的关云长，古今能有几人？至如三妻四妾，买笑追欢的，又当别论。还有那一种好色的人，见了个妇女略有几分颜色，便百计千方偷寒送暖，一到了着手时节，只图那一瞬欢娱，也全不顾亲戚的名分，也不想朋友的交情。起初时不知用了多少滥钱，费了几遭酒食。正是：三杯花作合，两盏色媒人。</p>
+<p>到后来情浓事露，甚而斗狠杀伤，性命不保，妻孥难顾，事业成灰。就如那石季伦泼天豪富，为绿珠命丧囹圄；楚霸王气概拔山，因虞姬头悬垓下。真所谓：“生我之门死我户，看得破时忍不过”这样人岂不是受那色的利害处！</p>
+<p>说便如此说，这“财色”二字，从来只没有看得破的。若有那看得破的，便见得堆金积玉，是棺材内带不去的瓦砾泥沙；贯朽粟红，是皮囊内装不尽的臭淤粪土。高堂广厦，玉宇琼楼，是坟山上起不得的享堂；锦衣绣袄，狐服貂裘，是骷髅上裹不了的败絮。即如那妖姬艳女，献媚工妍，看得破的，却如交锋阵上将军叱咤献威风；</p>
+<p>朱唇皓齿，掩袖回眸，懂得来时，便是阎罗殿前鬼判夜叉增恶态。罗袜一弯，金莲三寸，是砌坟时破土的锹锄；枕上绸缪，被中恩爱，是五殿下油锅中生活。只有那《金刚经》上两句说得好，他说道：“如梦幻泡影，如电复如露。”</p>
+<p>见得人生在世，一件也少不得，到了那结束时，一件也用不着。随着你举鼎荡舟的神力，到头来少不得骨软筋麻；由着你铜山金谷的奢华，正好时却又要冰消雪散。假饶你闭月羞花的容貌，一到了垂眉落眼，人皆掩鼻而过之；比如你陆贾隋何的机锋，若遇着齿冷唇寒，吾未如之何也已。到不如削去六根清净，披上一领袈裟，参透了空色世界，打磨穿生灭机关，直超无上乘，不落是非窠，倒得个清闲自在，不向火坑中翻筋斗也。正是：三寸气在千般用，一日无常万事休。</p>
+<p>说话的为何说此一段酒色财气的缘故？只为当时有一个人家，先前恁地富贵，到后来煞甚凄凉，权谋术智，一毫也用不着，亲友兄弟，一个也靠不着，享不过几年的荣华，倒做了许多的话靶。内中又有几个斗宠争强，迎奸卖俏的，起先好不妖娆妩媚，到后来也免不得尸横灯影，血染空房。正是：善有善报，恶有恶报；天网恢恢，疏而不漏。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+现住着门面五间到底七进的房子。家中呼奴使婢，骡马成群，虽算不得十分富贵，却也是清河县中一个殷实的人家。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+把盏衔杯意气深，兄兄弟弟抑何亲。一朝平地风波起，此际相交才见心。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+却说这月娘秉性贤能，夫主面上百依百随。房中也有三四个丫鬟妇女，都是西门庆收用过的。又尝与勾栏内李娇儿打热，也娶在家里做了第二房娘子。南街又占着窠子卓二姐，名卓丢儿，包了些时，也娶来家做了第三房。只为卓二姐身子瘦怯，时常三病四痛，他却又去飘风戏月，调弄人家妇女。正是：东家歌笑醉红颜，又向西邻开玳宴。几日碧桃花下卧，牡丹开处总堪怜。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+吴月娘接过来道：“结拜兄弟也好。只怕后日还是别个靠你的多哩。若要你去靠人，提傀儡儿上戏场──还少一口气儿哩。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+老鼠尾巴生疮儿──有脓也不多<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+话休饶舌，捻指过了四五日，却是十月初一日。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+须臾，吃毕早饭，西门庆换了一身衣服，打选衣帽光鲜，一齐径往玉皇庙来。</p>
+<p>不到数里之遥，早望见那座庙门，造得甚是雄峻。但见：殿宇嵯峨，宫墙高耸。正面前起着一座墙门八字，一带都粉赭色红泥；进里边列着三条甬道川纹，四方都砌水痕白石。正殿上金碧辉煌，两廊下檐阿峻峭。三清圣祖庄严宝相列中央，太上老君背倚青牛居后殿。</p>
+<p>进入第二重殿后，转过一重侧门，却是吴道官的道院。进的门来，两下都是些瑶草琪花，苍松翠竹。西门庆抬头一看，只见两边门楹上贴着一副对联道：洞府无穷岁月，壶天别有乾坤。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+雄躯凛凛，七尺以上身材；阔面棱棱，二十四五年纪。双目直竖，远望处犹如两点明星；两手握来，近觑时好似一双铁碓。脚尖飞起，深山虎豹失精魂；拳手落时，穷谷熊罴皆丧魄。头戴着一顶万字头巾，上簪两朵银花；身穿着一领血腥衲袄，披着一方红锦。<br>
+<br /><br /></p>
+<h2 id="第二回-俏潘娘帘下勾情-老王婆茶坊说技">第二回 俏潘娘帘下勾情 老王婆茶坊说技</h2>
+<p><strong>原文摘录</strong><br>
+有话即长，无话即短，不觉过了一月有余，看看十一月天气，连日朔风紧起，只见四下彤云密布，又早纷纷扬扬飞下一天瑞雪来。好大雪！怎见得？但见：万里彤雪密布，空中瑞祥飘帘。琼花片片舞前檐。剡溪当此际，濡滞子猷船。顷刻楼台都压倒，江山银色相连。飞盐撒粉漫连天。当时吕蒙正，窑内叹无钱。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当日这雪下到一更时分，却早银妆世界，玉碾乾坤。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+妇人便慌忙陪笑，把眼看那人，也有二十五六年纪，生得十分浮浪。头上戴着缨子帽儿，金铃珑簪儿，金井玉栏杆圈儿；长腰才，身穿绿罗褶儿；脚下细结底陈桥鞋儿，清水布袜儿；</p>
+<p>手里摇着洒金川扇儿，越显出张生般庞儿，潘安的貌儿。可意的人儿，风风流流从帘子下丢与个眼色儿。这个人被叉竿打在头上，便立住了脚，待要发作时，回过脸来看，却不想是个美貌妖娆的妇人。</p>
+<p>但见他黑鬒鬒赛鸦鸰的鬓儿，翠弯弯的新月的眉儿，香喷喷樱桃口儿，直隆隆琼瑶鼻儿，粉浓浓红艳腮儿，娇滴滴银盆脸儿，轻袅袅花朵身儿，玉纤纤葱枝手儿，一捻捻杨柳腰儿，软浓浓粉白肚儿，窄星星尖翘脚儿，肉奶奶胸儿，白生生腿儿，更有一件紧揪揪、白鲜鲜、黑裀裀，正不知是甚么东西。观不尽这妇人容貌。且看他怎生打扮？但见：头上戴着黑油油头发鬏髻，一迳里縶出香云，周围小簪儿齐插。</p>
+<p>斜戴一朵并头花，排草梳儿后押。难描画，柳叶眉衬着两朵桃花。玲珑坠儿最堪夸，露来酥玉胸无价。毛青布大袖衫儿，又短衬湘裙碾绢纱。通花汗巾儿袖口儿边搭剌。香袋儿身边低挂。抹胸儿重重纽扣香喉下。往下看尖翘翘金莲小脚，云头巧缉山鸦。鞋儿白绫高底，步香尘偏衬登踏。红纱膝裤扣莺花，行坐处风吹裙跨。口儿里常喷出异香兰麝，樱桃口笑脸生花。人见了魂飞魄丧，卖弄杀俏冤家。</p>
+<p>那人一见，先自酥了半边，那怒气早已钻入爪洼国去了，变做笑吟吟脸儿。这妇人情知不是，叉手望他深深拜了一拜，说道：“奴家一时被风失手，误中官人，休怪！”</p>
+<p>那人一面把手整头巾，一面把腰曲着地还喏道：“不妨，娘子请方便。”</p>
+<p>却被这间壁住的卖茶王婆子看见。那婆子笑道：“兀的谁家大官人打这屋檐下过？打的正好！”</p>
+<p>那人笑道：“倒是我的不是，一时冲撞，娘子休怪。”</p>
+<p>妇人答道：“官人不要见责。”</p>
+<p>那人又笑着大大地唱个喏，回应道：“小人不敢。”</p>
+<p>那一双积年招花惹草，惯觑风情的贼眼，不离这妇人身上，临去也回头了七八回，方一直摇摇摆摆遮着扇儿去了。</p>
+<p>风日晴和漫出游，偶从帘下识娇羞。只因临去秋波转，惹起春心不自由。</p>
+<p>当时妇人见了那人生的风流浮浪，语言甜净，更加几分留恋：“倒不知此人姓甚名谁，何处居住。他若没我情意时，临去也不回头七八遍了。”</p>
+<p>却在帘子下眼巴巴的看不见那人，方才收了帘子，关上大门，归房去了。<br>
+<br /><br /></p>
+<h2 id="第三回-定挨光王婆受贿-设圈套浪子私挑">第三回 定挨光王婆受贿 设圈套浪子私挑</h2>
+<p><strong>原文摘录</strong><br>
+王婆笑哈哈道：“大官人却又慌了。老身这条计，虽然入不得武成王庙，端的强似孙武子教女兵，十捉八九着。今日实对你说了罢：这个雌儿来历，虽然微末出身，却倒百伶百俐，会一手好弹唱，针指女工，百家歌曲，双陆象棋，无所不知。小名叫做金莲，娘家姓潘，原是南门外潘裁的女儿，卖在张大户家学弹唱。后因大户年老，打发出来，不要武大一文钱，白白与了他为妻。</p>
+<p>这雌儿等闲不出来，老身无事常过去与他闲坐。他有事亦来请我理会，他也叫我做干娘。武大这两日出门早。大官人如干此事，便买一匹蓝绸、一匹白绸、一匹白绢，再用十两好绵，都把来与老身。老身却走过去问他借历日，央及他拣个好日期，叫个裁缝来做。他若见我这般说，拣了日期，不肯与我来做时，此事便休了；他若欢天喜地说：‘我替你做。’不要我叫裁缝，这光便有一分了。</p>
+<p>我便请得他来做，就替我缝，这光便二分了。他若来做时，午间我却安排些酒食点心请他吃。他若说不便当，定要将去家中做，此事便休了；他不言语吃了时，这光便有三分了。这一日你也莫来，直至第三日，晌午前后，你整整齐齐打扮了来，以咳嗽为号，你在门前叫道：‘怎的连日不见王干娘？我买盏茶吃。’我便出来请你入房里坐吃茶。他若见你便起身来，走了归去，难道我扯住他不成？此事便休了。</p>
+<p>他若见你入来，不动身时，这光便有四分了。坐下时，我便对雌儿说道：‘这个便是与我衣服施主的官人，亏杀他。’我便夸大官人许多好处，你便卖弄他针指。若是他不来兜揽答应时，此事便休了；他若口中答应与你说话时，这光便有五分了。我便道：‘却难为这位娘子与我作成出手做，亏杀你两施主，一个出钱，一个出力。不是老身路歧相央，难得这位娘子在这里，官人做个主人替娘子浇浇手。’你便取银子出来，央我买。</p>
+<p>若是他便走时，难道我扯住他？此事便休了。他若是不动身时，事务易成，这光便有六分了。我却拿银子，临出门时对他说：‘有劳娘子相待官人坐一坐。’他若起身走了家去，我终不成阻挡他？此事便休了。</p>
+<p>若是他不起身，又好了，这光便有七分了。待我买得东西提在桌子上，便说：‘娘子且收拾过生活去，且吃一杯儿酒，难得这官人坏钱。’他不肯和你同桌吃，去了，此事便休了。若是他不起身，此事又好了，这光便有八分了。待他吃得酒浓时，正说得入港，我便推道没了酒，再交你买，你便拿银子，又央我买酒去并果子来配酒。我把门拽上，关你两个在屋里。他若焦燥跑了归去时，此事便休了；</p>
+<p>他若由我拽上门，不焦躁时，这光便有九分，只欠一分了。只是这一分倒难。大官人你在房里，便着几句甜话儿说入去，却不可燥暴，便去动手动脚打搅了事，那时我不管你。你先把袖子向桌子上拂落一双箸下去，只推拾箸，将手去他脚上捏一捏。他若闹将起来，我自来搭救。此事便休了，再也难成。若是他不做声时，此事十分光了。这十分光做完备，你怎的谢我？”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+西门庆睁眼看着那妇人：云鬟叠翠，粉面生春，上穿白布衫儿，桃红裙子，蓝比甲，正在房里做衣服。见西门庆过来，便把头低了。这西门庆连忙向前屈身唱喏。那妇人随即放下生活，还了万福。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+婆子道：“这位官人，便是本县里一个财主，知县相公也和他来往，叫做西门大官人。家有万万贯钱财，在县门前开生药铺。家中钱过北斗，米烂成仓，黄的是金，白的是银，圆的是珠，放光的是宝，也有犀牛头上角，大象口中牙。他家大娘子，也是我说的媒，是吴千户家小姐，生得百伶百俐。”<br>
+<br /><br /></p>
+<h2 id="第四回-赴巫山潘氏幽欢-闹茶坊皲哥义愤">第四回 赴巫山潘氏幽欢 闹茶坊皲哥义愤</h2>
+<p><strong>原文摘录</strong><br>
+于是不由分说，抱到王婆床炕上，脱衣解带，共枕同欢。却说这妇人自从与张大户勾搭，这老儿是软如鼻涕脓如酱的一件东西，几时得个爽利！就是嫁了武大，看官试想，三寸丁的物事，能有多少力量？今番遇了西门庆，风月久惯，本事高强的，如何不喜？但见：交颈鸳鸯戏水，并头鸾凤穿花。喜孜孜连理枝生，美甘甘同心带结。一个将朱唇紧贴，一个将粉脸斜偎。罗袜高挑，肩膀上露两弯新月；金钗斜坠，枕头边堆一朵乌云。誓海盟山，搏弄得千般旖妮；羞云怯雨，揉搓的万种妖娆。恰恰莺声，不离耳畔。津津甜唾，笑吐舌尖。杨柳腰脉脉春浓，樱桃口微微气喘。星眼朦胧，细细汗流香玉颗；酥胸荡漾，涓涓露滴牡丹心。直饶匹配眷姻谐，真个偷情滋味美。<br>
+<br /><br /></p>
+<h2 id="第五回-捉奸计皲哥定计-饮鸩药武大遭殃">第五回 捉奸计皲哥定计 饮鸩药武大遭殃</h2>
+<p><strong>原文摘录</strong><br>
+云情雨意两绸缪，恋色迷花不肯休。毕竟人生如泡影，何须死下杀人谋？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+油煎肺腑，火燎肝肠。心窝里如霜刀相侵，满腹中似钢刀乱搅。浑身冰冷，七窍血流。牙关紧咬，三魂赴在枉死城中；喉管枯干，七魄投望乡台上。地狱新添食毒鬼，阳间没了捉奸人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+看官听说：原来但凡世上妇人哭有三样：有泪有声谓之哭，有泪无声谓之泣，无泪有声谓之号。当下那妇人干号了半夜。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+三光有影谁能待，万事无根只自生。雪隐鹭鸶飞始见，柳藏鹦鹉语方闻。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+三光：指日、月、星。泛指宇宙间永恒运行的光明之物。
+<p>有影：有了光影的变化，指时间的流逝。</p>
+<p>谁能待：谁又能等待（或留住）它呢？</p>
+<p>万事：人世间所有事情。</p>
+<p>无根：没有固定的根源或凭依。</p>
+<p>只自生：只是依据其自身的因果规律自然地发生。</p>
+<p>宇宙的变迁不受人意志左右，万物的生灭有其自然规律。它表达的是一种对“无常”和“自然之道”的体悟。</p>
+<p>大雪掩盖了大地，一只白色的鹭鸶隐藏其中，只有当它起飞时，人们才能发现它的存在。</p>
+<p>茂密的柳条中藏着一只鹦鹉，人们只听到它清脆的鸣叫，才意识到它的所在。</p>
+<p>许多事物的真相和本质，就像隐藏的鹭鸶和鹦鹉一样，平时是看不见的。只有在特定的时机它们才会显露出来。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="第六回-何九受贿瞒天-王婆帮闲遇雨">第六回 何九受贿瞒天  王婆帮闲遇雨</h2>
+<p><strong>原文摘录</strong><br>
+别后谁知珠分玉剖。忘海誓山盟天共久，偶恋着山鸡，辄弃鸾俦。</p>
+<p>从此箫郎泪暗流，过秦楼几空回首。纵新人胜旧，也应须一别，洒泪登舟。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+“珠分玉剖”比喻原本像珍珠和美玉一样完美结合的婚姻或关系，被硬生生地分离、剖开。
+<p>“山鸡”比喻庸俗、低劣的新欢；“鸾俦”比喻高贵、美好的原配（鸾凤是传说中的神鸟，鸾俦即指如鸾凤般和谐的伴侣）</p>
+<p>“箫郎”在古代诗词中常用作女子对其情郎的爱称。这里指代被抛弃的女子自己。</p>
+<p>“秦楼”同样指代女子曾经的居所，充满恩爱回忆的地方。“空回首”表达了物是人非、徒增伤感的无奈。</p>
+<p>以女子的口吻，淋漓尽致地抒发了在男权社会下被随意抛弃的女性悲歌<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+光阴迅速，日月如梭，西门庆刮剌那妇人将两月有余。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+妇人陪西门庆脸儿相贴，腿儿相压，并肩一处饮酒。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+且说婆子提着个篮儿，走到街上打酒买肉。那时正值五月初旬天气，大雨时行。只见红日当天，忽被黑云遮掩，俄而大雨倾盆。但见：乌云生四野，黑雾锁长空。刷剌剌漫空障日飞来，一点点击得芭蕉声碎。狂风相助，侵天老桧掀翻；霹雳交加，泰华嵩乔震动。洗炎驱暑，润泽田苗，正是：江淮河济添新水，翠竹红榴洗濯清。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+等了一歇，那雨脚慢了些，大步云飞来家。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+寂静兰房簟枕凉，佳人才子意何长。方才枕上浇红烛，忽又偷来火隔墙。</p>
+<p>粉蝶探香花萼颤，蜻蜓戏水往来狂。情浓乐极犹余兴，珍重檀郎莫相忘。<br>
+<br /><br /></p>
+<h2 id="第七回-薛媒婆说娶孟三儿-杨姑娘气骂张四舅">第七回 薛媒婆说娶孟三儿  杨姑娘气骂张四舅</h2>
+<p><strong>原文摘录</strong><br>
+这薛嫂儿一席话，说的西门庆欢从额角眉尖出，喜向腮边笑脸生。正是：媒妁殷勤说始终，孟姬爱嫁富家翁。有缘千里能相会，无缘对面不相逢。<br>
+<br /><br /></p>
+<h2 id="第八回-盼情郎佳人占鬼卦-烧夫灵和尚听声">第八回 盼情郎佳人占鬼卦  烧夫灵和尚听声</h2>
+<p><strong>原文摘录</strong><br>
+自吃你卖粉团的撞见了敲板儿蛮子叫冤屈──麻饭胳胆的帐</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+“自吃你卖粉团的”：自己吃自己卖的粉团，比喻“自作自受”或“自己惹的事”。
+<p>“撞见了敲板儿蛮子”：“敲板儿”可能指敲竹杠、敲诈；“蛮子”是旧时对南方人或外乡人的贬称，这里可能指“难缠的人”。</p>
+<p>“叫冤屈”：被冤枉、喊冤。</p>
+<p>“麻饭胳胆的帐”：这是关键的一句，听起来像是一句谐音俚语，其实是“麻烦疙瘩的账”或“麻饭疙瘩的帐”的谐音，意指一笔糊涂账、说不清道不明的麻烦事。自己惹的祸，碰上了难缠的人，结果惹上一笔说不清道不明的糊涂账。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+挨一日似三秋，盼一夜如半夏<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+光阴似箭，日月如梭，又早到了八月初六日。西门庆拿了数两碎银钱，来妇人家，教王婆报恩寺请了六个僧，在家做水陆，超度武大，晚夕除灵。道人头五更就挑了经担来，铺陈道场，悬挂佛像。王婆伴厨子在灶上安排斋供。西门庆那日就在妇人家歇了。不一时，和尚来到，摇响灵杵，打动鼓钹，讽诵经忏，宣扬法事，不必细说。</p>
+<p>且说潘金莲怎肯斋戒，陪伴西门庆睡到日头半天，还不起来。和尚请斋主拈香佥字，证盟礼佛，妇人方才起来梳洗，乔素打扮，来到佛前参拜。众和尚见了武大这老婆，一个个都迷了佛性禅心，关不住心猿意马，七颠八倒，酥成一块。但见：班首轻狂，念佛号不知颠倒；维摩昏乱，诵经言岂顾高低。烧香行者，推倒花瓶；秉烛头陀，误拿香盒。宣盟表白，大宋国错称做大唐国；忏罪阇黎，武大郎几念武大娘。长老心忙，打鼓借拿徒弟手；沙弥情荡，罄槌敲破老僧头。从前苦行一时休，万个金刚降不住。<br>
+<br /><br /></p>
+<h2 id="第九回-西门庆偷娶潘金莲-武都头误打李皂隶">第九回 西门庆偷娶潘金莲  武都头误打李皂隶</h2>
+<p><strong>原文摘录</strong><br>
+眉似初春柳叶，常含着雨恨云愁；脸如三月桃花，暗带着风情月意。纤腰袅娜，拘束的燕懒莺慵；檀口轻盈，勾引得峰狂蝶乱。玉貌妖娆花解语，芳容窈窕玉生香。</p>
+<p>吴月娘从头看到脚，风流往下跑；从脚看到头，风流往上流。论风流，如水泥晶盘内走明珠；语态度，似红杏枝头笼晓日。看了一回，口中不言，心内想道：“小厮每来家，只说武大怎样一个老婆，不曾看见，不想果然生的标致，怪不的俺那强人爱他。”<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+盘旋似怪风侵骨冷，凛冽如杀气透肌寒<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+李公吃了张公酿，郑六生儿郑九当。世间几许不平事，都付时人话短长。<br>
+<br /><br /></p>
+<h2 id="第十回-义士充配孟州道-妻妾玩赏芙蓉亭">第十回 义士充配孟州道  妻妾玩赏芙蓉亭</h2>
+<p><strong>原文摘录</strong><br>
+香焚宝鼎，花插金瓶。器列象州之古玩，帘开合浦之明珠。水晶盘内，高堆火枣交梨；碧玉杯中，满泛琼浆玉液。烹龙肝，炮凤腑，果然下箸了万钱；黑熊掌，紫驼蹄，酒后献来香满座。碾破凤团，白玉瓯中分白浪；斟来琼液，紫金壶内喷清香。毕竟压赛孟尝君，只此敢欺石崇富。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+燕雀池塘语话喧，蜂柔蝶嫩总堪怜。虽然异数同飞鸟，贵贱高低不一般。<br>
+<br /><br /></p>
+<h2 id="第十一回-潘金莲激打孙雪娥-西门庆梳笼李桂姐">第十一回 潘金莲激打孙雪娥  西门庆梳笼李桂姐</h2>
+<p><strong>原文摘录</strong><br>
+三尸神暴跳，五脏气冲天<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+自古感恩并积恨，万年千载不生尘<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+罗衣叠雪，宝髻堆云。樱桃口，杏脸桃腮；杨柳腰，兰心蕙性。歌喉宛转，声如枝上流莺；舞态蹁跹，影似花间凤转。腔依古调，音出天然。舞回明月坠秦楼，歌遏行云遮楚馆。高低紧慢按宫商，轻重疾徐依格调，筝排雁柱声声慢，板拍红牙字字新。<br>
+<br /><br /></p>
+<h2 id="第十二回-潘金莲私仆受辱-刘理星魇胜求财">第十二回 潘金莲私仆受辱  刘理星魇胜求财</h2>
+<p><strong>原文摘录</strong><br>
+大盘小碗拿上来，众人坐下，说了一声动箸吃时，说时迟，那时快，但见：人人动嘴，个个低头。遮天映日，犹如蝗蚋一齐来；挤眼掇肩，好似饿牢才打出。这个抢风膀臂，如经年未见酒和肴；那个连三筷子，成岁不筵与席。一个汗流满面，却似与鸡骨秃有冤仇；一个油抹唇边，把猪毛皮连唾咽。吃片时，杯盘狼藉；啖顷刻，箸子纵横。这个称为食王元帅，那个号作净盘将军。酒壶番晒又重斟，盘馔已无还去探。</p>
+<p>正是：珍羞百味片时休，果然都送入五脏庙。</p>
+<p>当下众人吃得个净光王佛。西门庆与桂姐吃不上两钟酒，拣了些菜蔬，又被这伙人吃去了。那日把席上椅子坐折了两张，前边跟马的小厮，不得上来掉嘴吃，把门前供养的土地翻倒来，便剌了一泡䄬谷都的热屎。临出门来，孙寡嘴把李家明间内供养的镀金铜佛，塞在裤腰里；应伯爵推斗桂姐亲嘴，把头上金琢针儿戏了；谢希大把西门庆川扇儿藏了；</p>
+<p>祝实念走到桂卿房里照面，溜了他一面水银镜子。常峙节借的西门庆一钱银子，竞是写在嫖账上了。原来这起人，只伴着西门庆玩耍，好不快活。有诗为证：工妍掩袖媚如猱，乘兴闲来可暂留。若要死贪无厌足，家中金钥教谁收？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+甜言美语三冬暖，恶语伤人六月寒<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+捱一刻似三秋，盼一时如半夏<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一个不顾纲常贵贱，一个那分上下高低。一个色胆歪邪，管甚丈夫利害；一个心荡漾，纵他律法明条。百花园内，翻为快活排场；主母房中，变作行乐世界。霎时一滴驴精髓，倾在金莲玉体中。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这婆子领定，迳到潘金莲卧房明间内，等了半日，妇人才出来。瞎子见了礼，坐下。妇人说与他八字，贼瞎用手捏了捏，说道：“娘子庚辰年，庚寅月，乙亥日，己丑时。初八日立春，已交正月算命。依子平正论，娘子这八字，虽故清奇，一生不得夫星济，子上有些防碍。乙木生在正月间，亦作身旺论，不克当自焚。又两重庚金，羊刃大重，夫星难为，克过两个才好。”</p>
+<p>妇人道：“已克过了。”</p>
+<p>贼瞎子道：“娘子这命中，休怪小人说，子平虽取煞印格，只吃了亥中有癸水，丑中又有癸水，水太多了，冲动了只一重巳土，官煞混杂。论来，男人煞重掌威权，女子煞重必刑夫。所以主为人聪明机变，得人之宠。只有一件，今岁流年甲辰，岁运并临，灾殃立至。命中又犯小耗勾绞，两位星辰打搅，虽不能伤，却主有比肩不和，小人嘴舌，常沾些啾唧不宁之状。”<br>
+<br /><br /></p>
+<h2 id="第十三回-李瓶姐墙头密约-迎春儿隙底私窥">第十三回 李瓶姐墙头密约  迎春儿隙底私窥</h2>
+<p><strong>原文摘录</strong><br>
+原来大人家有两层窗寮，外面为窗，里面为寮。妇人打发丫鬟出去，关上里面两扇窗寮，房中掌着灯烛，外面通看不见。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+灵犀一点透酥胸；帐挽银钩，眉黛两弯垂玉脸。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+软如鼻涕浓如酱<br>
+<br /><br /></p>
+<h2 id="第十四回-花子虚因气丧身-李瓶儿迎奸赴会">第十四回 花子虚因气丧身  李瓶儿迎奸赴会</h2>
+<p><strong>原文摘录</strong><br>
+家人说着耳边风，外人说着金字经<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+富贵自是福来投，利名还有利名忧。命里有时终须有，命里无时莫强求。<br>
+<br /><br /></p>
+<h2 id="第十五回-佳人笑赏玩灯楼-狎客帮嫖丽春院">第十五回 佳人笑赏玩灯楼  狎客帮嫖丽春院</h2>
+<p><strong>原文摘录</strong><br>
+这房子门面四间，到底三层：临街是楼；仪门内两边厢房，三间客坐，一间梢间；过道穿进去，第三层三间卧房，一间厨房。后边落地紧靠着乔皇亲花园。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+那灯市中人烟凑集，十分热闹。当街搭数十座灯架，四下围列诸般买卖，玩灯男女，花红柳绿，车马轰雷。但见：山石穿双龙戏水，云霞映独鹤朝天。金屏灯、玉楼灯见一片珠玑；荷花灯、芙蓉灯散千围锦绣。绣球灯皎皎洁洁，雪花灯拂拂纷纷。秀才灯揖让进止，存孔孟之遗风；媳妇灯容德温柔，效孟姜之节操。和尚灯月明与柳翠相连，判官灯钟馗共小妹并坐。师婆灯挥羽扇假降邪神，刘海灯背金蟾戏吞至宝。骆驼灯、青狮灯驮无价之奇珍；猿猴灯、白象灯进连城之秘宝。七手八脚螃蟹灯倒戏清波，巨大口髯鲇鱼灯平吞绿藻。银蛾斗彩，雪柳争辉。鱼龙沙戏，七真五老献丹书；吊挂流苏，九夷八蛮来进宝。村里社鼓，队队喧阗；百戏货郎，桩桩斗巧。转灯儿一来一往，吊灯儿或仰或垂。琉璃瓶映美女奇花，云母障并瀛州阆苑。王孙争看小栏下，蹴鞠齐云；仕女相携高楼上，娇娆炫色。卦肆云集，相幙星罗：讲新春造化如何，定一世荣枯有准。又有那站高坡打谈的，词曲杨恭；到看这扇响钹游脚僧，演说三藏。卖元宵的高堆果馅，粘梅花的齐插枯枝。剪春娥，鬓边斜插闹东风；祷凉钗，头上飞金光耀日。围屏画石崇之锦帐，珠帘绘梅月之双清。虽然览不尽鳌山景，也应丰登快活年。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+柳底花阴压路尘，一回游赏一回新。不知买尽长安笑，活得苍生几户贫？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+笑骂由他笑骂，欢娱我且欢娱。<br>
+<br /><br /></p>
+<h2 id="第十六回-西门庆择吉佳期-应伯爵追欢喜庆">第十六回 西门庆择吉佳期  应伯爵追欢喜庆</h2>
+<p><strong>原文摘录</strong><br>
+倾城倾国莫相疑，巫水巫云梦亦痴。 红粉情多销骏骨，金兰谊薄惜蛾眉。 温柔乡里精神健，窈窕风前意态奇。 村子不知春寂寂，千金此夕故踟蹰。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+金炉添兽炭，宝篆爇龙涎。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不然我就嚷的尘邓邓的。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+要不然我就大声叫嚷，闹得个天翻地覆、乌烟瘴气。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+自古舡多不碍港，车多不碍路<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+落得河水不洗船</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+明明有现成的、非常便利的条件或机会，却不知道加以利用，去做一件对自己和他人都有利、顺理成章的事情。结果白白浪费了机会，把事情搞僵，让自己陷入被动或不利的境地。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+真个是年随情少，酒因境多。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+年华随情感淡薄而显得短暂或寡淡，酒意因境遇变迁而愈饮愈多
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="第十七回-宇给事劾倒杨提督-李瓶儿许嫁蒋竹山">第十七回 宇给事劾倒杨提督  李瓶儿许嫁蒋竹山</h2>
+<p><strong>原文摘录</strong><br>
+西门庆先和妇人云雨一回，然后乘着酒兴，坐于床上，令妇人横躺于衽席之上，与他品箫。但见：不竹不丝不石，肉音别自唔咿。流苏瑟瑟碧纱垂，辨不出宫商角徵。 一点樱桃欲绽，纤纤十指频移。深吞添吐两情痴，不觉灵犀味美。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+天下之膏腴已尽，国家之纲纪废弛<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+惊伤六叶连肝肺，吓坏三毛七孔心。<br>
+<br /><br /></p>
+<h2 id="第十八回-赂相府西门脱祸-见娇娘敬济销魂">第十八回 赂相府西门脱祸 见娇娘敬济销魂</h2>
+<p><strong>原文摘录</strong><br>
+金风淅淅，玉露泠泠<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不如意事常八九，可与人言无二三。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+那时正值七月二十头天气，夜间有些余热，这潘金莲怎生睡得着？忽听碧纱帐内一派蚊雷，不免赤着身子起来，执烛满帐照蚊。照一个，烧一个。<br>
+<br /><br /></p>
+<h2 id="第十九回-草里蛇逻打蒋竹山-李瓶儿情感西门庆">第十九回 草里蛇逻打蒋竹山 李瓶儿情感西门庆</h2>
+<p><strong>原文摘录</strong><br>
+里面花木庭台，一望无际，端的好座花园。但见：正面丈五高，周围二十板。当先一座门楼，四下几间台榭。假山真水，翠竹苍松。高而不尖谓之台，巍而不峻谓之榭。四时赏玩，各有风光：春赏燕游堂，桃李争妍；夏赏临溪馆，荷莲斗彩；秋赏叠翠楼，黄菊舒金；冬赏藏春阁，白梅横玉。更有那娇花笼浅径，芳树压雕栏，弄风杨柳纵蛾眉，带雨海棠陪嫩脸。燕游堂前，灯光花似开不开；藏春阁后，白银杏半放不放。湖山侧才绽金钱，宝槛边初生石笋。翩翩紫燕穿帘幕，呖呖黄莺度翠阴。也有那月窗雪洞，也有那水阁风亭。木香棚与荼蘼架相连，千叶桃与三春柳作对。松墙竹径，曲水方池，映阶蕉棕，向日葵榴。游渔藻内惊人，粉蝶花间对舞。正是：芍药展开菩萨面，荔枝擎出鬼王头。</p>
+<p>当下吴月娘领着众妇人，或携手游芳径之中，或斗草坐香茵之上。一个临轩对景，戏将红豆掷金鳞；一个伏槛观花，笑把罗纨惊粉蝶。月娘于是走在一个最高亭子上，名唤卧云亭，和孟玉楼、李娇儿下棋。潘金莲和西门大姐、孙雪娥都在玩花楼望下观看。见楼前牡丹花畔，芍药圃、海棠轩、蔷薇架、木香棚，又有耐寒君子竹、欺雪大夫松。端的四时有不谢之花，八节有长春之景。观之不足，看之有余。<br>
+<br /><br /></p>
+<h2 id="第二十回-傻帮闲趋奉闹华筵-痴子弟争锋毁花院">第二十回 傻帮闲趋奉闹华筵  痴子弟争锋毁花院</h2>
+<p><strong>原文摘录</strong><br>
+可惜团圆今夜月，清光咫尺别人圆<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+逢人且说三分话未可全抛一片心<br>
+<br /><br /></p>
+<h2 id="第二十一回-吴月娘扫雪烹茶-应伯爵替花邀酒">第二十一回 吴月娘扫雪烹茶  应伯爵替花邀酒</h2>
+<p><strong>原文摘录</strong><br>
+西门庆把眼观看帘前那雪，如撏绵扯絮，乱舞梨花，下的大了。端的好雪。但见：初如柳絮，渐似鹅毛。唰唰似数蟹行沙上，纷纷如乱琼堆砌间。但行动衣沾六出，只顷刻拂满蜂鬓。衬瑶台，似玉龙翻甲绕空舞；飘粉额，如白鹤羽毛连地落。正是：冻合玉楼寒起粟，光摇银海烛生花。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+空庭高楼月，非复三五圆。何须照床里，终是一人眠。<br>
+<br /><br /></p>
+<h2 id="第二十二回-蕙莲儿偷期蒙爱-春梅姐正色闲邪">第二十二回 蕙莲儿偷期蒙爱  春梅姐正色闲邪</h2>
+<p><strong>原文摘录</strong><br>
+这个妇人小金莲两岁，今年二十四岁，生的白净，身子儿不肥不瘦，模样儿不短不长，比金莲脚还小些儿。性明敏，善机变，会妆饰，就是嘲汉子的班头，坏家风的领袖。若说他底的本事，他也曾：斜倚门儿立，人来侧目随。托腮并咬指，无故整衣裳。</p>
+<p>坐立频摇腿，无人曲唱低。开窗推户牖，停针不语时。</p>
+<p>未言先欲笑，必定与人私。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+解带色已战，触手心愈忙。那识罗裙内，销魂别有香。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+两手劈开生死路，翻身跳出是非门。<br>
+<br /><br /></p>
+<h2 id="第二十三-回赌棋枰瓶儿输钞-觑藏春潘氏潜踪">第二十三 回赌棋枰瓶儿输钞  觑藏春潘氏潜踪</h2>
+<p><strong>原文摘录</strong><br>
+谁人汲得西江水，难洗今朝一面羞<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+颠狂柳絮随风舞，轻薄桃花逐水流。<br>
+<br /><br /></p>
+<h2 id="第二十四回-敬济元夜戏娇姿-惠祥怒詈来旺妇">第二十四回 敬济元夜戏娇姿  惠祥怒詈来旺妇</h2>
+<p><strong>原文摘录</strong><br>
+但见银河清浅，珠斗烂斑，一轮团圆皎月从东而出，照得院宇犹如白昼。<br>
+<br /><br /></p>
+<h2 id="第二十五回-吴月娘春昼秋千-来旺儿醉中谤仙">第二十五回 吴月娘春昼秋千  来旺儿醉中谤仙</h2>
+<p><strong>原文摘录</strong><br>
+常言酒发顿腹之言<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+平生不作皱眉事，世上应无切齿人<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+数语拨开君子路，片言提醒梦中人。<br>
+<br /><br /></p>
+<h2 id="第二十六回-来旺儿递解徐州-宋蕙莲含羞自缢">第二十六回 来旺儿递解徐州  宋蕙莲含羞自缢</h2>
+<h2 id="第二十七回-李瓶儿私语翡翠轩-潘金莲醉闹葡萄架">第二十七回 李瓶儿私语翡翠轩  潘金莲醉闹葡萄架</h2>
+<p><strong>原文摘录</strong><br>
+微雨过碧矶之润，晚风凉落院之清。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+四面雕栏石甃，周围翠叶深稠。迎眸霜色，如千枝紫弹坠流苏：喷鼻秋香，似万架绿云垂绣带。缒缒马乳，水晶丸里浥琼浆；滚滚绿珠，金屑架中含翠渥。乃西域移来之种，隐甘泉珍玩之芳。端的四时花木衬幽葩，明月清风无价买。<br>
+<br /><br /></p>
+<h2 id="第二十八回-陈敬济徼幸得金莲-西门庆糊涂打铁棍">第二十八回 陈敬济徼幸得金莲  西门庆糊涂打铁棍</h2>
+<h2 id="信息积累">信息积累</h2>
+<p>梼杌（tao 2 wu 4）：传说中的凶兽名；传说为远古的恶人“四凶”之一；泛指恶人；楚史书名</p>
+<p>冻馁（nei 3）：饥寒交迫</p>
+<p>眠花宿柳：比喻狎妓</p>
+<p>惹草招风</p>
+<p>双陆：古代一种博戏；指进行双陆之戏</p>
+<p>帮闲：为官僚、富豪们消遣玩乐而凑趣效劳；指帮闲的人</p>
+<p>帮闲抹嘴：逢迎凑趣，油嘴滑舌</p>
+<p>赉（lai 4）：赏赐；赐予</p>
+<p>机深诡谲</p>
+<p>窠子（ke 1）：私娼的俗称，元杂剧中多作“科子”</p>
+<p>玳宴（dai 4）：源于“玳瑁宴”的简称，特指以玳瑁装饰的华美宴席，后泛指富贵人家举办的豪华宴会</p>
+<p>绉纱（zhou 4）：织有皱纹的丝织品</p>
+<p>褶子（zhe 3 zi 0 xi 2 zi 0 ）：衣服上经折叠后缝成的纹，衣服布匹纸张等经折叠后留下的痕迹，脸上的皱纹；戏曲服装之一</p>
+<p>天青：深黑而微红的颜色</p>
+<p>香楮（chu 3）：祭神鬼用的香和纸钱</p>
+<p>香楮奠礼</p>
+<p>婆儿烧香，当不的老子念佛：比喻各人尽各人的心，他人无法替代</p>
+<p>馋痨痞（chan 2 lao 2 pi 3）：源自中医病症的术语，指患者因食欲异常旺盛而得名的病理状态</p>
+<p>搊（chou 1 zou 3）：用手指弹拨弦索乐器，用手指或带齿的东西在物体上划过，束紧，撩，掀，搀扶，迎合，凑合，编造，皱，刁滑；抓，揪住</p>
+<p>锣鸣鼓响</p>
+<p>恁（nen 4 nin 2）：代词，这么，那样，这，那，什么，怎样；您</p>
+<p>猥蕤（wei 1 rui 2）：葳蕤，一指草木茂盛枝叶下垂貌；二指羽毛饰物貌；三指华美貌，艳丽貌；四指柔弱貌；五指萎顿貌；六指锁；七指古代一种首饰；八指草名，即萎蕤。</p>
+<p>奁（lian 2）：古代盛梳妆用品的器具；陪嫁的衣物</p>
+<p>踅（xue 2）：来回地走；回折，折转；形容动作很轻，踅手踅脚</p>
+<p>猥瑣（wei 3 suo 3）：鄙陋卑劣，庸俗卑下；庸俗不大方；卑贱微末；琐细繁杂</p>
+<p>罗唣（luo 2 zao 4）：开玩笑，调戏</p>
+<p>腌臜（a 1 za 1）：脏，不干净；卑鄙龌龊；心里别扭不痛快</p>
+<p>酒阑（lan 2）：酒宴将近</p>
+<p>娉婷（ping 1 ting 2）：形容女子姿态柔美或代指美人的词汇</p>
+<p>笄（ji 1）：本意为古代盘头发或别住帽子用的簪子；指女子十五岁成年</p>
+<p>帻（ze 2）：本意为头巾；类似帽子的东西</p>
+<p>画卯（mao 3）：中国古代官署实行的考勤制度，因在卯时（晨五至七时）到衙署签名报到</p>
+<p>蹀里蹀斜（die 2）：指行步不正貌</p>
+<p>馓（san 3）：多地传统油炸小吃</p>
+<p>乱琼碎玉：比喻冰雪</p>
+<p>云鬟（huan 2）：形容女子发髻秀美</p>
+<p>兜揽：招引，招揽，将事务或责任主动承担于己身</p>
+<p>噙齿戴发（qin 2）：形容男子汉的豪迈气概</p>
+<p>浮浪：到处游荡，不务正业；轻浮放荡；漂泊，无定居</p>
+<p>鬒（zhen 3）：头发黑而密</p>
+<p>絷（zhi 2）：拴住马足；引申为拴缚；</p>
+<p>嘲风弄月：吟咏清风，玩赏月色，泛指写诗抒情；</p>
+<p>馉饳（gu 3 duo 0）：馄饨</p>
+<p>百伶百巧：形容非常机灵乖巧</p>
+<p>十病九痛：形容经常生病</p>
+<p>勒掯（lei 1 ken 0 lei 1 ken 4）：意为通过刁难、克扣火推脱等手段强迫他人</p>
+<p>鲊（zha 3 zha 4）：用腌、槽等方法加工的鱼类食品；泛指腌制食品；海蜇</p>
+<p>馔（zhuan 4）：食物；菜肴</p>
+<p>涎瞪瞪：方言中形容贪婪注视的样态</p>
+<p>嚛（hu 4 yo 0）：味道过分浓烈；语气助词</p>
+<p>赍（ji 1）：持，带，送。抱着，怀着</p>
+<p>攮（nang 3）：推；刺，扎；常与贬义词合成詈词</p>
+<p>詈（li 4）：骂，责骂</p>
+<p>马蹄刀木杓里切菜——水泄不漏：马蹄刀：一种刀身微弯，形状像马蹄的小刀。木杓（sháo）：即木勺子，本身是凹形的。一把弯刀在一个凹形的木勺里切菜。因为刀和勺子的形状都是向内凹的，完美契合，切菜时汁水、菜屑一点也不会漏出去。核心含义是形容人做事、说话非常周到、严密，一点儿破绽或漏洞都没有。</p>
+<p>㒲（ri 4 cai 2）：发生性关系；同财</p>
+<p>叵耐（po 3 nai 4）：不可容忍，可恨；无奈</p>
+<p>栗暴：将食指、中指弯曲起来敲击人头顶的动作</p>
+<p>欲救生快活，须下死功夫：如果真想求得人生的安乐、快活与成就，就必须下定决心，付出极大的、近乎拼命的努力。</p>
+<p>帻（ze 2）：古代包扎发髻的布</p>
+<p>情沾意密</p>
+<p>刮剌：描述男女间挑逗，勾搭行为；挣脱</p>
+<p>殢雨尤云（ti 4）：比喻男女间缠绵欢爱的场景</p>
+<p>簟（dian 4）：指日常用来障蔽和垫物的竹席</p>
+<p>盘桓：徘徊，逗留；逗弄；盘旋</p>
+<p>山核桃──差着一槅哩：比喻事情还没完全到位，或者关系还隔着一层，没接触到核心</p>
+<p>觌面（di 2）：见面</p>
+<p>趫（qiao 2）：行动轻捷；善于奔跑；引申为离开；壮盛，气盛；翘；指凸出</p>
+<p>膫子（liao 2）：指男性生殖器；形容无能无用之人</p>
+<p>黄猫儿黑尾：比喻人一旦地位变化或得意后就翻脸不认人</p>
+<p>跣（xian 3）：光着脚，引申为赤裸</p>
+<p>鈒（sa 4 xi 4）：短矛；一种农具；用金银等在器物上嵌设图案和文字；指用金银等嵌饰的器物；插</p>
+<p>咭（xi 1 ji 1）：笑声；象声词</p>
+<p>岫（xiu 4）；山洞；峰峦</p>
+<p>闾巷（lv 2）：里巷，乡里；借指民间</p>
+<p>乔模乔样：妖魔怪样</p>
+<p>鹣鹣（jian 1）：古代传说中的比翼鸟</p>
+<p>缯（zeng 1 zeng 4）：古代丝织品的总称；姓；方言，绑，扎</p>
+<p>齁（hou 1）：熟睡时的鼻息声，也指熟睡打鼾；食用太咸或太甜之物使喉咙感到不舒服；方言，过甚，非常</p>
+<p>飙（biao 1）：旋风，暴风；指风；迅疾</p>
+<p>拶（za 1 zan 3）：逼，挤压；压紧，专指旧时的一种酷刑，如拶指</p>
+<p>膂力（lv 3）：体力</p>
+<p>赍（ji 1）：持，带，送；抱着，怀着</p>
+<p>迤逦（yi 3 li 3）：曲折连绵；斜着延伸；缓步行走的样子；逐渐</p>
+<p>痞（pi 3）：指胸腹内郁结成块的病；恶棍，流氓无赖；坏，不好；欺压</p>
+<p>谑浪（xue 4）：意为戏谑放荡</p>
+<p>阗（tian 2）：充满，填塞；喧闹</p>
+<p>颠寒作热：形容人忽冷忽热、喜怒无常的姿态，多指撒娇作态或寻事生非的言行</p>
+<p>飐（zhan 3）：风吹物使颤动摇曳；摇动；能人，宋元时指相扑艺人</p>
+<p>趫（qiao 2）：行动轻捷；善于奔跑；引申为走掉，离开；壮盛；翘起；凸出</p>
+<p>毴（bi 1）：女子外生殖器</p>
+<p>三尸神：道教术语，指人体内驻守上、中、下丹田的三尸神，又称三彭，三虫。上尸名彭距，中尸名彭踬，下尸名彭蹻，分别象征华饰、滋味、淫欲</p>
+<p>穷冗：犹言穷忙，多用于自谦之词</p>
+<p>虔婆（qian 2）：指不正派的老婆子，贼婆娘，鸨母</p>
+<p>鼍（tuo 2）：扬子鳄，也称鼍龙，猪婆龙</p>
+<p>粲枕孤帏</p>
+<p>蚋（rui 4）：一种吸血昆虫</p>
+<p>掏渌（lu 4）：亦作掏漉，犹劳碌</p>
+<p>迎欢卖俏</p>
+<p>齐臻臻（zhen 1）：整齐貌</p>
+<p>瞽目人（gu 3）：本意指瞎子，特指因失明而担任乐官或说书人的盲人</p>
+<p>醪（lao 2）：汁渣混合的酒，又称浊酒；酒的总称</p>
+<p>斝（jia 3）：古代青铜贮酒器</p>
+<p>寮（liao 2）：小屋；小室</p>
+<p>屙金溺银（e 1 jin 1 niao 4 yin 2）：比喻生财有术</p>
+<p>于飞：飞，偕飞，于，语助词后因以喻夫妻或男女同行或恩爱和合</p>
+<p>湫窄（jiao 3）：狭窄</p>
+<p>爇（ruo 4）：焚烧</p>
+<p>安磉（sang 3）：安放柱础，即安装垫在木柱之下的石质基础。</p>
+<p>蕤宾（rui 2）：中国古代 “十二律吕” 中的第七律；指代农历五月</p>
+<p>灯火荧煌</p>
+<p>鲛绡（jiao 1 xiao 1）：传说中鲛人所织的绡，也借指薄绢、轻纱</p>
+<p>衽（ren 4）：本义衣襟，指床、草席、袖子等</p>
+<p>猃狁（xian 3 yun 3）：我国古代北方少数民族名</p>
+<p>憸（xian 1）：奸佞，邪僻；指奸佞之人</p>
+<p>憸邪奸险</p>
+<p>绸缪（chou 2 mou 2）：紧密缠缚的样子，引申为纠缠；情意殷切；比喻事前做好准备工作</p>
+<p>缱绻（qian 3 quan 3）：缠绵，形容感情深厚；特指男女恋情</p>
+<p>绸缪缱绻</p>
+<p>紫陌：指京师郊野的道路</p>
+<p>抇（hu 2 gu 3）：挖掘；搅乱</p>
+<p>麹（qu 1）：酒曲；酒；淡黄色；姓</p>
+<p>罅（xia 4）：裂开；缝隙</p>
+<p>颡（sang 3）：额头</p>
+<p>毴声浪颡</p>
+<p>乔龙画虎：装模做样</p>
+<p>靉靆（ai 4 dai 4）：云盛貌；飘拂貌，缭绕貌；眼镜</p>
+<p>麝兰：麝香和兰香的合称</p>
+<p>髩（bin 4）：颊发，指面颊近耳处的头发</p>
+<p>撏（xian 2）：拔取，摘取，摘录，扯，撕</p>
+<p>撏绵扯絮</p>
+<p>扊扅（yan 3 yi 2）：门闩</p>
+<p>捩（lie 4）：扭转</p>
+<p>襴（lan 2）：指上下衣相连的服装</p>
+<p>刬（chan 4）：同铲，削除，铲除；一刬，表示“一概”“一味”</p>
+<p>夤夜（yin 2）：深夜</p>
+<p>嚛（hu 4）：味道过分浓烈；语气助词</p>
+<p>缘法相投</p>
+<p>雕栏石甃</p>
+<p>甃（zhou 4）：本义指以砖瓦砌筑的井壁，后延伸指代砌砖工艺或砖砌工程</p>
+<p>翠叶深稠</p>
+<p>石磴：指以石头铺砌成的台阶</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/">
+            https://illusionzone.github.io/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【察之作之】变成猫 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】怀疑的首要性 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9B%9E-%E8%A5%BF%E9%97%A8%E5%BA%86%E7%83%AD%E7%BB%93%E5%8D%81%E5%85%84%E5%BC%9F-%E6%AD%A6%E4%BA%8C%E9%83%8E%E5%86%B7%E9%81%87%E4%BA%B2%E5%93%A5%E5%AB%82"><span class="toc-text">第一回 西门庆热结十兄弟 武二郎冷遇亲哥嫂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9B%9E-%E4%BF%8F%E6%BD%98%E5%A8%98%E5%B8%98%E4%B8%8B%E5%8B%BE%E6%83%85-%E8%80%81%E7%8E%8B%E5%A9%86%E8%8C%B6%E5%9D%8A%E8%AF%B4%E6%8A%80"><span class="toc-text">第二回 俏潘娘帘下勾情 老王婆茶坊说技</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%9B%9E-%E5%AE%9A%E6%8C%A8%E5%85%89%E7%8E%8B%E5%A9%86%E5%8F%97%E8%B4%BF-%E8%AE%BE%E5%9C%88%E5%A5%97%E6%B5%AA%E5%AD%90%E7%A7%81%E6%8C%91"><span class="toc-text">第三回 定挨光王婆受贿 设圈套浪子私挑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E8%B5%B4%E5%B7%AB%E5%B1%B1%E6%BD%98%E6%B0%8F%E5%B9%BD%E6%AC%A2-%E9%97%B9%E8%8C%B6%E5%9D%8A%E7%9A%B2%E5%93%A5%E4%B9%89%E6%84%A4"><span class="toc-text">第四回 赴巫山潘氏幽欢 闹茶坊皲哥义愤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%9B%9E-%E6%8D%89%E5%A5%B8%E8%AE%A1%E7%9A%B2%E5%93%A5%E5%AE%9A%E8%AE%A1-%E9%A5%AE%E9%B8%A9%E8%8D%AF%E6%AD%A6%E5%A4%A7%E9%81%AD%E6%AE%83"><span class="toc-text">第五回 捉奸计皲哥定计 饮鸩药武大遭殃</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%9B%9E-%E4%BD%95%E4%B9%9D%E5%8F%97%E8%B4%BF%E7%9E%92%E5%A4%A9-%E7%8E%8B%E5%A9%86%E5%B8%AE%E9%97%B2%E9%81%87%E9%9B%A8"><span class="toc-text">第六回 何九受贿瞒天  王婆帮闲遇雨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%9B%9E-%E8%96%9B%E5%AA%92%E5%A9%86%E8%AF%B4%E5%A8%B6%E5%AD%9F%E4%B8%89%E5%84%BF-%E6%9D%A8%E5%A7%91%E5%A8%98%E6%B0%94%E9%AA%82%E5%BC%A0%E5%9B%9B%E8%88%85"><span class="toc-text">第七回 薛媒婆说娶孟三儿  杨姑娘气骂张四舅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%9B%9E-%E7%9B%BC%E6%83%85%E9%83%8E%E4%BD%B3%E4%BA%BA%E5%8D%A0%E9%AC%BC%E5%8D%A6-%E7%83%A7%E5%A4%AB%E7%81%B5%E5%92%8C%E5%B0%9A%E5%90%AC%E5%A3%B0"><span class="toc-text">第八回 盼情郎佳人占鬼卦  烧夫灵和尚听声</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%9B%9E-%E8%A5%BF%E9%97%A8%E5%BA%86%E5%81%B7%E5%A8%B6%E6%BD%98%E9%87%91%E8%8E%B2-%E6%AD%A6%E9%83%BD%E5%A4%B4%E8%AF%AF%E6%89%93%E6%9D%8E%E7%9A%82%E9%9A%B6"><span class="toc-text">第九回 西门庆偷娶潘金莲  武都头误打李皂隶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9E-%E4%B9%89%E5%A3%AB%E5%85%85%E9%85%8D%E5%AD%9F%E5%B7%9E%E9%81%93-%E5%A6%BB%E5%A6%BE%E7%8E%A9%E8%B5%8F%E8%8A%99%E8%93%89%E4%BA%AD"><span class="toc-text">第十回 义士充配孟州道  妻妾玩赏芙蓉亭</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E5%9B%9E-%E6%BD%98%E9%87%91%E8%8E%B2%E6%BF%80%E6%89%93%E5%AD%99%E9%9B%AA%E5%A8%A5-%E8%A5%BF%E9%97%A8%E5%BA%86%E6%A2%B3%E7%AC%BC%E6%9D%8E%E6%A1%82%E5%A7%90"><span class="toc-text">第十一回 潘金莲激打孙雪娥  西门庆梳笼李桂姐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%9B%9E-%E6%BD%98%E9%87%91%E8%8E%B2%E7%A7%81%E4%BB%86%E5%8F%97%E8%BE%B1-%E5%88%98%E7%90%86%E6%98%9F%E9%AD%87%E8%83%9C%E6%B1%82%E8%B4%A2"><span class="toc-text">第十二回 潘金莲私仆受辱  刘理星魇胜求财</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E5%9B%9E-%E6%9D%8E%E7%93%B6%E5%A7%90%E5%A2%99%E5%A4%B4%E5%AF%86%E7%BA%A6-%E8%BF%8E%E6%98%A5%E5%84%BF%E9%9A%99%E5%BA%95%E7%A7%81%E7%AA%A5"><span class="toc-text">第十三回 李瓶姐墙头密约  迎春儿隙底私窥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E5%9B%9E-%E8%8A%B1%E5%AD%90%E8%99%9A%E5%9B%A0%E6%B0%94%E4%B8%A7%E8%BA%AB-%E6%9D%8E%E7%93%B6%E5%84%BF%E8%BF%8E%E5%A5%B8%E8%B5%B4%E4%BC%9A"><span class="toc-text">第十四回 花子虚因气丧身  李瓶儿迎奸赴会</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E5%9B%9E-%E4%BD%B3%E4%BA%BA%E7%AC%91%E8%B5%8F%E7%8E%A9%E7%81%AF%E6%A5%BC-%E7%8B%8E%E5%AE%A2%E5%B8%AE%E5%AB%96%E4%B8%BD%E6%98%A5%E9%99%A2"><span class="toc-text">第十五回 佳人笑赏玩灯楼  狎客帮嫖丽春院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AD%E5%9B%9E-%E8%A5%BF%E9%97%A8%E5%BA%86%E6%8B%A9%E5%90%89%E4%BD%B3%E6%9C%9F-%E5%BA%94%E4%BC%AF%E7%88%B5%E8%BF%BD%E6%AC%A2%E5%96%9C%E5%BA%86"><span class="toc-text">第十六回 西门庆择吉佳期  应伯爵追欢喜庆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%83%E5%9B%9E-%E5%AE%87%E7%BB%99%E4%BA%8B%E5%8A%BE%E5%80%92%E6%9D%A8%E6%8F%90%E7%9D%A3-%E6%9D%8E%E7%93%B6%E5%84%BF%E8%AE%B8%E5%AB%81%E8%92%8B%E7%AB%B9%E5%B1%B1"><span class="toc-text">第十七回 宇给事劾倒杨提督  李瓶儿许嫁蒋竹山</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%B5%82%E7%9B%B8%E5%BA%9C%E8%A5%BF%E9%97%A8%E8%84%B1%E7%A5%B8-%E8%A7%81%E5%A8%87%E5%A8%98%E6%95%AC%E6%B5%8E%E9%94%80%E9%AD%82"><span class="toc-text">第十八回 赂相府西门脱祸 见娇娘敬济销魂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B9%9D%E5%9B%9E-%E8%8D%89%E9%87%8C%E8%9B%87%E9%80%BB%E6%89%93%E8%92%8B%E7%AB%B9%E5%B1%B1-%E6%9D%8E%E7%93%B6%E5%84%BF%E6%83%85%E6%84%9F%E8%A5%BF%E9%97%A8%E5%BA%86"><span class="toc-text">第十九回 草里蛇逻打蒋竹山 李瓶儿情感西门庆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9E-%E5%82%BB%E5%B8%AE%E9%97%B2%E8%B6%8B%E5%A5%89%E9%97%B9%E5%8D%8E%E7%AD%B5-%E7%97%B4%E5%AD%90%E5%BC%9F%E4%BA%89%E9%94%8B%E6%AF%81%E8%8A%B1%E9%99%A2"><span class="toc-text">第二十回 傻帮闲趋奉闹华筵  痴子弟争锋毁花院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%80%E5%9B%9E-%E5%90%B4%E6%9C%88%E5%A8%98%E6%89%AB%E9%9B%AA%E7%83%B9%E8%8C%B6-%E5%BA%94%E4%BC%AF%E7%88%B5%E6%9B%BF%E8%8A%B1%E9%82%80%E9%85%92"><span class="toc-text">第二十一回 吴月娘扫雪烹茶  应伯爵替花邀酒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%8C%E5%9B%9E-%E8%95%99%E8%8E%B2%E5%84%BF%E5%81%B7%E6%9C%9F%E8%92%99%E7%88%B1-%E6%98%A5%E6%A2%85%E5%A7%90%E6%AD%A3%E8%89%B2%E9%97%B2%E9%82%AA"><span class="toc-text">第二十二回 蕙莲儿偷期蒙爱  春梅姐正色闲邪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%89-%E5%9B%9E%E8%B5%8C%E6%A3%8B%E6%9E%B0%E7%93%B6%E5%84%BF%E8%BE%93%E9%92%9E-%E8%A7%91%E8%97%8F%E6%98%A5%E6%BD%98%E6%B0%8F%E6%BD%9C%E8%B8%AA"><span class="toc-text">第二十三 回赌棋枰瓶儿输钞  觑藏春潘氏潜踪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%9B%9E-%E6%95%AC%E6%B5%8E%E5%85%83%E5%A4%9C%E6%88%8F%E5%A8%87%E5%A7%BF-%E6%83%A0%E7%A5%A5%E6%80%92%E8%A9%88%E6%9D%A5%E6%97%BA%E5%A6%87"><span class="toc-text">第二十四回 敬济元夜戏娇姿  惠祥怒詈来旺妇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E5%9B%9E-%E5%90%B4%E6%9C%88%E5%A8%98%E6%98%A5%E6%98%BC%E7%A7%8B%E5%8D%83-%E6%9D%A5%E6%97%BA%E5%84%BF%E9%86%89%E4%B8%AD%E8%B0%A4%E4%BB%99"><span class="toc-text">第二十五回 吴月娘春昼秋千  来旺儿醉中谤仙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AD%E5%9B%9E-%E6%9D%A5%E6%97%BA%E5%84%BF%E9%80%92%E8%A7%A3%E5%BE%90%E5%B7%9E-%E5%AE%8B%E8%95%99%E8%8E%B2%E5%90%AB%E7%BE%9E%E8%87%AA%E7%BC%A2"><span class="toc-text">第二十六回 来旺儿递解徐州  宋蕙莲含羞自缢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%9D%8E%E7%93%B6%E5%84%BF%E7%A7%81%E8%AF%AD%E7%BF%A1%E7%BF%A0%E8%BD%A9-%E6%BD%98%E9%87%91%E8%8E%B2%E9%86%89%E9%97%B9%E8%91%A1%E8%90%84%E6%9E%B6"><span class="toc-text">第二十七回 李瓶儿私语翡翠轩  潘金莲醉闹葡萄架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E5%9B%9E-%E9%99%88%E6%95%AC%E6%B5%8E%E5%BE%BC%E5%B9%B8%E5%BE%97%E9%87%91%E8%8E%B2-%E8%A5%BF%E9%97%A8%E5%BA%86%E7%B3%8A%E6%B6%82%E6%89%93%E9%93%81%E6%A3%8D"><span class="toc-text">第二十八回 陈敬济徼幸得金莲  西门庆糊涂打铁棍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%9B%9E-%E8%A5%BF%E9%97%A8%E5%BA%86%E7%83%AD%E7%BB%93%E5%8D%81%E5%85%84%E5%BC%9F-%E6%AD%A6%E4%BA%8C%E9%83%8E%E5%86%B7%E9%81%87%E4%BA%B2%E5%93%A5%E5%AB%82"><span class="toc-text">第一回 西门庆热结十兄弟 武二郎冷遇亲哥嫂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%9B%9E-%E4%BF%8F%E6%BD%98%E5%A8%98%E5%B8%98%E4%B8%8B%E5%8B%BE%E6%83%85-%E8%80%81%E7%8E%8B%E5%A9%86%E8%8C%B6%E5%9D%8A%E8%AF%B4%E6%8A%80"><span class="toc-text">第二回 俏潘娘帘下勾情 老王婆茶坊说技</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%9B%9E-%E5%AE%9A%E6%8C%A8%E5%85%89%E7%8E%8B%E5%A9%86%E5%8F%97%E8%B4%BF-%E8%AE%BE%E5%9C%88%E5%A5%97%E6%B5%AA%E5%AD%90%E7%A7%81%E6%8C%91"><span class="toc-text">第三回 定挨光王婆受贿 设圈套浪子私挑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%9B%9E-%E8%B5%B4%E5%B7%AB%E5%B1%B1%E6%BD%98%E6%B0%8F%E5%B9%BD%E6%AC%A2-%E9%97%B9%E8%8C%B6%E5%9D%8A%E7%9A%B2%E5%93%A5%E4%B9%89%E6%84%A4"><span class="toc-text">第四回 赴巫山潘氏幽欢 闹茶坊皲哥义愤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E5%9B%9E-%E6%8D%89%E5%A5%B8%E8%AE%A1%E7%9A%B2%E5%93%A5%E5%AE%9A%E8%AE%A1-%E9%A5%AE%E9%B8%A9%E8%8D%AF%E6%AD%A6%E5%A4%A7%E9%81%AD%E6%AE%83"><span class="toc-text">第五回 捉奸计皲哥定计 饮鸩药武大遭殃</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E5%9B%9E-%E4%BD%95%E4%B9%9D%E5%8F%97%E8%B4%BF%E7%9E%92%E5%A4%A9-%E7%8E%8B%E5%A9%86%E5%B8%AE%E9%97%B2%E9%81%87%E9%9B%A8"><span class="toc-text">第六回 何九受贿瞒天  王婆帮闲遇雨</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E5%9B%9E-%E8%96%9B%E5%AA%92%E5%A9%86%E8%AF%B4%E5%A8%B6%E5%AD%9F%E4%B8%89%E5%84%BF-%E6%9D%A8%E5%A7%91%E5%A8%98%E6%B0%94%E9%AA%82%E5%BC%A0%E5%9B%9B%E8%88%85"><span class="toc-text">第七回 薛媒婆说娶孟三儿  杨姑娘气骂张四舅</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E5%9B%9E-%E7%9B%BC%E6%83%85%E9%83%8E%E4%BD%B3%E4%BA%BA%E5%8D%A0%E9%AC%BC%E5%8D%A6-%E7%83%A7%E5%A4%AB%E7%81%B5%E5%92%8C%E5%B0%9A%E5%90%AC%E5%A3%B0"><span class="toc-text">第八回 盼情郎佳人占鬼卦  烧夫灵和尚听声</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%9B%9E-%E8%A5%BF%E9%97%A8%E5%BA%86%E5%81%B7%E5%A8%B6%E6%BD%98%E9%87%91%E8%8E%B2-%E6%AD%A6%E9%83%BD%E5%A4%B4%E8%AF%AF%E6%89%93%E6%9D%8E%E7%9A%82%E9%9A%B6"><span class="toc-text">第九回 西门庆偷娶潘金莲  武都头误打李皂隶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9E-%E4%B9%89%E5%A3%AB%E5%85%85%E9%85%8D%E5%AD%9F%E5%B7%9E%E9%81%93-%E5%A6%BB%E5%A6%BE%E7%8E%A9%E8%B5%8F%E8%8A%99%E8%93%89%E4%BA%AD"><span class="toc-text">第十回 义士充配孟州道  妻妾玩赏芙蓉亭</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E5%9B%9E-%E6%BD%98%E9%87%91%E8%8E%B2%E6%BF%80%E6%89%93%E5%AD%99%E9%9B%AA%E5%A8%A5-%E8%A5%BF%E9%97%A8%E5%BA%86%E6%A2%B3%E7%AC%BC%E6%9D%8E%E6%A1%82%E5%A7%90"><span class="toc-text">第十一回 潘金莲激打孙雪娥  西门庆梳笼李桂姐</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%9B%9E-%E6%BD%98%E9%87%91%E8%8E%B2%E7%A7%81%E4%BB%86%E5%8F%97%E8%BE%B1-%E5%88%98%E7%90%86%E6%98%9F%E9%AD%87%E8%83%9C%E6%B1%82%E8%B4%A2"><span class="toc-text">第十二回 潘金莲私仆受辱  刘理星魇胜求财</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E5%9B%9E-%E6%9D%8E%E7%93%B6%E5%A7%90%E5%A2%99%E5%A4%B4%E5%AF%86%E7%BA%A6-%E8%BF%8E%E6%98%A5%E5%84%BF%E9%9A%99%E5%BA%95%E7%A7%81%E7%AA%A5"><span class="toc-text">第十三回 李瓶姐墙头密约  迎春儿隙底私窥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E5%9B%9E-%E8%8A%B1%E5%AD%90%E8%99%9A%E5%9B%A0%E6%B0%94%E4%B8%A7%E8%BA%AB-%E6%9D%8E%E7%93%B6%E5%84%BF%E8%BF%8E%E5%A5%B8%E8%B5%B4%E4%BC%9A"><span class="toc-text">第十四回 花子虚因气丧身  李瓶儿迎奸赴会</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E5%9B%9E-%E4%BD%B3%E4%BA%BA%E7%AC%91%E8%B5%8F%E7%8E%A9%E7%81%AF%E6%A5%BC-%E7%8B%8E%E5%AE%A2%E5%B8%AE%E5%AB%96%E4%B8%BD%E6%98%A5%E9%99%A2"><span class="toc-text">第十五回 佳人笑赏玩灯楼  狎客帮嫖丽春院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AD%E5%9B%9E-%E8%A5%BF%E9%97%A8%E5%BA%86%E6%8B%A9%E5%90%89%E4%BD%B3%E6%9C%9F-%E5%BA%94%E4%BC%AF%E7%88%B5%E8%BF%BD%E6%AC%A2%E5%96%9C%E5%BA%86"><span class="toc-text">第十六回 西门庆择吉佳期  应伯爵追欢喜庆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%83%E5%9B%9E-%E5%AE%87%E7%BB%99%E4%BA%8B%E5%8A%BE%E5%80%92%E6%9D%A8%E6%8F%90%E7%9D%A3-%E6%9D%8E%E7%93%B6%E5%84%BF%E8%AE%B8%E5%AB%81%E8%92%8B%E7%AB%B9%E5%B1%B1"><span class="toc-text">第十七回 宇给事劾倒杨提督  李瓶儿许嫁蒋竹山</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%AB%E5%9B%9E-%E8%B5%82%E7%9B%B8%E5%BA%9C%E8%A5%BF%E9%97%A8%E8%84%B1%E7%A5%B8-%E8%A7%81%E5%A8%87%E5%A8%98%E6%95%AC%E6%B5%8E%E9%94%80%E9%AD%82"><span class="toc-text">第十八回 赂相府西门脱祸 见娇娘敬济销魂</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B9%9D%E5%9B%9E-%E8%8D%89%E9%87%8C%E8%9B%87%E9%80%BB%E6%89%93%E8%92%8B%E7%AB%B9%E5%B1%B1-%E6%9D%8E%E7%93%B6%E5%84%BF%E6%83%85%E6%84%9F%E8%A5%BF%E9%97%A8%E5%BA%86"><span class="toc-text">第十九回 草里蛇逻打蒋竹山 李瓶儿情感西门庆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9E-%E5%82%BB%E5%B8%AE%E9%97%B2%E8%B6%8B%E5%A5%89%E9%97%B9%E5%8D%8E%E7%AD%B5-%E7%97%B4%E5%AD%90%E5%BC%9F%E4%BA%89%E9%94%8B%E6%AF%81%E8%8A%B1%E9%99%A2"><span class="toc-text">第二十回 傻帮闲趋奉闹华筵  痴子弟争锋毁花院</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%80%E5%9B%9E-%E5%90%B4%E6%9C%88%E5%A8%98%E6%89%AB%E9%9B%AA%E7%83%B9%E8%8C%B6-%E5%BA%94%E4%BC%AF%E7%88%B5%E6%9B%BF%E8%8A%B1%E9%82%80%E9%85%92"><span class="toc-text">第二十一回 吴月娘扫雪烹茶  应伯爵替花邀酒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%8C%E5%9B%9E-%E8%95%99%E8%8E%B2%E5%84%BF%E5%81%B7%E6%9C%9F%E8%92%99%E7%88%B1-%E6%98%A5%E6%A2%85%E5%A7%90%E6%AD%A3%E8%89%B2%E9%97%B2%E9%82%AA"><span class="toc-text">第二十二回 蕙莲儿偷期蒙爱  春梅姐正色闲邪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%89-%E5%9B%9E%E8%B5%8C%E6%A3%8B%E6%9E%B0%E7%93%B6%E5%84%BF%E8%BE%93%E9%92%9E-%E8%A7%91%E8%97%8F%E6%98%A5%E6%BD%98%E6%B0%8F%E6%BD%9C%E8%B8%AA"><span class="toc-text">第二十三 回赌棋枰瓶儿输钞  觑藏春潘氏潜踪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%9B%9B%E5%9B%9E-%E6%95%AC%E6%B5%8E%E5%85%83%E5%A4%9C%E6%88%8F%E5%A8%87%E5%A7%BF-%E6%83%A0%E7%A5%A5%E6%80%92%E8%A9%88%E6%9D%A5%E6%97%BA%E5%A6%87"><span class="toc-text">第二十四回 敬济元夜戏娇姿  惠祥怒詈来旺妇</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%BA%94%E5%9B%9E-%E5%90%B4%E6%9C%88%E5%A8%98%E6%98%A5%E6%98%BC%E7%A7%8B%E5%8D%83-%E6%9D%A5%E6%97%BA%E5%84%BF%E9%86%89%E4%B8%AD%E8%B0%A4%E4%BB%99"><span class="toc-text">第二十五回 吴月娘春昼秋千  来旺儿醉中谤仙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AD%E5%9B%9E-%E6%9D%A5%E6%97%BA%E5%84%BF%E9%80%92%E8%A7%A3%E5%BE%90%E5%B7%9E-%E5%AE%8B%E8%95%99%E8%8E%B2%E5%90%AB%E7%BE%9E%E8%87%AA%E7%BC%A2"><span class="toc-text">第二十六回 来旺儿递解徐州  宋蕙莲含羞自缢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%83%E5%9B%9E-%E6%9D%8E%E7%93%B6%E5%84%BF%E7%A7%81%E8%AF%AD%E7%BF%A1%E7%BF%A0%E8%BD%A9-%E6%BD%98%E9%87%91%E8%8E%B2%E9%86%89%E9%97%B9%E8%91%A1%E8%90%84%E6%9E%B6"><span class="toc-text">第二十七回 李瓶儿私语翡翠轩  潘金莲醉闹葡萄架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%8D%81%E5%85%AB%E5%9B%9E-%E9%99%88%E6%95%AC%E6%B5%8E%E5%BE%BC%E5%B9%B8%E5%BE%97%E9%87%91%E8%8E%B2-%E8%A5%BF%E9%97%A8%E5%BA%86%E7%B3%8A%E6%B6%82%E6%89%93%E9%93%81%E6%A3%8D"><span class="toc-text">第二十八回 陈敬济徼幸得金莲  西门庆糊涂打铁棍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

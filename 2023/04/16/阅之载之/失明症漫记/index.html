@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】失明症漫记</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】失明症漫记">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2023/04/16/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%A4%B1%E6%98%8E%E7%97%87%E6%BC%AB%E8%AE%B0/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/book/readandnote/失明症漫记/banner2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="【葡】若泽•萨拉马戈  著    范维信  译">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-04-16">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-11-16">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-text">2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3"><span class="toc-text">3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4"><span class="toc-text">4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5"><span class="toc-text">5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6"><span class="toc-text">6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7"><span class="toc-text">7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8"><span class="toc-text">8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9"><span class="toc-text">9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10"><span class="toc-text">10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11"><span class="toc-text">11</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12"><span class="toc-text">12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13"><span class="toc-text">13</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14"><span class="toc-text">14</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15"><span class="toc-text">15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16"><span class="toc-text">16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+  <div class="image-wrapper">
+    <img 
+      src="/image/book/readandnote/失明症漫记/banner2.png" 
+      data-src="/image/book/readandnote/失明症漫记/banner2.png"
+      srcset="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%20300%20300&#39;%3E%3C/svg%3E"
+      class="image lozad"
+      alt="【阅之载之】失明症漫记 thumbnail">
+  </div>
+
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】失明症漫记
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-04-15T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-04-16</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>12.5k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p><p>《失明症漫记》<br>[葡]若泽•萨拉马戈  著<br>范维信  译</p></div>
+<br />
+<img src="/image/book/readandnote/失明症漫记/1.png" width="500rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/失明症漫记/1.png" class="lozad post-image">
+<br />
+<h2 id="1">1</h2>
+<p><strong>原文摘录</strong><br>
+司机们个个急不可耐，脚踩离合器，使汽车保持紧张状态，进一进，退一退，像一匹匹感到鞭子即将从空中抽下来的马一样躁动不安。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+他站在街道中央，没有任何依靠，只觉得地面在脚下滑动。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+此时，他忘了自己的境遇，机械地抬手推开门镜的挡盖向外张望。外面仿佛是一堵白墙。他分明感到眼睛触到了门镜突出的金属圈，睫毛扫在小小的目镜上，却什么也看不见，一片深不可测的白色遮蔽了一切。他知道自己已经在家里了，从屋里的气味氛围和宁静的环境就可以辨别出来，只要用手摸一摸，就能知道是什么家具或其他东西。他用手指轻触它们的表面，确实如此，但一切似乎也都融于一种奇特的维度中，没有方向，没有参照点，没有东西南北，没有上下高低。大概所有人小时候都和自己玩过几次装瞎子的游戏，把眼睛蒙上五分钟之后就会得出结论，虽然失明无疑是可怕的灾难，但是，如果这不幸的受害者还保存着足够的记忆力，不仅记得各种颜色，还记得各种物件的形状和样式，记得它们的平面和轮廓，那么失明症还算是可以忍受的缺陷。当然，这里指的不是先天失明。人们甚至会想，不错，盲人生活在黑暗之中，但这种黑暗只不过是缺少光亮，我们所说的失明症只不过是遮住了人和物的外表，而这些人和物还完整无缺地存在于那层黑色面纱后面。现在，他的情况却相反，他被淹没在一片白色之中。这白色如此明亮，如此浓密，不仅吸收了一切，还吞没了一切，不仅吞没了颜色，还把一切人和物本身都完全吞没了，这样它们就变得双倍无形。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一分钟以后，出现了极为常见的身体松垮下来的情况，这种情况往往在痛苦或绝望得打算放弃时出现，尽管单从逻辑上看，这种时候应该是紧张和机敏的，但一种疲惫和瘫软钻入了他全身，这种感觉与其说是真正的困倦，还不如说是昏昏欲睡，但同样沉重。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+那天夜里，盲人梦见自己失明了。<br>
+<br /><br /></p>
+<h2 id="2">2</h2>
+<p><strong>原文摘录</strong><br>
+但是，考虑到这里描写的时代中社会关系网络的复杂性，无论是夜间的还是白天的，无论是水平的还是垂直的社会关系，其复杂性要求人们避免仓促决断的倾向。可惜，由于过分自负，我们也许永远不能摆脱这个毛病。<br>
+<br /><br /></p>
+<h2 id="3">3</h2>
+<p><strong>原文摘录</strong><br>
+卧室里只剩下医生独自一人，他觉得好像有一团浓密的云渐渐地把他捆住，压迫他的胸膛，钻进他的鼻孔，让他的五脏六腑全部失明，这时他忍不住发出一声短短的叹息，两滴眼泪溜了出来，是白色的眼泪，他想，白色眼泪浸湿了眼眶，溢出来顺着太阳穴往下流，两边脸颊各有一滴，这时候他理解了他的病人们的恐惧，医生先生，我觉得快要瞎了。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+无论外人再有多么强烈的共情能力，噩运的痛苦也只有当事人才知晓。特别是噩运作为既定现实后，无数次地重复作用在当事人身上，折磨他的身心，掏空他的灵魂。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们在不想告诉对方不好的时候就会说，很好，即便我们正在走向死亡，这被俗称为把肠子当做心脏，这种颠倒内脏的现象只有在人类中间才能看到。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+事实上以我的学识，并不能理解这段话的后半部分，但我还是觉得这段话说的很有哲理的味道，便摘录了下来，或许这种模糊感知事物的属性也是人类独有的吧。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+死亡也不传染，但我们所有人都会死；<br>
+<br /><br /></p>
+<h2 id="4">4</h2>
+<p><strong>原文摘录</strong><br>
+这个建议是由卫生部部长本人提出的。虽说它并非无可挑剔，但从各个方面来看都是个好主意，既考虑到了单纯的卫生问题，也考虑到了复杂的社会影响和政治后果。在没有弄清楚原因之前，或者更恰当地说，在没有弄清白色眼疾的病理学原理之前，多亏一位助手以其丰富的想象力用白色眼疾的说法代替了难听的失明症，在找到处理和治疗方法之前，但愿有一种疫苗能防止这种病例继续出现，在这之前，把所有失明者，包括与其有肉体接触或直接联系的人，通通收容起来并加以隔离，以防进一步传染，而传染一旦出现，病例就会成倍增加，类似于数学上常说的，按几何级数递增。Quod erat demonstrandum（拉丁语，意为证明完毕），卫生部部长总结说。用所有人都能听懂的话来说，就是对那些人强制执行隔离检疫，这是从霍乱和黄热病时代流传下来的古老做法，即感染者或者感染者的船只必须远离海岸四十天，以观后效。以观后效，这是部长的原话，听起来用意深刻，其实是因为一时找不到其他托词而故弄玄虚，后来他更精确地解释了自己的想法。他的意思是说，既可以是四十天，也可以是四十个星期，或者四十个月，甚或四十年，重要的是那些人不得从隔离区离开。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这时传来一个响亮而生硬的声音，听口气出自惯于发号施令的人之口。原来声音来自他们进屋时经过的门上的一个扩音器。注意，这个词一连重复了三遍，然后开始讲话，政府为不得不强行行使自己的权力履行自己的义务感到遗憾，此举是为了全面保护公众，因为眼下我们似乎正在经历一场类似失明症的瘟疫，我们暂且称之为白色眼疾，鉴于它可能是一种传染病，鉴于我们遇到的不仅仅是一系列无法解释的巧合，为了防止传染蔓延，政府希望所有公民表现出爱国之心，与政府配合。已经患病的人住在一起，与患病者有过接触的人住在另一个地方，虽然分开来住，但相距很近，这一决定是经过慎重考虑之后才做出的。政府完全意识到所负的责任，也希望这一通知的受众都是守法的公民，同样担负起应负的责任，抛弃一切个人考虑，你们要认识到自己被隔离是一种支援全国的行动。现在，我们要求大家注意听以下规定。第一，电灯会一直开着，任何按开关的企图都无济于事，开关不起任何作用。第二，在事先未获允许的情况下离开所在的大楼意味着会被立即击毙。第三，每个宿舍都有一部电话，只用于向外面要求补充卫生和清洁用品。第四，住宿者手洗各自的衣物。第五，建议每个宿舍选举其负责人，这一项只是建议，不是命令，住宿者可以按其认为最好的方式组织起来，只要遵守以上规定和我们以后陆续公布的规定。第六，每天三次我们会把饭盒送到门口，放在门的左右两边，分别给患者和感染者。第七，所有剩余物品应通通焚烧，除剩饭之外，这里所说的剩余物品包括饭盒盘子和刀叉勺等餐具，这些都是用可燃材料制造的。第八，焚烧应在该大楼的天井或者围栅旁边进行。第九，焚烧产生的一切不良后果由住宿者自行承担。第十，若发生火灾，无论是偶然起火还是有人故意纵火，消防人员皆不予救援。第十一，若内部出现疾病骚乱或者殴斗，住宿者不应指望任何外界介入。第十二，若有人死亡，不论死因为何，均由住宿者在围栅旁掩埋尸体，不举行任何仪式。第十三，患者们所住房子与感染者们所住房子之间的联系必须在大楼中间地带进行，就是你们进去时走过的地方。第十四，感染者一旦失明，必须立即转移到失明者所住的房子里去。第十五，本通告在每天同一时间播送一遍，以便让新来的人知道。政府和全体国民都希望你们履行自己的义务。晚安。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+第一个失明的人动了一下，好像要从按住他的手中挣脱出来，但没有太用力，似乎他已经明白，愤怒，即便是合情合理的愤怒，也不能让汽车失而复得，汽车也不能让眼睛盲而复明。但是，偷车贼威胁说，如果你以为以后没事了，那你就完全错了，不错，我偷了你的汽车，汽车是我偷的，可是你偷了我的眼睛，让我瞎了，想想看，我们两个人当中谁更称得上是贼；<br>
+<br /><br /></p>
+<h2 id="5">5</h2>
+<p><strong>原文摘录</strong><br>
+我们离开世界太远了，过不了多久就会不知道自己是谁，连叫什么名字也记不清楚说不出来了，对我们来说，名字有什么用呢，有什么用呢，没有哪一条狗是通过人们给起的名字认出和认识另一条狗的，它们通过气味确认自己和其他狗的身份。在这里，我们是另一种狗，通过吠叫和说话声相互认识，而其他方面，长相，眼睛，头发和皮肤的颜色，通通没有用，仿佛不存在，现在我还看得见，可是，能到什么时候呢。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+偷车贼拖着伤腿，瘸得更厉害了。临时止血带妨碍他走路，伤口疼痛难忍，好像心脏搬了家，搬到了被鞋跟扎到的那个窟窿深处。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这可能正是他们所希望的，让我们在这里一个接一个地完蛋，虫子死后，毒素也会消失。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+医生的妻子回到自己的床上，但没有躺下。望着正在咕咕哝哝说梦话的丈夫，望着灰色毯子下面一个个模糊的人影，望着肮脏的墙壁，望着等人来住的空床，她心情平静，希望自己也同样失明，穿过这些东西可见的表象，深入其中，深入闪着白色的永远失明的世界。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在这里，每个人真正的家就是睡觉的那块地方，因此，人们不应当感到奇怪，新来的人关心的第一件事像他们在另一个宿舍眼睛还看得见的时候一样，就是挑选床位。<br>
+<br /><br /></p>
+<h2 id="6">6</h2>
+<p><strong>原文摘录</strong><br>
+如果在实施任何行为之前我们都能预想到它的一切后果并认真加以考虑，先是眼前的后果，然后是可证明的后果，接着是可能的后果，进而是可以想象到的后果，那么我们根本就不会去做了，即使开始做了，思想也能立即让我们停下来。我们一切言行的好和坏的结果将分布在，假设以一种整饬均衡的形式，未来的每一天当中，包括那些因为我们已不在人世而无从证实也无法表示祝贺或请求原谅的永无止境的日子。有人会说，这就是人们常说的不朽。或许吧，不过这个人已经死了，需要埋葬。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+面对死神，我们最希望看到仇恨能失去力量和毒性。当然，人们常说旧仇难忘，文学作品和生活中不乏这样的例子，但现在，在这深院里，确切地说，并没有仇恨，更谈不上旧仇，是啊，比起偷车贼失却的生命来讲，偷一辆汽车又算得了什么呢，更何况他这副惨相，无须看见就能知道，这张脸上既没有鼻子也没有嘴。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+盲人们在一切常去的地方都不会迷失方向，他们只要胳膊往前伸，手指像昆虫的触须一样摇动，任何地方都能走到，那些最有才干的盲人甚至很可能过不了多久就会产生我们称之为前向视觉的功能。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+而斜眼小男孩一直在不停地说着肚子饿，虽然戴墨镜的姑娘已把自己的那份食物省下来给他吃了。他一连几个小时没有打听妈妈了，但可以肯定，等到吃过饭，肉体摆脱了简单而紧迫的生存需要产生的自私的躁动之后，他还会想念母亲。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果我们仍处于一个士兵需要为自己射出的子弹做出解释的时代，他们会在国旗下发誓说，这样做完全是出于自卫，而且还是为了保卫在执行人道主义任务时遭到一伙人数占优势的盲人威胁的手无寸铁的战友。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+食物摆在那里，不可抵御地吸引着他们的目光，胃在陈述它的理由，理由充足，不肯顾及其他，哪怕是对它有利的事。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+现在，由于在此处生活的苦难经历，由于纪律的极度严苛，这些警告开始体现出它们的全部意义，而宣布每天三次送食物的许诺成了古怪的嘲弄，或者是更让人难以忍受的讽刺。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+人变成动物有许多种办法，他想，而这是头一种。但是，不应当有太多抱怨，还有人对此满不在乎呢。<br>
+<br /><br /></p>
+<h2 id="7">7</h2>
+<p><strong>原文摘录</strong><br>
+谁知道呢，这个失明症和其他病症不同，来的方式不同，可能走的也不同；就是能走，对那些死去的人来说也太晚了；我们都要死的；但我们不会被杀死，而我杀过一个人；不要自责，是环境造成的，这里，我们都有罪，也都无辜，看管我们的士兵们干的坏事比我们干的坏事多，他们会寻找最好的借口为自己开脱，那就是恐惧；<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+士兵们的愿望是用手中的武器瞄准，毫不留情地把眼前那些低能儿通通击毙，他们就像瘸腿的螃蟹一样，一边爬还一边舞动笨拙的螯足寻找失去的腿。他们知道，今天上午团长在军营说过，盲人的问题只能靠把他们全都从肉体上消灭来解决，包括已经失明和必将失明的人，无须假惺惺地考虑什么人道主义，团长的话与切除坏死的肢体以拯救生命的说法有异曲同工之妙，他解释说，狗死了，它的狂犬病自然就治好了。一些士兵不够聪明，听不懂这漂亮的比喻，难以理解疯狗与这些盲人有什么相干，但是，一位团长的话，即使是用的比喻，也必定字字千斤，他所想所说和所做的一切必定有理，否则在军旅中也升不到如此高的职位。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+至于士兵，人们清楚，命令他们杀人他们就杀人，命令他们去送死他们就去送死。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不顺利的事可以想象，这么多盲人往那边走，像一群羊走进了屠宰场，照常咩咩地叫，当然，还要相互推挤，这是它们一成不变的生活方式，皮毛蹭着皮毛，呵气连着呵气，气味混合着气味。<br>
+<br /><br /></p>
+<h2 id="8">8</h2>
+<p><strong>原文摘录</strong><br>
+如果我们不能完全像正常人一样生活，那么至少应当尽一切努力不要像动物一样生活。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+政府本身的作为也反映出人们的精神状态普遍恶化，在五六天的时间里它两次改变战略。政府先是相信，只要把盲人和感染者关进诸如我们所在的精神病院这样一些地方隔离起来，就能控制疫情。很快，随着失明症案例的无情增加，政府某些要员担心官方采取的措施不能满足需要，可能产生严重的政治后果，转而主张各家各户把自己家的失明者关在家里，不让他们到街上去，以免使已经相当困难的交通状况更加混乱，以免刺激还能用眼睛看的人，这些人听不进让他们放心的竭力劝告，相信白色眼疾就像杀人魔鬼一样以目光接触传播。确实，如果一个人正在想什么伤心的事，无所谓的事或者高兴的事，假设现在还有人高兴，突然看见从对面走来的人的脸上出现惊恐万状的表情，接下去就是免不了的大声喊叫，我失明了，我失明了，这时候指望他的反应与后者不同显然不合情理。任何人的神经都承受不了。糟糕的是，各个家庭，尤其是人口少的家庭，全家很快都成了盲人，没有剩下一个人看护他们，给他们引路，保护他们不受眼睛还好的邻居和其他人的伤害。不用说，无论是父子还是母子，都不能互相照顾，他们只能像图画上画的盲人那样，一起走路，一起跌倒，一起死去。</p>
+<p>面对这种形势，政府别无他法，只得紧急开倒车，放宽关于隔离地点和空间的标准，立即临时征用废弃的工厂，无人礼拜的庙宇，体育馆和闲置的仓库。<br>
+<br /><br /></p>
+<h2 id="9">9</h2>
+<p><strong>原文摘录</strong><br>
+几个失明者在床上动了动，像每天早晨一样，释放出整整一夜在肠胃里积累的气体，不过屋里的空气并没有因此变得更加令人作呕，它已经达到了饱和的程度。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+到了把语言化为行动的时候，原来那么坚定的勇气开始消退，面对刺激鼻孔和眼睛的恶劣现实，她开始崩溃。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+她丈夫和第一个失明者慢慢朝门所在的方向走去，不时停下来收取两边每个人交来的东西，他们当中有些人嘟嘟囔囔地抗议，说遭到无耻的抢劫，这倒是千真万确的实话，另一些人则显得无动于衷，仿佛认为，好好考虑一下，世界上没有任何绝对属于自己的东西，这同样也是句千真万确的实话。<br>
+<br /><br /></p>
+<h2 id="10">10</h2>
+<p><strong>原文摘录</strong><br>
+照此下去，我们会再次得出结论，即便在最坏的不幸之中，也能找到足够的善让人耐心地承受此种不幸。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+医生的妻子早已习惯了宿舍里持续不断的嘈杂声，因而对现在的寂静感到奇怪，这寂静似乎占据了这虚无的空间，仿佛整个人类已经消失殆尽，只剩下一盏亮着的灯和看守着这盏灯，看守着她和其他眼睛看不见的男男女女的一名士兵。她坐在地上，背靠着门框，姿势和她在宿舍里看到的那个瞎眼女人一模一样，眼睛也望着前方。夜晚天气寒冷，风沿着大楼正面吹来，这个世界上似乎不可能还有风，不可能还有漆黑的夜晚，这句话她不是为自己说的，而是想到了盲人们，对他们来说永远是白天。<br>
+<br /><br /></p>
+<h2 id="11">11</h2>
+<p><strong>原文摘录</strong><br>
+瞎了眼睛，也就失去了自尊。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+但是，每件事的到来都有其时机，早起的人不一定早死。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在我们生活的这个精神病院里，既然灵魂的纯洁已无暇顾及，也许肉体的干净还有点意义。<br>
+<br /><br /></p>
+<h2 id="12">12</h2>
+<p><strong>原文摘录</strong><br>
+从朝里院开的几扇窗户漾进的最后一缕似有若无的灰色亮光，正迅速滑进夜晚那黑咕隆咚的深井。当然，盲人们依然因为莫名其妙的失明而无可救药地感到悲伤，但他们至少有一点聊以自慰，那就是摆脱了这种因类似的天象变化造成的凄凉，事实证明，天象变化早在人们的眼睛可以看见的遥远年代就曾导致无数绝望的行动。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在医生的妻子的带领下，他们把两具尸体拖到外面的平台上，放在月光下，月亮乳白色的光亮照着他们，尸体表面雪白，里面却一团漆黑。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+大门一扇扇敞开了，疯子们跑出精神病院。<br>
+<br /><br /></p>
+<h2 id="13">13</h2>
+<p><strong>原文摘录</strong><br>
+他们紧紧挤成一团，像一群羊，谁也不想走散，他们知道，没有牧人去寻找丢失的羊。<br>
+<br /><br /></p>
+<h2 id="14">14</h2>
+<p><strong>原文摘录</strong><br>
+舔泪水的狗不该被称为鬣狗，它跟在医生的妻子后面，不是寻找死肉的气味，而是陪伴着那双眼睛，它知道那双眼睛还活着。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果肠子平平静静，任何一个人都有种种想法，如争论眼睛和感情之间是否存在直接关系，责任感是否是良好视力的必然结果，但是，当焦急折磨我们的时候，当肉体由于疼痛和痛苦不肯听从我们指挥的时候，就能看到我们自己渺小的兽性了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果受害者没有向残忍的家伙报复的权利，那就没有正义可言了。<br>
+<br /><br /></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+这个世界从无正义可言，哪怕是所谓文明的社会，正义只会在需要它的场合进行表演。
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="15">15</h2>
+<p><strong>原文摘录</strong><br>
+家里的尘土趁主人不在的时候轻轻落下来，模糊了家具的表面，顺便说一句，这是它们安安静静地休息一些日子的唯一机会，没有掸子或者吸尘器骚扰，没有孩子们奔跑时在空气中搅起涡流。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+望着阴沉的天空下漆黑一片的城市。一扇扇窗户没有一丝微弱的灯光，房屋正面不见半点反射出的光亮，眼前不是一座城市，更像沥青熔化了，冷却之后在硕大无朋的模子里铸成了楼房屋顶和烟囱的形状，一切都死气沉沉，寂无声息。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如注的大雨形成的水帘在风中晃动，风像一把巨大的发出嘈杂声的扫帚，把雨水从城市的一个个屋顶上扫下来。<br>
+<br /><br /></p>
+<h2 id="16">16</h2>
+<p><strong>原文摘录</strong><br>
+人体就是个有组织的系统，只要人体继续保持有组织状态，人就活着，而死亡只不过是人体处于无组织状态的后果。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+死亡从来就是个时间问题。<br>
+<br /><br /></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>通篇读注</strong></summary><p-n>
+<p>这个故事很长。一个普通人在开车上班途中等候红灯时突然失明了，这个不幸的人是书里提到的第一个失明的人，却不一定是那个故事世界中第一个失明的人，或许连作者也不知道是谁第一个失明的，但我们可以知道的是，跟之后许许多多没有被详细提及的人相比，他还是幸运的，至少他并非在行驶途中突然失明的。在此之后，好心送他回家，却偷了他汽车的人，他的妻子，帮他检查眼睛的医生，医生诊所里候诊的墨镜年轻女孩，斜眼小男孩和他的母亲，独眼还得了白内障的老人，几乎所有与他有过接触的人都一个接一个感染了这种特殊的白色失明症。</p>
+<p>这是我的第二次阅读，第一次看时是2022年，现实正处于狂热的魔幻阶段，可谓捧上书时是地狱，放下书时也是地狱，心情着实有些阴郁，但看书时还是有些急迫的，总想着知道后面会发生什么，未来是什么样的，所以看的也不甚仔细。此次重读，则更多地是带着劫后余生的欣喜感慢慢品鉴，却少了几分当时的感同身受了。</p>
+<p>当这种有着极强传染性的疾病被中央机构得知后（无论是现实的还是书里的），首先想到的解决措施是给疾病起一个不至于让群众过分恐慌的名字，比如小说里就以白色眼疾替代了难听的失明症，其次就是隔离，将患病的人都隔离起来，还细心安排了后勤和安保等措施。于是很快地，失明者和与失明有接触的疑似感染者都被好心地送到一所废弃的精神病院隔离了，失明者们住在院子的右边，疑似感染者们住在院子的左边，门口有荷枪实弹的士兵守卫着，丝毫不用担心出现任何问题，更何况还是一群盲人。</p>
+<p>废弃的精神病院环境自然不可能好的了，掉漆的铁架床和落满灰的被子和床单，不过对盲人来说也无所谓了，毕竟他们都看不见，可这其中不包括眼科医生的老婆，这位令人尊敬的女士或许出于对丈夫的爱，或许出于家庭的责任感，谁都很难捉摸人类的情感，总之她谎称自己也瞎了，被一起送到精神病院中，而她也很可能是唯一一个被迫睁着双眼看着世界走向荒唐的可怜幸存者，这或许是神明特意的安排的见证人——如果有神明也像作者这般善于安排的话。</p>
+<p>很快，下一批患者也被安排到了精神病院，第一个失明者、墨镜女孩、斜眼小男孩，以及偷车人，都和医生夫妇在同一个宿舍住下了，一开始第一个失明者和偷车人认出了彼此，滔天的仇恨在他们身边激荡着，失明者憎恨对方偷了他的车，这确实也在情理之中，而偷车人的恨意就有些耐人寻味了，他怨恨失明者不仅不为辛苦带他回家而心怀感激，反而将失明症传染给自己，虽然我们都知道此次传染并不带有主观的意味，可偷车人的恨意却来得如此理直气壮，汹涌澎湃，以至于他怒不可遏地率先出手，与失明者扭打在了一起。从作者的描写中，我们可以很清晰地看到偷车人从一开始的略有不安（对偷窃行为的自我谴责），到失明时的无助失落、再到接受现实时的愤怒无奈等一系列心理变化，偷车人显然觉得失明是自身作恶的报应，但他不可以让这个念头停留在自己的大脑中，这只会让他受尽心理的折磨，为此他需要将之转接出去，导向外部的事物，让情绪得以向着除自身以外的对象倾斜，就像水是会自然而然地朝着低洼之地泻去。所以，我们也可以看到，如果说失明者作为导致其失明的罪魁祸首是一个不错的由头的话，那么失明者那老实巴交的性格与逊色的武力值就使得这个由头更加充分以至于极其诱人。</p>
+<p>不过如偷车人这一类的角色，尚无法在内心深处真正地说服自己（所以也成为不了穷凶极恶之徒），他总归是有些空虚的（这也使得他的内心是极度敏感，容易对一点点风吹草动产生感知，于是他能第一个发现医生老婆并未失明也就毫不令人意外了），为了弥补这种心理上的缺失，他愈发需要用凶狠蛮横来伪装，试图合理化自己的行为，同时使他人畏惧，色厉内荏大概指的就是这类人。于是，在之后偷车人因猥亵墨镜年轻女孩而被尖尖的鞋后跟戳破了大腿，血流不止的时候，他便开始慌乱了，继而向医生讨饶，祈求他们能原谅他的粗鲁无礼，只希望有人能救他一命，但很显然，在这座荒废、不带有丝毫医疗资源的破落院落里，以及一个瞎了的眼科医生，和一群瞎了的普通人，即使想大发善心也无能为力，只能由医生老婆帮忙用衣服作为绷带缠住暂作止血，衣服是偷车人的上衣，因此他也失去了御寒的屏障。正所谓可怜之人必有可恨之处，大抵如此吧。</p>
+<p>第二天，第二批人也来了，他们是在另一边属于疑似感染者的宿舍中被赶过来，在偷车人瞎了时送他回家的警察、第一个失明者的老婆以及送他们去医院的出租车司机、与墨镜女孩有接触的酒店佣人以及药店伙计，他们安顿下来之后，在广播的指挥下，医生夫妇主动到天井为大家拿饭，出于医生扶死救伤的职业精神，他走到门口向士兵们说明有人受伤感染的事情并请求相应的药品，很可惜的是，士兵的天职并非救死扶伤，而是服从命令并执行杀戮，一群把大脑当做装饰物的人自然无需思考以及一切正常的情感，因此中士粗鲁地回绝了他。</p>
+<p>很快，对面宿舍又赶了第三批人，跟墨镜女孩上床的男人和送她回家的警察，以及医生诊所的女接待员，紧接着，几乎还没令人喘口气的功夫，一大批新的患者被送入了精神病院，这显示了疾病那迅猛和令人畏惧的传染性。只有零星几个失明者与数量庞大的失明者之间有着迥然的不同，少数的失明者之间还能勉强地井然有序，大量的失明者则是充满了混乱与冲突，有些人跌倒了，被拥挤的人群踩在脚下，谁也没有精力去关心别人，每个人都在寻找在这里的归属——一张属于自己的铁床，直到许久许久之后，一切才归于平静，但这并不包括每个人的内心。</p>
+<p>夜里，所有盲人都进入梦乡后，偷车人拖着他条受伤的腿，独自一人往大门挪动，他还发着高烧，因此脑子糊涂了，竟妄想把守的人会大发慈悲救助他，当他费劲千辛万苦抵达大门时，很快就被惊吓的持枪士兵打成没有鼻子和嘴巴的死人。同宿舍的人只得将他埋葬，但却没有挖坑的工具，于是他们又去向士兵们要求提供铲子，终于在尸体腐烂后毒素也可以通过空气传播的威胁后，新的中士才提供给了他们——原先的中士也瞎了。</p>
+<p>但在这种地狱般的地方，偷车人的死亡绝非个例，只是每个人的死法一定相同。</p>
+<p>隔天夜里，当送食物的士兵与忍饥挨饿苦苦等待的盲人们在天井相遇时，更大的悲剧发生了，数不尽的子弹毫不吝啬地倾斜在盲人身上，但或许正如中士所言，虫子死光了，毒素也就消失了吧。当始终找不到妥当的解决方法的时候，毁灭总是最简单有效的一种。于是大部分食物都掉落在地了，也有更多的尸体需要被掩埋了，靠唯一一把铲子。</p>
+<p>九具尸体，其中四具来自医生他们的宿舍，其余则是另一个宿舍的，医生说服了另外两人，践行了他们的道义，将属于他们宿舍的尸体埋葬了，但另外的尸体就没有这么幸福，不过尸体或许也并不在乎。</p>
+<p>对于被囚禁的盲人以及未瞎的感染者来说，最大的问题在于食物，被子弹打死不见得比饿死更可怕。食物的提供总是断断续续地，这里的人也就总是在挨饿，更何况之前已经有九条生命因取食物而彻底地失去了，虽然中士说那不过是士兵的自卫行为，但谁也不能保证他们不是在趁机清楚病原体。再者，就算盲人们取得了食物，如何分配又成为一个大麻烦，彼此谁都看不见，谁能知道哪个人为了一己私欲私藏了食物呢，毕竟此时金钱首饰等东西已经一文不值了，唯有吃的才是最稀缺的东西。这样的担心不是毫无道理，就在第三次领取食物的时候，几个饥饿难耐的盲人冒着生命危险取回食物后，立刻就有人私藏了几份，这使得大部人需要平分剩下仅有食物，这显然是不公平的。</p>
+<p>不过相比于墙外的盲人，这里的人似乎仍是比较幸运的，世界这么大，比自己不幸的案例比比皆是，实在不值得惊讶。</p>
+<p>于是，越来越多不幸的人被送到了这个幸福的圈子里，即使这里的床铺已远远不够了，但没人负责解决这个问题，管理者接到的任务只是收押而已。于是更大的混乱，更大的苦难，就像一个只有1L的瓶子却硬要挤入2L的谷子，大部分被碾压得支离破碎，同样没有人宣布为此而负责。不过人数增多也带来了一些好处，盲人们可以建立比较持久的宿友关系，以及食物准时准量送达了，这是因为管理者害怕数百人的暴乱，哪怕只是一群瞎了眼睛的人。</p>
+<p>医生宿舍里的人至少是幸运的，他们拥有两位有教养的人，其中一位是个眼睛正常的女士，虽然除了医生外其他人并不清楚这件事。他们入住时间最长，且有这位女士不厌其烦地劝导大家要保持好良好的卫生，至少不该像动物一样活着，因此该宿舍形成较好的组织与氛围，当独眼老人在门口询问是否还有床位时，竟受到友善的欢迎，唯一的床位是死去的偷车人留下的。他带来了一台收音机，收音机传来了一首音乐，一种如此强大的黏合剂，稍稍滋补了宿舍里人们那破碎的灵魂，同时，老人也带来了外界的讯息。</p>
+<p>可惜，在失明症的肆虐下，外界也并非有一片乐土，相较之下，精神病院里反倒像个伊甸园，至少这里有的吃，有的睡，还不用担心哪位驾驶员突然间瞎了而错将车或者飞机砸向自己的身躯。但无论如何，文明的崩坏似乎在所难免了，譬如病房内，粪尿满地，因为谁都看不见谁，所以随地排泄也就毫无羞耻感可言。就在无法忍受日益不堪的卫生状况，医生的老婆准备告诉大家自己还看得见，然后尽其所能来引导盲人们正常生活的时候。一群盲人建立了一个独立王国，他们分工明确，几十个人手都握着棍棒和铁条，领头的盲人则有一把手枪，还有个天生的瞎子会使用盲人写字，所以充当了会计一类的角色。他们将分配的食物牢牢占为己有，并宣传需要用金钱来换取食物。是这样的，在人类群体中，似乎不可避免就会形成阶级，哪怕那只是一群盲人。以武力获取利益，以武力摧毁文明，根深蒂固地流淌在每个人的血液中。而武器更加剧了武力的震慑，几个持枪的人总能很容易地控制成百上千个人，哪怕谁都知道枪里的子弹有限。</p>
+<p>医生宿舍的人缴纳了几乎所有的财物，只换来了三份饭，这其中，医生妻子偷偷地藏起了一把剪刀，她也不知道为何要将之藏起来，总之锋利的刀刃悬挂在高高的墙上闪闪发亮，等待着它被派上用场的一天。</p>
+<p>所有宿舍掏尽换来的，只有可怜的少数几份食物，而大部分食物，则是堆放在那群强盗的宿舍中腐烂掉，为此许多人特别不满，希望聚集起来去抗议，去示威，终究只有八个勇敢的人前去理论，但在挨了不计其数的铁棍以及一声枪响警告后，他们落荒而逃，而这八个人所在的宿舍则受到三天没有饭吃的惩罚，当他们可可哀求其他宿舍分出一点食物给他们时，却受到了冷嘲热讽。挨到惩罚期结束，他们的食物又被大幅度缩水，真是应了那句古话，“枪打出头鸟”。就在此时，强盗们要求各宿舍第二次上缴财物以换取食物，又引起了各宿舍之间的争端纠纷，虽然不敢顶撞强者，但向弱者挥刀却是每个人都驾轻就熟的活计。</p>
+<p>不久之后，强盗盲人开始向其他宿舍要求女人了，满足温饱后，淫欲也就涌现了出来，性自古以来都是争得头破血流的资源之一。于是他们决定采取轮流制，这样的安排有许多的好处，比如新鲜感以及，公平。</p>
+<p>只是，这倒是先勾起每个宿舍里男女的性欲（主要是男性的），于是，他们开始交欢纵乐，独眼老人和戴墨镜的女孩，戴墨镜的女孩和医生，…直到轮到他们宿舍的那一天。这一天，轮到医生所在的宿舍，这个宿舍有七位女性，晚饭后到天亮，整整一宿，谁都不想知道她们遭受了什么，只知道一位失眠的女士死了，死在了回宿舍的路上，这份代价，为她们，以及宿舍的男人们，换得了续命的食物，可惜那个失眠的可怜人却再也尝不到了。但她却得到了净化——肉体上的，医生的妻子去找了一些水，帮宿舍所有的女人都清洁了一遍，尽可能从肮脏的勾当中解脱出来。</p>
+<p>第二天，当第二个宿舍的女人们排着队，忐忑不安地走向受刑场的时候，悬挂在宿舍的剪刀，终于等来了它的用武之地。它被牢牢卡在医生妻子的手里，扎入了歹徒首领的咽喉内。首领死了，他的枪落到了盲人会计的手里，于是出现了新的首领，一片混乱中，医生妻子所幸和第二个宿舍的女人都逃了出来，不过歹徒们不会再给他们食物，可同时歹徒们受到性命的威胁，开始害怕了，于是他们蜷缩在了宿舍里。到天井取饭的权利，由回归了盲人们的手中，只是盲人们所不知道的是，供应给精神病院的食物不仅不足量，甚至不守时，已经三天了，各个宿舍一点面包渣都不剩了，可是食物还没有送过来。</p>
+<p>于是盲人们只剩下一个选择——起义，抢夺歹徒盲人宿舍中储存的食物，精心计划之后，或者对于盲人来说，其实没多复杂的事情需要计划，需要的只是勇气以及失去生命的觉悟。可惜的是，他们遭到歹徒们的凶悍抵抗，歹徒们将八张铁床堵在门口，像一道铁闸，一群饥饿的盲人根本挪动不了。一阵枪响过后，进攻队伍阵亡了两个，他们只能撤退，一场惨败。这是，一个在上一场凌辱中被医生妻子救下的一名女子，在进攻大军撤退后，独自一人摸到歹徒宿舍门口的铁床边，用从自己包里找到的打火机将上面的被子点燃了，烈火焚尽了这屋里的一切罪恶，可怜的女人自己却成了助燃剂，也一并葬身火海。</p>
+<p>大火烧个不停，盲人们只能往精神病外面逃跑，这时他们才惊讶地发现，看守他们的士兵都不见了，于是“大门一扇扇敞开了，疯子们跑出了精神病院”。</p>
+<p>但广阔的天地之于盲人，就像深湛的大海之于鬣狗，除非它们进化出鳃来呼吸，否则绝非一个好的去处。于是一大堆刚刚重获自由的盲人却发现其实自由早就随着失明而消失了，他们停留在这场大火前面彷徨无措，别忘了，他们还饿了好几天，大概率只能等死了。除了医生和他的妻子、戴墨镜的女孩、独眼老人、斜眼小男孩，以及第一个失明者夫妻，他们在唯一一个眼睛正常的人的带领下，走上回家的路。只不过以他们的体力，不可能坚持太久，所以中途医生的妻子独自去寻找食物，所幸她找到了一个未被盲人洗劫过的仓库，当她提着满满几袋食物走在回去的路上时，一条狗跟上了她，或许缘分就是这么莫名与巧妙吧，这条狗在之后也用狂吠为他们阻挡了几次陌生盲人可能的侵犯。</p>
+<p>他们首先去了戴墨镜女孩的家，在那里他们遇到了一位幸存的独居老人，在灾难来临前，本是一位慈祥的老奶奶，现在却是个茹毛饮血的老巫婆。文明崩塌之后，或许就只有隐藏在基因中的兽性才能让人活下去，而褪去文明的外衣恢复赤身裸体的模样，似乎也没有人们想的那么困难。</p>
+<p>然后他们去了医生的家，那里所幸还没被外人侵入，所幸医生还存着自家房门的钥匙，所以那里是这个肮脏世界中难得幸存下来的一块净土。他们在那里借着暴雨的恩赐清洗了身体和衣服，而肉体的干净也连带着使心灵干净了许多，他们还喝上了久未的纯净水，当全世界都瞎了之后，这些日常种种都成了奢望。总之这群可怜的瞎子在历经那么多的磨难之后，终于获得了一丝喘息。而这对于需要长途跋涉的人生而言，实在太弥足珍贵了。</p>
+<p>但人永远也不可以龟缩在避风港内，至少食物总是要出去寻找的，于是医生妻子和第一个失明者夫妇出门了，他们既帮忙寻找食物，也想回家看一看。家就是人的根，即使失明了，思绪也如此执着地飘向那里，唯有那才能寄放灵魂，无论是高尚的，还是低劣的，都是如此。不过他们的家住进了一位颇有教养的作家，以及他的妻子和两个女儿，他们自己的家已经被其他盲人占据了。简单协商后，他们决定维持原状，第一个失明者夫妇继续住在医生的家里，而作者也继续住在他们家里。之前第一个失明者夫妻都对偷了他们家汽车的人恨之入骨，但现在，他们却可以慷慨地将自己的房子让给有需要的人，这或许是大灾难中难得宝贵的人性光辉，特别是在被肮脏垃圾包括着的城市中，更显得璀璨夺目。</p>
+<p>在此之后，医生想去诊所看看，戴墨镜的女孩跟着他们，因为她想回家看看，在女孩家的楼门前，之前的邻居老太太死了，被周遭游荡的动物啃食，但她的手上紧握着几把钥匙，其中就有一把是可以打开女孩家里，之前他们离开时，将钥匙交给了她，而她，则可能想着在死之前将钥匙还给女孩，一切都是猜测，但作者以及书里的人物，每个人都想尽量往好的地方想，多为人们留下一点希望。出于道义与报答的心情，他们三人费尽周折，将尸体埋在了属于她的后院中。</p>
+<p>故事的最后，希望成真了，人们陆陆续续地复明了，他们可以看得见东西了，城市洋溢在一片欢声笑语中。命运向来垂怜人类，每一次的疫病似乎总会悄然消退，仿佛只是大自然给人类开的一个小小的玩笑，只不过每一个玩笑，都让人们丑态毕露，罪孽累累，幸存的人不会乐于再提起这件事，而不幸死去的人，则无法张嘴以抗议不公正的对待。从历史中可以看到，大部分灾难性疫病所产生的死者，天灾导致者有之，更多的却是由于人祸，可能这就是社会化的副作用之一。有时我们会忽然地担心，不知道还能被上苍怜爱几回，若是某一天运气被消耗一空，历史就此中断，这份深刻的教训便再也流传不下去了。只不过，你看看，人类又何尝愿意接受教训呢？这本书是1995年出版，但细细读来，却可以发现历史与今天，小说与当下，虚构与现实，几乎是重叠的，我们看到了与小说如此相似的情节，好像人们并不是将那些暗讽的情节当做反面教材加以反思，反而在尽可能地借鉴，甚至变本加厉地复刻了出来，如何不令人唏嘘呢。这种现实与小说一起对人类发出的讥笑之声，大概正是这本小说值得永远留存下去，一读再读的价值所在吧。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h2 id="词汇积累">词汇积累</h2>
+<p>拄（zhu 3）：用手扶着杖或棍支持身体的平衡</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2023/04/16/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%A4%B1%E6%98%8E%E7%97%87%E6%BC%AB%E8%AE%B0/">
+            https://illusionzone.github.io/2023/04/16/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%A4%B1%E6%98%8E%E7%97%87%E6%BC%AB%E8%AE%B0/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/05/06/fancywebsite/API%E6%8E%A5%E5%8F%A3%E7%BD%91%E7%AB%99/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【Fancy Website】API接口网站 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/04/16/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%8C%AA%E5%A8%81%E7%9A%84%E6%A3%AE%E6%9E%97/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】挪威的森林 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-text">2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3"><span class="toc-text">3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4"><span class="toc-text">4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5"><span class="toc-text">5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6"><span class="toc-text">6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7"><span class="toc-text">7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8"><span class="toc-text">8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9"><span class="toc-text">9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10"><span class="toc-text">10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11"><span class="toc-text">11</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12"><span class="toc-text">12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13"><span class="toc-text">13</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14"><span class="toc-text">14</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15"><span class="toc-text">15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16"><span class="toc-text">16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-text">2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3"><span class="toc-text">3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4"><span class="toc-text">4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5"><span class="toc-text">5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6"><span class="toc-text">6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7"><span class="toc-text">7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8"><span class="toc-text">8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9"><span class="toc-text">9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10"><span class="toc-text">10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11"><span class="toc-text">11</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12"><span class="toc-text">12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13"><span class="toc-text">13</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14"><span class="toc-text">14</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15"><span class="toc-text">15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16"><span class="toc-text">16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

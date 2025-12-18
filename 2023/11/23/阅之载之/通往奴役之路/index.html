@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】通往奴役之路</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】通往奴役之路">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2023/11/23/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="哈耶克  著">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-11-23">
+      <meta 
+        property="og:article:modified_time" 
+        content="2024-03-07">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%A2%AB%E7%A6%BB%E5%BC%83%E7%9A%84%E9%81%93%E8%B7%AF"><span class="toc-text">第一章 被离弃的道路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%BC%9F%E5%A4%A7%E7%9A%84%E4%B9%8C%E6%89%98%E9%82%A6"><span class="toc-text">第二章 伟大的乌托邦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%AA%E4%BA%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9B%86%E4%BD%93%E4%B8%BB%E4%B9%89"><span class="toc-text">第三章 个人主义与集体主义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%A1%E5%88%92%E7%9A%84%E2%80%9C%E4%B8%8D%E5%8F%AF%E9%81%BF%E5%85%8D%E6%80%A7%E2%80%9D"><span class="toc-text">第四章 计划的“不可避免性”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%B0%91%E4%B8%BB%E4%B8%8E%E8%AE%A1%E5%88%92"><span class="toc-text">第五章 民主与计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%AE%A1%E5%88%92%E4%B8%8E%E6%B3%95%E6%B2%BB"><span class="toc-text">第六章 计划与法治</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E7%BB%8F%E6%B5%8E%E6%8E%A7%E5%88%B6%E4%B8%8E%E6%9E%81%E6%9D%83%E4%B8%BB%E4%B9%89"><span class="toc-text">第七章 经济控制与极权主义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E8%B0%81%E8%B7%9F%E8%B0%81%EF%BC%9F"><span class="toc-text">第八章 谁跟谁？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E4%BF%9D%E9%9A%9C%E4%B8%8E%E8%87%AA%E7%94%B1"><span class="toc-text">第九章 保障与自由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%9D%8F%E8%80%85%E5%BD%93%E6%94%BF"><span class="toc-text">第十章 为什么最坏者当政</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E7%9C%9F%E7%90%86%E7%9A%84%E7%BB%88%E7%BB%93"><span class="toc-text">第十一章 真理的终结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-%E7%BA%B3%E7%B2%B9%E4%B8%BB%E4%B9%89%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E6%A0%B9%E6%BA%90"><span class="toc-text">第十二章 纳粹主义的社会主义根源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E6%88%91%E4%BB%AC%E4%B8%AD%E9%97%B4%E7%9A%84%E6%9E%81%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85"><span class="toc-text">第十三章 我们中间的极权主义者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E7%89%A9%E8%B4%A8%E6%9D%A1%E4%BB%B6%E4%B8%8E%E7%90%86%E6%83%B3%E7%9B%AE%E6%A0%87"><span class="toc-text">第十四章 物质条件与理想目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E7%AB%A0-%E5%9B%BD%E9%99%85%E7%A7%A9%E5%BA%8F%E7%9A%84%E5%B1%95%E6%9C%9B"><span class="toc-text">第十五章 国际秩序的展望</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-text">结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】通往奴役之路
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-11-22T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-11-23</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>18.8k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p><p>《通往奴役之路》<br>哈耶克  著</p></div>
+<br />
+<img src="/image/book/readandnote/通往奴役之路/1.jpg" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/通往奴役之路/1.jpg" class="lozad post-image">
+<br />
+<h2 id="引言">引言</h2>
+<p><strong>原文摘录</strong><br>
+当代种种事件不同于历史之处，在于我们不知道它们会产生什么后果。回溯既往，我们可以评价过去事件的意义，并追溯它们相继导致的后果。但当历史正在进行时，它对我们来说就不是历史。它带领我们进入未知的境域，而我们又难能瞥见前途是什么样子。假如我们能够运用来自先前见闻的全部知识，把同样的事件重新经历一番，情况就会不相同了。对我们来说，事情将会显得多么不一样，我们现在很少注意的变化将会显得多么重要，而且往往是多么令人后怕啊！人们从未有过这种体验，而且对历史必然遵循的法则毫无所知，这也许是一件幸事。</p>
+<p>然而，尽管历史本身从来不会完全重演，而且正是因为事态发展并非不可避免，我们才能在某种程度上接受以往的教训，避免相同过程的重复。人们无须成为一位预言家，才能意识到迫在眉睫的危险。经验和兴趣的偶然结合，往往会向一个人揭示出事件中很少有人了解的方方面面。</p>
+<p>以下文字是一种经验的产物，这种经验相当近似于重新经历了一个相同时期——至少也是对一种颇为相似的思想演变过程的再观察。虽然这是一种人们不可能在一个国家获得的经验，但在某种情形之下可以通过长期轮流居住在不同的国家获得。尽管在绝大多数文明国家中思潮所受的影响在很大程度上是相似的，但它们不一定在相同时间或以相同速度发生作用。因此，通过从一个国家迁居到另一个国家，人们有时可以再次观察到类似的智识发展阶段。那时他的感觉就会变得特别灵敏。当人们再次听到他在20年或25年前首次接触到的主张或方策时，它们就有了新的意义，成为一种指向明确趋势的征兆。它们意味着，事态的发展如果不是必然地，至少也可能会经历类似的过程。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+如果从长远考虑，我们是自己命运的创造者，那么，从短期着眼，我们就是我们所创造的观念的俘虏。<br>
+<br /><br /></p>
+<h2 id="第一章-被离弃的道路">第一章 被离弃的道路</h2>
+<p><strong>原文摘录</strong><br>
+无数的利害关系都能指出某些特定的措施，它们会给某些人带来直接的和明显的利益，而所造成的损害却是十分间接的，而且很难看得到，对于这些利害关系，只有某种一成不变的规则才行之有效。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+随着成功也就发展出雄心——而人们是具有一切权利怀有勃勃雄心的。<br>
+<br /><br /></p>
+<h2 id="第二章-伟大的乌托邦">第二章 伟大的乌托邦</h2>
+<p><strong>原文摘录</strong><br>
+总是使得一个国家变成人间地狱的人事，恰恰是人们试图将其变成天堂。 ——F.荷尔德林（F.Hoelderlin）<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+论及自由之处，社会主义的奠基者们毫不掩饰他们的意图。自由思想，在他们看来是19世纪社会的罪恶之源，而现代计划者第一人圣西门（Saint Simon）甚至预告，对那些不服从他所拟议的计划委员会的人，要“像牲畜一样来对待”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong>2<br>
+没有人比德·托克维尔更清楚地意识到，民主在本质上是一种个人主义的制度，与社会主义有着不可调和的冲突：</p>
+<p>（他在1848年说）民主扩展个人自由的范围，而社会主义却对其加以限制。民主尽可能地赋予每一个人价值，而社会主义却仅仅使每一个人成为一个工具、一个数字。民主和社会主义除了“平等”一词毫无共同之处。但请注意这个区别：民主在自由之中寻求平等，而社会主义则在约束和奴役之中寻求平等。</p>
+<p>为了减少这些疑虑，并将一切政治动因中最强烈的动因——渴求自由为己所用，社会主义开始日益利用一种“新自由”的允诺。社会主义的来临将是从必然王国向自由王国的飞跃。它将带来“经济自由”，没有“经济自由”，就“不值得拥有”已经获得的政治自由。只有社会主义才能完成长期的为自由而进行的斗争，而在这场斗争中，政治自由的取得仅仅是第一步。</p>
+<p>将自由一词的意义稍加改变，使这个论点听来似乎应当合情合理，这种意义上的微妙变化是重要的。对政治自由的伟大倡导者们来说，这个词意味的是免于强制的自由，是摆脱了他人专断权力的自由，是从种种束缚中的解放，这些束缚使个人除了对他们隶属的长官唯命是从之外别无选择。然而，所允诺的新自由却是摆脱了必然性的自由，是从环境的强制中的解放，这些环境不可避免地限制了我们所有人的选择余地，尽管对有些人来说选择余地比对别的人更大些。在人们能真正获得自由之前，必须打破“物质匮乏的专制”，解除“经济制度的束缚”。</p>
+<p>当然，在这个意义上，自由不过是权力或财富的代名词。然而，虽则这种新自由的允诺常常与社会主义社会中物质财富大大增加的不负责任的允诺相提并论，但并非出于这种对自然的吝啬的绝对征服，经济自由便指日可待。这个允诺实际上指的是，不同的人在选择余地上现存的巨大悬殊将被消除。因此，对这种新自由的要求，不过是对平均分配财富旧要求的代名词而已。但这个新名词却给了社会主义者一个与自由主义者共有的代名词，他们对其充分地加以利用。而且虽然这个词为两个集团在不同意义上加以利用，但很少有人注意到这点，更少有人自问，所允诺的这两种自由能否真正地结合在一起。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+随着有组织管理的增加，目标的多样化必定会让位于一体化。这是对有计划的社会和人类事务中独裁主义原则的报应。<br>
+<br /><br /></p>
+<h2 id="第三章-个人主义与集体主义">第三章 个人主义与集体主义</h2>
+<p><strong>原文摘录</strong><br>
+无疑在有些领域中，没有什么法律措施足以创造行使竞争和私有财产的制度所依赖的主要条件：即所有者从其财产所提供的一切有益的服务得到好处，而负担使用其财产对他人造成的一切损害。例如，在不可能依靠偿付代价的情况下享用某些服务的地方，竞争就不可能产生这些服务；而当使用财产对别人造成的损害，不能有效地使财产所有人担负责任时，价格制度也同样变得没有效用了。在所有这些情况中，个人考虑的项目和影响社会福利的项目之间，都存在一种分歧；当这种分歧重要起来时，就必须在竞争之外寻求某种方法来提供这种服务。因此，有关在道路上设路标的费用以及在大多数情况下有关道路本身的费用，都不可能由每一个单独的使用者来支付。砍伐森林、某种耕作方法或工厂的烟尘和噪音等某些有害的后果，也不能仅限于财产所有者，或者仅限于因取得议定的补偿而甘受损害的那些人。在这种情况下，我们必须寻求不用价格机制来进行调节的办法。但是，在不可能创造有利竞争适当运行的条件的地方，我们不能不采用当局直接管理的办法取而代之，这一事实并不能证明在可以使竞争发挥作用的地方，我们应压制竞争。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+虽然一般仍用“资本主义”、“社会主义”这两个名词来说明过去和将来的社会形态，但这些名词隐蔽了而不是阐明了我们正经历着的过渡的性质。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+对于本书的论证来说，最重要的是，读者要牢记：我们一切批评所针对的“计划”只是指那种反对竞争的计划——用以代替竞争的计划。这一点之所以更加重要，是因为在本书范围内，不能讨论那种用来使竞争尽可能有效和有益的非常必要的计划。<br>
+<br /><br /></p>
+<h2 id="第四章-计划的“不可避免性”">第四章 计划的“不可避免性”</h2>
+<p><strong>原文摘录</strong><br>
+在社会演化中，没有什么东西是不可避免的，使其成为不可避免的是思想。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+这种论点完全是因一种对竞争作用的误解而产生的。使竞争成为适当的实现这种协调的唯一方法的，正是在现代条件下劳动分工的这种复杂性，而绝不是竞争只适用于比较简单的条件。如果条件是如此简单，以至只要一个人或一个机关就足以有效地观察到所有有关事实的话，那么要实行有效的控制或计划就根本不会有什么困难。只有在必须考虑的因素如此复杂，以至不可能对此得到一个概括的印象的时候，才使分散的权力成为不可避免。但是，一旦分权成为必要，协调的问题就发生了——这种协调就是让各个企业单位调节它们自己的活动去适应只有他们才知道的事实，进而促成他们各自计划的相互调整，由于没有一个人能够有意识地权衡所有必须顾及的因素，它们关系到如此众多的个人的决定，因而使分权成为必要，很显然，要完成这种协调，不是通过“有意识的控制”，而只有通过具体安排，向每个企业单位传播它必须获悉的消息，以便使它能够有效地调整自己的决定以适应其他人的决定。并且因为常常影响着各种商品供求条件的变化的细节，绝不可能由任何一个中心对它加以充分的了解，或很快地把它收集起来或传播出去，这时候需要的是某种记录工具，自动地记录所有的个人活动的有关结果，于是这些记录信息便同时既是一切个人决定的结果，又是一切个人决定的指南。</p>
+<p>在竞争之下价格体系所提供的正是这种记录，而且这种任务没有任何其他东西可望完成。价格体系使企业家只要像工程师注视少数仪表的指针那样，注视较少数的价格变动，就可调整他们的活动以适应他们同行的行动。此处的重要之点在于：只有竞争普遍发生时，也就是说只有在个别生产者必得调整自己的活动以适应价格的变化但不能控制价格的变化时，价格体系才能完成这种职能。整体越复杂，我们就越得凭借在个人之间的分散的知识，这些个人的个别行动，是由我们叫做价格体系的那种用以传播有关消息的非人为的机制来加以协调的。<br>
+<br /><br /></p>
+<h2 id="第五章-民主与计划">第五章 民主与计划</h2>
+<p><strong>原文摘录</strong><br>
+社会为之组织起来的“社会目标”或“共同利益”、“普遍福利”或“普遍利益”。无须多少思考便可看出，这些词语没有充分明确的意义以决定具体的行动方针。千百万人的福利和幸福不能单凭一个多寡的尺度来衡量。一个民族的福利，如同一个人的幸福，依赖于许许多多的事物，这些事物被以无数种组合形式提供出来。它不能充分表达为一个单一目标，而只能表达为一个种种目标的等级、一个每个人的每种需要都在其中占据一席之地的全面的价值尺度。根据一个单一的计划指导我们的一切活动，就预设了我们的每一种需要都在一个价值序列中占有一个排位，这个价值序列必须十分完整，足以使计划者在必须加以选择的各种不同的方针中有可能做出决定。简而言之，它预设存在一个完整的伦理准则，按此人类的各种不同的价值都适得其位。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们不仅没有这样包罗万象的价值尺度，而且对任何有才智者而言，去理解竞取可用资源的不同个体的无穷无尽的不同需要，并一一定出轻重缓急，将是不可能的。对我们的问题来说，任何人所关注的目标是否仅仅包括他自己的个人需要，还是包括他所亲近甚至疏远的伙伴的需要——就是说，就这些字眼的通常意义而言，他是一个利己主义者，还是一个利他主义者——是无足轻重的。十分重要的东西是这个基本事实，即任何人都只能考擦有限的领域，认识有限需要的迫切性。无论他的兴趣以他本人的物质需要为中心，还是热衷于他所认识的每个人的福利，他所能关心的种种目标对于所有人的需要而言，仅仅是九牛一毛而已。</p>
+<p>这就是整个个人主义哲学所根据的基本事实。它并不像通常人们所断言的那样，假定人是或应该是利己的或自私的。它仅仅从这个毫无争议的事实出发，即我们想象力的局限，使我们只能在我们的价值尺度中包含全社会需要的一部分，而且严格地说，由于价值尺度仅能存在于个人头脑中，除了种种局部的价值尺度，没有任何别的可以存在，而这些价值尺度不可避免地有所不同并常常互相矛盾。由此，个人主义者得出结论说，在限定的范围内，应该允许个人遵循自己的而不是别人的价值和偏好，而且，在这些领域内，个人的目标体系应该至高无上而不屈从于他人的指令。就是这种对个人作为其目标的最终决断者的承认，对个人应尽可能以自己的意图支配自己的行动的信念，构成了个人主义立场的实质。</p>
+<p>当然，这种观点并不排除对社会目标的认可，或者更确切地说，对个人目标的一致性的认可，这种一致性使人们为了其追求的目标联合起来成为可取之事。但是，它把这种共同行动局限于那些个人观点一致的事例上；就此而言，所谓“社会目标”不过是许多个人的相同目标——或者说，是个人为了回报他们在满足自身欲望所接受的帮助而愿意有所贡献的那种目标。因而，共同行动局限于人们对共同目标一致同意的那些领域。习以为常的是，这些共同目标不会是个人的终极目标，而是意味着不同的人可以将其用于不同的意图。实际上，在共同目标对人们并非一种终极目标而是一种能够用于多种多样意图的手段的地方，人们才最可能对共同行动达成共识。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+制订一个经济计划，必然要在种种相互冲突和相互竞争的目标——不同人们的不同需要——之间进行选择，这正是经济问题的实质。然而，哪些目标这样冲突，哪些目标在我们想要实现其他目标时必须牺牲，简言之，哪些是我们必须从中作出选择的备选方案，只有那些了解各种实际情况的人才会知道这些；而且对于各种目标中哪一个应给予优先选择，也只有他们这些专家才处于能做决定的地位。不可避免地，他们将自身的优先选择尺度加诸于他们为之计划的共同体。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+现在人们常常说，民主不会容忍“资本主义”。倘若此处“资本主义”意味着以自由处置私有财产为基础的一个竞争体制的话，那么，认识到只有在这种制度下民主才有可能，是极其重要的。当这个制度由一个集体主义信条支配时，民主不可避免地将自行毁灭。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+民主本质上是一种手段，一种保障国内安定和个人自由的实用装置。它本身绝不是一贯正确和可靠无疑的。我们绝不能忘记，在一个专制统治下往往比在某些民主制度下有更多的文化和精神的自由——至少可能想见，在一个非常整齐划一和教条主义地推行多数民主的政府统治下，民主制度也许和最坏的独裁制度同样暴虐。但是，我们的要点与其是说独裁必然不可避免地消灭了自由，毋宁是说计划导致独裁，因为独裁是强制推行各种理想的最有效工具，而且，集中计划要在很大程度成为可能的话，独裁本身是必不可少的。计划与民主之间的冲突只不过起因于这样一个事实，即对指导经济活动所需的对自由的压制来说，后者是个障碍。但是，只要民主不再是个人自由的保障的话，它也可能以某种形式依然存在于极权主义政体之中。</p>
+<p>把民主看成受到威胁的主流价值，而专心于此的流行做法，并非不存在危险。它在很大程度上要对一种错误的和无稽的信念负责，这种信念就是，只要权力的最终来源是多数人的意志，这种权力就不会是专横的。许多人以这种信念来获得的这种虚假的保证，是对我们面临的危险普遍缺少认识的重要原因。没有理由相信，只要相信权力是通过民主程序授予的，它就不可能是专横的；与此形成对照的说法也是不正确的，即防止权力专断的不是着眼于它的来源，而是对它的限制。民主的控制可能会防止权力变得专断，但并非仅仅存在民主的控制就能做到这一点。如果民主制度决定了一项任务，而这项任务又必定要运用不能根据定则加以指导的权力时，它必定会变成专断的权力。<br>
+<br /><br /></p>
+<h2 id="第六章-计划与法治">第六章 计划与法治</h2>
+<p><strong>原文摘录</strong><br>
+最能清楚地将一个自由国家的状态和一个在专制政府统治下的国家的状态区分开，莫过于前者遵循着被称为法治的这一伟大原则。抛开所有技术细节不论，法治的意思就是指政府在一切行动中都受到事前规定并宣布的规则的约束——这种规则使得一个人有可能十分肯定地预见到当局在某一情况中会怎样使用它的强制权力——和根据对此的了解计划它自己的个人事务。虽然因为立法者以及那些受委托执行法律的人都是不可能不犯错误的凡夫俗子，从而这个理想也永远不可能达到尽善尽美的地步，但是法治的基本点是很清楚的：即留给执掌强制权力的执行机构的行动自由，应当减少到最低限度。虽则每一条法律，通过变动人们可能用以追求其目的的手段而在一定程度上限制了个人自由，但是在法治之下，却防止了政府采取特别的行动来破坏个人的努力。在已知的博弈规则之内，个人可以自由地追求他私人的目的和愿望，肯定不会有人有意识地利用政府的权力来阻挠他的行动。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+计划必然要涉及对于不同的人的具体需要予以有意识的差别对待，并允许这个人做一定要禁止另一个人做的事情。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一方面是在法律面前形式上的公平和形式上的平等，另一方面是试图实现实质上的公平和平等的各种理想，这两者之间的冲突，也可以说明为什么关于“特权”的概念被普遍地混淆以及因此而引起滥用。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+因此，如果说，在一个有计划的社会，法治不能保持，这并不是说，政府的行为将不是合法的，或者说，这样一种社会就一定是没有法律的。它只是说，政府强制权力的使用不再受事先规定的规则的限制和决定。法律能够（并且为了集中指导经济活动也必须）使那种实质上是专断的行为合法化。如果法律规定某一部门或当局可以为所欲为，那么，那个部门和当局所做的任何事情都是合法的——但它的行动肯定不是在受法治原则的支配。通过赋予政府以无限制的权力，可以把最专断的统治合法化；并且一个民主制度就可以以这样一种方式建立起一种可以想象得到的最完全的专制政治来。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+政府的强制权力只能够在事先由法律限定的那些情况下，并按照可以预知的方式被行使…特定的立法能够破坏法治<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+法治的主要应用是否像在某些国家一样，由权利法案或宪法条文加以规定，或者其原则是否仅仅是一种牢固确立的传统，这都关系不大。但是，有一点很容易理解：不管采取什么形式，任何对这种立法权力的公认限制，都意味着承认个人的不可让渡的权利，承认不可侵犯的人权。<br>
+<br /><br /></p>
+<h2 id="第七章-经济控制与极权主义">第七章 经济控制与极权主义</h2>
+<p><strong>原文摘录</strong><br>
+由于在现代条件下，我们的每一件事几乎都要依赖他人来提供手段，经济计划几乎将涉及我们全部生活的各个方面。从我们的原始的需要到我们和家庭、朋友的关系，从我们工作的性质到我们闲暇的利用，很少有生活的哪一个方面，计划者不对之施加“有意识的控制”。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+经济控制所造成的对全部生活的控制程度，表现得最突出的莫过于外汇兑换方面。初看起来，国家管制外汇买卖对于私人生活的影响是再小不过的了，因此多数人对于这种管制都会采取漠不关心的态度。但是，多数大陆国家的经验教育富于思考的人们，要把这一步骤看作是向极权主义道路前进的决定性的一步和对个人自由的压制。实际上，这是使个人完全屈服于国家的专制之下、把一切后路都断绝的杀手——不只是对富人，而是对每一个人。一旦个人不再能自由旅行，不再能订购外国书报杂志，一旦一切对外联系的工具只限于那些为官方意见所认可的人，或者官方认为必要的人，则它对舆论的有效控制，将远远超过17和18世纪任何专制主义政府所曾经施行过的控制的程度。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在一个有计划的社会中，当局所掌握的对所有消费的控制权的根源，就是它对于生产的控制。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在一个竞争性的社会中，我们的选择自由是基于这一事实：如果某一个人拒绝满足我们的愿望，我们可以转向另一个人。但如果我们面对一个垄断者时，我们将唯他之命是从。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+经济自由必须是我们经济活动的自由，这种自由，因其具有选择的权利，不可避免地也带来与那种权利相联系的风险和责任。<br>
+<br /><br /></p>
+<h2 id="第八章-谁跟谁？">第八章 谁跟谁？</h2>
+<p><strong>原文摘录</strong><br>
+那些最早把儿童纳入政治组织中去，以保证他们长大成为优秀的无产者的，不是法西斯主义者，而是社会主义者。那些首先想到在党的俱乐部里把运动和竞技、足球和徒步旅行组织起来，以使其成员不受其他观点传染的，不是法西斯主义者，而是社会主义者。那些首先主张应以敬礼的方法和称呼的形式来使党员区别于其他人的，不是法西斯主义者，而是社会主义者。那些通过组织社会“细胞”和设置装置来经常地监督私人生活，创造了极权主义政党原型的，也就是他们。意大利“法西斯少年组织”（Bolilla）、德国“希特勒青年团”、“意大利职工业余活动组织”（Dopolavoro）和德国纳粹群众业余活动组织、“由欢乐获取力量”（Kraft durch Freude）的政治制服和党的军事化编制，都不过是对社会主义者原已有过的制度和模仿而已。<br>
+<br /><br /></p>
+<h2 id="第九章-保障与自由">第九章 保障与自由</h2>
+<p><strong>原文摘录</strong><br>
+在一个国家是唯一的雇主的国度里，反抗就等于慢慢地饿死。“不劳动者不得食”这个古老原则，已由“不服从者不得食”这个新的原则所替代。——托洛茨基（L.Trotsky）于1937年<br>
+<br /><br /></p>
+<h2 id="第十章-为什么最坏者当政">第十章 为什么最坏者当政</h2>
+<p><strong>原文摘录</strong><br>
+所有权力都易腐化，绝对权力绝对会腐化——阿克顿勋爵<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们现在的问题是集体主义的社会组织将会产生什么样的道德观念，或者说，支配集体主义社会组织的将是一些什么观念。道德和制度之间的相互作用很可能产生的结果是，集体主义所产生的道德和导致人们要求推行集体主义的道德理想，两者会是截然不同的。我们很容易这样认为，既然要求实行集体主义制度的愿望来自高度的道德动机，那种制度就一定会是最高品德的源泉，然而事实上却没有理由可以说明为什么任何一种制度都准能促进那些服务于这个制度原定目标的各种观点。那些起支配作用的道德观念将部分地取决取决于引导个人在集体主义或极权主义制度下取得成功的品质（qualities），还部分地取决于极权主义机器的要求。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+此刻，我们必须暂时回过头来谈一谈在压制民主制度和创立极权主义政权之前的那种局面。在这个阶段，要政府采取迅速的、果断的行动的普遍要求乃是这种局势的主导性因素，人们不满意以“为行动而行动”为目的的民主程序的缓慢而不灵活的进程。这时，正是那些似乎具备足够的力量与决心“使问题得以解决”的人或政党才具有极大的号召力。在这一意义上所谓的“力量”，不仅意味着数量上的多数——人民感到不满的正是议会多数的无效率。他们所寻求的是得到一致的支持，从而能够鼓励人民相信他能做他所要做的任何事情。依照军事方法组织起来的新型的政党这才应运而生。</p>
+<p>在中欧国家，各社会主义政党已经使群众习惯于那些尽可能多地挤压掉其成员的私生活的半军事性的政治组织。要给予某一集团以占绝对优势的权力，所需要的一切就是把同样的这个原则再推进一步，不是在每逢选举时保证能够得到的大量选票之中，而是在一个比较小但更彻底地组织起来的集团的绝对的无条件的支持中寻求力量。能否把极权主义制度强加于全体人民，取决于这个集团的领袖是否能够首先网罗一批准备自愿服从那种极权主义纪律的人，而这种纪律则是用强力加诸其余的人身上。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在一个有计划的社会里，问题已不再是大多数人同意的是什么，而是其成员的一致性足以使一切事情都服从统一指导那个最大的集团是哪个集团；或者，如果没有这种大得足以贯彻它的意见的集团的话，那么，问题就是如何能够建立这样一个集团，以及谁能够把它建立起来。</p>
+<p>这样一个人数众多、有力量而又相当志同道合的集团，似乎在任何社会中都不可能由最好的分子，而只能由最坏的分子来建立，这其中有三个主要原因。照我们的标准，要挑出这样的一个集团所依据的原则几乎完全可以说是消极的。</p>
+<p>首先，一般说来，各个人的教育和知识越高，他们的见解和趣味就越不相同，而他们赞同某种价值等级制度的可能性就越少。这或许是事实。其结果必然是：如果我们希望找到具有高度一致性和相似性的观念，我们必须降格到道德和知识标准比较低级的地方去，在那里比较原始的和“共同”的本能与趣味占统治地位。这不是说，多数人的道德标准就是低级的，而只是说，价值标准极为类似的人数最多的集团，是具有低级标准的那些人。比方说，把绝大多数人联系起的乃是最小的公分母。如果需要一个人数众多的、有足够力量能把他们自己对生活的价值标准的看法强加在其余所有的人身上的集团，那么，它的构成者决不会是具有高度不同的和高度发展的趣味的人，而是那些构成“群众”（就这一名词的贬义而言）、很少有创造性和独立性的人，是那些能够把人数方面的分量作为他们的理想后盾的人。</p>
+<p>然而，如果一个潜在的独裁者完全依靠那些恰好具有极其相似的、简单和原始的本能之人的话，他们的人数就几乎不会对他们的企图提供足够的支持力量。他必须通过把更多的人转变过来信奉同样简单的信条来增加他们的人数。</p>
+<p>接下来，是第二个消极的选择原则：即他将能够得到一切温驯的和易受骗的人的支持，这些人没有自己的坚强信念而只准备接受一个现成的价值标准体系，只要大声地、喋喋不休地向他们鼓吹这种体系就会就范。壮大极权主义政党队伍的，正是那些其思想模糊、不健全并容易动摇的人以及那些感情与情绪容易冲动的人。</p>
+<p>第三个消极的选择因素，或许是最重要的，它恰恰是和训练有素的政治煽动家要把有密切联系的、成分相同的支持者团结在一起的那种有意识的努力分不开的。人们赞同一个消极的纲领，即对敌人的憎恨、对富人的嫉妒，比赞同一项积极的任务要容易些，这看来几乎是人性的一个法则。若要用一个信条将某个集团牢牢地团结在一起以便共同行动的话，那么，将“我们”和“他们”对立起来，即与一个集团以外的人进行共同的斗争，则似乎是这个信条中的重要组成部分。因此，那些不仅想要获得对一个政策的支持，而且要获得广大群众的无保留的忠诚的人，都总是运用它来为自己服务。从他们的观点来看，这种共同斗争的巨大优越性在于，它几乎比任何积极的纲领更能够留给他们以较大的自由行动的余地。敌人，不管他是内部的，如“犹太人”或者“富农”，或是外部的，似乎都是一个极权主义领导人的武器库中不可或缺的必需品。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+集体主义者哲学的内在矛盾之一是，虽然它将自身建筑在个人主义所发展起来的人本主义道德基础之上，但它只能够在一个比较小的集团里行得通。社会主义只有停留在理论的层面上时，它才是国际主义的，但一经付诸实施，无论是在德国还是在俄国，它就会马上变成强烈的民族主义。这就从一个方面说明了西方世界大多数人所想象的那种“自由社会主义”何以是纯理论的，而各处实行的社会主义为什么却是极权主义的。集体主义不能容纳自由主义那博大的人道主义，它只能容纳极权主义的狭隘的门户之见。</p>
+<p>如果“共同体”或国家比个人更重要，如果它们自己的目标独立于个人的目标并超越个人目标的话，那么，只有那些为社会所具有的共同目标而努力的个人才能被视为该社会的成员。这种见解的必然结果就是：一个人只因为他是那个集团的成员才受到尊敬，也就是说，并且只有他为公认的共同目标而工作才受到尊敬，并且他只是从他作为该集团成员的资格中获得他的全部尊严。单纯依靠他作为人的资格却不会带给他什么尊严。其实，人道主义的真正概念，因而也是任何形式的国际主义的真正概念，完全都是有关人的个人主义观点的产物，而在集体主义思想体系中，它们是没有地位的。</p>
+<p>只有在存在着或者有可能建立各个人的统一目标的地方，集体主义的社会才能得到扩展，这是一个基本事实，除此以外还有一些因素助长了集体主义的门户之见和唯我独尊的倾向。其中一个最重要的因素是个人认同于一个集团的愿望，这常常是一种自卑感所引起的，因而，只有那个集团的成员资格能够使他比这个集团之外的人有优越性，他的需要才会得到满足。有时，一个人知道他在集团里必须加以抑制的那些强烈的本能，能够在对付集团以外之人的集体行动中自由发挥这样的事实，似乎成了进一步使他将自己的个性融入集团个性的诱导力量。在尼布尔写的《道德的人和不道德的社会》这本书的书名里，表达了一个深刻的真理，尽管我们很少能够同意他从他的命题中得出的结论。诚然，像他在其他地方所讲的那样，“在现代人中，有一种趋势正在增强，即把自己设想是道德的，因为他们已把自己的不道德转嫁给越来越大的集团”。以一个集团的名义去行动，就似乎是将人们从控制着作为集团内部成员的个人的行为的许多道德束缚中解放了出来。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+罗素说得好，想按照一个单一的计划来组织社会生活的那种愿望本身基本上来自一种对权力的要求。不仅如此，它甚至更多地是以下这个事实的结果：集体主义者为了达到他们的目的，必须建立起前所未有的巨大权力——人支配人的那种权力——并且他们的成功也取决于他们获得这种权力的程度。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+每一个集体主义制度都有两个主要特征：首先，需要有一个为整个集团共同接受的目标体系；其次，还需要为了达到这些目标而给予该集体以最大限度的权力的压倒一切的愿望。从这两种特征产生了一个特定的道德体系，这个道德体系有些方面是同我们的体系相符的，而有些地方则与我们的体系形成了强烈的对比——但其中有一点同我们的体系不同，这使我们怀疑是否能够称之为道德：即它不让个人的良心自由地运用它自己的规则，甚至也没有个人在任何环境中都必须或可以遵守的任何一般性的规则。这就使集体主义道德和我们所知道的那些道德有那样大的区别，以致我们很难在他们仍然保持的那些道德中发现任何原则。</p>
+<p>原则的区别，在很多方面是和我们在讨论有关法治问题时的区别相同的。像形式法律一样，个人主义道德的规则，尽管在很多方面不很精确，但都是一般的和绝对的，它们规定或禁止一个一般类型的行为，不管在某一特定情况下它的最终目标是好的还是坏的。欺诈或盗窃，歪曲或背弃信任，被认为是坏事，不管在个别场合里它是否造成危害。即使在一个情况之下没有人因此受害，或者，这样行为可能是为着一个高尚的目标，但这两种情况都不能改变它是坏的这个事实。虽然我们有时也许会不得不在不同的坏事之间作出选择，但它们仍然是坏事。用目的说明手段的正当性这个原则，在个人主义道德里面被认为是对一切道德的否定。而它在集体主义的道德里面却必然成为至高无上的准则；坚定彻底的集体主义者绝对不许做的事简直是没有的，如果它有助于“整体利益”的话，因为这个“整体利益”是他判定应当做什么的唯一标准。国家利益（raison d’etat）是集体主义道德最明确的表述，它的唯一界限就是利害的权宜——一定的行为对于眼前的目标的适宜性。凡是国家利益所肯定的国与国之间的关系，也适用于集体主义国家里面人与人之间的关系。在集体主义国家里，不可能有任何限制界定什么是公民一定不要去做的事情；他的良心不允许他做的事是没有的，只要这是为集体已经确定的目标所需要的，或者这是他的上级命令他要达到的目标。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+在集体主义道德中缺乏绝对的正式规则，当然并不是说一个集体主义社会没有一些要加以鼓励的有用的个人习惯，和一些它将加以排斥的个人习惯。完全相反，它对个人生活习惯的兴趣，比个人主义社会对个人生活习惯的兴趣要大得多。要做一个集体主义社会里有用的成员，他必须具有很明确的品质，这些品质又必须通过经常不断的实践来得到加强。我们把这些品质称为“有用的习惯”，却很难把它们说成是道德品格，这是因为个人绝不可以使这些惯例超越于任何具体命令之上，或者说，绝不可让这些惯例成为实现该社会的特定目标的障碍。它们只适用于填补一切直接的命令或者指定特殊目标所留下的缺口，但绝不能成为抵触当局意志的正当理由。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+虽然对于极权主义国家的广大国民来说，使他们赞成，甚至作出上述那样行动的，常是他们对一种理想——尽管这种理想是我们所讨厌的——的无私的热忱，但不能以此为那些指导极权政策的人们辩护。要成为一个对极权主义国家的运行有用的助手，一个人单单准备接受那些为可耻行径而进行巧言令色的辩护还是不够的；他自己还必须积极地准备破除他所知道的任何一种道德的约束，如果这对达到为他们所设定的那个目标似乎是有必要的话。由于这些目标的确定是最高领导单独作出的，充当他们的工具的人就绝不能有自己的道德信念。他们首先必须无保留地委身于领导者本人；除此之外最要紧的是，他们应当完全没有原则，并且名副其实地做到不择手段。他们绝不能有自己想要实现的理想；他们应当不持可能会妨碍领导者意图的是非观念。因而在那种掌握权力的职位中几乎没有什么东西能够吸引那些持有过去曾经支配过欧洲人民的那种道德信念的人，几乎没有东西能够补偿许多特殊任务的了无趣味，几乎没有东西有满足任何更具理想主义愿望的社会，几乎没有东西能够补偿不可否认的风险以及在私生活中的大部分娱乐的牺牲，几乎没有东西能够补偿具有重大责任性的位置所要求的个人独立性的牺牲。唯一得到满足的嗜好，是对权力本身的嗜好，也就是对有人服从和对成为这个运转良好的、其他一切都为其让路的强大机器的一个部件而感到愉快。</p>
+<p>然而，能够诱使那些按我们的标准看来算是好人的人们去追求极权主义机构中领导地位的东西虽然很少，而阻止他们去那样做的东西却又很多，尽管如此，对那些残酷无情、寡廉鲜耻的人们来说，仍然存在着这样做的特别机会。他们要做的一些工作，其恶劣性是没有人会怀疑的，但是为了某种更高的目的，这些工作是必须要做的，而且还必须做得同任何其他工作一样熟练，一样有效率。由于有些需要做的工作本身就是坏事，是所有受到传统道德教育的人所不愿做的，因而愿意做坏事就成为升官得势的门径。在一个极权主义的社会里，那些需要实行残忍和恐吓、蓄意的欺诈和间谍工作的位置是很多的。无论盖世太保、集中营的管理，还是宣传部，或者“冲锋队”、“党卫队”（或者它们在意大利和俄国的翻版），都不是适宜发挥人道主义情感的地方。然而通向极权主义国家的最高地位的道路正是要通过这样一类位置。<br>
+<br /><br /></p>
+<h2 id="第十一章-真理的终结">第十一章 真理的终结</h2>
+<p><strong>原文摘录</strong><br>
+思想的国有化到处都是与工业的国有化并驾齐驱的，这是值得玩味的。——E.H.卡尔<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+社会计划所指向的目标，是一个单一的目标体系。要使每个人为这个单一体系服务的最有效方法，就是使每个人都相信那些目标。要使一个极权主义制度有效地发挥它的作用，强迫每个人为同样的目标而工作是不够的。关键是，人们应当把它们看成是他们自己的目标。虽然必须替人们选择好信仰并强加在他们身上，但这些信仰必须要成为他们的信仰，成为一套被普遍接受的信条，以便使个人尽可能自愿地依照计划者所要求的方式行动。如果在极权主义国家人民所感到的压迫，一般说来，远不如自由主义国家的大多数人民所想象的那样厉害的话，这是因为极权主义政府在使人民照着它所要求的那样去思想这方面取得了高度的成功。</p>
+<p>这当然是各种形式的宣传所造成的。宣传的技术现在大家都很熟悉，因此，我们不需多谈。唯一一点需要强调的是，极权主义所特有的不是宣传本身，也不是它所使用的技术，在一个极权主义国家里，完全改变了宣传的性质和效果的事实是：一切宣传都为同一目标服务，所有宣传工具都被协调起来朝着一个方向影响个人，并造成了特有的全体人民的思想“划一化”（Gleichschaltung）。这样做的结果是：在极权主义国家里，宣传的效果不但在量的方面，而且在质的方面都和由独立的与相互竞争的机构为不同的目标所进行的宣传的效果完全不同。如果所有时事新闻的来源都被唯一一个控制者所有效地掌握，那就不再是一个仅仅说服人民这样或那样的问题。灵巧的宣传家于是就有力量照自己的选择来塑造人们的思想趋向，而且，连最明智的和最独立的人民也不能完全逃脱这种影响，如果他们被长期地和其他一切信息来源隔绝的话。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+对某些功过问题并不存在明确的道德准则，计划当局一方面不得不经常对这些功过问题的争论作出决定，而另一方面必须向人民证明这样作出的决定是正当的——或者说，至少必须用某种方法使人民相信那些决定是正确的。虽然可能只有偏见在指导着那些做出某个决定的负责人，但如果公众不仅是消极地服从这个措施，而且还须积极地支持它的话，就必须使某种指导性原则得到公开的阐明。计划者在做出许多决定时，由于缺乏其他任何根据，必须听凭个人爱憎的指导，把这种爱和憎加以合理化的这一需要，和采用能够打动尽量多的人的方式来说明他的理由的必要性，会迫使计划者不得不创造理论，即对事实与事实之间的联系做出断言，然后这些断言就成为统治学说的不可分割的一部分。创造一种“神话”来说明其行动合理的这个过程并不一定是自觉的。支配着极权主义领袖的，或许只是一种对他所发现的某种局面的本能的憎恨，和想创造一个更符合他的是非观点的新等级秩序的愿望；他可能只知道厌恶犹太人，因为在一个没有为他提供满意的地位的制度里，犹太人居然似乎都很成功；他可能只知道喜爱和羡慕那魁伟俊美的人，即他年轻时所读过的小说里面的那个“贵族”人物。因此，他容易信奉那些似乎能够为他和他的伙伴所共同持有的偏见提供合理性的理论。这样，伪科学的理论就成为或多或少地指导每一个人的行动的官方教条的一部分。或者对工业文明的普遍憎恨和对乡村生活的浪漫主义的渴望，以及一种（或许是错误的）关于农民当兵具有特别价值的思想为另外一种神话提供了基础：即“血和土”（Blut und Boden）的神话，这种神话不但表达了终极的价值标准，而且也表现了一整套关于因果关系的信念，而这些信念一经成为指导整个社会活动的理想，就决不容许对其提出质疑。</p>
+<p>把这些官方的学说当作一种工具用来指导和团结人民去行动的必要性，早就被极权主义制度的各个理论家清楚地预见到了。柏拉图的“高尚的谎言”与索雷尔（George Sorel）的“神话”，和纳粹的种族学说或墨索里尼的工团国家的理论一样，都是为同一目的服务的。他们都必须以对事实的特定见解为基础，然后再经过详尽的阐述使其成为科学理论，以便证实其先入之见的正当性。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+要使人民承认他们要为之服务的这些价值标准的正确性，最有效的方法是说服他们相信这些价值标准的确是和他们，或者说，至少是和他们当中的最优秀者一直所持有的价值标准相同，只不过它们在以往没有得到应有的理解和认识罢了。使人民将对旧偶像的忠诚转移到新偶像上去的借口是新偶像的确是他们健全的本能一直启示给他们的东西，只不过他们从前对它们的认识很模糊。达到这种目标最有效的技巧，就是仍然使用旧的字眼，但改变这些字眼的意义。极权主义制度的特色中，很少有像对语言的完全曲解——即借字义的改变来表达新制度的理想——这件事那样使肤浅的观察者感到困惑不解了，而同时也很少有什么像这件事那样典型地体现整个极权主义精神氛围了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+必须亲眼看见，才会理解怎么会发生这样的情形：如果两个兄弟中的一个接受了这个新信仰，过了不久，他就好像在说另一种语言似的，以致他们相互之间要进行任何真正的沟通都成为不可能了。因为这种篡改说明政治理想的词义的行为不是一个孤立的事件，而是一个连续性的过程，是一种有意识或无意识地用来指导人民的技巧，所以，这种混淆会变得更加严重。随着这种过程的继续演进，全部语言的意义逐渐被剥夺而文字则变成了空壳，失去了任何具体的内容；它们既可以表示一件事物的正面，又可以表示它的反面，它们之所以被使用仅仅是因为仍然附着在它们身上的感情联系。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+要使大多数人失去独立思考是不难的。但那些仍然保留着一种批判的倾向的少数人也必须保持沉默。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当所表示的那种怀疑和担心涉及的不是个别企业的成功而是整个社会的计划时，那就一定更会被当作阴谋破坏来看待。</p>
+<p>因此，事实和理论必须和关于价值标准的意见一样成为一种官方学说的对象。而且，传播知识的整个机构——学校和报纸，广播和电影——都被专门用来传播那些不管是真是假都会强化人民对当局所做决定正确性的信心的意见；而且，那些易带来疑窦或犹豫的信息将一概不予传播。人民对这个制度的忠诚会不会受到影响，成为决定某条信息应否被发表或禁止的唯一标准。在极权主义国家，各个方面存在着的情况，可能引起永远是和其他地方在战争时期存在于某些方面的情况一样。凡是可能引起对政府的智慧产生怀疑，或者可能造成不满的东西都是不会与人民见面的。同其他国家的情况作不利的对比的根据，关于实际采取的方针是否可能有替代性方案的知识，可能说明政府没能履行诺言或没能利用机会来改善现状的信息——所有这一切都在被禁止之列。因此，对信息不加以系统管制，不强制推行统一意见的领域是不会有的。</p>
+<p>这甚至适用于那些显然是同任何政治利害关系相去甚远的领域，特别是一切科学领域，甚至是最抽象的科学领域。很容易观察到并且由经验充分证实了的是，在直接涉及人与人的关系，因而又最直接地影响到政治观点的学科中，如历史、法律或经济学等，对真理的无私探讨在极权主义制度里是不可能得到许可的，而对官方意见的辩护却成了唯一目标。在所有极权主义国家里，这些学科已成了制造官方神话的最丰产的工厂，而统治者就用这些神话来支配他们的子民的思想和意志。因此，在这些领域里甚至连追求真理的伪装都被抛弃了，什么学说应当传授和发表都由当局来决定，这是不足为奇的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+斥责任何只为活动而活动，没有远大目标的人类行为，这是完全符合极权主义的整个精神的。为科学而科学，为艺术而艺术是同样为纳粹党徒、为我们的社会主义知识分子和共产党人所痛恨的。每一个活动都必须有一个自觉的社会目标来证明它是正当的。绝不能有任何自发的、没有领导的活动，因为它会产生不能预测的和计划未作规定的结果。它会产生某种新的、在计划者的哲学里未曾梦想到的东西。这个原则甚至扩展到了游戏和娱乐上去。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+大多数人很少能够独立地思考；在大部分问题上，他们所接受的意见都是现成的意见；他们无论是与生俱来还是受人哄骗而接受这套或那套信仰，都同样感到满意。这些都可能是真实的。在任何社会里，思想的自由可能只对很少的人才有直接的意义。但这并不是说，某些人有资格或者有权力选择一批专门享有这种思想自由的人。它决不证明，某些人有要求决定人民必须想什么或信仰什么的权利的这个假定是正当的。由于在任何一种制度之下，大多数人都在服从某人的领导，因而就认为这种情形和每一个人必须服从同样的领导没有差别，这是思想完全混乱的表现。因为智识自由决不会意味着每个人都有同样的独立思考能力的缘故，就不承认它的价值，这就是完全没有领会赋予智识自由以价值的那些理由。使智识自由对知识的进步起主要推动作用的根本之点，不在于每个人都可能有能力思考或写点什么，而在于任何人对任何事由或意见都可以争论。只要异议不受到禁止，就始终会有人对支配着他们同时代人的意见有所疑问，并且提出新的意见来接受辩论和宣传的考验。</p>
+<p>使思想获得生命的，是具有不同知识和不同见解的个人之间的互动。理性的成长就是一个以这种差异的存在为基础的社会过程。这种成长的本质，就是它的结果难以预测，并且我们不能知道哪些意见有助于这种成长和哪些意见不会有所帮助——总之，我们不能用我们目前持有的任何意见来支配这个成长而同时又限制它。给心智的成长或者这一方面的普遍进步定出“计划”或进行“组织”，这种说法本身就有词语上的矛盾。认为人的心智必须“自觉地”控制它自己的发展这种见解，是把个人理性，即单独能够“自觉地”控制一切的个体理性，同产生个体理性的成长的那个人际过程，混为一谈了。如果我们试图对它加以控制，那我们只会阻碍它的发展，我们迟早一定会引起思想的停滞和理性的衰退。</p>
+<p>集体主义思想的悲剧在于：它起初把理性推到至高无上的地位，却以毁灭理性而告终，因为它误解了理性成长所依据的那个过程。我们的确可以这样说，正是一切集体主义学说的谬论和它对“自觉的”控制或“自觉的”计划的要求，才必然会导致这样一种要求，即某个人的思想应支配一切——而只有对社会现象作个人主义式的探讨，才会使我们认识到那些指导理性成长的超个人的力量。因此，个人主义在社会过程面前的态度是谦恭的，而对其他意见的态度则是宽容的，并且，它恰好是思想上的傲慢自大的对立面，而想全面指导社会过程的那种要求的根源，正是这种思想上的傲慢自大。<br>
+<br /><br /></p>
+<h2 id="第十二章-纳粹主义的社会主义根源">第十二章 纳粹主义的社会主义根源</h2>
+<h2 id="第十三章-我们中间的极权主义者">第十三章 我们中间的极权主义者</h2>
+<p><strong>原文摘录</strong><br>
+特别是那些大声叫嚷着要充当率领人们向一个新的更好的世界进军的领袖的那些科学家和工程师，几乎比任何其他阶级都更容易屈从于那种新的暴政。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+知识分子在极权主义的社会改造中所起的作用被朱利思·本达（Julien Benda）在另一个国家里预见到了。他在50年前写的《知识分子的背叛》一书，如果我们现在拿来重读，就会发现它具有一种新的意义。当我们讨论英国科学家客串式地进入政治领域的某些例子时，在那本书里特别有一段值得我们很好地加以思考和牢记。在那里本达先生谈道：</p>
+<p>迷信科学，认为科学可以适用于包括道德领域在内的一切领域——我重申，这是19世纪的一种认识。至于那些鼓吹这个学说的人是否真的信仰它，或他们是否只是想为他们内心的情感披上一件科学威望的外衣，而完全知道它只是一种热情而已，这还有待于通过考察去发现。应当注意的是，历史服从于科学的规律这一教条特别被主张专制权力的人所宣传。这是很自然的，因为这个教条可以消除他们最憎恨的两种现实，即人类自由和个人的历史活动。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+对垄断利润的每一次打压，不管它是为了个别集团还是为了整个国家的利益，都容易产生新的既得利益，它又反过来会助长垄断的扩张。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+私人垄断很少是完全的垄断，更难长时期地存在下去，或者私人垄断通常不能忽视潜在的竞争。而国家的垄断则是一个受到国家保护的垄断——保护它不致受到潜在的竞争和有效批评。这在许多场合下就意味着，一个暂时性的垄断被授予一种总是保障其地位的权力，也就是一种差不多一定要被利用的权力。如果理应用来抑制和管制垄断的权力现在热衷于庇护它所委派的人员，如果本来要由政府消除的一种弊端现在却要政府负责管理它，如果批评垄断的行为就等于批评政府，那么，要想使垄断替公众服务的希望是很小的。政府在各方面都被经管垄断企业的事务所缠身，虽然它对个人具有不可抗拒的权力，但就它在制定政策的自由方面而论，它仍是一个软弱无能的政府。垄断机构等同于政府机构，从而政府本身也越来越认同垄断事务管理者的利益而不是一般人民的利益。<br>
+<br /><br /></p>
+<h2 id="第十四章-物质条件与理想目标">第十四章 物质条件与理想目标</h2>
+<p><strong>原文摘录</strong><br>
+在一个复杂的社会里，若要协调多种多样的个人努力，就必须考虑到单个的人不能完全观察到的各种事实。而且它也没有看到，对于服从那个非人为的和貌似不合理的市场力量的唯一替代选择就是服从另一些人的同样不能控制的，因而是专断的权力，除非要毁灭这个复杂的社会。人们在渴望摆脱他现在所感觉的那些讨厌的羁绊时，往往不会意识到新的专制主义羁绊行将取代这一羁绊，必将蓄意强加在人们的身上，这甚至会使他们感受到更多的痛苦。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+道德不仅必定是个人行为的现象，而且只能存在于一定范围之内。在该范围内，个人有为自己作出决定的自由，而且被要求自愿牺牲个人利益来遵守一项道德规则。在个人负责的范围以外，既没有善，也没有恶；既没有机会获得道德评价，也没有机会通过为自己认为是正确的事物牺牲个人欲望来表明个人的道德信念。只有当我们对我们自己的利害关系负责并且有牺牲它们的自由时，我们的决定才有道德价值。我们没有权利以他人的利益为代价来博取自己无私的美名，而我们要是在没有选择自由的情况之下做到了无私，在道德上也不足以称道。如果社会成员每做一件好事都是别人使他去做的话，他们是没有权利受到赞赏的。正如弥尔顿所说的那样：“如果一个成年人所做的每一件好事或坏事，都是在薄施小惠、授意和强迫之下做下的，那么美德岂不徒有虚名？善行还值得什么赞美呢？持重、公正或自制还值得什么钦佩呢？”</p>
+<p>在物质环境迫使我们要做出某种选择时有决定自己行动的自由，以及对依照自己良心安排自己的生活可以自行负责，这两者是道德观念能够赖以培育、道德价值在个人的自由决定中赖以逐日再造的唯一氛围。不是对上级而是对自己良心的负责，不是用强力所威逼出来的责任心，这种决定在个人所重视的事物中应该为他人牺牲哪些事物的必要性，以及对自己所做决定的后果负责——这些才是任何名副其实的道德的实质。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+此处我却有一个疑虑，既然“没有选择自由的情况下做到无私”（虽然“无私”这个词本身就有主观的含义）不被视为善，那么没有选择自由的情况下侵害别人的权益，是否就不被视为恶了呢？即道德评判难道只是限于个人行为范围内，那么岂不是可以凭借“不自由”的借口逍遥法外，成为毫无负罪感的“平庸之恶”了呢？再者，如何界定自由与否呢？一个人当面临审判时，总能找出无数种受制的理由来，届时该如何裁定，靠何依据定夺，似乎在此就又是一本糊涂账了。
+</p-n>
+</details>
+<p><br /><br /></p>
+<p><strong>原文摘录</strong><br>
+那些不让大众参加的封闭型集团对非成员的歧视，更不用说不同国家国民之间的歧视，越来越被认为是自然的现象；人们对出于某个集团利益的政府措施强加于个人的不公正的行动熟视无睹，几乎形同铁石心肠；对于最基本的个人权利粗暴之至的蹂躏，像在强迫移民中所发生的事件那样，就连据认为是自由主义者的人们也越来越无动于衷了。所有这一切确实表明，我们的道义感已变得迟钝，而不是变得敏锐了。当我们受到要炒蛋就得打碎鸡蛋这种日益频繁的提醒的时候，那些正在被打碎的鸡蛋几乎都是前一两代人认为是文明生活之根基的那一类东西。我们许多所谓“自由主义者”对于权势者所宣称的原则表示同情，他们对权势者所犯的任何暴行还有什么不能欣然宽恕的呢？<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+亲身经历已使他们更为明智，更为伤感：他们已经懂得了，在一个人身自由和个人责任遭到摧毁的体制里，无论是善意或者组织效率都不足以使人安身立命。那些领受了这一教训的德国人和意大利人最想得到的东西，就是保护他们免遭那个残暴政府的蹂躏——不是巨型组织的一些宏伟计划，而是平安和自由地重建他们自己小天地的一个机会。<br>
+<br /><br /></p>
+<h2 id="第十五章-国际秩序的展望">第十五章 国际秩序的展望</h2>
+<p><strong>原文摘录</strong><br>
+对和平的不很明显，但绝非不很真实的威胁来自那种人为地培养一国全体人民的经济团结的做法，以及在全国实行计划所产生的新的利益对立的集团。在国界的两侧，居民的生活水平就呈现出明显的差异，凭借一国的国民资格就有权分享和他国国民所分享的完全不同的成果——这是既不必要也不可取的。如果各国的资源被当作为各国自身的独占性财产，如果国际经济关系不是成为个人与个人之间的关系，而是越来越成为作为贸易实体的各个整体国家之间的关系，它们就不可避免地成为各个整体国家之间的不和及猜忌的根源。一个致命的幻想就是：认为用国家之间或有组织集团之间的谈判方式来代替围绕市场和原料展开竞争的方式就可以减少国际摩擦。这不过是用借助强力的争夺代替那种只能喻称为“斗争”的竞争，并将那种在个人之间无须诉诸武力便可决定胜负的抗争，转变为在强有力的、武装的国家之间的没有更高法律约束的抗争。这些国家同时是本身行为的最高评判者，都不听命于更高的法律，它们的代表们除了本国各自的眼前利益之外又不受任何其他因素的约束——这些国家之间的经济交易必定会导致权力的冲突。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+随着计划规模增大，对各目标的优先顺序的意见一致程度即趋于减少，而仰仗强力和强迫的必要性则随之增大。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+要对理想和价值标准差异很大的人民的经济生活进行管理，就是要承担起一种使得一个人有必要使用强力的责任。它等于僭取一种地位，处于这种地位的人，即使是最为心地善良的人，也不能不使他们被迫按照一种对某些受影响的人说来必定显得高度不道德的方式来行事。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+当承担一种道德责任必须涉及通过强力使自己的道德观念相对于那些在其他社会中占据支配地位的道德观念占上风的时候，承担这样一种责任会使一个人处于一种不可能按道德行事的处境。如果硬要把这样一种不可能完成的道义任务强加于战胜国，这肯定会在道德上败坏和损害它们。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+正如在其他大的恶行发生时的那样，为了使战争在将来成为完全不可能而采取的措施，甚至可能比战争本身还要坏得多。<br>
+<br /><br /></p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>本章读注</strong></summary><p-n>
+</p-n>
+</details>
+<p><br /><br /></p>
+<h2 id="结论">结论</h2>
+<h2 id="词汇积累">词汇积累</h2>
+<p>血与土：这是第三帝国时期在德国被经常使用的一个宣传口号，它表达了纳粹主义意识形态的一个基本信息，即一个“健康的”国家是以自己的人民（即血）和自己的土地为基础的</p>
+<p>壕堑（qian 4）：壕沟，战壕</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2023/11/23/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF/">
+            https://illusionzone.github.io/2023/11/23/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/11/26/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%AD%A6%E7%9A%84%E6%80%81%E5%BA%A6/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【妄想记】学习 &amp; 知识 &amp; 考试 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/11/13/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%A8%B1%E4%B9%90%E8%87%B3%E6%AD%BB%E7%9A%84%E6%97%B6%E4%BB%A3/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【察之作之】娱乐至死的时代 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%A2%AB%E7%A6%BB%E5%BC%83%E7%9A%84%E9%81%93%E8%B7%AF"><span class="toc-text">第一章 被离弃的道路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%BC%9F%E5%A4%A7%E7%9A%84%E4%B9%8C%E6%89%98%E9%82%A6"><span class="toc-text">第二章 伟大的乌托邦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%AA%E4%BA%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9B%86%E4%BD%93%E4%B8%BB%E4%B9%89"><span class="toc-text">第三章 个人主义与集体主义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%A1%E5%88%92%E7%9A%84%E2%80%9C%E4%B8%8D%E5%8F%AF%E9%81%BF%E5%85%8D%E6%80%A7%E2%80%9D"><span class="toc-text">第四章 计划的“不可避免性”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%B0%91%E4%B8%BB%E4%B8%8E%E8%AE%A1%E5%88%92"><span class="toc-text">第五章 民主与计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%AE%A1%E5%88%92%E4%B8%8E%E6%B3%95%E6%B2%BB"><span class="toc-text">第六章 计划与法治</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E7%BB%8F%E6%B5%8E%E6%8E%A7%E5%88%B6%E4%B8%8E%E6%9E%81%E6%9D%83%E4%B8%BB%E4%B9%89"><span class="toc-text">第七章 经济控制与极权主义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E8%B0%81%E8%B7%9F%E8%B0%81%EF%BC%9F"><span class="toc-text">第八章 谁跟谁？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E4%BF%9D%E9%9A%9C%E4%B8%8E%E8%87%AA%E7%94%B1"><span class="toc-text">第九章 保障与自由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%9D%8F%E8%80%85%E5%BD%93%E6%94%BF"><span class="toc-text">第十章 为什么最坏者当政</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E7%9C%9F%E7%90%86%E7%9A%84%E7%BB%88%E7%BB%93"><span class="toc-text">第十一章 真理的终结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-%E7%BA%B3%E7%B2%B9%E4%B8%BB%E4%B9%89%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E6%A0%B9%E6%BA%90"><span class="toc-text">第十二章 纳粹主义的社会主义根源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E6%88%91%E4%BB%AC%E4%B8%AD%E9%97%B4%E7%9A%84%E6%9E%81%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85"><span class="toc-text">第十三章 我们中间的极权主义者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E7%89%A9%E8%B4%A8%E6%9D%A1%E4%BB%B6%E4%B8%8E%E7%90%86%E6%83%B3%E7%9B%AE%E6%A0%87"><span class="toc-text">第十四章 物质条件与理想目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E7%AB%A0-%E5%9B%BD%E9%99%85%E7%A7%A9%E5%BA%8F%E7%9A%84%E5%B1%95%E6%9C%9B"><span class="toc-text">第十五章 国际秩序的展望</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-text">结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%A2%AB%E7%A6%BB%E5%BC%83%E7%9A%84%E9%81%93%E8%B7%AF"><span class="toc-text">第一章 被离弃的道路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%BC%9F%E5%A4%A7%E7%9A%84%E4%B9%8C%E6%89%98%E9%82%A6"><span class="toc-text">第二章 伟大的乌托邦</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%AA%E4%BA%BA%E4%B8%BB%E4%B9%89%E4%B8%8E%E9%9B%86%E4%BD%93%E4%B8%BB%E4%B9%89"><span class="toc-text">第三章 个人主义与集体主义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E8%AE%A1%E5%88%92%E7%9A%84%E2%80%9C%E4%B8%8D%E5%8F%AF%E9%81%BF%E5%85%8D%E6%80%A7%E2%80%9D"><span class="toc-text">第四章 计划的“不可避免性”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E6%B0%91%E4%B8%BB%E4%B8%8E%E8%AE%A1%E5%88%92"><span class="toc-text">第五章 民主与计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E8%AE%A1%E5%88%92%E4%B8%8E%E6%B3%95%E6%B2%BB"><span class="toc-text">第六章 计划与法治</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E7%BB%8F%E6%B5%8E%E6%8E%A7%E5%88%B6%E4%B8%8E%E6%9E%81%E6%9D%83%E4%B8%BB%E4%B9%89"><span class="toc-text">第七章 经济控制与极权主义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E8%B0%81%E8%B7%9F%E8%B0%81%EF%BC%9F"><span class="toc-text">第八章 谁跟谁？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E4%BF%9D%E9%9A%9C%E4%B8%8E%E8%87%AA%E7%94%B1"><span class="toc-text">第九章 保障与自由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%9D%8F%E8%80%85%E5%BD%93%E6%94%BF"><span class="toc-text">第十章 为什么最坏者当政</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-%E7%9C%9F%E7%90%86%E7%9A%84%E7%BB%88%E7%BB%93"><span class="toc-text">第十一章 真理的终结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-%E7%BA%B3%E7%B2%B9%E4%B8%BB%E4%B9%89%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E6%A0%B9%E6%BA%90"><span class="toc-text">第十二章 纳粹主义的社会主义根源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-%E6%88%91%E4%BB%AC%E4%B8%AD%E9%97%B4%E7%9A%84%E6%9E%81%E6%9D%83%E4%B8%BB%E4%B9%89%E8%80%85"><span class="toc-text">第十三章 我们中间的极权主义者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-%E7%89%A9%E8%B4%A8%E6%9D%A1%E4%BB%B6%E4%B8%8E%E7%90%86%E6%83%B3%E7%9B%AE%E6%A0%87"><span class="toc-text">第十四章 物质条件与理想目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%94%E7%AB%A0-%E5%9B%BD%E9%99%85%E7%A7%A9%E5%BA%8F%E7%9A%84%E5%B1%95%E6%9C%9B"><span class="toc-text">第十五章 国际秩序的展望</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-text">结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%8D%E6%B1%87%E7%A7%AF%E7%B4%AF"><span class="toc-text">词汇积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

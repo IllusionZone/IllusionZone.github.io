@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【妄想记】学习 & 知识 & 考试</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【妄想记】学习 &amp; 知识 &amp; 考试">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2023/11/26/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%AD%A6%E7%9A%84%E6%80%81%E5%BA%A6%20-%20%E5%89%AF%E6%9C%AC/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2023-11-26">
+      <meta 
+        property="og:article:modified_time" 
+        content="2024-04-16">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="妄想记">
+        
+          <meta 
+            property="og:article:tag" 
+            content="现世行">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【妄想记】学习 &amp; 知识 &amp; 考试
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2023-11-25T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2023-11-26</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+          class="post-meta-link">
+          妄想记
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>14.5k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+            class="post-meta-link">
+            妄想记
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+            class="post-meta-link">
+            现世行
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <p>学习大抵是人的天性，以至于从诞生之初，尙还是襁褓中的婴儿时，人就已经展现出这项本能，孜孜不倦地开始汲取并吸收着环境中的种种讯息，他们会不安分地将手脚伸向一切可以触及的地方，把触碰到的东西放入嘴中啃咬，还会乐此不疲地模仿着周围的声音和身边之人的动作与表情。这使得人比其他的生物都更灵活、矫捷，充盈着未知的可能性。虽然随着年龄的增长，大部分人的学习欲望和学习能力不可避免地逐步下降，但这并不妨碍人们将学习奉为了金科玉律，以“活到老学到老”的人生态度将“学习”与“进步”、“发展”牢牢地捆在了一起。</p>
+<p>毫无疑问，我们非常希望耗费心血学到的东西能够帮助自己成长，妥当地应对繁乱复杂的外部环境和欲念丛生的内心世界，所以我们把学习到的东西定性为知识，意为智慧的结晶。知识从何而来？对此，人们大致有两类观念，一是认为先贤们早已参透天机，并把所有的成果记录在了典籍文献之中，因此获取知识最有效也是唯一的手段就是读书，只要细细研读、好好琢磨，就能参悟出书中的通天智慧为己所用，社会也确实提供了相应的配套规则，将之乎者也、者也之乎都背得滚瓜烂熟，就有机会升官发财、登堂拜相、位极人臣，如此切实的读书效用，自然更引得人们争相追捧崇拜，甚至于“书中自有黄金屋”，“读自己书众人惜”，“万般皆下品，惟有读书高”了，于是学习就是读书，读书也就是学习；一则认为知识是依靠人们对自然与自身的不断探索而逐渐发现的，是对现象中的模式的感知与归结，前人虽已洞悉并积累了许多知识，但仍有更多的知识等待今人与后人去发掘，而且知识也并非不容置疑的权威，其之所以是知识，就在于能够不断地接受质疑与检验，并在不断的质疑与检验中获得完善。</p>
+<p>面对组织化与结构化愈发复杂的生存环境，出生后尚如白纸一般的人们就愈发地需要更多的知识，于是也愈发地需要接受教育，以迅速地、效率地填补对于知识的需求。正如“巧妇难为无米之炊”，秕糠浊水是产不出珍馐佳肴的，脑中没有一些真理灼识的话，是激发不出任何深层次的思考。因此，也就无可厚非教育皆是呈现一派填鸭式的模式，虽则这却是在一定程度上使人们形成了某种依赖性，从而淡化了自我教育与质疑的能力，却不可否认其颇有“大开民智”之功效，使之成为了社会的一砖一瓦。一代又一代的人前赴后继地被推入这片汪洋的知识汪洋中，将青春豪掷其间，挥洒着大好的时光和精力，挑灯夜读，悬梁刺股，忙忙碌碌，迷迷糊糊，努力着，拼搏着，死去着。</p>
+<p>作为有幸在此模式下经历过大部分阶段的人，我却总会忍不住地想，我从中获得了些什么？跳开意识形态与环境因素，作为一个只有几十年光阴且还有着强烈的自我意识的个体，我想获得哪些知识？又该如何去获得这些知识？每一次发问，都会将这已在厚重模式下被碾压得看似不言自明的问题搅得含糊不清。于是，我不自量地粗略梳理了一番知识的类别与概括，希望能因此稍加明晰一些。</p>
+<p>为此，</p>
+<p>由于涉及各种利益与权势的纠葛，这两种观念也就一直在同一片时空下互相黏连共存着，而从这两种不同的观念出发，也就产生了许许多多各式各样的知识。为此，人们也设计了许多套教育的模式，以使。人是必然要接受教育的，正如“巧妇难为无米之炊”，秕糠浊水产不出珍馐佳肴，脑中空无一物无法激发任何思考，只有人类的进步，正是基于这无数大脑内思想与经验的传递，为了应对当下越来越复杂的环境，人们就必须接受教育，被灌输以知识与意识形态，</p>
+<p>是对周遭环境的模式的感知</p>
+<p>对学习这一动作而言，至少要有一个目标，我们自然希望费尽心机学习到的东西能够帮助自己成长，应对繁乱复杂的外部环境和欲念丛生的内心世界，所以我们把学习的对象定性为知识，以智慧的结晶视之。</p>
+<p>人们对知识的观念大致有两类，虽然这两种观念在同一片时空下常常是相互交叉，彼此交融，但我们依旧能根据两者的差异看出在各自观念下学习与知识的。一种是认为先贤们早已参透天机，并将所有成果记录在了典籍文献之中国，</p>
+<p>虽然这两种观念在同一时空下互相交叉，学习大抵是人的天性，以至于从诞生之初起，还是婴儿的人类就已经迫不及待地展现出这项本能，他们贪婪地汲取着陌生环境中的种种讯息，手脚不安分地去触碰一切可以接触到的东西，并把它们放入嘴中啃咬，还乐此不疲地模仿身边之人的动作和表情。这使得人比其他生物更灵活、矫捷，充盈着未知的可能性。虽然随着年龄增长，似乎大部分人的学习欲望与学习能力都在逐步下降，但人们还是将“活到老学到老”奉为金科玉律，牢牢地把“学习”与“发展”绑定到了一起，有道是“读自己书众人惜”，可见人们对学习有一种近乎盲目的崇拜。</p>
+<p>对于知识，人们大致有这么几种观念，一种是认为先人早已参透天机，并将所有的成果藏在了典籍文献之中，所以他们对于学习的看法，便是只要细细研读，好好琢磨，自然能参悟出通天智慧为己所用，一种是认为知识就产生于时间万物之中。需要随着人们不断的感知和研究活动而逐渐地被披露出来，基于此，社会为人们设计的学习模式也就有了不同，前者是苦读圣贤书，只要之乎者也能够倒背如流即是，</p>
+<p>因此人们也在随着对知识的观念转变调整与组织了不同的教育系统，古时的观念多是认为先人早已参透天机，所以教育方式是让人奋力研读典籍文献，希望能将那些隐藏其中的奥秘与智慧挖干、吃透，今时的观念多是认为知识是在人的研究活动中逐渐披露出来的，为此设计了分层次的学习方式，总体可分为三个阶段，幼、小、初、高、大是传授基础知识、专是练习、掌握使用工具的技能，硕、博、后是研究学问，当然这是存在一腔美好愿望中的理想状态了。毫无疑问，教育有“大开民智”的功效，正如“巧妇难为无米之炊”，秕糠浊水产不出珍馐佳肴，脑中空无一物无法激发任何思考。所幸人类用数万年积累了许多珍宝，使刚出生的人就有物可取，有物可用，因此今人才得以站在前人的肩膀上看得更远，走得更远。一代又一代的人前赴后继沉浸在这片汪洋的知识海洋中，将青春豪掷其间，挥洒着大好的时光和精力，挑灯夜读，悬梁刺股，忙忙碌碌，迷迷糊糊，努力着，拼搏着，死去着。</p>
+<p>我作为一个有幸经历了现代教育系统大部分阶段的人，本该早习惯了受训导，受教育，可在这数十年间却仍常常会忍不住地想，人究竟要在这短暂的一生中学习什么？每次发问，又总会把这看似不言自明的东西搅得含糊不清。为此，我不自量地给知识做了一些不严谨的归类与整理，希望能以此稍稍理清一些疑惑。</p>
+<p>一、知识的类别及其浅谈</p>
+<p>（一）语言</p>
+<p>这大概是人类最早觉醒的抽象能力，6个月大的婴儿就已经能从大人的话语中分辨含义。此项天赋由来已久，与人的绑定如此之深，几乎像水与空气和人的关系一般自然，我无法想象失去了语言会是怎样的一种境地，因为我此刻的种种思辨，无不是建构在这抽象的语言之上。作为思考的起点以及学习其他知识的桥梁，语言无疑是最基础和最重要的知识。</p>
+<p>语言包含了语音和字形，本质都是对复杂现实的抽象化处理，成为一种形而上的符号，一来使人不受困于冗杂的现实中茫然无措，可以更有效率地储存更多的信息，也可以通过对符号进行一定的排列组合产生超越现实的想象；二来简化了人与人之间的交流成本，使彼此能更轻便、清晰、深入地领会各自的意思，继而建立复杂的人际关系，促进分工与协作，缔造庞大的社会结构；三来拓宽了固有的线性维度，使思想得以弥漫到时间与空间的大小角落，从数千年前一城一人的脑中流向了万世万代各洲各国许许多多人的脑中。基于这份功绩，语言不可不谓之劳苦功高。</p>
+<p>语言之重要性还体现在，其所特有的定义和定性的功能。定义是将事物的轮廓描绘出来，由事物的边界清晰牢固地重塑了该事物的形状，一则破除个体观念与事物间的模糊感，纠正自我一厢情愿的想象与感知，使个体认知变得更为明晰具体，二则使之不会在个体间的传播中散了架，扭曲成了其它的模样。我们对某一事物能有所深入地了解，根本就在于其定义，但定义并非一蹴而就，而是在反复的严谨辨析下产生的，并时常会面临着检验与变更；定性是指对事物的归类，通常我们对事物的判断就有赖于此，作用在相同事物上的不同词性的语言会使人们产生迥异的观感并进而调动起截然相反的情绪，此种现象在社会的放大下，会呈现出不同寻常的效应，掌握了定性权力与技巧的人，就决定了什么是好的，什么是坏的，什么是需要批判的，什么是需要赞许的，什么是需要喜爱的，什么是需要厌恶的，也使得个体的观念容易被狭隘地禁锢了起来。</p>
+<p>学习语言的第一个层次，是掌握基础的词汇，要听得懂别人的话，也要说得出别人能听懂的话，要看得懂别人写的字，也要写得出别人能看懂的字。安定平和的年代里，几乎所有人接受了“扫盲”教育，基本都能说，能听，能写，能看，足以自如应对日常生活了。只是同一个字，同一句话，表达者与接收者常有不同的见解，说者、写者不见得就能够确切表达出想要传达的意思，听者、读者也不见得能够确切领会传达过来的意思。要说得清楚，听得明白，沟通并不如想象中那么简单。仔细观察，就会发现生活常出现鸡同鸭讲、对牛弹琴的情况，继而以讹传讹、张冠李戴，引发不少笑话与谬误。文字的线框是固定的，但填充的颜色和着色的范围却不见得安分守己，总有跳脱之处。因此第二个层次，是试图去摸清语言在表达者心目中“真实”的含义以及夹杂的感情色彩，这往往需要费一些功夫，从说者或作者的背景、性格等入手，探明表达者对词语的理解，使语言忠于它从源心中出来的本来模样，再透过还原的语言去发掘深埋的人性。如此一方面是为了去准确领会诉者的意图，另一方面是意识到语言非常善于捕捉人类意识盲点的特性，凭此摇身一变就能幻化为本领高超的欺诈师，使原本彼此矛盾，水火不容，或曾经被人无比厌弃的现象与事物，以一个新名词或一种新的表述方法，便堂而皇之、自然而然地重现在大众视野中，于是龃龉不合的合了，情理难容的容了，更要警惕类比、拟人和褒贬等手法，避免被挑逗了情绪，成为被丝线般语言牵扯的提线木偶，受口号、标语或金句的捉弄摆出滑稽可笑的样子。不同形态的文字最是能将人指引至完全迥然的彼岸。第三个层次则是在“够用”的基础上学习尽可能多的语言，包括同一个系统里的更多词汇，以及各个系统的语言和各个时期的语言。同一个语言系统总有许多不常用到的文字，却又是拼凑现实的一块拼图，对此我恰有所感悟，有些简洁的词汇可以胜过千言万语，因其能够恰如其分地把某些事物与情景描述出来，并清晰地呈现在人们的内心，敲动感知的琴弦，使心的韵律与词的含义同步了起来，这或许正是语言的魅力；不同的语言系统则反映了不同族群、不同阶级的人独特的认知和行为模式，所以学习多门语言的意义，并不止是为了破除信息壁垒，获取资讯而已，更是为了借助该语言摆脱原有思维的惯性，换另一个角度去理解世界；语言又是随时代而变化的，随着对世界的探索和社会的演化不断创造出应用于新现象的词汇，清楚了文字的演化，才能更立体、全面地理解与感知文字，深入捕获语言在所处时代的不同核心含义，进而借助语言的灵活性来使自我的思维能更加地活络与通畅。</p>
+<p>（二）经验、规律与假说</p>
+<p>该如何来定义经验，从词义上浅析，是人透过对自身在实际生活过程中一系列经历与体验的凝练和反应，形成某种因果式的链性的认知与记忆，即由对A引发B的现象的感知，产生了A会转化为B的惯性反应。与本能有所区别的是，本能是基于自身生理的基础性反应，比如困了会睡，饿了会吃，冷会发抖，烫会缩手，悲伤会哭，开心会笑…，这些都是无需经过记忆天生就会的，相反经验则必然要在后天的经历与体验、甚至是练习中产生、积累。</p>
+<p>经验存在于这样的两个层面，一是思维，依靠抽象与归纳的方式形成观念，反映在生理构造上，则是脑回路的塑造过程，由多个储存着不同信息的神经元之间的相互连接，固化了一种讯号传输的通路，当一个神经元被点亮时，与其相连接的其他神经元也就都被激活了，随着不断重复的刺激后，这一神经元间相连的突触越来越粗壮，也使得在此之间的信号传递愈发地快速、通畅，也表示这一经验愈发地深入人心、习以为常了。不同个体的不同经历使之各自获得了不同的经验，不过由于有了语言，这些经验便得以飘散开去，使即便未曾亲身经历过的人也获得了与亲历者一般的认知，于是人们也就有机会去形成更为完善的关于世界的观念。二是身体，经过反复刻意的锤炼，身体会形成一套稳定的肌肉记忆，以有效迅捷地应对特定的情境。我们对身体的操纵并不如自以为的那般自如随意，我们却又非常希望能在特定的情形中做出恰如其分的回应，因此我们从出生起便一直在不断地摸索与学习使用自己的身体，以期望我们的意识能够与身体行为始终尽可能地趋于一致。</p>
+<p>比如要写一手漂亮的字，不仅要能在脑中呈现出好看的字形，也要能够轻重缓急地进行控笔，要弹奏一首好听的音乐，不仅要熟悉乐谱，还要使手指以恰当的节奏和力度落在特定的琴键上并击打相应的琴弦，要使篮球能够入框落网，需要从腿部发力带动躯干，由肩部传递到手臂，协助全身的肌肉运动与呼吸，最后由手腕与手指将球投射出去，搏斗时更加要求手眼一体，当眼睛探测到对方的袭击时，身体需要迅速地避开其发力的轨道以卸除攻击，同时拳头、肘部或腿刀也要准确地落到自己眼睛所指示的对方的弱点上以重创对方，即便是想要控制面部肌肉在相应的场合露出合适的表情，也需要经过一定的训练才能有较为自如的表现。</p>
+<p>虽然人们常常自诩拥有着高贵的理性，可理性却也是建构在经验的基础之上，这些经验绝大部分来源于幼童发育为成人的过程中积累和产生的，</p>
+<p>人们总是自诩拥有高贵的理性，但实际上所谓的理性思考却是建立在众多经验的基础上运行的，</p>
+<p>从经验中能提炼出规律，从主观的因果链式认知拓展成客观的普遍性共识，这也是通常意义上的规律定义，</p>
+<p>规律是从经验中提炼出来的，通过证伪与实验，由主观性的因果链式认知拓展成客观性的普遍认知，</p>
+<p>当人们尚无法对发现的规律进行验证时，通常指纯粹逻辑演化出的规律，则暂且将之归类为假说，</p>
+<p>指的便是一种客观的普遍性共识，</p>
+<p>规律是经验被提炼与简化之后形成的更为明晰的因果律，通常意义上的规律，</p>
+<p>规律也有主观与客观之分，主观之在于其只是个体或少数个体的，偏向于客观的普遍性共识，需要经得起实验的检验，可证伪，非臆断，</p>
+<p>或许用“印象”一词来概括经验是比较恰当的，即</p>
+<p>这种身体的表达体现在许多方面，比如在相应的场合显露出合适的表情，在面对特定的情形做出有效可靠的</p>
+<p>随着这一反应熟练深化，其表达可以先于或免于意识而完成，帮助我们处理一系列需要在短时间内去完成的事情。随着社会的复杂化，我们的身体会愈发地需要经验，因为</p>
+<p>我们的身体天生就需要经验的积累，因为我们并无法自如地</p>
+<p>身体需要累积经验的原因，就在于我们并无法随心所欲地操纵身体，因此必须通过训练身体使行为处于一种</p>
+<p>无论是思维上的还是身体上的经验，都不可避免地会使人产生一种惯性，以至于他只能够以这种模式生存下去，</p>
+<p>人莫不是经验性的动物，正是依靠一点一点的经验累积，继而逐步拓展认知的深度与广度，形成复杂的思维模式，</p>
+<p>基于这一点，人又莫不是经验性的动物，一切认知都从经验中产生，</p>
+<p>二是</p>
+<p>经验也可以认为是一种主观的规律，即个体从主观上够捕获到因果关系的存在，却并不清楚是如何实现这种因果连接以及之间具体的</p>
+<p>而客观的规律即普遍意义上的规律，指的是</p>
+<p>却更应当是我们需要去</p>
+<p>规律是由经验上提炼出来的更为明晰的对应关系，其可以从程度上的不同而区分为主观的规律和客观的规律，主观的规律之在于个体提炼出了一种普遍的</p>
+<p>经验存在于这样两个层面，一是思维上，依靠抽象与归纳等方式形成观念，或可称之为脑回路的塑造过程，从大脑构造来说，似乎就表现为两个储存对应信息的神经元间的连接。不同个体的不同经历就造就了其不一样的经验，托了语言之福，经验不再局限于个体体内，即使未曾亲身经历者也可借此获得亲历者的独特经验，这之中便有些是如此之珍贵，比如我们不需要被烧伤后才知道不能触碰火焰，不需要</p>
+<p>大大小小的经验具有大大小小的惯性，</p>
+<p>伴随痛苦教训所产生的经验显然会更深刻一些，</p>
+<p>经验与本能的区别在于，经验是需要过往经历的产生所累积，本能则在第一次体验就会表露出来，</p>
+<p>二是身体上的肌肉记忆，作为一种无意识的条件性反应在某些情况上更为重要，</p>
+<p>与基因性的本能反应相似之处在于，两者都是根据现实反馈调整、采取相应的措施，区别在于是否形成了记忆与认知，判断个体是否产生了经验，可以通过观察他们对曾经出现的现象的反应来窥得一二，如果个体总是伤在食物前非常显眼的篱笆网上而不懂得变通绕路的话，就很难证明其是经验性的生物，而仅是依靠本能在行动。这样一种信息不止存在于大脑中指挥肢体的行动，还隐藏于每一个细胞中，成为不经意识操纵的本能的一股力量，肌肉也有记忆的能力，在被电流灼伤之后，当手指再靠近电流就会急遽地弹开。私以为，“印象”一词或许是极为合适的概括，即现象在个体内部的映射。</p>
+<p>不同个体的不同经历造就了不一样的经验，也成为了个体之所以独一无二的原因之一，而托了语言的福，个体的经验不再只局限于个体体内，通过分享传播，使其他即使未曾亲身体验的个体也能获得与亲身体验个体相同的经验，</p>
+<p>规律应当是一种客观性的经验假说亦是一种较为主观性的经验，是存在于思想层面的</p>
+<p>由现实反馈采取相应的举措，似乎难与本能反应区分开来，</p>
+<p>个体是否产生了经验，可以通过观察他们对曾出现的现象的反应来窥得一二，</p>
+<p>私以为，“印象”一词或许是极为合适的概括，即现实在个体内部的映射。这样一种信息，并不止存在于大脑中指挥肢体的行动，还隐藏于身体的每一个细胞中，成为不经意识操纵的本能的一股力量。个体是否在经历中形成了经验，可以通过观察他们对重复发生的</p>
+<p>生物都是经验性</p>
+<p>之所以用身体来作为主语，是因为经验这种信息并不止存储在大脑中，还会刻到肢体内，</p>
+<p>经验是信息的一种，是个体实际生活中的体验凝练的印象，印象即现实映射在大脑中的成像，并借由观察、归纳使得本能清晰，比如由火对皮肤的灼烧感，知道了烈火也会焚身，又由火产生的热量，知道了生火可以取暖，一部分是世界，一部分是我与世界</p>
+<p>经验是大脑通过感官对事物和现象的观察所归纳出的结论，从这一点看，人类无疑是十足的经验性生物，一切认知生于经验，长于经验，又摆脱不了经验，从对自我与世界的观察中，人们获得了一系列基础认知，不同个体的不同成长经历造就了不一样的经验，也是个体之所以独一无二的原因之一。而托了语言的福，个体的经验不再仅仅局限于个体内部，而是通过不断地分享传播，使其他的个体即使未经过亲身观察的阶段，也能够获得相同的经验。所以人会受到同化，</p>
+<p>从不断地观察中得到相同结果的情况下强化了经验，</p>
+<p>人是经验性生物，这一点毫无疑问，生于经验，长于经验，又摆脱不了经验，由于认知模式是经验堆积，所以认知也是经验的产物。</p>
+<p>一切认知诞生于现实，又无法摆脱现实。</p>
+<p>该如何来定义经验，经验是对事物和现象的观察所得出的结论，从这一点看，人类毫无疑问是经验性的生物，</p>
+<p>不同个体的不同成长经历造就了不一样的经验，也是个体之所以独一无二的原因之一。正如托了语言的福，个体的经验不再仅仅局限于个体内部，而是通过不断地分享传播，使其他的个体即使未经过亲身观察的阶段，也能够获得相同的经验。人类是经验性的生物，这一点毫无疑问，</p>
+<p>经验调整、塑造了认知与行为的模式，趋利避害经验是对现象的归纳与总结，</p>
+<p>一切的认知和行为模式、都是经验的产物。经验通过对自我以及外界的观察、互动，思考塑造、形成，许多动物天生都有这项本能，也依赖于此去存活，</p>
+<p>经验是人至关重要的属性，通过对世界的观察、互动与思考，形成了经验。久病成医，认知产生于现实，并无法完全摆脱现实</p>
+<p>作为随经验堆叠而成长的人，自然而然萌发了根据经验总结规律的倾向人类智商的体现就在于，可以通过经验提取规律，规律有两种，一种是纯粹经验性的，另一种则是经验与逻辑的</p>
+<p>规律是经验之上的凝练</p>
+<p>（三）工具</p>
+<p>工具是人们将经验与规律凝练其中的产物，即使一个人并不十分清楚这些规律或经验的实质，但只要掌握工具的使用方法，就可借此便利地实现由于受到身体桎梏的目的，</p>
+<p>工具的含义难免宽泛，只要能够解决特定问题的就可以被当成工具，人也不例外，但我此处为了避免产生混淆，特将之限定在器械、软件的范围内。</p>
+<p>经过数年的理论基础教育之后，学生就会开始逐步接受系统性的工具学习，这是把人输送到社会上并嵌入其中运作的一项必然举措</p>
+<p>（四）规则</p>
+<p>任何一种集体性组织中都必然会诞生规则，规则调和了个体与个体之间的运转和协作，使之产生了实现居于个体之上的目标的可能性。并逐渐从无意识的规则演化为有意识的明文条例，规则是社会性的产物，大致可以分为人情世故、各行各业发展过程中制定、形成、演化的或明或暗的制度、道德、法律。下面就此一一讨论一番。</p>
+<p>1、人情世故</p>
+<p>这实在是最最重要的一门学问，也讲究天资禀赋，有些人一出生就精明圆滑，通晓世事，有些人却始终木讷呆板，不谙世故，头上挨了三棒也生不出一窍来。如变幻之术，能习者终究是有天分，习不得者也强求不得。有道是八面玲珑，我则一面都照顾不周，显然并非此道中人，在此论道就显得有些不自量力、班门弄斧了，不过如戏台下之观众，耳濡目染间也算有所见闻，故还是浅谈几许。</p>
+<p>依我之见，术也有高低之分，高深者能七十二变，无论凌霄宝殿还是深渊地府，皆能进退自如，左右逢迎，粗浅一些的有三十六变，</p>
+<p>如沐春风</p>
+<p>大部分则只是依样画葫芦，空学了个架势，</p>
+<p>有道是“世事洞明皆学问，人情练达即文章”，社会程度、分工程度之深，即使在其他方面一无所能，但只要精通此道，也足以顺风顺水，万事亨通了，</p>
+<p>有道是八面玲珑</p>
+<p>历史证明了这是社会性生物最为重要的一项能力，即便一无所能，但只要精通此道，也可顺风顺水，万事亨通，</p>
+<p>对什么样的人应用什么样的称呼，人性会屈服在糖衣炮弹的袭击之下深谙人性之道，有道是八面玲珑，我却连一面都照顾不周，论此就有些班门弄斧了，遂作罢虚情假意的套路容易得人心，可谓千穿万穿马屁不穿，一通则百通，</p>
+<p>2、行规</p>
+<p>任何一种集体性的组织中都必然产生规则，各行各业皆有其规则，</p>
+<p>当人涉足某一行业时，就必然要了解与接受其或明或暗的规则，</p>
+<p>3、道德</p>
+<p>如水顺势而流，淌过的地方便缓缓地成了溪、成了江，成了河。人同此心，心同此理的集体感受汇合起来，也就慢慢成了道德。道德是模模糊糊、若隐若现地在每个个体心中呈现的关于公平、正义、善恶、是非、自由等等观念的集合，其需要从镜像神经元所产生的感同身受中蔓延出来，将他人与自我联结在一张网上，使之共享幸福，平摊痛苦，由这样一种共同感受出发，逐渐地形成了一系列个人的行为规范，并通过大部分个体的共同遵循形成成一套隐性的社会规则。因此，通常当我们在评价一个人有没有道德时，实际上指的是这个人是否自发地要求自我去遵循这样的规则。</p>
+<p>但道德之所以一直以来都含糊不清，一部分原因却是由于生物多样性所致，虽则大部分人有着共情的神经回路，但仍然有少数个体天生就缺乏这一系统，或是在成长过程中受到了损伤，以至于并无法感受他人的感受，即便是那大部分拥有共情能力的正常个体，其共情程度也有强弱之分，不见得产生完全一致的感受，另一部分原因，则是因为文化与权力的介入，从而捏造出各种奇形怪状的道德摸样，权力能够设置一些禁忌，也能删除一些禁忌，具体视乎掌权者的利益而定。</p>
+<p>因此若是想要厘清道德，使之这一隐性的规则稍加显现的话，便应当将之摆在恰当的，基础的根本性原则的位置上，一切仅从同情共感出发，不掺入多余的繁乱复杂的世俗因素。人皆是趋利避害的，获取物质与心理感受之利，减免物质与心理感受之害，无论是否享有共情的能力，这一点都是毋庸置疑的。区别于缺乏共情能力的人的全部利与害只聚焦于其自身的利与害，有共情能力的人则会将他者的一部分利与害也视之为己之一部分利与害，于是在采取行动时，也使自我的利与害与他者的利与害联动了起来。于是当协助他人或在物质或在心理感受或两者皆有上获利时，实际上也是使自己或在物质或在心理感受或两者皆有上获利；当帮助他人或在物质或在心理感受或两者皆有上避害时，实际上也是使自己或在物质或心理感受或两者皆有上避害，于是“己所不欲，勿施于人”就成了道德的底线，而从中也才诞生了诸如公平、正义、善恶、是非、自由等更为具体的道德标准。</p>
+<p>可这一道德底线</p>
+<p>可道德又不仅仅停留在趋利避害这一层面上，当侵害已经无可挽回地发生时，即便受害者已然死去，再无法从物质或情感上获得弥补，但其受到迫害的这一既定事实依旧会留给其他尚存的拥有共情能力的人以情感上的伤害，使之油然而生出一种报复的需求，即朴素的“以牙还牙、以眼还眼”，以弥补这一伤害所造成的后果。</p>
+<p>虽然一直以来，道德说教不绝于耳，但这一知识性的信息</p>
+<p>道德却又是非常需要学习的，因为了解这一隐性的社会规则，才能使自己和大部分人进行协作和沟通，更好地融入集体之中，</p>
+<p>但大部分时间中的大部分情况下，多如牛毛的道德说教，像狗肉店门前吊起的羊头，对外是一种掩饰，对内则类似于帮会成员间的切口，对得出来的便是同伙，不过，如今多如牛毛的道德说教，更像是一种集体式的切口，使之喊出同样口号的便是同类，</p>
+<p>或许是物质上，或许是心理感受上，或许两者即是；当帮助他人</p>
+<p>因为自我无论如何也不想感受疼痛，因此就不该也不会去做出损害他人的行为，因为自我无论如何也不想受到拘束，因此就不该也不会去限制他人的行动，</p>
+<p>自我感受幸福，因此</p>
+<p>道德从何而来，那些模模糊糊、若隐若现隐藏在每个个体心中的公平、正义、善恶、是非、自由等等观念，无非是从推己及人和由人及己的心理过程中获得的，从脑神经科学的角度来说，则是从镜像神经元产生的感同身受中所蔓延出来。这样一种人同此心、心同此理的朴素的集体性观念，是社会生活衍生品，就像水顺势而流，淌过的地方就成了溪、成了江、成了河。道德并非一成不变，虽则它有着一些恒久不变的基于人性本质的基础内容，但在复杂现实的纠葛下，以及，加之一直以来如烟如雾般的不曾被</p>
+<p>但对这些本质，再由于其一直以来含糊不清的摸样，</p>
+<p>我们说一个人有没有道德，实际上指的是这个人是否自发地要求自己去遵循这些模糊的社会规则，</p>
+<p>道德之所以一直以来模糊不清，不仅在于生物多样性的特征上，也在于权力能够塑造道德，既能凭空捏造出一些禁忌与义务来，也能歪曲</p>
+<p>若是想要厘清道德，使这一隐性的社会规则实例化，便应当将其摆在恰当的，基础的根本性条例的位置上，</p>
+<p>就必须将这一隐形的社会规则</p>
+<p>调动公众情绪</p>
+<p>道德是出于人同此心、心同此理的集体观念，蕴含了关于是非、公平正义、善恶等种种判断，感动深受的</p>
+<p>界定参与其中的人的“正常”行为由镜像神经元逐渐衍化出的关于公平和正义的希冀与需求，如水顺势而流，淌过的地方缓缓成了溪、成了江，成了河。</p>
+<p>以舆论为力量，无形左右着社会的秩序，</p>
+<p>伦理人常</p>
+<p>4、法律</p>
+<p>（五）工具</p>
+<p>（六）假说</p>
+<p>对于一些尚不能清楚知晓，又有迫切解释需求的情形，人们习惯于提出假说来弥补这空缺，</p>
+<p>有些假说鼓励别人去佐证或推翻它，而有些假说却不允许分毫质疑。选择学习何种，只能仁者见仁，智者见智。</p>
+<p>二、</p>
+<p>不必拧巴在个人狭隘</p>
+<p>极大地简化了人们的交流成本，使彼此能够更清晰与深入地领会各自的意思，</p>
+<p>将复杂事物从现实中抽离出来，</p>
+<p>极大地简化了人们的交流成本，使彼此能更深入清晰地领会各自的意思，不必拧巴在个人狭隘的躯壳内，自然也促进了人与人之间的协作</p>
+<p>也拓宽了固有的线性维度，使信息弥漫到时间与空间的大小角落，从数千年前一城一人的脑中流淌到了万世万代各洲各国许许多多人的脑中，不可谓不劳苦功高。</p>
+<p>语言包含了语音——字的发声和文字——字的形状。学习语言的第一个层次，是要听得懂别人的话，也要说得出别人能听懂的话，要看得懂别人写的字，也要写得出别人能看懂的字。语言既简化了人们的交流，领会彼此的意思，不必拧巴在个人狭隘的躯壳内，也拓宽了线性时间的维度，使信息跨越时间与空间，</p>
+<p>大部分人仅停留在了“够用”的阶段，我便是如此，</p>
+<p>听得懂话，说得出话，看得懂字，写得出字，</p>
+<p>但不同的人常有着关于语言的不同见解，同一个字，同一句话，表达者与接受者或有不同的见解，说者、写者不见得就能够确切表达出本来意思，听者、读者也不见得能够确切领会本来意思，所以仔细观察一点日常生活的话，会发现常有鸡同鸭讲、以讹传讹的有趣想象，驴唇不对马嘴</p>
+<p>透过语言发掘人性，</p>
+<p>语言塑造了人们的世界观，不同语言系统往往彰显了不同民族的人的认知与行为习惯</p>
+<p>所以语言最为重要，是学习其他知识的必要阶梯，</p>
+<p>知道那个词语被别人冠以了什么样的意思是相当重要，领会词语中的感情色彩，才不至于像木偶一般受文字的丝线牵扯，原本相同的文字却能导向不同的方向，</p>
+<p>被两个相同的词语引至不同的</p>
+<p>（一）语言</p>
+<p>语言大抵是人类最早觉醒的抽象能力，6个月左右的幼儿就能初步辨识他人说话声中的含义，这项天赋由来已久，我无法想象失去语言会是怎样一种情况，因为我此刻的种种思虑，无不是建构在抽象的语言之上。语言包含了语音和文字，语音既包括领会别人声音的意思，也包括用声音传达自己的意思，文字</p>
+<p>（二）规律</p>
+<p>（三）工具</p>
+<p>（四）规则</p>
+<p>规则是纯粹的社会性产物，包括了人情世故、各行各业发展过程中制定、形成、演化的或明或暗的制度、道德、法律。</p>
+<p>1、人情世故</p>
+<p>这是人生第一课，从与父母的互动，到亲朋好友，到邻里同学，陌生人情商，伦常</p>
+<p>需要下丘脑——情绪、镜像神经元——同理心和大脑皮层——理性的合作无间</p>
+<p>2、行业规则</p>
+<p>各司其职，契约精神，各谋其位</p>
+<p>行有行规</p>
+<p>3、道德</p>
+<p>如水顺势而流，淌过的地方慢慢地就成了溪、成了河，成了江，</p>
+<p>道德</p>
+<p>道德，人同此心，心同此理，如水顺势而流，淌过的地方慢慢地就成了溪、成了河，成了江，</p>
+<p>有时难免会黄水泛滥，世道人心不古，</p>
+<p>4、法律</p>
+<p>法律正如是岸边筑起的堤坝，希望以此来把桀骜不驯的河流归整在合理的区域，是社会规则的一种实例化。</p>
+<p>大概世界上有多少个国家，就会有多少种法律，正所谓因地制宜，对症下药，倒也合乎情理。所以法律虽都是一个裹着橘黄色外皮，由一片片肉瓣组成的圆润果实，只是淮南为橘，淮北为枳，不同水土孕育出不同品种，自然也在情理之中。</p>
+<p>这种差异一定程度上来自个体在法律的底层观念上的重心不同，大致可以归为如下两类。一类是出于保护个体权益，一类则是出于管束个体行为。前者认为每一位社会成员都是社会生活的平等参与者，即法律是建立这样一套清晰明了的规则——保护与尊重个体的基本权益，诸如自由、尊严、财产等，允许他们追逐、实现自己的幸福。在此基础上，法律只提供基本的行为规范而避免对私人生活产生过多干涉，尤其是对公权力侵犯个体权益的防范这一丝警惕由最初的立法者们那延续了下来，使限制公权力徇私舞弊与胡作非为的条文成为法律中最关键的部分，当集体利益与个体产生冲突时，往往需要做出让步的是集体——那些大而虚的东西，被誓死捍卫着的是个体的基本权益，当个体碰到纠纷或矛盾时，也习惯摊开在规则底下去谈判与协商，诉诸于公开的规则审判；后者认为的是绝大部分个体是野蛮、粗俗的，因此必须受到教化与管束，于是远见卓识的管理者们常以“父母”自居，而个体也甘愿顺从了此种观念，认为自己是需要在圈养下生存的羔羊，于是所谓的集体利益实际上是权力集团的利益随着该观念的深化的逐渐放大，以至于个体利益在这片阴影下被消弭于无形。当个体遭遇不公的待遇时，第一反应的是诉诸于一个凌驾于自己之上的权力审判，比如希望有青天大老爷出现为民请命，或奔赴权力中枢跪呈御状，此种情形下，至高权力的态度也非主持公道正义，首要考虑的是处理结果有其正面的导向，以维护其统治的合理性与稳定性。由此虽然法律是权利与义务一体的规则，但显然前者更多着眼于个体的权利，而后者则多是强调个体的义务。</p>
+<p>从另一个角度来看，法律是每位公民或主动或被动地将部分权力让渡出去铸就的悬空利刃，判法权为剑柄，执法权为剑刃，</p>
+<p>对于个人而言，学习法律，</p>
+<p>“以牙还牙，以眼还眼”算不算得是一种朴素的道德观呢？</p>
+<p>简而言之，前者强调的是个体的权利，后者强调的是个体的义务。</p>
+<p>因此，法律并不全然是契合道德观念的，甚至可以是与道德南辕北辙，更与公平正义截然相悖的。</p>
+<p>虽然下面的说法在任何社会都不会得到公开的承认，但学习律法的重要性，并不在于守法，而在于熟练地运动规则去钻律法的空子，使自己处于有利的地位，</p>
+<p>法治应当不仅是严格地遵循程序执行，也要求律法必须是正义的，</p>
+<p>需要着重强调的是，在此所谈论的是法律，而非法治，早在古巴比伦或先秦时期就都有了法律，但我们不会认为那是个法治社会，也不认为那是，在我的观念中，法治并不应只有程序正义，也要讲究律法正义，若法为恶法，公平正义其实无从谈起，诚然依靠人的智慧，无法编撰完善的律法条文，但显然是可以逐渐进步的，但那显然距离法治有着一段不小的差距，法治需要具备这样两个条件，一是法律必须是良善与正义，二是按法律的规则执行针对此种情况，便</p>
+<p>从趋利避害的本性上来讲，通过发现剑网之中的漏洞来躲避免于受伤，服从于少数人的意志，</p>
+<p>法律就此被摆上了一种进退两难的尴尬境地，</p>
+<p>法律本质是希望除却主观的武断换以相对客观公正的裁决</p>
+<p>陪审团事实上可以说是相当于将部分的法律下放至</p>
+<p>意识倾向不同造成的法律形态的迥异，其不同的根本在于，这种意识倾向是经文化熏陶而烙印在组成集体的个体身上，上下一体，受此集体性的观念所导向、成长，因此</p>
+<p>中究竟隐含着何种差异，依我看来，大致可以分为两类，由律条之下的民众的两种截然不同的心理出发，一类是认为每一员是社会生活的平等参与者，法律的制定是设立这样一套规则，即充分保护并尊重个体的基本权益，诸如自由、尊严、财产等，帮助个体在遵循规则的前提下去追求自我权利，在此基础上，他们尽量避免，最初的立法者更是对公权力可能的危害性有着清醒的认识，并将这一种警惕和提防延续了下来，法律中最重要的部分，始终是在限制公权力的徇私滥用与胡作非为上；另一类则是</p>
+<p>在此需重申一下，法律仅仅是一套社会规则，有了法律，不见得就是法治，也并非文明社会的代表，自古至今的社会组织都有这样的一套规则，但很多时候这仅是野蛮与特权的遮羞布，打着法律的旗号掩盖种种肮脏龌龊的勾当，仅有当法律是以人权出发时，才是向着文明与现代化迈出的第一步罢了。</p>
+<p>法律是在道德之上的补充与实例化，就如岸边筑起了堤坝，挡住了桀骜不驯的水流。从理想状态而言，学习法律的目的，是为了知法、守法、用法，既避免逾越边界惨遭篱笆尖刺戳伤，又能依靠屏障规避伤害，保护自己，顺畅地参与一系列社会性活动。</p>
+<p>公民们把自己的一部分权力让渡出去，铸造了这柄悬空利刃，铸造的过程即立法，剑柄即判法，剑刃即执法，三位一体，又三权分立，</p>
+<p>法律又是自成一体，并不全然在道德的范畴内，</p>
+<p>大概世界上有多少个国家，就会有多少种法律，正所谓因地制宜，对症下药，倒也合乎情理，更何况也不可能有一套尽善尽美的法律可供参考。所以法律虽是一个裹着橘黄色外皮，由一片片肉瓣组成的圆润果实，只是淮南为橘，淮北为枳，不同水土孕育出不同品种，自然也在情理之中。</p>
+<p>那么这些土壤中究竟隐含着何种差异，依我看来，大致可以分为两类，由律条之下的民众的两种截然不同的心理出发，一类是认为每一员是社会生活的平等参与者，法律的制定是设立这样一套规则，即充分保护并尊重个体的基本权益，诸如自由、尊严、财产等，帮助个体在遵循规则的前提下去追求自我权利，在此基础上，他们尽量避免，最初的立法者更是对公权力可能的危害性有着清醒的认识，并将这一种警惕和提防延续了下来，法律中最重要的部分，始终是在限制公权力的徇私滥用与胡作非为上；另一类则是</p>
+<p>当需要</p>
+<p>完全由少数精英份子制定，大部分人没有参与的意识也没有参与的机会，</p>
+<p>最初的立法者更是时刻警惕并防范着公权力的胡作非为对此可能造成的危害，因此法律最重要的部分是在于限制公权力的滥用和徇私，</p>
+<p>，更是时刻警惕并防范着公权力的滥用，另一类是</p>
+<p>这是两种法律不同的底层逻辑，</p>
+<p>这世界上的种种法律，也确实可以大致分为两类。底层结构决定了上层建筑，</p>
+<p>千百种法律有着千百种形态，但大致可以分为两类，两种水土上的两株果树。底层的结构决定了上层建筑。</p>
+<p>法律作为道德的补充，将模糊的清晰化、具体化，焊上了钢筋铁板，就像在河道两侧筑起了堤坝，抵挡住水流的冲击</p>
+<p>学习法律，一是为了守法，二则是为了用户，既免于受尖刺戳伤，又拿起长矛保护自己，这自然是最理想的情况了，</p>
+<p>程序正义，结果正义</p>
+<p>当维稳的需求大于公平正义的需求时，往往也正是如此，</p>
+<p>法律却也有它的私心，维稳的需求大于公平正义的需求，虽然稳定有赖于公平正义的实现，却也并不全然依赖公平正义，</p>
+<p>善恶有报，以牙还牙，以眼还眼，法律</p>
+<p>为法律确立了绝对权威，实际上也将之推向了两难之地，进退维谷</p>
+<p>立法，判法，执法，陪审团制度，引入道德的制衡，</p>
+<p>穷极人类全部的智慧，也不可能使法律尽善尽美，抽象的文字无法地描述现实，</p>
+<p>抽象的文字无法完完全全地描述这个世界，要穷尽世界的全部细节，只有完全复制出这个世界</p>
+<p>个体摊上了不公义之法</p>
+<p>若为恶法，不合理之法，面对不当的法律，又该当如何？社会该如何处置，蒙受不义的个体又能如何应对——陷入一个社会不仁，己却不可无义的境地，像极了春秋里所谓“君虽不君，臣不可以不臣”的凛然大义，却成就了个体无可奈何的悲哀</p>
+<p>站在比法律更高的地方，可以看到恶法，陋法，不合理之法，数量不少的，贯穿了几个时代，埋葬了数不清冤屈者的灵魂，</p>
+<p>判决依据，</p>
+<p>事实上，有些东西虽说不得，也承认不得，但实际情况却是，学法很大程度上，是为了钻条文间的漏洞，这枚有缝的鸡蛋，必然惹得苍蝇叮咬，</p>
+<p>世界上规则如此繁杂，远远超出了人能够掌握的范围，有需求就有利益，有利益就催生了</p>
+<p>（五）假说与观念</p>
+<p>（六）经验</p>
+<p>知识主要也便是这些，学习是怎样一种方式，</p>
+<p>学的方式与目的</p>
+<p>考试</p>
+<p>学历证明了什么？自始至终，学识渊博就与道德高尚扯不上边，</p>
+<p>而在此时此刻的社会，私以为学历证明的是情商高，是应试能力强，是教育的悖论知识渊博的人不一定是好老师，好老师不一定职位高，</p>
+<p>究竟学什么？</p>
+<p>这一切还是需要围绕想要做什么而定，比如我是想要</p>
+<p>语言，搜索能力，创造和想象力，交流，包括谈话，读书，观影，其实就是逃离狭隘的自我视角，感知别人主观视角中的观念中的世界，探寻他们的看法，想象，个性所致，会尤其偏向于阅读，好的文字，是将大脑中思考和想象提炼出来，逻辑性，阅读中的愉悦，常常是由于透过文字捕获到了一点共鸣，一点回忆，或激发了脑中一段未曾激活过的回路，所以我又常是不求甚解的，单纯地只是任由好奇心驱使，于是又好像记不住什么东西，也好像都派不上什么用场，仅仅是喜欢，快乐罢了，做喜欢的事情，应该也算不上浪费时间吧，看书，感知别人观念中的世界如何对待无用之学</p>
+<p>无数分工明确的细胞组成了专司一职的器官，不同器官通力协作，好不容易才又构成了，这能跑能跳，能吃能喝，能哭能笑，能想能干的人，若是又甘心堕落为充当一个按部就班的零件，未免就太可惜与可怜了吧</p>
+<p>学习可谓是人生大事，常言道“活到老，学到老”，从幼儿开始，就接受着教诲，学习着种种知识，学习本不该是一件陌生的事情，我却时常有迷惑之感，学习也是人的一种本能，学习才能进步，</p>
+<p>相较于其他生物，人类，这本使得人更加灵活，充满了未知的可能性，</p>
+<p>迷迷糊糊，努力学习的人其实，通宵达旦，灯火通明，</p>
+<p>理论的规则与现实的规则脱轨严重，</p>
+<p>奉为金科玉律的经验教训，只有在特定的情形下，甚至是在它曾经发生的那个时空下，才有所成效，</p>
+<p>如果偷奸耍滑，让之受益且不受任何惩罚的话，那么其</p>
+<p>从学习的态度上，学习可以分此两类，有用之学与无用之学，有用之学指的是有着强烈的目的性，希望以之去解决一项特定的问题，无用之学更多的是以个体情感上的满足，更多的是体现在于对自身灵魂的修补上，除此却不见得有什么实际的效用，</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2023/11/26/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%AD%A6%E7%9A%84%E6%80%81%E5%BA%A6%20-%20%E5%89%AF%E6%9C%AC/">
+            https://illusionzone.github.io/2023/11/26/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%AD%A6%E7%9A%84%E6%80%81%E5%BA%A6%20-%20%E5%89%AF%E6%9C%AC/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2023/12/10/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%BE%AE%E7%A7%AF%E5%88%86%E7%9A%84%E5%8A%9B%E9%87%8F/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】微积分的力量 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2023/11/26/%E5%A6%84%E6%83%B3%E8%AE%B0&amp;%E7%8E%B0%E4%B8%96%E8%A1%8C/%E5%AD%A6%E7%9A%84%E6%80%81%E5%BA%A6/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【妄想记】学习 &amp; 知识 &amp; 考试 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

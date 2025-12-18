@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【观之感之】是枝裕和电影——海街日记</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【观之感之】是枝裕和电影——海街日记">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2022/12/10/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C%E7%94%B5%E5%BD%B1/%E6%B5%B7%E8%A1%97%E6%97%A5%E8%AE%B0/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="妄，无所不至；想，不知所踪。">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2022-12-10">
+      <meta 
+        property="og:article:modified_time" 
+        content="2023-02-11">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="电影">
+        
+          <meta 
+            property="og:article:tag" 
+            content="观之感之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="是枝裕和">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【观之感之】是枝裕和电影——海街日记
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2022-12-09T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2022-12-10</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+          class="post-meta-link">
+          观之感之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>4.8k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E7%94%B5%E5%BD%B1/" 
+            class="post-meta-link">
+            电影
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+            class="post-meta-link">
+            观之感之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+            class="post-meta-link">
+            是枝裕和
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>想写个关于是枝裕和导演电影的系列专题。从2016年由朋友推荐下第一次观看由枝裕和导演的电影《海街日记》开始，我便喜欢上其电影中流露出的平淡似水的温情，此后又陆续看了《小偷家族》、《如父如子》、《步履不停》、《比海更深》等等。每每总会从中得到一些其他电影所给予不了的触动，观影之感觉，就如冬日下滑过冰凉肌肤的一丝暖意，随后得以从焦躁中归于平静，从深渊中寻觅希望，从平凡中捕获甜素。</p><p>是枝裕和所导演的电影，主题多是围绕着家庭、亲情，我对这类电影有着说不清道不明的喜爱，或者我就是很吃这一套。那感觉就像小时候躺在天台一角望着无边无际的苍穹那样，任由思绪藏匿在厚厚的云层中随风而荡，任由傍晚漫天的霞光披在稚嫩皮囊上，任由星光点点填满充满好奇的瞳孔。</p><p>生活漫长而琐碎，生活易逝而美好。</p></div>
+<br />
+<img src="/image/film/海街日记/1.png" width="500rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/1.png" class="lozad post-image">
+<br />
+<p>《海街日记》是一部改编于吉田秋生创作的同名漫画的电影，故事围绕着居住在日本镰仓一所老房子的三姐妹展开。大姐香田幸，二姐香田佳乃和三姐香田千佳，她们有着并不幸福的身世，早年父亲出轨离家，不久母亲也弃家而去，留下三姐妹跟着外祖父母生活。在外祖父母去世后，大姐香田幸毅然肩起生活的担子，独自带着妹妹们生活在这所老房子内。</p>
+<p>几经寒暑，大姐香田幸已经29岁，是市医院的一名护士，二姐佳乃23岁，是一家信用银行的职员，三姐千佳20岁，在一家体育用品店当店员。三姐妹性格迥然不同，大姐稳重果敢，带着些长者的严厉，二姐率性奔放，会为了自以为的爱情奋不顾身，三姐天真浪漫，大大咧咧。但是她们却都有着乐观且善良的心态。</p>
+<p>故事开始于一场葬礼。她们接到来自山形县上继母浅野阳子打来的电话，得知十五年未见的父亲去世了。大姐因为要值夜班（也或许略带了些对于父亲不负责任的不满），于是决定只由佳乃和千佳前去吊唁。而父亲离开时佳乃和千佳年岁尚小，她们对父母只有一些朦胧而模糊的记忆，佳乃记得大姐常在深夜安慰与父亲争吵落泪的母亲，千佳则记得父亲很温柔，还带着她们去过动物园，她们并未对父亲有着如何强烈的爱与恨，更未有沉重的悲伤，似乎即将去参加的是一个血脉相连着的陌生人的葬礼。</p>
+<p>搭乘电车，她们来到了偏僻的山形县，前来迎接她们的是同父异母的妹妹浅野铃，她是父亲与第二任妻子所生的女儿，不久浅野铃的母亲去世，父亲又与第三任妻子阳子结了婚，且浅野阳子已育有一个儿子。因此浅野铃在家中的处境并不太好，在父亲去世之后更加无依无靠，总受到继母的冷遇与驱使，这使得年少的她变得隐忍而小心、克制而懂事。</p>
+<p>葬礼当天，前来吊唁的人很多，值完夜班的大姐也乘坐朋友的车赶来（以后面剧情来看，可以猜测是与大姐同院的儿科医生椎和名也劝她并驱车送她来参加的）。葬礼上，继母阳子以过分悲伤为由，想让浅野铃作为亲属向前来吊唁的人致辞。但大姐却坚持认为这本是大人应该处理的事，不能推脱给还未成年的孩子去处理。（事实上阳子并未如何照顾过住院期间重病的父亲，反而是浅野铃一直在呵护照顾）。最终阳子不得已亲自主持了葬礼。这使得浅野铃难得地感受到被保护的滋味，也是同父异母的她们羁绊的开始。仪式结束之后，焚烧的尸体腾起的青烟，沿着烟囱徐徐扩散在高空。不管人以何种方式，何种态度去生存，拥有着或精彩、或失落的人生，最终的归途只能是如此一致的乏味，这也许是生命中唯一平等的时刻。</p>
+<br />
+<img src="/image/film/海街日记/2.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/2.png" class="lozad post-image">
+<img src="/image/film/海街日记/3.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/3.png" class="lozad post-image">
+<br />
+<p>葬礼结束后，浅野铃送给姐妹们一些父亲藏在书桌的关于她们小时候的照片，香田幸便又请她带她们去铃最喜欢的地方看看，想借此机会多了解一下铃的想法，因为她们意识到，铃本身与继母阳子并无很深的联系，今后的生活或许将更加困难。于是铃带着她们来到一个山丘的顶部，这里有着开阔的视野，是父亲生前常带她来的地方，同样的，父亲也曾常带三姐妹去镰仓当地一处类似的地方，这是属于她们对父亲相同的回忆，也是使彼此联结在一起的纽带。</p>
+<p>铃将姐妹们送至车站，临别时，或许是出于对妹妹的怜爱，或许是出于对妹妹的同情，大姐香田幸忽然向铃发出邀请，想让她过去和大家一起居住，这个决定令其他人都有些错愕，但很快佳乃和千佳也开心地表示同意，于是铃稍加犹豫之后，感激地答应了。</p>
+<p>很快地，浅野铃加入了落座于镰仓的这所老房子，她将在这里展开一段崭新的生活。</p>
+<p>周边的人都在关心这位新成员的加入。大姐香田幸去拜访了外婆的妹妹（姨姥姥）菊池史代，菊池询问了她是否跟母亲商量过接铃来生活的事，并劝诫她照顾孩子并非一件简单的事，还忧心因此事而影响到大姐的婚姻情况。同时，医生名也对此也表达了关心，赞赏这是一次大胆之举。二姐的小情侣藤井朋章也抛出些诸如是否会难以相处、如何分配遗产等等很现实的问题。</p>
+<p>但无论如何，日子还是一如既往地过下去，并不因何人何事有过半分迟缓。铃在学校结交了一些新朋友，还在体育用品店店长滨田的推荐下，顺利加入了当地的少年足球队——章鱼队，队员们在训练结束后，总会一起到海猫食堂聚餐，这里也是三姐妹常常光顾的地方，和老板娘二宫阿姨有着非常好的关系。家里面，香田幸总会跟佳乃发生一些争执，比如她对佳乃一直以来接济其男友藤井有所不满，认为对方只是在利用佳乃而已，而佳乃则反驳说大姐这个一心扑在工作上的人什么都不懂。两人的争吵总是来得快去得也快，一开始铃会为此而不知所措，而习惯之后会则和千佳一起很适时地中断她们的争吵。</p>
+<p>不幸又必然的是，大姐幸的看法是对的，不久藤井用佳乃接济他的钱还债并与之分手，于是佳乃再一次在家里买醉发泄，大吵大闹，为了要走出失恋的阴影调换岗位，成了融资科长陪同商议员。而幸也得到了去临终关怀病房工作的机会，同时她和儿科医生名也一直保持着朦胧暧昧的关系。千佳跟铃介绍了自家酿的酒，说这是从外婆那里传承下来的，每年都会在院子里的梅子树上采摘成熟的果子酿酒，并送一些给邻居们，几乎成了家里的一项传统。球赛上，铃的出色发挥帮助球队取得了胜利，为了庆祝她喝了点酒，很快便醉倒了，此时她才流露出些许深藏内心的对于父亲以及继母的失望和恨意。待她酒醒之后，姐妹四人趴在窗口看着院内的梅树，大姐说起外婆的口头禅——活着的东西都是很费功夫的，并和铃约定，等梅子成熟后为她酿造一些不含酒精的梅酒。</p>
+<br />
+<img src="/image/film/海街日记/4.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/4.png" class="lozad post-image">
+<img src="/image/film/海街日记/5.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/5.png" class="lozad post-image">
+<br />
+<p>二宫阿姨离家出走的弟弟突然回来并索要奶奶留下的遗产，迫使她需要出售海猫食堂店铺，佳乃陪同融资科长前来了解情况，希望能够为之提供帮助。铃和朋友们在山猫亭咖啡店吃到了美味的鱼苗面包，父亲以前经常做给她吃，正如三姐妹喜欢的鱼苗盖浇饭一样，都是她们关于父亲相同的味觉记忆。路上，铃在路上捡到凋落的樱花，她想起父亲得病时，说是可能看不到当年的樱花了，但他却顽强地坚持到了樱花盛开的时候，还和铃一起在医院赏花。听到这些，素来对她有好感的足球队队长风太于是带着她来到一条两侧长满樱花树的隧道，两人在单车上沿着道路飞驰，穿过层层烂漫炫目的樱花，体验着青春期美好而纯真的恋情。</p>
+<p>半年的时间转瞬即逝，梅树结满了果实，四姐妹正在院子挑选和加工着果子，这时姨姥姥来电话，说她们离开14年的母亲佐佐木都准备回来参加外婆的法事。三姐妹对母亲的突然回归有些意外，铃则为自己是破坏她们家庭的人的女儿感到局促不安。</p>
+<br />
+<img src="/image/film/海街日记/6.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/6.png" class="lozad post-image">
+<img src="/image/film/海街日记/7.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/7.png" class="lozad post-image">
+<br />
+<p>外婆的七回忌当天，铃与木都的初次见面如所料的那般有着几分尴尬，幸而随行的姨姥姥加入谈话缓和了气氛。中途铃和木都单独交谈了一下，木都让她们要好好相处。在仪式结束后，所有人一同回了家，母亲提议卖掉房子，说这样姐妹们也可以住到公寓去住。却遭到了大姐愤怒的反对，甚至表示母亲没有为这个家付出过什么，自然没有权力要对这个家做出什么决定。短暂的相聚就这么不欢而散。这让铃更加感到自己与这个家庭格格不入，她替自己的母亲破坏了她们的家庭向大姐道歉，大姐则为她们伤害了铃而感到抱歉。</p>
+<p>第二天，母亲再次来到房子，并带上了送给她们每个人的礼物（包括铃的）。母亲是来道别的，她准备去外婆的墓地一趟，随后就搭飞机离开。大姐闻言略一犹豫，决定要陪着母亲一起去，母女俩一同撑着伞，走在淅淅沥沥的雨幕之中，雨水冲刷着地面，洗去了厚厚的尘埃，也似乎洗刷着母女间的隔阂。最后，大姐送给了母亲两瓶酒，一瓶是外婆以前制作的，一瓶则是今年制作的，大姐对母亲说，请偶尔也回来看看，姐妹们都还想跟她说说话。母亲微微点点头，同样邀请姐妹们去她家坐坐。</p>
+<br />
+<img src="/image/film/海街日记/8.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/8.png" class="lozad post-image">
+<br />
+<p>在佳乃和科长的努力下，银行同意为二宫阿姨提供600万日元的融资，以帮助她渡过难关。但是二宫阿姨却表示，海猫食堂准备在这个月关门了，她之前就因时不时发作的胃疼去医院检查，如今身体状况越来越差，已经支撑不下去了，她决定不采取治疗，而是住到临终看护病房。儿科医生名则准备去美国学习治疗技术，想让香田幸也一起过去，并表示自己会和生病的妻子离婚。这份突然的邀约令香田幸茫然无措，她回到家里跟姐妹们商量，佳乃很反感大姐竟然喜欢上有妻之夫，两人发生了争吵。铃找到佳乃和千佳，想起她之前对大姐说，喜欢上有妻子的人是不好的，这句无心之语或许正深深地伤害了香田幸。三人商量了一会，决定由佳乃去和大姐谈谈，并安慰她说，这个家可以由自己和千佳支撑着，同时也会好好地照顾铃的，让幸尽管安心地去追求自己的幸福。经过深思熟虑后，幸拒绝了名也的邀请，她决定继续守护着这个她从小长大的家，陪伴着铃一起成长，同时也好好地去做那份临终看护的工作。</p>
+<br />
+<img src="/image/film/海街日记/9.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/9.png" class="lozad post-image">
+<img src="/image/film/海街日记/10.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/10.png" class="lozad post-image">
+<br />
+<p>烟花大会的晚上，铃穿着香田幸送给她的浴衣，和朋友们坐在小船上，天空中绽放的烟花照亮了漆黑的水面，烟花是如此地绚烂美艳，却只停留在一刹那间。喧嚣过后，铃坐在公园的长椅上向身边的风太倾诉，感觉自己无论在哪里，都会有因她而受伤的人，这令她很痛苦。风太回答道，自己还有两个兄弟，自己是最小的，由于父母一直想要个女孩，因此他总会承受父母因失望而导致的冷漠对待。有时候，两颗同样受伤的心灵的相互靠近，是对彼此最好的慰藉。等铃回到家后，三姐妹和她一起在院子里放起了烟花，四人将活力四射的花火凑在一起，拼出一幅温馨甜蜜的画面，这是家的意义。</p>
+<br />
+<img src="/image/film/海街日记/11.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/11.png" class="lozad post-image">
+<img src="/image/film/海街日记/12.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/12.png" class="lozad post-image">
+<img src="/image/film/海街日记/13.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/13.png" class="lozad post-image">
+<img src="/image/film/海街日记/14.png" width="auto"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/film/海街日记/14.png" class="lozad post-image">
+<br />
+<p>时间的沉淀让铃慢慢融入了这个家庭，她开始真正地和姐妹们成为家人，可以一起嬉戏、玩笑。这天，大姐带着她来到小时候父亲常带她们来的在当地的一处山顶，这里与当初她们在山形县时看到风景很像，同样可以将近处盘绕着的山脉以及远处层层叠叠的房子一览无遗，她们一起向着远处呐喊，宣泄着她们所有的爱与恨。大姐郑重地对铃说，她可以永远地留在这里，因为她是自己的家人。</p>
+<p>大姐一直细心照料着入院的二宫阿姨，但不久二宫阿姨还是去世了，姐妹们都去参加了葬礼，与二宫阿姨关系很好的山猫亭咖啡店老板福田先生对她们表示了感谢，并说二宫阿姨住院时常道，虽然知道自己马上要死了，但依然能感到美丽的东西是美的，很开心。</p>
+<p>离开法场后，姐妹们怀着沉重的心情来到海滩上。铃说，父亲在去世前也说过和二宫阿姨类似的话，大姐说，父亲虽然是个失败的人，但也许是个温柔的人，因为他为她们留下了这样一个妹妹。四人沿着沙滩渐行渐远，彼此相伴着，彼此牵挂着。</p>
+<p>故事有着浓郁的是枝裕和的风格，全片并无过分强烈的戏剧张力，没有大起大落，没有大悲大喜，就如寻常人的日子那般，只有一缕淡淡的哀伤与喜悦并存的情绪贯穿始末。故事以一个葬礼开始，大姐她们在此与同父异母的妹妹相识，又以另一场葬礼结束，四姐妹经过相处，变成了对彼此非常重要的亲人。每个人都在经历着成长，在我看来，引导她们走向成长的关键是和解，与自己的和解，与父母的和解，与生活的和解。姐妹四人并未因破碎的家庭而对生活滋生出恶意与埋怨，她们依旧善良乐观，温情地对待每一个身边的人，并慢慢地与一切和解，甚至是抛弃了她们的父母。成长是使自己的内心变得丰富而豁达，但实际上并非每个人都在随着时间而成长，有些人只是随着时间变老而已，他们会在变老的同时累积越来越多的恨与怨，变得阴暗而狭隘。出乎意料又在情理之内的是，亲人间往往更容易出现这种情况，由于彼此间亲密且毫无边界意识的接触，总会容易摩擦出火花来，如香田幸总会和佳乃因琐事而争吵，如果彼此不耿耿于怀，很快便淡然处之，自然不失为一种生活的乐趣，可现实中更多地是激发出了滔天恨意，到了水火不容的地步，实在可悲。（可是，我却又不禁会这么想，和解便一定是好的吗？从某种现象来看，人是需要依靠情绪激发的力量去实现一些东西的，所谓的善的力量，往往激发的是一种舍己的行为以及为自己的心理寻求自洽，而所谓的恶的力量，则可以使人更有增强自我与追求外物的动机与能力。过分地内心自洽，反而容易使得自己迷失在一团和气的伊甸园内，从而缺失了开拓进取、披荆斩棘的动力和勇气。）</p>
+<p>电影有种纪录片风的写实感，影片中每个人物都很鲜明且自然，如三姐妹因自小缺乏父母的关爱，但由于大姐承担起了类似母亲的角色，于是二姐会由于无处释放的母爱而去呵护比她小的男生，而大姐则会更倾慕年长的男性，以此弥补其缺失了的父爱。其中我最佩服的自然是大姐香田幸，从独自带着两个妹妹长大，到邀请浅野铃一起生活，都需要着非常强大的勇气与毅力，因为在现实中，来自各方面生存（经济、时间、空间、舆论）的压力，导致了没有富裕的前置资源的人能照顾好自己就已经是很了不起的一件事了。当然，电影自然有其理想化的地方，也许正是因为这种理想化，才使得电影里的阳光能刺破荧幕，照亮现实中的你我吧。</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2022/12/10/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C%E7%94%B5%E5%BD%B1/%E6%B5%B7%E8%A1%97%E6%97%A5%E8%AE%B0/">
+            https://illusionzone.github.io/2022/12/10/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C%E7%94%B5%E5%BD%B1/%E6%B5%B7%E8%A1%97%E6%97%A5%E8%AE%B0/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2022/12/10/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C%E7%94%B5%E5%BD%B1/%E5%A6%82%E7%88%B6%E5%A6%82%E5%AD%90/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【观之感之】是枝裕和电影——如父如子 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2022/12/10/%E9%94%B5%E9%94%B5/%E6%8D%A7%E8%85%B9%E7%B3%BB%E5%88%97/%E9%94%B5%E9%94%B5%E6%8D%A7%E8%85%B9%E7%B3%BB%E5%88%97/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">锵锵捧腹系列视频 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】恶的科学：论共情于残酷行为的起源</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】恶的科学：论共情于残酷行为的起源">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/02/28/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%81%B6%E7%9A%84%E7%A7%91%E5%AD%A6%EF%BC%9A%E8%AE%BA%E5%85%B1%E6%83%85%E4%BA%8E%E6%AE%8B%E9%85%B7%E8%A1%8C%E4%B8%BA%E7%9A%84%E8%B5%B7%E6%BA%90/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="【美】威廉•庞德斯通  著  李大强  译">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-02-28">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-01-03">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E8%B0%A2"><span class="toc-text">致谢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%AF%B9%E2%80%9C%E6%81%B6%E2%80%9D%E5%92%8C%E4%BA%BA%E7%B1%BB%E6%AE%8B%E9%85%B7%E8%A1%8C%E4%B8%BA%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="toc-text">第一章 对“恶”和人类残酷行为的解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%B1%E6%83%85%E6%B0%B4%E5%B9%B3%E5%9C%A8%E4%BA%BA%E7%BE%A4%E4%B8%AD%E7%9A%84%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="toc-text">第二章 共情水平在人群中的正态分布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%9B%9A%E7%A6%81%E4%BA%8E%E8%87%AA%E6%88%91%E8%81%9A%E7%84%A6%E7%8A%B6%E6%80%81%E4%B8%AD%EF%BC%9A%E8%BE%B9%E7%BC%98%E9%9A%9C%E7%A2%8D%E3%80%81%E7%B2%BE%E7%A5%9E%E7%97%85%E6%80%81%E4%B8%8E%E8%87%AA%E6%81%8B%E4%BA%BA%E6%A0%BC"><span class="toc-text">第三章 囚禁于自我聚焦状态中：边缘障碍、精神病态与自恋人格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E8%B4%9F%E9%9D%A2B%E5%9E%8B"><span class="toc-text">零度负面B型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E8%B4%9F%E9%9D%A2B%E5%9E%8B%E7%9A%84%E6%88%90%E5%9B%A0"><span class="toc-text">零度负面B型的成因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E8%B4%9F%E9%9D%A2P%E5%9E%8B"><span class="toc-text">零度负面P型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E5%85%B1%E6%83%85N%E5%9E%8B"><span class="toc-text">零度共情N型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%9C%A8%E6%A8%A1%E5%BC%8F%E4%B8%AD%E5%AF%BB%E6%89%BE%E9%81%93%E5%BE%B7%EF%BC%9A%E9%98%BF%E6%96%AF%E4%BC%AF%E6%A0%BC%E4%B8%8E%E8%87%AA%E9%97%AD%E6%82%A3%E8%80%85"><span class="toc-text">第四章 在模式中寻找道德：阿斯伯格与自闭患者</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E6%96%AF%E4%BC%AF%E6%A0%BC%E7%BB%BC%E5%90%88%E7%97%87"><span class="toc-text">阿斯伯格综合症</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E9%97%AD%E8%80%85%E7%9A%84%E8%84%91"><span class="toc-text">自闭者的脑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%8C%96"><span class="toc-text">系统化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%89%BE%E6%A8%A1%E5%BC%8F"><span class="toc-text">寻找模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%8C%96%E6%9C%BA%E5%88%B6"><span class="toc-text">系统化机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B8%E5%9E%8B%E8%87%AA%E9%97%AD%E7%97%87"><span class="toc-text">典型自闭症</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%85%B1%E6%83%85%E5%9F%BA%E5%9B%A0"><span class="toc-text">第五章 共情基因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E8%83%9E%E8%83%8E"><span class="toc-text">双胞胎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E5%9F%BA%E5%9B%A0"><span class="toc-text">攻击基因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%83%85%E7%BB%AA%E8%AF%86%E5%88%AB%E5%9F%BA%E5%9B%A0"><span class="toc-text">情绪识别基因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E5%85%B1%E6%83%85%E5%95%86%E6%95%B0%E6%9C%89%E5%85%B3%E7%9A%84%E5%9F%BA%E5%9B%A0"><span class="toc-text">与共情商数有关的基因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E8%87%AA%E9%97%AD%E7%89%B9%E8%B4%A8%E6%9C%89%E5%85%B3%E7%9A%84%E5%9F%BA%E5%9B%A0"><span class="toc-text">与自闭特质有关的基因</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%B7%E9%9D%99%E5%88%86%E6%9E%90"><span class="toc-text">冷静分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%AF%B9%E4%BA%BA%E7%B1%BB%E6%AE%8B%E9%85%B7%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%8D%E6%80%9D"><span class="toc-text">第六章 对人类残酷行为的反思</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E8%A7%82%E5%BF%B5"><span class="toc-text">新观念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E8%80%8C%E6%98%93%E8%A7%81%E7%9A%84%E8%B0%9C"><span class="toc-text">显而易见的谜</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83%E7%B2%BE%E7%A5%9E%E7%97%85%E5%AD%A6"><span class="toc-text">重新思考精神病学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%B6%E4%B9%8B%E5%B9%B3%E5%BA%B8"><span class="toc-text">恶之平庸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B4%BB%E8%B7%83%E4%B8%8D%E8%B6%B3%E7%9A%84%E5%85%B1%E6%83%85%E5%9B%9E%E8%B7%AF"><span class="toc-text">活跃不足的共情回路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E7%9A%84%E5%8F%AF%E8%83%BD"><span class="toc-text">恢复的可能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E5%BC%BA%E5%85%B1%E6%83%85%EF%BC%9F"><span class="toc-text">超强共情？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E6%83%85%E6%98%AF%E4%B8%80%E7%A7%8D%E8%BF%98%E6%9C%AA%E5%85%85%E5%88%86%E5%88%A9%E7%94%A8%E7%9A%84%E8%B5%84%E6%BA%90"><span class="toc-text">共情是一种还未充分利用的资源</span></a></li></ol></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】恶的科学：论共情于残酷行为的起源
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-02-27T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-02-28</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>21.1k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p><p>恶的科学：论共情于残酷行为的起源<br>[美]威廉•庞德斯通<br>李大强  译</p></div>
+<br />
+<img src="/image/book/readandnote/恶的科学/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/恶的科学/1.png" class="lozad post-image">
+<br />
+<h2 id="致谢">致谢</h2>
+<h2 id="第一章-对“恶”和人类残酷行为的解释">第一章 对“恶”和人类残酷行为的解释</h2>
+<p><strong>原文摘录</strong><br>
+说来讽刺，人体科学用“被试”（subject）来描述研究对象，是因为这个词传达了对于对象感受的关切。然而实际操作对这些被试的感受，确实完全不予考虑的。<br>
+<br /><br /></p>
+<h2 id="第二章-共情水平在人群中的正态分布">第二章 共情水平在人群中的正态分布</h2>
+<p><strong>原文摘录</strong><br>
+共情就是我们放弃了单一的关注焦点，而采取了双重的关注焦点。</p>
+<p>所谓的“单一”的关注，指的是我们只关注自己的内心、自己当下的想法和知觉。而“双重”关注指的是我们在关注自身的同时，也没有忘记别人的内心。从这个区分中立即可以看出共情的功能：当共情关闭，我们只考虑自身的关切。当共情打开，我们也会关注他人的关切。人的注意有时可以比作一只聚光灯，根据上面对共情的定义，我们的注意可以是单只聚光灯（灯光穿过黑暗，只照亮了我们自身的关切），也可以是两只聚光灯相互配合（同时也照亮他人的关切）。</p>
+<p>然而共情的定义并未就此结束。上面是这个定义的第一部分，只描述了共情采取的形式（双重焦点）。它还要包含共情所需的脑内机制：能够在同一时间分别反思两个心灵（自己的和别人的）…因此我们可以把这个定义加以扩展，修改如下：共情是一种能力，它使我们理解别人的想法或感受，并用恰当的情绪来回应这些想法和感受。</p>
+<p>可以看出，共情至少包含两个阶段：识别和反应。这两个阶段都是不可或缺的，单有前者而没有后者，你就不能算是具备共情。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+共情的本质里就包含了心灵的双重性。这种双重性不仅可以用来推测别人的感受和想法，也可以用来揣摩别人会怎么看你。想象自己在别人眼中的样子，这就是我们所谓的“自我觉知”（self-awareness）。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+处在0级的个人完全没有共情。我们将在第三章里认识几个这样的人，他们要么是自行到医院求诊，要么是因为触犯了法律或经过强制诊断而被扣押（在英国被称作“等候女王发落”［at Her Majesty’s Pleasure，意为无限期扣留］）。这个等级的一些人可能沦为罪犯，犯下比如谋杀、袭击、折磨和强奸等罪行。所幸的是，不是所有0级的成员都会对别人实施暴行，他们中的一些只是很不擅长人际交往，并非想伤害他人。而0级的另一些成员就很不同了，你即使向他们指出他们伤害了别人，他们也完全无法理解你的意思。这些人无法体会悔恨（remose）或者内疚（guilt），因为他们压根不知道别人的感受是什么。这是极端中的极端，是共情彻底为零的例子。</p>
+<p>处在1级的人也可能伤害他人，但他们对自己的行为有一定的反思，也会表现出懊悔（regret）。只是事发的时候，他们控制不住自己。显然，共情并没能有效地制止他们的行为。这个等级的人，脑中的共情回路有一部分“断了线”，而这个部分正是在正常情况下阻止他们伤害他人身体的回路。在特定的条件下，这些人也能表现出一定程度的共情，可是照他们自己的说法，一旦爆脾气上来，他们就会变得“怒火中烧”，理性判断完全受到蒙蔽。到这种时候也就顾不上别人的感受了。可怕的是，共情回路的断裂会使这些人犯下极端的暴行。在凶案当时，他们的心中会涌起难以遏制的攻击欲和毁灭冲动，什么事情都做得出来，受害者此刻变成了一件物品，只能被消灭或者移除。 处在2级的人仍然有巨大的共情障碍，但他们对其他人的感受已经有了些许体会，因此不会再发动身体攻击了。这或许还不足以遏制他们对别人叫骂，或是说出一些伤人的话来，但是当他们看见别人的感情受了伤害，他们还是有足够的共情能意识到自己做错了事。不过他们还是无法自然而然地预估别人的细微感受，要受害人或旁观者的反馈，才会意识到自己的行为过分了。一个处于2级的人在生活中只能胡乱应付，他总是会说错话（比如“你又胖了！”）或做错事（比如侵犯别人的“私人空间”）。他们总是因为这些失礼的言行惹上麻烦，有时在工作上，有时在家中，他们或许会因为这个而丢掉工作、失去朋友，但他们总闹不明白自己究竟做错了什么。</p>
+<p>处在3级的人已经知道了自己有共情障碍，他们可能会为此掩盖或者补偿，比如回避时时需要使用共情的工作或人际关系。对于他们，努力“假扮正常”会耗费大量精力，造成格外紧张。他们有的会在工作中回避他人，因为社会交往实在太难了，他们宁愿埋头工作，希望这样就不必与太多人接触。他们或许意识到了自己听不懂别人都能听懂的笑话，大家的面部表情是那样费解，自己到底该怎么做？他们从来拿不准。对这个等级的一些人来说，寒暄、闲谈和对话都好似噩梦，因为这些活动没有明确的准则，也难以捉摸。当他们终于回到家里，那份释然（来自再也不用“假装”和别人一样）是巨大的：他们只想独处，做回自己。</p>
+<p>处在4级的人已经有了接近均值的共情。他们的共情略为迟钝，但大多时候已经不会影响日常的行为，虽然当话题转移到情绪以外的方向时，这个等级的人还是会感到更舒服一些。相比女性，处在4级的男性更多，他们更喜欢解决实际问题，或主动排除技术障碍，而不是长时间地讨论彼此的感受。他们的友谊多半建立在共同参与的活动和兴趣上，而不是亲密的情绪，但他们的友情并不会因为这一点而显得乏味或是脆弱。</p>
+<p>处在5级的人，共情已经略微超过均值，且女性的数目超过男性。这个等级的友谊更有赖于亲密的情绪、彼此的信任、相互的支持和同情的传达。虽然5级的人并非时刻考虑别人的感受，但他们许多时候都会为别人着想，因此他们在工作和家中都会加倍小心地与人互动。他们不会太过直接地主张自己的意见，以免凌驾他人之上或者侵犯他人。他们也不会匆忙地独自决策，一定是先广泛咨询，参考众多角度。即使有许多事情要忙，他们也会耐心地与人交流，因为他们想要（敏感而又迂回地）了解对方是否开心、对方的心里又在想些什么；而要获得这些情报，最好的做法不是直接询问，而是和对方谈论大量不同的话题间接摸索。</p>
+<p>到了6级，我们就会遇见具有真正超凡共情能力的人，他们始终在关注别人的感受，而且会不辞辛劳地送上关怀和支持。他们的共情仿佛始终处于过分活跃的状态，从来不会忽视其他人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+多亏有了功能性磁共振成像技术（fMRI），科学家得以用清晰的图像显示在共情中起到关键作用的脑区。目前在神经科学界形成的公论认为，至少有10个相互关联的脑区参与了共情（以后或许还会发现新的）。</p>
+<img src="/image/book/readandnote/恶的科学/1.jpg" width="600rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/恶的科学/1.jpg" class="lozad post-image">
+<br /><br />
+<p><strong>原文摘录</strong><br>
+内侧前额叶皮层MPFC</p>
+<p>共情回路中的第一个区域是内侧前额叶皮层（medial prefrontal cortex，MPFC），研究者认为它是社会信息的处理枢纽，在比较自己和别人的观点时起到重要作用。MPFC分为背内侧前额叶皮层（dMPFC）和腹内侧前额叶皮层（vMPFC）。dMPFC的功能是推测别人的想法和感受（有人把这称作“元表征”），它也参与我们对自身想法和感受的思考。相比之下，vMPFC更多是在反省自己的内心时发挥作用，不太用来推测别人。富有才华的迈克·隆巴尔多曾是我的博士生，他根据自己和别人的研究，提出vMPFC可能也在自我觉知中扮演关键角色。</p>
+<p>但这还不是这个脑区的唯一功能。美国爱荷华大学的神经科学家安东尼奥·达马西奥提出了一个理论，认为vMPFC能储存关于各种行为的情绪效价（emotional valence）的信息：如果一个行为能带来回报，它在情绪上就是正面的；如果一个行为会招来惩罚，它在情绪上就是负面的。他把这称作“躯体标记”，并主张我们对自己做出的每一个行为都有这样一个标记，只有当一个行为的躯体标记携带了正面效价，我们才会不断重复它。他用vMPFC受损的病人作为证据，指出他们在看到使人痛苦的画面（比如灾难和伤残）时，自主反应不如常人活跃（比如心跳变化不大）。28还有一条证据能表明vMPFC标记了情绪效价：它参与了人的积极思维或消极思维，当vMPFC受到刺激，抑郁的人也会变得不那么消极。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+眶额皮层OFC</p>
+<p>与vMPFC重叠的是有时称作“眶额皮层”（orbital frontal cortex, OFC）的脑区。1994年，我和同事霍华德·林首次证明了OFC是共情回路的一部分。我们发现，当被试判断一张列表上的哪些单词是描述心灵的功能时，他们的OFC就变得特别活跃。36这张列表中的单词包括“认为”“假装”和“相信”，也包括“跳跃”“行走”和“进食”。后来我又和同事瓦莱丽·斯通发现，OFC受损的病人很难判断什么行为算是失礼，这说明他们的共情出了问题。OFC受损还会使病人丧失社会判断能力，并在社交中对自己不加约束。此外，当普通人看见针头扎进一只正常（没有经过麻醉）的手，他们的OFC就会激活，说明共情回路的这个部分参与了对某件事是否会引起痛苦的判断。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+岛盖部FO</p>
+<p>与OFC相连的是岛盖部（frontal operculum, FO），它既是共情回路、也是语言回路的一部分，因为它的一部分参与了语言的表达。这个区域受损，伤者就很难产生流利的语言（这也叫“布罗卡失语症”，患者能理解别人说出的句子，却无法用完整的句子表达自己）。FO和共情发生的联系来自这样一个观点：猴脑中也有一个和FO对应的区域，其功能就包括编码其他动物的意图和目标。39也就是说，当一只猴子（它的脑子放进了一个深部电极）见到另一只猴子伸手去拿一件物品时，它FO区域的细胞电活动就会增强，而当这只猴子自己伸手去拿一件物品时，相同细胞的电活动也会增强。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+额下回IFG</p>
+<p>FO的下面是一个更大的区域，叫“额下回”（inferior frontal gyrus，IFG）。这个区域受损会使人难以识别情绪。我还有过一个才华横溢的博士生，名叫比斯马德夫·查克拉巴蒂，他先让被试填写EQ量表，再让他们躺在脑扫描仪里观看快乐的面部表情。图5就是他们观看的一部分面孔。比斯马预感到IFG在这个过程中起了关键作用，这也确实是一个很好验证的假说。为了验证它，比斯马使用fMRI扫描仪，在不同的脑区和它们相应的4种“基本”情绪（快乐、悲伤、愤怒和厌恶）之间建立了联系。</p>
+<p>…比斯马发现，厌恶主要在前脑岛（anterior Insula, AI）处理，快乐主要在腹侧纹状体（ventral striatum）处理，愤怒在辅助运动区（supplementary motor cortex），而悲伤分散在好几个区域，包括下丘脑（hypothalamus）。他接着又研究了脑中是否有一个区域始终和EQ量表的结果相关，无论被试观看的是哪一种情绪的面孔。IFG正符合这个要求。你的共情越强，你在观看这些带有情绪的面孔时，IFG就越是活跃。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+尾侧前扣带皮层CACC/MCC和前脑岛AI</p>
+<p>进入皮层的更深处，我们发现了尾侧前扣带皮层(caudaanterior cingulate cortex,CACC)，又称为“中扣带皮层”(middle cingulatecortex,MCC)。CACCMCC也参与了共情的产生，因为它是所谓“疼痛网格”(pain matrix)的一部分。这个脑区不仅在你自己感受疼痛时激活，也会在你观看别人感受疼痛时激活。接着就要说到前脑岛了，它参与了自我觉知的身体方面，而自我觉知本来就和共情有着紧密的联系。使用fMRI，苏黎世的神经科学家塔尼亚·辛格和同事发现，当一个人的手受到疼痛刺激、或者当他的伴侣受到这样的刺激时，他的A和CACC/MCC都会激活，无论经受疼痛的是你自己还是你的爱人。芝加哥大学的神经科学家让·德赛蒂和同事也发现，如果你看到某人的手被夹在了门里，你的AI和CACC/MCC也会激活。激活的程度取决于你把自己想象成那个人的程度。AI还会在你尝到难吃的味道、或者看到别人露出难吃的表情时激活，这再次显示了脑的这个部分会让你设身处地地体会另一个人的情绪状态。</p>
+<p>塔尼亚·辛格还从另一个方向观察了人脑:她让被试判断另一个人是否在博弈中做到了公平。结果发现，当被试看到自己喜欢的、在他们看来也公平博奕的人遭受痛苦时，无论男女都会激活cACC/MCC和AI。有趣的是，平均而言，当男性看见他们认为没有公平博弈的或他们不喜欢的人遭受痛苦时，他们共情回路的这个部分的活动要低于女性。在男性的眼里，有些人是潜在的竞争者，有些是举止不当的人，还有一些即使维持交往也无益于自己的既有利益，对于这些人的痛苦，男性似乎比较容易关闭共情。CACC/MCC和AI也明显和一系列情绪的体验及识别有关，包括快乐、厌恶(disgust)和痛苦。这两个区域的损伤会妨碍伤者对这些情绪的识别。由于上面这些原因，CACC/MCC和AI成为了共情回路中的关键部分。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+颞顶联合区TPJ</p>
+<p>研究发现，颞顶联合区（temporoparietal junction, TPJ）的右半边（RTPJ）也对共情起到了关键作用，尤其是在判断他人意图和信念的时候。这个脑区和共情的识别部分关系较大，这个部分有时也称为“心智理论”（theory of mind）。当我们推测别人的想法时，运用的就是自己的心智理论。TPJ受损不仅会使人难以判断他人的意图，还会造成灵魂出窍体验（out-of-body experiences），而对RTPJ的刺激会引出一种古怪而让人脊背发凉的感觉，使你在独处时也觉得身边仿佛有人似的。这些反常现象显示RTPJ参与了对自我和对他人的审视，虽然RTPJ可能也承担了与社交无关的功能（例如注意的转移）。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+颞上沟STS</p>
+<p>与RTPJ相邻的是后颞上沟（posterior superior temporal sulcus, pSTS），许多年前就有人把它和共情回路联系在一起了，因为有动物研究显示，当动物在监视别的动物眼光的方向时，它们的STS细胞会做出反应。而在人的身上，STS受损也会使人无法判断别人观看的方向。当我们注视另一个人的眼睛时，显然不仅是为了确定他的观看对象，也是为了揣摩他们对于观看对象的感受。STS还参与了对生物运动（生物自行发起的一类有生运动）的观察。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+躯体感觉皮层SMC</p>
+<p>共情回路的下一个环节是躯体感觉皮层（somatosensory cortex），它不仅参与触觉体验的编码，也会在观看到别人被触摸的时候激活。除了产生感觉体验（顾名思义）之外，躯体感觉皮层还会在我们观看尖针刺进别人的手时激活，这一点同样是靠fMRI发现的。这强烈地证明：当我们设身处地体会别人的痛苦时，我们的反应是很感觉化（sensory）的。这个清晰的人脑反应告诉我们，即使并非出于有意识的决策，我们也会不自主地把自己放进他人的处境，我们不仅是在想象自己假如身处此境会有什么感受，而是在切切实实地体会别人的体会、仿佛那就是我们自己的感觉似的。难怪我们在看到别人受伤时，自己也会禁不住退缩了。当然，也不是每个人都会对这样充满情绪的情境产生强烈的共情反应。如果我们的躯体感觉皮层遭到损坏或暂时受了干扰，我们识别他人情绪的能力就会显著消退。比如外科医生，可能就是因为没有这种情绪反应而格外适应这份工作的，这个假说已经得到了郑雅薇的证实，她发现实施针灸的医生在观看人体受针刺的图画时，躯体感觉皮层的活动较常人更少。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+顶下小叶IPL和顶下沟IPS</p>
+<p>与FO/IFG相连的是顶下小叶（inferior parietal lobule, IPL），这两个脑区都很有意思，因为它们都是“镜像神经元系统”的一部分——这个系统由脑中的几个区域组成，它在你自己做出某个动作或是观看别人做出同样的动作时都会激活。帕尔玛大学的贾科莫·里佐拉蒂曾领导一组意大利神经科学家首次在灵长类动物身上证明了镜像神经元的存在，他们将电极埋入这些动物脑中的特定区域，记下了神经细胞的活动，这些细胞不仅在动物做出某个动作时放电，在它们看见别的动物做出同样的动作时也会放电。既然IFG也是人类镜像神经元系统的一部分，那就说明共情也包含了对他人的动作和情绪的某种反映。人类的镜像神经元系统是很难测量的，因为把电极埋进一个清醒的人的健康脑中显然有违道德。但是利用fMRI，科学家还是发现这个系统包含了IFG、IPL及顶下沟（inferior parietal sulcus, IPS，就在IPL后面）。有趣的是，由这个镜像神经元的概念还可以引出某一类特定的神经元，它们会在自己或别人/别的动物注视某个方向时放电。一只猴子的IPS神经元不仅会在它注视特定的方向时放电，还会在它看见另一个人（或另一只猴子）注视同一个方向时放电。</p>
+<p>这里插一句：有些人很快会假定镜像神经元本身就可以和共情等同，但是我们不要忘了，镜像神经元系统只在对单个细胞活动的记录中得到过证实，因此它也许只是建构共情的模块。比如镜像神经元系统参与了行为模仿：当你在给一个婴儿喂食，而他张开嘴时，你也会不由自主地张开嘴；当别人打哈欠时，你也禁不住会照做。这种对于他人行为的应和一般不需要有意识地思考对方的情绪状态。这就是一些社会心理学家所说的“变色龙效应”（the chameleon effect）。</p>
+<p>还有人提出，情绪感染也是共情的一种形式，比如当一个人表现出恐惧时，其他人（看见了他的面部表情）也会“传染到”同样的恐惧感；或者当一个婴儿在产科病房里哭出了声，也会引得其他婴儿一起哭。和行为模仿一样，我们也可以假定这种传染不需要人有意识地思考其他人的感情。我在本章前面已经指出，我所谓的“共情”不仅仅指这些简单的现象。共情似乎超越了这类自动的应和。共情中既有自动的镜像系统，也有意识程度较高的、用来清楚地理解他人精神状态的神经系统，而且两者是相互作用的。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+杏仁核</p>
+<p>共情回路中的最后一个区域（在许多方面都是至关重要的部分）是杏仁核（amygdala），它位于皮层下方的边缘系统（limbic system）之中。它参与的是情绪的学习和调控。纽约大学的神经科学家约瑟夫·勒杜曾经广泛研究我们是如何学会惧怕某些事物的，最后他把杏仁核放在了“情绪脑”的中心位置。（对杏仁核的痴迷和对音乐的喜爱促使他成立了一支名叫“类杏仁核”[Amygdaloids]的乐队！）我有幸在约瑟夫2009年访问剑桥时和他见了一面。关于杏仁核在共情系统中的作用，一条关键的证据来自我和他在1999年开展的一项研究。我们让被试躺在fMRI扫描仪内，要他们观看别人眼睛的图片，然后判断这些人的情绪和精神状态。他们的一个脑区明显激活了，那就是杏仁核。另一条指出杏仁核是共情回路的组成部分的证据来自一个著名的神经病人，她以名字首字母缩写SM为人所知。SM的两侧杏仁核都受了特定的损伤（我们的两侧半球都各有一个杏仁核）。她虽然智力很高，却面临一个重大障碍，就是无法识别别人的脸上的恐惧情绪。这个识别恐惧表情的障碍和眼睛有关：眼睛是在别人脸上认出恐惧的关键因素。SM的杏仁核受伤，妨害了她与人对视（eye contact）的能力，这就是她很难认出恐惧表情的原因了。我们能知道这一点，是因为当我们指导她注意别人的双眼之后，她就又能在别人的脸上读出恐惧了。SM的例子提醒我们，杏仁核在引导我们观看人的眼睛这件事上是多么关键，正是由于它的引导，我们才理解别人的想法和情绪。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+作为回路中的环节，这10个中继站并不是简单的线性连接关系（比如一串项链里的一粒粒珍珠），而是相互间有着复杂的多重连接。根据共情等级的不同，这些脑区在不同人的身上也有不同的活动强度，知道了这一点，我们就能理解前面提到的共情如同调光器的说法了，在解释为什么有人的共情很少或没有时也有了直接的工具。由此可以预测，那些在共情的钟形曲线上远远落后的人，他们的部分或全部共情回路的神经元活动应该会比常人少得多。<br>
+<br /><br /></p>
+<h2 id="第三章-囚禁于自我聚焦状态中：边缘障碍、精神病态与自恋人格">第三章 囚禁于自我聚焦状态中：边缘障碍、精神病态与自恋人格</h2>
+<h3 id="零度负面B型">零度负面B型</h3>
+<p><strong>原文摘录</strong><br>
+零度共情意味着你不知道自己给别人留下了怎样的印象，不知道如何与别人交流，也不知道如何预测别人的感受或者反应。你的共情机制在0级上运作。你总是困惑自己为什么无法和别人建立关系，共情的缺乏在你的身上创造了一种根深蒂固的自我中心主义（self-centeredness）。其他人的想法和感受被你彻底忽视。你只能做自己的事、困守在自己的小泡泡里，你不单是无法体会别人的感受和想法，甚至压根就不知道别人竟也有他们自己的角度。于是你坚信自己的想法和信念百分百正确，只要有人不同意你的信念，那他们不是错了就是蠢货。</p>
+<p>说到底，零度共情是一种孤独的生存方式，以这种方式生存的人，最好的情况也是被人误解，最坏的则会被谴责为“自私”。它意味着你的行为完全不受约束，放任自己肆意追求心中渴望的任何目标，或自由地表达一切想法，毫不顾虑自己的行为或语言会对别人造成什么影响。在极端的情况下，共情的缺乏还可能使你做出杀人或强奸的行径。而在不那么极端的情况下（但也接近了零度，比如共情机制在1级或2级），你可能对人恶语相向，也可能说太多话，或者在别人家里赖着不走。就共情的缺乏而言，这些显然和零度共情处在不同的层次，因为当事人只是在说话时有欠考虑，他们可能也知道伤害别人的身体是不对的。不过即使是这个说话有欠考虑的人，也可能在EQ量表上接近0级。零度共情可能使一个人做出残酷的行为、可能使他对别人的感受麻木不仁、或只是在社会上陷入孤立。由此可见，零度共情并不等于有些人所说的“恶”。但如果你接近了这样一个毫无共情的人，你就可能受到他的语言辱骂或身体袭击。你也可能觉得他对你毫不关心、一点不为你考虑——总之，在这样一个人身边，你就有受伤的危险。</p>
+<img src="/image/book/readandnote/恶的科学/2.jpg" width="600rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/恶的科学/2.jpg" class="lozad post-image">
+<p>零度共情在人群中不是随机出现的。至少有三条清晰的路径会通向这个终点。在这一章中我将提出一个新的观点，我会从精神病学中借用一些旧的范畴，并用新的概念将它们改造成零度共情的例证。我将把这些范畴汇集成“零度共情的负面类型”（Zero-Negative），因为它们完全没有值得提倡的优点。无论对患者本人还是他们身边的人，它们都明显是坏的类型。我们将会认识这些类型的患者，并考察他们的脑，我们同时也会验证一个观点：无论你是怎么失去共情的，只要你属于零度负面类型，你的脑子里就都有一个相同的共情回路受了损伤。</p>
+<p>我们会仔细研究图6中的三种零度负面类型，但我们需要一个个来，不追求一蹴而就。零度负面类型的第一种形式称为“边缘型”（borderline，简称B型）。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+边缘型人格的特征是自我毁灭的冲动、愤怒和情绪波动。（附录二中收录了边缘型人格障碍的一系列症状。）边缘型人格障碍患者还很容易陷入非黑即白的思维方式（所谓“二分思维”），在他们眼里，别人要么是“十全十美”，要么是“十恶不赦”。（这或许也是边缘型患者特别容易受邪教诱惑的原因，邪教成员觉得他们的领袖是十全十美的大好人。）边缘型患者还很擅长摆布别人，他们会做出虚弱无助的样子，或者用性诱惑和扬言自杀的手段来获得别人的注意。就共情的两个主要部分（识别和反应）而言，B型患者或许都有困难——首先，他们肯定不能用恰当的情绪对别人做出反应；其次，他们或许也很难准确地从别人的脸上读懂对方的意图和情绪。</p>
+<p>在求诊的边缘型患者中，有70%在来诊所之前尝试过自杀，平均来说，边缘型患者一生至少要自杀3次。边缘型人格障碍也因此被称作是“最致命的精神障碍”。要区分那些“只是”靠扬言自杀来吸引关注（但实际并不想付诸实施）的人和那些真在计划自杀的人是一件麻烦事。在边缘型患者中，有大约10%真会自杀成功，而其他90%只是嘴上说说或者自杀未遂。对别人扬言自杀显然不是富有共情的行为。而那10%的成功者是否真想求死也很难说，他们可能只是一时冲动想假装自杀吸引关注，结果却因为失手而真的死了。这会让患者身边的人相当为难：要是有伴侣或亲戚对你扬言自杀，你是只当他们在寻求关注而不加理会呢，还是会惊慌地赶紧采取行动、以防这一次他/她是真的想死？</p>
+<p>边缘型患者会对他们爱的人大发脾气。常有人说爱与恨之间只有一线之隔，那么在边缘型患者的身上，这道分隔线就细到了几乎看不见！他们虽然常发脾气，却仍说自己的内心是“空”的。他们宣称这种空虚感会引起极度的痛苦和抑郁。他们还会告诉你，自己的那些冲动行为（酗酒、吸毒、自残、滥交、暴食、赌博或自杀）都是为了得到短暂的解脱，他们是在竭力感受些什么，好不被那虚无感吞噬。</p>
+<p>边缘型患者还报告说，这种空虚感使他们丧失了最关键的身份认同（core identity）。生活仿佛成了一出戏，而他们总在扮演别人。他们在内心深处并不知道自己是谁，基于同样的原因，他们也很难看清别人是谁。看来他们在反省自身时的困难，正好对应了他们在思考别人时的困难，这使他们难以对他人做完整的把握。于是只能看见别人好的方面或是坏的方面，却无法将别人看作两者的综合体。他们对人的观感会迅速变化，甚至短短几分钟内，爱人在他们的眼中就会由纯粹的完人变成纯粹的恶人。他们对别人不是崇拜就是贬低。有学者认为这种“二分思维”体现了弗洛伊德的心理防御机制，但在另一些人看来，这揭示了一个以二元对立方式来思考的心灵，那里面非黑即白，没有灰色地带。<br>
+<br /><br /></p>
+<h3 id="零度负面B型的成因">零度负面B型的成因</h3>
+<p><strong>原文摘录</strong><br>
+在儿童心理学里，有一个解释边缘型人格的早期理论称为“客体关系理论”。它认为父母要是不尊重孩子的需求，或者虐待、冷落了孩子，孩子就会发展出边缘型人格。客体关系理论是从四个重要的心理动力学概念中派生出来的。 第一个概念是“重要他人”（一般指父亲或者母亲），这个人是孩子情感的“客体”，孩子指望靠他/她来满足自己的需求。第二个概念是弗洛伊德提出的各个发育阶段，儿童只有顺利度过了这些阶段，才能树立健康的人格。第三个概念也是弗洛伊德提出的一条原则，即人生最早的人际关系会影响以后的一切关系。第四个概念来自匈牙利出生的纽约精神分析师玛格丽·马勒，她认为正常的婴儿都是从一个“自闭阶段”开始发育的，在这个阶段，他们感觉自己和母亲连成一体，到后来才分开成为独立的个体。在接下来的这个“分离-个体化阶段”，幼儿建立起了自我感知（sense of self），这对他后来的精神健康具有关键作用。这个过程一方面平衡了自主和亲密这两个健康的需求，另一方面也调和了被吞噬和被抛弃这两种不健康的恐惧。</p>
+<p>奥托·克恩伯格对这些概念加以推演，形成了对边缘型人格的一种解释。他是威尔康奈尔医学院的精神病学教授，也是这座学院人格障碍研究所的所长。克恩伯格1928年生于维也纳，和马勒一样，他也相信婴儿生来处于自闭状态，需要建立最初的关系，借这个过程发展出“自我”的概念。在分离和个体化的阶段，正常的儿童会运用二分思维的心理防御机制，将好的经验和坏的经验区分开来。在克恩伯格看来，一个自然的发育过程还应该将这些二分经验再次统一，儿童要接受自我中包含了优点和缺陷，并且他们的父母也有优点和缺陷。</p>
+<p>克恩伯格指出，儿童如果卡在了二分阶段、无法完成统一，就会进入一个“解离”（dissociative）状态，注定要发展出边缘型人格。这个事故的原因可能是母亲常把孩子推开、或者不让他亲近，也可能是母亲把孩子束得太紧、不让他探索世界。结果就是孩子或者害怕自己被抛弃（母亲不管他），或者害怕自己被吞没（母亲管得太多）。解离状态的原因也可能是更加极端的亲密匮乏或者虐待，比如虐待儿童。这样的孩子永远不会长成情绪稳定的大人。一旦卡在了二分状态，孩子对于父母的正面体验、正面印象就可能扩大或者夸张，由此产生对他人的理想化观念，并建立起浮夸的自我形象；同时，对父母的负面印象受到隔离，都集中到了一个负面情感（愤怒和憎恨）的“污水池”里。这会产生一种强烈的依附需求、一种强烈的被抛弃的恐惧以及一段布满冲突的母子或母女关系。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+值得一提的是，虽然B型患者的行为极不稳定，科学家还是设法研究了他们的脑，结果发现，他们共情回路的一大部分和常人截然不同。首先，他们的神经递质和一种血清素受体的结合较常人为少。，你可能已经猜到，发生这些异常的脑区正是共情回路的一部分：腹内侧前额叶皮层（vMPFC）、中扣带皮层（MCC）以及颞叶的一些区域等等。115，116神经影像也在B型患者的共情回路中发现了异常，尤其是他们的眶额皮层（OFC）/vMPFC和颞叶皮层活动不足。给边缘型患者阅读一段关于遗弃的文字，他们的几个共情脑区的活动都低于常人，像是杏仁核、vMPFC、MCC、额下回（IFG）以及颞上沟（STS）。还有的研究显示，边缘型患者在观看引起反感情绪的幻灯片时，两侧杏仁核的活动都会增多。与这相似，当他们观看带有情绪的面孔时，左侧杏仁核活动也出现了上升。还有最近的一项研究显示，当B型患者在玩“信任”游戏时，他们似乎无法维持与其他人的合作，当合作关系破裂了也不知该怎么弥补。一般人在玩这个游戏时，与合作和信任姿态有关的神经标记物（前脑岛[AI]）都会变得活跃，但在B型患者的身上完全找不到这个迹象。</p>
+<p>还有一种新颖的方法是追踪童年受过虐待的人，并扫描他们的脑。这个方法之所以“新颖”，是因为它是预期式的，而不是回顾式的：情绪伤害已经在儿时铸成，科学家要问的是：受害者的脑遭遇了什么？受害者并不是个个都会变成B型，但有相当一部分会。而这些人的共情回路也会出现异常，比如杏仁核较小之类。这一点在受过性虐待的女性身上同样成立，长大后，她们左脑的内侧额叶中的灰质会比没有受过性虐待的女性少。研究还发现，那些早年受过创伤、后来发展成创伤后应激障碍（PTSD）的人，他们的海马体积也比常人要小。对于这些证据，有一种解释认为，像虐待和冷落这样的早年负面经历改变了脑的形态。无论如何，关键的一点是边缘型患者的零度共情源于脑中共情回路的异常。</p>
+<p>我在这里把边缘型描述为零度共情的一种类型，并不是想要给他们贴标签污名化他们，以增加他们已经遭受的巨大痛苦。对任何人的污名化都是不可接受的。但我确实想让大家注意到，当边缘型患者在经历他们的危机时，他们的共情回路发生了什么。我也想让大家看到，边缘型患者如何忽视了别人也是拥有感受的个体。这种新的视角蕴含着一个直接的应对边缘型的疗法。这种疗法（叫作“心理化基础疗法”，简称MBT，由伦敦大学学院的心理分析学家彼得·冯纳吉和安东尼·贝特曼开发）已经展现出一些潜在效益。<br>
+<br /><br /></p>
+<h3 id="零度负面P型">零度负面P型</h3>
+<p><strong>原文摘录</strong><br>
+我们接下来要研究的这种零度共情的形式是精神病态（psychopath，简称P型）。说到精神病态，我们就看见了一个和B型患者一样只关心自己的人。和B型不同的是，P型患者会不择手段地满足自己的欲望。这有时表现为一触即发的激烈反应，当事人只要遇到别人一点小小的阻碍就会暴力相向。有时它又表现为经过冷酷算计的残酷行为。有时，这种不经大脑的侵犯行为不是因为当事人感到自己受了威胁，而是出于别的原因：比如当事人想满足支配他人的需求，想得到自己向往的东西，又比如他对别人的情感完全麻木，甚至看到别人遭殃就觉得开心。（德国人有一个专门的词语来形容这种乐趣：幸灾乐祸[schadenfreude]。）<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+P型人格有一个比较轻微的变种，有人把它称作“马基雅维利主义人格”，理查德·克里斯蒂和弗罗伦斯·盖斯则称之为“高马基雅维利主义者”，也就是踩着别人往上爬的人。为了达到目的，他们可以满口谎话。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+不过许多人都知道，用自我报告的方法来鉴别精神病态者是极不可靠的，因为他们往往会用谎言来掩盖自己的本性。为避免这种失误，研究者转而采用自主神经唤起这个生理学标准，也就是测量你在听见或看见情绪性素材时的激动程度。、他们一般测量的是皮肤电反应（GSR），也就是当你在接触饱含情绪的素材时，你的手掌会出多少汗。GSR测量显示，精神病态者在观看他人遭受苦难的图片时，他们的自主神经反应是较弱的（也就说是他们不太激动）。</p>
+<p>此外，精神病态者在指认人的恐惧表情时也表现较差。这说明P型人在共情的两个主要成分（即识别和反应）上都有欠缺。还有一项测试显示了精神病态者不会像普通人那样处理情绪素材：向被试展示一组单词并问他们“这真的是单词吗？”大多数人在看到情绪性单词时的判断速度都超过中性单词，但精神病态者却没有显示这种速度上的差异。还有一种方法能测量某人受情绪素材唤起的程度，就是利用事件相关电位（ERP）：研究者在被试的头皮上固定电极，并用记录到的事件相关电位揭示他们的脑内电活动。测量发现，精神病态者在接触情绪性单词之后，脑的中部和顶部区域不会像普通人那样活动增加。另外就像我们在保罗身上看到的那样，那些富于攻击性的人和常人还有一点不同：他们会把模糊的情境解释成对方怀有敌意。这个倾向在那些品行障碍的儿童身上就有体现，而他们中的一些也的确会成长为精神病态者。研究者把这种倾向称作“归因偏差”，它是共情的认知部分未能精确运作的清楚例证。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+我们已经知道B型障碍和童年受到的冷落、虐待有关，现在还有证据表明早期的压力会影响海马的功能，以及神经系统在响应威胁时的活跃程度。压力还会影响人面对威胁时的激素反应。长期经受压力对你的脑是没有好处的。杏仁核是对压力或威胁做出反应的一个脑区。它在反应时会牵动下丘脑，再由下丘脑牵动脑垂体，使之分泌一种叫作ACTH的激素（促肾上腺皮质激素）。这种激素再由血液从脑部输送到肾上腺，使肾上腺分泌另一种激素，皮质醇。</p>
+<p>皮质醇常常也称为“应激激素”（stress hormone），它能很好地体现一只动物是否正在经受压力。海马里有皮质醇受体，使动物能调节自身的应激反应。值得一提的是，太多压力会损伤海马，使它发生不可逆的收缩。压力还会在杏仁核的一部分（基底外侧核）造成“树状分枝”，也就是神经细胞的分叉超过平常，变得过分活跃。</p>
+<p>这和我们上面说到的“反应性攻击”有很大的关系。这种行为在人类和动物身上都有体现，它是“或战或逃”（fight-or-flight）自卫体系的一个环节。动物在受到较小的威胁时往往会呆住不动，这样就能避免靠近威胁源，并估算下一步该做什么。不动还可以使对方的进攻减到最少，因为进攻者往往会根据你的动作进犯，或是寻找你屈服的迹象。当威胁源靠得更近一些，就会引发“逃跑”行为。要是威胁比这更大更近、连逃跑都不可能，动物就往往会发起反应性攻击了。</p>
+<p>标志反应性攻击的信号有两个源头，一是杏仁核（因为共情回路的这个区域在体验到恐惧时会变得极其活跃）；二是额叶的各个区域，这些区域既能用自我调节和抑制给身体刹车，又能放开限制、使身体向威胁源发动攻击。因此，反应性攻击也可能因为两件事而过分活跃，一是你的杏仁核过分活跃（这可能是因为抑郁和焦虑，也可能是因为在幼年时长期经受压力，或者是遗传方面的原因），二是你的前额叶皮层不够活跃（这样你就无法抑制反应性攻击了）。这再次说明，共情回路的关键环节发生异常，就可能导致共情减少乃至归零。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+詹姆斯·布莱尔提出了另一个模型来解释一个人为什么会变成P型。他曾在伦敦医学研究委员会的认知发展部门工作，我早年也在那里做过研究。攻读博士期间，布莱尔热情地前往那些安全等级最高的监狱（比如布罗德莫精神病院）去和精神病态者见面。他还提出了一个模型，他称之为“暴力抑制机制”（Violence Inhibition Mechanism, VIM）。听起来和我们的论题很有关系是不是？他主张，当一个人（许多其他动物也是如此）看见一个同种（也就是同一物种的一个成员）在经受痛苦时，他就会做出自动反应，以减轻另外那个人（或动物）的痛苦。</p>
+<p>布莱尔认为，VIM系统会在你看见别人的脸上露出悲伤、痛苦的表情时，或者在别人的声音里听出这些情绪时自动激活。它告诉你“有人在遭罪”，导致你的自主唤起增强（你的心跳加快，出汗也增多了），并激活你脑中的威胁系统，使你的身体呆滞不动。也就是说，在看到别人受苦时，你会抑制自己的行为。这想必是一种高度适应性的行为，可以阻止一只动物对另一只施加暴力。对方只需大声叫喊，或者痛苦地抽搐，就能使你停止当前的动作，包括任何可能对他造成痛苦的动作。而照布莱尔的说法，精神病态者的VIM不够活跃。</p>
+<p>确实，精神病态者在面对别人的痛苦时自主唤起较低，这一点为布莱尔的理论提供了一些证据。然而有一个现象却是VIM模型无法轻易解释的：精神病态者会在纸牌赌博游戏不再产生回报时继续玩下去——这些游戏中照理没有人受苦。这个模型同样很难解释，为什么充满爱意的父母（鲍尔比认为他们会促进安全依恋）也能使孩子更好地社会化：考虑到在这些孩子的人生中，应该很少会有人向他们表现痛苦。</p>
+<p>总之，有大量证据表明P型患者脑中的共情回路出现了异常。这再次证明了上文的观点：我们不该再用“恶”这个词，而是应该探讨共情的减少（或缺失）。不过我们还有一种零度共情的类型需要见识，如果你还愿意跟我继续这段旅程的话。那就是N型（自恋型）。<br>
+<br /><br /></p>
+<h3 id="零度共情N型">零度共情N型</h3>
+<p><strong>原文摘录</strong><br>
+自恋者（N型）和我们之前遇到的精神病态者（P型）以及边缘障碍者（B型）明显不同。从一个方面说，零度共情使他们深陷在自我中心（self-centered）之中，虽然他们的言语和行为都可能冒犯别人，但他们不太会做出残忍的举动。他们只是完全不懂谦虚，认为自己比别人优越得多，仿佛他们具备了什么特殊才能，而别人都没有似的。实际上，自恋者那连绵不断的自我吹嘘和自我抬举正是他令人反感的原因之一，别人并不是嫉妒他，而是通过这些言行看穿了一点：他只关心自己。自恋者和其他类型的零度共情者一样，都无法认识到重要的关系是双向的。对于零度共情的人来说，所有交往都不是真正的交往，因为它们都是单向的。这一点从自恋者说话的密度里也看得出来。在一场对话里，他们不会想到给对方留出发言的空隙，也不会想去了解对方。自恋者只顾自己宣讲，他们滔滔不绝地谈论自身，什么时候结束对话也要由他们说了算。他们不会对话，只懂独白。</p>
+<p>有的心理动力学者认为人有少量的自恋是必要的、具有规范效力的、健康的，否则就是一个完全不喜欢自己的人。由此可知，自恋也是一条连续的特质光谱，只有极端的情况才可以称之为“病态”，这种人只关心自己，即使关心别人也是因为对方有用。换句话说，其他人在自恋者的眼中只有利用的价值。自恋者是把他们当作物品来使用的（术语叫作“自我-客体”）。</p>
+<p>自恋在不同人的身上可以有不同的表现。（见附录二里列出的诊断症状。）有的自恋者非常外向，一心想占据舞台中央，他们是公司的老板，是团队的领袖。还有的自恋者不擅社交，看起来很害羞，但他们还是有一种自命不凡感，希望别人都来迎合自己，丝毫不肯妥协，他们总是愤愤不平，总在责怪别人为他们做得不够多。也有些类型的自恋者可能带有危险，有研究者认为这种人格类型会造就连环杀手。</p>
+<p>自恋者在整个人群中大约占1%的比例，但是在因为精神健康状况前来求诊的人当中，这个比例要高得多（16%）。和B型人不同的是，至少有50%到75%的自恋者是男性。和P型、B型相同的是，研究也指出早期的情绪虐待是N型的可能原因，这又一次提醒了我们人内心的那罐金子是多么重要。但也有研究者猜测，和其他两种零度共情的类型不同，N型的成因也可能是家长对孩子的过度欣赏，对他们的外表和才能的过度赞扬、过分宠溺，以及缺乏现实反馈的一味高估。和P型或B型相比，对N型的研究还很稀少，这是必须填补的空缺。我自己的看法，是在这三种零度共情的类型中，N型可能会使别人同样反感，但它不太会引起暴行。不过这类问题我们还是需要更多信息才能回答。</p>
+<p>精神病学里把零度共情的这三种负面形式都归在“人格障碍”名下，它们也确实都是人格障碍。但是在我看来，精神病学家也忽视了三者共有的一个明显特征，那就是零度共情。我有过预测，这三种人脑中的共情回路应该都有异常。我们在上文已经看到，无论这异常造成的是B型还是P型，都有相同的神经回路受到了破坏。由此可以预测，在N型患者的共情回路中也能发现相似的异常，不过这类研究还有待开展。所有这些研究都在绘制一幅共情的完整图画，并揭示一个人的共情是如何变成零的。</p>
+<p>这自然会引出一个问题：同样是共情回路受损，为什么有的人成了P型，有的人却成了B型或N型呢？我们在这里必须假定，通向同一个终点的道路有几条，它们可能是不同的基因、不同的环境因素，也可能两样都有。我们到第五章再来讨论这个问题。</p>
+<p>共情回路活跃不足有暂时和永久两种形式，正好对应人格心理学中“状态”和“特质”的不同。状态是指心理系统或神经系统的短暂波动，它们由特定的情境引发，是可以逆转的。我们都进入过某些短时的状态，并在其中丧失共情。这包括醉酒、疲倦、失去耐心、或承受压力，我们会在这种时候对别人说错话、办错事，事后又感到懊悔。这懊悔的感觉证明我们的共情毕竟还是在的，然而我们当时的错误言行却无疑体现了共情回路的波动。相比状态，特质就是心理系统或神经系统的永久、凝固的组合了，它们在不同的情境中始终如一，而且是不可逆转的。</p>
+<p>在人格心理学中，特质的集合构成了人格类型（比如你是内向还是外向），而B型、P型和N型都是“人格障碍”的明显例子。在这一章里，我对传统的人格障碍概念做了重新塑造，把它们说成是共情回路永久缺乏活力的例子。我们现在还无法断言这里的“永久”是否就是真正的永久，因为要验证这一点，就势必要追查对象的一生。你可以把特质理解成是长期的特征，它们肯定比短时的状态变化要长久。<br>
+<br /><br /></p>
+<h2 id="第四章-在模式中寻找道德：阿斯伯格与自闭患者">第四章 在模式中寻找道德：阿斯伯格与自闭患者</h2>
+<h3 id="阿斯伯格综合症">阿斯伯格综合症</h3>
+<p><strong>原文摘录</strong><br>
+所谓零度正面，是指一个人虽然有共情障碍，却具备精确而严密的心灵。他们患有阿斯伯格综合征（Asperger Syndrome），那是自闭症光谱上的一种疾病。说阿斯伯格综合征患者是零度正面有三个原因。首先，他们有共情障碍，障碍的原因是他们的脑以一些特殊的方式处理信息，这种方式给了他们各种天赋。其次，他们处理信息的这种方式非但没有使他们丧失道德，反而让他们拥有了超越常人的道德（be supermoral）。最后，归在零度共情正面类型的这些人，他们的认知共情可能低于一般人，但他们的情感共情可以是完好无损的，这样一来他们同样会关心他人。<br>
+<br /><br /></p>
+<h3 id="自闭者的脑">自闭者的脑</h3>
+<p><strong>原文摘录</strong><br>
+凡是零度正面型的人都患有或轻或重的自闭症。同样，他们也在共情回路的几乎所有环节都显出了活跃不足的迹象。要他们阅读几个小故事，然后判断角色的意图、动机和心理状态，或者要他们阅读一段话语，然后判断说话人的意图，他们的背内侧前额叶皮层（dMPFC）就会出现活跃不足的情况。让他们观看照片里某人的眼睛，然后推测这个人的想法或是感受（也就是解读眼睛周围的面部表情），他们会觉得非常困难，他们的岛盖部（FO）、杏仁核和前脑岛也会活跃不足。在这些自闭者脑中，负责解读凝视的区域也异于常人，比如后颞上沟（pSTS）。当零度正面者观看模拟动态的动画时（比如模拟一个人行走的运动的点），他们的pSTS区域会做出与常人不同的反应。在解读面部和情绪时，他们的杏仁核活动同样显得反常。要他们模仿别人在处于某种情绪时的面部表情，他们的FO/IFG区域（镜像神经元系统的一部分）也表现得很不活跃。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+对零度正面者的读心能力或共情能力的早期研究中，许多都有赖于文字测试（比如分析几个故事、几段刻薄的评语，或者给几种情绪贴上标签）。为了排除语言的影响，研究者另外使用了一项巧妙的任务，称为“社会归因测试”，它要求被试在电脑屏幕上观看一段几何图形运动的视频。大多数被试都会自发地对这些几何图形做拟人化处理，而患了自闭症和阿斯伯格综合征的被试就不太会自发地从这些图形的运动中看出意图、想法和感受了。当自闭症患者在磁共振扫描仪中完成这项任务时，他们的dMPFC和右侧颞顶联合区（RTPJ）/pSTS同样出现了活跃不足的现象。</p>
+<p>除了难以理解别人之外，零度正面类型者还很难理解自己的内心，这种困难称为“述情障碍”，翻译成白话就是“无法用语言表达情绪”。让自闭症患者观看充满情绪的照片，然后叫他们给自己的感受打分，在这样的情绪反省状态中，他们的共情回路有好几个部分都显得活跃不足：比如dMPFC、后扣带皮层和颞极（temporal pole）。而这块活跃不足的dMPFC也正是使自闭症患者在解读他人心灵时遇到困难的那个区域。总之，当自闭者的脑在完成共情任务时，参与解读别人心灵和参与共情的神经系统都一样出现了活跃不足的现象。在自闭者身上，dMPFC和vMPFC在静止时的活动（也就是它们的基础活动）都异于常人。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+自闭症患者在想到自己时会出现异常的神经活动。当他们思索的信息和自己有关时，vMPFC的反应最大。迈克发现，在自闭症患者脑中，vMPFC不会像普通人那样区分自我和他人。那些社交能力最差的患者，他们的vMPFC的反应也最为非典型。他还发现，一般人想到自己时，他们的vMPFC一般会与参与感官反应的脑区（比如对触觉反应）之间产生密切联系。然而在自闭症患者身上，vMPFC和那些底层感觉区域之间的联系就极稀薄了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一般人看到其他人遭受痛苦的照片（比如手刺进了一根针）时，他们的感觉运动皮层会向手掌发送收缩的信号，仿佛他们也感到了照片中人的疼痛似的。但在自闭者身上，这个对别人疼痛的感觉运动反应就微弱得多了。总之在自闭者身上，不仅低层次的具身过程影响到了共情，高层次的自我反省过程也受损了。</p>
+<p>迈克还在零度正面者的共情回路里找到了另一个区域，它同样会对自我相关的信息做出异常反应，那就是中扣带皮层（MCC）。MCC一般会在人感到疼痛时激活，但它也会在大脑处理和自我有关的信息时激活。<br>
+<br /><br /></p>
+<h3 id="系统化">系统化</h3>
+<p><strong>原文摘录</strong><br>
+系统化是一个人分析变化的模式、从中发现事物原理的能力。世界上的信息每天每时都在变化，它们有的随机，有的则不。如果一种变化是非随机的，其中就一定有模式可循，而人脑天生会注意模式。“模式”是“重复”的另一种说法：一个信息序列只要出现过，我们就会注意到它，而对模式的注意程度则因人而异。阿斯伯格综合征患者的脑就对模式格外敏感。<br>
+<br /><br /></p>
+<h3 id="寻找模式">寻找模式</h3>
+<p><strong>原文摘录</strong><br>
+人脑会为了不同的原因寻找模式。首先，找到模式，我们就能预测未来。…模式还能启发我们用实验来验证预测，从而发现事物的运行原理。</p>
+<p>…</p>
+<p>模式的另一个价值是使我们能分开操作不同的变量，修改一个系统，从而发明新的系统。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+系统化有两种方法。第一种是单凭观测。我们观测变化的数据，然后在数据中寻找模式。是不是每隔6个浪潮就会出现1个大浪？这个大浪是不是每次都会把贝壳冲到较远的沙滩上？一旦发现了模式，我们就要重新观测数据，看看自己总结出的法则（大浪会把贝壳冲得更远）是否为新的观测所证实。我们要验证自己对将来的预测是否正确、真实。在一次次观测中，定律就这样维持下去，直到出现不符合定律的新数据为止，到那时定律就要修改，并用更多的观测来检验。这个过程可以循环往复地持续下去，随着预测的证实而产出真理。在这第一条系统化（即观测）的路径中，大脑只是简单地观察输入（清点海浪的数量）和输出（贝壳冲上沙滩的距离）以确认定律（每隔6次海浪就会出现1次把贝壳冲到远处的大浪）。在这里，系统化包含了一个输入-输出的关系。</p>
+<p>系统化的第二种方法是观测加上操作。我们先观测数据，再施行一些操作（操纵一个变量），然后观察这次操作的效果：在浴缸里扔一块石头，水位上升了吗？在这第二条系统化的路径中，大脑的作用是观察输入（最初的水位），施行操作（扔下石块），然后观察输出（新的水位）。在这里，系统化包含了一个输入-操作-输出的关系。</p>
+<p>对于任何可以系统化的领域，我们都会对数据采用这两种系统化的方法。所谓系统，就是任何一个有规律可循的变化，或者说具有模式的东西。以上两种形式的系统化都会产生“如果p，那么q”的法则。一个系统可能只有一条这样的法则，也可能有成百上千条。<br>
+<br /><br /></p>
+<h3 id="系统化机制">系统化机制</h3>
+<p><strong>原文摘录</strong><br>
+人的世界是由情绪支配的世界，人的行为是不可预测的。人的感受不是能够精确界定的东西。我们之所以能产生共情，就是因为我们在体会他人的感受时，能容忍不确定的答案。（她可能有一点郁闷或生气。）感受的世界是没有定律的。不像物理学或数学的世界，这里没有非黑即白、一以贯之的定律。更加混乱的是，一个社会群体的内部还有许多不同的观点，不是只有一个客观的角度。共情，就是在一场社会互动中迅速同时关注许多不同的观点和波动的情绪。</p>
+<p>到这里，我们就看出系统化机制和共情机制之间的关系了：如果你有高度发达的系统化机制，你就不太会注意像情绪这样不符合定律的现象，这部分是因为你对严密性的需求。于是高度发达的系统化机制就成了又一条通向零度共情的道路。如果你的系统化机制不太发达，你就容得下不严密，但是对6级的人来说，情况正好相反。在他们看来，别人的行为无法理解，他们也不可能产生共情。<br>
+<br /><br /></p>
+<h3 id="典型自闭症">典型自闭症</h3>
+<h2 id="第五章-共情基因">第五章 共情基因</h2>
+<h3 id="双胞胎">双胞胎</h3>
+<p><strong>原文摘录</strong><br>
+即使一种特质或行为只是部分由基因决定，我们也能从一对对双胞胎中看出端倪。关键的做法是在同卵双胞胎和异卵双胞胎之间对比。如果待考察的特质或行为在同卵和异卵双胞胎之间没有太大不同，那我们就只好承认基因在行为塑造中起的作用很少或者没有，因为从遗传上说，同卵双胞胎和异卵双胞胎是很不一样的：同卵双胞胎就像克隆（他们在遗传上完全相同，彼此共有100%的基因），而异卵双胞胎在遗传上和一般兄弟姐妹之间的遗传相似性没有什么两样（平均只共有50%的基因）。而不管是同卵还是异卵双胞胎，彼此在成长环境上却都很相似：两者都有相同的年纪，也往往在同一个家庭长大。换句话说，如果我们发现待研究的特质或行为在同卵双胞胎之间的相关要大于异卵双胞胎，那就说明确实是基因在起作用。</p>
+<p>几乎所有对双胞胎开展的共情研究都发现，同卵双胞胎在各种共情指数上的相关性都高于异卵双胞胎。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+就P型的双胞胎研究而言，还没有哪一项能证明百分之百的遗传性，但遗传的作用仍然是实实在在的（最大的估计约为70%）。这意味着一个人是否会成为精神病态或者出现一些病态的特质，环境还是起到了一定作用。只要环境“适合”，有些具有精神病态遗传倾向的人就可能把病态行为表现出来。</p>
+<p>我们是否也能在N型或B型中找到遗传标志？到今天为止，还没有人做过N型的双胞胎研究，这是文献中的一片有待填补的空白。在B型方面，有家庭研究显示边缘型患者的兄弟、姐妹和父母自己也是B型的概率比常人高出10倍。家庭研究不同于双胞胎研究和领养研究，并不能分清环境因素和遗传因素，我们能得出的唯一结论就是零度负面的这种形式是家族性的（即在家族中流传）。不过，倒是有一项对B型的双胞胎研究的确显示，在“和合率”方面，同卵双胞胎（35%）要高于异卵双胞胎（7%）。这里的“和合”是“相关”的高档说法，用来表示双胞胎中的一人患有某种疾病（比如边缘型人格障碍）时，另一人也患有这种疾病的概率。虽然35%和7%之间似乎差别不大，但这已经告诉我们边缘型人格障碍确实有很强的遗传性了——在成为边缘型人格的风险中，有大约70%是可以用遗传因素解释的。虽然环境也会产生明显的影响（尤其是虐待和冷落），但一个人要成为边缘型，首先还是得有一些遗传易感性才行。</p>
+<p>零度正面型又有什么遗传标志呢？家庭研究显示，自闭症或阿斯伯格综合征患者（即零度正面型）的兄弟、姐妹和父母也会表现出超越平均水平的自闭特质。由此可见，零度正面型也是家族性的。你可以用好几种手段验证这个结论，比如共情商数（EQ）或其他量表，比如衡量被试观看照片时的情绪认知的心理测试，又比如在被试完成这类任务时观察他们的脑部活动。对零度正面型的双胞胎研究也显示，在对自闭特质的测量中，同卵双胞胎之间的相关性要高于异卵双胞胎。<br>
+<br /><br /></p>
+<h3 id="攻击基因">攻击基因</h3>
+<p><strong>原文摘录</strong><br>
+有的科学家在寻找共情基因的时候，把目光集中在了影响神经递质血清素的那些基因上。之前就有研究者提出，攻击行为和突触中的血清素过多有关。如果增加血清素受体的活动、使它们将突触中的血清素清除，攻击行为就会减弱。有一种基因就参与了血清素（还有多巴胺、去甲肾上腺素和肾上腺素等神经递质）的清理，称为MAOA（单胺氧化酶A）基因。</p>
+<p>下面就要说到有趣的部分了：这个基因有几种形式。其中的一种称为“MAOA-L”，因为一种关键的酶MAOA在携带MAOA-L基因的人体内产量很低（Low）。另一种形式称为“MAOA-H”，因为同一种酶在携带MAOA-H基因的人体内产量较高（High）。MAOA的浓度越低，各种神经递质在突触中的浓度就越高。因此，携带MAOA-H的人自然攻击性较弱。而携带MAOA-L的人在武士文化群落中比例很高（比如新西兰的毛利人）。为此，这种基因也得到了一个具有争议的别名：“武士基因”（warrior gene）。你可能已经料到，这种基因是和多种环境因素相互作用的。比如阿夫沙格姆·卡斯皮就和同事发现，同样是受到虐待，携带MAOA-L的儿童比携带MAOA-H的儿童更容易出现反社会行为。</p>
+<p>动物研究也佐证了这个观点：删除了MAOA基因的雄性小鼠会表现出更多攻击行为。在人类中，一个MAOA基因发生变异的荷兰家庭中的男性成员也表现出了很强的攻击性。神经影像也显示，MAOA-L携带者的杏仁核和前扣带（共情回路中的两个关键区域）都小于常人。这个版本基因的携带者在匹配面部表情时，他们的杏仁核活动变多，前扣带活动变少。<br>
+<br /><br /></p>
+<h3 id="情绪识别基因">情绪识别基因</h3>
+<p><strong>原文摘录</strong><br>
+我们知道，至少有3个基因会影响人脑对情绪性表情的反应，我们也已经明白，情绪识别是共情的一个关键环节。你携带的是哪个版本的血清素转运基因（SLC6A4），会影响你的杏仁核如何对恐惧的面部表情做出反应（但不是所有研究都支持这个观点）。对其他相似的神经递质（如多巴胺）的水平起调节作用的基因也会影响杏仁核对恐惧表情的反应。别忘了杏仁核正是共情回路中的一个关键脑区。另外还有一个精氨酸加压素受体1A基因（AVPR1A），之前已经发现和自闭症有关，它也会影响杏仁核对流露出恐惧或愤怒的面孔的反应。</p>
+<p>第三个基因是我们在自家实验室里发现的，我来跟你们讲讲这个故事。许多研究表明，人在看见快乐的面孔时都会高兴。就像我们喜欢观看食物或者美景，快乐的面孔也使人愉悦。这一点在婴儿身上已经有所体现，普通的8周左右的婴儿在看见快乐的面孔时就会微笑，这称为“社会性微笑”。我们还知道，当人在体验使人愉悦的事物时，有两个关键脑区会激活，它们是纹状体和黑质。因此当我们看见快乐的面孔时，这两个脑区就自然就会激活了。</p>
+<p>比斯马德夫·查克拉巴蒂想看看有没有基因可能影响你的纹状体对这些快乐面孔的反应强度，因为我们都知道，人在喜欢观看别人这一点上是有个体差异的。于是他选择了一个已知的基因，大麻素受体基因1（CNR1），它参与了我们对奖赏的反应。这个基因在纹状体中有强烈表达，而纹状体正是脑中的一个奖赏系统。大麻素受体基因1以药物大麻得名，因为它制造的蛋白质受体是大麻在脑中的主要目标。大麻素受体上的个体差异会影响到一个人对大麻的愉悦程度。（有人抽了一支大麻却全无反应，还有人抽了觉得快乐，也有人抽了觉得难受。）我们让被试躺进脑扫描仪里，取了他们的口腔拭子，从中提取他们的DNA，这是为了验证比斯马的一个简洁的观点：当你观看别人的快乐面孔时，CNR1的差异会影响你纹状体的活跃程度。不出所料，这个预测得到了确认。</p>
+<p>这三个基因提供了非常清晰的例子，证明基因组成的确能改变你的脑对别人情绪的反应。影响我们情绪识别的很可能还有别的基因，但这三个已经足以说明，至少共情的这个方面（情绪识别）是受到基因影响的。<br>
+<br /><br /></p>
+<h3 id="与共情商数有关的基因">与共情商数有关的基因</h3>
+<p><strong>原文摘录</strong><br>
+共情在心理学层面上表现出了明显的性别差异。比如平均来说，女孩和女人的共情商数要比男孩和男人高，这个差别在不同的文化中都成立。<br>
+<br /><br /></p>
+<h3 id="与自闭特质有关的基因">与自闭特质有关的基因</h3>
+<h4 id="冷静分析">冷静分析</h4>
+<p><strong>原文摘录</strong><br>
+我们还可以跳出人类的局限，去看看其他动物是不是也有一些共情的先兆、哪怕只是较为简单的形式。如果共情有部分遗传性，它们就应该也有共情，因为一种特质只要是演化产生的，它的过渡形式就会普遍存在于动物界中。<br>
+<br /><br /></p>
+<h2 id="第六章-对人类残酷行为的反思">第六章 对人类残酷行为的反思</h2>
+<h3 id="新观念">新观念</h3>
+<p><strong>原文摘录</strong><br>
+零度正面的成因是一个人的心灵始终在努力超越时间的束缚。他们想摆脱时间这个维度的束缚，以看清自然界中永恒的重复模式。在他们看来，所谓变化，就是一个本来完全可以预测、完全系统化的世界里渗进了时间维度，在这个世界里，滚轮一圈圈地不停旋转，杠杆只能来回运动，教堂的钟声按精美的数学模式奏响。在体验了多次重复之后，这些零度正面者就会丧失对时间的感知，因为这些事件每一次发生都是相同的。我猜想这种状态就是自闭症患者常常说的“自我刺激”（stimming）。只有发生了包含新异元素的事件从而打破他们的预期时，他们才会觉察到时间这个维度。<br>
+<br /><br /></p>
+<h3 id="显而易见的谜">显而易见的谜</h3>
+<p><strong>原文摘录</strong><br>
+然而我们还有许多没有解答的问题。首先，如果零度共情的各种形式都涉及共情回路的异常，那为什么不同的人会表现出零度共情的不同形式呢？回答这个问题的一个方法是从相互重叠却又独一无二的特征入手，比较零度共情的不同形式。表格1就在心理学层面做了这样的比较。它将每一种类型加以分解，分解的标准是共情的两个方面，即认知和情感（反应）是已遭破坏还是完好，以及系统化功能是已遭破坏还是完好。总有一天，我们可以对共情的10个脑区、每一个“共情基因”及每一个环境触发因素都开展同样的分析比较。零度正面型至少可以分成两个子类，这是因为有一些因素（同样是基因和环境两方面的）决定了人的语言发展和智商，而语言发展和智商又是划分这两个子类（典型自闭症和阿斯伯格综合征）的关键标准。总之，表格1演示了该如何回答上面的问题。</p>
+<img src="/image/book/readandnote/恶的科学/3 .jpg" width="600rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/恶的科学/3 .jpg" class="lozad post-image">
+<br /><br />
+<p>第二个问题：零度共情还有其他形式吗？回答这个问题的一个方法是用明确的例子指出还有我们尚未讨论过的形式，从而证明我们的清单还远谈不上完整。比如伦敦精神病研究所的珍妮·特雷热就认为，至少某些厌食症的病例不仅仅是一种进食障碍，还是自闭症的一种形式。326她这个观点的依据是瑞典精神病学家克里斯·伊尔贝里更早时候的观察。327特雷热提出这个观点之后，许多人立刻看出了这个理论转向的重要意义：面对厌食症患者，我们一般只注意到他们的体重剧烈下降、进食也很稀少，从而将这看作是一种进食障碍，但这种看法或许太偏重它的表面特征了。</p>
+<p>厌食症的另一个特征是许多患者的治疗师和父母都立刻会注意到的：患者变得自我中心，丧失了共情，然而这个现象并不是厌食症的诊断标准之一。就在患者父母为了女儿的绝食心急如焚、怕她最后会饿死时，女儿却坚称对自己的体型和体重很满意。她或许会执意与家人分开吃饭，相比一家人其乐融融，她更关心的是计算卡路里和食物的重量，而且非要精确到毫克才肯满意。她已经无法体会别人的观点，这确实很像零度共情的又一种形式。<br>
+<br /><br /></p>
+<h3 id="重新思考精神病学">重新思考精神病学</h3>
+<h3 id="恶之平庸">恶之平庸</h3>
+<h3 id="活跃不足的共情回路">活跃不足的共情回路</h3>
+<p><strong>原文摘录</strong><br>
+共情回路是如何不可逆转地关闭，或至少关闭很长一段时间的？我们在第三章已经看到，一系列早期的环境因素（比如情感虐待和冷落）都能耗尽我们“心里的那罐金子”，也就是我们的自我价值感、我们信任他人的能力，或者是我们对他人形成安全依恋的能力。同样，我们在第五章又看到有一系列基因能够影响共情，其途径想必是影响共情回路。有些遗传和环境因素还会破坏分子通道，比如破坏性类固醇激素系统，从而对脑的发育产生永久的结构性影响。</p>
+<p>神经科学中的“结构性”影响对应的就是发展心理学中的“关键期”或“敏感期”。前面已经说过，产前的性类固醇激素（包含睾酮）似乎会对发育中的脑产生不可逆的影响。胎儿的产前睾酮含量越高，他的脑就越是男性化和系统化，共情也就越弱。再联系到各种“邪恶”的行径：它们全都是因为早期环境（情感剥夺）或者生物学因素（记忆和/或激素、神经递质等等）破坏了共情回路吗？<br>
+<br /><br /></p>
+<h3 id="恢复的可能">恢复的可能</h3>
+<h3 id="超强共情？">超强共情？</h3>
+<p><strong>原文摘录</strong><br>
+但利他不见得是一种能够全天候维持的生活方式。如果你的眼光只放在别人身上，你就可能忽视自己的需求。而太关注自己的需求又可能导致自私，并使人自绝于社会、失去别人的支持。共情的分布之所以呈现钟形（大多数人都只有适度的共情，不是太高也不是太低），想必也是因为适中的共情水平才是最能适应环境的。太关注他人，你就时时会害怕自己会打搅或者排挤他人，永远无法施展抱负、参与社会竞争。而太关注自己，好处是能够旁若无人地施展自己的抱负，并得到巨大回报（尤其是在商业世界、在积累资源的活动中），但那些“冷血混蛋”固然能掌握更多财富和权力，他们却也在这个过程中树起了更多敌人。在大多数人的共情水平上找到平衡点，这或许是我们在演化中获得的适应手段，它能使个人获得共情的好处，同时又舍弃它的坏处。<br>
+<br /><br /></p>
+<h3 id="共情是一种还未充分利用的资源">共情是一种还未充分利用的资源</h3>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/02/28/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%81%B6%E7%9A%84%E7%A7%91%E5%AD%A6%EF%BC%9A%E8%AE%BA%E5%85%B1%E6%83%85%E4%BA%8E%E6%AE%8B%E9%85%B7%E8%A1%8C%E4%B8%BA%E7%9A%84%E8%B5%B7%E6%BA%90/">
+            https://illusionzone.github.io/2024/02/28/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%81%B6%E7%9A%84%E7%A7%91%E5%AD%A6%EF%BC%9A%E8%AE%BA%E5%85%B1%E6%83%85%E4%BA%8E%E6%AE%8B%E9%85%B7%E8%A1%8C%E4%B8%BA%E7%9A%84%E8%B5%B7%E6%BA%90/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/02/28/fancywebsite/%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【Fancy Website】博客相关网站 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/02/27/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%81%93%E5%BE%B7%E6%83%85%E6%93%8D%E8%AE%BA%EF%BC%88%E9%80%89%E8%AF%91%EF%BC%89/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】道德情操论（选译） </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E8%B0%A2"><span class="toc-text">致谢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%AF%B9%E2%80%9C%E6%81%B6%E2%80%9D%E5%92%8C%E4%BA%BA%E7%B1%BB%E6%AE%8B%E9%85%B7%E8%A1%8C%E4%B8%BA%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="toc-text">第一章 对“恶”和人类残酷行为的解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%B1%E6%83%85%E6%B0%B4%E5%B9%B3%E5%9C%A8%E4%BA%BA%E7%BE%A4%E4%B8%AD%E7%9A%84%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="toc-text">第二章 共情水平在人群中的正态分布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%9B%9A%E7%A6%81%E4%BA%8E%E8%87%AA%E6%88%91%E8%81%9A%E7%84%A6%E7%8A%B6%E6%80%81%E4%B8%AD%EF%BC%9A%E8%BE%B9%E7%BC%98%E9%9A%9C%E7%A2%8D%E3%80%81%E7%B2%BE%E7%A5%9E%E7%97%85%E6%80%81%E4%B8%8E%E8%87%AA%E6%81%8B%E4%BA%BA%E6%A0%BC"><span class="toc-text">第三章 囚禁于自我聚焦状态中：边缘障碍、精神病态与自恋人格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E8%B4%9F%E9%9D%A2B%E5%9E%8B"><span class="toc-text">零度负面B型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E8%B4%9F%E9%9D%A2B%E5%9E%8B%E7%9A%84%E6%88%90%E5%9B%A0"><span class="toc-text">零度负面B型的成因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E8%B4%9F%E9%9D%A2P%E5%9E%8B"><span class="toc-text">零度负面P型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E5%85%B1%E6%83%85N%E5%9E%8B"><span class="toc-text">零度共情N型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%9C%A8%E6%A8%A1%E5%BC%8F%E4%B8%AD%E5%AF%BB%E6%89%BE%E9%81%93%E5%BE%B7%EF%BC%9A%E9%98%BF%E6%96%AF%E4%BC%AF%E6%A0%BC%E4%B8%8E%E8%87%AA%E9%97%AD%E6%82%A3%E8%80%85"><span class="toc-text">第四章 在模式中寻找道德：阿斯伯格与自闭患者</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E6%96%AF%E4%BC%AF%E6%A0%BC%E7%BB%BC%E5%90%88%E7%97%87"><span class="toc-text">阿斯伯格综合症</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E9%97%AD%E8%80%85%E7%9A%84%E8%84%91"><span class="toc-text">自闭者的脑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%8C%96"><span class="toc-text">系统化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%89%BE%E6%A8%A1%E5%BC%8F"><span class="toc-text">寻找模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%8C%96%E6%9C%BA%E5%88%B6"><span class="toc-text">系统化机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B8%E5%9E%8B%E8%87%AA%E9%97%AD%E7%97%87"><span class="toc-text">典型自闭症</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%85%B1%E6%83%85%E5%9F%BA%E5%9B%A0"><span class="toc-text">第五章 共情基因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E8%83%9E%E8%83%8E"><span class="toc-text">双胞胎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E5%9F%BA%E5%9B%A0"><span class="toc-text">攻击基因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%83%85%E7%BB%AA%E8%AF%86%E5%88%AB%E5%9F%BA%E5%9B%A0"><span class="toc-text">情绪识别基因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E5%85%B1%E6%83%85%E5%95%86%E6%95%B0%E6%9C%89%E5%85%B3%E7%9A%84%E5%9F%BA%E5%9B%A0"><span class="toc-text">与共情商数有关的基因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E8%87%AA%E9%97%AD%E7%89%B9%E8%B4%A8%E6%9C%89%E5%85%B3%E7%9A%84%E5%9F%BA%E5%9B%A0"><span class="toc-text">与自闭特质有关的基因</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%B7%E9%9D%99%E5%88%86%E6%9E%90"><span class="toc-text">冷静分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%AF%B9%E4%BA%BA%E7%B1%BB%E6%AE%8B%E9%85%B7%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%8D%E6%80%9D"><span class="toc-text">第六章 对人类残酷行为的反思</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E8%A7%82%E5%BF%B5"><span class="toc-text">新观念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E8%80%8C%E6%98%93%E8%A7%81%E7%9A%84%E8%B0%9C"><span class="toc-text">显而易见的谜</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83%E7%B2%BE%E7%A5%9E%E7%97%85%E5%AD%A6"><span class="toc-text">重新思考精神病学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%B6%E4%B9%8B%E5%B9%B3%E5%BA%B8"><span class="toc-text">恶之平庸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B4%BB%E8%B7%83%E4%B8%8D%E8%B6%B3%E7%9A%84%E5%85%B1%E6%83%85%E5%9B%9E%E8%B7%AF"><span class="toc-text">活跃不足的共情回路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E7%9A%84%E5%8F%AF%E8%83%BD"><span class="toc-text">恢复的可能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E5%BC%BA%E5%85%B1%E6%83%85%EF%BC%9F"><span class="toc-text">超强共情？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E6%83%85%E6%98%AF%E4%B8%80%E7%A7%8D%E8%BF%98%E6%9C%AA%E5%85%85%E5%88%86%E5%88%A9%E7%94%A8%E7%9A%84%E8%B5%84%E6%BA%90"><span class="toc-text">共情是一种还未充分利用的资源</span></a></li></ol></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E8%B0%A2"><span class="toc-text">致谢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%AF%B9%E2%80%9C%E6%81%B6%E2%80%9D%E5%92%8C%E4%BA%BA%E7%B1%BB%E6%AE%8B%E9%85%B7%E8%A1%8C%E4%B8%BA%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="toc-text">第一章 对“恶”和人类残酷行为的解释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%B1%E6%83%85%E6%B0%B4%E5%B9%B3%E5%9C%A8%E4%BA%BA%E7%BE%A4%E4%B8%AD%E7%9A%84%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83"><span class="toc-text">第二章 共情水平在人群中的正态分布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%9B%9A%E7%A6%81%E4%BA%8E%E8%87%AA%E6%88%91%E8%81%9A%E7%84%A6%E7%8A%B6%E6%80%81%E4%B8%AD%EF%BC%9A%E8%BE%B9%E7%BC%98%E9%9A%9C%E7%A2%8D%E3%80%81%E7%B2%BE%E7%A5%9E%E7%97%85%E6%80%81%E4%B8%8E%E8%87%AA%E6%81%8B%E4%BA%BA%E6%A0%BC"><span class="toc-text">第三章 囚禁于自我聚焦状态中：边缘障碍、精神病态与自恋人格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E8%B4%9F%E9%9D%A2B%E5%9E%8B"><span class="toc-text">零度负面B型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E8%B4%9F%E9%9D%A2B%E5%9E%8B%E7%9A%84%E6%88%90%E5%9B%A0"><span class="toc-text">零度负面B型的成因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E8%B4%9F%E9%9D%A2P%E5%9E%8B"><span class="toc-text">零度负面P型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%BA%A6%E5%85%B1%E6%83%85N%E5%9E%8B"><span class="toc-text">零度共情N型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%9C%A8%E6%A8%A1%E5%BC%8F%E4%B8%AD%E5%AF%BB%E6%89%BE%E9%81%93%E5%BE%B7%EF%BC%9A%E9%98%BF%E6%96%AF%E4%BC%AF%E6%A0%BC%E4%B8%8E%E8%87%AA%E9%97%AD%E6%82%A3%E8%80%85"><span class="toc-text">第四章 在模式中寻找道德：阿斯伯格与自闭患者</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E6%96%AF%E4%BC%AF%E6%A0%BC%E7%BB%BC%E5%90%88%E7%97%87"><span class="toc-text">阿斯伯格综合症</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E9%97%AD%E8%80%85%E7%9A%84%E8%84%91"><span class="toc-text">自闭者的脑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%8C%96"><span class="toc-text">系统化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BB%E6%89%BE%E6%A8%A1%E5%BC%8F"><span class="toc-text">寻找模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%8C%96%E6%9C%BA%E5%88%B6"><span class="toc-text">系统化机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B8%E5%9E%8B%E8%87%AA%E9%97%AD%E7%97%87"><span class="toc-text">典型自闭症</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%85%B1%E6%83%85%E5%9F%BA%E5%9B%A0"><span class="toc-text">第五章 共情基因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E8%83%9E%E8%83%8E"><span class="toc-text">双胞胎</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E5%9F%BA%E5%9B%A0"><span class="toc-text">攻击基因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%83%85%E7%BB%AA%E8%AF%86%E5%88%AB%E5%9F%BA%E5%9B%A0"><span class="toc-text">情绪识别基因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E5%85%B1%E6%83%85%E5%95%86%E6%95%B0%E6%9C%89%E5%85%B3%E7%9A%84%E5%9F%BA%E5%9B%A0"><span class="toc-text">与共情商数有关的基因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8E%E8%87%AA%E9%97%AD%E7%89%B9%E8%B4%A8%E6%9C%89%E5%85%B3%E7%9A%84%E5%9F%BA%E5%9B%A0"><span class="toc-text">与自闭特质有关的基因</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%B7%E9%9D%99%E5%88%86%E6%9E%90"><span class="toc-text">冷静分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%AF%B9%E4%BA%BA%E7%B1%BB%E6%AE%8B%E9%85%B7%E8%A1%8C%E4%B8%BA%E7%9A%84%E5%8F%8D%E6%80%9D"><span class="toc-text">第六章 对人类残酷行为的反思</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E8%A7%82%E5%BF%B5"><span class="toc-text">新观念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E8%80%8C%E6%98%93%E8%A7%81%E7%9A%84%E8%B0%9C"><span class="toc-text">显而易见的谜</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E6%80%9D%E8%80%83%E7%B2%BE%E7%A5%9E%E7%97%85%E5%AD%A6"><span class="toc-text">重新思考精神病学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%B6%E4%B9%8B%E5%B9%B3%E5%BA%B8"><span class="toc-text">恶之平庸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B4%BB%E8%B7%83%E4%B8%8D%E8%B6%B3%E7%9A%84%E5%85%B1%E6%83%85%E5%9B%9E%E8%B7%AF"><span class="toc-text">活跃不足的共情回路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%81%A2%E5%A4%8D%E7%9A%84%E5%8F%AF%E8%83%BD"><span class="toc-text">恢复的可能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E5%BC%BA%E5%85%B1%E6%83%85%EF%BC%9F"><span class="toc-text">超强共情？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E6%83%85%E6%98%AF%E4%B8%80%E7%A7%8D%E8%BF%98%E6%9C%AA%E5%85%85%E5%88%86%E5%88%A9%E7%94%A8%E7%9A%84%E8%B5%84%E6%BA%90"><span class="toc-text">共情是一种还未充分利用的资源</span></a></li></ol></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

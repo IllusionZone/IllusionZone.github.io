@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】尖叫的数学：令人惊叹的数学之美</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】尖叫的数学：令人惊叹的数学之美">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/07/11/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%B0%96%E5%8F%AB%E7%9A%84%E6%95%B0%E5%AD%A6/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="【美】翁贝托•博塔兹尼  著  余婷婷    译">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-07-11">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-07-07">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80-%E5%AE%83%E4%BB%AC%E5%9C%A8%E6%95%B0%E7%99%BE%E5%B9%B4%E7%9A%84%E9%BB%91%E6%9A%97%E4%B8%AD%E9%97%AA%E8%80%80%EF%BC%8C%E7%94%A8%E6%95%B0%E5%AD%A6%E7%85%A7%E4%BA%AE%E4%BA%86%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%8E%86%E7%A8%8B"><span class="toc-text">前言 它们在数百年的黑暗中闪耀，用数学照亮了人类的历程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%97%B6%E9%97%B4%E5%92%8C%E2%80%A6%E7%89%A9%E4%BB%B6"><span class="toc-text">第一章 计算时间和…物件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%BB%E7%97%95%E4%B8%8E%E7%BB%93%E7%BB%B3"><span class="toc-text">刻痕与结绳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%9A%84%E5%8F%91%E6%98%8E"><span class="toc-text">数字的发明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E6%95%B0"><span class="toc-text">自然数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%A1%A8%E7%A4%BA%E8%99%9A%E6%97%A0%E7%9A%84%E6%95%B0%E5%AD%970"><span class="toc-text">第二章 表示虚无的数字0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%97%A0%E7%9A%84%E6%82%96%E8%AE%BA"><span class="toc-text">虚无的悖论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%97%A0%E7%9A%84%E7%A9%BA%E9%97%B4"><span class="toc-text">虚无的空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%8F%98%E6%88%90%E4%BA%86%E4%B8%80%E4%B8%AA%E6%95%B0%E5%AD%97"><span class="toc-text">零变成了一个数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0%E5%92%8C1%EF%BC%8C%E4%B8%80%E5%88%87%E6%95%B0%E5%AD%97%E7%9A%84%E6%B8%8A%E6%BA%90"><span class="toc-text">0和1，一切数字的渊源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%8F%91%E7%8E%B0%E6%97%A0%E7%90%86%E6%95%B0"><span class="toc-text">第三章 发现无理数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%95%E8%80%81%E7%9A%84%E6%8C%91%E6%88%98"><span class="toc-text">法老的挑战</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%AF%E8%B0%81%E6%8F%90%E5%87%BA%E4%BA%86%E6%AF%95%E8%BE%BE%E5%93%A5%E6%8B%89%E6%96%AF%E5%AE%9A%E7%90%86%EF%BC%9F"><span class="toc-text">是谁提出了毕达哥拉斯定理？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%87%E5%A6%99%E7%9A%84%E4%BA%94%E8%A7%92%E6%98%9F%E5%92%8C%E9%BB%84%E9%87%91%E6%AF%94%E4%BE%8B"><span class="toc-text">奇妙的五角星和黄金比例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】尖叫的数学：令人惊叹的数学之美
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-07-10T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-07-11</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>4k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。《尖叫的数学：令人惊叹的数学之美》【美】翁贝托•博塔兹尼  著<br>余婷婷    译</p></div>
+<br />
+<img src="/image/book/readandnote/尖叫的数学/0.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/尖叫的数学/0.png" class="lozad post-image">
+<br />
+<h2 id="前言-它们在数百年的黑暗中闪耀，用数学照亮了人类的历程">前言 它们在数百年的黑暗中闪耀，用数学照亮了人类的历程</h2>
+<h2 id="第一章-计算时间和…物件">第一章 计算时间和…物件</h2>
+<h3 id="刻痕与结绳">刻痕与结绳</h3>
+<h3 id="数字的发明">数字的发明</h3>
+<p><strong>原文摘录</strong><br>
+大多数的古代文明在表示前三个数字时，都采取了同样的方式：重复表示“1”的符号一次，两次，三次。仔细看看的话，现代的阿拉伯数字也体现了同样的重复方式。可是，从数字4开始，所有的文明就都放弃了这种重复。从巴比伦数字黏土板上也可以看出这一点。为什么呢？你们试想一下，如果要表示数字23，需要重复排列表示“1”的符号二十三次，无论是书写还是阅读，都会很困难——怎么能一眼就看出它是23，而不是21或者24呢？或许存在一个更深层的原因——对一些出生几个月的婴孩进行试验，结果证实人类与生俱来的数感的容量不超过三。<br>
+</br></br></p>
+<img src="/image/book/readandnote/尖叫的数学/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/尖叫的数学/1.png" class="lozad post-image">
+<p><strong>原文摘录</strong><br>
+古埃及使用的也是一种十进位制的记数法，即他们的记数系统中存在表示常数值的符号（典型的有1、10、…、10的n次方）。为什么是十进制呢？因为在遥远的古代，用双手的十个手指计数是再自然不过的选择。这个解剖学上的细节，被爱德华·卢卡斯恰如其分地表述为“自然界的一个偶然事件”，使十进位法成了应用最广泛的记数法。这种十进位法当然不是唯一的记数法，从数学的角度看，可能也不是最方便的记数法，也不是我们如今使用的十进制。</p>
+<p>这种十进制，经由古代美索不达米亚（和埃及）人民，从印度地区传入西方。在此之前的数千年里，西方使用的是一种运用加法的记数法，一个数字是几个表示固定数值的符号叠加组合而成。我们最熟悉的罗马数字遵循的就是这个方法：V表示数字5，X表示数字10，L表示50，C表示100等，这些特殊符号构成了罗马数字的加性记数系统。根据这种方法，数字6写作VI，数字11写作XI。在这个系统中还运行着减法规则：在一个符号的左边添加一个代表更小数值的符号，以表示一个数字，比如IV表示4，IX表示9。</p>
+<p>在古代，为了计算，一些民族不仅仅用上手指，还会用上脚趾。只有这样才能解释，为什么西非的一些地区、中美洲和欧洲的某些地方采用的是以20为基数的记数法。我们在许多语言中都可以看到它的踪迹。莎士比亚在《圣经》的英译本中找到了一个表达方式“three score and ten”（20的3倍加10），借麦克白之口用这个说法表示人类的平均寿命，也就是古稀之年。</p>
+<p>“Four score and seven years ago（87年前）。”1863年11月19日，为悼念在南北战争葛底斯堡之役中阵亡的将士，林肯在葛底斯堡国家公墓揭幕式中发表演说，开篇便是这句，随即追忆美国的开国元勋。1776年，北美洲十三个英属殖民地脱离英国独立，一个新的国家随之诞生。从那一年到1863年，正好过了87年。林肯纪念堂里有一块石刻，上面的铭文就是葛底斯堡的这场演说词。所以，在林肯所使用的英语里，“score”表示二十。一百年之后，在马丁·路德·金的演说中，也出现了这个词。1963年8月，正是在林肯纪念堂的石阶上，他发表了著名的演讲《我有一个梦想》，开头便是“Five score years ago”（100年前）。在现今流行的英语里，score已经不再有那个含义了。</p>
+<p>在英国，独特的十二进制与二十进制混合的货币系统也同样消失了。原先，根据这种货币系统，1英镑等于20先令，1先令等于12便士。1971年引进了十进制货币系统，1英镑等于100便士，而先令在1990年彻底停止流通。在巴斯克语、丹麦语和法语中，也能找到二十进制记数法的痕迹。从quatre-vingts（80）、quatre-vingts-dix（90），到quatre-vingts-dix-neuf（99），这些数词表明凯尔特族过去采用的是二十进制记数法，但同时又混合着六十进制，比如数词soixante（60）到soixante-dix-neuf（79）。</p>
+<p>大洋的另一边，在中美洲的玛雅文明和阿兹特克文明中，我们也看到了二十进制记数法，值得注意的是，与此同时还短暂地出现了表示0的符号，尽管它在历史上没有留下任何痕迹。事实上，玛雅仅存一些碑文残片和未被烧毁的3份刻本，能够证明它在科技上的发展。西班牙方济各会传教士迭戈·德·兰达，曾任尤卡坦半岛上的宗教裁判所所长。他是一个狂热的基督徒，决意摧毁玛雅的一切文明与宗教。1562年7月12日，德·兰达下令在一场惩罚异教徒的火刑上烧毁玛雅的所有文稿。过了好多年，他才被控告进行了不合法的裁判，被遣送回西班牙以接受审判。或许是有所悔悟，他写下了《尤卡坦纪事》（写于1566年至1568年间），该书成为研究玛雅历史、宗教、文化，尤其是文字的第一手资料。后来，免于处分的他被腓力二世任命为尤卡坦总教区主教，并在尤卡坦结束了一生（葬在了梅里达的圣方济各修道院里，按照西班牙征服者的习惯，这座修道院建在一座玛雅金字塔的废墟上）。</p>
+<p>我们所知晓的是，玛雅人用点线组成的符号表示1至19的数字，而表示数字0的符号则像一只半闭的眼睛，他们认为数字1至13是神圣的。（不仅仅玛雅人这样认为，古巴比伦的数字也有着神圣的含义，从天神安努开始，1到60的每一个数字都与特定的神灵有关。）</p>
+<p>在一些学者看来，二十进制、十进制，还有十二进制记数法都是基于手指的构造，或者更准确地说是一只手上四根手指的指节（大拇指除外，每根手指上都有三段指节）。一种用手指数数的常用方式，比如数右手上的指节，一旦数到12，左手就记一根手指，直到用完5根手指（即12×5=60）。<br>
+</br></br></p>
+<h3 id="自然数">自然数</h3>
+<p><strong>原文摘录</strong><br>
+戴德金认为，数字科学依靠的是人类可以“使事物与事物之间产生联系”的能力，如果没有这种能力，“人类通常就无法思考”，就连天数也计算不了，或许只能像鲁滨孙在荒岛上那样算日子。戴德金首先讨论了元素的系统和系统的映射，以表现自然数的序列特点。他认为，思维中的不同事物可以在头脑中发生联系，形成一个系统，反之亦然，系统中的每一个元素都明确联系着思维中的一个图像、一个事物。通过讨论系统的概念和性质，戴德金用四个条件（或者说公理）推导出了自然数的结构特征，以公理的形式建立了自然数的序列。</p>
+<p>第二年，数学家、逻辑学家朱塞佩·皮亚诺用拉丁语发表了《算术原理：用一种新方法的说明》（1889年）。在这本书中，他介绍了一个自然数的公理集合。他本人也承认，这个公理集合与戴德金的公理大致重合，尽管这个研究成果是他独立获得的。不同之处在于，戴德金将系统的概念和一一对应关系作为出发点，而皮亚诺将集合或者说特性、自然数、1和后继数的概念作为讨论的基点。一个自然数a的后继数指的是按自然顺序排在a后面的数字。因此1的后继数是2，2的后继数是3，以此类推。皮亚诺公理如下：</p>
+<p>a）1是自然数；</p>
+<p>b）每一个确定的自然数，都有一个确定的后继数a’，a’也是自然数；</p>
+<p>c）没有两个数有相同的后继数；</p>
+<p>d）1不是任何自然数的后继数；</p>
+<p>e）任意关于自然数的命题，如果证明了它对自然数1是对的，又假定它对自然数n为真时，可以证明它对n’也真，那么，命题对所有自然数都真。</p>
+<p>因此，皮亚诺并没有给出自然数的定义，而是用一个公理的集合规定了自然数序列的重要特性。这些公理至今仍被数学家们所采用。<br>
+</br></br></p>
+<h2 id="第二章-表示虚无的数字0">第二章 表示虚无的数字0</h2>
+<h3 id="虚无的悖论">虚无的悖论</h3>
+<h3 id="虚无的空间">虚无的空间</h3>
+<h3 id="零变成了一个数字">零变成了一个数字</h3>
+<p><strong>原文摘录</strong><br>
+著名的《瑜伽经》约在公元5世纪由钵颠阇梨编纂而成，书中也有一段类似的评注：“一竖线，位于百位，意为一百；位于十位，意为一十；位于个位，意为一个。女人也正是如此，被‘不同的人’唤作母亲、女儿、姐妹。”总之，这段文字提到的也是十进位值制记数法。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+人们发现，在塞琉古帝国的天文学文献中，一些数字里数码与数码之间存在空位。从那之后，人们经过了数百年的等待，终于迎来了这一宿命时刻吗？可以说是，也可以说不是，零就像喀斯特地区的河流，在印度文献中时而出现，时而消失。在《阿里亚哈塔历书》（约成书于公元500年）中，伟大的数学家阿耶波多采用了一种没有零的位值记数法。塞维鲁斯·塞博赫特是一位叙利亚的主教，出生在尼西比斯（如今的努赛宾），生活在幼发拉底河畔的一座修道院中。或许，他也提到了这种位值记数法。事实确实如此，在662年的一份手稿残片上，塞博赫特谈论了印度在天文上的一些精准发现，他们的计算法，以及他们“高明到无法形容的计算方法。所有的计算只用九个数字来完成”。因此，没有表示零的符号。然而，当塞博赫特撰写这段广受赞誉的评述时，印度数学家们早已开始运用一个表示零的特殊符号，还规定了十进制算术的一些重要特性。629年，婆什迦罗第一在评论阿耶波多的《阿里亚哈塔历书》时说明了这些特性。</p>
+<p>总而言之，这宿命时刻已经到来，且注定在人类历史上留下永远的印记！零不再是一个占位符，而是一个数字。我们从小学会运用的是十进位值制记数法，而我们之前看到，埃及人或罗马人的记数法是十进制记数法。那么这种十进制记数法和我们的十进位值制记数法有什么区别呢？1795年，皮埃尔·西蒙·拉普拉斯在巴黎高等师范学院教授数学课时，清晰地解释了这一点。我们从印度数学家们那里学会的记数法依靠“一种巧妙的方法，用十个符号就能表示所有数字（每个符号的值既取决于它本身的数值，又取决于它所在的位置）”。这个方法简直精妙绝伦，别提有多天才了！如此一来，比如数字308，数码3本身的值为3，同时它所在的位置对应的是百位，因此表示300，而在数字803中，相同的数码3仍保有本身的绝对值3，但由于所在位置变成了个位，所以表示3。在这两个例子中，0都表示十位上没有值。“时至今日，”拉普拉斯说，“位值制的概念看起来是如此简单，以致人们不再重视它的意义以及它深刻的重要性。”如果当时人们都不重视，更别说今日的人们了，就算这是一个改变了历史进程的概念。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+印度人最初将零命名为“sūnya”，阿拉伯人将其翻译为“sifr”，后来又根据谐音拉丁转写为zephirum，由此衍生出zefiro，最后变成了zero。焦尔达诺·内莫拉利奥也把它翻译成cifra。乔瓦尼·迪·萨克拉博斯科在他流传广泛的著作《论算术》（成书于1225年至1230年间）中写道：“第十个数‘零’被叫作theca，也被叫作circolo、cifra，或者空无的数，因为它意味着空无，可它又以占据位置的方式，赋予了其他数码意义。”这使我们不禁回想起弗雷德吉斯的话。对平民百姓而言，“cifra”指的是一个神秘的符号，而在学者眼里，它是零的近义词。<br>
+<br /><br /></p>
+<h3 id="0和1，一切数字的渊源">0和1，一切数字的渊源</h3>
+<p><strong>原文摘录</strong><br>
+莱布尼茨用数学的四则运算，向公爵举例说明了一种仅仅基于两个数字，即0和1的记数系统。在那一宿命时刻，一个想法最终成形了。实际上，莱布尼茨非凡的头脑在1679年春已经冒出了这个想法——在《论思索伟大技艺的本质》[1]的残存片段中，他写下了“除了无，也就是虚无，剩下的一切都是上帝为自身创造的东西”。这使莱布尼茨联想到了“一种惊人的相似”。或许可以使用一种二进制，来代替人们通常使用的十进制记数法，“以逢二进一的方式进行”。<br>
+<br /><br /></p>
+<h2 id="第三章-发现无理数">第三章 发现无理数</h2>
+<h3 id="法老的挑战">法老的挑战</h3>
+<h3 id="是谁提出了毕达哥拉斯定理？">是谁提出了毕达哥拉斯定理？</h3>
+<h3 id="奇妙的五角星和黄金比例">奇妙的五角星和黄金比例</h3>
+<p><strong>原文摘录</strong><br>
+正方形的对角线长和边长是一对不可公度的线段，伴随着这个发现，无理数也来到了世人眼前。但不仅仅只有是无理数。在《泰阿泰德篇》中，柏拉图用不同的论证方法逐个证明了，，…，也都是无理数。如果想要知道无理数的普遍特性，要等到欧几里得提出普遍定理：如果两个正方形的面积无法写成比例，那么它们的边长就是不可公度的。这是对个例进行漫长的研究之后得出的结果。<br>
+<br /><br /></p>
+<h2 id="信息积累">信息积累</h2>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/07/11/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%B0%96%E5%8F%AB%E7%9A%84%E6%95%B0%E5%AD%A6/">
+            https://illusionzone.github.io/2024/07/11/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%B0%96%E5%8F%AB%E7%9A%84%E6%95%B0%E5%AD%A6/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/07/24/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E4%BA%BA%E7%B1%BB%E9%85%B7%E5%88%91%E7%AE%80%E5%8F%B2/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】人类酷刑简史：揭秘文明面具下的恐怖人性 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/07/11/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%9B%B4%E5%88%B0%E6%97%B6%E9%97%B4%E7%9A%84%E5%B0%BD%E5%A4%B4/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】直到时间的尽头：追寻宇宙、生命和意识的最终意义 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80-%E5%AE%83%E4%BB%AC%E5%9C%A8%E6%95%B0%E7%99%BE%E5%B9%B4%E7%9A%84%E9%BB%91%E6%9A%97%E4%B8%AD%E9%97%AA%E8%80%80%EF%BC%8C%E7%94%A8%E6%95%B0%E5%AD%A6%E7%85%A7%E4%BA%AE%E4%BA%86%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%8E%86%E7%A8%8B"><span class="toc-text">前言 它们在数百年的黑暗中闪耀，用数学照亮了人类的历程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%97%B6%E9%97%B4%E5%92%8C%E2%80%A6%E7%89%A9%E4%BB%B6"><span class="toc-text">第一章 计算时间和…物件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%BB%E7%97%95%E4%B8%8E%E7%BB%93%E7%BB%B3"><span class="toc-text">刻痕与结绳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%9A%84%E5%8F%91%E6%98%8E"><span class="toc-text">数字的发明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E6%95%B0"><span class="toc-text">自然数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%A1%A8%E7%A4%BA%E8%99%9A%E6%97%A0%E7%9A%84%E6%95%B0%E5%AD%970"><span class="toc-text">第二章 表示虚无的数字0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%97%A0%E7%9A%84%E6%82%96%E8%AE%BA"><span class="toc-text">虚无的悖论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%97%A0%E7%9A%84%E7%A9%BA%E9%97%B4"><span class="toc-text">虚无的空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%8F%98%E6%88%90%E4%BA%86%E4%B8%80%E4%B8%AA%E6%95%B0%E5%AD%97"><span class="toc-text">零变成了一个数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0%E5%92%8C1%EF%BC%8C%E4%B8%80%E5%88%87%E6%95%B0%E5%AD%97%E7%9A%84%E6%B8%8A%E6%BA%90"><span class="toc-text">0和1，一切数字的渊源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%8F%91%E7%8E%B0%E6%97%A0%E7%90%86%E6%95%B0"><span class="toc-text">第三章 发现无理数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%95%E8%80%81%E7%9A%84%E6%8C%91%E6%88%98"><span class="toc-text">法老的挑战</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%AF%E8%B0%81%E6%8F%90%E5%87%BA%E4%BA%86%E6%AF%95%E8%BE%BE%E5%93%A5%E6%8B%89%E6%96%AF%E5%AE%9A%E7%90%86%EF%BC%9F"><span class="toc-text">是谁提出了毕达哥拉斯定理？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%87%E5%A6%99%E7%9A%84%E4%BA%94%E8%A7%92%E6%98%9F%E5%92%8C%E9%BB%84%E9%87%91%E6%AF%94%E4%BE%8B"><span class="toc-text">奇妙的五角星和黄金比例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80-%E5%AE%83%E4%BB%AC%E5%9C%A8%E6%95%B0%E7%99%BE%E5%B9%B4%E7%9A%84%E9%BB%91%E6%9A%97%E4%B8%AD%E9%97%AA%E8%80%80%EF%BC%8C%E7%94%A8%E6%95%B0%E5%AD%A6%E7%85%A7%E4%BA%AE%E4%BA%86%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%8E%86%E7%A8%8B"><span class="toc-text">前言 它们在数百年的黑暗中闪耀，用数学照亮了人类的历程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%97%B6%E9%97%B4%E5%92%8C%E2%80%A6%E7%89%A9%E4%BB%B6"><span class="toc-text">第一章 计算时间和…物件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%BB%E7%97%95%E4%B8%8E%E7%BB%93%E7%BB%B3"><span class="toc-text">刻痕与结绳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E7%9A%84%E5%8F%91%E6%98%8E"><span class="toc-text">数字的发明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E6%95%B0"><span class="toc-text">自然数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%A1%A8%E7%A4%BA%E8%99%9A%E6%97%A0%E7%9A%84%E6%95%B0%E5%AD%970"><span class="toc-text">第二章 表示虚无的数字0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%97%A0%E7%9A%84%E6%82%96%E8%AE%BA"><span class="toc-text">虚无的悖论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%97%A0%E7%9A%84%E7%A9%BA%E9%97%B4"><span class="toc-text">虚无的空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%8F%98%E6%88%90%E4%BA%86%E4%B8%80%E4%B8%AA%E6%95%B0%E5%AD%97"><span class="toc-text">零变成了一个数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0%E5%92%8C1%EF%BC%8C%E4%B8%80%E5%88%87%E6%95%B0%E5%AD%97%E7%9A%84%E6%B8%8A%E6%BA%90"><span class="toc-text">0和1，一切数字的渊源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%8F%91%E7%8E%B0%E6%97%A0%E7%90%86%E6%95%B0"><span class="toc-text">第三章 发现无理数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%95%E8%80%81%E7%9A%84%E6%8C%91%E6%88%98"><span class="toc-text">法老的挑战</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%AF%E8%B0%81%E6%8F%90%E5%87%BA%E4%BA%86%E6%AF%95%E8%BE%BE%E5%93%A5%E6%8B%89%E6%96%AF%E5%AE%9A%E7%90%86%EF%BC%9F"><span class="toc-text">是谁提出了毕达哥拉斯定理？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A5%87%E5%A6%99%E7%9A%84%E4%BA%94%E8%A7%92%E6%98%9F%E5%92%8C%E9%BB%84%E9%87%91%E6%AF%94%E4%BE%8B"><span class="toc-text">奇妙的五角星和黄金比例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>

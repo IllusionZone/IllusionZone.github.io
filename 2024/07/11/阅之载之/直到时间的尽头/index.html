@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】直到时间的尽头：追寻宇宙、生命和意识的最终意义</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】直到时间的尽头：追寻宇宙、生命和意识的最终意义">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/2024/07/11/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%9B%B4%E5%88%B0%E6%97%B6%E9%97%B4%E7%9A%84%E5%B0%BD%E5%A4%B4/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="【美】布莱恩•格林  著  舍其    译">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2024-07-11">
+      <meta 
+        property="og:article:modified_time" 
+        content="2025-08-14">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//unpkg.com/valine/dist/Valine.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>147</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>111</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9D%A5%E8%87%AA%E6%B0%B8%E6%81%92%E7%9A%84%E8%AF%B1%E6%83%91-%E8%B5%B7%E7%82%B9%E3%80%81%E7%BB%88%E7%82%B9%E5%8F%8A%E7%BB%88%E5%A7%8B%E4%B9%8B%E5%A4%96"><span class="toc-text">1 来自永恒的诱惑 起点、终点及终始之外</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%91%E4%B9%8E%E4%B8%87%E7%89%A9%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-text">近乎万物的故事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E3%80%81%E6%84%8F%E8%AF%86%E5%92%8C%E6%B0%B8%E6%81%92"><span class="toc-text">信息、意识和永恒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%9C%AA%E6%9D%A5%E7%9A%84%E7%A7%8D%E7%A7%8D%E6%80%9D%E8%80%83"><span class="toc-text">对未来的种种思考</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%97%B6%E9%97%B4%E7%9A%84%E8%AF%AD%E8%A8%80-%E8%BF%87%E5%8E%BB%E3%80%81%E6%9C%AA%E6%9D%A5%E5%92%8C%E5%8F%98%E5%8C%96"><span class="toc-text">2 时间的语言 过去、未来和变化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%92%B8%E6%B1%BD%E6%9C%BA"><span class="toc-text">蒸汽机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E5%AD%A6%E8%A7%86%E8%A7%92"><span class="toc-text">统计学视角</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B1%E6%AD%A4%E5%8F%8A%E5%BD%BC"><span class="toc-text">由此及彼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%B5%EF%BC%9A%E7%AC%AC%E4%B8%80%E5%85%B3"><span class="toc-text">熵：第一关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%B5%EF%BC%9A%E7%9C%9F%E5%88%80%E7%9C%9F%E6%9E%AA"><span class="toc-text">熵：真刀真枪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%AE%9A%E5%BE%8B"><span class="toc-text">热力学定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%BD%E9%87%8F%E5%92%8C%E7%86%B5"><span class="toc-text">能量和熵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E4%B8%8E%E5%A4%A7%E7%88%86%E7%82%B8"><span class="toc-text">玻尔兹曼与大爆炸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E4%B8%8E%E7%86%B5"><span class="toc-text">热与熵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E4%B8%8E%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="toc-text">热与热力学第二定律</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%86%B5%E4%B8%A4%E6%AD%A5%E8%88%9E"><span class="toc-text">熵两步舞</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%A0%E5%B0%B1%E6%98%AF%E5%8F%B0%E8%92%B8%E6%B1%BD%E6%9C%BA"><span class="toc-text">你就是台蒸汽机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%B5%B7%E6%BA%90%E4%B8%8E%E7%86%B5-%E4%BB%8E%E5%88%9B%E4%B8%96%E5%88%B0%E7%BB%93%E6%9E%84"><span class="toc-text">3 起源与熵 从创世到结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E7%88%86%E7%82%B8%E7%AE%80%E8%BF%B0"><span class="toc-text">大爆炸简述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%BC%95%E5%8A%9B"><span class="toc-text">反引力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%87%E6%9C%89%E5%BC%95%E5%8A%9B%E3%80%81%E7%A7%A9%E5%BA%8F%E4%B8%8E%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="toc-text">万有引力、秩序与第二定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%9A%E5%8F%98%E3%80%81%E7%A7%A9%E5%BA%8F%E4%B8%8E%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="toc-text">聚变、秩序与第二定律</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%A4%A7%E8%84%91%E4%B8%8E%E4%BF%A1%E4%BB%B0-%E4%BB%8E%E6%83%B3%E8%B1%A1%E5%88%B0%E7%A5%9E%E5%9C%A3"><span class="toc-text">7 大脑与信仰 从想象到神圣</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AA%E4%BD%93%E9%80%82%E5%BA%94%E4%B8%8E%E5%AE%97%E6%95%99"><span class="toc-text">个体适应与宗教</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E4%BB%B0%E3%80%81%E4%BF%A1%E5%BF%83%E5%92%8C%E4%BB%B7%E5%80%BC"><span class="toc-text">信仰、信心和价值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">19</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">64</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/book/" 
+        title="book">
+        <div class="tags-list-item">book</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+        title="阅之载之">
+        <div class="tags-list-item">阅之载之</div>
+      </a>
+    
+      <a 
+        href="/tags/Fancy-Website/" 
+        title="Fancy Website">
+        <div class="tags-list-item">Fancy Website</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/" 
+        title="察之作之">
+        <div class="tags-list-item">察之作之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%A6%84%E6%83%B3%E8%AE%B0/" 
+        title="妄想记">
+        <div class="tags-list-item">妄想记</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%8E%B0%E4%B8%96%E8%A1%8C/" 
+        title="现世行">
+        <div class="tags-list-item">现世行</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%B0%8F%E8%AF%B4/" 
+        title="小说">
+        <div class="tags-list-item">小说</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%93%B6%E6%B2%B3%E7%B3%BB%E6%90%AD%E8%BD%A6%E5%AE%A2%E7%B3%BB%E5%88%97/" 
+        title="银河系搭车客系列">
+        <div class="tags-list-item">银河系搭车客系列</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E5%BD%B1/" 
+        title="电影">
+        <div class="tags-list-item">电影</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%98%AF%E6%9E%9D%E8%A3%95%E5%92%8C/" 
+        title="是枝裕和">
+        <div class="tags-list-item">是枝裕和</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/" 
+        title="观之感之">
+        <div class="tags-list-item">观之感之</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B9%90%E7%90%86/" 
+        title="乐理">
+        <div class="tags-list-item">乐理</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%94%B5%E9%94%B5/" 
+        title="锵锵">
+        <div class="tags-list-item">锵锵</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%9B%BE%E7%89%87/" 
+        title="图片">
+        <div class="tags-list-item">图片</div>
+      </a>
+    
+      <a 
+        href="/tags/%E4%B8%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/" 
+        title="中篇小说">
+        <div class="tags-list-item">中篇小说</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】直到时间的尽头：追寻宇宙、生命和意识的最终意义
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2024-07-10T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2024-07-11</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>9.9k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。《直到时间的尽头：追寻宇宙、生命和意识的最终意义》【美】布莱恩•格林  著<br>舍其    译</p></div>
+<br />
+<img src="/image/book/readandnote/直到时间的尽头/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/直到时间的尽头/1.png" class="lozad post-image">
+<br />
+<h2 id="前言">前言</h2>
+<p><strong>原文摘录</strong><br>
+这就是数学的浪漫。受逻辑和一组公理限制的创造力，决定了要如何摆布、组合思想，以揭示不可动摇的真理。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+但接下来，我读到了一个让我大吃一惊的结论：“人类是唯一知道会有死亡的生物；其他生物也会变老，但意识完全局限在当下一刻，而这一刻在它们看来又一定是永恒。”这一认识逐渐“让人类在死亡面前感到了专属于人类的恐惧”。斯宾格勒总结道：“所有宗教信仰、所有科学研究乃至所有哲学，都是出于这种恐惧。”</p>
+<p>我还记得，最后这句话让我沉吟良久。这个关于人类动机的看法，在我看来很有道理。数学证明的魅力可能在于会永远成立，自然定律的吸引力或许在于其恒久的特性。但是什么驱使我们去寻找超越时间的恒久，寻找可能永远存续的特性呢？也许一切都是源于，唯有我们认识到，我们自身绝不会超越时间，我们的生命也绝不会直到永远。我思考着数学、物理和来自永恒的诱惑，有了些新发现，而上述看法与这些新发现产生了共鸣，让我觉得切中要害。这是一种以对广泛认识的合理反应为基础，去理解人类动机的方法。这种方法不会随随便便地把人类的动机编造出来。</p>
+<p>我继续思考着这个结论，发现它似乎预示着还要更加宏伟的内容。斯宾格勒指出，我们认识到我们有着避无可避的终点，而科学就是对这种认识的一种回应。宗教亦如是。哲学亦如是。但说真的，为何就此止步？弗洛伊德有位早期门徒叫奥托·兰克，他对人类的创造性活动非常痴迷，按他的说法，我们当然不应止步于此。在兰克的评论中，艺术家是“其创造性冲动……试图将昙花一现的生命转变为个人的不朽”的那种人。让—保罗·萨特走得更远，他指出，“在你失去了能够永生的幻觉之时”，生命本身也会意义尽失。因此，包括但不限于这些思想家一致赞同的看法是，大部分人类文化——从艺术探索到科学发现——都是被“反思着生命的有限本质”的生命驱动的。</p>
+<p>高深莫测。谁曾想到，由丰富的生死二元性驱动的人类文明，其统一理论的诸般景象竟会由对数学和物理的全神贯注发掘出来？<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+在不同的文化和时代中，我们都非常重视恒常。我们重视恒常的方式多种多样：有人追求绝对真理，有人力求留下持久的遗存，有人建造令人赞叹的丰碑，有人寻求恒久不变的定律，还有人仍然热衷于追寻这般那般的永生。这样的专注表明，对于认识到物质持存终归有限的心灵来说，永恒具有无比强大的吸引力。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+我们将审视，会反省自身的生物如何应对这些认识势必带来的张力。<br>
+</br></br></p>
+<h2 id="1-来自永恒的诱惑-起点、终点及终始之外">1 来自永恒的诱惑 起点、终点及终始之外</h2>
+<p><strong>原文摘录</strong><br>
+任一生命的呈现无法预测，但所有生命的最终命运，早已有了定论。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+文化人类学家欧内斯特·贝克尔坚持认为，我们处在一种持续的生存张力当中，既被一种能拔高到莎士比亚、贝多芬和爱因斯坦那种高度的意识拉向天际，同时又被终将衰败的肉身缚在尘埃之间。“人类实际上被一分为二：他能认识到自己无上光耀的独特之处，这让他在自然界中脱颖而出，高高在上；但他也会回到三尺地下，在黑暗中默默腐烂，永远消失。”按贝克尔的说法，我们正是受了这种认识的驱使，不愿承认死亡有能力抹杀我们。有人缓解对生存的向往，是通过献身家族、团队、运动、宗教和国家——这些构造的存在时间，比我们个体在世上分得的时间要长得多。也有人在身后留下创造性的表达，留下制品，象征性地延长了他们的存续时间。爱默生说：“我们飞向美，将美当成阻挡有限性带来的恐惧的避难所。”还有人仍在寻求战胜、征服死亡，使其消失，就仿佛地位、权力和财富能带来普通凡人无法得到的豁免权。<br>
+</br></br></p>
+<h3 id="近乎万物的故事">近乎万物的故事</h3>
+<p><strong>原文摘录</strong><br>
+我们是喜欢故事的物种。我们观察现实、把握规律，再把这些结合成多种叙事，能引人入胜、能令人周知、能吓人一跳、引人一哂乃至震撼人心的叙事。这里讲到叙事，“多种”必不可少。在收藏人类思考的图书馆中，没有单独哪一卷大部头能统一传达终极理解。与此相反，我们写下了很多层层嵌套的故事，探查人类在不同领域的追寻和经验，也就是说，这些故事用不同的语法和词汇，对现实的各种规律进行句法分析。要讲述还原论的故事，用微观物理成分的语言来分析从行星到毕加索的种种现实，质子、中子、电子和自然界的其他粒子就必不可少。要讲述生命涌现和发展的故事，分析非凡的分子及其控制的细胞的生化过程，代谢、复制、突变和适应就不可或缺。对关于心灵的故事，神经元、信息、思想和意识也缺一不可——而有了这些，叙事也会增殖：从神话到宗教，从文学到哲学，从艺术到音乐，都在讲述人类为生存所做的奋斗，了解世界的意愿，表达的渴望，以及对意义的追寻。</p>
+<p>这些都是正在发生的故事，由来自大量不同学科的思想家一步步发展出来。自然如此。从夸克讲到意识，这样的长篇故事是一部厚重的编年史。但不同的故事也彼此交织。《堂吉诃德》讲述的是人类对英雄壮举的向往，塞万提斯用想象创造出了一个活生生、能呼吸、会思考、有身心感受的骨与肉与细胞的集合体，命名为阿隆索·吉哈诺*，并通过这个脆弱的角色讲述这个故事。在这个角色的有生之年，这个细胞集合体都在支撑能量转换和废物排泄的有机过程，而这些有机过程本身又都依赖于散布在从大爆炸中出现的广袤空间中的超新星爆发的残屑锻造而成的一颗行星上已经演化了数十亿年的原子和分子运动。然而，读懂堂吉诃德的艰辛就是理解了人性，但如果将这种理解放在对这位游侠的原子和分子运动的描述中，或是通过详细描述塞万提斯写作这部小说时脑内噼啪作响的神经过程来表现，结果就仍会是晦暗不明。不同的故事虽然肯定相互关联，但也是在用不同的语言讲述，关注着不同层面的现实，带来的见解也截然不同。<br>
+</br></br></p>
+<h3 id="信息、意识和永恒">信息、意识和永恒</h3>
+<p><strong>原文摘录</strong><br>
+纳博科夫将人的一生描述为“罅隙里的一束光，两边都是永恒的黑暗”，用来说生命现象本身也很合适。<br>
+</br></br></p>
+<h3 id="对未来的种种思考">对未来的种种思考</h3>
+<h2 id="2-时间的语言-过去、未来和变化">2 时间的语言 过去、未来和变化</h2>
+<p><strong>原文摘录</strong><br>
+19世纪中期，工业革命正如火如荼，大地上磨坊、工厂林立，蒸汽机也已经成为推动生产的主力。然而，尽管实现了从手工劳动到机器劳动的关键飞跃，蒸汽机的效率——所做的有用功与机器消耗的燃料相比——却非常低。燃烧木柴或煤炭产生的热，约有95%都变成废热损失在了环境中。这激发了一些科学家开始深入思考支配蒸汽机的物理学原理，寻求投入更少燃料、得到更多产能的方法。几十年过去了，他们的研究逐渐形成了一个实至名归的标志性成果：“热力学第二定律”。</p>
+<p>用（非常）浅白的话来说就是，第二定律声称，产生废热不可避免。让第二定律变得如此重要的是，它虽是因蒸汽机而发现，却放之四海而皆准。第二定律描述了所有物质和能量——不论是什么结构和形式，也不论有无生命——固有的根本特性。这个定律（还是粗疏地说）表明，宇宙间万事万物都有损耗、退化和凋敝的强烈趋势。<br>
+</br></br></p>
+<h3 id="蒸汽机">蒸汽机</h3>
+<h3 id="统计学视角">统计学视角</h3>
+<h3 id="由此及彼">由此及彼</h3>
+<p><strong>原文摘录</strong><br>
+对人类经验来说，过去和未来的区别既是基本的，也非常关键。我们出生在过去，将会死于未来。在出生和死亡之间，我们目睹了无数事情，它们通过特定的事件序列展现出来，且如果按相反的顺序来看，会显得非常荒谬。梵高画出了《星空》，但他没办法通过反转画笔让旋转的色彩离开画布，留下一片空白。泰坦尼克号蹭过一座冰山，船体撕裂，但没办法通过倒转发动机原路返回让损坏的地方复原。我们每个人都在长大、老去，但我们不可能倒过来拨动我们内在时钟的时针，重新找回我们的青春。</p>
+<p>无论事物如何演化，不可逆转性都位于中心位置，因此你可能会觉得，在物理学定律中我们能很容易找到这个特性的数学根源。当然，我们本应该能在数学方程中找到某些内容，确保事物的转变虽能“由此及彼”，却不可“由彼及此”，但千百年来，我们在人类创立的方程中都没能找到任何这样的内容。反而是随着物理学定律不断完善，并在牛顿（经典力学）、麦克斯韦（电磁学）、爱因斯坦（相对论物理学）和数十位对量子物理居功至伟的科学家之间薪火相传，有一个特点一直很稳定：我们人类所谓的未来和过去，对这些定律一直都毫无影响。给定世界现在的状态，数学方程对无论朝向未来还是朝向过去的展开，处理方式都完全一样。虽然过去和未来的区分对我们来说十分重要，但物理学定律对此却不屑一顾，认为这种区别不比体育场上的比赛用时钟显示的是已用时间还是剩余时间的影响更大。这意味着，这些定律如果允许特定事件序列发生，就也必然允许相反的序列。<br>
+</br></br></p>
+<h3 id="熵：第一关">熵：第一关</h3>
+<p><strong>原文摘录</strong><br>
+对给定的硬币组态而言，它的熵就是该组态的组的大小——跟给定组态看着一模一样的同类组态的数量。如果有很多这种看起来一样的组态，那么给定组态的熵就很高；如果同类组态很少，给定组态的熵就很低。如果其他条件都一样，那么随机摇晃的结果就更可能属于熵更高的分组，因为这种分组的成员更多。</p>
+<details>
+<summary><span class="pre-summary">&nbsp;</span><strong>读注</strong></summary><p-n>
+组态的含义，即由无数多个个体组合成的整体，只要其呈现出相同的宏观的特征，比如气压、温度等、就认为是一个组态，尽管其内部微观粒子可能有着不同的位置分布、运动轨迹等。
+<p>即100个硬币中，出现2个正面朝上和98个反面朝上的情况有许多种，比如第1、2枚硬币正面朝上，第2、3枚硬币正面朝上等等，但将2枚硬币正面朝上和98枚硬币反面朝上的情况归为同一种组态，并且构成这种组态的可能性越高，就称这个组态的熵值就越高，反之则熵值越低。<br>
+</p-n></p>
+</details>
+<p><br /><br /></p>
+<h3 id="熵：真刀真枪">熵：真刀真枪</h3>
+<p><strong>原文摘录</strong><br>
+硬币的类比非常有用，因为它展现了科学家用来处理构成物理系统的粒子的大规模集合的方法，无论这个系统里是水分子在炽热的蒸汽机里飞来飞去，还是空气分子在你现在呼吸于其中的房间里飘移。跟硬币的情形一样，我们忽略了个体粒子的细节——某个水分子或空气分子是否恰好在某处，几乎没有影响——而是把这些看起来几乎一样的粒子组态分到一个组。对于硬币，“看起来一样”的标准是用正面与背面朝上之比定义的，因为通常我们都不会关心随便哪枚硬币的朝向，只会注意到组态的整体表现。但对气体分子的大型集合来说，“看起来几乎一样”究竟是什么意思？</p>
+<p>想想现在填满了你房间的空气。如果你跟我、跟我们其他人一样，你实在不会在意这个氧气分子是不是从窗边飞过来的，或那个氮气分子是不是从地上弹起来的。你只关心每当你吸一口气的时候，是否有足够的空气来满足你的需要。嗯，还有几个你可能也会关心的特征。假如空气温度太高，会灼伤你的肺，你可能会不好过。或者假如气压太高，而你的耳咽管还没有与房间形成气压平衡，结果你的鼓膜爆了，你也会难受。所以，你关心的是空气的体积、温度和压力。这些是非常宏观的特性，实际上从麦克斯韦和玻尔兹曼直到今天的物理学家也都在关心这些。</p>
+<p>相应地，对容器中大量分子的集合而言，如果不同的组态填充了相同的体积，有同样的气温，产生了同样的气压，我们就说这些组态“看起来一样”。就跟硬币的情形一样，我们将所有看起来一样的分子组态分为一组，称一组当中的所有成员都体现了相同的“宏观态”。该宏观态的熵就是这些看起来一样的组态的数量。假设你没有刚刚打开电暖气（影响气温），没有在房间里安装不透气的隔板（影响体积），也没有泵入额外氧气（影响气压），你现在所处房间里飞来飞去的空气分子所构成的总在演变的组态，就会都属于同一个组，即这些组态看起来全都几乎一模一样，因为这些组态产生的宏观特征，都跟你正感觉到的完全一样。</p>
+<p>将粒子组态组织成看起来一样的各成员的分组，产生了一种非常有用的模式。就跟随机扔下来的硬币更可能属于成员更多（熵更高）的组一样，随机弹跳的粒子也是如此。这种认识简明易懂，但其意涵又非常深远：这些弹跳的粒子无论是在蒸汽机中，在你房间里还是别的随便什么地方，只要理解了一些最常见组态（成员数量最多的那些分组的组态）的典型特征，我们就能预测系统的宏观性质，而我们所关心的也正是这些。当然，这是统计学预测，但非常有可能极为精确。惊喜的是，我们在做到所有这一切的同时，也避免了对数量惊人的粒子的轨迹进行超级复杂的分析。</p>
+<p>因此，为了执行这个计划，我们需要提高区分常见（高熵）和罕见（低熵）粒子组态的能力。也就是说，给定某物理系统的状态，我们就需要确定，重排系统组分让系统看起来一样的方式是多还是少。我们做一个案例分析，来研究一下你刚洗了个长长的热水澡之后充满了蒸汽的浴室。要确定蒸汽的熵，我们就得数一数具有相同宏观特性（即体积相同，温度相同，气压也相同）的分子组态——分子可能的位置和速度——的数目。用数学方式把大量水分子的集合数一遍，比在硬币集合的类比中数硬币集合要有挑战得多，但大部分物理专业的大二学生都要学着做。更直截了当也更能带来启发的是，弄清楚体积、气温和气压对熵有什么定性影响。</p>
+<p>先来看体积。假设飞来飞去的水分子紧紧聚在你浴室的一个小小角落里，形成了一团稠密的水蒸气。在这个组态中，水分子位置可能的重排方式大幅降低，因为你移动水分子的同时必须使之保持在这一小团水蒸气之内，否则调整后的组态就会看起来不一样。相比之下，如果水蒸气平均散布在整个浴室中，水分子的抢椅子游戏就没那么受限制了。你可以让梳妆台附近的水分子与飘在灯具旁的水分子互换位置，让浴帘旁边的水分子与徘徊在窗边的水分子交换场地，而总体上水蒸气看起来还是一样的。还可以注意到，你的浴室越大，你就有越多位置四处抛洒这些水分子，这也能增加重排方式的数目。因此结论就是，分子紧紧聚成一小团的组态熵较低，而更大、更均匀散布的组态熵较高。</p>
+<p>接下来看温度。在分子水平上，我们说的温度是什么意思？答案众所周知，温度就是集合内分子的平均速度。如果物体分子的平均速度较低，该物体就比较冷，平均速度较高它就会较热。因此，要确定温度对熵有什么影响，就等于确定平均分子速度对熵有何影响。而就跟我们在分子位置方面的发现一样，对平均速度的定性评估也可以信手拈来。如果水蒸气的温度较低，允许分子速度重排的方式相对也会较少：要让温度保持固定——这样才能确保这些组态看起来都几乎一模一样——那么在提高任何一部分分子速度的同时，都要适当降低另一部分分子的速度来抵消。但温度较低（分子平均速度较低）的问题是，你没有太多余地来降低速度，很快就会降到最低水平“零”；这时，分子速度可变动的范围很窄，重排分子速度的自由也就有限。相比之下，如果温度较高，你的抢椅子游戏就会又加快转速：平均速度较高，分子速度（有些比平均值高，有些比均值低）的取值范围就大得多，因此在保持平均速度不变的同时，分子速度的组合就有了更多自由；分子速度有更多种看起来都一样的重排方式，就意味着温度越高通常熵也越高。</p>
+<p>最后来看看气压。水蒸气对你的皮肤和浴室墙壁形成的气压，来自到处流窜的水分子对这些表面的撞击：每次分子撞击都会产生微小的推力，因此分子数量越多，气压就会越大。给定温度和体积，压力就由浴室中总的水气分子数量决定，这个量对熵的影响很容易理解：浴室里的水分子越少（你洗澡没洗太久），就意味着可能的重排方式越少，熵也就越低；水分子越多（你洗了很久），就意味着有更多可能的重排方式，熵也就越高。</p>
+<p>总之，分子数量越少，气温越低，或占据的体积越小，熵就越低。分子数量越多，气温越高，或占据的体积越大，熵就越高。</p>
+<p>从这段简明的概述出发，请允许我强调一种思考熵的方式，虽然不那么精确，但可以提供一个有用的经验准则。遇到高熵状态才符合期望。因为此类状态可以由组分粒子的很多很多种不同的排列方式来实现，非常典型，平淡无奇，容易实现，分文不值。相反，如果遇到低熵状态，你就该留意一下了。低熵意味着给定的宏观态为其微观组分所实现的方式要少得多，因此这样的组态很难得到，很不寻常，要仔细安排，非常罕见。洗完一个老长的热水澡，发现水汽均匀散布在浴室里：高熵，毫不意外。洗完一个老长的热水澡，发现水汽全都聚在一个悬浮在镜子前面的小正方体里：低熵，极不寻常。实际上，后一种景象太不寻常了，要是你遇到这样的组态，然后有人解释说你只是碰见了那些不太可能但偶尔也会发生的事情中的一件，你应该会极端怀疑这种解释。可以这么解释，但我敢拿命打赌，不是这么回事。就好像，如果你餐桌上的100枚硬币全都正面朝上，你就会怀疑在仅仅出于偶然之外还有别的原因（比如有人悄悄把背面朝上的所有硬币都翻了过来），对于你碰到的任何低熵组态，你都会希望在仅仅出于偶然之外还有别的解释。</p>
+<p>这种推理甚至可以用于看似很平淡的事情，比如遇到鸡蛋、蚁垤或马克杯的时候。这些组态都很有序，系精心制作而成，具有低熵性质，因此需要有个解释。说是一批合适的粒子的随机运动刚刚好结合成了一只鸡蛋、一座蚁垤或一个马克杯，这虽然也能想象，但肯定过于牵强。相反，我们被刺激得要去寻找更令人信服的解释，当然我们也不必搜寻太远：鸡蛋、蚁垤和马克杯全都来自特定的生命形式，这些生命对环境中本来随机的粒子组态进行了安排，形成了有序的结构。生命为何能产出这么精巧的秩序，是我们后续章节将讨论的一个主题。就现在来说，我们得到的经验很简单：应该把低熵组态看成是一条线索、一个诊断迹象，表明我们遇到的秩序，可能来自某种强大的组织力量。</p>
+<p>19世纪末，奥地利物理学家路德维希·玻尔兹曼就在上述观念（其中很多正是由他提出）的武装之下，相信自己能解决那个引出了我们本节讨论的问题：未来和过去有什么不同？他的答案依赖于热力学第二定律所阐明的熵的特性。<br>
+</br></br></p>
+<h3 id="热力学定律">热力学定律</h3>
+<p><strong>原文摘录</strong><br>
+尽管熵和热力学第二定律在文化上的知名度很高，人们对热力学第一定律的认识却远没有这么普遍。但是要完全掌握第二定律，还是先掌握第一定律才好。实际情况是，第一定律也广为人知，但用的是另一个名称，就是“能量守恒定律”。一个过程开始时你有多少能量，到结束时你拥有的能量还是一样多。在计算能量时你必须锱铢必较，把一开始的能量储备会转化成的所有形式的能量都算进来，比如动能（运动具备的能量）、势能（储存起来的能量，就像被拉开的弹簧）、辐射（电磁场或引力场等场中具有的能量）和热能（分子和原子的随机颤动）。只要你追踪得够仔细，热力学第一定律就能保证能量收支表的平衡。</p>
+<p>热力学第二定律关注的是熵。跟第一定律不同，第二定律关乎的不是守恒，而是增长。第二定律宣称，随着时间推移，熵有着势不可当的增加倾向。通俗地讲就是，特殊组态倾向于朝着常见组态演化（你精心熨过的衬衫会变得皱皱巴巴），或说有序倾向于退化为无序（你整理好的车库会逐渐恶化成乱七八糟的一堆工具、储物箱和运动器材）。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+如果一个物理系统尚未处于能达到的熵最高的状态，就极有可能向着这个状态演化。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+熵更高的组态方式比熵更低的要多得多，因此随机推挤——原子和分子无休止地撞击、颤动——让系统向高熵而不是低熵发展的概率要大得多。这个过程会一直进行下去，直到变成能达到的最高熵组态。从这时起，推挤活动就会倾向于让系统组分在具备最高熵状态的（通常）数量庞大的组态之间迁移。</p>
+<p>这就是热力学第二定律，以及它为什么成立。<br>
+</br></br></p>
+<h3 id="能量和熵">能量和熵</h3>
+<p><strong>原文摘录</strong><br>
+热力学第一定律宣称能量的数量在时间推移中是守恒的，而第二定律则宣称能量的品质会随时间的推移而退化。</p>
+<p>那么，为什么未来与过去不一样？从我们已经知道的这些来看，答案显而易见：跟过去相比，驱动未来的能量，品质更低，或说未来的熵比过去高。</p>
+<p>至少，玻尔兹曼是这么设想的。<br>
+</br></br></p>
+<h3 id="玻尔兹曼与大爆炸">玻尔兹曼与大爆炸</h3>
+<p><strong>原文摘录</strong><br>
+第二定律不是一个传统意义上的定律。第二定律并不绝对地排除熵的减少。这个定律要说的只是，熵减是不大可能发生的。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+物理学定律把过去和未来放在对等的位置。因此，物理学定律可以保证，按某个时间序列展开的物理过程，按相反的序列也可以展开。由于这些物理学定律同时也支配着一切，也包括造成熵如何随时间而变化的那些物理过程，因此，这些定律如果只允许熵增，肯定会让人费解，实际上应该就是错误结论。但它们没错。你一生中日复一日所经历的所有熵增过程——从摔碎玻璃杯这种平平无奇的例子，到身体逐渐衰老这样的深刻案例——都可以反向进行。熵可以减少，只不过非常不可能。<br>
+</br></br></p>
+<h3 id="热与熵">热与熵</h3>
+<p><strong>原文摘录</strong><br>
+第二定律宣称的熵增指的是一个完整物理系统的总熵，该系统必须包括与之相互作用的所有事物。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+热的流动和熵的流动联系密切。吸热就是吸收分子的随机运动中携带的能量。这些能量接着就会让获得能量的分子运动更快或散布更广，从而有助于熵的增加。因此结论就是，要让熵由此及彼地转移，就需要热也由此及彼地流动。而当热由此及彼流动，熵也就由此及彼地转移了。一句话，熵乘热流之势而动。<br>
+</br></br></p>
+<h3 id="热与热力学第二定律">热与热力学第二定律</h3>
+<h4 id="熵两步舞">熵两步舞</h4>
+<p><strong>原文摘录</strong><br>
+要是仔细想想我们走过的每一步，就会发现虽然从头到尾都有蒸汽机的身影，我们的结论还是超出了18世纪的这个起点。我们的分析本质上是对熵严格核算，这种核算在任何情况下都可以施行。这个认识很关键，因为蒸汽机通过放热将熵转移到环境中的过程，实际上完全就是另一个无处不在的过程的一个版本，追随宇宙的不断展开，我们就会遇到后一种过程。我称之为“熵两步舞”，指的是因为转移给环境的熵比本身增加的熵还多，于是系统的熵减少的过程。两步舞确保了即使熵在此处降低也会在彼处升高，从而保证熵净增加，这正是我们基于第二定律会有的预期。</p>
+<p>朝着越发无序的状态演化的宇宙，怎样竟产生并支撑起了像恒星、行星和人类这样的有序结构，要回答这个问题，熵两步舞是重中之重。我们会一再遇到的一个中心思想是，能量流经一个系统时——比如来自燃料燃烧的能量流过蒸汽机使其做功，再流出到周围环境中——会带走熵，因此能在身后维持甚至产生有序结构。</p>
+<p>正是熵的这种舞步让生命和心灵得以出现，心灵认为很重要的一切事物，也大都出自于此。<br>
+</br></br></p>
+<h3 id="你就是台蒸汽机">你就是台蒸汽机</h3>
+<p><strong>原文摘录</strong><br>
+日复一日，你的身体燃烧你吃的食物和吸进的空气，好给身体的内部运转和外部活动供能。就算是思考活动——发生在你脑内的分子运动——也是被这种能量转换过程驱动的。因此也跟蒸汽机一样，你要是无法向环境排出多余的废热从而让熵复原，就会活不下去。<br>
+</br></br></p>
+<h2 id="3-起源与熵-从创世到结构">3 起源与熵 从创世到结构</h2>
+<p><strong>原文摘录</strong><br>
+如果热力学第二定律给宇宙带来了无序程度不断增加的重负，那么大自然又是如何这么轻而易举地产生出各种精心组态、高度有序的结构的呢——从原子和分子，到恒星和星系，再到生命和心灵？如果宇宙始于一次大爆炸，那么如此剧烈的展开方式又如何能带来所有这些组织——从银河系的旋臂，到地球上的壮美景象，再到人脑中错综复杂的连接和褶皱，直到这样的大脑所产生的艺术、音乐、诗歌、文学和科学？</p>
+<p>有一种回应，千百年来都为人们在解决这种关切的种种萌芽版本时所仰赖，它就是：秩序是由至高无上的智慧在一片混沌中开凿出来的。这种拟人化的灵感也和人类经验一致。毕竟在现代文明中，我们每天所见的很多有序状态都确系智慧的杰作。但是，恰当地解释第二定律，就会让拥有无上智慧的设计者没必要存在。令人惊讶又不同凡响的是，浓缩了能量和秩序的区域（恒星就是原型范例），是宇宙兢兢业业地遵循第二定律、变得更加无序的自然结果。实际上从长远来看，这种有序区域会被证明是促使宇宙达到其可能达到的最大熵值的催化剂。在这一过程中，这种区域也促成了生命的涌现——而这也是该熵增过程的一部分。<br>
+</br></br></p>
+<h3 id="大爆炸简述">大爆炸简述</h3>
+<p><strong>原文摘录</strong><br>
+20世纪20年代中期，耶稣会牧师乔治·勒梅特利用爱因斯坦全新打造的对万有引力（gravity）的描述——广义相对论——针对宇宙提出了一种很激进的想法，认为宇宙始于一场爆炸，并从此一直膨胀至今。勒梅特可不是民科物理学家。他是在麻省理工学院拿的博士学位，也是首批将广义相对论方程应用到宇宙整体上的科学家之一。爱因斯坦的直觉是，宇宙之内的物体都有开端、发展和结束，但宇宙本身始终如此，并将一成不变。在他的精华十年中，这一直觉成功引导他在空间、时间和物质的本质上做出了重大发现。而勒梅特对爱因斯坦方程的分析表明并非如此时，爱因斯坦不假思索地决定不予理会。他告诉这位青年研究者：“你的计算是对的，但你的物理学太糟糕了。”爱因斯坦强调的是，你很擅长摆弄方程式，但没有良好的科学嗅觉，无法确定在数学上究竟如何摆弄才反映现实。</p>
+<p>过了几年，爱因斯坦的看法变了，这是科学史上最著名的几次转折之一。在洛杉矶威尔逊山天文台工作的天文学家埃德温·哈勃所进行的详细观测表明，遥远的星系全都在移动，全都在匆匆远去。而且它们向外逃离的模式——星系越远，速度就越快——与广义相对论方程的数学结果一致。勒梅特“糟糕”的物理学现在有了数据支撑，爱因斯坦终于全心全意地承认，宇宙曾经有一个开端。</p>
+<p>自勒梅特做出创造性计算以来的这一个世纪里，他开创的宇宙学理论，与俄罗斯物理学家亚历山大·弗里德曼独立进行的工作一起，已经取得了实质性进展，而来自地面和太空望远镜的观测也已积累了大量证据。应运而生的现代宇宙学描述是这样的：大约140亿年前，整个可观测宇宙——运用我们能想象出的最强望远镜所能观测到的全部范围——都压缩在一个超级炽热、无比致密的小块区域里，并以此为起点快速膨胀。在膨胀中，宇宙内部温度下降，狂乱的粒子逐渐放慢速度并聚集成团，随着时间的流逝形成了恒星、行星，以及散落在太空中的各种气态和岩石残骸——还有我们。<br>
+</br></br></p>
+<h3 id="反引力">反引力</h3>
+<h3 id="万有引力、秩序与第二定律">万有引力、秩序与第二定律</h3>
+<p><strong>原文摘录</strong><br>
+化学燃烧这种反应涉及的是原子周围的电子，而核聚变反应则是在原子中心加进去更多原子核。<br>
+</br></br></p>
+<p><strong>原文摘录</strong><br>
+万有引力版的熵两步舞有个新特点，就是能自我维持。气团在收缩、放热时，温度也上升，让更多的热外流，驱动两步舞的舞步继续下去。与之相对，蒸汽机做功并放热时，温度则会下降。如果不燃烧更多燃料重新加热蒸汽，蒸汽机就会停转。这也是为什么蒸汽机需要聪明的智能来设计、建造并驱动，而收缩的气体云团创造出来的有序区域——恒星——则是由没有意识的万有引力塑造和驱动的。<br>
+</br></br></p>
+<h3 id="聚变、秩序与第二定律">聚变、秩序与第二定律</h3>
+<h2 id="7-大脑与信仰-从想象到神圣">7 大脑与信仰 从想象到神圣</h2>
+<h3 id="个体适应与宗教">个体适应与宗教</h3>
+<p><strong>原文摘录</strong><br>
+实验社会心理学家提出宗教还有另一种适应性作用，这些人花了数十年时间进一步发展了欧内斯特·贝克尔的设想，而正是贝克尔的著作《死亡否认》，让我们踏上了第1章里的征程。这些研究者认为，知道我们终会死去，这种恐惧“本可把我们的祖先变成在遗忘的快车道上颤动的一团团原生质”。进而他们指出，能挽救我们的，也许就是或在字面意义上，或在象征意义上让对生命的应许超越肉体的死亡。贝克尔自己也提出了一个很让人信服的例证：人类的一项伟大创举，就是利用超自然力量来设法解决对终有一死的觉知。要减轻短暂无常带来的痛苦，需要有一种会永远存在的缓和剂，这在真实的物质世界里不可能有。<br>
+</br></br></p>
+<h3 id="信仰、信心和价值">信仰、信心和价值</h3>
+<p><strong>原文摘录</strong><br>
+演化过程配置我们的脑内流程时，不是要让它们形成与现实相一致的信念，而是要让它们偏爱的信念能产生提高生存机会的行为。这两方面考虑无须一致。我们的祖先如果仔细研究过引起他们注意的所有声响，可能会发现其中大部分无须引入有意志的行为主体就能解释。但从增强适应性的角度来看，他们苦苦寻找真相不会带来什么好处。经过数万代之后，我们的脑谢绝了高度精确，转而选择了粗糙但好用的理解。敏捷的回应往往胜过深思熟虑的考量。在信仰的戏剧情节中，真理是重要人物，但很容易被生存和繁殖抢去风头。</br></br></p>
+<h2 id="信息积累">信息积累</h2>
+<p>罅隙（xia 4）：缝隙；裂缝；嫌隙</p>
+<p>敝帚自珍（bi 4 zhou 3 zi 4 zhen 1）：比喻东西虽然不好，自己却很珍惜</p>
+<p>缘悭一面（qian 1）：指缺少一面之缘，谓无缘相见</p>
+<p>哂（shen 3）：微笑；讥笑</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/2024/07/11/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%9B%B4%E5%88%B0%E6%97%B6%E9%97%B4%E7%9A%84%E5%B0%BD%E5%A4%B4/">
+            https://illusionzone.github.io/2024/07/11/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E7%9B%B4%E5%88%B0%E6%97%B6%E9%97%B4%E7%9A%84%E5%B0%BD%E5%A4%B4/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/2024/07/11/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E5%B0%96%E5%8F%AB%E7%9A%84%E6%95%B0%E5%AD%A6/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】尖叫的数学：令人惊叹的数学之美 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/2024/07/06/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E9%89%B4%E7%8B%97/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【察之作之】鉴狗与羊 </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9D%A5%E8%87%AA%E6%B0%B8%E6%81%92%E7%9A%84%E8%AF%B1%E6%83%91-%E8%B5%B7%E7%82%B9%E3%80%81%E7%BB%88%E7%82%B9%E5%8F%8A%E7%BB%88%E5%A7%8B%E4%B9%8B%E5%A4%96"><span class="toc-text">1 来自永恒的诱惑 起点、终点及终始之外</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%91%E4%B9%8E%E4%B8%87%E7%89%A9%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-text">近乎万物的故事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E3%80%81%E6%84%8F%E8%AF%86%E5%92%8C%E6%B0%B8%E6%81%92"><span class="toc-text">信息、意识和永恒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%9C%AA%E6%9D%A5%E7%9A%84%E7%A7%8D%E7%A7%8D%E6%80%9D%E8%80%83"><span class="toc-text">对未来的种种思考</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%97%B6%E9%97%B4%E7%9A%84%E8%AF%AD%E8%A8%80-%E8%BF%87%E5%8E%BB%E3%80%81%E6%9C%AA%E6%9D%A5%E5%92%8C%E5%8F%98%E5%8C%96"><span class="toc-text">2 时间的语言 过去、未来和变化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%92%B8%E6%B1%BD%E6%9C%BA"><span class="toc-text">蒸汽机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E5%AD%A6%E8%A7%86%E8%A7%92"><span class="toc-text">统计学视角</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B1%E6%AD%A4%E5%8F%8A%E5%BD%BC"><span class="toc-text">由此及彼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%B5%EF%BC%9A%E7%AC%AC%E4%B8%80%E5%85%B3"><span class="toc-text">熵：第一关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%B5%EF%BC%9A%E7%9C%9F%E5%88%80%E7%9C%9F%E6%9E%AA"><span class="toc-text">熵：真刀真枪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%AE%9A%E5%BE%8B"><span class="toc-text">热力学定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%BD%E9%87%8F%E5%92%8C%E7%86%B5"><span class="toc-text">能量和熵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E4%B8%8E%E5%A4%A7%E7%88%86%E7%82%B8"><span class="toc-text">玻尔兹曼与大爆炸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E4%B8%8E%E7%86%B5"><span class="toc-text">热与熵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E4%B8%8E%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="toc-text">热与热力学第二定律</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%86%B5%E4%B8%A4%E6%AD%A5%E8%88%9E"><span class="toc-text">熵两步舞</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%A0%E5%B0%B1%E6%98%AF%E5%8F%B0%E8%92%B8%E6%B1%BD%E6%9C%BA"><span class="toc-text">你就是台蒸汽机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%B5%B7%E6%BA%90%E4%B8%8E%E7%86%B5-%E4%BB%8E%E5%88%9B%E4%B8%96%E5%88%B0%E7%BB%93%E6%9E%84"><span class="toc-text">3 起源与熵 从创世到结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E7%88%86%E7%82%B8%E7%AE%80%E8%BF%B0"><span class="toc-text">大爆炸简述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%BC%95%E5%8A%9B"><span class="toc-text">反引力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%87%E6%9C%89%E5%BC%95%E5%8A%9B%E3%80%81%E7%A7%A9%E5%BA%8F%E4%B8%8E%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="toc-text">万有引力、秩序与第二定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%9A%E5%8F%98%E3%80%81%E7%A7%A9%E5%BA%8F%E4%B8%8E%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="toc-text">聚变、秩序与第二定律</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%A4%A7%E8%84%91%E4%B8%8E%E4%BF%A1%E4%BB%B0-%E4%BB%8E%E6%83%B3%E8%B1%A1%E5%88%B0%E7%A5%9E%E5%9C%A3"><span class="toc-text">7 大脑与信仰 从想象到神圣</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AA%E4%BD%93%E9%80%82%E5%BA%94%E4%B8%8E%E5%AE%97%E6%95%99"><span class="toc-text">个体适应与宗教</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E4%BB%B0%E3%80%81%E4%BF%A1%E5%BF%83%E5%92%8C%E4%BB%B7%E5%80%BC"><span class="toc-text">信仰、信心和价值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%9D%A5%E8%87%AA%E6%B0%B8%E6%81%92%E7%9A%84%E8%AF%B1%E6%83%91-%E8%B5%B7%E7%82%B9%E3%80%81%E7%BB%88%E7%82%B9%E5%8F%8A%E7%BB%88%E5%A7%8B%E4%B9%8B%E5%A4%96"><span class="toc-text">1 来自永恒的诱惑 起点、终点及终始之外</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%91%E4%B9%8E%E4%B8%87%E7%89%A9%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-text">近乎万物的故事</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E3%80%81%E6%84%8F%E8%AF%86%E5%92%8C%E6%B0%B8%E6%81%92"><span class="toc-text">信息、意识和永恒</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%9C%AA%E6%9D%A5%E7%9A%84%E7%A7%8D%E7%A7%8D%E6%80%9D%E8%80%83"><span class="toc-text">对未来的种种思考</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%97%B6%E9%97%B4%E7%9A%84%E8%AF%AD%E8%A8%80-%E8%BF%87%E5%8E%BB%E3%80%81%E6%9C%AA%E6%9D%A5%E5%92%8C%E5%8F%98%E5%8C%96"><span class="toc-text">2 时间的语言 过去、未来和变化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%92%B8%E6%B1%BD%E6%9C%BA"><span class="toc-text">蒸汽机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9F%E8%AE%A1%E5%AD%A6%E8%A7%86%E8%A7%92"><span class="toc-text">统计学视角</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B1%E6%AD%A4%E5%8F%8A%E5%BD%BC"><span class="toc-text">由此及彼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%B5%EF%BC%9A%E7%AC%AC%E4%B8%80%E5%85%B3"><span class="toc-text">熵：第一关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%86%B5%EF%BC%9A%E7%9C%9F%E5%88%80%E7%9C%9F%E6%9E%AA"><span class="toc-text">熵：真刀真枪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E5%8A%9B%E5%AD%A6%E5%AE%9A%E5%BE%8B"><span class="toc-text">热力学定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%83%BD%E9%87%8F%E5%92%8C%E7%86%B5"><span class="toc-text">能量和熵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%BB%E5%B0%94%E5%85%B9%E6%9B%BC%E4%B8%8E%E5%A4%A7%E7%88%86%E7%82%B8"><span class="toc-text">玻尔兹曼与大爆炸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E4%B8%8E%E7%86%B5"><span class="toc-text">热与熵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%AD%E4%B8%8E%E7%83%AD%E5%8A%9B%E5%AD%A6%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="toc-text">热与热力学第二定律</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%86%B5%E4%B8%A4%E6%AD%A5%E8%88%9E"><span class="toc-text">熵两步舞</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%A0%E5%B0%B1%E6%98%AF%E5%8F%B0%E8%92%B8%E6%B1%BD%E6%9C%BA"><span class="toc-text">你就是台蒸汽机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%B5%B7%E6%BA%90%E4%B8%8E%E7%86%B5-%E4%BB%8E%E5%88%9B%E4%B8%96%E5%88%B0%E7%BB%93%E6%9E%84"><span class="toc-text">3 起源与熵 从创世到结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E7%88%86%E7%82%B8%E7%AE%80%E8%BF%B0"><span class="toc-text">大爆炸简述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%BC%95%E5%8A%9B"><span class="toc-text">反引力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%87%E6%9C%89%E5%BC%95%E5%8A%9B%E3%80%81%E7%A7%A9%E5%BA%8F%E4%B8%8E%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="toc-text">万有引力、秩序与第二定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%81%9A%E5%8F%98%E3%80%81%E7%A7%A9%E5%BA%8F%E4%B8%8E%E7%AC%AC%E4%BA%8C%E5%AE%9A%E5%BE%8B"><span class="toc-text">聚变、秩序与第二定律</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%A4%A7%E8%84%91%E4%B8%8E%E4%BF%A1%E4%BB%B0-%E4%BB%8E%E6%83%B3%E8%B1%A1%E5%88%B0%E7%A5%9E%E5%9C%A3"><span class="toc-text">7 大脑与信仰 从想象到神圣</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AA%E4%BD%93%E9%80%82%E5%BA%94%E4%B8%8E%E5%AE%97%E6%95%99"><span class="toc-text">个体适应与宗教</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%A1%E4%BB%B0%E3%80%81%E4%BF%A1%E5%BF%83%E5%92%8C%E4%BB%B7%E5%80%BC"><span class="toc-text">信仰、信心和价值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E7%A7%AF%E7%B4%AF"><span class="toc-text">信息积累</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-12-17</div>
+        <a href="/2025/12/17/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%AA%80%E9%A6%99%E5%88%91/"><div class="recent-posts-item-content">【阅之载之】檀香刑</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-11-10</div>
+        <a href="/2025/11/10/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/%E5%8F%98%E6%88%90%E7%8C%AB/"><div class="recent-posts-item-content">【察之作之】变成猫</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-21</div>
+        <a href="/2025/10/21/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E9%87%91%E7%93%B6%E6%A2%85/"><div class="recent-posts-item-content">【阅之载之】金瓶梅</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2025-10-13</div>
+        <a href="/2025/10/13/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/%E6%80%80%E7%96%91%E7%9A%84%E9%A6%96%E8%A6%81%E6%80%A7/"><div class="recent-posts-item-content">【阅之载之】怀疑的首要性</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2025
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+      <div class="footer-dsc">
+        
+          本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          本站总访客数<span id="busuanzi_value_site_uv"></span>次
+        
+      </div>
+      
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+    
+      <script> 
+        loadScript('/js/lib/busuanzi.min.js') 
+      </script>
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>
