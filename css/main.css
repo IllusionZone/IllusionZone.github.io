@@ -712,6 +712,10 @@ p-b {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .image-wrapper .image {
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
   max-width: 100%;
   -webkit-filter: var(--image-filter-style);
   filter: var(--image-filter-style);
@@ -741,6 +745,7 @@ p-b {
     padding-bottom: 300px;
   }
   .image-wrapper .image {
+    width: 100%;
     height: 300px;
   }
 }
@@ -749,6 +754,7 @@ p-b {
     height: 10rem;
   }
   .image-wrapper .image {
+    width: 100%;
     height: 10rem;
   }
 }
@@ -1172,6 +1178,10 @@ mjx-container svg:focus {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 .image-wrapper .image {
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
   max-width: 100%;
   -webkit-filter: var(--image-filter-style);
   filter: var(--image-filter-style);
@@ -1201,6 +1211,7 @@ mjx-container svg:focus {
     padding-bottom: 300px;
   }
   .image-wrapper .image {
+    width: 100%;
     height: 300px;
   }
 }
@@ -1209,6 +1220,7 @@ mjx-container svg:focus {
     height: 10rem;
   }
   .image-wrapper .image {
+    width: 100%;
     height: 10rem;
   }
 }
