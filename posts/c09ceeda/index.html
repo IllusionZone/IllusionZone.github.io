@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta charset="UTF-8">
+  <meta 
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta 
+    http-equiv="X-UA-Compatible" 
+    content="ie=edge">
+  <meta 
+    name="theme-color" 
+    content="#fff" 
+    id="theme-color">
+  <meta 
+    name="description" 
+    content="妄，无所不至；想，不知所踪。">
+  <link 
+    rel="icon" 
+    href="/">
+  <title>【阅之载之】2001太空漫游</title>
+  
+    
+      <meta 
+        property="og:title" 
+        content="【阅之载之】2001太空漫游">
+    
+    
+      <meta 
+        property="og:url" 
+        content="https://illusionzone.github.io/posts/c09ceeda/index.html">
+    
+    
+      <meta 
+        property="og:img" 
+        content="/image/logo/logo2.png">
+    
+    
+      <meta 
+        property="og:img" 
+        content="【英】阿瑟·克拉克 著">
+    
+    
+      <meta 
+        property="og:type" 
+        content="article">
+      <meta 
+        property="og:article:published_time" 
+        content="2026-03-09">
+      <meta 
+        property="og:article:modified_time" 
+        content="2026-04-16">
+      <meta 
+        property="og:article:author" 
+        content="妄想者">
+      
+        
+          <meta 
+            property="og:article:tag" 
+            content="阅之载之">
+        
+          <meta 
+            property="og:article:tag" 
+            content="book">
+        
+      
+    
+  
+  
+  <link rel="preload" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css" as="style" >
+  <link rel="preload" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css" as="style" >
+  <link rel="preload" href="/css/main.css" as="style" >
+  
+  <link rel="modulepreload" href="//instant.page/5.1.0">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1946621_i1kgafibvw.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1952792_89b4ac4k4up.css">
+  
+  
+  
+    <link rel="stylesheet" href="/js/lib/lightbox/baguetteBox.min.css">
+  
+  <script>
+    
+    function loadScript(url, cb) {
+      var script = document.createElement('script');
+      script.src = url;
+      if (cb) script.onload = cb;
+      script.async = true;
+      document.body.appendChild(script);
+    }
+    function loadCSS(href, data, attr) {
+      var sheet = document.createElement('link');
+      sheet.ref = 'stylesheet';
+      sheet.href = href;
+      sheet.dataset[data] = attr;
+      document.head.appendChild(sheet);
+    }
+    function changeCSS(cssFile, data, attr) {
+      var oldlink = document.querySelector(data);
+      var newlink = document.createElement("link");
+      newlink.setAttribute("rel", "stylesheet");
+      newlink.setAttribute("href", cssFile);
+      newlink.dataset.prism = attr;
+      document.head.replaceChild(newlink, oldlink);
+    }
+  </script>
+  
+    
+  
+  <script>
+    // control reverse button
+    var reverseDarkList = {
+      dark: 'light',
+      light: 'dark'
+    };
+    var themeColor = {
+      dark: '#1c1c1e',
+      light: '#fff'
+    }
+    // get the data of css prefers-color-scheme
+    var getCssMediaQuery = function() {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+    // reverse current darkmode setting function
+    var reverseDarkModeSetting = function() {
+      var setting = localStorage.getItem('user-color-scheme');
+      if(reverseDarkList[setting]) {
+        setting = reverseDarkList[setting];
+      } else if(setting === null) {
+        setting = reverseDarkList[getCssMediaQuery()];
+      } else {
+        return;
+      }
+      localStorage.setItem('user-color-scheme', setting);
+      // setting值为dark或light，即当前页面模式
+      return setting;
+    };
+    
+    // apply current darkmode setting
+  </script>
+  
+    <script>
+      var setDarkmode = function(mode) {
+      var setting = mode || localStorage.getItem('user-color-scheme');
+      window.isdark = setting;
+      if(setting === getCssMediaQuery()) {
+        //setting为light
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else if(reverseDarkList[setting]) {
+        //setting为dark
+        document.documentElement.setAttribute('data-user-color-scheme', setting);
+        document.getElementById('theme-color').content = themeColor[setting];
+        document.getElementById('theme-color').dataset.mode = setting;
+        
+      } else {
+        //setting为null
+        document.documentElement.removeAttribute('data-user-color-scheme');
+        localStorage.removeItem('user-color-scheme');
+        document.getElementById('theme-color').content = themeColor[getCssMediaQuery()];
+        document.getElementById('theme-color').dataset.mode = getCssMediaQuery();
+        
+      }
+
+      // setting 的值是Light、null和dark
+      // 自定义，当切换至其他页面时失效，所以在about和author页面同样添加代码
+      // 根据按键更换dark模式和light/null模式下的图片地址
+      if(setting === "dark"){
+        //判断是否进入关于页面，进入则同样修改作者图片
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo3.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo3.png')
+      } else {
+        if(document.getElementById('isdark')){
+          document.getElementById('isdark').setAttribute('src','/image/logo/logo2.png')
+        }
+        document.getElementById('authorimg').setAttribute('src','/image/logo/logo2.png')
+      }
+    };
+    setDarkmode();
+    </script>
+  
+  
+  
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.js" as="script">
+    <link rel="preload" href="/js/lib/lightbox/baguetteBox.min.css" as="style" >
+  
+  
+    <link rel="preload" href="/js/lib/lozad.min.js" as="script">
+  
+  
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js" as="script">
+  
+  
+    
+    <link rel="prefetch" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" as="script">
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <div class="wrapper">
+       
+      <nav class="navbar">
+  <div class="navbar-logo">
+    <a class="navbar-logo-main" href="/">
+      
+      <span class="navbar-logo-dsc">妄想空间</span>
+      </a>
+  </div>
+  <div class="navbar-menu">
+    
+      <a 
+        href="/" 
+        class="navbar-menu-item">
+        
+          首页
+        
+      </a>
+    
+      <a 
+        href="/archives" 
+        class="navbar-menu-item">
+        
+          归档
+        
+      </a>
+    
+      <a 
+        href="/tags" 
+        class="navbar-menu-item">
+        
+          标签
+        
+      </a>
+    
+      <a 
+        href="/categories" 
+        class="navbar-menu-item">
+        
+          分类
+        
+      </a>
+    
+      <a 
+        href="/about" 
+        class="navbar-menu-item">
+        
+          关于
+        
+      </a>
+    
+      <a 
+        href="/links" 
+        class="navbar-menu-item">
+        
+          友链
+        
+      </a>
+    
+    <button 
+      class="navbar-menu-item darknavbar navbar-menu-btn" 
+      aria-label="Toggle dark mode"
+      id="dark">
+      <i class="iconfont icon-weather"></i>
+    </button>
+    <button 
+      class="navbar-menu-item searchnavbar navbar-menu-btn" 
+      aria-label="Toggle search"
+      id="search">
+      <!-- <i 
+        class="iconfont icon-search" 
+        style="font-size: 1.2rem; font-weight: 400;">
+      </i> -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+        class="iconify iconify--ion" width="28" height="28" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M256 80a176 176 0 1 0 176 176A176 176 0 0 0 256 80Z"></path>
+        <path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="28"
+          d="M232 160a72 72 0 1 0 72 72a72 72 0 0 0-72-72Z"></path>
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="28"
+          d="M283.64 283.64L336 336"></path>
+      </svg>
+    </button>
+  </div>
+</nav> 
+      
+      <div 
+        id="local-search" 
+        style="display: none">
+        <input
+          class="navbar-menu-item"
+          id="search-input"
+          placeholder="请输入搜索内容..." />
+        <div id="search-content"></div>
+      </div>
+      
+      <div class="section-wrap">
+        <div class="container">
+          <div class="columns">
+            <aside class="left-column">
+              
+              <div class="card card-author">
+                
+  <img 
+    src="/image/logo/logo2.png" 
+    class="author-img"
+    id="authorimg"
+    width="88"
+    height="88"
+    alt="author avatar">
+
+<p class="author-name">妄想者</p>
+<p class="author-description">妄，无所不至；想，不知所踪。</p>
+<div class="author-message">
+  <a 
+    class="author-posts-count" 
+    href="/archives">
+    <span>159</span>
+    <span>文章</span>
+  </a>
+  <a 
+    class="author-categories-count" 
+    href="/categories">
+    <span>14</span>
+    <span>分类</span>
+  </a>
+  <a 
+    class="author-tags-count" 
+    href="/tags">
+    <span>120</span>
+    <span>标签</span>
+  </a>
+</div>
+
+
+<script>  
+  var imgSrc;
+  if(window.isdark == 'dark'){
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo3.png'
+  } else {
+      imgSrc = document.getElementById('authorimg')
+      imgSrc.src = '/image/logo/logo2.png'
+  }
+</script>
+              </div>
+               <div class="sticky-tablet">
+  
+  
+    <article class="display-when-two-columns spacer">
+      <div class="card card-content toc-card">
+        <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-%E5%A4%AA%E5%88%9D%E4%B9%8B%E5%A4%9C"><span class="toc-text">I 太初之夜</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%81%AD%E7%BB%9D%E4%B9%8B%E8%B7%AF"><span class="toc-text">1 灭绝之路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BA%BA%E7%B1%BB%E7%9A%84%E7%99%BB%E5%9C%BA"><span class="toc-text">6 人类的登场</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#II-TMA-1"><span class="toc-text">II TMA-1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E8%BD%A8%E9%81%93%E4%BC%9A%E5%90%88"><span class="toc-text">8 轨道会合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%85%8B%E6%8B%89%E7%BB%B4%E6%96%AF%E5%9F%BA%E5%9C%B0"><span class="toc-text">10 克拉维斯基地</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#III-%E8%A1%8C%E6%98%9F%E4%B9%8B%E9%97%B4"><span class="toc-text">III 行星之间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#15-%E5%8F%91%E7%8E%B0%E5%8F%B7"><span class="toc-text">15 发现号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V-%E5%9C%9F%E6%98%9F%E7%9A%84%E5%8D%AB%E6%98%9F"><span class="toc-text">V 土星的卫星</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#37-%E5%AE%9E%E9%AA%8C"><span class="toc-text">37 实验</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VI-%E7%A9%BF%E8%B6%8A%E6%98%9F%E4%B9%8B%E9%97%A8"><span class="toc-text">VI 穿越星之门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#41-%E8%B6%85%E7%BA%A7%E4%B8%AD%E5%A4%AE%E8%BD%A6%E7%AB%99"><span class="toc-text">41 超级中央车站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#43-%E5%9C%B0%E7%8B%B1"><span class="toc-text">43 地狱</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E5%BD%95"><span class="toc-text">信息收录</span></a></li></ol>
+      </div>
+    </article>
+  
+  
+  <article class="card card-content categories-widget">
+    <div class="categories-card">
+  <div class="categories-header">
+    <i 
+      class="iconfont icon-fenlei" 
+      style="padding-right: 2px;">
+    </i>分类
+  </div>
+  <div class="categories-list">
+    
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Computer-Skill/">
+        <div class="categories-list-item">
+          Computer-Skill
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Mobile-Phone-Skill/">
+        <div class="categories-list-item">
+          Mobile-Phone-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Television-Skill/">
+        <div class="categories-list-item">
+          Television-Skill
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
+        <div class="categories-list-item">
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/GitHub/">
+        <div class="categories-list-item">
+          GitHub
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/Fancy-Website/">
+        <div class="categories-list-item">
+          Fancy-Website
+          <span class="categories-list-item-badge">25</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+        <div class="categories-list-item">
+          学之思之
+          <span class="categories-list-item-badge">9</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%A6%84%E6%83%B3%E8%AE%B0/">
+        <div class="categories-list-item">
+          妄想记
+          <span class="categories-list-item-badge">16</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">22</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E6%8F%92%E4%BB%B6%E6%94%B6%E5%BD%95/">
+        <div class="categories-list-item">
+          插件收录
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/">
+        <div class="categories-list-item">
+          阅之载之
+          <span class="categories-list-item-badge">73</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E8%A7%82%E4%B9%8B%E6%84%9F%E4%B9%8B/">
+        <div class="categories-list-item">
+          观之感之
+          <span class="categories-list-item-badge">3</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E9%94%B5%E9%94%B5%E9%9B%86%E9%94%A6/">
+        <div class="categories-list-item">
+          锵锵集锦
+          <span class="categories-list-item-badge">2</span>
+        </div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  <article class="card card-content tags-widget">
+    <div class="tags-card">
+  <div class="tags-header">
+    <i 
+      class="iconfont icon-biaoqian" 
+      style="padding-right: 2px;">
+    </i>热门标签
+  </div>
+  <div class="tags-list">
+    
+      <a 
+        href="/tags/The-Art-of-Basketball/" 
+        title="The Art of Basketball">
+        <div class="tags-list-item">The Art of Basketball</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%AF%AE%E7%90%83/" 
+        title="篮球">
+        <div class="tags-list-item">篮球</div>
+      </a>
+    
+      <a 
+        href="/tags/Computer-Skill/" 
+        title="Computer Skill">
+        <div class="tags-list-item">Computer Skill</div>
+      </a>
+    
+      <a 
+        href="/tags/Win10/" 
+        title="Win10">
+        <div class="tags-list-item">Win10</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%A8%E6%88%B7%E5%90%8D%E4%BF%AE%E6%94%B9/" 
+        title="用户名修改">
+        <div class="tags-list-item">用户名修改</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%99%BE%E5%BA%A6%E4%BA%91%E7%9B%98/" 
+        title="百度云盘">
+        <div class="tags-list-item">百度云盘</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%80%9F%E5%BA%A6%E7%A0%B4%E8%A7%A3/" 
+        title="速度破解">
+        <div class="tags-list-item">速度破解</div>
+      </a>
+    
+      <a 
+        href="/tags/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8/" 
+        title="谷歌浏览器">
+        <div class="tags-list-item">谷歌浏览器</div>
+      </a>
+    
+      <a 
+        href="/tags/XP/" 
+        title="XP">
+        <div class="tags-list-item">XP</div>
+      </a>
+    
+      <a 
+        href="/tags/%E6%89%8B%E6%9C%BA/" 
+        title="手机">
+        <div class="tags-list-item">手机</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%A1%AC%E4%BB%B6%E6%8D%9F%E5%9D%8F/" 
+        title="硬件损坏">
+        <div class="tags-list-item">硬件损坏</div>
+      </a>
+    
+      <a 
+        href="/tags/Mobile-Phone/" 
+        title="Mobile Phone">
+        <div class="tags-list-item">Mobile Phone</div>
+      </a>
+    
+      <a 
+        href="/tags/%E9%A3%9E%E5%88%A9%E6%B5%A6/" 
+        title="飞利浦">
+        <div class="tags-list-item">飞利浦</div>
+      </a>
+    
+      <a 
+        href="/tags/APK/" 
+        title="APK">
+        <div class="tags-list-item">APK</div>
+      </a>
+    
+      <a 
+        href="/tags/%E7%94%B5%E8%A7%86/" 
+        title="电视">
+        <div class="tags-list-item">电视</div>
+      </a>
+    
+      <a 
+        href="/tags/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91/" 
+        title="善恶之屑">
+        <div class="tags-list-item">善恶之屑</div>
+      </a>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+            <main class="main-column">
+              
+<article class="card card-content">
+  <header>
+    <h1 class="post-title">
+      【阅之载之】2001太空漫游
+    </h1>
+  </header>
+  <div class="post-meta post-show-meta">
+    <time datetime="2026-03-08T16:00:00.000Z">
+      <i 
+        class="iconfont icon-calendar" 
+        style="margin-right: 2px;">
+      </i>
+      <span>2026-03-09</span>
+    </time>
+    
+      <span class="dot"></span>
+      
+        <a 
+          href="/categories/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+          class="post-meta-link">
+          阅之载之
+        </a>
+      
+    
+    
+      <span class="dot"></span>
+      <span>3.5k 字</span>
+    
+  </div>
+  
+    <div 
+      class="post-meta post-show-meta" 
+      style="margin-top: -10px;">
+      <div style="display: flex; align-items: center;">
+        <i 
+          class="iconfont icon-biaoqian" 
+          style="margin-right: 2px; font-size: 1.15rem;">
+        </i>
+        
+          
+          <a 
+            href="/tags/%E9%98%85%E4%B9%8B%E8%BD%BD%E4%B9%8B/" 
+            class="post-meta-link">
+            阅之载之
+          </a>
+        
+          
+            <span class="dot"></span>
+          
+          <a 
+            href="/tags/book/" 
+            class="post-meta-link">
+            book
+          </a>
+        
+      </div>
+    </div>
+  
+  </header>
+  <div 
+    id="section" 
+    class="post-content">
+    <div class="post-note note-primary"><p>阅读，总觉得必须做上一点什么，否则总有种空空荡荡的感觉。记下一些，写出一点，似乎就使得花费时间、花费经历读到的书更有质感一些，也许是心理安慰，也许是自欺欺人，总之且当聊以自慰。</p><p>主做摘录，偶发一点感想。</p><p>《2001太空漫游》<br>【英】阿瑟·克拉克 著</p></div>
+<br />
+<img src="/image/book/readandnote/2001太空漫游/1.png" width="300rpx"/ srcset="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E" data-src="/image/book/readandnote/2001太空漫游/1.png" class="lozad post-image">
+<br />
+<h2 id="I-太初之夜">I 太初之夜</h2>
+<h3 id="1-灭绝之路">1 灭绝之路</h3>
+<p><strong>原文摘录</strong><br>
+夜深了，清冷，没有其他惊扰，月亮自人类未曾目睹的赤道星座之间冉冉升起。山洞里，在时醒时睡的困乏与担惊受怕的等待中，未来世代的人才会有的梦魇，正在成形。</p>
+<p>有一道灿烂胜过所有星辰的炫目光点，缓缓地升越天幕，上到天穹的最高点，又再慢慢降入东方。如是两次。<br>
+<br /><br /></p>
+<h3 id="6-人类的登场">6 人类的登场</h3>
+<p><strong>原文摘录</strong><br>
+第一批真正的人所用的工具和武器，比起他们一百万年前的祖先所使用的，好不到哪里，不过使用的技巧则大有改进。尤其在先前那神秘的世纪间，不知何时，他们已经创造出一种最重要的工具——虽然这种工具看不到也摸不到。他们学会了说话，因而从时间的手里赢得第一场重大的胜利。现在，一代的知识可以传递给下一代，因而每一代都可以从先人的经历中获益。</p>
+<p>不像其他动物只懂现在，人掌握了过去，接着还要开始探索未来。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+随着他的身体越来越没有防御的能力，他的攻击手段却日益可怕了。靠着石头、青铜、铁、钢，所有可以砍、刺的东西，他都掌握在手。甚至相当早期的时候，他就懂得怎样隔着一段距离，把对手击倒。矛、弓、枪，以及最后的导弹，都给了他无远弗届又无坚不摧的力量。</p>
+<p>虽然也经常使用这些武器来对付自己，但是没有这些武器，人是征服不了这个世界的。他在这些武器里投入了心思和精神。有很长一段时间，这些武器给他带来许多好处。不过，只要武器存在，他也就活在借来的时间里了。<br>
+<br /><br /></p>
+<h2 id="II-TMA-1">II TMA-1</h2>
+<h3 id="8-轨道会合">8 轨道会合</h3>
+<p><strong>原文摘录</strong><br>
+他上一次处于无重力状态，已经是一年多前的事，现在要在太空中恢复走路的感觉，还得一些时候，因此他小心翼翼地一步步抓着把手走过气闸，进入太空站中心轴的圆形大厅。这个圆形大厅到处都有护垫，四壁嵌着许多把手。弗洛伊德紧紧抓稳了一个把手，整个大厅开始旋转，转到配合上太空站本身的转动。</p>
+<p>随着速度加快，重力形成一只只隐隐约约、如同鬼魅的手指抓住他，于是他慢慢飘向圆形的墙壁。现在他站在很奇妙的变成了弧形地板的墙上，轻轻地来回摇摆，像是澎湃浪潮里的水草。这时他已经受到太空站转动的离心力影响——虽然在离轴心这么近的地方，离心力还很弱，但是随着他逐渐往外走远，离心力就会一步步增强。<br>
+<br /><br /></p>
+<h3 id="10-克拉维斯基地">10 克拉维斯基地</h3>
+<p><strong>原文摘录</strong><br>
+要说基地生活，或整体月球生活的好玩之处，低重力一定是其中之一。低重力让人产生一种幸福自在的感觉。然而其中也有危险，并且，来自地球的移民者要花上好几个星期的时间才能习惯。在月球上，人类的身体得学会一套全新的本能反应。生平第一次，得区分质量与重量的差异。</p>
+<p>一个在地球上有一百八十磅的人，会很高兴地发现在月球上他只有三十磅。如果他一直以等速沿着直线前进，会有一种就要飘浮起来的美妙无比的感觉。不过，一旦他想改变路线，或是转弯，或是突然打住，那就会发现他一百八十磅的质量，或是说惯性，一磅不少地存在那里。因为这是固定的，不可改变的——不会因置身于地球、月球、太阳，或空空如也的太空而有所不同。因此，任何人在相当适应月球生活之前，都必须懂得现在所有东西的重量，实质都比表象要笨重六倍，通常这堂课要真学到家，都得经过多次的冲撞和摔倒。因此月球上的老鸟都会离那些菜鸟远远的，直到他们真正适应了水土。<br>
+<br /><br /></p>
+<h2 id="III-行星之间">III 行星之间</h2>
+<h3 id="15-发现号">15 发现号</h3>
+<p><strong>原文摘录</strong><br>
+其中最令人赞叹的，还是那些脑电波图（EEG）——犹如生命独特的印记，证明曾经有这么三个人存在过，有朝一日又将再度存在。清醒中的头脑，甚至正常睡眠中的头脑活动，都有起伏的波线，但是这里的波线却几乎完全没有起伏，没有电流暴增。如果说还有任何丁点残留的意识，那已经是超越仪器所能测度、超越记忆所能涵盖的范围了。</p>
+<p>上述这件事，鲍曼也曾亲身经历。在他被选上这次任务之前，曾经测试过对冬眠的反应。他不太清楚自己到底是丧失了一个星期的生命，还是把自己最终不可避免的死亡延后了一个星期。</p>
+<p>当他的额头贴上了电极，睡眠产生器启动之后，他曾经短暂地看到一阵万花筒似的图案，以及飘流的星星。然后这些影像隐退，他进入无际的黑暗。他完全没有感受到注射，更别说随着体温降低，他身体最初感受到的寒冷——最后，他的体温降到比冰点高不了几度。</p>
+<p>他醒来时，感觉好像根本没闭过眼。不过他知道这只是幻觉。不管怎么说，他相信已经过了好几年了。<br>
+<br /><br /></p>
+<p><strong>原文摘录</strong><br>
+一千英里的前方，黄昏的余晖向他们直冲而来，之后，太阳快速地沉入木星云层之中。太阳的光线沿着地平线散发出来，很像两道灼热而下垂的弯角，然后缩小，在一片短暂的缤纷光彩中寂然而逝。夜来了。</p>
+<p>然而，下方的世界并没有变成一片黑暗。这个世界为一片磷光所淹没，随着眼睛逐渐适应这片景象，磷光也一分钟一分钟地越来越亮了。朦胧的光之河流，从水平线的这一端流动到另一端，很像是船只行经某些热带海域而留下的摇曳光波。这里一处，那里一处，它们聚集成一泓泓液体之火颤抖着，仿佛从木星隐藏的心脏汹涌而出的、浩瀚的海底骚动。这个景象实在令人惊叹，普尔和鲍曼要看几小时都没问题。他们不由得怀疑：这究竟只是底下那口沸腾的大锅里，化学和电气力量所导致的结果，抑或某种超乎想象的生命形态的副产品？等下一个新世纪到来的时候，科学家们仍然可能会为这些问题争辩不休。</p>
+<p>随着他们进入越来越深的木星之夜，下方的光亮也逐渐越来越亮了。鲍曼有一次在北极光最盛的时节飞越过北加拿大。白雪覆盖的土地混合着荒芜与灿烂，和此景差可比拟。但他提醒自己：北极圈的冰原，比起他们现在飞越过的区域，温度起码还高了一百度以上。<br>
+<br /><br /></p>
+<h2 id="V-土星的卫星">V 土星的卫星</h2>
+<h3 id="37-实验">37 实验</h3>
+<p><strong>原文摘录</strong><br>
+就称之为星之门吧。</p>
+<p>有三百万年之久的时间，它一直绕着土星转动，等待也许永远不会到来的命运。在它诞生的过程中，一颗卫星粉碎了，当时的残片到现在仍然在轨道上。</p>
+<p>现在这场漫长的等待已经结束。在另外一个世界里，智慧体诞生了，正想逃离行星的摇篮。一场古老实验的高潮戏，终于即将登场。</p>
+<p>很久以前，开始这场实验的，并不是人类，甚至和人类一点也不相干。不过他们有血有肉，而当他们望向太空深处之时，他们感到敬畏、惊奇，还有孤寂。一旦他们掌握了能力，便开始向群星出发。</p>
+<p>在他们探索的过程中，遇见过各式各样的生命形态，并且在上千个世界里，看见过进化的运作。他们也见惯了智慧擦出的第一道微光一闪即逝，消失在宇宙的黑夜里。</p>
+<p>正因为在整个银河系里，他们发现最珍贵的莫过于“心智”，因此他们到处促进心智的萌发。他们成了星际田园里的农夫，忙着播种，偶尔还会有收成。</p>
+<p>有的时候，他们也得不带感情地除掉杂草。</p>
+<p>他们的探测船历经千年的旅程，进入太阳系的时候，庞大的恐龙早已消失很久了。探测船掠过冰冻的外行星，在垂死的火星沙漠上空短暂停留了一会儿，随即俯视到地球。</p>
+<p>探索者看到，在他们脚下展现的，是一个充满了各种生命的世界。他们花了几年的时间研究、搜集、归类。等他们尽其可能地了解一切之后，就开始进行调整。他们变动了许多物种的命运，陆地和海洋里的都有。但在这些实验中，到底有哪些会成功，至少在一百万年内他们是不可能知道的。 他们很有耐心，但也并非长生不老。在这个拥有上千亿个太阳的宇宙里，有太多的事情要做，也有其他世界在呼唤他们。于是他们再度朝深邃的宇宙出发，心知他们再也不会到这里来了。</p>
+<p>其实也没有这个必要，他们留下的仆人会完成剩余的工作。</p>
+<p>在地球上，冰河来了又去，而在地球之上，不变的月亮仍旧守护着那个秘密。以一种比极地冰川消长再慢一些的节奏，文明的浪潮在银河系起起落落。一个个奇怪的、美丽的、糟糕的帝国崛起又没落，再把知识转手交给他们的接班人。地球并未被遗忘，但是再来一趟也没有多大意义。地球只是亿万个无声星球中的一个——其中，会发声的几乎没有。</p>
+<p>而现在，在群星之间，演化正朝着新的目标前进。最早来到地球的探险者，早已面临血肉之躯的极致。一旦他们打造的机器可以胜过他们的肉体，就是搬家的时候了。首先是头脑，然后只需要他们的思想，他们搬进由金属和塑料打造的亮晶晶的新家。</p>
+<p>他们就在这种躯体里漫游星际。他们不再建造宇宙飞船。他们就是宇宙飞船。</p>
+<p>不过，机械躯体的时代很快也过去了。在无休无止的实验中，他们学会了把知识储存在空间本身的结构里，把自己的想法恒久地保存在凝冻的光格中。他们可以成为辐射能的生物，最终摆脱物质的束缚。</p>
+<p>转化为纯粹的能量之后，他们又改变了自己。在千百个世界里，那些被他们舍弃的空壳，在无意识的死亡之舞中短暂颤抖之后，崩裂成尘。</p>
+<p>现在他们是银河系的主宰了，超越了时间的限制。他们可以自由自在地漫游在星辰之间，也可以像一缕薄雾渗入到宇宙的缝隙里。但尽管他们已经拥有神祇般的力量，却也没有完全忘记自己的起源——在一片已经消失的海洋的温暖的烂泥中。</p>
+<p>而他们仍旧守望着他们祖先在许久许久之前开始的那些实验。<br>
+<br /><br /></p>
+<h2 id="VI-穿越星之门">VI 穿越星之门</h2>
+<h3 id="41-超级中央车站">41 超级中央车站</h3>
+<p><strong>原文摘录</strong><br>
+他跋涉亿万英里路来寻找这个谜团，现在看来，谜团也迎向他了。<br>
+<br /><br /></p>
+<h3 id="43-地狱">43 地狱</h3>
+<p><strong>原文摘录</strong><br>
+鲍曼的双眼，不再毫无抵抗能力地眩惑于这个奇异又壮观的场面——他开始辨认一些应该本来就存在，但是根本没注意到的细节。这个星球的表面，并不是没有定形的一团混沌——这里的事物也都有其一定的形态，一如大自然所创造的一切。<br>
+<br /><br /></p>
+<h2 id="信息收录">信息收录</h2>
+<p>曙色（shu 3）：：拂晓时的天色</p>
+<p>檐壁：指在古典柱式建筑的柱顶盘上，介于上楣与下楣之间作为装饰用的横条，多雕刻图案、花纹等，也称中楣、腰线、横饰等</p>
+<p>无远弗届：不管多远之处，没有不到的，亦作“无远不界”</p>
+<p>以道里计：用一般长度计算</p>
+<p>宁谧：安定平静</p>
+<p>戋戋（jian 1）：浅少；显露</p>
+<p>付诸阙如：把本应具备或处理的内容空缺着，不予补足或呈现。常用来指某事物、某环节或信息本该存在，实际上却缺失，没有</p>
+<script type="text&#x2F;javascript" src="https://unpkg.com/kity@2.0.4/dist/kity.min.js"></script><script type="text&#x2F;javascript" src="https://unpkg.com/kityminder-core@1.4.50/dist/kityminder.core.min.js"></script><script defer="true" type="text&#x2F;javascript" src="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.js"></script><link rel="stylesheet" type="text&#x2F;css" href="https://unpkg.com/hexo-simple-mindmap@0.8.0/dist/mindmap.min.css">
+  </div>
+  <div>
+    
+      <div 
+        class="post-note note-warning copyright" 
+        style="margin-top: 42px">
+        <p>
+          <span style="font-weight: bold;">作者：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="/about">
+            妄想者
+          </a>
+        </p>
+        <p>
+          <span style="font-weight: bold;">文章链接：</span><a 
+            target="_blank" 
+            rel="nofollow noopener noreferrer" 
+            href="https://illusionzone.github.io/posts/c09ceeda/">
+            https://illusionzone.github.io/posts/c09ceeda/
+          </a>
+        </p>
+        <p><span style="font-weight: bold;">版权声明：</span>本博客所有文章除特别声明外，均采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-ND 协议</a>。未经授权不允许转载！</p>
+      </div>
+    
+  </div>
+</article>
+<div class="nav">
+  
+    <div class="nav-item-prev">
+      <a 
+        href="/posts/2e475e58/" 
+        class="nav-link">
+        <i class="iconfont icon-left nav-prev-icon"></i>
+        <div>
+          <div class="nav-label">上一篇</div>
+          
+            <div class="nav-title">【阅之载之】算法之美 </div>
+          
+        </div>
+      </a>
+    </div>
+  
+  
+    <div class="nav-item-next">
+      <a 
+        href="/posts/54b07759/" 
+        class="nav-link">
+        <div>
+          <div class="nav-label">下一篇</div>
+          
+            <div class="nav-title">【阅之载之】算法的力量：人类如何共同生存？ </div>
+          
+        </div>
+        <i class="iconfont icon-right nav-next-icon"></i>
+      </a>
+    </div>
+  
+</div>
+
+  <div 
+    class="card card-content comment-card" 
+    style="margin-top: 16px;">
+    <div class="comment-card-title">评论</div>
+    
+  <div id="gitalk-container"></div>
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+  
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+  
+<script src="/js/lib/md5.min.js"></script>
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'Ov23liIdamcR7G0uwB7z',
+      clientSecret: '21d17858a841f7fee7db36088244fc89f0996bf',
+      redirectUri: 'https://illusionzone.github.io',
+      repo: 'illusionzone-comments',
+      owner: 'IllusionZone',
+      admin: ["IllusionZone"],
+      id: md5('/posts/c09ceeda/'),
+      distractionFreeMode: false,
+      language: 'zh-CN',
+      labels: ["Gitalk"],
+      perPage: 20
+    })
+
+    gitalk.render('gitalk-container')
+  </script>
+
+  </div>
+
+<div 
+  class="card card-content toc-card" 
+  id="mobiletoc">
+  <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-%E5%A4%AA%E5%88%9D%E4%B9%8B%E5%A4%9C"><span class="toc-text">I 太初之夜</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%81%AD%E7%BB%9D%E4%B9%8B%E8%B7%AF"><span class="toc-text">1 灭绝之路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BA%BA%E7%B1%BB%E7%9A%84%E7%99%BB%E5%9C%BA"><span class="toc-text">6 人类的登场</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#II-TMA-1"><span class="toc-text">II TMA-1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E8%BD%A8%E9%81%93%E4%BC%9A%E5%90%88"><span class="toc-text">8 轨道会合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%85%8B%E6%8B%89%E7%BB%B4%E6%96%AF%E5%9F%BA%E5%9C%B0"><span class="toc-text">10 克拉维斯基地</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#III-%E8%A1%8C%E6%98%9F%E4%B9%8B%E9%97%B4"><span class="toc-text">III 行星之间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#15-%E5%8F%91%E7%8E%B0%E5%8F%B7"><span class="toc-text">15 发现号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V-%E5%9C%9F%E6%98%9F%E7%9A%84%E5%8D%AB%E6%98%9F"><span class="toc-text">V 土星的卫星</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#37-%E5%AE%9E%E9%AA%8C"><span class="toc-text">37 实验</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VI-%E7%A9%BF%E8%B6%8A%E6%98%9F%E4%B9%8B%E9%97%A8"><span class="toc-text">VI 穿越星之门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#41-%E8%B6%85%E7%BA%A7%E4%B8%AD%E5%A4%AE%E8%BD%A6%E7%AB%99"><span class="toc-text">41 超级中央车站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#43-%E5%9C%B0%E7%8B%B1"><span class="toc-text">43 地狱</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E5%BD%95"><span class="toc-text">信息收录</span></a></li></ol>
+</div>
+            </main>
+            <aside class="right-column">
+              <div class="sticky-widescreen">
+  
+  
+    <article class="card card-content toc-card">
+      <div class="toc-header">
+  <i 
+    class="iconfont icon-menu" 
+    style="padding-right: 2px;">
+  </i>目录
+</div>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#I-%E5%A4%AA%E5%88%9D%E4%B9%8B%E5%A4%9C"><span class="toc-text">I 太初之夜</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%81%AD%E7%BB%9D%E4%B9%8B%E8%B7%AF"><span class="toc-text">1 灭绝之路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BA%BA%E7%B1%BB%E7%9A%84%E7%99%BB%E5%9C%BA"><span class="toc-text">6 人类的登场</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#II-TMA-1"><span class="toc-text">II TMA-1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E8%BD%A8%E9%81%93%E4%BC%9A%E5%90%88"><span class="toc-text">8 轨道会合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E5%85%8B%E6%8B%89%E7%BB%B4%E6%96%AF%E5%9F%BA%E5%9C%B0"><span class="toc-text">10 克拉维斯基地</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#III-%E8%A1%8C%E6%98%9F%E4%B9%8B%E9%97%B4"><span class="toc-text">III 行星之间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#15-%E5%8F%91%E7%8E%B0%E5%8F%B7"><span class="toc-text">15 发现号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#V-%E5%9C%9F%E6%98%9F%E7%9A%84%E5%8D%AB%E6%98%9F"><span class="toc-text">V 土星的卫星</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#37-%E5%AE%9E%E9%AA%8C"><span class="toc-text">37 实验</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VI-%E7%A9%BF%E8%B6%8A%E6%98%9F%E4%B9%8B%E9%97%A8"><span class="toc-text">VI 穿越星之门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#41-%E8%B6%85%E7%BA%A7%E4%B8%AD%E5%A4%AE%E8%BD%A6%E7%AB%99"><span class="toc-text">41 超级中央车站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#43-%E5%9C%B0%E7%8B%B1"><span class="toc-text">43 地狱</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%A1%E6%81%AF%E6%94%B6%E5%BD%95"><span class="toc-text">信息收录</span></a></li></ol>
+    </article>
+  
+  
+  <article class="card card-content">
+    <div class="recent-posts-card">
+  <div class="recent-posts-header">
+    <i 
+      class="iconfont icon-wenzhang_huaban" 
+      style="padding-right: 2px;">
+    </i>最近文章
+  </div>
+  <div class="recent-posts-list">
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2026-11-06</div>
+        <a href="/posts/bbcdf39a/"><div class="recent-posts-item-content">【阅之载之】窄门</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2026-10-01</div>
+        <a href="/posts/fc94fe64/"><div class="recent-posts-item-content">【察之作之】换镜</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2026-08-23</div>
+        <a href="/posts/342b2077/"><div class="recent-posts-item-content">【阅之载之】局外人</div></a>
+      </div>
+    
+      <div class="recent-posts-item">
+        <div class="recent-posts-item-title">2026-07-18</div>
+        <a href="/posts/792c3e84/"><div class="recent-posts-item-content">【察之作之】随笔——20260718</div></a>
+      </div>
+    
+  </div>
+</div>
+  </article>
+  
+  
+</div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    <footer class="footer">
+  <div class="footer-container">
+    <div>
+      <div class="footer-dsc">
+        <span>
+          Copyright ©
+          
+            2020
+          
+          
+                - 
+                2026
+          
+        </span>
+        &nbsp;
+        <a 
+          href="/" 
+          class="footer-link">
+          妄想空间
+        </a>
+      </div>
+    </div>
+
+    
+      <div class="footer-dsc">
+        
+          Powered by
+          <a 
+            href="https://hexo.io/" 
+            class="footer-link" 
+            target="_blank" 
+            rel="nofollow noopener noreferrer">
+            &nbsp;Hexo
+          </a>
+        
+        
+          <span>&nbsp;|&nbsp;</span>
+        
+        
+          Theme -
+          <a 
+            href="https://github.com/theme-kaze" 
+            class="footer-link" 
+            target="_blank"
+            rel="nofollow noopener noreferrer">
+            &nbsp;Kaze
+          </a>
+        
+      </div>
+    
+    
+    
+    
+</footer>
+ 
+    
+  <a 
+    role="button" 
+    id="scrollbutton" 
+    class="basebutton" 
+    aria-label="回到顶部">
+    <i class="iconfont icon-arrowleft button-icon"></i>
+  </a>
+
+<a 
+  role="button" 
+  id="menubutton"
+  aria-label="menu button"
+  class="basebutton">
+  <i class="iconfont icon-menu button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="popbutton" 
+  class="basebutton" 
+  aria-label="控制中心">
+  <i class="iconfont icon-expand button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="darkbutton" 
+  class="basebutton darkwidget" 
+  aria-label="夜色模式">
+  <i class="iconfont icon-weather button-icon"></i>
+</a>
+<a 
+  role="button" 
+  id="searchbutton" 
+  class="basebutton searchwidget" 
+  aria-label="搜索">
+  <i class="iconfont icon-search button-icon"></i>
+</a> 
+     
+     
+      
+ 
+     
+     
+      <script>
+  var addImgLayout = function () {
+    var img = document.querySelectorAll('.post-content img')
+    var i
+    for (i = 0; i < img.length; i++) {
+      var wrapper = document.createElement('a')
+      wrapper.setAttribute('href', img[i].getAttribute('data-src'))
+      wrapper.setAttribute('aria-label', 'illustration')
+      wrapper.style.cssText =
+        'width: 100%; display: flex; justify-content: center;'
+      if (img[i].alt) wrapper.dataset.caption = img[i].alt
+      wrapper.dataset.nolink = true
+      img[i].before(wrapper)
+      wrapper.append(img[i])
+      var divWrap = document.createElement('div')
+      divWrap.classList.add('gallery')
+      wrapper.before(divWrap)
+      divWrap.append(wrapper)
+    }
+    baguetteBox.run('.gallery')
+  }
+</script>
+<script>
+  loadScript(
+    "/js/lib/lightbox/baguetteBox.min.js",
+    addImgLayout
+  )
+</script>
+ 
+     
+     
+    <script src="/js/main.js"></script> 
+     
+    
+      <script>
+        var addLazyload = function () {
+          var observer = lozad('.lozad', {
+            load: function (el) {
+              el.srcset = el.getAttribute('data-src')
+            },
+            loaded: function (el) {
+              el.classList.add('loaded')
+            },
+          })
+          observer.observe()
+        }
+      </script>
+      <script>
+        loadScript('/js/lib/lozad.min.js', addLazyload)
+      </script>
+    
+    <script src="//instant.page/5.1.0" type="module"
+      integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    
+    
+      <script>
+        setTimeout(() => {localSearch("search.json")}, 0)
+      </script>
+    
+  </body>
+</html>
