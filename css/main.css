@@ -752,11 +752,12 @@ p-b {
 @media screen and (max-width: 767px) {
   .image-wrapper {
     height: auto;
-    aspect-ratio: 945/269;
+    padding-bottom: 0;
   }
   .image-wrapper .image {
     width: 100%;
-    height: 100%;
+    height: auto;
+    position: static;
   }
 }
 .columns,
@@ -1226,11 +1227,12 @@ mjx-container svg:focus {
 @media screen and (max-width: 767px) {
   .image-wrapper {
     height: auto;
-    aspect-ratio: 945/269;
+    padding-bottom: 0;
   }
   .image-wrapper .image {
     width: 100%;
-    height: 100%;
+    height: auto;
+    position: static;
   }
 }
 .recent-posts-header {
