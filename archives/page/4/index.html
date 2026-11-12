@@ -335,13 +335,6 @@
   </div>
   <div class="categories-list">
     
-      <a href="/categories/The-Art-of-Basketball/">
-        <div class="categories-list-item">
-          The-Art-of-Basketball
-          <span class="categories-list-item-badge">1</span>
-        </div>
-      </a>
-    
       <a href="/categories/Computer-Skill/">
         <div class="categories-list-item">
           Computer-Skill
@@ -363,17 +356,17 @@
         </div>
       </a>
     
+      <a href="/categories/The-Art-of-Basketball/">
+        <div class="categories-list-item">
+          The-Art-of-Basketball
+          <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
       <a href="/categories/Fancy-Website/">
         <div class="categories-list-item">
           Fancy-Website
           <span class="categories-list-item-badge">25</span>
-        </div>
-      </a>
-    
-      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
-        <div class="categories-list-item">
-          善恶之屑-外道之歌
-          <span class="categories-list-item-badge">1</span>
         </div>
       </a>
     
@@ -384,10 +377,10 @@
         </div>
       </a>
     
-      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
+      <a href="/categories/%E5%96%84%E6%81%B6%E4%B9%8B%E5%B1%91-%E5%A4%96%E9%81%93%E4%B9%8B%E6%AD%8C/">
         <div class="categories-list-item">
-          学之思之
-          <span class="categories-list-item-badge">9</span>
+          善恶之屑-外道之歌
+          <span class="categories-list-item-badge">1</span>
         </div>
       </a>
     
@@ -398,10 +391,10 @@
         </div>
       </a>
     
-      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+      <a href="/categories/%E5%AD%A6%E4%B9%8B%E6%80%9D%E4%B9%8B/">
         <div class="categories-list-item">
-          察之作之
-          <span class="categories-list-item-badge">22</span>
+          学之思之
+          <span class="categories-list-item-badge">9</span>
         </div>
       </a>
     
@@ -409,6 +402,13 @@
         <div class="categories-list-item">
           插件收录
           <span class="categories-list-item-badge">1</span>
+        </div>
+      </a>
+    
+      <a href="/categories/%E5%AF%9F%E4%B9%8B%E4%BD%9C%E4%B9%8B/">
+        <div class="categories-list-item">
+          察之作之
+          <span class="categories-list-item-badge">22</span>
         </div>
       </a>
     
@@ -1253,11 +1253,11 @@
 <div class="card card-content">
   <h1 class="widget-title">归档</h1>
 </div>
-<div class="archive-timeline">
+<div class="archive-timeline" id="archive-timeline">
   
   
     
-      <div class="archive-timeline-tag"><span>2025</span></div>
+      <div class="archive-timeline-tag" data-year="2025"><span>2025</span></div>
       
     
     <div class="archive-timeline-item">
@@ -1276,7 +1276,7 @@
     </div>
   
     
-      <div class="archive-timeline-tag"><span>2024</span></div>
+      <div class="archive-timeline-tag" data-year="2024"><span>2024</span></div>
       
     
     <div class="archive-timeline-item">
@@ -1381,22 +1381,6 @@
           <div class="archive-timeline-post-date">2024-09-12</div>
           <div class="archive-timeline-post-content">
             <a 
-              href="/posts/a86696e1/"
-              class="archive-timeline-post-item">
-              【察之作之】深夜脑电波
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    
-    <div class="archive-timeline-item">
-      <div class="archive-timeline-post">
-        <div class="card card-content">
-          <div class="archive-timeline-post-date">2024-09-12</div>
-          <div class="archive-timeline-post-content">
-            <a 
               href="/posts/4f5f98b3/"
               class="archive-timeline-post-item">
               【察之作之】相亲事务所
@@ -1422,36 +1406,38 @@
       </div>
     </div>
   
+    
+    <div class="archive-timeline-item">
+      <div class="archive-timeline-post">
+        <div class="card card-content">
+          <div class="archive-timeline-post-date">2024-09-12</div>
+          <div class="archive-timeline-post-content">
+            <a 
+              href="/posts/a86696e1/"
+              class="archive-timeline-post-item">
+              【察之作之】深夜脑电波
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
 </div>
 
-  <div class="nav">
   
-    <div class="nav-item-prev">
-      <a 
-        href="/archives/page/3/" 
-        class="nav-link">
-        <i class="iconfont icon-left nav-prev-icon"></i>
-        <div>
-          <div class="nav-label">上一页</div>
-          
-        </div>
-      </a>
+  
+  <div
+    class="infinite-scroll-sentinel"
+    id="infinite-scroll-sentinel"
+    data-next="/archives/page/5/"
+    data-type="archive"
+    data-loaded="false">
+    <div class="infinite-scroll-loading" id="infinite-scroll-loading" style="display: none;">
+      <i class="iconfont icon-loading"></i>
+      <span>加载中...</span>
     </div>
-  
-  
-    <div class="nav-item-next">
-      <a 
-        href="/archives/page/5/" 
-        class="nav-link">
-        <div>
-          <div class="nav-label">下一页</div>
-          
-        </div>
-        <i class="iconfont icon-right nav-next-icon"></i>
-      </a>
-    </div>
-  
-</div>
+  </div>
+
 
             </main>
             <aside class="right-column">
@@ -2319,6 +2305,132 @@
       </script>
     
     
+     
+    
+  <script>
+    (function () {
+      var sentinel = document.getElementById('infinite-scroll-sentinel')
+      if (!sentinel) return
+
+      var type = sentinel.getAttribute('data-type') || 'post'
+      var container = null
+      if (type === 'archive') {
+        container = document.getElementById('archive-timeline')
+      } else {
+        container = document.getElementById('post-list')
+      }
+      if (!container) return
+
+      var loadingEl = document.getElementById('infinite-scroll-loading')
+      var nextUrl = sentinel.getAttribute('data-next')
+      var loading = false
+      var finished = !nextUrl
+      var retryCount = 0
+
+      function observeNewLozad() {
+        if (!window.lozad) return
+        var observer = lozad('.lozad', {
+          load: function (el) {
+            el.srcset = el.getAttribute('data-src')
+          },
+          loaded: function (el) {
+            el.classList.add('loaded')
+          },
+        })
+        observer.observe()
+      }
+
+      function lastYear() {
+        var tags = container.querySelectorAll('.archive-timeline-tag')
+        if (!tags.length) return null
+        return tags[tags.length - 1].getAttribute('data-year')
+      }
+
+      function appendTimeline(doc) {
+        var nodes = doc.querySelectorAll('#archive-timeline > *')
+        var previousYear = lastYear()
+        for (var i = 0; i < nodes.length; i++) {
+          var node = nodes[i]
+          if (node.classList.contains('archive-timeline-tag')) {
+            var year = node.getAttribute('data-year')
+            if (previousYear && year === previousYear) continue
+            previousYear = year
+          }
+          container.insertAdjacentHTML('beforeend', node.outerHTML)
+        }
+      }
+
+      function appendPosts(doc) {
+        var cards = doc.querySelectorAll('#post-list > .card')
+        for (var i = 0; i < cards.length; i++) {
+          container.insertAdjacentHTML('beforeend', cards[i].outerHTML)
+        }
+      }
+
+      function checkScroll() {
+        if (finished || loading) return
+        var rect = sentinel.getBoundingClientRect()
+        if (rect.top - window.innerHeight < 200) {
+          loadNext()
+        }
+      }
+
+      function loadNext() {
+        if (loading || finished) return
+        loading = true
+        if (loadingEl) loadingEl.style.display = 'flex'
+        var currentUrl = nextUrl
+
+        fetch(currentUrl, { credentials: 'same-origin' })
+          .then(function (res) {
+            if (!res.ok) throw new Error('HTTP ' + res.status)
+            return res.text()
+          })
+          .then(function (html) {
+            var doc = new DOMParser().parseFromString(html, 'text/html')
+            if (type === 'archive') {
+              appendTimeline(doc)
+            } else {
+              appendPosts(doc)
+            }
+
+            var nextSentinel = doc.getElementById('infinite-scroll-sentinel')
+            var followingUrl = nextSentinel ? nextSentinel.getAttribute('data-next') : ''
+            if (followingUrl) {
+              nextUrl = followingUrl
+            } else if (nextUrl === currentUrl) {
+              nextUrl = ''
+            }
+
+            if (!nextUrl) {
+              finished = true
+              if (loadingEl) loadingEl.style.display = 'none'
+              if (sentinel.parentNode) sentinel.parentNode.removeChild(sentinel)
+            }
+
+            retryCount = 0
+            loading = false
+            observeNewLozad()
+            window.requestAnimationFrame(checkScroll)
+          })
+          .catch(function () {
+            loading = false
+            retryCount++
+            if (retryCount >= 3) {
+              finished = true
+              if (loadingEl) loadingEl.style.display = 'none'
+            } else {
+              setTimeout(checkScroll, 1000)
+            }
+          })
+      }
+
+      window.addEventListener('scroll', checkScroll, { passive: true })
+      window.addEventListener('resize', checkScroll)
+      checkScroll()
+    })()
+  </script>
+ 
     
     
       <script>

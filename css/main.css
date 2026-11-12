@@ -706,20 +706,27 @@ p-b {
   overflow: hidden;
   display: block;
   width: 100%;
-  height: 0;
+  height: auto;
   position: relative;
   background-color: var(--widget-background-color);
   border-radius: 0.5rem 0.5rem 0 0;
 }
+.image-wrapper::before {
+  content: '';
+  display: block;
+  padding-top: 28.47%;
+}
 .image-wrapper .image {
+  display: block;
   width: 100%;
+  height: 100%;
+  max-width: 100%;
   object-fit: cover;
+  position: absolute;
   top: 0;
   left: 0;
-  max-width: 100%;
   -webkit-filter: var(--image-filter-style);
   filter: var(--image-filter-style);
-  position: absolute;
   transition: -webkit-filter 0.4s ease 0s;
   transition: filter 0.4s ease 0s;
   transition: filter 0.4s ease 0s, -webkit-filter 0.4s ease 0s;
@@ -740,24 +747,57 @@ p-b {
   -webkit-filter: blur(5px);
   filter: blur(5px);
 }
-@media screen and (min-width: 768px) {
-  .image-wrapper {
-    padding-bottom: 300px;
+.infinite-scroll-sentinel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 2rem;
+  margin-top: 1.5rem;
+}
+.infinite-scroll-sentinel .infinite-scroll-loading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0;
+  font-size: 0.9rem;
+  color: var(--text-light-color);
+}
+.infinite-scroll-sentinel .infinite-scroll-loading .iconfont {
+  margin-right: 0.4rem;
+  animation: infinite-scroll-rotate 1s linear infinite;
+}
+@-moz-keyframes infinite-scroll-rotate {
+  from {
+    transform: rotate(0deg);
   }
-  .image-wrapper .image {
-    width: 100%;
-    height: 300px;
+  to {
+    transform: rotate(360deg);
   }
 }
-@media screen and (max-width: 767px) {
-  .image-wrapper {
-    height: auto;
-    padding-bottom: 0;
+@-webkit-keyframes infinite-scroll-rotate {
+  from {
+    transform: rotate(0deg);
   }
-  .image-wrapper .image {
-    width: 100%;
-    height: auto;
-    position: static;
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes infinite-scroll-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes infinite-scroll-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 .columns,
@@ -1181,20 +1221,27 @@ mjx-container svg:focus {
   overflow: hidden;
   display: block;
   width: 100%;
-  height: 0;
+  height: auto;
   position: relative;
   background-color: var(--widget-background-color);
   border-radius: 0.5rem 0.5rem 0 0;
 }
+.image-wrapper::before {
+  content: '';
+  display: block;
+  padding-top: 28.47%;
+}
 .image-wrapper .image {
+  display: block;
   width: 100%;
+  height: 100%;
+  max-width: 100%;
   object-fit: cover;
+  position: absolute;
   top: 0;
   left: 0;
-  max-width: 100%;
   -webkit-filter: var(--image-filter-style);
   filter: var(--image-filter-style);
-  position: absolute;
   transition: -webkit-filter 0.4s ease 0s;
   transition: filter 0.4s ease 0s;
   transition: filter 0.4s ease 0s, -webkit-filter 0.4s ease 0s;
@@ -1215,24 +1262,57 @@ mjx-container svg:focus {
   -webkit-filter: blur(5px);
   filter: blur(5px);
 }
-@media screen and (min-width: 768px) {
-  .image-wrapper {
-    padding-bottom: 300px;
+.infinite-scroll-sentinel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 2rem;
+  margin-top: 1.5rem;
+}
+.infinite-scroll-sentinel .infinite-scroll-loading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0;
+  font-size: 0.9rem;
+  color: var(--text-light-color);
+}
+.infinite-scroll-sentinel .infinite-scroll-loading .iconfont {
+  margin-right: 0.4rem;
+  animation: infinite-scroll-rotate 1s linear infinite;
+}
+@-moz-keyframes infinite-scroll-rotate {
+  from {
+    transform: rotate(0deg);
   }
-  .image-wrapper .image {
-    width: 100%;
-    height: 300px;
+  to {
+    transform: rotate(360deg);
   }
 }
-@media screen and (max-width: 767px) {
-  .image-wrapper {
-    height: auto;
-    padding-bottom: 0;
+@-webkit-keyframes infinite-scroll-rotate {
+  from {
+    transform: rotate(0deg);
   }
-  .image-wrapper .image {
-    width: 100%;
-    height: auto;
-    position: static;
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes infinite-scroll-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes infinite-scroll-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 .recent-posts-header {
